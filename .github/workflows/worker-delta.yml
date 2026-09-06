@@ -1,0 +1,71 @@
+name: 手动生成私有 worker 镜像增量
+on:
+  workflow_dispatch:
+    inputs:
+      source_run:
+        description: 已完整成功的构建与验收 workflow run
+        required: true
+        default: '34044909758'
+      source_sha:
+        description: 上述构建完整源码 SHA
+        required: true
+        default: '23d5bb098d4b1a6d8551f3de8fe6e88893807f91'
+      expected_image_id:
+        description: CI config digest 或已确认的唯一 OCI 根 digest（本次默认 config）
+        required: true
+        default: 'sha256:f5a6ac07b01aca00c5e0f5a849db06bd50286ea02335b40b26991aaf985612d4'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  delta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: 验证归档工具回归
+        run: python3 -m unittest discover -s deploy/tests -v
+      - name: 核对来源运行身份与成功结论
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          SOURCE_RUN: ${{ inputs.source_run }}
+          SOURCE_SHA: ${{ inputs.source_sha }}
+          EXPECTED_IMAGE_ID: ${{ inputs.expected_image_id }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, subprocess
+          run, sha, image = (os.environ[k] for k in ('SOURCE_RUN','SOURCE_SHA','EXPECTED_IMAGE_ID'))
+          assert re.fullmatch(r'[0-9]+',run) and re.fullmatch(r'[0-9a-f]{40}',sha) and re.fullmatch(r'sha256:[0-9a-f]{64}',image), '来源参数格式无效'
+          result=json.loads(subprocess.check_output(['gh','api',f'repos/{os.environ["GH_REPO"]}/actions/runs/{run}']))
+          assert result['repository']['full_name']==os.environ['GH_REPO'] and result['repository']['private'] is True, '来源必须在当前私有仓库'
+          assert result['status']=='completed' and result['conclusion']=='success', '来源运行未完整成功'
+          assert result['head_sha']==sha and result['path']=='.github/workflows/verify.yml', '来源 SHA 或工作流身份不匹配'
+          with open('delta-source-run.json','w') as f: json.dump({k:result[k] for k in ('id','head_sha','path','status','conclusion','html_url')},f,indent=2)
+          PY
+      - uses: actions/download-artifact@v4
+        with:
+          name: worker-image
+          path: final-image
+          run-id: ${{ inputs.source_run }}
+          github-token: ${{ github.token }}
+      - name: 生成增量并校验目标镜像内容
+        env:
+          EXPECTED_IMAGE_ID: ${{ inputs.expected_image_id }}
+        run: |
+          python3 deploy/image_delta.py create \
+            --target final-image/openacad-worker.tar.gz \
+            --baseline-inventory docs/deployment/evidence/baseline-archive.json \
+            --expected-image-id "$EXPECTED_IMAGE_ID" \
+            --output openacad-worker.delta.tar.gz \
+            --report delta-report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: worker-image-delta
+          path: |
+            openacad-worker.delta.tar.gz
+            delta-report.json
+            delta-source-run.json
+            deploy/image_delta.py
+          compression-level: 0
+          retention-days: 7

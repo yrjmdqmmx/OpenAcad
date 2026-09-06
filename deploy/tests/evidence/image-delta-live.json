@@ -1,0 +1,104 @@
+{
+  "kind": "isolated-simulated-docker-save-roundtrip",
+  "originalImageId": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+  "delta": {
+    "imageId": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+    "identityKind": "oci-root",
+    "configDigest": "sha256:988b8e26c1e2deffe39b05235998db84dddaf79963f192699bc35baa55068b73",
+    "acceptedExpectedIdentity": {
+      "digest": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+      "kind": "oci-root"
+    },
+    "topLevelDigest": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+    "architecture": "arm64",
+    "os": "linux",
+    "rootfsDiffIds": [
+      "sha256:7e0d03a698e8210cb258b5da8ce2372ffdccbb3399a10af34356fd2a23c341ba",
+      "sha256:f70c3f0fba6fe7a5f3e89575ea0e8c889844c985f2140f749e43033d7c593082"
+    ],
+    "runtimeConfigKeys": [
+      "Env",
+      "Labels",
+      "WorkingDir"
+    ],
+    "runtimeConfigSha256": "5901b9aefc434c6ad76bde519f56a0a8c4b02d3b85384af625c9774cbd57c6d3",
+    "ociRootDigests": [
+      "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6"
+    ],
+    "attestationReferences": 2,
+    "format": "oci-docker",
+    "layers": [
+      "blobs/sha256/12782c3be2667f55148ff09c0d851093dd8e241ecf07b60ef0fb87a4f3445e38",
+      "blobs/sha256/4c84d1a4053dd91093da56bdabd0ae384d1527006fd90a823ef8ee0c7dcb014d"
+    ],
+    "config": "blobs/sha256/988b8e26c1e2deffe39b05235998db84dddaf79963f192699bc35baa55068b73",
+    "repoTags": [
+      "openacad-delta-check:final"
+    ],
+    "sourceArchiveSha256": "7f98e9a643dedee298ff3c628489a8b803d200a38204df2d50755e5f9ff6920c",
+    "deltaSha256": "fc48cc1854f1e22096bd05bb086e1f3be7e6fe7c706e65878d6a5ba28e0cbc1a",
+    "deltaBytes": 3447,
+    "reusedFiles": 1,
+    "reusedBytes": 133,
+    "payloadFiles": 10,
+    "payloadBytes": 4973
+  },
+  "assembly": {
+    "imageId": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+    "identityKind": "oci-root",
+    "configDigest": "sha256:988b8e26c1e2deffe39b05235998db84dddaf79963f192699bc35baa55068b73",
+    "acceptedExpectedIdentity": {
+      "digest": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+      "kind": "oci-root"
+    },
+    "topLevelDigest": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+    "architecture": "arm64",
+    "os": "linux",
+    "rootfsDiffIds": [
+      "sha256:7e0d03a698e8210cb258b5da8ce2372ffdccbb3399a10af34356fd2a23c341ba",
+      "sha256:f70c3f0fba6fe7a5f3e89575ea0e8c889844c985f2140f749e43033d7c593082"
+    ],
+    "runtimeConfigKeys": [
+      "Env",
+      "Labels",
+      "WorkingDir"
+    ],
+    "runtimeConfigSha256": "5901b9aefc434c6ad76bde519f56a0a8c4b02d3b85384af625c9774cbd57c6d3",
+    "ociRootDigests": [
+      "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6"
+    ],
+    "attestationReferences": 2,
+    "format": "oci-docker",
+    "layers": [
+      "blobs/sha256/12782c3be2667f55148ff09c0d851093dd8e241ecf07b60ef0fb87a4f3445e38",
+      "blobs/sha256/4c84d1a4053dd91093da56bdabd0ae384d1527006fd90a823ef8ee0c7dcb014d"
+    ],
+    "config": "blobs/sha256/988b8e26c1e2deffe39b05235998db84dddaf79963f192699bc35baa55068b73",
+    "repoTags": [
+      "openacad-delta-check:final"
+    ],
+    "reconstructedArchiveSha256": "9760ae0bd94a17d7d54b30d596e4fb555daf98a5b5dc9d169481793cf3bc77fd",
+    "archiveBytes": 20480,
+    "deltaSha256": "fc48cc1854f1e22096bd05bb086e1f3be7e6fe7c706e65878d6a5ba28e0cbc1a",
+    "filesVerified": 11,
+    "allFilesVerified": true,
+    "dockerLoadVerified": false,
+    "nextRequiredCheck": "docker load \u540e\u8bfb\u53d6\u5b9e\u9645 tag \u7684 docker image inspect JSON\uff0c\u4f7f\u7528 verify-loaded \u6838\u5bf9 OCI \u6839/config \u8eab\u4efd\u3001RootFS\u3001\u5e73\u53f0\u53ca Config\uff1b\u672a\u6838\u5bf9\u7981\u6b62\u53d1\u5e03"
+  },
+  "loaded": {
+    "dockerLoadVerified": true,
+    "loadedId": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+    "configDigest": "sha256:988b8e26c1e2deffe39b05235998db84dddaf79963f192699bc35baa55068b73",
+    "topLevelDigest": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+    "acceptedExpectedIdentity": {
+      "digest": "sha256:24db7379e0f534501470904a2a15e9d76c2cecfe454e96a743a820cf046e96c6",
+      "kind": "oci-root"
+    },
+    "rootfsVerified": true,
+    "runtimeConfigVerified": true,
+    "architecture": "arm64",
+    "os": "linux",
+    "inspectJsonSha256": "cf39b1fd70ef4d356e1d8794662c0b0c8b2391da63648ee7cb8dfcaeb6dd1f3b",
+    "reconstructedArchiveSha256": "9760ae0bd94a17d7d54b30d596e4fb555daf98a5b5dc9d169481793cf3bc77fd"
+  }
+}
