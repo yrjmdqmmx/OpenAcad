@@ -1,0 +1,23 @@
+{
+  "sourceRevision": "01c5d87a6f36263b236bd964d70996d25635a907",
+  "baseUrl": "https://openacad.xyz",
+  "stats": {
+    "startTime": "2026-09-06T17:35:38.302Z",
+    "duration": 442314.26,
+    "expected": 33,
+    "skipped": 35,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "groups": {
+    "crossEngineAndMobileWorkflows": 16,
+    "realOrdinationsChromium": 5,
+    "realExportsDesktopAndMobile": 8,
+    "injectedFontAndCancellationFailuresChromium": 4
+  },
+  "notes": [
+    "35按配置跳过，未将同一模板宣称在所有浏览器逐控件验收",
+    "4个故障注入使用网络拦截；13个真实计算和格式下载使用正式API",
+    "本轮21份产物另存；已恢复之前本地逐图证据"
+  ]
+}

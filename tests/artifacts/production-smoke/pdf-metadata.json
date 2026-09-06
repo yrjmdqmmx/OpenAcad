@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "method": "render",
+  "data": {},
+  "provenance": {
+    "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+    "format": "pdf",
+    "dpi": 150,
+    "width": 960.0,
+    "height": 560.0,
+    "outline": false,
+    "availableFontsSha256": {
+      "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+    },
+    "sha256": "5bdfa8f31a20804e2c3af030af0df4e0b9d29373cf98e34c115ea85ffd28e35f"
+  },
+  "diagnostics": []
+}

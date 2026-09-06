@@ -1,0 +1,112 @@
+{
+  "sourceRevision": "01c5d87a6f36263b236bd964d70996d25635a907",
+  "baseUrl": "https://openacad.xyz",
+  "files": [
+    {
+      "path": "bar-cn.svg",
+      "bytes": 5492,
+      "sha256": "187aee035f0e8fdcd33041aa8431f27f2997009636e45aaffcd9b42f870628b3"
+    },
+    {
+      "path": "editor-desktop.png",
+      "bytes": 141405,
+      "sha256": "df435cc097b8a2207689e2ec19efe4b45a1d363f031fffac6d5344edf48e2614"
+    },
+    {
+      "path": "catalog-desktop.png",
+      "bytes": 160725,
+      "sha256": "a43ce5ac4466ad38657c950b4d6f5ab99fae4c55fd80f50f3d7e2227bbf3e719"
+    },
+    {
+      "path": "catalog-mobile.png",
+      "bytes": 243208,
+      "sha256": "9477466bbe26ec89aaced56bb805d2c28f07b1cc6cb83458dd1cbc4300a0d9da"
+    },
+    {
+      "path": "analysis/pca.openacad.json",
+      "bytes": 7390,
+      "sha256": "52e377e2264ba530eb2c98df65eaf5340c0d8ba7999f941125b1411f48be42de"
+    },
+    {
+      "path": "analysis/pcoa.openacad.json",
+      "bytes": 6849,
+      "sha256": "c53954e8447a50fed0f933b1cd1b3b9a3be916bdd5883c22e10263a0a10e86af"
+    },
+    {
+      "path": "analysis/nmds.openacad.json",
+      "bytes": 6127,
+      "sha256": "cb53f901f3742b41e70b9b844d534cd3e57424c997399a3801235856ce93d2ee"
+    },
+    {
+      "path": "analysis/cca.openacad.json",
+      "bytes": 8145,
+      "sha256": "6e3414a9b8761793a15df5fa3c9c81567051ccc4035cd4105d8c5c51da257a1c"
+    },
+    {
+      "path": "analysis/rda.openacad.json",
+      "bytes": 8112,
+      "sha256": "ef4d94a323c3cadb50692313696ed63f0c3ffc4f9f9f5224881049ea1070f8f4"
+    },
+    {
+      "path": "live-exports/chromium-chinese-serif.svg",
+      "bytes": 51814,
+      "sha256": "4d2ca0e8d65294bbb292541d7106ddb498d8f3400e233975be2d9cec6bd16b9d"
+    },
+    {
+      "path": "live-exports/chromium-chinese-serif.png",
+      "bytes": 45332,
+      "sha256": "85696061af491e9adf2cb98908a27ae6fb4cde807553fae5b6af4d51cd9e0e01"
+    },
+    {
+      "path": "live-exports/chromium-chinese-serif.pdf",
+      "bytes": 69808,
+      "sha256": "8a1a524605e00d2c537e8cdee3717d3224ebf20b68da60a0ec8e5fd0ee95c091"
+    },
+    {
+      "path": "live-exports/chromium-chinese-serif.eps",
+      "bytes": 126689,
+      "sha256": "d28c3f3981f4813148449cfee50a07e7a1429a1ade62b075df48eb6abc9c89fc"
+    },
+    {
+      "path": "live-exports/mobile-chinese-serif.svg",
+      "bytes": 51814,
+      "sha256": "4d2ca0e8d65294bbb292541d7106ddb498d8f3400e233975be2d9cec6bd16b9d"
+    },
+    {
+      "path": "live-exports/mobile-chinese-serif.png",
+      "bytes": 45332,
+      "sha256": "85696061af491e9adf2cb98908a27ae6fb4cde807553fae5b6af4d51cd9e0e01"
+    },
+    {
+      "path": "live-exports/mobile-chinese-serif.pdf",
+      "bytes": 69808,
+      "sha256": "1ea9ce2157ac77d0d2820f26d6a4a4a5fdcded03ae6ddb461d08e5ff207d9ac9"
+    },
+    {
+      "path": "live-exports/mobile-chinese-serif.eps",
+      "bytes": 126689,
+      "sha256": "13ac2002010fc796970c68c683d9baa7d4737f264ec3f977fd287e4321134dcd"
+    },
+    {
+      "path": "export-fonts/cancel-font-preparation.json",
+      "bytes": 258,
+      "sha256": "6ccffffe4d929328c7e0c3aebcf4f132fe83b27aff73a4579c0c8262877e45d2"
+    },
+    {
+      "path": "export-fonts/cancel-pending-post.json",
+      "bytes": 260,
+      "sha256": "086a8c3c99771897ebae9559e75f653e7be07db97ff4a5e6c43772e462867171"
+    },
+    {
+      "path": "export-fonts/font-load-failure.json",
+      "bytes": 280,
+      "sha256": "34d59ae02e828540c1d7a43aa8105527d41e9cbf2dc252a87882232ad31356ab"
+    },
+    {
+      "path": "export-fonts/unrelated-font.json",
+      "bytes": 249,
+      "sha256": "bc5ca465fbf932ce0b44f5877f425d7c1a622e61cb1fc0fe65fd0b27e0464909"
+    }
+  ],
+  "notWrittenThisRun": []
+}

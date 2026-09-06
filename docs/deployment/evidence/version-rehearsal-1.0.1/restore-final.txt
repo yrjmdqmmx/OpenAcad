@@ -1,0 +1,13 @@
+ Container openacad-api-1 Running 
+ Container openacad-worker-one-1 Running 
+ Container openacad-worker-two-1 Running 
+ Container openacad-redis-1 Running 
+ Container openacad-redis-1 Waiting 
+ Container openacad-redis-1 Waiting 
+ Container openacad-redis-1 Waiting 
+ Container openacad-redis-1 Healthy 
+ Container openacad-redis-1 Healthy 
+ Container openacad-redis-1 Healthy 
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+发布完成：/opt/openacad/releases/1.0.1-01c5d87

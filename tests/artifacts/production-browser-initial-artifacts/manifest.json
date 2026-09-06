@@ -1,0 +1,41 @@
+{
+  "sourceRevision": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+  "baseUrl": "https://openacad.xyz",
+  "files": [
+    {
+      "path": "analysis/pca.openacad.json",
+      "bytes": 7390,
+      "sha256": "e680d84aa0af24358f7af57f4061e83944fea0eec7ef7479942eeea1bb66ccd4"
+    },
+    {
+      "path": "analysis/pcoa.openacad.json",
+      "bytes": 6849,
+      "sha256": "8779ac382fa9b80689c540f008b207d0bcfac84922f89ac008e8fab4463f101a"
+    },
+    {
+      "path": "analysis/cca.openacad.json",
+      "bytes": 8145,
+      "sha256": "5e85e5dade64caf7e3386ba4b8bd3e5f49b9d889a5088e31a365ee4d68ee0fc9"
+    },
+    {
+      "path": "analysis/rda.openacad.json",
+      "bytes": 8112,
+      "sha256": "1f65eed9b63c75fdd0691de2201148b82fb0a416d7c9b69eb9dc5cdf5a92a094"
+    }
+  ],
+  "notWrittenThisRun": [
+    "bar-cn.svg",
+    "editor-desktop.png",
+    "catalog-desktop.png",
+    "catalog-mobile.png",
+    "analysis/nmds.openacad.json",
+    "live-exports/chromium-chinese-serif.svg",
+    "live-exports/chromium-chinese-serif.png",
+    "live-exports/chromium-chinese-serif.pdf",
+    "live-exports/chromium-chinese-serif.eps",
+    "live-exports/mobile-chinese-serif.svg",
+    "live-exports/mobile-chinese-serif.png",
+    "live-exports/mobile-chinese-serif.pdf",
+    "live-exports/mobile-chinese-serif.eps"
+  ]
+}

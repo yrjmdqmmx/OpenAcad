@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "svgRenderer": {
+    "name": "Google Chrome headless via Playwright",
+    "version": "152.0.7977.76"
+  },
+  "checkedAt": "2026-09-06T17:46:31.162574+00:00",
+  "sourceRevision": "01c5d87a6f36263b236bd964d70996d25635a907",
+  "baseUrl": "https://openacad.xyz",
+  "scope": "8 actual desktop/mobile browser downloads; local reopening only; no new server jobs",
+  "originalFilesUnmodified": true,
+  "tools": {
+    "chrome": "152.0.7977.76",
+    "poppler": "pdftoppm version 26.08.0",
+    "ghostscript": "10.07.1",
+    "pngValidation": "frozen production_smoke.py png_check: signature, chunk CRC, zlib/filter pixel decoding, non-white alpha-composited ink bounds",
+    "python": "3.12.14"
+  },
+  "cases": [
+    {
+      "file": "live-exports/chromium-chinese-serif.eps",
+      "format": "eps",
+      "device": "desktop",
+      "bytes": 126689,
+      "sha256": "d28c3f3981f4813148449cfee50a07e7a1429a1ade62b075df48eb6abc9c89fc",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "decoder": "Ghostscript",
+      "boundingBoxPoints": [
+        0,
+        1,
+        720,
+        481
+      ],
+      "pagePoints": [
+        720,
+        480
+      ],
+      "textMode": "raster composite embedded in EPS",
+      "imageOperators": 1,
+      "rasterLimitation": "EPS contains one Cairo image; Chinese appearance is retained as pixels and text/font editability cannot be claimed",
+      "preview": "independent-previews/chromium-chinese-serif-eps.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          556
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "579b26dd05acaf5873d7cc5e62cfc368cc33d2eaf2a0bb4b4f8158cf8a734f69"
+    },
+    {
+      "file": "live-exports/chromium-chinese-serif.pdf",
+      "format": "pdf",
+      "device": "desktop",
+      "bytes": 69808,
+      "sha256": "8a1a524605e00d2c537e8cdee3717d3224ebf20b68da60a0ec8e5fd0ee95c091",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "initialCheckError": "Expected title unavailable after Unicode compatibility normalization",
+      "decoder": "Poppler",
+      "pages": 1,
+      "pagePoints": [
+        720,
+        480
+      ],
+      "textMode": "embedded font text",
+      "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nXVEXHT+CairoFont-0-0                 CID Type 0C       Identity-H       yes yes yes      7  0\nZAZLPD+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes     11  0\n",
+      "expectedTitleMatchesExactUnicode": false,
+      "expectedTitleMatchesAfterNFKC": true,
+      "unicodeLimitation": "pdftotext exposes several Kangxi radical compatibility code points; NFKC normalizes them to the intended Chinese characters",
+      "preview": "independent-previews/chromium-chinese-serif-pdf.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          912,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "040d28fe9b405b76ff3a1345e7ea5037f3decfeb6d1247a8966e351aa48cec20"
+    },
+    {
+      "file": "live-exports/chromium-chinese-serif.png",
+      "format": "png",
+      "device": "desktop",
+      "bytes": 45332,
+      "sha256": "85696061af491e9adf2cb98908a27ae6fb4cde807553fae5b6af4d51cd9e0e01",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "textMode": "raster pixels; font identity cannot be recovered from PNG alone",
+      "decoder": "PNG CRC/zlib/filter decoder",
+      "preview": "live-exports/chromium-chinese-serif.png",
+      "pixels": {
+        "width": 1500,
+        "height": 1000,
+        "decoded": true,
+        "inkBounds": [
+          16,
+          21,
+          1424,
+          868
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "85696061af491e9adf2cb98908a27ae6fb4cde807553fae5b6af4d51cd9e0e01"
+    },
+    {
+      "file": "live-exports/chromium-chinese-serif.svg",
+      "format": "svg",
+      "device": "desktop",
+      "bytes": 51814,
+      "sha256": "4d2ca0e8d65294bbb292541d7106ddb498d8f3400e233975be2d9cec6bd16b9d",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "structure": {
+        "source": "live-exports/chromium-chinese-serif.svg",
+        "preview": "independent-previews/chromium-chinese-serif-svg.png",
+        "width": 960,
+        "height": 640,
+        "viewBox": "0 0 960 640",
+        "textElements": 0,
+        "paths": 69,
+        "embeddedImages": 0,
+        "label": "中文导出检验：处理组浓度",
+        "pageErrors": [],
+        "externalRequests": 0
+      },
+      "textMode": "all text outlined to SVG paths; no font dependency",
+      "decoder": "Google Chrome",
+      "preview": "independent-previews/chromium-chinese-serif-svg.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "5bc25a073242a92e58f4ea485e74fab3267ceea76518dec70e96ffa1100b8d1a"
+    },
+    {
+      "file": "live-exports/mobile-chinese-serif.eps",
+      "format": "eps",
+      "device": "mobile",
+      "bytes": 126689,
+      "sha256": "13ac2002010fc796970c68c683d9baa7d4737f264ec3f977fd287e4321134dcd",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "decoder": "Ghostscript",
+      "boundingBoxPoints": [
+        0,
+        1,
+        720,
+        481
+      ],
+      "pagePoints": [
+        720,
+        480
+      ],
+      "textMode": "raster composite embedded in EPS",
+      "imageOperators": 1,
+      "rasterLimitation": "EPS contains one Cairo image; Chinese appearance is retained as pixels and text/font editability cannot be claimed",
+      "preview": "independent-previews/mobile-chinese-serif-eps.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          556
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "579b26dd05acaf5873d7cc5e62cfc368cc33d2eaf2a0bb4b4f8158cf8a734f69"
+    },
+    {
+      "file": "live-exports/mobile-chinese-serif.pdf",
+      "format": "pdf",
+      "device": "mobile",
+      "bytes": 69808,
+      "sha256": "1ea9ce2157ac77d0d2820f26d6a4a4a5fdcded03ae6ddb461d08e5ff207d9ac9",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "initialCheckError": "Expected title unavailable after Unicode compatibility normalization",
+      "decoder": "Poppler",
+      "pages": 1,
+      "pagePoints": [
+        720,
+        480
+      ],
+      "textMode": "embedded font text",
+      "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nXVEXHT+CairoFont-0-0                 CID Type 0C       Identity-H       yes yes yes      7  0\nZAZLPD+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes     11  0\n",
+      "expectedTitleMatchesExactUnicode": false,
+      "expectedTitleMatchesAfterNFKC": true,
+      "unicodeLimitation": "pdftotext exposes several Kangxi radical compatibility code points; NFKC normalizes them to the intended Chinese characters",
+      "preview": "independent-previews/mobile-chinese-serif-pdf.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          912,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "040d28fe9b405b76ff3a1345e7ea5037f3decfeb6d1247a8966e351aa48cec20"
+    },
+    {
+      "file": "live-exports/mobile-chinese-serif.png",
+      "format": "png",
+      "device": "mobile",
+      "bytes": 45332,
+      "sha256": "85696061af491e9adf2cb98908a27ae6fb4cde807553fae5b6af4d51cd9e0e01",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "textMode": "raster pixels; font identity cannot be recovered from PNG alone",
+      "decoder": "PNG CRC/zlib/filter decoder",
+      "preview": "live-exports/mobile-chinese-serif.png",
+      "pixels": {
+        "width": 1500,
+        "height": 1000,
+        "decoded": true,
+        "inkBounds": [
+          16,
+          21,
+          1424,
+          868
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "85696061af491e9adf2cb98908a27ae6fb4cde807553fae5b6af4d51cd9e0e01"
+    },
+    {
+      "file": "live-exports/mobile-chinese-serif.svg",
+      "format": "svg",
+      "device": "mobile",
+      "bytes": 51814,
+      "sha256": "4d2ca0e8d65294bbb292541d7106ddb498d8f3400e233975be2d9cec6bd16b9d",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "structure": {
+        "source": "live-exports/mobile-chinese-serif.svg",
+        "preview": "independent-previews/mobile-chinese-serif-svg.png",
+        "width": 960,
+        "height": 640,
+        "viewBox": "0 0 960 640",
+        "textElements": 0,
+        "paths": 69,
+        "embeddedImages": 0,
+        "label": "中文导出检验：处理组浓度",
+        "pageErrors": [],
+        "externalRequests": 0
+      },
+      "textMode": "all text outlined to SVG paths; no font dependency",
+      "decoder": "Google Chrome",
+      "preview": "independent-previews/mobile-chinese-serif-svg.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "5bc25a073242a92e58f4ea485e74fab3267ceea76518dec70e96ffa1100b8d1a"
+    }
+  ],
+  "complete": true,
+  "limitations": [
+    "Ink-boundary detection checks non-white visible pixels against the page edge; visual inspection found no obvious internal clipping. This does not establish clipping freedom for other data or templates.",
+    "PNG and raster EPS preserve appearance but do not expose editable Chinese font/text identity.",
+    "PDF text extraction uses some compatibility-radical code points; intended text matches only after NFKC normalization.",
+    "This checks the eight actual downloaded files from the preserved production run; it does not rerun all templates or exercise new server requests.",
+    "The PDF title rendered by Poppler is visibly heavier than the title in the SVG, PNG, and EPS previews. Content and placement are consistent; cross-format weight equivalence is not established."
+  ],
+  "verificationMethodCorrection": "The initial PDF title assertion normalized extracted text but not the expected fullwidth colon. The expected title is now normalized using the same NFKC operation. Original files were unchanged.",
+  "desktopMobileRenderedPairs": [
+    {
+      "format": "svg",
+      "previewBytesIdentical": true
+    },
+    {
+      "format": "png",
+      "previewBytesIdentical": true
+    },
+    {
+      "format": "pdf",
+      "previewBytesIdentical": true
+    },
+    {
+      "format": "eps",
+      "previewBytesIdentical": true
+    }
+  ],
+  "visualReview": {
+    "completedAt": "2026-09-06T17:49:05.081096+00:00",
+    "method": "Visual inspection of the four unique decoded format images; mobile previews are independently decoded and byte-identical to their desktop counterparts.",
+    "chineseTitleAndCategoryLabelsReadable": true,
+    "fourBarsAndAxesVisible": true,
+    "obviousClippingObserved": false,
+    "missingGlyphBoxesObserved": false,
+    "crossFormatFontWeightIdentical": false,
+    "crossFormatFontWeightNote": "The PDF title rendered by Poppler is visibly heavier than the title in the SVG, PNG, and EPS previews. Content and placement are consistent; cross-format weight equivalence is not established."
+  },
+  "hasLimitations": true
+}

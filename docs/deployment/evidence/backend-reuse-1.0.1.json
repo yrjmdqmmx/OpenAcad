@@ -1,0 +1,12 @@
+{
+  "frontendRevision": "01c5d87a6f36263b236bd964d70996d25635a907",
+  "backendVerifiedRevision": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+  "frontendServerTree": "b72dd0184d2ae8aec271727058f311de3c0eae53",
+  "backendServerTree": "b72dd0184d2ae8aec271727058f311de3c0eae53",
+  "imageTag": "openacad-worker:1.0.0-23d5bb0",
+  "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+  "identical": true,
+  "newCiRun": 34048295712,
+  "newCiConfigDigest": "sha256:f5a6ac07b01aca00c5e0f5a849db06bd50286ea02335b40b26991aaf985612d4",
+  "matchesPreviouslyVerifiedConfig": true
+}

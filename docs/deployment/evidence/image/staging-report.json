@@ -1,0 +1,31 @@
+{
+  "stagedAt": "2026-09-06T16:56:47.984276+00:00",
+  "release": "/opt/openacad/releases/1.0.0-23d5bb0",
+  "sourceRevision": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+  "version": {
+    "version": "1.0.0",
+    "revision": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+    "builtAt": "2026-09-06T16:17:25.316Z"
+  },
+  "imageTag": "openacad-worker:1.0.0-23d5bb0",
+  "image": {
+    "dockerLoadVerified": true,
+    "loadedId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+    "configDigest": "sha256:f5a6ac07b01aca00c5e0f5a849db06bd50286ea02335b40b26991aaf985612d4",
+    "topLevelDigest": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+    "acceptedExpectedIdentity": {
+      "digest": "sha256:f5a6ac07b01aca00c5e0f5a849db06bd50286ea02335b40b26991aaf985612d4",
+      "kind": "config"
+    },
+    "rootfsVerified": true,
+    "runtimeConfigVerified": true,
+    "architecture": "amd64",
+    "os": "linux",
+    "inspectJsonSha256": "1424ac5b0e55836e94f547ebdc3ebf1fedc5356368b66eb13f46176194330b3e",
+    "reconstructedArchiveSha256": "43e67fa5f8a865f0e52942c8096ebe125865caaed8bbacb4a5ee0e60df01bf08"
+  },
+  "archiveSha256": "99c59feb0d121804be655cd9f3c8eaf1d44c6773bf554d11592762c31da8c796",
+  "deltaBytes": 42552089,
+  "reusedBytes": 1699293696,
+  "serviceChanged": false
+}

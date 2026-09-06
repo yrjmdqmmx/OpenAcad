@@ -1,0 +1,39 @@
+{
+  "sourceRevision": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+  "network": [
+    {
+      "path": "/api/jobs",
+      "method": "POST",
+      "status": 202,
+      "startedDateTime": "2026-09-06T17:00:50.085Z",
+      "timeMs": 52335.557,
+      "timings": {
+        "dns": -1,
+        "connect": -1,
+        "ssl": -1,
+        "send": 0,
+        "wait": 49597.774,
+        "receive": 2737.783
+      }
+    },
+    {
+      "path": "/api/jobs/{id}",
+      "method": "GET",
+      "status": -1,
+      "startedDateTime": "2026-09-06T17:01:42.422Z",
+      "timeMs": -1,
+      "timings": {
+        "send": -1,
+        "wait": -1,
+        "receive": -1
+      }
+    }
+  ],
+  "workerLogObserved": {
+    "startedAt": "2026-09-06T17:00:56.807451574Z",
+    "finishedAt": "2026-09-06T17:00:57.819826929Z",
+    "status": "Job OK",
+    "elapsedSeconds": 1.012375355
+  },
+  "conclusion": "算法成功，浏览器接收POST/GET响应延迟；与完整字体下载共现，未证明因果。没有新提交或重复POST。"
+}

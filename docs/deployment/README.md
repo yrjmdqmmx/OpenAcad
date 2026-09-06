@@ -8,7 +8,7 @@ OpenAcad 使用独立的 `/opt/openacad` 目录、`openacad` Compose 项目、`1
 
 - `web/`：由锁文件构建的网页和自制示例。
 - `compose.yml`、`release.env`：固定镜像标签和运行配置。
-- `REVISION`：源码提交号。
+- `REVISION`：前端源码提交号；若复用已验证的相同后端镜像，另记 `BACKEND_REVISION` 和镜像身份。
 
 项目长期数据保存在使用者的浏览器 IndexedDB 和下载的 `.openacad.json` 文件中。服务器只保存临时任务；升级会暂停新任务并等待已有任务完成。Redis 未启用磁盘持久化，故障重启时未下载的临时结果可能丢失，界面允许重新计算。
 
@@ -39,6 +39,8 @@ GODEBUG=http2client=0 server/.venv/bin/python deploy/fetch-artifact.py \
 
 脚本使用操作机现有 `gh` 登录，仅在内存获取一次性下载地址，通过 SSH 标准输入交给服务器；不保存 GitHub 凭据，并核对 GitHub 附件 SHA-256。`web-evidence` 可用同样方式获取。附件下载与测试通过分别核查；先确认运行完整成功再发布。也可常规使用 `gh run download` 后通过 SCP 上传。
 
+若大附件的临时链接在传输完成前过期，可使用[镜像增量发行流程](../../deploy/IMAGE_DELTA.md)。它从已成功构建的完整归档生成差异包，按实际 SHA 复用旧归档成员，再通过 `verify-loaded` 核对配置摘要、OCI 根、全部文件系统层、平台和运行配置；应用不重新构建。旧完整归档及上一发行必须保留。
+
 ## 首次安装
 
 前提：Docker Compose、Nginx、Certbot 已安装；SSH 使用已有授权访问；根域 A 记录指向香港服务器；防火墙允许 80/443。不要添加未经验证的 AAAA 记录。
@@ -66,6 +68,10 @@ curl --fail https://openacad.xyz/api/health
 Certbot 命令仅操作新域名的虚拟主机。可以另行给证书登记维护邮箱；没有邮箱时依赖自动续期日志和定期健康检查。首次发布前，应确认 DNS 已解析到目标 IPv4。
 
 ## 更新与回退
+
+后续更新保留 Certbot 已修改的 HTTPS 虚拟主机，不再次用仓库内首次安装用的纯HTTP模板覆盖。只切换发行目录和本发行的服务。
+
+只有 `server/` Git树完全一致、最新CI重建的配置摘要与已验证镜像一致时，前端修复才复用该后端镜像；记录前后源码、配置摘要及实际加载身份。1.0.1的实际记录见[后端复用核验](evidence/backend-reuse-1.0.1.json)。不能仅凭镜像标签相同推断内容相同。
 
 发行脚本 `deploy/update.sh` 先启用维护标记，停止接收新计算/导出任务；已有结果仍可读取或取消。最多轮询 70 次、每次间隔 5 秒排空队列，然后启动新镜像。API、worker-one、worker-two 三个容器均须 healthy，且 API 实际响应成功，才切换网页目录并重载 Nginx。worker 健康命令为 `python -m app.worker_health`，核对本容器 hostname、存活 PID 和 90 秒以内的心跳，不用 Redis 中残留的旧 worker 数量代替就绪证据。
 
@@ -105,13 +111,13 @@ rm -f /opt/openacad/shared/maintenance
 
 ## 线上计算与导出验收
 
-在可信任的操作机上，从源码目录运行以下脚本。需要 Python 3；完整独立打开检查还需要本机 Poppler（`pdftoppm`、可选 `pdffonts`）与 Ghostscript（`gs`）。脚本不操作 DNS、服务器配置或其他人的任务，仅提交五个确定性模拟数据任务，保存本地结果后清理本次任务。不会保存或打印临时任务访问凭据。
+在可信任的操作机上，从源码目录运行以下脚本。需要 Python 3 与锁文件中的 `httpx==0.28.1`（使用已安装依赖的 `server/.venv`）；完整独立打开检查还需要本机 Poppler（`pdftoppm`、可选 `pdffonts`）与 Ghostscript（`gs`）。脚本不操作 DNS、服务器配置或其他人的任务，仅提交五个确定性模拟数据任务，保存本地结果后清理本次任务。不会保存或打印临时任务访问凭据。
 
 ```sh
-python3 server/scripts/production_smoke.py https://openacad.xyz \
+server/.venv/bin/python server/scripts/production_smoke.py https://openacad.xyz \
   --output tests/artifacts/production-smoke
 ```
 
 默认要求至少两个近期活跃 worker。脚本检查首页和 API，实际执行 PCA、R LM，并用独立重构与最小二乘公式验证数值；随后把真实结果生成的中文图导出 PNG/PDF/EPS，核对像素尺寸、校验和、非空白和页面边界，并用 Poppler/Ghostscript 独立打开。输出目录包含模拟输入、完整计算结果、图片、字体及方法版本和 `report.json`。`complete: true` 才表示这些检查全部通过。缺少独立打开工具时，可显式加 `--skip-independent-open`，报告将标记 `partial`，不能作为完整导出验收。单 worker 本地调试可加 `--min-workers 1`。
 
-该脚本不替代浏览器逐模板验收：仍需检查 SVG、项目文件重开、交互和手机下载；仅 `/api/health` 成功也不等于功能验收完成。生产版本、发布日期和恢复演练结果另记在 `production-record.md`。
+该脚本不替代浏览器逐模板验收：仍需检查 SVG、项目文件重开、交互和手机下载；仅 `/api/health` 成功也不等于功能验收完成。生产版本、发布日期和恢复演练结果另记在[正式发布记录](production-record.md)。

@@ -6,9 +6,13 @@
 - [完整结构记录](templates.json)：每项检查的方法、报告选择路径、原始中文错误、文件 SHA、条件分支和源站一对多映射。
 - [公开简要页面](../../web/public/acceptance/index.html)：部署路径 `/acceptance/index.html`，提供中文检索及相同 JSON/CSV 下载。
 
-## 最终运行结果及解释
+## 保留的本地运行结果及解释
 
 主浏览器套件（开始时间：2026-09-06T14:14:54.234Z）：**82 通过，0 失败，194 按配置跳过，0 重试不稳定**。55 个模板均在 Chromium 实际显示、下载项目、下载 SVG 并重新打开 SVG；3 个通用工作流另在 Chromium、Firefox、WebKit 和 390px 手机配置各运行一次。5 项排序分析使用真实后端，8 项验证实际图片导出（桌面与手机各四格式），1 项检查排序图分组/已有坐标模式/项目恢复，1 项检查样式响应时间。194 个跳过项表示按场景只在指定配置运行，不能说55图均完成四浏览器逐项验收。原报告：[browser-results.json](../../tests/artifacts/browser-results.json)。
+
+最新1.0.1 Linux发行 [CI 34048295712](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34048295712) 对应源码 `01c5d87`，另有311项前端单测、77项浏览器场景（219项按配置跳过）、152项后端测试和13项发布/镜像归档回归通过。Linux未配置LIVE_API，不运行13项真实服务浏览器场景；这13项已在正式HTTPS浏览器中独立执行通过。不同运行的计数不相加。
+
+2026-09-07北京时间，1.0.1 [生产浏览器报告](../../tests/artifacts/production-browser.json)为 **33通过、35按配置跳过、0失败、0重试不稳定**：16项三引擎/手机通用流程，5项真实排序分析，桌面和手机8项真实导出，4项字体及取消故障注入。后4项使用拦截模拟来验证异常处理，与真实计算、下载分开。21份本次实际下载/截图另存于[生产证据清单](../../tests/artifacts/production-browser-artifacts/manifest.json)，未覆盖本地逐图证据。另有[五任务生产API报告](../../tests/artifacts/production-smoke/report.json)完整通过；当前后端与该运行保持相同身份。后续[独立打开](../../tests/artifacts/production-browser-artifacts/INDEPENDENT-EXPORT-README.md)发现中文标题加粗的跨格式差异，1.0.2修复验收正在进行，不能以33项浏览器通过替代这一独立检查。部署、证书及实际版本恢复见[发布记录](../deployment/production-record.md)。
 
 默认样式审计记录 **2371 项**，其中 **2367 项**改变服务器端 React SVG 序列化，另 **4 项**依赖特定数据或布局。它不是2371次浏览器操作，也不证明任意参数组合。每个模板的真实浏览器样式覆盖单独列出。主任务最终单元测试反馈为311项通过；本索引把具体断言位置与运行报告分开引用。
 

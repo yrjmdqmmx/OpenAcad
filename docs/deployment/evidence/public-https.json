@@ -1,0 +1,37 @@
+{
+  "version": {
+    "path": "/version.json",
+    "bytes": 110,
+    "sha256": "1c949ebad8866cc60c5b4afc0fe21159049ede1eb6edc4e4e5bf7b2204eeb533",
+    "value": {
+      "version": "1.0.0",
+      "revision": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+      "builtAt": "2026-09-06T16:17:25.316Z"
+    }
+  },
+  "health": {
+    "path": "/api/health",
+    "bytes": 65,
+    "sha256": "06a9fd5e378ca0cd5df65e6273d10be412b8143076c609f0734a48887d4ec793",
+    "value": {
+      "status": "ok",
+      "queue": true,
+      "workers": 2,
+      "message": "服务正常"
+    }
+  },
+  "research": {
+    "path": "/research/comparison.json",
+    "bytes": 118033,
+    "sha256": "2c370ae226b9141fd1274cd422cf8990b79698632e2c8f58fdb5f29f34ff8caf",
+    "records": 52
+  },
+  "acceptance": {
+    "path": "/acceptance/templates.json",
+    "bytes": 1038838,
+    "sha256": "cb6e27d6412a84ed07d2f87d61be79c059b8b1e674c3ca47e0655da34329ac84",
+    "templates": 55
+  },
+  "checkedAt": "2026-09-06T17:00:39.413954+00:00",
+  "tlsVerification": true
+}

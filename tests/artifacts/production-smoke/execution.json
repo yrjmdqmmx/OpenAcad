@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "baseUrl": "https://openacad.xyz",
+  "release": "1.0.0-23d5bb0",
+  "applicationSourceCommit": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+  "imageTag": "openacad-worker:1.0.0-23d5bb0",
+  "imageIdVerifiedBeforeExecution": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+  "currentDirectoryVerifiedBeforeExecution": "/opt/openacad/releases/1.0.0-23d5bb0",
+  "runnerSource": "server/scripts/production_smoke.py",
+  "runnerSha256": "744ac93024a8e687a963a36b4d47884fc786dcfd618fa9807e341307beec6580",
+  "executionMode": "isolated one-off container on production host; actual HTTPS domain; normal certificate verification",
+  "containerConstraints": {
+    "imageReadOnly": true,
+    "user": "10001:10001",
+    "cpus": 0.5,
+    "memoryBytes": 268435456,
+    "pidsLimit": 96,
+    "tmpfsBytes": 67108864,
+    "capabilitiesDropped": "ALL",
+    "noNewPrivileges": true,
+    "applicationVolumesMounted": false
+  },
+  "sourceData": "deterministically generated simulated data only",
+  "serverProcessExitCode": 0,
+  "rawServerReport": "server-report-before-local-opening.json",
+  "finalIndependentReport": "report.json"
+}

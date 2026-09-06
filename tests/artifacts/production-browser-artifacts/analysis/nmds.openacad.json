@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "id": "966a69ac-643a-44a8-ae8e-dbc328987e0b",
+  "name": "非度量多维尺度 NMDS · 模拟数据",
+  "templateId": "nmds",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T17:37:10.668Z",
+  "updatedAt": "2026-09-06T17:37:14.190Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "response",
+        "name": "样本与特征",
+        "role": "matrix",
+        "columns": [
+          "样本编号",
+          "物种甲",
+          "物种乙",
+          "物种丙",
+          "物种丁"
+        ],
+        "rows": [
+          [
+            "样本 01",
+            3.503,
+            5.103,
+            14.309,
+            4.904
+          ],
+          [
+            "样本 02",
+            20.886,
+            20.798,
+            20.763,
+            17.578
+          ],
+          [
+            "样本 03",
+            20.486,
+            13.586,
+            23.659,
+            23.07
+          ],
+          [
+            "样本 04",
+            10.828,
+            19.351,
+            5.9,
+            15.586
+          ],
+          [
+            "样本 05",
+            17.595,
+            7.174,
+            25.269,
+            17.274
+          ],
+          [
+            "样本 06",
+            15.382,
+            14.636,
+            22.83,
+            33.681
+          ],
+          [
+            "样本 07",
+            8.283,
+            15.194,
+            16.117,
+            17.633
+          ],
+          [
+            "样本 08",
+            16.237,
+            13.375,
+            13.503,
+            16.118
+          ],
+          [
+            "样本 09",
+            12.328,
+            25.149,
+            27.707,
+            20.259
+          ],
+          [
+            "样本 10",
+            6.772,
+            2.795,
+            18.766,
+            3.067
+          ],
+          [
+            "样本 11",
+            10.837,
+            8.906,
+            10.945,
+            26.143
+          ],
+          [
+            "样本 12",
+            13.446,
+            20.607,
+            27.745,
+            25.823
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 80,
+    "marginRight": 95,
+    "marginBottom": 85,
+    "marginLeft": 90,
+    "title": "非度量多维尺度 NMDS",
+    "subtitle": "模拟样本数据 · 结果由固定统计环境计算",
+    "fontFamily": "Noto Sans SC",
+    "fontSize": 14,
+    "titleSize": 22,
+    "textColor": "#172b3a",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#7c91bd",
+      "#dbc16b",
+      "#89b5a4",
+      "#be88a5"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 6,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "ordinationInput": "raw",
+    "pointShape": "circle",
+    "showLoadings": false,
+    "showEnvironment": false,
+    "axisOne": 1,
+    "axisTwo": 2,
+    "vectorScale": 1
+  },
+  "layers": [],
+  "layout": {},
+  "analysis": {
+    "method": "nmds",
+    "params": {
+      "standardization": "None",
+      "direction": "column",
+      "distance": "bray",
+      "seed": 1,
+      "tryMax": 100
+    },
+    "inputHash": "a4c22a5bbc2963241cde63916f7c01111252d1a43bc46faf517a588dbd46b5c3",
+    "result": {
+      "schemaVersion": 1,
+      "method": "nmds",
+      "data": {
+        "scores": [
+          [
+            -0.46139896992680307,
+            0.00006558861176168882
+          ],
+          [
+            0.09225735918885332,
+            -0.000021469075561325945
+          ],
+          [
+            0.09224239047117218,
+            -0.000013111265487510233
+          ],
+          [
+            0.09232326142502054,
+            0.00008661183893047866
+          ],
+          [
+            0.09225628186519329,
+            -0.000026442411763411472
+          ],
+          [
+            0.0923424174294481,
+            -0.00004876886019074781
+          ],
+          [
+            0.09224674113386291,
+            0.00003994794119892758
+          ],
+          [
+            0.09226541232358716,
+            0.000020477075423862506
+          ],
+          [
+            0.0922806513149452,
+            -0.0000626904217884075
+          ],
+          [
+            -0.46140464786590235,
+            -0.00006559778416453507
+          ],
+          [
+            0.09225350184261463,
+            0.00009144351226677887
+          ],
+          [
+            0.09233560079800815,
+            -0.00006598916062579842
+          ]
+        ],
+        "rowLabels": [
+          "样本 01",
+          "样本 02",
+          "样本 03",
+          "样本 04",
+          "样本 05",
+          "样本 06",
+          "样本 07",
+          "样本 08",
+          "样本 09",
+          "样本 10",
+          "样本 11",
+          "样本 12"
+        ],
+        "stress": 0.000082003368852352,
+        "converged": true,
+        "tries": 20,
+        "dimensions": 2
+      },
+      "provenance": {
+        "engine": "R",
+        "method": "nmds",
+        "methodVersion": "openacad-1",
+        "python": "3.12.3",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 1,
+        "inputSha256": "40112bdbb7034c9cb8202faf01a021e06b0b9636e88b34c3a387de5b2cde8b6c",
+        "parameters": {
+          "seed": 1,
+          "standardization": "None",
+          "direction": "column",
+          "distance": "bray",
+          "dimensions": 2,
+          "try": 20,
+          "tryMax": 100,
+          "pseudocount": 0
+        },
+        "r": "4.6.1",
+        "rPackages": {
+          "vegan": "2.7.6",
+          "mgcv": "1.9.4",
+          "ape": "5.8.1",
+          "ade4": "1.7.24",
+          "jsonlite": "2.0.0"
+        },
+        "rng": "L'Ecuyer-CMRG"
+      },
+      "diagnostics": [
+        {
+          "code": "R_WARNING",
+          "message": "NMDS stress 接近零，可能因数据点不足或距离关系过于简单；请结合样本数量解释"
+        }
+      ]
+    }
+  }
+}

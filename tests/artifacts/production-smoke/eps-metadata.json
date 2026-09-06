@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "method": "render",
+  "data": {},
+  "provenance": {
+    "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+    "format": "eps",
+    "dpi": 150,
+    "width": 960.0,
+    "height": 560.0,
+    "outline": false,
+    "availableFontsSha256": {
+      "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+    },
+    "sha256": "e4b4140eae3650d6d093ab7f65a811042e7ead6dbe1dd7d60c6e54178083f30a"
+  },
+  "diagnostics": [
+    {
+      "code": "EPS_ALPHA_FLATTENED",
+      "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+    },
+    {
+      "code": "EPS_BACKGROUND",
+      "message": "EPS 使用不透明背景 #ffffff"
+    }
+  ]
+}

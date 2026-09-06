@@ -1,0 +1,102 @@
+[
+    {
+        "Id": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+        "RepoTags": [
+            "openacad-worker:verified"
+        ],
+        "RepoDigests": [
+            "openacad-worker@sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-06T15:36:15.711989391Z",
+        "Config": {
+            "User": "10001:10001",
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Env": [
+                "PATH=/opt/openacad/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "R_VERSION=4.6.1",
+                "R_HOME=/usr/local/lib/R",
+                "TZ=Etc/UTC",
+                "CRAN=https://p3m.dev/cran/__linux__/noble/latest",
+                "LANG=en_US.UTF-8",
+                "DEBIAN_FRONTEND=noninteractive",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "OPENBLAS_NUM_THREADS=1",
+                "OMP_NUM_THREADS=1",
+                "MKL_NUM_THREADS=1",
+                "R_DEFAULT_INTERNET_TIMEOUT=300",
+                "HOME=/tmp"
+            ],
+            "Cmd": [
+                "uvicorn",
+                "app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000",
+                "--no-access-log"
+            ],
+            "WorkingDir": "/app",
+            "Labels": {
+                "org.opencontainers.image.authors": "Carl Boettiger <cboettig@ropensci.org>",
+                "org.opencontainers.image.base.name": "docker.io/library/ubuntu:noble",
+                "org.opencontainers.image.description": "Reproducible builds to fixed version of R",
+                "org.opencontainers.image.licenses": "GPL-2.0-or-later",
+                "org.opencontainers.image.revision": "9e8d0dfff8ce94e458521ce2698580056722c713",
+                "org.opencontainers.image.source": "https://github.com/rocker-org/rocker-versioned2",
+                "org.opencontainers.image.title": "rocker/r-ver",
+                "org.opencontainers.image.vendor": "Rocker Project",
+                "org.opencontainers.image.version": "R-4.6.1"
+            },
+            "ArgsEscaped": true
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1753652072,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:b9a65b3c65ab22d490085bd0bf5490e2409da8748b406870f2463bdc41cd6795",
+                "sha256:d6980644e0a6bbcea8a723743e77943a19cd44b668cb3befae44232e642e0238",
+                "sha256:607c3ba345703b6e33e27802a2524ffc0d707469b8554a85faae6fa36089ea33",
+                "sha256:4d8c0f1b16088e67cbb1ed060043a56a802f4ee4c543c04be021b7e28ccfd17f",
+                "sha256:d958437e39ad4a11ddf408a88a97bd77f9b4068c27e7ebbb4f20dd1cf1d19ce7",
+                "sha256:10e6612d2941edb436eaff7738b4e73eedc8dd2e240ab7ee0818c3f11cf5f046",
+                "sha256:a3efdc550ed06369cdea080da23372cb7f0f1237a8da0fb59c5e5f656a7018b4",
+                "sha256:d2d8427f21df3cc5fd8072402ece7a5f8d06d5d0a79b017ca3ae6ee6cd436441",
+                "sha256:e4c4647e135ddce929a63d7f43e17c626bf8fd62ed144c36f07c8496586d9222",
+                "sha256:c7da8f6ad2b088dee02ea78abec12fde629dca928c84d4eeb68acef7faf3cde7",
+                "sha256:897a6019654eda78c0f49e369a83635604460313fed6573badc191cff1c316b7",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:e01c42185dd17e78dbc0df9c8272e81a0b7f3995d5e4b57e90d0bde0e8d391db",
+                "sha256:7dce1f775749e1915ee63151e55b6417a96d7e651df9c1be9c460acc1e60a48e",
+                "sha256:34bbf3acf1e09523806aeb408541fc57dde640457f5c3492d191ce938dff7da4",
+                "sha256:1e3eb882f284b202aff5d4e62ab906eb4b3192108b34e38f530f12b49341b14e",
+                "sha256:116599f11f553e31c3a4279ffc57f22d952c5aa1a98d9f5d4b355488a84659fa",
+                "sha256:4b86590836a7e3c138c1de4dff2086405bd2eb2947a908dedd429b088232d9f3",
+                "sha256:b66e7297652b263813e75f05d93f9d2146e90c037c2c9f50446a53c8593c68ad",
+                "sha256:f853d4a587356dc98955b10c58ec8bf450a38c858a6ecb63de1c43699a2d7468",
+                "sha256:322eb598ccea719f077244a407db70ae5a190e40a8b0e593c3057592e6f91088",
+                "sha256:97596480398f1a448c3235ad009da9e63f1c294b137dc073f0e7eccac1bb5230",
+                "sha256:60118d0fcd57302ce7791f0f1deabc0d50f6730ccb8a4854ea7513f9e32efd39",
+                "sha256:1739900f4e6fd0346d33e6e046da4c204d36db0f6ead3f4754f3c7e3f92f9c04",
+                "sha256:fcb7d223455ccc3c97915ef43fd66e07ac696bb0f86e06c676cb7e223fba13c0"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-09-06T16:56:47.457730289Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+            "size": 4046,
+            "annotations": {
+                "io.containerd.image.name": "docker.io/library/openacad-worker:verified",
+                "org.opencontainers.image.ref.name": "verified"
+            }
+        }
+    }
+]

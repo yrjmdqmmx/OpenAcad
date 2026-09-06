@@ -1,0 +1,6 @@
+web	Run npm run build && npm test	2026-09-06T17:21:21.4719857Z       Tests  311 passed (311)
+web	Run npm run test:browser	2026-09-06T17:26:47.5470638Z   219 skipped
+web	Run npm run test:browser	2026-09-06T17:26:47.5474245Z   77 passed (4.7m)
+worker	验证发布失败恢复流程	2026-09-06T17:20:38.8754194Z Ran 13 tests in 0.711s
+worker	Run docker/build-push-action@v6	2026-09-06T17:21:53.5155844Z   "containerimage.config.digest": "sha256:f5a6ac07b01aca00c5e0f5a849db06bd50286ea02335b40b26991aaf985612d4",
+worker	Run docker run --rm --entrypoint python openacad-worker:verified -m pytest -q tests	2026-09-06T17:22:53.9604450Z 152 passed, 3 warnings in 59.68s

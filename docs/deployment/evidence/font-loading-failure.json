@@ -1,0 +1,371 @@
+{
+  "sourceRevision": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+  "baseUrl": "https://openacad.xyz",
+  "finding": "完整OTF冷下载使字体准备超时；导出尚未POST。导出准备取消无效另由代码确认，正在修复。",
+  "suiteInterruptedByOperatorAfterConfirmedFailure": true,
+  "traces": [
+    {
+      "case": "live-export-真实-PDF-下载与中文字体-chromium",
+      "network": [
+        {
+          "path": "/",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 3273.7780000000002,
+          "bytes": 651,
+          "timings": {
+            "dns": -1,
+            "connect": 1388.343,
+            "ssl": 1387.932,
+            "send": 0,
+            "wait": 496.197,
+            "receive": 1.306
+          }
+        },
+        {
+          "path": "/assets/index-yfFunhBY.css",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 530.078,
+          "bytes": 21274,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 514.016,
+            "receive": 16.062
+          }
+        },
+        {
+          "path": "/assets/react-B8yqMBYu.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 1750.904,
+          "bytes": 11547,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1558.6,
+            "receive": 192.304
+          }
+        },
+        {
+          "path": "/assets/graphics-Bs9fXVP7.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 2619.065,
+          "bytes": 113731,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1558.707,
+            "receive": 1060.358
+          }
+        },
+        {
+          "path": "/assets/data-YXG8lxWB.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 4284.439,
+          "bytes": 492260,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1558.966,
+            "receive": 2725.473
+          }
+        },
+        {
+          "path": "/assets/index-D91b7DWO.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 5481.938,
+          "bytes": 753832,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1036.761,
+            "receive": 4445.177
+          }
+        },
+        {
+          "path": "/fonts/NotoSansCJKsc-Regular.otf",
+          "method": "GET",
+          "status": -1,
+          "timeMs": -1,
+          "bytes": -1,
+          "timings": {
+            "send": -1,
+            "wait": -1,
+            "receive": -1
+          }
+        },
+        {
+          "path": "/fonts/NotoSerifCJKsc-Regular.otf",
+          "method": "GET",
+          "status": -1,
+          "timeMs": -1,
+          "bytes": -1,
+          "timings": {
+            "send": -1,
+            "wait": -1,
+            "receive": -1
+          }
+        }
+      ]
+    },
+    {
+      "case": "live-export-真实-SVG-下载与中文字体-chromium",
+      "network": [
+        {
+          "path": "/",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 4354.295,
+          "bytes": 652,
+          "timings": {
+            "dns": -1,
+            "connect": 1840.349,
+            "ssl": 1828.642,
+            "send": 0,
+            "wait": 682.903,
+            "receive": 2.401
+          }
+        },
+        {
+          "path": "/assets/index-yfFunhBY.css",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 840.937,
+          "bytes": 21274,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 836.188,
+            "receive": 4.749
+          }
+        },
+        {
+          "path": "/assets/react-B8yqMBYu.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 2444.8779999999997,
+          "bytes": 11547,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1884.588,
+            "receive": 560.29
+          }
+        },
+        {
+          "path": "/assets/graphics-Bs9fXVP7.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 3986.005,
+          "bytes": 113731,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1885.018,
+            "receive": 2100.987
+          }
+        },
+        {
+          "path": "/assets/data-YXG8lxWB.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 6085.717,
+          "bytes": 492260,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1885.054,
+            "receive": 4200.663
+          }
+        },
+        {
+          "path": "/assets/index-D91b7DWO.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 6298.022999999999,
+          "bytes": 753832,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 837.382,
+            "receive": 5460.641
+          }
+        },
+        {
+          "path": "/fonts/NotoSansCJKsc-Regular.otf",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 89436.08,
+          "bytes": 16455640,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1231.534,
+            "receive": 88204.546
+          }
+        },
+        {
+          "path": "/fonts/NotoSerifCJKsc-Regular.otf",
+          "method": "GET",
+          "status": -1,
+          "timeMs": -1,
+          "bytes": -1,
+          "timings": {
+            "send": -1,
+            "wait": -1,
+            "receive": -1
+          }
+        }
+      ]
+    },
+    {
+      "case": "live-export-真实-PNG-下载与中文字体-chromium",
+      "network": [
+        {
+          "path": "/",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 11917.053,
+          "bytes": 651,
+          "timings": {
+            "dns": -1,
+            "connect": 5742.179,
+            "ssl": 5741.878,
+            "send": 0,
+            "wait": 431.692,
+            "receive": 1.304
+          }
+        },
+        {
+          "path": "/assets/index-yfFunhBY.css",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 1042.489,
+          "bytes": 21274,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 541.945,
+            "receive": 500.544
+          }
+        },
+        {
+          "path": "/assets/react-B8yqMBYu.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 3136.715,
+          "bytes": 11547,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1677.081,
+            "receive": 1459.634
+          }
+        },
+        {
+          "path": "/assets/graphics-Bs9fXVP7.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 4752.32,
+          "bytes": 113731,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1677.474,
+            "receive": 3074.846
+          }
+        },
+        {
+          "path": "/assets/data-YXG8lxWB.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 7447.783,
+          "bytes": 492260,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1677.513,
+            "receive": 5770.27
+          }
+        },
+        {
+          "path": "/assets/index-D91b7DWO.js",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 8941.568,
+          "bytes": 753832,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 1037.627,
+            "receive": 7903.941
+          }
+        },
+        {
+          "path": "/fonts/NotoSansCJKsc-Regular.otf",
+          "method": "GET",
+          "status": 200,
+          "timeMs": 55460.605,
+          "bytes": 16455639,
+          "timings": {
+            "dns": -1,
+            "connect": -1,
+            "ssl": -1,
+            "send": 0,
+            "wait": 396.658,
+            "receive": 55063.947
+          }
+        },
+        {
+          "path": "/fonts/NotoSerifCJKsc-Regular.otf",
+          "method": "GET",
+          "status": -1,
+          "timeMs": -1,
+          "bytes": -1,
+          "timings": {
+            "send": -1,
+            "wait": -1,
+            "receive": -1
+          }
+        }
+      ]
+    }
+  ]
+}

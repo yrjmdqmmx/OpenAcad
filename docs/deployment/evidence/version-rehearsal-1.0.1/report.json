@@ -1,0 +1,101 @@
+{
+  "startedAt": "2026-09-06T17:34:09.499446+00:00",
+  "steps": [
+    {
+      "release": "/opt/openacad/releases/1.0.0-23d5bb0",
+      "revision": "23d5bb098d4b1a6d8551f3de8fe6e88893807f91",
+      "health": {
+        "status": "ok",
+        "queue": true,
+        "workers": 2,
+        "message": "服务正常"
+      },
+      "containers": [
+        {
+          "container": "openacad-api-1",
+          "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+          "health": "healthy"
+        },
+        {
+          "container": "openacad-worker-one-1",
+          "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+          "health": "healthy"
+        },
+        {
+          "container": "openacad-worker-two-1",
+          "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+          "health": "healthy"
+        }
+      ],
+      "httpsIndexSha256": "257f3fc98004ab7543362416715b538530883dab12e553621973eaf71480c6d0",
+      "maintenancePresent": false,
+      "checkedAt": "2026-09-06T17:34:13.209413+00:00",
+      "action": "restore-previous",
+      "exitCode": 0
+    },
+    {
+      "release": "/opt/openacad/releases/1.0.1-01c5d87",
+      "revision": "01c5d87a6f36263b236bd964d70996d25635a907",
+      "health": {
+        "status": "ok",
+        "queue": true,
+        "workers": 2,
+        "message": "服务正常"
+      },
+      "containers": [
+        {
+          "container": "openacad-api-1",
+          "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+          "health": "healthy"
+        },
+        {
+          "container": "openacad-worker-one-1",
+          "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+          "health": "healthy"
+        },
+        {
+          "container": "openacad-worker-two-1",
+          "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+          "health": "healthy"
+        }
+      ],
+      "httpsIndexSha256": "a8809423db18965ab39bbbc75f4a9ce58f1947dac1088aa461e8bc5eecc95660",
+      "maintenancePresent": false,
+      "checkedAt": "2026-09-06T17:34:16.776045+00:00",
+      "action": "restore-final",
+      "exitCode": 0
+    }
+  ],
+  "passed": true,
+  "before": {
+    "release": "/opt/openacad/releases/1.0.1-01c5d87",
+    "revision": "01c5d87a6f36263b236bd964d70996d25635a907",
+    "health": {
+      "status": "ok",
+      "queue": true,
+      "workers": 2,
+      "message": "服务正常"
+    },
+    "containers": [
+      {
+        "container": "openacad-api-1",
+        "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+        "health": "healthy"
+      },
+      {
+        "container": "openacad-worker-one-1",
+        "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+        "health": "healthy"
+      },
+      {
+        "container": "openacad-worker-two-1",
+        "imageId": "sha256:cec91c1f008073236405713073ff14011102d9913fecea48fbdcadfb0134d168",
+        "health": "healthy"
+      }
+    ],
+    "httpsIndexSha256": "a8809423db18965ab39bbbc75f4a9ce58f1947dac1088aa461e8bc5eecc95660",
+    "maintenancePresent": false,
+    "checkedAt": "2026-09-06T17:34:09.648126+00:00"
+  },
+  "finishedAt": "2026-09-06T17:34:16.776080+00:00"
+}

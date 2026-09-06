@@ -1,0 +1,18 @@
+{
+  "startedAt": "2026-09-06T15:47:54.105919+00:00",
+  "kind": "candidate image unavailable before successful startup",
+  "expectedImageAbsent": "openacad-worker:missing-recovery-probe-20260906",
+  "exitCode": 1,
+  "previousRelease": "/opt/openacad/releases/0.1.0-fb4cacd",
+  "currentRelease": "/opt/openacad/releases/0.1.0-fb4cacd",
+  "maintenancePresent": false,
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "服务正常"
+  },
+  "recoveryMessageObserved": true,
+  "updateScriptSha256": "a46240f166d2bd224f2c028e93382a455efb72cc5beae5c7d9093a5405743095",
+  "passed": true
+}
