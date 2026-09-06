@@ -2,7 +2,7 @@
 
 中文科研绘图与统计工作台：55个可编辑模板，直接试用模拟数据、替换自己的数据、调整样式并下载图片或可继续编辑的项目。无需登录。
 
-正式网站：[https://openacad.xyz](https://openacad.xyz) · 当前已部署 **1.0.1**。主要线上验收和恢复演练已完成，1.0.2正修复独立复核发现的字体加粗差异；[发布记录](docs/deployment/production-record.md)保留运行源码、测试范围及限制。
+正式网站：[https://openacad.xyz](https://openacad.xyz) · 当前已部署 **1.0.2**。V1功能、完整Linux CI、正式域名验收和恢复演练已完成；[发布记录](docs/deployment/production-record.md)保留运行源码、测试范围及限制。
 
 - `web/`：React、TypeScript、D3/SVG；CSV/TSV/Excel、专业文件、IndexedDB草稿。
 - `server/`：FastAPI、RQ、Redis、固定版本Python/R统计和Inkscape导出。

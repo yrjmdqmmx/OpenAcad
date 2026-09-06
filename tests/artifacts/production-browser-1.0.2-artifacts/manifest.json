@@ -1,0 +1,117 @@
+{
+  "sourceRevision": "443357603240c87b9d28ebce346e8e87ea0d7f88",
+  "baseUrl": "https://openacad.xyz",
+  "files": [
+    {
+      "path": "bar-cn.svg",
+      "bytes": 6232,
+      "sha256": "177cbde91156003378b58487c59ab5f80b97f646eed613e5d631dd9d314d4b48"
+    },
+    {
+      "path": "editor-desktop.png",
+      "bytes": 137255,
+      "sha256": "1c379a47aab6d74e5a4a7f2e2e3ae730ad276b56da09d3eed2f2c55ece89b479"
+    },
+    {
+      "path": "catalog-desktop.png",
+      "bytes": 154635,
+      "sha256": "58cb452c338fc77d18f443fc49b1f02c28b204a670b0aa83e13cbe7d9e082c77"
+    },
+    {
+      "path": "catalog-mobile.png",
+      "bytes": 246210,
+      "sha256": "f2ebe4987f2862f2d6b604d0b8fe04c7212b2a43f8968b5ec0fdf5e4951b5974"
+    },
+    {
+      "path": "analysis/pca.openacad.json",
+      "bytes": 7390,
+      "sha256": "7e9e52b9932d6d1dd25e1892ae3eee2ef1eb8b816acc9e11371ad5ff5ec2d31e"
+    },
+    {
+      "path": "analysis/pcoa.openacad.json",
+      "bytes": 6849,
+      "sha256": "248ca262eafabdc9f08d363614ae97d8a83af2e3ff3dce25339970ea3cec8f72"
+    },
+    {
+      "path": "analysis/nmds.openacad.json",
+      "bytes": 6127,
+      "sha256": "fb42c362ab8f6800a4c6aa9a747fef210a695e62d111716f015b8b1d4610494a"
+    },
+    {
+      "path": "analysis/cca.openacad.json",
+      "bytes": 8145,
+      "sha256": "1e258e42a43de9d328a67a2ce91baec6a0463c66443ef24b52856849837ef9f6"
+    },
+    {
+      "path": "analysis/rda.openacad.json",
+      "bytes": 8112,
+      "sha256": "087926b16b358535819cdf723fc7df64a79cf0f25232f27b1216e04ca3be573a"
+    },
+    {
+      "path": "live-exports/chromium-chinese-serif.svg",
+      "bytes": 51782,
+      "sha256": "a5ff94138e66fa1431e916e32d0a076fad2fc6590312068e20677e6b990223d9"
+    },
+    {
+      "path": "live-exports/chromium-chinese-serif.png",
+      "bytes": 46906,
+      "sha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25"
+    },
+    {
+      "path": "live-exports/chromium-chinese-serif.pdf",
+      "bytes": 122771,
+      "sha256": "7c69eb3facfd63c575a39d93843b09f16368789003f1d0f0c225647c16976404"
+    },
+    {
+      "path": "live-exports/chromium-chinese-serif.eps",
+      "bytes": 128352,
+      "sha256": "c51c5b5b6ca592206d30c49374f5a27debbdda3dbddcc94219effda4994ce7c2"
+    },
+    {
+      "path": "live-exports/mobile-chinese-serif.svg",
+      "bytes": 51782,
+      "sha256": "a5ff94138e66fa1431e916e32d0a076fad2fc6590312068e20677e6b990223d9"
+    },
+    {
+      "path": "live-exports/mobile-chinese-serif.png",
+      "bytes": 46906,
+      "sha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25"
+    },
+    {
+      "path": "live-exports/mobile-chinese-serif.pdf",
+      "bytes": 122771,
+      "sha256": "77017bd5bd91638a253b59b6d0628d4026878330c6001888394de08010bdc8c6"
+    },
+    {
+      "path": "live-exports/mobile-chinese-serif.eps",
+      "bytes": 128352,
+      "sha256": "063cec5e703ec3ee960294553346e2d880542371e7fbcf4ca641eb48b8287311"
+    },
+    {
+      "path": "export-fonts/cancel-font-preparation.json",
+      "bytes": 258,
+      "sha256": "8405be00c04199665808f939ba6df05b739aa94411223f22b319341d9b37d646"
+    },
+    {
+      "path": "export-fonts/cancel-pending-post.json",
+      "bytes": 260,
+      "sha256": "812de205674fdc0da97f8ad50802f294e2afa14462a2519081f4fdf0bf4e2624"
+    },
+    {
+      "path": "export-fonts/font-load-failure.json",
+      "bytes": 280,
+      "sha256": "fabc0a879f94ed739bb5204152b1882f07ee59ef6a25d22512457986d39dc982"
+    },
+    {
+      "path": "export-fonts/unrelated-font.json",
+      "bytes": 249,
+      "sha256": "d7a22594b6b260513a4c395839f1cbbeee3e568635211a9f1c7ae79c6566b091"
+    },
+    {
+      "path": "export-fonts/static-weight-svg.json",
+      "bytes": 276,
+      "sha256": "832550e277713caa1847af09bc6662c2b1d7c3a24df7bf2223abde61d6c78b9f"
+    }
+  ],
+  "notWrittenThisRun": []
+}

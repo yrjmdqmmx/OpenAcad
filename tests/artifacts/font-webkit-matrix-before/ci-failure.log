@@ -1,0 +1,353 @@
+web	Run npm run test:browser	﻿2026-09-06T18:41:14.4061086Z ##[group]Run npm run test:browser
+web	Run npm run test:browser	2026-09-06T18:41:14.4061453Z [36;1mnpm run test:browser[0m
+web	Run npm run test:browser	2026-09-06T18:41:14.4096765Z shell: /usr/bin/bash -e {0}
+web	Run npm run test:browser	2026-09-06T18:41:14.4097037Z ##[endgroup]
+web	Run npm run test:browser	2026-09-06T18:41:14.5088277Z 
+web	Run npm run test:browser	2026-09-06T18:41:14.5089185Z > openacad-web@1.0.2 test:browser
+web	Run npm run test:browser	2026-09-06T18:41:14.5090348Z > playwright test
+web	Run npm run test:browser	2026-09-06T18:41:14.5090951Z 
+web	Run npm run test:browser	2026-09-06T18:41:16.4895762Z 
+web	Run npm run test:browser	2026-09-06T18:41:16.4896628Z Running 304 tests using 2 workers
+web	Run npm run test:browser	2026-09-06T18:41:16.4897408Z 
+web	Run npm run test:browser	2026-09-06T18:41:18.2085696Z   -    2 [chromium] › e2e/live-analysis.spec.ts:4:3 › pca 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:41:18.5264042Z   -    3 [chromium] › e2e/live-analysis.spec.ts:4:3 › pcoa 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:41:18.7888518Z   -    4 [chromium] › e2e/live-analysis.spec.ts:4:3 › nmds 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:41:19.1711369Z   -    5 [chromium] › e2e/live-analysis.spec.ts:4:3 › cca 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:41:19.4905519Z   -    6 [chromium] › e2e/live-analysis.spec.ts:4:3 › rda 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:41:19.8418429Z   -    7 [chromium] › e2e/live-export.spec.ts:4:3 › 真实 SVG 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:41:20.2045254Z   -    8 [chromium] › e2e/live-export.spec.ts:4:3 › 真实 PNG 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:41:20.4676169Z   -    9 [chromium] › e2e/live-export.spec.ts:4:3 › 真实 PDF 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:41:20.6892032Z   -   10 [chromium] › e2e/live-export.spec.ts:4:3 › 真实 EPS 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:41:21.0104281Z   ✓    1 [chromium] › e2e/export-fonts.spec.ts:20:1 › 字体准备期间取消不会提交或延迟下载，随后可以正常导出 (3.2s)
+web	Run npm run test:browser	2026-09-06T18:41:23.2434242Z   ✓   12 [chromium] › e2e/export-fonts.spec.ts:67:1 › 当前SVG下载不等待无关页面字体 (2.2s)
+web	Run npm run test:browser	2026-09-06T18:41:25.3224415Z   ✓   13 [chromium] › e2e/export-fonts.spec.ts:98:1 › POST返回前取消后会删除迟到任务且不轮询或下载 (2.1s)
+web	Run npm run test:browser	2026-09-06T18:41:25.6544163Z   ✓   11 [chromium] › e2e/ordination-editor.spec.ts:3:1 › 排序图分组、已有坐标模式和项目恢复 (4.9s)
+web	Run npm run test:browser	2026-09-06T18:41:27.1067113Z   ✓   14 [chromium] › e2e/export-fonts.spec.ts:143:1 › 当前图表字体请求失败时明确提示且不提交导出 (1.8s)
+web	Run npm run test:browser	2026-09-06T18:41:28.8934163Z   ✓   16 [chromium] › e2e/export-fonts.spec.ts:162:1 › 保留文字的SVG下载保存真实字重匹配且不改预览 (1.8s)
+web	Run npm run test:browser	2026-09-06T18:41:30.9661067Z   ✓   17 [chromium] › e2e/project-navigation.spec.ts:3:1 › 离开工作台再返回保留最新数据与样式 (2.0s)
+web	Run npm run test:browser	2026-09-06T18:41:33.0464260Z   ✓   15 [chromium] › e2e/performance.spec.ts:27:1 › 常规示例样式更新响应时间 (7.3s)
+web	Run npm run test:browser	2026-09-06T18:41:34.6900585Z   ✓   18 [chromium] › e2e/templates.spec.ts:8:3 › 分组柱状图：示例、几何、项目与 SVG 文件 (3.7s)
+web	Run npm run test:browser	2026-09-06T18:41:38.2916014Z   ✓   20 [chromium] › e2e/templates.spec.ts:8:3 › 散点图：示例、几何、项目与 SVG 文件 (3.6s)
+web	Run npm run test:browser	2026-09-06T18:41:38.8718555Z   ✓   19 [chromium] › e2e/typography.spec.ts:4:1 › 中文斜体实际改变字形像素，关闭后恢复原图 (5.8s)
+web	Run npm run test:browser	2026-09-06T18:41:42.3797896Z   ✓   21 [chromium] › e2e/templates.spec.ts:8:3 › 折线图与分组折线图：示例、几何、项目与 SVG 文件 (4.0s)
+web	Run npm run test:browser	2026-09-06T18:41:44.9034500Z   ✓   22 [chromium] › e2e/workflow.spec.ts:3:1 › 模板搜索、数据更换、错误定位、撤销和项目往返 (6.0s)
+web	Run npm run test:browser	2026-09-06T18:41:46.1844974Z   ✓   23 [chromium] › e2e/templates.spec.ts:8:3 › 数值热图：示例、几何、项目与 SVG 文件 (3.7s)
+web	Run npm run test:browser	2026-09-06T18:41:47.0525541Z   ✓   24 [chromium] › e2e/workflow.spec.ts:76:1 › 样式修改、图层保存、SVG 实际下载 (2.1s)
+web	Run npm run test:browser	2026-09-06T18:41:49.6383732Z   ✓   25 [chromium] › e2e/templates.spec.ts:8:3 › 箱线图：示例、几何、项目与 SVG 文件 (3.4s)
+web	Run npm run test:browser	2026-09-06T18:41:50.5434098Z   ✓   26 [chromium] › e2e/workflow.spec.ts:102:1 › 模板库、详情、帮助与手机页面无横向溢出 (3.5s)
+web	Run npm run test:browser	2026-09-06T18:41:52.8829502Z   ✓   27 [chromium] › e2e/templates.spec.ts:8:3 › 饼图与环图：示例、几何、项目与 SVG 文件 (3.2s)
+web	Run npm run test:browser	2026-09-06T18:41:55.4514275Z   -   28 [firefox] › e2e/export-fonts.spec.ts:20:1 › 字体准备期间取消不会提交或延迟下载，随后可以正常导出
+web	Run npm run test:browser	2026-09-06T18:41:56.4315928Z   -   30 [firefox] › e2e/export-fonts.spec.ts:67:1 › 当前SVG下载不等待无关页面字体
+web	Run npm run test:browser	2026-09-06T18:41:56.8604066Z   ✓   29 [chromium] › e2e/templates.spec.ts:8:3 › 柱状图：示例、几何、项目与 SVG 文件 (3.9s)
+web	Run npm run test:browser	2026-09-06T18:41:57.4243298Z   -   31 [firefox] › e2e/export-fonts.spec.ts:98:1 › POST返回前取消后会删除迟到任务且不轮询或下载
+web	Run npm run test:browser	2026-09-06T18:41:58.0046072Z   -   33 [firefox] › e2e/export-fonts.spec.ts:143:1 › 当前图表字体请求失败时明确提示且不提交导出
+web	Run npm run test:browser	2026-09-06T18:41:58.6498527Z   -   34 [firefox] › e2e/export-fonts.spec.ts:162:1 › 保留文字的SVG下载保存真实字重匹配且不改预览
+web	Run npm run test:browser	2026-09-06T18:41:59.2709442Z   -   35 [firefox] › e2e/live-analysis.spec.ts:4:3 › pca 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:42:00.0281643Z   -   36 [firefox] › e2e/live-analysis.spec.ts:4:3 › pcoa 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:42:00.5053027Z   ✓   32 [chromium] › e2e/templates.spec.ts:8:3 › 分类柱状图：示例、几何、项目与 SVG 文件 (3.6s)
+web	Run npm run test:browser	2026-09-06T18:42:00.6649189Z   -   37 [firefox] › e2e/live-analysis.spec.ts:4:3 › nmds 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:42:01.4314111Z   -   39 [firefox] › e2e/live-analysis.spec.ts:4:3 › cca 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:42:03.9446299Z   ✓   38 [chromium] › e2e/templates.spec.ts:8:3 › 误差柱状图：示例、几何、项目与 SVG 文件 (3.4s)
+web	Run npm run test:browser	2026-09-06T18:42:03.9473564Z   -   40 [firefox] › e2e/live-analysis.spec.ts:4:3 › rda 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:42:04.7371455Z   -   42 [firefox] › e2e/live-export.spec.ts:4:3 › 真实 SVG 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:42:05.3551635Z   -   43 [firefox] › e2e/live-export.spec.ts:4:3 › 真实 PNG 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:42:05.9834292Z   -   44 [firefox] › e2e/live-export.spec.ts:4:3 › 真实 PDF 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:42:06.6917430Z   -   45 [firefox] › e2e/live-export.spec.ts:4:3 › 真实 EPS 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:42:07.4354603Z   -   46 [firefox] › e2e/ordination-editor.spec.ts:3:1 › 排序图分组、已有坐标模式和项目恢复
+web	Run npm run test:browser	2026-09-06T18:42:07.7495369Z   ✓   41 [chromium] › e2e/templates.spec.ts:8:3 › 分组误差柱状图：示例、几何、项目与 SVG 文件 (3.8s)
+web	Run npm run test:browser	2026-09-06T18:42:08.1124222Z   -   47 [firefox] › e2e/performance.spec.ts:27:1 › 常规示例样式更新响应时间
+web	Run npm run test:browser	2026-09-06T18:42:11.4084191Z   ✓   49 [firefox] › e2e/project-navigation.spec.ts:3:1 › 离开工作台再返回保留最新数据与样式 (3.2s)
+web	Run npm run test:browser	2026-09-06T18:42:11.9248581Z   ✓   48 [chromium] › e2e/templates.spec.ts:8:3 › 散点误差图：示例、几何、项目与 SVG 文件 (4.1s)
+web	Run npm run test:browser	2026-09-06T18:42:12.0183623Z   -   50 [firefox] › e2e/templates.spec.ts:8:3 › 分组柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:12.7271347Z   -   52 [firefox] › e2e/templates.spec.ts:8:3 › 散点图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:15.1001604Z   ✓   51 [chromium] › e2e/templates.spec.ts:8:3 › 堆叠柱状图：示例、几何、项目与 SVG 文件 (3.1s)
+web	Run npm run test:browser	2026-09-06T18:42:15.5364053Z   -   53 [firefox] › e2e/templates.spec.ts:8:3 › 折线图与分组折线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:16.1827260Z   -   55 [firefox] › e2e/templates.spec.ts:8:3 › 数值热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:16.8335306Z   -   56 [firefox] › e2e/templates.spec.ts:8:3 › 箱线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:17.4341653Z   -   57 [firefox] › e2e/templates.spec.ts:8:3 › 饼图与环图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:18.3832697Z   -   58 [firefox] › e2e/templates.spec.ts:8:3 › 柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:18.6194109Z   ✓   54 [chromium] › e2e/templates.spec.ts:8:3 › 分组堆叠柱状图：示例、几何、项目与 SVG 文件 (3.5s)
+web	Run npm run test:browser	2026-09-06T18:42:19.0951641Z   -   59 [firefox] › e2e/templates.spec.ts:8:3 › 分类柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:19.7090625Z   -   61 [firefox] › e2e/templates.spec.ts:8:3 › 误差柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:20.2914110Z   -   62 [firefox] › e2e/templates.spec.ts:8:3 › 分组误差柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:20.9840438Z   -   63 [firefox] › e2e/templates.spec.ts:8:3 › 散点误差图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:21.8064256Z   -   64 [firefox] › e2e/templates.spec.ts:8:3 › 堆叠柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:22.4794760Z   ✓   60 [chromium] › e2e/templates.spec.ts:8:3 › 柱状图与折线组合：示例、几何、项目与 SVG 文件 (3.8s)
+web	Run npm run test:browser	2026-09-06T18:42:24.3311388Z   -   65 [firefox] › e2e/templates.spec.ts:8:3 › 分组堆叠柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:25.3965475Z   -   67 [firefox] › e2e/templates.spec.ts:8:3 › 柱状图与折线组合：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:26.1913762Z   -   68 [firefox] › e2e/templates.spec.ts:8:3 › 棒棒糖图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:26.3524453Z   ✓   66 [chromium] › e2e/templates.spec.ts:8:3 › 棒棒糖图：示例、几何、项目与 SVG 文件 (3.8s)
+web	Run npm run test:browser	2026-09-06T18:42:27.1982788Z   -   69 [firefox] › e2e/templates.spec.ts:8:3 › 分类棒棒糖图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:27.8896341Z   -   71 [firefox] › e2e/templates.spec.ts:8:3 › 分组误差折线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:28.8012699Z   -   72 [firefox] › e2e/templates.spec.ts:8:3 › 分组箱线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:29.5383912Z   -   73 [firefox] › e2e/templates.spec.ts:8:3 › 小提琴图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:30.6494549Z   -   74 [firefox] › e2e/templates.spec.ts:8:3 › 云雨图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:31.1518826Z   ✓   70 [chromium] › e2e/templates.spec.ts:8:3 › 分类棒棒糖图：示例、几何、项目与 SVG 文件 (4.7s)
+web	Run npm run test:browser	2026-09-06T18:42:31.6351020Z   -   75 [firefox] › e2e/templates.spec.ts:8:3 › 峰峦图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:32.4955036Z   -   77 [firefox] › e2e/templates.spec.ts:8:3 › UpSet 集合交集图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:35.3477801Z   -   78 [firefox] › e2e/templates.spec.ts:8:3 › 玫瑰图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:36.0044242Z   ✓   76 [chromium] › e2e/templates.spec.ts:8:3 › 分组误差折线图：示例、几何、项目与 SVG 文件 (4.9s)
+web	Run npm run test:browser	2026-09-06T18:42:36.3157224Z   -   79 [firefox] › e2e/templates.spec.ts:8:3 › 雷达图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:37.1404217Z   -   81 [firefox] › e2e/templates.spec.ts:8:3 › 哑铃图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:37.7913990Z   -   82 [firefox] › e2e/templates.spec.ts:8:3 › 分组散点图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:38.5582022Z   -   83 [firefox] › e2e/templates.spec.ts:8:3 › 圈形热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:39.4435066Z   -   84 [firefox] › e2e/templates.spec.ts:8:3 › 圆点二值图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:40.3715691Z   -   85 [firefox] › e2e/templates.spec.ts:8:3 › 方格二值图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:41.1675806Z   ✓   80 [chromium] › e2e/templates.spec.ts:8:3 › 分组箱线图：示例、几何、项目与 SVG 文件 (5.1s)
+web	Run npm run test:browser	2026-09-06T18:42:41.3103093Z   -   86 [firefox] › e2e/templates.spec.ts:8:3 › 数值气泡矩阵：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:42.1208680Z   -   88 [firefox] › e2e/templates.spec.ts:8:3 › 组内相关性热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:42.8293969Z   -   89 [firefox] › e2e/templates.spec.ts:8:3 › 组间相关性热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:45.3685526Z   ✓   87 [chromium] › e2e/templates.spec.ts:8:3 › 小提琴图：示例、几何、项目与 SVG 文件 (4.2s)
+web	Run npm run test:browser	2026-09-06T18:42:45.7843897Z   -   90 [firefox] › e2e/templates.spec.ts:8:3 › Mantel 关联热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:46.4686994Z   -   92 [firefox] › e2e/templates.spec.ts:8:3 › 韦恩集合交集图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:47.1544223Z   -   93 [firefox] › e2e/templates.spec.ts:8:3 › 分组圆堆砌图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:47.8199699Z   -   94 [firefox] › e2e/templates.spec.ts:8:3 › 桑基流向图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:48.6604293Z   -   95 [firefox] › e2e/templates.spec.ts:8:3 › 动态关系网络图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:49.0446234Z   ✓   91 [chromium] › e2e/templates.spec.ts:8:3 › 云雨图：示例、几何、项目与 SVG 文件 (3.6s)
+web	Run npm run test:browser	2026-09-06T18:42:49.3597114Z   -   96 [firefox] › e2e/templates.spec.ts:8:3 › 地理采样点地图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:49.9644274Z   -   98 [firefox] › e2e/templates.spec.ts:8:3 › 差异表达火山图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:50.5409156Z   -   99 [firefox] › e2e/templates.spec.ts:8:3 › 富集气泡图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:51.2328573Z   -  100 [firefox] › e2e/templates.spec.ts:8:3 › 富集条形图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:51.9902772Z   -  101 [firefox] › e2e/templates.spec.ts:8:3 › 富集圈图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:52.9303771Z   ✓   97 [chromium] › e2e/templates.spec.ts:8:3 › 峰峦图：示例、几何、项目与 SVG 文件 (3.8s)
+web	Run npm run test:browser	2026-09-06T18:42:54.5964221Z   -  102 [firefox] › e2e/templates.spec.ts:8:3 › 基因簇排列图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:55.3973950Z   -  104 [firefox] › e2e/templates.spec.ts:8:3 › 蛋白保守结构域图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:56.0795435Z   -  105 [firefox] › e2e/templates.spec.ts:8:3 › 蛋白保守基序图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:56.1921890Z   ✓  103 [chromium] › e2e/templates.spec.ts:8:3 › UpSet 集合交集图：示例、几何、项目与 SVG 文件 (3.2s)
+web	Run npm run test:browser	2026-09-06T18:42:56.7564506Z   -  106 [firefox] › e2e/templates.spec.ts:8:3 › 基因组圈图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:57.3346186Z   -  108 [firefox] › e2e/templates.spec.ts:8:3 › MCScanX 共线性图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:58.0046388Z   -  109 [firefox] › e2e/templates.spec.ts:8:3 › 主成分分析 PCA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:58.6834625Z   -  110 [firefox] › e2e/templates.spec.ts:8:3 › 主坐标分析 PCoA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:59.3117236Z   -  111 [firefox] › e2e/templates.spec.ts:8:3 › 非度量多维尺度 NMDS：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:59.8654240Z   -  112 [firefox] › e2e/templates.spec.ts:8:3 › 典范对应分析 CCA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:42:59.8719124Z   ✓  107 [chromium] › e2e/templates.spec.ts:8:3 › 玫瑰图：示例、几何、项目与 SVG 文件 (3.6s)
+web	Run npm run test:browser	2026-09-06T18:43:00.6336419Z   -  113 [firefox] › e2e/templates.spec.ts:8:3 › 冗余分析 RDA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:43:03.0664175Z   ✓  114 [chromium] › e2e/templates.spec.ts:8:3 › 雷达图：示例、几何、项目与 SVG 文件 (3.2s)
+web	Run npm run test:browser	2026-09-06T18:43:03.5630446Z   -  115 [firefox] › e2e/templates.spec.ts:8:3 › 矩形进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:43:04.1576775Z   -  117 [firefox] › e2e/templates.spec.ts:8:3 › 环形进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:43:04.8058609Z   -  118 [firefox] › e2e/templates.spec.ts:8:3 › 无根进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:43:06.8294057Z   ✓  116 [chromium] › e2e/templates.spec.ts:8:3 › 哑铃图：示例、几何、项目与 SVG 文件 (3.7s)
+web	Run npm run test:browser	2026-09-06T18:43:10.3616717Z   ✓  120 [chromium] › e2e/templates.spec.ts:8:3 › 分组散点图：示例、几何、项目与 SVG 文件 (3.5s)
+web	Run npm run test:browser	2026-09-06T18:43:12.2970903Z   ✓  119 [firefox] › e2e/typography.spec.ts:4:1 › 中文斜体实际改变字形像素，关闭后恢复原图 (7.5s)
+web	Run npm run test:browser	2026-09-06T18:43:13.9004033Z   ✓  121 [chromium] › e2e/templates.spec.ts:8:3 › 圈形热图：示例、几何、项目与 SVG 文件 (3.5s)
+web	Run npm run test:browser	2026-09-06T18:43:17.8052968Z   ✓  123 [chromium] › e2e/templates.spec.ts:8:3 › 圆点二值图：示例、几何、项目与 SVG 文件 (3.9s)
+web	Run npm run test:browser	2026-09-06T18:43:21.4628011Z   ✓  122 [firefox] › e2e/workflow.spec.ts:3:1 › 模板搜索、数据更换、错误定位、撤销和项目往返 (9.1s)
+web	Run npm run test:browser	2026-09-06T18:43:21.5422898Z   ✓  124 [chromium] › e2e/templates.spec.ts:8:3 › 方格二值图：示例、几何、项目与 SVG 文件 (3.7s)
+web	Run npm run test:browser	2026-09-06T18:43:23.9684065Z   ✓  125 [firefox] › e2e/workflow.spec.ts:76:1 › 样式修改、图层保存、SVG 实际下载 (2.5s)
+web	Run npm run test:browser	2026-09-06T18:43:25.5047489Z   ✓  126 [chromium] › e2e/templates.spec.ts:8:3 › 数值气泡矩阵：示例、几何、项目与 SVG 文件 (3.9s)
+web	Run npm run test:browser	2026-09-06T18:43:28.8667698Z   ✓  127 [firefox] › e2e/workflow.spec.ts:102:1 › 模板库、详情、帮助与手机页面无横向溢出 (4.9s)
+web	Run npm run test:browser	2026-09-06T18:43:29.1873854Z   ✓  128 [chromium] › e2e/templates.spec.ts:8:3 › 组内相关性热图：示例、几何、项目与 SVG 文件 (3.7s)
+web	Run npm run test:browser	2026-09-06T18:43:32.3043299Z   ✓  129 [chromium] › e2e/templates.spec.ts:8:3 › 组间相关性热图：示例、几何、项目与 SVG 文件 (3.1s)
+web	Run npm run test:browser	2026-09-06T18:43:34.4154494Z   ✓  131 [chromium] › e2e/templates.spec.ts:8:3 › Mantel 关联热图：示例、几何、项目与 SVG 文件 (2.1s)
+web	Run npm run test:browser	2026-09-06T18:43:36.3600244Z   ✓  132 [chromium] › e2e/templates.spec.ts:8:3 › 韦恩集合交集图：示例、几何、项目与 SVG 文件 (1.9s)
+web	Run npm run test:browser	2026-09-06T18:43:37.2621677Z   -  130 [webkit] › e2e/export-fonts.spec.ts:20:1 › 字体准备期间取消不会提交或延迟下载，随后可以正常导出
+web	Run npm run test:browser	2026-09-06T18:43:38.1684449Z   -  134 [webkit] › e2e/export-fonts.spec.ts:67:1 › 当前SVG下载不等待无关页面字体
+web	Run npm run test:browser	2026-09-06T18:43:39.3514040Z   -  135 [webkit] › e2e/export-fonts.spec.ts:98:1 › POST返回前取消后会删除迟到任务且不轮询或下载
+web	Run npm run test:browser	2026-09-06T18:43:39.7503878Z   ✓  133 [chromium] › e2e/templates.spec.ts:8:3 › 分组圆堆砌图：示例、几何、项目与 SVG 文件 (3.4s)
+web	Run npm run test:browser	2026-09-06T18:43:40.5585241Z   -  136 [webkit] › e2e/export-fonts.spec.ts:143:1 › 当前图表字体请求失败时明确提示且不提交导出
+web	Run npm run test:browser	2026-09-06T18:43:41.7243857Z   -  138 [webkit] › e2e/export-fonts.spec.ts:162:1 › 保留文字的SVG下载保存真实字重匹配且不改预览
+web	Run npm run test:browser	2026-09-06T18:43:42.7966065Z   -  139 [webkit] › e2e/live-analysis.spec.ts:4:3 › pca 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:43:43.4396820Z   ✓  137 [chromium] › e2e/templates.spec.ts:8:3 › 桑基流向图：示例、几何、项目与 SVG 文件 (3.6s)
+web	Run npm run test:browser	2026-09-06T18:43:44.0001826Z   -  140 [webkit] › e2e/live-analysis.spec.ts:4:3 › pcoa 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:43:45.0158808Z   -  142 [webkit] › e2e/live-analysis.spec.ts:4:3 › nmds 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:43:45.9638835Z   -  143 [webkit] › e2e/live-analysis.spec.ts:4:3 › cca 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:43:47.1143039Z   -  144 [webkit] › e2e/live-analysis.spec.ts:4:3 › rda 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:43:47.5183253Z   ✓  141 [chromium] › e2e/templates.spec.ts:8:3 › 动态关系网络图：示例、几何、项目与 SVG 文件 (4.0s)
+web	Run npm run test:browser	2026-09-06T18:43:48.2500173Z   -  145 [webkit] › e2e/live-export.spec.ts:4:3 › 真实 SVG 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:43:49.2904073Z   -  147 [webkit] › e2e/live-export.spec.ts:4:3 › 真实 PNG 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:43:50.3722584Z   -  148 [webkit] › e2e/live-export.spec.ts:4:3 › 真实 PDF 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:43:51.4997258Z   ✓  146 [chromium] › e2e/templates.spec.ts:8:3 › 地理采样点地图：示例、几何、项目与 SVG 文件 (4.0s)
+web	Run npm run test:browser	2026-09-06T18:43:51.5391411Z   -  149 [webkit] › e2e/live-export.spec.ts:4:3 › 真实 EPS 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:43:52.5798129Z   -  151 [webkit] › e2e/ordination-editor.spec.ts:3:1 › 排序图分组、已有坐标模式和项目恢复
+web	Run npm run test:browser	2026-09-06T18:43:53.5714690Z   -  152 [webkit] › e2e/performance.spec.ts:27:1 › 常规示例样式更新响应时间
+web	Run npm run test:browser	2026-09-06T18:43:55.2035122Z   ✓  150 [chromium] › e2e/templates.spec.ts:8:3 › 差异表达火山图：示例、几何、项目与 SVG 文件 (3.7s)
+web	Run npm run test:browser	2026-09-06T18:43:59.0217822Z   ✓  154 [chromium] › e2e/templates.spec.ts:8:3 › 富集气泡图：示例、几何、项目与 SVG 文件 (3.8s)
+web	Run npm run test:browser	2026-09-06T18:44:02.5836829Z   ✓  155 [chromium] › e2e/templates.spec.ts:8:3 › 富集条形图：示例、几何、项目与 SVG 文件 (3.5s)
+web	Run npm run test:browser	2026-09-06T18:44:03.5084150Z   ✓  153 [webkit] › e2e/project-navigation.spec.ts:3:1 › 离开工作台再返回保留最新数据与样式 (9.9s)
+web	Run npm run test:browser	2026-09-06T18:44:04.8515961Z   -  157 [webkit] › e2e/templates.spec.ts:8:3 › 分组柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:05.9643867Z   -  158 [webkit] › e2e/templates.spec.ts:8:3 › 散点图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:06.5545441Z   ✓  156 [chromium] › e2e/templates.spec.ts:8:3 › 富集圈图：示例、几何、项目与 SVG 文件 (3.9s)
+web	Run npm run test:browser	2026-09-06T18:44:07.0324401Z   -  159 [webkit] › e2e/templates.spec.ts:8:3 › 折线图与分组折线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:08.0544020Z   -  161 [webkit] › e2e/templates.spec.ts:8:3 › 数值热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:09.0982954Z   -  162 [webkit] › e2e/templates.spec.ts:8:3 › 箱线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:10.2376171Z   -  163 [webkit] › e2e/templates.spec.ts:8:3 › 饼图与环图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:10.3597710Z   ✓  160 [chromium] › e2e/templates.spec.ts:8:3 › 基因簇排列图：示例、几何、项目与 SVG 文件 (3.8s)
+web	Run npm run test:browser	2026-09-06T18:44:11.2584466Z   -  164 [webkit] › e2e/templates.spec.ts:8:3 › 柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:12.2196221Z   -  166 [webkit] › e2e/templates.spec.ts:8:3 › 分类柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:13.2414863Z   -  167 [webkit] › e2e/templates.spec.ts:8:3 › 误差柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:14.1927235Z   -  168 [webkit] › e2e/templates.spec.ts:8:3 › 分组误差柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:14.2840206Z   ✓  165 [chromium] › e2e/templates.spec.ts:8:3 › 蛋白保守结构域图：示例、几何、项目与 SVG 文件 (3.9s)
+web	Run npm run test:browser	2026-09-06T18:44:15.2925919Z   -  169 [webkit] › e2e/templates.spec.ts:8:3 › 散点误差图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:16.3735206Z   -  171 [webkit] › e2e/templates.spec.ts:8:3 › 堆叠柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:17.4985555Z   -  172 [webkit] › e2e/templates.spec.ts:8:3 › 分组堆叠柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:17.8663768Z   ✓  170 [chromium] › e2e/templates.spec.ts:8:3 › 蛋白保守基序图：示例、几何、项目与 SVG 文件 (3.5s)
+web	Run npm run test:browser	2026-09-06T18:44:18.5755234Z   -  173 [webkit] › e2e/templates.spec.ts:8:3 › 柱状图与折线组合：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:19.5444094Z   -  175 [webkit] › e2e/templates.spec.ts:8:3 › 棒棒糖图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:20.4064932Z   -  176 [webkit] › e2e/templates.spec.ts:8:3 › 分类棒棒糖图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:21.5456389Z   -  177 [webkit] › e2e/templates.spec.ts:8:3 › 分组误差折线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:22.0414092Z   ✓  174 [chromium] › e2e/templates.spec.ts:8:3 › 基因组圈图：示例、几何、项目与 SVG 文件 (4.1s)
+web	Run npm run test:browser	2026-09-06T18:44:22.6708147Z   -  178 [webkit] › e2e/templates.spec.ts:8:3 › 分组箱线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:23.5064135Z   -  180 [webkit] › e2e/templates.spec.ts:8:3 › 小提琴图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:24.5435941Z   -  181 [webkit] › e2e/templates.spec.ts:8:3 › 云雨图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:25.6529622Z   -  182 [webkit] › e2e/templates.spec.ts:8:3 › 峰峦图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:26.0903918Z   ✓  179 [chromium] › e2e/templates.spec.ts:8:3 › MCScanX 共线性图：示例、几何、项目与 SVG 文件 (4.0s)
+web	Run npm run test:browser	2026-09-06T18:44:26.6054374Z   -  183 [webkit] › e2e/templates.spec.ts:8:3 › UpSet 集合交集图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:27.4993905Z   -  185 [webkit] › e2e/templates.spec.ts:8:3 › 玫瑰图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:28.7195599Z   -  186 [webkit] › e2e/templates.spec.ts:8:3 › 雷达图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:29.7541942Z   -  187 [webkit] › e2e/templates.spec.ts:8:3 › 哑铃图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:30.0546971Z   ✓  184 [chromium] › e2e/templates.spec.ts:8:3 › 主成分分析 PCA：示例、几何、项目与 SVG 文件 (3.9s)
+web	Run npm run test:browser	2026-09-06T18:44:30.7798210Z   -  188 [webkit] › e2e/templates.spec.ts:8:3 › 分组散点图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:31.7344125Z   -  190 [webkit] › e2e/templates.spec.ts:8:3 › 圈形热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:32.8405668Z   -  191 [webkit] › e2e/templates.spec.ts:8:3 › 圆点二值图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:33.9313855Z   -  192 [webkit] › e2e/templates.spec.ts:8:3 › 方格二值图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:34.0704272Z   ✓  189 [chromium] › e2e/templates.spec.ts:8:3 › 主坐标分析 PCoA：示例、几何、项目与 SVG 文件 (4.0s)
+web	Run npm run test:browser	2026-09-06T18:44:35.1553670Z   -  193 [webkit] › e2e/templates.spec.ts:8:3 › 数值气泡矩阵：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:36.1887012Z   -  195 [webkit] › e2e/templates.spec.ts:8:3 › 组内相关性热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:37.2202941Z   -  196 [webkit] › e2e/templates.spec.ts:8:3 › 组间相关性热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:37.8964160Z   ✓  194 [chromium] › e2e/templates.spec.ts:8:3 › 非度量多维尺度 NMDS：示例、几何、项目与 SVG 文件 (3.8s)
+web	Run npm run test:browser	2026-09-06T18:44:38.2418928Z   -  197 [webkit] › e2e/templates.spec.ts:8:3 › Mantel 关联热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:39.2307741Z   -  199 [webkit] › e2e/templates.spec.ts:8:3 › 韦恩集合交集图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:40.2584172Z   -  200 [webkit] › e2e/templates.spec.ts:8:3 › 分组圆堆砌图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:41.4660483Z   -  201 [webkit] › e2e/templates.spec.ts:8:3 › 桑基流向图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:41.5749771Z   ✓  198 [chromium] › e2e/templates.spec.ts:8:3 › 典范对应分析 CCA：示例、几何、项目与 SVG 文件 (3.6s)
+web	Run npm run test:browser	2026-09-06T18:44:42.5353845Z   -  202 [webkit] › e2e/templates.spec.ts:8:3 › 动态关系网络图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:43.6084506Z   -  204 [webkit] › e2e/templates.spec.ts:8:3 › 地理采样点地图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:44.6864318Z   -  205 [webkit] › e2e/templates.spec.ts:8:3 › 差异表达火山图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:45.5895271Z   ✓  203 [chromium] › e2e/templates.spec.ts:8:3 › 冗余分析 RDA：示例、几何、项目与 SVG 文件 (4.0s)
+web	Run npm run test:browser	2026-09-06T18:44:45.7274067Z   -  206 [webkit] › e2e/templates.spec.ts:8:3 › 富集气泡图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:46.6790171Z   -  208 [webkit] › e2e/templates.spec.ts:8:3 › 富集条形图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:47.8054253Z   -  209 [webkit] › e2e/templates.spec.ts:8:3 › 富集圈图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:48.9201037Z   -  210 [webkit] › e2e/templates.spec.ts:8:3 › 基因簇排列图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:49.2586991Z   ✓  207 [chromium] › e2e/templates.spec.ts:8:3 › 矩形进化树工作台：示例、几何、项目与 SVG 文件 (3.6s)
+web	Run npm run test:browser	2026-09-06T18:44:49.9260917Z   -  211 [webkit] › e2e/templates.spec.ts:8:3 › 蛋白保守结构域图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:50.8275144Z   -  213 [webkit] › e2e/templates.spec.ts:8:3 › 蛋白保守基序图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:51.9567014Z   -  214 [webkit] › e2e/templates.spec.ts:8:3 › 基因组圈图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:53.0293790Z   -  215 [webkit] › e2e/templates.spec.ts:8:3 › MCScanX 共线性图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:53.3446985Z   ✓  212 [chromium] › e2e/templates.spec.ts:8:3 › 环形进化树工作台：示例、几何、项目与 SVG 文件 (4.0s)
+web	Run npm run test:browser	2026-09-06T18:44:54.0002491Z   -  216 [webkit] › e2e/templates.spec.ts:8:3 › 主成分分析 PCA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:54.8297285Z   -  218 [webkit] › e2e/templates.spec.ts:8:3 › 主坐标分析 PCoA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:55.8207001Z   -  219 [webkit] › e2e/templates.spec.ts:8:3 › 非度量多维尺度 NMDS：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:56.8610008Z   -  220 [webkit] › e2e/templates.spec.ts:8:3 › 典范对应分析 CCA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:57.6603911Z   ✓  217 [chromium] › e2e/templates.spec.ts:8:3 › 无根进化树工作台：示例、几何、项目与 SVG 文件 (4.3s)
+web	Run npm run test:browser	2026-09-06T18:44:57.7484147Z   -  221 [webkit] › e2e/templates.spec.ts:8:3 › 冗余分析 RDA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:58.5895058Z   -  222 [webkit] › e2e/templates.spec.ts:8:3 › 矩形进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:44:59.6544121Z   -  223 [webkit] › e2e/templates.spec.ts:8:3 › 环形进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:00.7274534Z   -  225 [webkit] › e2e/templates.spec.ts:8:3 › 无根进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:10.8803962Z   ✘  224 [webkit] › e2e/typography.spec.ts:4:1 › 中文斜体实际改变字形像素，关闭后恢复原图 (10.9s)
+web	Run npm run test:browser	2026-09-06T18:45:13.4790076Z   -  227 [mobile] › e2e/export-fonts.spec.ts:20:1 › 字体准备期间取消不会提交或延迟下载，随后可以正常导出
+web	Run npm run test:browser	2026-09-06T18:45:14.7549598Z   -  228 [mobile] › e2e/export-fonts.spec.ts:67:1 › 当前SVG下载不等待无关页面字体
+web	Run npm run test:browser	2026-09-06T18:45:14.9486866Z   ✓  226 [webkit] › e2e/workflow.spec.ts:3:1 › 模板搜索、数据更换、错误定位、撤销和项目往返 (14.2s)
+web	Run npm run test:browser	2026-09-06T18:45:15.9652678Z   -  229 [mobile] › e2e/export-fonts.spec.ts:98:1 › POST返回前取消后会删除迟到任务且不轮询或下载
+web	Run npm run test:browser	2026-09-06T18:45:17.1314043Z   -  231 [mobile] › e2e/export-fonts.spec.ts:143:1 › 当前图表字体请求失败时明确提示且不提交导出
+web	Run npm run test:browser	2026-09-06T18:45:18.1676603Z   -  232 [mobile] › e2e/export-fonts.spec.ts:162:1 › 保留文字的SVG下载保存真实字重匹配且不改预览
+web	Run npm run test:browser	2026-09-06T18:45:19.1534229Z   -  233 [mobile] › e2e/live-analysis.spec.ts:4:3 › pca 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:45:19.9752853Z   -  234 [mobile] › e2e/live-analysis.spec.ts:4:3 › pcoa 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:45:20.8655612Z   -  235 [mobile] › e2e/live-analysis.spec.ts:4:3 › nmds 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:45:21.8301254Z   -  236 [mobile] › e2e/live-analysis.spec.ts:4:3 › cca 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:45:22.7763789Z   -  237 [mobile] › e2e/live-analysis.spec.ts:4:3 › rda 真实服务计算、失效结果和项目保留
+web	Run npm run test:browser	2026-09-06T18:45:23.8733574Z   -  238 [mobile] › e2e/live-export.spec.ts:4:3 › 真实 SVG 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:45:24.3245240Z   ✓  230 [webkit] › e2e/workflow.spec.ts:76:1 › 样式修改、图层保存、SVG 实际下载 (9.3s)
+web	Run npm run test:browser	2026-09-06T18:45:24.9882583Z   -  239 [mobile] › e2e/live-export.spec.ts:4:3 › 真实 PNG 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:45:26.0189364Z   -  241 [mobile] › e2e/live-export.spec.ts:4:3 › 真实 PDF 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:45:26.8908018Z   -  242 [mobile] › e2e/live-export.spec.ts:4:3 › 真实 EPS 下载与中文字体
+web	Run npm run test:browser	2026-09-06T18:45:27.9414806Z   -  243 [mobile] › e2e/ordination-editor.spec.ts:3:1 › 排序图分组、已有坐标模式和项目恢复
+web	Run npm run test:browser	2026-09-06T18:45:28.8834278Z   -  244 [mobile] › e2e/performance.spec.ts:27:1 › 常规示例样式更新响应时间
+web	Run npm run test:browser	2026-09-06T18:45:31.4598529Z   ✓  240 [webkit] › e2e/workflow.spec.ts:102:1 › 模板库、详情、帮助与手机页面无横向溢出 (7.1s)
+web	Run npm run test:browser	2026-09-06T18:45:33.6780406Z   -  246 [mobile] › e2e/templates.spec.ts:8:3 › 分组柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:34.8178492Z   -  247 [mobile] › e2e/templates.spec.ts:8:3 › 散点图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:35.4574534Z   ✓  245 [mobile] › e2e/project-navigation.spec.ts:3:1 › 离开工作台再返回保留最新数据与样式 (6.5s)
+web	Run npm run test:browser	2026-09-06T18:45:35.7921719Z   -  248 [mobile] › e2e/templates.spec.ts:8:3 › 折线图与分组折线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:36.4428427Z   -  249 [mobile] › e2e/typography.spec.ts:4:1 › 中文斜体实际改变字形像素，关闭后恢复原图
+web	Run npm run test:browser	2026-09-06T18:45:36.7599420Z   -  250 [mobile] › e2e/templates.spec.ts:8:3 › 数值热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:37.8129259Z   -  252 [mobile] › e2e/templates.spec.ts:8:3 › 箱线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:38.7924489Z   -  253 [mobile] › e2e/templates.spec.ts:8:3 › 饼图与环图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:39.7843989Z   -  254 [mobile] › e2e/templates.spec.ts:8:3 › 柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:40.8391870Z   -  255 [mobile] › e2e/templates.spec.ts:8:3 › 分类柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:41.7644201Z   -  256 [mobile] › e2e/templates.spec.ts:8:3 › 误差柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:42.8050383Z   -  257 [mobile] › e2e/templates.spec.ts:8:3 › 分组误差柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:43.6683874Z   -  258 [mobile] › e2e/templates.spec.ts:8:3 › 散点误差图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:44.7677649Z   -  259 [mobile] › e2e/templates.spec.ts:8:3 › 堆叠柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:45.8253860Z   -  260 [mobile] › e2e/templates.spec.ts:8:3 › 分组堆叠柱状图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:46.6545791Z   -  261 [mobile] › e2e/templates.spec.ts:8:3 › 柱状图与折线组合：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:47.7198408Z   -  262 [mobile] › e2e/templates.spec.ts:8:3 › 棒棒糖图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:48.7664124Z   -  263 [mobile] › e2e/templates.spec.ts:8:3 › 分类棒棒糖图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:49.8173971Z   -  264 [mobile] › e2e/templates.spec.ts:8:3 › 分组误差折线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:50.7774504Z   -  265 [mobile] › e2e/templates.spec.ts:8:3 › 分组箱线图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:51.5619031Z   ✓  251 [mobile] › e2e/workflow.spec.ts:3:1 › 模板搜索、数据更换、错误定位、撤销和项目往返 (15.1s)
+web	Run npm run test:browser	2026-09-06T18:45:51.6274011Z   -  266 [mobile] › e2e/templates.spec.ts:8:3 › 小提琴图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:52.6576942Z   -  268 [mobile] › e2e/templates.spec.ts:8:3 › 云雨图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:53.7954018Z   -  269 [mobile] › e2e/templates.spec.ts:8:3 › 峰峦图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:54.7134421Z   -  270 [mobile] › e2e/templates.spec.ts:8:3 › UpSet 集合交集图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:55.6582109Z   -  271 [mobile] › e2e/templates.spec.ts:8:3 › 玫瑰图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:56.5609680Z   ✓  267 [mobile] › e2e/workflow.spec.ts:76:1 › 样式修改、图层保存、SVG 实际下载 (5.0s)
+web	Run npm run test:browser	2026-09-06T18:45:56.9454446Z   -  272 [mobile] › e2e/templates.spec.ts:8:3 › 雷达图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:57.8404045Z   -  274 [mobile] › e2e/templates.spec.ts:8:3 › 哑铃图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:58.7077863Z   -  275 [mobile] › e2e/templates.spec.ts:8:3 › 分组散点图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:45:59.5574605Z   -  276 [mobile] › e2e/templates.spec.ts:8:3 › 圈形热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:00.4988763Z   -  277 [mobile] › e2e/templates.spec.ts:8:3 › 圆点二值图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:01.4764141Z   -  278 [mobile] › e2e/templates.spec.ts:8:3 › 方格二值图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:02.4080866Z   -  279 [mobile] › e2e/templates.spec.ts:8:3 › 数值气泡矩阵：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:03.4207196Z   -  280 [mobile] › e2e/templates.spec.ts:8:3 › 组内相关性热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:04.3763972Z   -  281 [mobile] › e2e/templates.spec.ts:8:3 › 组间相关性热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:04.5379210Z   ✓  273 [mobile] › e2e/workflow.spec.ts:102:1 › 模板库、详情、帮助与手机页面无横向溢出 (7.9s)
+web	Run npm run test:browser	2026-09-06T18:46:05.1302881Z   -  282 [mobile] › e2e/templates.spec.ts:8:3 › Mantel 关联热图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:05.6614504Z   -  283 [mobile] › e2e/templates.spec.ts:8:3 › 韦恩集合交集图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:06.1790658Z   -  284 [mobile] › e2e/templates.spec.ts:8:3 › 分组圆堆砌图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:06.7027772Z   -  285 [mobile] › e2e/templates.spec.ts:8:3 › 桑基流向图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:07.2171525Z   -  286 [mobile] › e2e/templates.spec.ts:8:3 › 动态关系网络图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:07.7304393Z   -  287 [mobile] › e2e/templates.spec.ts:8:3 › 地理采样点地图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:08.2286338Z   -  288 [mobile] › e2e/templates.spec.ts:8:3 › 差异表达火山图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:08.7444071Z   -  289 [mobile] › e2e/templates.spec.ts:8:3 › 富集气泡图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:09.2704669Z   -  290 [mobile] › e2e/templates.spec.ts:8:3 › 富集条形图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:09.8080569Z   -  291 [mobile] › e2e/templates.spec.ts:8:3 › 富集圈图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:10.3424063Z   -  292 [mobile] › e2e/templates.spec.ts:8:3 › 基因簇排列图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:10.8634514Z   -  293 [mobile] › e2e/templates.spec.ts:8:3 › 蛋白保守结构域图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:11.3844130Z   -  294 [mobile] › e2e/templates.spec.ts:8:3 › 蛋白保守基序图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:11.9043972Z   -  295 [mobile] › e2e/templates.spec.ts:8:3 › 基因组圈图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:12.4575584Z   -  296 [mobile] › e2e/templates.spec.ts:8:3 › MCScanX 共线性图：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:12.9764806Z   -  297 [mobile] › e2e/templates.spec.ts:8:3 › 主成分分析 PCA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:13.5074293Z   -  298 [mobile] › e2e/templates.spec.ts:8:3 › 主坐标分析 PCoA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:14.0679535Z   -  299 [mobile] › e2e/templates.spec.ts:8:3 › 非度量多维尺度 NMDS：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:14.6146500Z   -  300 [mobile] › e2e/templates.spec.ts:8:3 › 典范对应分析 CCA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:15.1481001Z   -  301 [mobile] › e2e/templates.spec.ts:8:3 › 冗余分析 RDA：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:15.6738861Z   -  302 [mobile] › e2e/templates.spec.ts:8:3 › 矩形进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:16.1880967Z   -  303 [mobile] › e2e/templates.spec.ts:8:3 › 环形进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:16.7134004Z   -  304 [mobile] › e2e/templates.spec.ts:8:3 › 无根进化树工作台：示例、几何、项目与 SVG 文件
+web	Run npm run test:browser	2026-09-06T18:46:16.7907969Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7911547Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7924008Z   1) [webkit] › e2e/typography.spec.ts:4:1 › 中文斜体实际改变字形像素，关闭后恢复原图 ──────────────────────────────────
+web	Run npm run test:browser	2026-09-06T18:46:16.7924732Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7925307Z     Error: Noto Sans SC 400 斜体应真实改变字形像素
+web	Run npm run test:browser	2026-09-06T18:46:16.7925886Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7926391Z     expect(received).not.toBe(expected) // Object.is equality
+web	Run npm run test:browser	2026-09-06T18:46:16.7927034Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7927685Z     Expected: not "69c5fe812ff172e9e0ee801444ccc72d3cca56a0c89e2527ab60c8828f2052fa"
+web	Run npm run test:browser	2026-09-06T18:46:16.7928479Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7929167Z       48 |         states.push({ italic, face, screenshot: name, sha256: createHash("sha256").update(png).digest("hex") });
+web	Run npm run test:browser	2026-09-06T18:46:16.7930249Z       49 |       }
+web	Run npm run test:browser	2026-09-06T18:46:16.7931300Z     > 50 |       expect(states[1].sha256, `${family} ${weight} 斜体应真实改变字形像素`).not.toBe(states[0].sha256);
+web	Run npm run test:browser	2026-09-06T18:46:16.7932744Z          |                                                                       ^
+web	Run npm run test:browser	2026-09-06T18:46:16.7934433Z       51 |       expect(states[2].sha256, "关闭斜体应恢复完全相同的像素").toBe(states[0].sha256);
+web	Run npm run test:browser	2026-09-06T18:46:16.7935443Z       52 |       report.push({ family, weight, states });
+web	Run npm run test:browser	2026-09-06T18:46:16.7936093Z       53 |     }
+web	Run npm run test:browser	2026-09-06T18:46:16.7936889Z         at /home/runner/work/OpenAcad/OpenAcad/web/e2e/typography.spec.ts:50:71
+web	Run npm run test:browser	2026-09-06T18:46:16.7937488Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7938331Z     attachment #4: screenshot (image/png) ──────────────────────────────────────────────────────────
+web	Run npm run test:browser	2026-09-06T18:46:16.7941483Z     test-results/typography-中文斜体实际改变字形像素，关闭后恢复原图-webkit/test-failed-1.png
+web	Run npm run test:browser	2026-09-06T18:46:16.7943237Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+web	Run npm run test:browser	2026-09-06T18:46:16.7943865Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7944648Z     Error Context: test-results/typography-中文斜体实际改变字形像素，关闭后恢复原图-webkit/error-context.md
+web	Run npm run test:browser	2026-09-06T18:46:16.7945661Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7946505Z     attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
+web	Run npm run test:browser	2026-09-06T18:46:16.7947771Z     test-results/typography-中文斜体实际改变字形像素，关闭后恢复原图-webkit/trace.zip
+web	Run npm run test:browser	2026-09-06T18:46:16.7948472Z     Usage:
+web	Run npm run test:browser	2026-09-06T18:46:16.7948691Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7949463Z         npx playwright show-trace test-results/typography-中文斜体实际改变字形像素，关闭后恢复原图-webkit/trace.zip
+web	Run npm run test:browser	2026-09-06T18:46:16.7950114Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7950842Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+web	Run npm run test:browser	2026-09-06T18:46:16.7951490Z 
+web	Run npm run test:browser	2026-09-06T18:46:16.7952859Z   1 failed
+web	Run npm run test:browser	2026-09-06T18:46:16.7967508Z     [webkit] › e2e/typography.spec.ts:4:1 › 中文斜体实际改变字形像素，关闭后恢复原图 ───────────────────────────────────
+web	Run npm run test:browser	2026-09-06T18:46:16.7968393Z   223 skipped
+web	Run npm run test:browser	2026-09-06T18:46:16.7969108Z   80 passed (5.0m)
+web	Run npm run test:browser	2026-09-06T18:46:17.0098385Z ##[error]Process completed with exit code 1.

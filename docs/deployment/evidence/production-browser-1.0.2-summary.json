@@ -1,0 +1,22 @@
+{
+  "sourceRevision": "443357603240c87b9d28ebce346e8e87ea0d7f88",
+  "baseUrl": "https://openacad.xyz",
+  "stats": {
+    "startTime": "2026-09-06T19:24:33.024Z",
+    "duration": 432559.422,
+    "expected": 37,
+    "skipped": 39,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "scope": {
+    "commonFlows": 16,
+    "realOrdination": 5,
+    "realExportsDesktopAndMobile": 8,
+    "fontAndCancellationChecks": 5,
+    "typographyAcrossDesktopEngines": 3
+  },
+  "note": "5字体与取消专项中4项使用故障/延迟注入，1项检查实际文字SVG字重；真实服务场景单独计数。39项按配置跳过，不是通过。",
+  "downloadsAndScreenshots": "tests/artifacts/production-browser-1.0.2-artifacts/manifest.json",
+  "typographyEvidence": "tests/artifacts/production-browser-1.0.2-artifacts/typography/manifest.json"
+}

@@ -1,0 +1,381 @@
+{
+  "sourceRevision": "443357603240c87b9d28ebce346e8e87ea0d7f88",
+  "baseUrl": "https://openacad.xyz",
+  "files": [
+    {
+      "file": "typography/chromium/sans-400-0-normal.png",
+      "sha256": "0a5ed99773f24fd0a46651584e14a9573c8eb6b2a975342ed9fc928917eff7f2",
+      "bytes": 6047
+    },
+    {
+      "file": "typography/chromium/sans-400-0-normal-full-svg.png",
+      "sha256": "69eb1c18b196eb6b6e23a635b65de3bb22569a3230451b62c6736fa89f40b9f5",
+      "bytes": 19886
+    },
+    {
+      "file": "typography/chromium/sans-400-1-italic.png",
+      "sha256": "63a7aee6622be33e869ea308e00b84b55ff1eef302eab2792a81f840081229c9",
+      "bytes": 6622
+    },
+    {
+      "file": "typography/chromium/sans-400-1-italic-full-svg.png",
+      "sha256": "f1b29777e16ac128e5b10c617409d4e8c10bfc0d49af1478d4496d41e066eb36",
+      "bytes": 20594
+    },
+    {
+      "file": "typography/chromium/sans-400-2-normal.png",
+      "sha256": "0a5ed99773f24fd0a46651584e14a9573c8eb6b2a975342ed9fc928917eff7f2",
+      "bytes": 6047
+    },
+    {
+      "file": "typography/chromium/sans-400-2-normal-full-svg.png",
+      "sha256": "69eb1c18b196eb6b6e23a635b65de3bb22569a3230451b62c6736fa89f40b9f5",
+      "bytes": 19886
+    },
+    {
+      "file": "typography/chromium/sans-700-0-normal.png",
+      "sha256": "388b603468e2202344e996adc0f8efa9a6c51af0cebc8e6d8dd9504c561e9b3f",
+      "bytes": 6031
+    },
+    {
+      "file": "typography/chromium/sans-700-0-normal-full-svg.png",
+      "sha256": "5e2f78a3a76a7f32444b040e85b1547d3ae5fa71f231003b3b9358e705e8e09a",
+      "bytes": 19909
+    },
+    {
+      "file": "typography/chromium/sans-700-1-italic.png",
+      "sha256": "7231611500914a966c6a439f3335a2bfbb5d5b3072ade63c68883cf77947a136",
+      "bytes": 6574
+    },
+    {
+      "file": "typography/chromium/sans-700-1-italic-full-svg.png",
+      "sha256": "84db79c38d8d93f079e10d3066f743998754cfa5cfbacfb6f2d0bad46827617e",
+      "bytes": 20562
+    },
+    {
+      "file": "typography/chromium/sans-700-2-normal.png",
+      "sha256": "388b603468e2202344e996adc0f8efa9a6c51af0cebc8e6d8dd9504c561e9b3f",
+      "bytes": 6031
+    },
+    {
+      "file": "typography/chromium/sans-700-2-normal-full-svg.png",
+      "sha256": "5e2f78a3a76a7f32444b040e85b1547d3ae5fa71f231003b3b9358e705e8e09a",
+      "bytes": 19909
+    },
+    {
+      "file": "typography/chromium/serif-400-0-normal.png",
+      "sha256": "75c0a88e06fb187f8d583ac97593c8a42d7ac1244106b88e5276e37a6b86cd74",
+      "bytes": 6402
+    },
+    {
+      "file": "typography/chromium/serif-400-0-normal-full-svg.png",
+      "sha256": "a4ca4aa67139e38c45b301a2e159cbed25ada8bebdd349179e29a5011292b86d",
+      "bytes": 20120
+    },
+    {
+      "file": "typography/chromium/serif-400-1-italic.png",
+      "sha256": "968b200640c812e32c8073aebce33d4f5bc1f8ee1333cb43a62bfc89fd9d8027",
+      "bytes": 6921
+    },
+    {
+      "file": "typography/chromium/serif-400-1-italic-full-svg.png",
+      "sha256": "5c995375cbc53901f58e105b39875126533c3846aab7387fa1d854ba21465401",
+      "bytes": 20747
+    },
+    {
+      "file": "typography/chromium/serif-400-2-normal.png",
+      "sha256": "75c0a88e06fb187f8d583ac97593c8a42d7ac1244106b88e5276e37a6b86cd74",
+      "bytes": 6402
+    },
+    {
+      "file": "typography/chromium/serif-400-2-normal-full-svg.png",
+      "sha256": "a4ca4aa67139e38c45b301a2e159cbed25ada8bebdd349179e29a5011292b86d",
+      "bytes": 20120
+    },
+    {
+      "file": "typography/chromium/serif-700-0-normal.png",
+      "sha256": "508fda76985930ebf93da5a59dd6fcb521b664cc8e5c51d7b85a1574c6146dae",
+      "bytes": 6780
+    },
+    {
+      "file": "typography/chromium/serif-700-0-normal-full-svg.png",
+      "sha256": "0ccd639c866011e90fd0ae873e817210240468cabd5d3ffd76fbf0c6dcd0b902",
+      "bytes": 20588
+    },
+    {
+      "file": "typography/chromium/serif-700-1-italic.png",
+      "sha256": "54acdebdaaee31f4bfdfe9e32bdef5906e6b81235a0191d5270daaf3213f5cfa",
+      "bytes": 7228
+    },
+    {
+      "file": "typography/chromium/serif-700-1-italic-full-svg.png",
+      "sha256": "545c88be10bff3b78df67e31519a361ed28bf1b86381c7dd6cbfe3b1412dd111",
+      "bytes": 21130
+    },
+    {
+      "file": "typography/chromium/serif-700-2-normal.png",
+      "sha256": "508fda76985930ebf93da5a59dd6fcb521b664cc8e5c51d7b85a1574c6146dae",
+      "bytes": 6780
+    },
+    {
+      "file": "typography/chromium/serif-700-2-normal-full-svg.png",
+      "sha256": "0ccd639c866011e90fd0ae873e817210240468cabd5d3ffd76fbf0c6dcd0b902",
+      "bytes": 20588
+    },
+    {
+      "file": "typography/chromium/italic-pixel-report.json",
+      "sha256": "b6ecd12d7aee56604102381c97afc0098012bd1544c8ead3b0d78fc80e684372",
+      "bytes": 7776
+    },
+    {
+      "file": "typography/firefox/sans-400-0-normal.png",
+      "sha256": "f71907ec9374ce91b487c8bea9e736a024721050f097ca244dc3407c70a9bb34",
+      "bytes": 4794
+    },
+    {
+      "file": "typography/firefox/sans-400-0-normal-full-svg.png",
+      "sha256": "ebdc8a5196da70c6832136c1070136682776744ef51719893ee21ae10cd22d0b",
+      "bytes": 16613
+    },
+    {
+      "file": "typography/firefox/sans-400-1-italic.png",
+      "sha256": "3b6f6c20d2b5c9f42faaa0ab21c884a1c68b4d96fbaf9c42367c57e16a9258b4",
+      "bytes": 5099
+    },
+    {
+      "file": "typography/firefox/sans-400-1-italic-full-svg.png",
+      "sha256": "861608b52fa7173727f644b14d5d87bca02ae52d701f8fc87268e730f1d19f51",
+      "bytes": 16945
+    },
+    {
+      "file": "typography/firefox/sans-400-2-normal.png",
+      "sha256": "f71907ec9374ce91b487c8bea9e736a024721050f097ca244dc3407c70a9bb34",
+      "bytes": 4794
+    },
+    {
+      "file": "typography/firefox/sans-400-2-normal-full-svg.png",
+      "sha256": "ebdc8a5196da70c6832136c1070136682776744ef51719893ee21ae10cd22d0b",
+      "bytes": 16613
+    },
+    {
+      "file": "typography/firefox/sans-700-0-normal.png",
+      "sha256": "59ed8dbfa983d8ef2b40da2d1ee5fafae490e77ec2c26bae8a54cf59fdcf8b75",
+      "bytes": 4876
+    },
+    {
+      "file": "typography/firefox/sans-700-0-normal-full-svg.png",
+      "sha256": "a2b017f874f5e960c2ae1a1d347182efae800625784432aed96e738e81520bc7",
+      "bytes": 16689
+    },
+    {
+      "file": "typography/firefox/sans-700-1-italic.png",
+      "sha256": "846cf1b5c9c4ab186d885b637c5802ad18de235ba6fd89918ee74b4ad3b6ef74",
+      "bytes": 5113
+    },
+    {
+      "file": "typography/firefox/sans-700-1-italic-full-svg.png",
+      "sha256": "fa1fce4a0fac9c7cbbfbe35c7918de75c76697d8ebd43d73ca53b484a89be441",
+      "bytes": 16963
+    },
+    {
+      "file": "typography/firefox/sans-700-2-normal.png",
+      "sha256": "59ed8dbfa983d8ef2b40da2d1ee5fafae490e77ec2c26bae8a54cf59fdcf8b75",
+      "bytes": 4876
+    },
+    {
+      "file": "typography/firefox/sans-700-2-normal-full-svg.png",
+      "sha256": "a2b017f874f5e960c2ae1a1d347182efae800625784432aed96e738e81520bc7",
+      "bytes": 16689
+    },
+    {
+      "file": "typography/firefox/serif-400-0-normal.png",
+      "sha256": "d8971a480e99411c8c973fabd738d6f7fa6aa4103c1a8e0b8a3fcb205e44f9d4",
+      "bytes": 4929
+    },
+    {
+      "file": "typography/firefox/serif-400-0-normal-full-svg.png",
+      "sha256": "1d2034d8e069e2c87578a95c3c6a61e6412742122924e653fa11f7e8bab03128",
+      "bytes": 16765
+    },
+    {
+      "file": "typography/firefox/serif-400-1-italic.png",
+      "sha256": "89730543eed85f1450b2a739f659a7fb784be7110e1aa578bfcbf85e74869327",
+      "bytes": 5232
+    },
+    {
+      "file": "typography/firefox/serif-400-1-italic-full-svg.png",
+      "sha256": "4d4ad64916c481e064a0b26dcd54322a25208ccb3ad6ff5af1ebc18ed7126f88",
+      "bytes": 17126
+    },
+    {
+      "file": "typography/firefox/serif-400-2-normal.png",
+      "sha256": "d8971a480e99411c8c973fabd738d6f7fa6aa4103c1a8e0b8a3fcb205e44f9d4",
+      "bytes": 4929
+    },
+    {
+      "file": "typography/firefox/serif-400-2-normal-full-svg.png",
+      "sha256": "1d2034d8e069e2c87578a95c3c6a61e6412742122924e653fa11f7e8bab03128",
+      "bytes": 16765
+    },
+    {
+      "file": "typography/firefox/serif-700-0-normal.png",
+      "sha256": "6a733f2cfad9add30b5034d4c0d5d572f38a7d70e4001ef6be8d0323ab0ac7e6",
+      "bytes": 5007
+    },
+    {
+      "file": "typography/firefox/serif-700-0-normal-full-svg.png",
+      "sha256": "a826e1a691a59a0010886a02bca18eeee39a13faf9ce5d564ff3083579d6ab65",
+      "bytes": 16866
+    },
+    {
+      "file": "typography/firefox/serif-700-1-italic.png",
+      "sha256": "8d881c15d7d5d40a66957a67fad5f805bc74520b3f14c85b6b3c74e693b3dd35",
+      "bytes": 5415
+    },
+    {
+      "file": "typography/firefox/serif-700-1-italic-full-svg.png",
+      "sha256": "3b16f914811f77a533b63c42046cc725506099f24ea6410b1468a7f435c171d2",
+      "bytes": 17294
+    },
+    {
+      "file": "typography/firefox/serif-700-2-normal.png",
+      "sha256": "6a733f2cfad9add30b5034d4c0d5d572f38a7d70e4001ef6be8d0323ab0ac7e6",
+      "bytes": 5007
+    },
+    {
+      "file": "typography/firefox/serif-700-2-normal-full-svg.png",
+      "sha256": "a826e1a691a59a0010886a02bca18eeee39a13faf9ce5d564ff3083579d6ab65",
+      "bytes": 16866
+    },
+    {
+      "file": "typography/firefox/italic-pixel-report.json",
+      "sha256": "61636b39f505814fed63571b106be591d7a76f05b37bdbf4fa7b21448a7c5b91",
+      "bytes": 7758
+    },
+    {
+      "file": "typography/webkit/sans-400-0-normal.png",
+      "sha256": "1460988fc0929b32302934ea0d8ba9513f63cf154c5167aa99961bf49fc65ea1",
+      "bytes": 11376
+    },
+    {
+      "file": "typography/webkit/sans-400-0-normal-full-svg.png",
+      "sha256": "618af3e74de11d55df45c8259ed19c9348d530d7985f792a83fc1e09dae7c0ae",
+      "bytes": 50239
+    },
+    {
+      "file": "typography/webkit/sans-400-1-italic.png",
+      "sha256": "dbf7c67d0ec3add86054e13194353b814171660da58ae171ccd571058d69242c",
+      "bytes": 12278
+    },
+    {
+      "file": "typography/webkit/sans-400-1-italic-full-svg.png",
+      "sha256": "d3b8298bf2ce1fbf4b14a9a5cde0fdd55b0c63beb6f41688952f88c76e3e321e",
+      "bytes": 51424
+    },
+    {
+      "file": "typography/webkit/sans-400-2-normal.png",
+      "sha256": "1460988fc0929b32302934ea0d8ba9513f63cf154c5167aa99961bf49fc65ea1",
+      "bytes": 11376
+    },
+    {
+      "file": "typography/webkit/sans-400-2-normal-full-svg.png",
+      "sha256": "618af3e74de11d55df45c8259ed19c9348d530d7985f792a83fc1e09dae7c0ae",
+      "bytes": 50239
+    },
+    {
+      "file": "typography/webkit/sans-700-0-normal.png",
+      "sha256": "213e65de76c4241eb43f25c82064cf6c896a4efd9abd2f4680818eaddb584f4e",
+      "bytes": 11388
+    },
+    {
+      "file": "typography/webkit/sans-700-0-normal-full-svg.png",
+      "sha256": "a30f12e558b3f856352c0baae7d7fbb6de9cfae84b2f96e1996e0d71f7fe9f94",
+      "bytes": 50158
+    },
+    {
+      "file": "typography/webkit/sans-700-1-italic.png",
+      "sha256": "0f40da64d4b24ce46ac515b0329d73e481ff4ef89eee6ec9d91e4f8af07d63e0",
+      "bytes": 12301
+    },
+    {
+      "file": "typography/webkit/sans-700-1-italic-full-svg.png",
+      "sha256": "b239ac2d4e3cd63747de164de6be418ef0bc024646a1793365fa67b8d97d9abf",
+      "bytes": 51392
+    },
+    {
+      "file": "typography/webkit/sans-700-2-normal.png",
+      "sha256": "213e65de76c4241eb43f25c82064cf6c896a4efd9abd2f4680818eaddb584f4e",
+      "bytes": 11388
+    },
+    {
+      "file": "typography/webkit/sans-700-2-normal-full-svg.png",
+      "sha256": "a30f12e558b3f856352c0baae7d7fbb6de9cfae84b2f96e1996e0d71f7fe9f94",
+      "bytes": 50158
+    },
+    {
+      "file": "typography/webkit/serif-400-0-normal.png",
+      "sha256": "1b2e999920df7b0636ef89676101a5dbd38162f2f13c616862ba5d92c382470e",
+      "bytes": 12102
+    },
+    {
+      "file": "typography/webkit/serif-400-0-normal-full-svg.png",
+      "sha256": "c3000f76bbf053cbb002d265b3ef7dec6cac52c57ce95205960de55b07acb0e6",
+      "bytes": 51334
+    },
+    {
+      "file": "typography/webkit/serif-400-1-italic.png",
+      "sha256": "0f501b597dec6d2c67ae7d5d3fddf924adc498647d92afac592ee119f1a1d559",
+      "bytes": 12864
+    },
+    {
+      "file": "typography/webkit/serif-400-1-italic-full-svg.png",
+      "sha256": "79d2c1ed160faaed3351685c82ac6869c2fc97e108624a583a1773d74517a314",
+      "bytes": 52336
+    },
+    {
+      "file": "typography/webkit/serif-400-2-normal.png",
+      "sha256": "1b2e999920df7b0636ef89676101a5dbd38162f2f13c616862ba5d92c382470e",
+      "bytes": 12102
+    },
+    {
+      "file": "typography/webkit/serif-400-2-normal-full-svg.png",
+      "sha256": "c3000f76bbf053cbb002d265b3ef7dec6cac52c57ce95205960de55b07acb0e6",
+      "bytes": 51334
+    },
+    {
+      "file": "typography/webkit/serif-700-0-normal.png",
+      "sha256": "77534a1ea605342358707c0fa76da28c360ee28af925d1b34c8e454e01692688",
+      "bytes": 12415
+    },
+    {
+      "file": "typography/webkit/serif-700-0-normal-full-svg.png",
+      "sha256": "646bc6f27f4358e82551a2da2d851c9102e6a7bf8787ce2097832cbd1d0403e4",
+      "bytes": 51698
+    },
+    {
+      "file": "typography/webkit/serif-700-1-italic.png",
+      "sha256": "06720973d3d1e479ab9820d2324b2b58b690e3aef57c1e013f1026ecf3896fd2",
+      "bytes": 13283
+    },
+    {
+      "file": "typography/webkit/serif-700-1-italic-full-svg.png",
+      "sha256": "f8f9a88838c5812bd7303e309b5b5c8ae94e0975bab1da9076a738f2f03fe1eb",
+      "bytes": 52747
+    },
+    {
+      "file": "typography/webkit/serif-700-2-normal.png",
+      "sha256": "77534a1ea605342358707c0fa76da28c360ee28af925d1b34c8e454e01692688",
+      "bytes": 12415
+    },
+    {
+      "file": "typography/webkit/serif-700-2-normal-full-svg.png",
+      "sha256": "646bc6f27f4358e82551a2da2d851c9102e6a7bf8787ce2097832cbd1d0403e4",
+      "bytes": 51698
+    },
+    {
+      "file": "typography/webkit/italic-pixel-report.json",
+      "sha256": "f9ca80e744677af1d8f0de35b271ee2bddb7b0eda81ebd0d058fd97b5f18c672",
+      "bytes": 7788
+    }
+  ]
+}

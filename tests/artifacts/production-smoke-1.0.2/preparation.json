@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "preparedAt": "2026-09-06T18:36:39.389885+00:00",
+  "status": "prepared_not_executed",
+  "productionRequestsMade": 0,
+  "expectedJobs": 7,
+  "waitingFor": [
+    "deployedRelease",
+    "fullSourceSha",
+    "actualDockerImageId"
+  ],
+  "files": {
+    "acceptance.py": "8e7f0a150bb78aa59c0316a2b5d9f232c68675780c4620e79347e07b6cdaae31",
+    "frozen-production-smoke.py": "744ac93024a8e687a963a36b4d47884fc786dcfd618fa9807e341307beec6580",
+    "expected-font-manifest.json": "1b9662ad58a38f4fa328b602d4504afbd78ab4bb5a57b6bd1cbdea2c015d6139",
+    "run-on-server.sh": "ba6eae5c0133ca04566bbfd804bd52d6ee0353f74e8c17989d33ad7bb2244910"
+  },
+  "fontFacesExpected": 8,
+  "validation": "Python compiled in memory; shell syntax checked separately; no run or finish command executed"
+}

@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "baseUrl": "https://openacad.xyz",
+  "checkedAt": "2026-09-06T19:24:54.841874+00:00",
+  "dataSource": "本脚本确定性生成的模拟数据",
+  "cases": [
+    {
+      "case": "pca",
+      "passed": true,
+      "validation": {
+        "reconstructionMaxAbsoluteError": 5.329070518200751e-15,
+        "explainedRatioSum": 1.0
+      },
+      "provenance": {
+        "engine": "Python",
+        "method": "pca",
+        "methodVersion": "openacad-1",
+        "python": "3.12.3",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 41,
+        "inputSha256": "78877764c0e5aa28046bc6fbe9061dcb07220876e4ec32245367d446333d612e",
+        "parameters": {
+          "seed": 41,
+          "standardization": "None",
+          "direction": "column"
+        }
+      }
+    },
+    {
+      "case": "lm",
+      "passed": true,
+      "validation": {
+        "referenceIntercept": 4.094083486474121,
+        "referenceSlope": 1.484451480355718,
+        "coefficientTolerance": 1e-10,
+        "curvePoints": 80
+      },
+      "provenance": {
+        "engine": "R",
+        "method": "lm",
+        "methodVersion": "openacad-1",
+        "python": "3.12.3",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 41,
+        "inputSha256": "5d4d7b434c56693e27d236e852cede17fd001dcbdc58fdf5a2ce267abc764bd3",
+        "parameters": {
+          "seed": 41,
+          "points": 80,
+          "confidence": 0.95
+        },
+        "r": "4.6.1",
+        "rPackages": {
+          "vegan": "2.7.6",
+          "mgcv": "1.9.4",
+          "ape": "5.8.1",
+          "ade4": "1.7.24",
+          "jsonlite": "2.0.0"
+        },
+        "rng": "L'Ecuyer-CMRG"
+      }
+    },
+    {
+      "case": "png",
+      "passed": true,
+      "validation": {
+        "bytes": 96787,
+        "sha256": "9b810d40c38739686ef56b5dd8bfd0a6ef04d1f7179a1de0c5c1f06437466898",
+        "width": 1500,
+        "height": 875,
+        "decoded": true,
+        "inkBounds": [
+          72,
+          34,
+          1437,
+          824
+        ],
+        "touchesPageEdge": false
+      },
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 560.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+          "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+          "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+          "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+          "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+          "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+          "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+        },
+        "sha256": "9b810d40c38739686ef56b5dd8bfd0a6ef04d1f7179a1de0c5c1f06437466898"
+      },
+      "diagnostics": []
+    },
+    {
+      "case": "pdf",
+      "passed": true,
+      "validation": {
+        "bytes": 123549,
+        "sha256": "a180a69378d7eaa74d0724598668831db45a279e613ab532e263b2e1586b504c",
+        "limitation": "仅格式与校验和检查，未独立打开，不能作为完整导出验收"
+      },
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 560.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+          "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+          "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+          "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+          "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+          "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+          "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+        },
+        "sha256": "a180a69378d7eaa74d0724598668831db45a279e613ab532e263b2e1586b504c"
+      },
+      "diagnostics": []
+    },
+    {
+      "case": "eps",
+      "passed": true,
+      "validation": {
+        "bytes": 87442,
+        "sha256": "6cb8f9db32776c42c03df96b7e383eecb5baa6f29c9a7bafd1cf2709e8a0e91f",
+        "limitation": "仅格式与校验和检查，未独立打开，不能作为完整导出验收"
+      },
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 560.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+          "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+          "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+          "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+          "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+          "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+          "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+        },
+        "sha256": "6cb8f9db32776c42c03df96b7e383eecb5baa6f29c9a7bafd1cf2709e8a0e91f"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    }
+  ],
+  "complete": false,
+  "transport": {
+    "client": "httpx",
+    "version": "0.28.1",
+    "connectionReuse": true,
+    "certificateVerification": true,
+    "existingProxySettingsPreserved": true
+  },
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "服务正常"
+  },
+  "status": "partial",
+  "transportRetries": []
+}

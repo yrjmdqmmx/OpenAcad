@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-09-06T19:25:15.847221+00:00",
+  "version": "1.0.2",
+  "phase": "after-upgrade-and-version-rehearsal",
+  "baselineApplications": 10,
+  "missing": [],
+  "changedImageOrStartTime": [],
+  "containers": {
+    "/paperbanana-hk-benchmark-worker-1": [
+      "sha256:d7adab35d60209ad22df740ddca4249d3b1c358e7ae087474e3c19a1c47d1544",
+      "2026-09-06T10:15:48.94365274Z"
+    ],
+    "/paperbanana-hk-paperbanana-api-1": [
+      "sha256:2f9dd2d4bdcbd9b905f6875f572a907448cbe559aaf16179bd617511db06bda3",
+      "2026-09-06T10:15:43.203415377Z"
+    ],
+    "/paperbanana-hk-auth-gateway-1": [
+      "sha256:edc4db85beded3f182b7fc19dde078063afddac738cabac534022cc90aa9c30d",
+      "2026-09-04T09:39:43.865862947Z"
+    ],
+    "/paperbanana-hk-plot-worker-1": [
+      "sha256:23894f4844c4145046f882a8eff7665c907d1e433d1afaa8edc8fcdab337d2e3",
+      "2026-08-19T03:03:07.109583832Z"
+    ],
+    "/tensor-auto-web-1": [
+      "sha256:eaeecdba76a64c8150c533db8945d0d7eb82cb36a3668ebbd30f0c8e5cc4f0d4",
+      "2026-08-18T05:16:10.02228225Z"
+    ],
+    "/tensor-auto-api-1": [
+      "sha256:e4539d9d051948e731efe68aa50ecbc89416aeba1017766120735f9cc36f79a5",
+      "2026-08-18T05:15:54.320461073Z"
+    ],
+    "/tensor-auto-harness-worker-1": [
+      "sha256:bee2131f77c8bee446bf387d4664e4929fe09303c8e7bfdf72c980320d596c06",
+      "2026-08-18T05:15:38.671302172Z"
+    ],
+    "/tensor-auto-backup-1": [
+      "sha256:6567bca8d7bc8c82c5922425a0baee57be8402df92bae5eacad5f01ae9544daa",
+      "2026-08-15T03:41:03.061643707Z"
+    ],
+    "/tensor-auto-postgres-1": [
+      "sha256:6567bca8d7bc8c82c5922425a0baee57be8402df92bae5eacad5f01ae9544daa",
+      "2026-08-15T03:40:52.355514429Z"
+    ],
+    "/paperbanana-hk-mongodb-1": [
+      "sha256:5dda65a823a0d73d9caae4f449ab01973cf9884cea4ef56f9cb84dbe5e00acbd",
+      "2026-08-14T17:43:59.2723552Z"
+    ]
+  },
+  "unrelatedApplicationsUnchanged": true
+}

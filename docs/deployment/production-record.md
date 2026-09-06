@@ -1,8 +1,35 @@
 # OpenAcad 正式发布记录
 
-状态：**2026-09-07（北京时间），当前正式版本1.0.1；最终独立复核发现标题加粗跨格式差异，正在修复1.0.2。** 全量Linux发行检查、正式HTTPS浏览器验收、真实计算/导出与版本恢复演练均已通过。首轮发现的字体加载和取消问题已修复；历史失败保留在下文，不冒充成功运行。
+状态：**2026-09-07（北京时间），1.0.2 正式交付，完整 Linux CI、正式域名功能与独立文件复验、实际回退／再升级演练全部通过。** 下方保留各历史版本的失败与修复过程，不将旧运行改写为本次证据。
 
-## 发行身份
+## 1.0.2 发行与验收
+
+- 正式地址：[OpenAcad 开放学术](https://openacad.xyz)。
+- 前后端发行源码：`443357603240c87b9d28ebce346e8e87ea0d7f88`；目录 `/opt/openacad/releases/1.0.2-4433576`；镜像 `openacad-worker:1.0.2-4433576`。
+- CI config digest：`sha256:c8eb293e2586c435e3f9d23ea11c56343ec05542f342f8b9bd2208a0ead0c561`。
+- 实际 containerd 镜像/OCI 根：`sha256:31827c08ecfc92178d3bb26bb8adc29467070a11471b8068f898188d4c93acda`。与 config digest 分开记录；全部 RootFS 和运行 Config 校验通过，见[镜像加载验证](evidence/image-1.0.2/loaded-image-verification.json)。
+- 上一版本 `1.0.1-01c5d87` 及更早发行均保留。本次后端字体与导出代码改变，使用新镜像；不套用1.0.1的后端复用结论。后续文档提交不改变此运行源码。
+
+| 检查 | 本次证据 |
+|---|---|
+| 完整 Linux CI | [34053253054](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34053253054)：311前端单测、81浏览器场景、186后端、13发布工具回归通过；223浏览器场景按配置跳过，0失败。63项字体/导出专项是186中的子集，不重复相加。[结构化摘要](evidence/ci-1.0.2-summary.json)。 |
+| 网页发行包 | 194219281字节，SHA `0f4fb785a6e2d39cdf86f4c9233c776f081460edc53ce07292a1742a28e1211c` 与GitHub一致；387个文件、368字体分片逐一核验。[准备报告](evidence/staged-web-1.0.2.json)。 |
+| 镜像发行包 | [增量工作流34053706639](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34053706639)显式绑定本次成功CI及源码。ZIP为148391523字节，SHA `dfdd199c5ca4035adc5019ef82b20b8d9ad04e0fbb87138cda85a5d00690182e`；实际差异包148360375字节，复用1699293696字节已核验旧成员。[准备与来源](evidence/image-1.0.2/staging-report.json)。 |
+| HTTPS 与目录 | [外部TLS检查](evidence/public-https-1.0.2.json)：1.0.2完整源码、两worker、52研究条目和55模板索引均可读。 |
+| 版本恢复 | [1.0.2→1.0.1→1.0.2](evidence/version-rehearsal-1.0.2/report.json)通过，2026-09-06T19:23:30Z回到1.0.2；逐步核对网页SHA、三容器镜像/健康与维护标记。 |
+| 同机隔离 | [升级及演练后的核对](evidence/isolation-verification-1.0.2.json)：10个其他应用容器的镜像和启动时间保持一致。 |
+
+[正式浏览器完整报告](../../tests/artifacts/production-browser-1.0.2.json)：37通过、39按配置跳过、0失败、0重试不稳定，共432.6秒。16项通用流程、5项真实排序、桌面/手机8项真实格式下载、5项字体/取消检查、3项三桌面字体像素检查；其中4项异常注入与真实服务分别计数。[22份下载与截图](../../tests/artifacts/production-browser-1.0.2-artifacts/manifest.json)及[75份字体附件](../../tests/artifacts/production-browser-1.0.2-artifacts/typography/manifest.json)独立保存，原本地基线已恢复。
+
+[七任务生产API报告](../../tests/artifacts/production-smoke-1.0.2/report.json)为 `complete: true`，7/7通过。PCA重构最大绝对误差5.329e-15，LM与独立OLS在1e-10容差内一致；五份PNG/PDF/EPS文件独立打开，粗斜PDF真嵌入Sans/Serif两种BoldOblique，8字体SHA全等冻结manifest，未发生POST重试，任务与验证容器均清理。[执行及独立工具说明](../../tests/artifacts/production-smoke-1.0.2/README.md)。
+
+[8份浏览器实际下载独立验证](../../tests/artifacts/production-browser-1.0.2-artifacts/independent-export-verification.json)全部通过：SVG960×640、PNG1500×1000、PDF/EPS720×480pt，中文与真实粗体清楚，墨迹不触边。两PDF真嵌入NotoSerifCJKsc-Bold，未使用Cairo合成；桌面/手机各格式预览一致。EPS透明效果可能包含栅格，保留文字SVG依赖接收端字体，不能据可打开声称所有EPS均全矢量。
+
+标题编辑性能：常规模拟数据30次测量全部低于300ms，p95 94.2ms，最大113.3ms；仅覆盖明确的标题编辑路径，不能外推大数据、所有控件或统计任务。[原始分段](evidence/staged-web-1.0.2.json)。
+
+首次1.0.2 CI曾报告WebKit斜体像素相同。检查原始附件发现裁片只有画布边框，没有标题；字体在WebKit实际显示正常。测试改为 `getBBox` 四角经 `getScreenCTM` 定位，并确认真实深色墨迹和整图截图，三桌面本机及最终Linux CI通过。正式8OTF、368WOFF2和字体生成器未因此改变。[失败及诊断](../../tests/artifacts/font-webkit-matrix-before/README.md)、[正确裁片复验](../../tests/artifacts/font-webkit-crop-after/README.md)。
+
+## 历史：1.0.1 发行身份
 
 - 正式地址：https://openacad.xyz
 - 已部署前端源码：`01c5d87a6f36263b236bd964d70996d25635a907`。后端核验源码为`23d5bb098d4b1a6d8551f3de8fe6e88893807f91`，两者`server/` Git树完全相同，最新CI重建配置摘要亦相同，见[复用核验](evidence/backend-reuse-1.0.1.json)。
@@ -16,7 +43,7 @@
 
 |检查|状态与证据|
 |---|---|
-|最新Linux CI|[34048295712](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34048295712) 完整成功；前端311单测、77浏览器场景（219按配置跳过）、后端152项、发布与镜像工具回归13项。见[摘要](evidence/ci-1.0.1-summary.txt)。|
+|1.0.1 Linux CI|[34048295712](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34048295712) 完整成功；前端311单测、77浏览器场景（219按配置跳过）、后端152项、发布与镜像工具回归13项。见[摘要](evidence/ci-1.0.1-summary.txt)。|
 |1.0.1发行附件|网页45334623字节，SHA-256 `a70eeedd4a2766015bbe0ca823423038cf7e1460d1e751a44e41b53ad8e886d8` 与GitHub附件一致；110个发行文件、92份WOFF2逐一核验，见[准备记录](evidence/staged-web-1.0.1.json)。后端字节未变，复用已验证镜像。|
 |HTTPS版本与健康|[外部HTTPS检查](evidence/public-https-1.0.1.json)确认版本1.0.1/完整01c5源码、两个worker；研究52条、验收55模板JSON可读。|
 |生产浏览器|[完整报告](../../tests/artifacts/production-browser.json)：33通过、35按配置跳过、0失败、0重试不稳定，实际耗时442.3秒。16项跨引擎/手机通用流程、5项真实排序、桌面/手机8项真实格式下载，以及4项字体/取消故障注入。后4项是异常处理测试，不计为真实服务计算。|
@@ -82,4 +109,4 @@
 
 真实Bold补齐后，55默认、15复杂配置、16树图源共258份图片在本机隔离环境重转。首轮发现37份650字重未按浏览器匹配Bold；修复静态字重归一化后，第二轮全部独立打开，37份PNG产生预期变化，其他49份PNG保持一致。两轮完整报告都保留，不将第一轮视为字体通过。
 
-随后实际斜体检查发现，浏览器原 `font-synthesis:weight` 阻止倾斜；允许style后网页像素开关有效。当前Inkscape即使fontconfig提供倾斜矩阵，PNG与转曲SVG仍未变化。该失败也保留；正在用明确标注、可复现的派生倾斜字形验证同一显示与导出形状，尚未发布1.0.2。
+随后实际斜体检查发现，浏览器原 `font-synthesis:weight` 阻止倾斜；允许style后网页像素开关有效。当前Inkscape即使fontconfig提供倾斜矩阵，PNG与转曲SVG仍未变化。该失败也保留；之后使用明确标注、可复现的12度派生Oblique面，8份完整OTF与368份网页分片全量核验；63项字体/导出子集、42份小夹具转换和14份PDF独立打开通过。两种复杂布局另有实际界面编辑、项目重开和8份四格式下载通过，见[字体证据](../../tests/artifacts/font-delivery-oblique/README.md)及[复杂布局证据](../../tests/artifacts/font-oblique-layout/README.md)。

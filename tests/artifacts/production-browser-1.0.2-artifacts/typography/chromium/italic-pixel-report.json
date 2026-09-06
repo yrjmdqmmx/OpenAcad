@@ -1,0 +1,322 @@
+[
+  {
+    "family": "Noto Sans SC",
+    "weight": 400,
+    "bounds": {
+      "x": 705.1953043907881,
+      "y": 246.92861185595393,
+      "right": 914.8046803824603,
+      "bottom": 281.928613637574,
+      "width": 209.6093759916722,
+      "height": 35.000001781620085
+    },
+    "states": [
+      {
+        "italic": false,
+        "face": {
+          "style": "normal",
+          "weight": "400",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1391,
+          "horizontalCoverage": 0.859504132231405,
+          "width": 242,
+          "height": 56
+        },
+        "clip": {
+          "x": 689,
+          "y": 236,
+          "width": 242,
+          "height": 56
+        },
+        "screenshot": "sans-400-0-normal",
+        "sha256": "0a5ed99773f24fd0a46651584e14a9573c8eb6b2a975342ed9fc928917eff7f2"
+      },
+      {
+        "italic": true,
+        "face": {
+          "style": "italic",
+          "weight": "400",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1390,
+          "horizontalCoverage": 0.8677685950413223,
+          "width": 242,
+          "height": 56
+        },
+        "clip": {
+          "x": 689,
+          "y": 236,
+          "width": 242,
+          "height": 56
+        },
+        "screenshot": "sans-400-1-italic",
+        "sha256": "63a7aee6622be33e869ea308e00b84b55ff1eef302eab2792a81f840081229c9"
+      },
+      {
+        "italic": false,
+        "face": {
+          "style": "normal",
+          "weight": "400",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1391,
+          "horizontalCoverage": 0.859504132231405,
+          "width": 242,
+          "height": 56
+        },
+        "clip": {
+          "x": 689,
+          "y": 236,
+          "width": 242,
+          "height": 56
+        },
+        "screenshot": "sans-400-2-normal",
+        "sha256": "0a5ed99773f24fd0a46651584e14a9573c8eb6b2a975342ed9fc928917eff7f2"
+      }
+    ]
+  },
+  {
+    "family": "Noto Sans SC",
+    "weight": 700,
+    "bounds": {
+      "x": 703.6406226024033,
+      "y": 246.92861185595393,
+      "right": 916.3593773975969,
+      "bottom": 281.928613637574,
+      "width": 212.7187547951936,
+      "height": 35.000001781620085
+    },
+    "states": [
+      {
+        "italic": false,
+        "face": {
+          "style": "normal",
+          "weight": "700",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1977,
+          "horizontalCoverage": 0.8536585365853658,
+          "width": 246,
+          "height": 56
+        },
+        "clip": {
+          "x": 687,
+          "y": 236,
+          "width": 246,
+          "height": 56
+        },
+        "screenshot": "sans-700-0-normal",
+        "sha256": "388b603468e2202344e996adc0f8efa9a6c51af0cebc8e6d8dd9504c561e9b3f"
+      },
+      {
+        "italic": true,
+        "face": {
+          "style": "italic",
+          "weight": "700",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1983,
+          "horizontalCoverage": 0.8617886178861789,
+          "width": 246,
+          "height": 56
+        },
+        "clip": {
+          "x": 687,
+          "y": 236,
+          "width": 246,
+          "height": 56
+        },
+        "screenshot": "sans-700-1-italic",
+        "sha256": "7231611500914a966c6a439f3335a2bfbb5d5b3072ade63c68883cf77947a136"
+      },
+      {
+        "italic": false,
+        "face": {
+          "style": "normal",
+          "weight": "700",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1977,
+          "horizontalCoverage": 0.8536585365853658,
+          "width": 246,
+          "height": 56
+        },
+        "clip": {
+          "x": 687,
+          "y": 236,
+          "width": 246,
+          "height": 56
+        },
+        "screenshot": "sans-700-2-normal",
+        "sha256": "388b603468e2202344e996adc0f8efa9a6c51af0cebc8e6d8dd9504c561e9b3f"
+      }
+    ]
+  },
+  {
+    "family": "Noto Serif CJK SC",
+    "weight": 400,
+    "bounds": {
+      "x": 704.515643107891,
+      "y": 246.92861185595393,
+      "right": 915.4844025723636,
+      "bottom": 281.928613637574,
+      "width": 210.96875946447256,
+      "height": 35.000001781620085
+    },
+    "states": [
+      {
+        "italic": false,
+        "face": {
+          "style": "normal",
+          "weight": "400",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1018,
+          "horizontalCoverage": 0.8524590163934426,
+          "width": 244,
+          "height": 56
+        },
+        "clip": {
+          "x": 688,
+          "y": 236,
+          "width": 244,
+          "height": 56
+        },
+        "screenshot": "serif-400-0-normal",
+        "sha256": "75c0a88e06fb187f8d583ac97593c8a42d7ac1244106b88e5276e37a6b86cd74"
+      },
+      {
+        "italic": true,
+        "face": {
+          "style": "italic",
+          "weight": "400",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1034,
+          "horizontalCoverage": 0.8647540983606558,
+          "width": 244,
+          "height": 56
+        },
+        "clip": {
+          "x": 688,
+          "y": 236,
+          "width": 244,
+          "height": 56
+        },
+        "screenshot": "serif-400-1-italic",
+        "sha256": "968b200640c812e32c8073aebce33d4f5bc1f8ee1333cb43a62bfc89fd9d8027"
+      },
+      {
+        "italic": false,
+        "face": {
+          "style": "normal",
+          "weight": "400",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1018,
+          "horizontalCoverage": 0.8524590163934426,
+          "width": 244,
+          "height": 56
+        },
+        "clip": {
+          "x": 688,
+          "y": 236,
+          "width": 244,
+          "height": 56
+        },
+        "screenshot": "serif-400-2-normal",
+        "sha256": "75c0a88e06fb187f8d583ac97593c8a42d7ac1244106b88e5276e37a6b86cd74"
+      }
+    ]
+  },
+  {
+    "family": "Noto Serif CJK SC",
+    "weight": 700,
+    "bounds": {
+      "x": 703.6406226024033,
+      "y": 246.92861185595393,
+      "right": 916.3593773975969,
+      "bottom": 281.928613637574,
+      "width": 212.7187547951936,
+      "height": 35.000001781620085
+    },
+    "states": [
+      {
+        "italic": false,
+        "face": {
+          "style": "normal",
+          "weight": "700",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1418,
+          "horizontalCoverage": 0.8536585365853658,
+          "width": 246,
+          "height": 56
+        },
+        "clip": {
+          "x": 687,
+          "y": 236,
+          "width": 246,
+          "height": 56
+        },
+        "screenshot": "serif-700-0-normal",
+        "sha256": "508fda76985930ebf93da5a59dd6fcb521b664cc8e5c51d7b85a1574c6146dae"
+      },
+      {
+        "italic": true,
+        "face": {
+          "style": "italic",
+          "weight": "700",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1425,
+          "horizontalCoverage": 0.8699186991869918,
+          "width": 246,
+          "height": 56
+        },
+        "clip": {
+          "x": 687,
+          "y": 236,
+          "width": 246,
+          "height": 56
+        },
+        "screenshot": "serif-700-1-italic",
+        "sha256": "54acdebdaaee31f4bfdfe9e32bdef5906e6b81235a0191d5270daaf3213f5cfa"
+      },
+      {
+        "italic": false,
+        "face": {
+          "style": "normal",
+          "weight": "700",
+          "matched": 3
+        },
+        "ink": {
+          "pixels": 1418,
+          "horizontalCoverage": 0.8536585365853658,
+          "width": 246,
+          "height": 56
+        },
+        "clip": {
+          "x": 687,
+          "y": 236,
+          "width": 246,
+          "height": 56
+        },
+        "screenshot": "serif-700-2-normal",
+        "sha256": "508fda76985930ebf93da5a59dd6fcb521b664cc8e5c51d7b85a1574c6146dae"
+      }
+    ]
+  }
+]

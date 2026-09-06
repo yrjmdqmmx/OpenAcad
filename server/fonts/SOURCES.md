@@ -3,7 +3,7 @@
 - 黑体版本 2.004：[Regular 400](https://github.com/notofonts/noto-cjk/blob/Sans2.004/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf)、[Bold 700](https://github.com/notofonts/noto-cjk/blob/Sans2.004/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Bold.otf)。
 - 宋体版本 2.003：[Regular 400](https://github.com/notofonts/noto-cjk/blob/Serif2.003/Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Regular.otf)、[Bold 700](https://github.com/notofonts/noto-cjk/blob/Serif2.003/Serif/OTF/SimplifiedChinese/NotoSerifCJKsc-Bold.otf)。
 
-容器字体配置屏蔽 apt 的旧 CJK TTC，使用这八份完整 OTF。400 与 700 均有真实字体面；导出加粗应由 fontconfig 选中 `*-Bold.otf`，不再依靠 Regular 的合成粗体。新增 Bold 的内嵌版本、OS/2 `usWeightClass=700` 和 PostScript 名称均已核对；原两份 Regular 字节未变。不同字重不是同一轮廓，网页各字重应与各自对应的 OTF 比较，不把 Bold 与 Regular 的正常差异当作不一致。
+容器字体配置屏蔽 apt 的旧 CJK TTC，使用这八份完整 OTF。400 与 700 均有真实字体面；正体加粗由 fontconfig 选中 `*-Bold.otf`，粗斜体则选中对应的 `*-BoldOblique.otf`，不再依靠 Regular 的合成粗体。新增 Bold 的内嵌版本、OS/2 `usWeightClass=700` 和 PostScript 名称均已核对；原两份 Regular 字节未变。不同字重不是同一轮廓，网页各字重应与各自对应的 OTF 比较，不把 Bold 与 Regular 的正常差异当作不一致。
 
 四份派生面由 `scripts/build-oblique-fonts.py` 可复现生成，方法为 CFF 顶层 FontMatrix 的 12° 右倾（不是逐字改写）：
 

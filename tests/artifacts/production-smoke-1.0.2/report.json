@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "baseUrl": "https://openacad.xyz",
+  "release": "1.0.2-4433576",
+  "applicationSourceCommit": "443357603240c87b9d28ebce346e8e87ea0d7f88",
+  "imageIdVerifiedByLauncher": "sha256:31827c08ecfc92178d3bb26bb8adc29467070a11471b8068f898188d4c93acda",
+  "startedAt": "2026-09-06T19:24:54.841178+00:00",
+  "frozenRunnerSha256": "744ac93024a8e687a963a36b4d47884fc786dcfd618fa9807e341307beec6580",
+  "expectedFontManifest": {
+    "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+    "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+    "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+    "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+    "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+    "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+    "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+  },
+  "status": "passed",
+  "complete": true,
+  "cases": [
+    {
+      "case": "pca",
+      "passed": true,
+      "evidence": "baseline/report.json",
+      "independentValidation": {
+        "reconstructionMaxAbsoluteError": 5.329070518200751e-15,
+        "explainedRatioSum": 1.0
+      }
+    },
+    {
+      "case": "lm",
+      "passed": true,
+      "evidence": "baseline/report.json",
+      "independentValidation": {
+        "referenceIntercept": 4.094083486474121,
+        "referenceSlope": 1.484451480355718,
+        "coefficientTolerance": 1e-10,
+        "curvePoints": 80
+      }
+    },
+    {
+      "case": "png",
+      "passed": true,
+      "evidence": "baseline/report.json",
+      "independentValidation": {
+        "bytes": 96787,
+        "sha256": "9b810d40c38739686ef56b5dd8bfd0a6ef04d1f7179a1de0c5c1f06437466898",
+        "width": 1500,
+        "height": 875,
+        "decoded": true,
+        "inkBounds": [
+          72,
+          34,
+          1437,
+          824
+        ],
+        "touchesPageEdge": false
+      }
+    },
+    {
+      "case": "pdf",
+      "passed": true,
+      "evidence": "baseline/report.json",
+      "independentValidation": {
+        "bytes": 123549,
+        "sha256": "a180a69378d7eaa74d0724598668831db45a279e613ab532e263b2e1586b504c",
+        "width": 960,
+        "height": 560,
+        "decoded": true,
+        "inkBounds": [
+          46,
+          22,
+          919,
+          527
+        ],
+        "touchesPageEdge": false,
+        "independentDecoder": "Poppler",
+        "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nGNEOPO+NotoSansCJKsc-Regular         CID Type 0C       Identity-H       yes yes yes      7  0\nIAKCEH+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes      8  0\n"
+      }
+    },
+    {
+      "case": "eps",
+      "passed": true,
+      "evidence": "baseline/report.json",
+      "independentValidation": {
+        "bytes": 87442,
+        "sha256": "6cb8f9db32776c42c03df96b7e383eecb5baa6f29c9a7bafd1cf2709e8a0e91f",
+        "width": 960,
+        "height": 560,
+        "decoded": true,
+        "inkBounds": [
+          46,
+          21,
+          920,
+          527
+        ],
+        "touchesPageEdge": false,
+        "independentDecoder": "Ghostscript"
+      }
+    },
+    {
+      "case": "bold-italic-png",
+      "passed": true,
+      "validation": {
+        "bytes": 81931,
+        "sha256": "98c8746db6a2ee6364a57e38e7d95d55b3929aca3408d577d3a0601eb7b20655",
+        "width": 1500,
+        "height": 875,
+        "decoded": true,
+        "inkBounds": [
+          78,
+          146,
+          1343,
+          734
+        ],
+        "touchesPageEdge": false
+      },
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 560.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+          "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+          "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+          "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+          "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+          "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+          "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+        },
+        "sha256": "98c8746db6a2ee6364a57e38e7d95d55b3929aca3408d577d3a0601eb7b20655"
+      },
+      "diagnostics": [],
+      "independentValidation": {
+        "bytes": 81931,
+        "sha256": "98c8746db6a2ee6364a57e38e7d95d55b3929aca3408d577d3a0601eb7b20655",
+        "width": 1500,
+        "height": 875,
+        "decoded": true,
+        "inkBounds": [
+          78,
+          146,
+          1343,
+          734
+        ],
+        "touchesPageEdge": false
+      }
+    },
+    {
+      "case": "bold-italic-pdf",
+      "passed": true,
+      "validation": {
+        "bytes": 175854,
+        "sha256": "7ee5bfc8fd2872148afc4af12de116dce99129bc4491bf3839501289de43fe76",
+        "limitation": "仅格式与校验和检查，未独立打开，不能作为完整导出验收"
+      },
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 560.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+          "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+          "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+          "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+          "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+          "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+          "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+        },
+        "sha256": "7ee5bfc8fd2872148afc4af12de116dce99129bc4491bf3839501289de43fe76"
+      },
+      "diagnostics": [],
+      "independentValidation": {
+        "bytes": 175854,
+        "sha256": "7ee5bfc8fd2872148afc4af12de116dce99129bc4491bf3839501289de43fe76",
+        "width": 960,
+        "height": 560,
+        "decoded": true,
+        "inkBounds": [
+          50,
+          94,
+          859,
+          469
+        ],
+        "touchesPageEdge": false,
+        "independentDecoder": "Poppler",
+        "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nXZJVKI+OpenAcadNotoSansCJKsc-BoldOblique CID Type 0C       Identity-H       yes yes yes      7  0\nOOBTVT+OpenAcadNotoSerifCJKsc-BoldOblique CID Type 0C       Identity-H       yes yes yes      8  0\nXUKPDE+NotoSansCJKsc-Regular         CID Type 0C       Identity-H       yes yes yes      9  0\n"
+      }
+    }
+  ],
+  "baselineReport": "baseline/report.json",
+  "baselineTransportRetries": [],
+  "extraTransportRetries": [],
+  "independentlyCheckedAt": "2026-09-06T19:26:24.943957+00:00",
+  "independentTools": {
+    "png": "Independent Python CRC/zlib/filter pixel decoder",
+    "pdf": "Poppler 26.08.0 (pdftoppm, pdffonts)",
+    "eps": "Ghostscript 10.07.1"
+  },
+  "visualReview": {
+    "checkedAt": "2026-09-06T19:28:01.814462+00:00",
+    "previewsInspected": {
+      "baseline/analysis.png": "9b810d40c38739686ef56b5dd8bfd0a6ef04d1f7179a1de0c5c1f06437466898",
+      "baseline/decoded-pdf.png": "94fc5db5e8d3108c7da86699c6e6b04ce50a93f8335f4160181cb59a106a920d",
+      "baseline/decoded-eps.png": "4874d3609020e046e4ad0fd8e1cbfeef9d74c18a9df8b61d467650e66df57d19",
+      "bold-italic/analysis.png": "98c8746db6a2ee6364a57e38e7d95d55b3929aca3408d577d3a0601eb7b20655",
+      "bold-italic/decoded-pdf.png": "d8d2d4827dd9da307566c7bed28157ae2416f5f6cadd289cb820d1fd76cfed60"
+    },
+    "chineseReadable": true,
+    "boldAndObliqueVisibleInBothFamilies": true,
+    "obviousClipping": false,
+    "scope": "Five decoded/raster export previews inspected; not a claim of pixel-identical cross-format antialiasing"
+  },
+  "executionEvidence": "execution.json"
+}

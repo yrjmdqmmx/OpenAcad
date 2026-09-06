@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-06T19:06:13.667582+00:00",
+  "status": "uploaded_verified_not_executed",
+  "remoteDirectory": "/opt/openacad/verification/1.0.2-verifier",
+  "uploadedFiles": [
+    "acceptance.py",
+    "frozen-production-smoke.py",
+    "expected-font-manifest.json",
+    "run-on-server.sh",
+    "SHA256SUMS"
+  ],
+  "remoteSha256CheckPassed": true,
+  "fontFaces": 8,
+  "currentManifestMatchesExpected": true,
+  "productionRequestsMade": 0,
+  "verificationContainersStarted": 0,
+  "candidateSourceRevision": "443357603240c87b9d28ebce346e8e87ea0d7f88",
+  "candidateCiRun": "34053253054",
+  "waitingFor": [
+    "parent confirmed final current release directory",
+    "parent confirmed actual Docker image ID",
+    "parent confirmation recovery rehearsal complete"
+  ],
+  "sha256": {
+    "acceptance.py": "8e7f0a150bb78aa59c0316a2b5d9f232c68675780c4620e79347e07b6cdaae31",
+    "frozen-production-smoke.py": "744ac93024a8e687a963a36b4d47884fc786dcfd618fa9807e341307beec6580",
+    "expected-font-manifest.json": "1b9662ad58a38f4fa328b602d4504afbd78ab4bb5a57b6bd1cbdea2c015d6139",
+    "run-on-server.sh": "ba6eae5c0133ca04566bbfd804bd52d6ee0353f74e8c17989d33ad7bb2244910",
+    "SHA256SUMS": "018d38c49da2325992c9f2460229dda130f5ea078da19b616ab7a8da75f158d4"
+  }
+}

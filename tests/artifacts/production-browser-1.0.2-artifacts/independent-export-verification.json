@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 2,
+  "status": "passed",
+  "checkedAt": "2026-09-06T19:32:35.764811+00:00",
+  "sourceRevision": "443357603240c87b9d28ebce346e8e87ea0d7f88",
+  "sourceManifestSha256": "9c2fe654ad88345f4d7588362969d96fd89842cdc7fd5b4ae88152b9e33780ca",
+  "baseUrl": "https://openacad.xyz",
+  "scope": "8 actual desktop/mobile browser downloads; local reopening only; no server jobs",
+  "tools": {
+    "chrome": "152.0.7977.76",
+    "poppler": "pdftoppm version 26.08.0",
+    "ghostscript": "10.07.1",
+    "python": "3.12.14",
+    "pngValidation": "production_smoke.py png_check: signature, all chunk CRC, zlib/filter pixel decoding, white-composited ink bounds",
+    "pngCheckerSha256": "744ac93024a8e687a963a36b4d47884fc786dcfd618fa9807e341307beec6580"
+  },
+  "cases": [
+    {
+      "file": "live-exports/chromium-chinese-serif.svg",
+      "format": "svg",
+      "device": "desktop",
+      "bytes": 51782,
+      "sha256": "a5ff94138e66fa1431e916e32d0a076fad2fc6590312068e20677e6b990223d9",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "structure": {
+        "source": "live-exports/chromium-chinese-serif.svg",
+        "preview": "independent-previews/chromium-chinese-serif-svg.png",
+        "width": 960,
+        "height": 640,
+        "viewBox": "0 0 960 640",
+        "textElements": 0,
+        "paths": 69,
+        "embeddedImages": 0,
+        "label": "中文导出检验：处理组浓度",
+        "pageErrors": [],
+        "externalRequests": 0
+      },
+      "decoder": "Google Chrome",
+      "textMode": "all text outlined to SVG paths; no font dependency",
+      "preview": "independent-previews/chromium-chinese-serif-svg.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "3210e572f593326e406e7577213d4a57831873eeceb306307b6e10c41f6bb302"
+    },
+    {
+      "file": "live-exports/chromium-chinese-serif.png",
+      "format": "png",
+      "device": "desktop",
+      "bytes": 46906,
+      "sha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "decoder": "PNG CRC/zlib/filter pixel decoder",
+      "textMode": "raster pixels; font identity cannot be recovered from PNG alone",
+      "preview": "live-exports/chromium-chinese-serif.png",
+      "pixels": {
+        "width": 1500,
+        "height": 1000,
+        "decoded": true,
+        "inkBounds": [
+          16,
+          21,
+          1424,
+          868
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25"
+    },
+    {
+      "file": "live-exports/chromium-chinese-serif.pdf",
+      "format": "pdf",
+      "device": "desktop",
+      "bytes": 122771,
+      "sha256": "7c69eb3facfd63c575a39d93843b09f16368789003f1d0f0c225647c16976404",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "decoder": "Poppler",
+      "pages": 1,
+      "pagePoints": [
+        720.0,
+        480.0
+      ],
+      "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCQDAFL+NotoSerifCJKsc-Bold           CID Type 0C       Identity-H       yes yes yes      7  0\nZAZLPD+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes     11  0\n",
+      "allFontsEmbedded": true,
+      "actualBoldResourcePresent": true,
+      "syntheticCairoFontPresent": false,
+      "expectedTitleMatchesExactUnicode": false,
+      "expectedTitleMatchesAfterNFKC": true,
+      "textMode": "embedded actual Regular and Bold font text",
+      "unicodeLimitation": "Text extraction exposes compatibility code points; Unicode NFKC on expected and actual values matches the intended title.",
+      "preview": "independent-previews/chromium-chinese-serif-pdf.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          912,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "67615d84f14d0c3fd060be430c8ec1662b7d87d19eb9823326f55b9e04976070"
+    },
+    {
+      "file": "live-exports/chromium-chinese-serif.eps",
+      "format": "eps",
+      "device": "desktop",
+      "bytes": 128352,
+      "sha256": "c51c5b5b6ca592206d30c49374f5a27debbdda3dbddcc94219effda4994ce7c2",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "decoder": "Ghostscript",
+      "boundingBoxPoints": [
+        0,
+        1,
+        720,
+        481
+      ],
+      "pagePoints": [
+        720,
+        480
+      ],
+      "imageOperators": 1,
+      "textMode": "raster composite embedded in EPS",
+      "rasterLimitation": "EPS contains a Cairo raster composite; visual appearance is retained but pure-vector or text editability cannot be claimed.",
+      "preview": "independent-previews/chromium-chinese-serif-eps.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          556
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "a23ca8abd158040479bb72ef0fdc001e800b996fd2fa6791a27a1d8fd3551217"
+    },
+    {
+      "file": "live-exports/mobile-chinese-serif.svg",
+      "format": "svg",
+      "device": "mobile",
+      "bytes": 51782,
+      "sha256": "a5ff94138e66fa1431e916e32d0a076fad2fc6590312068e20677e6b990223d9",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "structure": {
+        "source": "live-exports/mobile-chinese-serif.svg",
+        "preview": "independent-previews/mobile-chinese-serif-svg.png",
+        "width": 960,
+        "height": 640,
+        "viewBox": "0 0 960 640",
+        "textElements": 0,
+        "paths": 69,
+        "embeddedImages": 0,
+        "label": "中文导出检验：处理组浓度",
+        "pageErrors": [],
+        "externalRequests": 0
+      },
+      "decoder": "Google Chrome",
+      "textMode": "all text outlined to SVG paths; no font dependency",
+      "preview": "independent-previews/mobile-chinese-serif-svg.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "3210e572f593326e406e7577213d4a57831873eeceb306307b6e10c41f6bb302"
+    },
+    {
+      "file": "live-exports/mobile-chinese-serif.png",
+      "format": "png",
+      "device": "mobile",
+      "bytes": 46906,
+      "sha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "decoder": "PNG CRC/zlib/filter pixel decoder",
+      "textMode": "raster pixels; font identity cannot be recovered from PNG alone",
+      "preview": "live-exports/mobile-chinese-serif.png",
+      "pixels": {
+        "width": 1500,
+        "height": 1000,
+        "decoded": true,
+        "inkBounds": [
+          16,
+          21,
+          1424,
+          868
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25"
+    },
+    {
+      "file": "live-exports/mobile-chinese-serif.pdf",
+      "format": "pdf",
+      "device": "mobile",
+      "bytes": 122771,
+      "sha256": "77017bd5bd91638a253b59b6d0628d4026878330c6001888394de08010bdc8c6",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "decoder": "Poppler",
+      "pages": 1,
+      "pagePoints": [
+        720.0,
+        480.0
+      ],
+      "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCQDAFL+NotoSerifCJKsc-Bold           CID Type 0C       Identity-H       yes yes yes      7  0\nZAZLPD+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes     11  0\n",
+      "allFontsEmbedded": true,
+      "actualBoldResourcePresent": true,
+      "syntheticCairoFontPresent": false,
+      "expectedTitleMatchesExactUnicode": false,
+      "expectedTitleMatchesAfterNFKC": true,
+      "textMode": "embedded actual Regular and Bold font text",
+      "unicodeLimitation": "Text extraction exposes compatibility code points; Unicode NFKC on expected and actual values matches the intended title.",
+      "preview": "independent-previews/mobile-chinese-serif-pdf.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          912,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "67615d84f14d0c3fd060be430c8ec1662b7d87d19eb9823326f55b9e04976070"
+    },
+    {
+      "file": "live-exports/mobile-chinese-serif.eps",
+      "format": "eps",
+      "device": "mobile",
+      "bytes": 128352,
+      "sha256": "063cec5e703ec3ee960294553346e2d880542371e7fbcf4ca641eb48b8287311",
+      "sourceManifestSha256Matches": true,
+      "passed": true,
+      "decoder": "Ghostscript",
+      "boundingBoxPoints": [
+        0,
+        1,
+        720,
+        481
+      ],
+      "pagePoints": [
+        720,
+        480
+      ],
+      "imageOperators": 1,
+      "textMode": "raster composite embedded in EPS",
+      "rasterLimitation": "EPS contains a Cairo raster composite; visual appearance is retained but pure-vector or text editability cannot be claimed.",
+      "preview": "independent-previews/mobile-chinese-serif-eps.png",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          556
+        ],
+        "touchesPageEdge": false
+      },
+      "previewSha256": "a23ca8abd158040479bb72ef0fdc001e800b996fd2fa6791a27a1d8fd3551217"
+    }
+  ],
+  "originalFilesUnmodified": true,
+  "desktopMobilePreviewComparisons": [
+    {
+      "format": "svg",
+      "samePixelPreviewSha256": true
+    },
+    {
+      "format": "png",
+      "samePixelPreviewSha256": true
+    },
+    {
+      "format": "pdf",
+      "samePixelPreviewSha256": true
+    },
+    {
+      "format": "eps",
+      "samePixelPreviewSha256": true
+    }
+  ],
+  "machineChecksPassed": 8,
+  "visualReview": {
+    "status": "passed",
+    "checkedAt": "2026-09-06T19:34:10.417903+00:00",
+    "method": "Manual inspection of the four desktop format previews using local view_image; each mobile preview is byte-identical to its corresponding independently rendered desktop preview.",
+    "findings": [
+      "Chinese title, subtitle, axis text and category labels are legible, with no visible missing-glyph boxes.",
+      "Title is visibly bold in SVG, PNG, PDF and EPS; the prior PDF-only synthetic-bold discrepancy is not visible in these samples.",
+      "Bars, axis labels, ticks and title are within the page; no obvious clipping observed."
+    ],
+    "limits": [
+      "Manual sample inspection and outer ink bounds are not a proof against all internal clipping for every chart or dataset.",
+      "Renderers and raster DPI differ; cross-format pixel identity is not claimed."
+    ]
+  },
+  "checkerNegativeControl": {
+    "sourceRevision": "01c5d87a6f36263b236bd964d70996d25635a907",
+    "scope": "Temporary copies of historic 1.0.1 downloads, used only to verify the checker rejects the known missing-real-Bold defect; excluded from the eight 1.0.2 acceptance files.",
+    "status": "passed-as-expected",
+    "passedFormatChecks": 6,
+    "expectedRejectedPDFs": [
+      {
+        "file": "live-exports/chromium-chinese-serif.pdf",
+        "sha256": "8a1a524605e00d2c537e8cdee3717d3224ebf20b68da60a0ec8e5fd0ee95c091",
+        "reason": "PDF title lacks actual Noto Serif CJK SC Bold resource"
+      },
+      {
+        "file": "live-exports/mobile-chinese-serif.pdf",
+        "sha256": "1ea9ce2157ac77d0d2820f26d6a4a4a5fdcded03ae6ddb461d08e5ff207d9ac9",
+        "reason": "PDF title lacks actual Noto Serif CJK SC Bold resource"
+      }
+    ],
+    "originalHistoricFilesUnmodified": true
+  },
+  "limitations": [
+    "PDF text extraction still includes compatibility code points; NFKC applied to both expected and extracted text matches the intended Chinese title.",
+    "EPS contains one Cairo raster composite, so pure-vector graphics and editable text cannot be claimed.",
+    "PNG alone cannot establish the font file identity; PDF resource inspection and visible cross-format consistency supplement the PNG opening check."
+  ]
+}

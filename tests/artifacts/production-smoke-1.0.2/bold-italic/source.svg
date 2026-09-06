@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+    <rect width="960" height="560" fill="#ffffff"/>
+    <g fill="#162c3a" font-size="42" font-weight="700" font-style="italic">
+      <text x="50" y="130" font-family="Noto Sans SC">开放学术：黑体粗斜体</text>
+      <text x="50" y="280" font-family="Noto Serif CJK SC">开放学术：宋体粗斜体</text>
+    </g>
+    <line x1="50" y1="390" x2="860" y2="390" stroke="#188b98" stroke-width="3"/>
+    <circle cx="80" cy="455" r="15" fill="#e39936"/>
+    <text x="120" y="465" font-family="Noto Sans SC" font-size="22" fill="#162c3a">仅使用模拟文字与图形，验证本次字体导出。</text>
+    </svg>

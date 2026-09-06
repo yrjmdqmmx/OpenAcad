@@ -1,0 +1,31 @@
+{
+  "version": "152.0.7977.76",
+  "files": [
+    {
+      "source": "live-exports/chromium-chinese-serif.svg",
+      "preview": "independent-previews/chromium-chinese-serif-svg.png",
+      "width": 960,
+      "height": 640,
+      "viewBox": "0 0 960 640",
+      "textElements": 0,
+      "paths": 69,
+      "embeddedImages": 0,
+      "label": "中文导出检验：处理组浓度",
+      "pageErrors": [],
+      "externalRequests": 0
+    },
+    {
+      "source": "live-exports/mobile-chinese-serif.svg",
+      "preview": "independent-previews/mobile-chinese-serif-svg.png",
+      "width": 960,
+      "height": 640,
+      "viewBox": "0 0 960 640",
+      "textElements": 0,
+      "paths": 69,
+      "embeddedImages": 0,
+      "label": "中文导出检验：处理组浓度",
+      "pageErrors": [],
+      "externalRequests": 0
+    }
+  ]
+}

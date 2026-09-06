@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "method": "render",
+  "data": {},
+  "provenance": {
+    "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+    "format": "eps",
+    "dpi": 150,
+    "width": 960.0,
+    "height": 560.0,
+    "outline": false,
+    "availableFontsSha256": {
+      "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+      "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+      "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+      "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+      "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+      "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+      "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+    },
+    "sha256": "6cb8f9db32776c42c03df96b7e383eecb5baa6f29c9a7bafd1cf2709e8a0e91f"
+  },
+  "diagnostics": [
+    {
+      "code": "EPS_ALPHA_FLATTENED",
+      "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+    },
+    {
+      "code": "EPS_BACKGROUND",
+      "message": "EPS 使用不透明背景 #ffffff"
+    }
+  ]
+}
