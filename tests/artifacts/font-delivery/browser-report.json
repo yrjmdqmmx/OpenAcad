@@ -1,0 +1,134 @@
+{
+  "source": "same pinned OTFs, complete unicode-range WOFF2 delivery",
+  "browser": "152.0.7977.76",
+  "network": {
+    "latencyMS": 80,
+    "downloadBytesPerSecond": 163840,
+    "cacheDisabled": true
+  },
+  "elapsedMilliseconds": 53687,
+  "cases": [
+    {
+      "family": "Noto Sans SC",
+      "text": "中文科研图表",
+      "milliseconds": 2275,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": []
+    },
+    {
+      "family": "Noto Sans SC",
+      "text": "𠮷",
+      "milliseconds": 1415,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-39.e62717f96507.woff2"
+      ]
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "text": "中文科研图表",
+      "milliseconds": 4570,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-rest-39.030cd3a4bc15.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-common-01.09ddb2488f29.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-common-00.92282e42190f.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-latin.c3274cded872.woff2"
+      ]
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "text": "𠮷",
+      "milliseconds": 702,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": []
+    }
+  ],
+  "requestedShards": [
+    {
+      "file": "woff2/noto-sans-sc-latin.d32b30de4552.woff2",
+      "bytes": 80520,
+      "name": "latin"
+    },
+    {
+      "file": "woff2/noto-sans-sc-common-00.8c5ce7f7e41d.woff2",
+      "bytes": 155176,
+      "name": "common-00"
+    },
+    {
+      "file": "woff2/noto-sans-sc-common-01.7418d1e38253.woff2",
+      "bytes": 120924,
+      "name": "common-01"
+    },
+    {
+      "file": "woff2/noto-sans-sc-rest-39.e62717f96507.woff2",
+      "bytes": 209596,
+      "name": "rest-39"
+    },
+    {
+      "file": "woff2/noto-serif-sc-rest-39.030cd3a4bc15.woff2",
+      "bytes": 330720,
+      "name": "rest-39"
+    },
+    {
+      "file": "woff2/noto-serif-sc-common-01.09ddb2488f29.woff2",
+      "bytes": 169368,
+      "name": "common-01"
+    },
+    {
+      "file": "woff2/noto-serif-sc-common-00.92282e42190f.woff2",
+      "bytes": 219160,
+      "name": "common-00"
+    },
+    {
+      "file": "woff2/noto-serif-sc-latin.c3274cded872.woff2",
+      "bytes": 116116,
+      "name": "latin"
+    }
+  ],
+  "commonBytes": 861264,
+  "totalFontBytes": 1401580,
+  "fullOtfRequests": 0,
+  "pageErrors": [],
+  "passed": true
+}

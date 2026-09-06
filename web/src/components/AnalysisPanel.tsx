@@ -318,6 +318,7 @@ export function AnalysisPanel({
         params,
       };
       const job = await createJob({ kind: "analysis", method, ...payload });
+      setStatus("任务已提交，正在读取进度…");
       const abort = new AbortController();
       task.current = { ...job, abort };
       const result = await waitJob(job.id, job.token, abort.signal, (s) =>
