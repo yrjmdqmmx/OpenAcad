@@ -1,0 +1,95 @@
+{
+  "request": {
+    "kind": "analysis",
+    "method": "density",
+    "data": {
+      "tables": [
+        {
+          "id": "matrix",
+          "role": "matrix",
+          "columns": [
+            "id",
+            "six",
+            "four"
+          ],
+          "rows": [
+            [
+              "0",
+              1,
+              1
+            ],
+            [
+              "1",
+              2,
+              2
+            ],
+            [
+              "2",
+              3,
+              3
+            ],
+            [
+              "3",
+              5,
+              5
+            ],
+            [
+              "4",
+              8,
+              null
+            ],
+            [
+              "5",
+              13,
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    "params": {
+      "bandwidth": "scott",
+      "bandwidthMultiplier": 1.6,
+      "trim": false
+    }
+  },
+  "checks": [
+    {
+      "n": 6,
+      "gridPoints": 512,
+      "factor": 1.1181233900345269,
+      "absoluteBandwidth": 5.033625428151893,
+      "maxAbsoluteError": 1.3877787807814457e-17
+    },
+    {
+      "n": 4,
+      "gridPoints": 512,
+      "factor": 1.2125732532083184,
+      "absoluteBandwidth": 2.070863070957517,
+      "maxAbsoluteError": 1.734723475976807e-18
+    }
+  ],
+  "provenance": {
+    "engine": "Python",
+    "method": "density",
+    "methodVersion": "openacad-1",
+    "python": "3.12.3",
+    "packages": {
+      "numpy": "2.4.3",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0"
+    },
+    "seed": 1,
+    "inputSha256": "cd409bf5b33dc31a4a14836df7c9985c43bde6ca4fd33f660143a509940c9fe5",
+    "parameters": {
+      "seed": 1,
+      "idColumn": 0,
+      "points": 512,
+      "bandwidth": "scott",
+      "bandwidthMultiplier": 1.6,
+      "trim": false,
+      "bins": 30
+    }
+  },
+  "passed": true
+}

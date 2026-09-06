@@ -18,3 +18,7 @@ API 默认 `uvicorn app.main:app --host 0.0.0.0 --port 8000 --no-access-log`。�
 统计约定：矩阵缺失值默认拒绝；描述统计、KDE 和独立组检验明确允许 null。CCA 指 canonical correspondence analysis，使用 vegan::cca。NMDS 不输出虚构解释率；报告 stress、稳定解重复情况。GAM 使用 mgcv 的高斯薄板样条 REML；LOESS 为高斯局部多项式。partial Mantel 的第三控制矩阵必须单独输入。PercentScaler 是本产品明示的百分比归一化定义，不能声称与语义未公开的 ChiPlot 内部实现相同。
 
 SVG 外链、脚本、事件、foreignObject、外部 CSS、嵌入图片及实体被拒绝。导出仅允许内部 # 引用。EPS 不支持透明效果：出现透明度/滤镜时主动按所选 DPI 合并到不透明背景，文件含栅格图且返回中文说明；不丢弃透明效果冒充矢量。开启文字转曲线可减轻跨设备字体差异，SVG 转曲结果额外检查没有 text 节点。
+
+Worker 容器健康检查为 `python -m app.worker_health`：必须在当前 hostname 下有存活 PID，状态为空闲或工作中，心跳不早于 90 秒。worker 的注册 TTL 设为 60 秒，空闲等待约 45 秒会更新心跳；运行时监视间隔为 30 秒。API 的 worker 数也排除旧心跳，但发布时应分别等待两个 worker 容器的检查通过。
+
+任务清理同时覆盖正常结束、父进程发现工作子进程被硬杀、取消和 abandoned registry 恢复。每次结果持久化末步用 Redis 原子检查凭证剩余期限；凭证已撤销则删除任务与结果，取消先撤销凭证，避免竞态重建。原输入在失败保存前清空，故障结果也不能延长凭证期限。测试依赖锁为 `requirements-test.lock`（包含完整运行依赖与用于 Redis Lua 回归测试的 lupa）。

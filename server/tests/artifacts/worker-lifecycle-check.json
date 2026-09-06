@@ -1,0 +1,27 @@
+[
+  {
+    "case": "hard-kill",
+    "startedRealR": true,
+    "failedStatus": true,
+    "inputRemoved": true,
+    "capabilityRemainingMs": 3599568,
+    "jobRemainingMs": 3599568,
+    "resultRemainingMs": 3599568
+  },
+  {
+    "case": "hard-kill-delete",
+    "jobRemoved": true,
+    "resultRemoved": true,
+    "rChildRemoved": true,
+    "capabilityRevoked": true,
+    "workerHealthy": true
+  },
+  {
+    "case": "cancel-delete",
+    "jobRemoved": true,
+    "resultRemoved": true,
+    "rChildRemoved": true,
+    "capabilityRevoked": true,
+    "workerHealthy": true
+  }
+]

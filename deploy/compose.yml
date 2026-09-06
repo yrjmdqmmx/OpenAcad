@@ -56,6 +56,13 @@ services:
   worker-one:
     <<: *worker
     command: [python, -m, app.worker]
+    healthcheck: &worker-health
+      test: [CMD, python, -m, app.worker_health]
+      interval: 10s
+      timeout: 6s
+      retries: 6
+      start_period: 10s
   worker-two:
     <<: *worker
     command: [python, -m, app.worker]
+    healthcheck: *worker-health

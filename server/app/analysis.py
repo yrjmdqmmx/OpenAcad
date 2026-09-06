@@ -21,7 +21,7 @@ DISTANCES = {"euclidean", "sqeuclidean", "braycurtis", "canberra", "chebyshev", 
 BINARY = {"dice", "jaccard", "kulczynski1", "kulsinski", "rogerstanimoto", "russellrao", "sokalmichener", "sokalsneath", "yule"}
 DEFAULTS = {
     "descriptive": {"idColumn": 0},
-    "density": {"idColumn": 0, "points": 256, "bandwidth": "scott", "trim": True, "bins": 30},
+    "density": {"idColumn": 0, "points": 512, "bandwidth": "scott", "bandwidthMultiplier": 1, "trim": True, "bins": 30},
     "correlation": {"correlation": "pearson", "alternative": "two-sided", "pAdjust": "none"},
     "tests": {"idColumn": 0, "test": "ttest_ind", "comparisons": "all", "alternative": "two-sided", "equalVariance": False, "pAdjust": "none"},
     "gc": {"contentWindow": 2000, "skewWindow": 2000},
@@ -141,7 +141,8 @@ def descriptive(payload):
 def density(payload):
     x, _, names = matrix(payload, allow_missing=True)
     p = payload["params"]
-    count = number(p, "points", 256, 32, 2048, True)
+    count = number(p, "points", 512, 32, 2048, True)
+    multiplier = number(p, "bandwidthMultiplier", 1, 1e-6, 100)
     bandwidth = p.get("bandwidth", "scott")
     if not isinstance(bandwidth, str):
         bandwidth = number(p, "bandwidth", 1, 1e-6, 100)
@@ -153,10 +154,12 @@ def density(payload):
         require(len(a) >= 2 and np.ptp(a) > 0, f"“{name}”列至少需要两个不相同的值才能估计密度")
         require(len(a) <= 20000, "单列 KDE 最多支持 20000 个观测")
         kde = stats.gaussian_kde(a, bw_method=bandwidth)
+        base_factor = kde.factor
+        kde.set_bandwidth(base_factor * multiplier)
         grid = np.linspace(a.min(), a.max(), count) if p.get("trim", True) else np.linspace(a.min()-3*np.std(a), a.max()+3*np.std(a), count)
         bins = number(p, "bins", 30, 2, 200, True)
         freq, edges = np.histogram(a, bins=bins)
-        out.append({"name": name, "x": grid, "density": kde(grid), "bandwidthFactor": kde.factor, "histogram": {"counts": freq, "edges": edges}})
+        out.append({"name": name, "x": grid, "density": kde(grid), "bandwidthFactor": kde.factor, "baseBandwidthFactor": base_factor, "bandwidthMultiplier": multiplier, "bandwidthAbsolute": float(np.sqrt(kde.covariance[0, 0])), "histogram": {"counts": freq, "edges": edges}})
     return {"columns": out, "kernel": "gaussian"}
 
 

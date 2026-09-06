@@ -1,0 +1,1905 @@
+{
+  "source": "复杂图层与分类控制的实际浏览器SVG，真实RQ/Inkscape转换；独立Pillow/Poppler/Ghostscript打开",
+  "files": [
+    {
+      "template": "binary-dot-annotated",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "d2bb0eef37f11a026272af74e75cbf169fea77923356d3ebef13746779b41b14",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/binary-dot-annotated.eps",
+      "bytes": 37266,
+      "sha256": "4e8796dde9a2a686bb50561abc184650e5dc85c8902836e3529609ccced60b5a",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "4e8796dde9a2a686bb50561abc184650e5dc85c8902836e3529609ccced60b5a"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        61,
+        11,
+        682,
+        464
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "binary-dot-annotated",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "d2bb0eef37f11a026272af74e75cbf169fea77923356d3ebef13746779b41b14",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/binary-dot-annotated.pdf",
+      "bytes": 66426,
+      "sha256": "f94c7b08acc96067cbb47c2c680aebec963caf39a0a047d1ac97a2ce5b16a62a",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "f94c7b08acc96067cbb47c2c680aebec963caf39a0a047d1ac97a2ce5b16a62a"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        61,
+        10,
+        682,
+        464
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "binary-dot-annotated",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "d2bb0eef37f11a026272af74e75cbf169fea77923356d3ebef13746779b41b14",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/binary-dot-annotated.png",
+      "bytes": 106246,
+      "sha256": "3b1f2deafd05f8c0046f58eb27d2aecf7dfb7eb40ff86e82b6f149df01b5667c",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "3b1f2deafd05f8c0046f58eb27d2aecf7dfb7eb40ff86e82b6f149df01b5667c"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        127,
+        23,
+        1420,
+        967
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "bubble-matrix-annotated",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "66d48478efa6030fc553abc6b7a9ac8f148f56407be8a13017a415b8be58fe45",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/bubble-matrix-annotated.eps",
+      "bytes": 44958,
+      "sha256": "4e7e8b0f7faa79b0c35f9eb28703af1008ad35988500417f295cf2767980559e",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "4e7e8b0f7faa79b0c35f9eb28703af1008ad35988500417f295cf2767980559e"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        61,
+        10,
+        682,
+        476
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "bubble-matrix-annotated",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "66d48478efa6030fc553abc6b7a9ac8f148f56407be8a13017a415b8be58fe45",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/bubble-matrix-annotated.pdf",
+      "bytes": 69418,
+      "sha256": "9ff46690d406258fc8a3c2f27d17be2c65ae3b7eeb3826417f25c7c1ea46bdb6",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "9ff46690d406258fc8a3c2f27d17be2c65ae3b7eeb3826417f25c7c1ea46bdb6"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        60,
+        10,
+        682,
+        476
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "bubble-matrix-annotated",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "66d48478efa6030fc553abc6b7a9ac8f148f56407be8a13017a415b8be58fe45",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/bubble-matrix-annotated.png",
+      "bytes": 113246,
+      "sha256": "2705139f56d49adaef568793fed42a8c52897e7ae1479bd14d97475190434c99",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "2705139f56d49adaef568793fed42a8c52897e7ae1479bd14d97475190434c99"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        127,
+        23,
+        1420,
+        992
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "bubble-matrix-category",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "0b612a1369aed2d3b57593fa92cf09c70e09635ae739c3a13a98bb0239b5c602",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/bubble-matrix-category.eps",
+      "bytes": 39245,
+      "sha256": "39295b31af1379cf93b0b6472bad6a5b61e730e19bfc73643d08af60cf78dfea",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "39295b31af1379cf93b0b6472bad6a5b61e730e19bfc73643d08af60cf78dfea"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        61,
+        10,
+        682,
+        463
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "bubble-matrix-category",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "0b612a1369aed2d3b57593fa92cf09c70e09635ae739c3a13a98bb0239b5c602",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/bubble-matrix-category.pdf",
+      "bytes": 67919,
+      "sha256": "0daace6ac4d61cc64182e679997de9e2755a5ac4d122fd66e1f7a28b5f6820a0",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "0daace6ac4d61cc64182e679997de9e2755a5ac4d122fd66e1f7a28b5f6820a0"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        60,
+        10,
+        682,
+        463
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "bubble-matrix-category",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "0b612a1369aed2d3b57593fa92cf09c70e09635ae739c3a13a98bb0239b5c602",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/bubble-matrix-category.png",
+      "bytes": 120323,
+      "sha256": "8db2d0f74e036f75c0d3015cbf9ac1df861015d88681bf9c1a3b87ec540d86fa",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "8db2d0f74e036f75c0d3015cbf9ac1df861015d88681bf9c1a3b87ec540d86fa"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        127,
+        23,
+        1420,
+        965
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "circle-heatmap-annotated",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "5b930a86f369c760992351a0c924f3d238c30b6da3d5139fece577685658e835",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/circle-heatmap-annotated.eps",
+      "bytes": 38529,
+      "sha256": "3a45440f8aee1eafe701dae36d223423b0c339f300134b249a339a6e6afd1bf1",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "3a45440f8aee1eafe701dae36d223423b0c339f300134b249a339a6e6afd1bf1"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        82,
+        10,
+        611,
+        476
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "circle-heatmap-annotated",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "5b930a86f369c760992351a0c924f3d238c30b6da3d5139fece577685658e835",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/circle-heatmap-annotated.pdf",
+      "bytes": 69216,
+      "sha256": "4896c908a9aff6c33dd042839a54ceed91efc4c08df655a8023817507f0002f6",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "4896c908a9aff6c33dd042839a54ceed91efc4c08df655a8023817507f0002f6"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        82,
+        10,
+        611,
+        476
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "circle-heatmap-annotated",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "5b930a86f369c760992351a0c924f3d238c30b6da3d5139fece577685658e835",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/circle-heatmap-annotated.png",
+      "bytes": 155202,
+      "sha256": "0d61de62df15d1c70f463564510a93e92a0363ce9aa4c903ad45245a75cbff3f",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "0d61de62df15d1c70f463564510a93e92a0363ce9aa4c903ad45245a75cbff3f"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        171,
+        23,
+        1273,
+        992
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "circle-heatmap-cluster",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "fdb788db45ba6b52ba9a70ec4fa0c55fda58ab8ab684ae0d5c79e6024161236c",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/circle-heatmap-cluster.eps",
+      "bytes": 31561,
+      "sha256": "6608037411447adac8c992ba15ca65a3aa1da13153c3427fd4918aaba69c4d6e",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "6608037411447adac8c992ba15ca65a3aa1da13153c3427fd4918aaba69c4d6e"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        82,
+        10,
+        555,
+        476
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "circle-heatmap-cluster",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "fdb788db45ba6b52ba9a70ec4fa0c55fda58ab8ab684ae0d5c79e6024161236c",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/circle-heatmap-cluster.pdf",
+      "bytes": 66749,
+      "sha256": "7de528340d3cc00b052f93538c9983f30f3677dc6a0f24b3f256c00ab3a9cc3b",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "7de528340d3cc00b052f93538c9983f30f3677dc6a0f24b3f256c00ab3a9cc3b"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        82,
+        10,
+        555,
+        476
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "circle-heatmap-cluster",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "fdb788db45ba6b52ba9a70ec4fa0c55fda58ab8ab684ae0d5c79e6024161236c",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/circle-heatmap-cluster.png",
+      "bytes": 136322,
+      "sha256": "eee7d5a1d8844b3442e83b313b3112d42d48a72c0c0eb9a533089b4dec60bca8",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "eee7d5a1d8844b3442e83b313b3112d42d48a72c0c0eb9a533089b4dec60bca8"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        171,
+        23,
+        1155,
+        992
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "enrichment-bar-class",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "58b762f6d3df7d9a11b31f81cc8e7651f615aa51f97aa15662826d7af87338c0",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/enrichment-bar-class.eps",
+      "bytes": 42488,
+      "sha256": "b615e8bd385fc740035f0e89915ddb0faca01854a3259e0b686adc88e517ab39",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "b615e8bd385fc740035f0e89915ddb0faca01854a3259e0b686adc88e517ab39"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        89,
+        10,
+        681,
+        483
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "enrichment-bar-class",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "58b762f6d3df7d9a11b31f81cc8e7651f615aa51f97aa15662826d7af87338c0",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/enrichment-bar-class.pdf",
+      "bytes": 69248,
+      "sha256": "409aa5b62395e18464ac5019dfeca98c0588184201005f035e0b03a13ba6d0a1",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "409aa5b62395e18464ac5019dfeca98c0588184201005f035e0b03a13ba6d0a1"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        89,
+        10,
+        681,
+        482
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "enrichment-bar-class",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "58b762f6d3df7d9a11b31f81cc8e7651f615aa51f97aa15662826d7af87338c0",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/enrichment-bar-class.png",
+      "bytes": 68784,
+      "sha256": "a054914db357ea425c4b38d1315d03e4de5481cfdf31a67a5712c374461b7bd8",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "a054914db357ea425c4b38d1315d03e4de5481cfdf31a67a5712c374461b7bd8"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        186,
+        22,
+        1419,
+        1006
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "enrichment-dot-class",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "a5359a31975fd69040c712a6fd383b5ea0d165cf04a88db96bf19fceb178e2ef",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/enrichment-dot-class.eps",
+      "bytes": 45275,
+      "sha256": "2cef22e47517d4caa0c540c4680651efb4a81536784151d1e061568546ff77c9",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "2cef22e47517d4caa0c540c4680651efb4a81536784151d1e061568546ff77c9"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        89,
+        10,
+        681,
+        483
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "enrichment-dot-class",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "a5359a31975fd69040c712a6fd383b5ea0d165cf04a88db96bf19fceb178e2ef",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/enrichment-dot-class.pdf",
+      "bytes": 72328,
+      "sha256": "c447ab71b33a887eb53978b66617583a7c268493e16422c87317aa5e5968859f",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "c447ab71b33a887eb53978b66617583a7c268493e16422c87317aa5e5968859f"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        89,
+        10,
+        681,
+        482
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "enrichment-dot-class",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "a5359a31975fd69040c712a6fd383b5ea0d165cf04a88db96bf19fceb178e2ef",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/enrichment-dot-class.png",
+      "bytes": 76476,
+      "sha256": "4d1d7041074b31f4c8c317d1008315b9052d41c170d90a8c737d6967f59e2353",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "4d1d7041074b31f4c8c317d1008315b9052d41c170d90a8c737d6967f59e2353"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        186,
+        22,
+        1419,
+        1006
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "gene-cluster-broken",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "f6d2a2e274a8e1a6d267e50328a9cf77779fa44a25c52ae00cde7cc746d7087a",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/gene-cluster-broken.eps",
+      "bytes": 30099,
+      "sha256": "320100627f6c61e9e9fd1280faefc39931a4cfe82dbceed262d3fb162dfe2427",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "320100627f6c61e9e9fd1280faefc39931a4cfe82dbceed262d3fb162dfe2427"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        56,
+        10,
+        681,
+        472
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "gene-cluster-broken",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "f6d2a2e274a8e1a6d267e50328a9cf77779fa44a25c52ae00cde7cc746d7087a",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/gene-cluster-broken.pdf",
+      "bytes": 64356,
+      "sha256": "db290443644399de499991e64df86509eb09cc09985c78bcd07d85f13974896a",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "db290443644399de499991e64df86509eb09cc09985c78bcd07d85f13974896a"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        56,
+        10,
+        681,
+        472
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "gene-cluster-broken",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "f6d2a2e274a8e1a6d267e50328a9cf77779fa44a25c52ae00cde7cc746d7087a",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/gene-cluster-broken.png",
+      "bytes": 78346,
+      "sha256": "874729f4fa2921705ecdd43ed7b847513461e6c8a82b35c3b99c49e9deb72758",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "874729f4fa2921705ecdd43ed7b847513461e6c8a82b35c3b99c49e9deb72758"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        118,
+        23,
+        1419,
+        984
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "genome-custom-tracks",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "bcfdaa919ca35a5266912efe926983ec023697a23506b1f1b556b5ced2c52039",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/genome-custom-tracks.eps",
+      "bytes": 146229,
+      "sha256": "a2934899f128bb806a647e310e847bd475333f292358fb751cfcf15c0ceffcdb",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "a2934899f128bb806a647e310e847bd475333f292358fb751cfcf15c0ceffcdb"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        60,
+        10,
+        542,
+        494
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "genome-custom-tracks",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "bcfdaa919ca35a5266912efe926983ec023697a23506b1f1b556b5ced2c52039",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/genome-custom-tracks.pdf",
+      "bytes": 75681,
+      "sha256": "4c3bcff491827645fda0e173345b48d1c0d220faa8e5f4172cddab6bccf98ef9",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "4c3bcff491827645fda0e173345b48d1c0d220faa8e5f4172cddab6bccf98ef9"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        60,
+        10,
+        541,
+        494
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "genome-custom-tracks",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "bcfdaa919ca35a5266912efe926983ec023697a23506b1f1b556b5ced2c52039",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/genome-custom-tracks.png",
+      "bytes": 161630,
+      "sha256": "b18b8425a68bf6ebe21312ba29b0f961757f8e2f3af0ced57324c4076ed37bd2",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "b18b8425a68bf6ebe21312ba29b0f961757f8e2f3af0ced57324c4076ed37bd2"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        126,
+        23,
+        1127,
+        1029
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "heatmap-annotated",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "47a5a4b378e1b6144e1158cb582f8fff33b8e42a77681f4c3ab5bfb5a4341da3",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/heatmap-annotated.eps",
+      "bytes": 32622,
+      "sha256": "1a1a06642f4a4dab1196f4579b1e3b5ce86cf37a1a5eaf1a8deb18b78b95590a",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "1a1a06642f4a4dab1196f4579b1e3b5ce86cf37a1a5eaf1a8deb18b78b95590a"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        61,
+        10,
+        682,
+        476
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "heatmap-annotated",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "47a5a4b378e1b6144e1158cb582f8fff33b8e42a77681f4c3ab5bfb5a4341da3",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/heatmap-annotated.pdf",
+      "bytes": 66523,
+      "sha256": "febda55747733e277d850f159db4bea07956ad8223797854ba88d176426a38f1",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "febda55747733e277d850f159db4bea07956ad8223797854ba88d176426a38f1"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        60,
+        10,
+        682,
+        476
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "heatmap-annotated",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "47a5a4b378e1b6144e1158cb582f8fff33b8e42a77681f4c3ab5bfb5a4341da3",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/heatmap-annotated.png",
+      "bytes": 75001,
+      "sha256": "44e58ee2fe6657cf66284a01c6e119b7ff79623783aac0b2b0aa040f1708a41a",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "44e58ee2fe6657cf66284a01c6e119b7ff79623783aac0b2b0aa040f1708a41a"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        127,
+        23,
+        1420,
+        992
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "network-attribute-mappings",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "39143fab507ae30c238b0daf2f916fce6edd8244101df881cbc044e840906b90",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/network-attribute-mappings.eps",
+      "bytes": 83857,
+      "sha256": "1f01fc4f66faf1ef39725132eaf23af769542282fd84ace42b5de94e0c75562b",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "1f01fc4f66faf1ef39725132eaf23af769542282fd84ace42b5de94e0c75562b"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        93,
+        10,
+        530,
+        488
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "network-attribute-mappings",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "39143fab507ae30c238b0daf2f916fce6edd8244101df881cbc044e840906b90",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/network-attribute-mappings.pdf",
+      "bytes": 70226,
+      "sha256": "62d454c6bbfce5886288d0df24964c35448ffc875f14ec59812e613de349453e",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "62d454c6bbfce5886288d0df24964c35448ffc875f14ec59812e613de349453e"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        93,
+        10,
+        529,
+        487
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "network-attribute-mappings",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "39143fab507ae30c238b0daf2f916fce6edd8244101df881cbc044e840906b90",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/network-attribute-mappings.png",
+      "bytes": 92023,
+      "sha256": "c6277d886c9485dd3f88a4e2c8eed968cb26e871544051fb8a8a213b58c42004",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "c6277d886c9485dd3f88a4e2c8eed968cb26e871544051fb8a8a213b58c42004"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        195,
+        22,
+        1102,
+        1015
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "network-labeled-loops",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "aeddde8d27b8797f17ebe0b889c1094d75419cec8d0f3702751213f8c83368a1",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/network-labeled-loops.eps",
+      "bytes": 87868,
+      "sha256": "5a92153ae38eea04224e4faed5498be94dcafbdb0dba95d237b0aa3a8051892c",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "5a92153ae38eea04224e4faed5498be94dcafbdb0dba95d237b0aa3a8051892c"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        93,
+        10,
+        530,
+        473
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "network-labeled-loops",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "aeddde8d27b8797f17ebe0b889c1094d75419cec8d0f3702751213f8c83368a1",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/network-labeled-loops.pdf",
+      "bytes": 66528,
+      "sha256": "f4f70e143b340527192892ee15d93b175783f07e8acfe241e3e5f89d69b7a9e1",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "f4f70e143b340527192892ee15d93b175783f07e8acfe241e3e5f89d69b7a9e1"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        93,
+        10,
+        529,
+        472
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "network-labeled-loops",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "aeddde8d27b8797f17ebe0b889c1094d75419cec8d0f3702751213f8c83368a1",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/network-labeled-loops.png",
+      "bytes": 96435,
+      "sha256": "45f3c7ebb6fa2edb3bea9e38c06e9bfd3ef15be5f14616ced24184d86a84dbb6",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "45f3c7ebb6fa2edb3bea9e38c06e9bfd3ef15be5f14616ced24184d86a84dbb6"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        195,
+        22,
+        1104,
+        984
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "sankey-gradient",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "dbaa8845cc210c316e9436fa9509bc91ed66e490fc58cbb1664c0f2048426ece",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/sankey-gradient.eps",
+      "bytes": 84937,
+      "sha256": "541ba614d4ceff3a9d239bf338c9e61efa12860e36abf3050a02744a60d31bad",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "541ba614d4ceff3a9d239bf338c9e61efa12860e36abf3050a02744a60d31bad"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        29,
+        10,
+        691,
+        471
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "sankey-gradient",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "dbaa8845cc210c316e9436fa9509bc91ed66e490fc58cbb1664c0f2048426ece",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/sankey-gradient.pdf",
+      "bytes": 79644,
+      "sha256": "a8a426bdb6f72c2deb9444af6ef5cb76ceedf56fb9a06c1d22a1fcc46b528fc5",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "a8a426bdb6f72c2deb9444af6ef5cb76ceedf56fb9a06c1d22a1fcc46b528fc5"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        30,
+        10,
+        691,
+        470
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "sankey-gradient",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "dbaa8845cc210c316e9436fa9509bc91ed66e490fc58cbb1664c0f2048426ece",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/sankey-gradient.png",
+      "bytes": 65849,
+      "sha256": "93d6ec0d52f4f64e8e22fd02515b0a7fc49c744f3d18fd492c3d1b2745a6e811",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "93d6ec0d52f4f64e8e22fd02515b0a7fc49c744f3d18fd492c3d1b2745a6e811"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        62,
+        23,
+        1438,
+        981
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "synteny-reordered",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "a763f75e051c9b5ce4f2030642dce0023af7a1f6124335e1aae7ed943ec01e0b",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/synteny-reordered.eps",
+      "bytes": 77267,
+      "sha256": "9654d3535fa105736d2c6482ad62c8bbde60086bd921608c319542fcbacf4beb",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "9654d3535fa105736d2c6482ad62c8bbde60086bd921608c319542fcbacf4beb"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        97,
+        10,
+        606,
+        472
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "synteny-reordered",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "a763f75e051c9b5ce4f2030642dce0023af7a1f6124335e1aae7ed943ec01e0b",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/synteny-reordered.pdf",
+      "bytes": 67625,
+      "sha256": "9d80746019d826164f4ad13cdf0cbfa077f9e41f5f0333dcb78d1d72b2384454",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "9d80746019d826164f4ad13cdf0cbfa077f9e41f5f0333dcb78d1d72b2384454"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        98,
+        10,
+        606,
+        471
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "synteny-reordered",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "a763f75e051c9b5ce4f2030642dce0023af7a1f6124335e1aae7ed943ec01e0b",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/synteny-reordered.png",
+      "bytes": 72441,
+      "sha256": "99f9746166d15761d7299ecdfe32bc6e82fd5e73d02e3c334317a4f7c3815285",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "99f9746166d15761d7299ecdfe32bc6e82fd5e73d02e3c334317a4f7c3815285"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        203,
+        23,
+        1262,
+        982
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "venn-dragged-label",
+      "format": "eps",
+      "params": {
+        "format": "eps",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "c6787a368fa85e97a1294448212a381aa006e0157eba6533fe4bc923f6eec4b9",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/venn-dragged-label.eps",
+      "bytes": 122725,
+      "sha256": "0bc926a357b7d204f204dc1cd01c24e5d180e5d45fdc68ba5bfe7e40c8b25a46",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "eps",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "0bc926a357b7d204f204dc1cd01c24e5d180e5d45fdc68ba5bfe7e40c8b25a46"
+      },
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ],
+      "decoder": "Ghostscript",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        90,
+        10,
+        658,
+        466
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "venn-dragged-label",
+      "format": "pdf",
+      "params": {
+        "format": "pdf",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "c6787a368fa85e97a1294448212a381aa006e0157eba6533fe4bc923f6eec4b9",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/venn-dragged-label.pdf",
+      "bytes": 72989,
+      "sha256": "64a7939a5abe75a5e43ca43ea03fc0504f6adbb5ee0b00aa2696ed3d88907e4e",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "pdf",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "64a7939a5abe75a5e43ca43ea03fc0504f6adbb5ee0b00aa2696ed3d88907e4e"
+      },
+      "diagnostics": [],
+      "decoder": "Poppler",
+      "opened": true,
+      "rasterSize": [
+        720,
+        510
+      ],
+      "inkBounds": [
+        90,
+        10,
+        658,
+        466
+      ],
+      "touchesPageEdge": false
+    },
+    {
+      "template": "venn-dragged-label",
+      "format": "png",
+      "params": {
+        "format": "png",
+        "dpi": 150,
+        "outline": false
+      },
+      "sourceSha256": "c6787a368fa85e97a1294448212a381aa006e0157eba6533fe4bc923f6eec4b9",
+      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/advanced-exports/venn-dragged-label.png",
+      "bytes": 127365,
+      "sha256": "acc7e622c629f4a87931a1f32702bb157f1ae6d325f01b075c0320d268bde3a7",
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 680.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "acc7e622c629f4a87931a1f32702bb157f1ae6d325f01b075c0320d268bde3a7"
+      },
+      "diagnostics": [],
+      "decoder": "Pillow",
+      "opened": true,
+      "rasterSize": [
+        1500,
+        1063
+      ],
+      "inkBounds": [
+        189,
+        22,
+        1370,
+        971
+      ],
+      "touchesPageEdge": false
+    }
+  ],
+  "failures": []
+}

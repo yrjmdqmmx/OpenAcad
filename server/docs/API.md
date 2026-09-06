@@ -31,7 +31,7 @@
 ### descriptive / density / tests
 
 - `descriptive`：单宽表，允许null。返回 `columns:[{name,n,missing,mean,sd,se,min,q1,median,q3,max,lowerWhisker,upperWhisker,outliers:number[]}]`，SD为样本SD，单点为null；IQR规则1.5，四分位type7。
-- `density`：同表。params `points`默认256(32..2048)、`bandwidth`默认`scott`，可`silverman`或正数；`trim`默认true、`bins`默认30。返回 `columns:[{name,x:number[],density:number[],bandwidthFactor,histogram:{counts,edges}}],kernel:"gaussian"`。常量列拒绝估计KDE。
+- `density`：同表。params `points`默认512(32..2048)、`bandwidth`默认`scott`，可`silverman`或正数（SciPy factor）；`bandwidthMultiplier`默认1，按每列样本量计算基础factor后相乘。实际核宽h=样本SD(ddof1)×有效factor。`trim`默认true时网格为[min,max]；false为[min−3×总体SD,max+3×总体SD]，扩域SD使用ddof0；两端点均包含。`bins`默认30。返回 `columns:[{name,x:number[],density:number[],bandwidthFactor,baseBandwidthFactor,bandwidthMultiplier,bandwidthAbsolute,histogram:{counts,edges}}],kernel:"gaussian"`。bandwidthAbsolute为实际h。单值样本或常量列拒绝估计KDE。
 - `tests`：单宽表，每个数值列是一组；第一列样本/配对ID。同一行即同一配对；独立组可用null补齐。params `test=ttest_ind|ttest_rel|wilcoxon_ind|wilcoxon_rel|wilcoxon_rank_sum|anova`，默认ttest_ind；`comparisons=all|first`默认all；`alternative=two-sided|less|greater`默认two-sided；`equalVariance`默认false，仅独立t；`pAdjust`。返回 `comparisons:[{left,right,nLeft,nRight,statistic,p,adjustedP,meanDifference}],test,pAdjust,alternative`。ANOVA为单项 `{groups,statistic,p}`。wilcoxon_ind=Mann–Whitney渐近/连续性校正；wilcoxon_rel=符号秩渐近/校正；wilcoxon_rank_sum=ranksums正态近似，遇并列值要求改Mann–Whitney。配对缺失不一致报错。
 
 ### standardize / distance / cluster / pca

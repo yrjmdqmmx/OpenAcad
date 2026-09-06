@@ -25,6 +25,8 @@ COPY r/renv.lock /app/r/renv.lock
 COPY fonts /usr/local/share/fonts/openacad
 RUN printf '%s\n' '<?xml version="1.0"?>' '<!DOCTYPE fontconfig SYSTEM "fonts.dtd">' '<fontconfig><selectfont><rejectfont><glob>/usr/share/fonts/opentype/noto/*</glob></rejectfont></selectfont></fontconfig>' > /etc/fonts/conf.d/99-openacad-fonts.conf && fc-cache -f
 COPY tests /app/tests
+COPY requirements-test.lock /app/requirements-test.lock
+RUN pip install --no-cache-dir -r requirements-test.lock
 RUN useradd --uid 10001 --no-create-home --shell /usr/sbin/nologin openacad
 USER 10001:10001
 RUN python -m pytest -q -p no:cacheprovider

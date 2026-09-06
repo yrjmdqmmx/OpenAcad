@@ -6,6 +6,7 @@ from rq import Queue, get_current_job
 from rq.serializers import JSONSerializer
 from .analysis import run_analysis
 from .errors import AnalysisError
+from .job_state import CapabilityJob
 
 
 def connection():
@@ -13,7 +14,7 @@ def connection():
 
 
 def queue(conn=None):
-    return Queue("openacad", connection=conn if conn is not None else connection(), serializer=JSONSerializer)
+    return Queue("openacad", connection=conn if conn is not None else connection(), serializer=JSONSerializer, job_class=CapabilityJob)
 
 
 def execute(payload):

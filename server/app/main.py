@@ -11,11 +11,13 @@ from fastapi.responses import JSONResponse
 from redis.exceptions import RedisError
 from rq import Worker
 from rq.command import send_stop_job_command
-from rq.exceptions import NoSuchJobError
+from rq.exceptions import NoSuchJobError, InvalidJobOperation
 from rq.job import Job
 from rq.serializers import JSONSerializer
+from rq.results import Result
 from .jobs import connection, queue, digest
 from .models import JobRequest
+from .worker_health import fresh_workers
 
 app = FastAPI(title="OpenAcad 开放学术", version="1.0.0", docs_url=None, redoc_url=None)
 TTL = int(os.getenv("JOB_TTL_SECONDS", "3600"))
@@ -54,7 +56,7 @@ def health():
     try:
         conn = connection()
         conn.ping()
-        workers = Worker.all(connection=conn, queue=queue(conn))
+        workers = fresh_workers(conn)
         ready = len(workers) > 0
         return JSONResponse(status_code=200 if ready else 503, content={"status": "ok" if ready else "degraded", "queue": True, "workers": len(workers), "message": "服务正常" if ready else "计算进程尚未就绪"})
     except RedisError:
@@ -125,12 +127,23 @@ def status(job_id: str, request: Request):
 @app.delete("/api/jobs/{job_id}")
 def remove(job_id: str, request: Request):
     conn, job, meta = authorized(job_id, request)
-    if job.get_status(refresh=True).value == "started":
+    was_running = job.get_status(refresh=True).value == "started"
+    # Revoke first: any concurrent worker persistence must honor this deletion.
+    conn.delete(f"openacad:cap:{job_id}")
+    if was_running:
         try:
             send_stop_job_command(conn, job_id)
         except Exception:
             pass  # Capability and persisted input/result are still revoked immediately.
-    job.cancel()
-    job.delete()
-    conn.delete(f"openacad:cap:{job_id}")
+    try:
+        job.cancel()
+        job.delete()
+    except InvalidJobOperation:
+        pass  # A concurrent worker may already have removed this revoked job.
+    with conn.pipeline() as pipe:
+        pipe.delete(job.key, job.dependents_key, job.dependencies_key, Result.get_key(job_id))
+        pipe.lrem(queue(conn).key, 0, job_id)
+        for registry in ("failed", "finished", "canceled"):
+            pipe.zrem(f"rq:{registry}:{job.origin}", job_id)
+        pipe.execute()
     return {"id": job_id, "status": "canceled"}

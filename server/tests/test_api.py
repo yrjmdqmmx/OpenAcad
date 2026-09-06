@@ -2,6 +2,7 @@ import fakeredis
 from fastapi.testclient import TestClient
 from rq import SimpleWorker
 from rq.serializers import JSONSerializer
+from rq.results import Result
 from app import main
 from app.jobs import queue
 from test_analysis import payload
@@ -23,8 +24,10 @@ def test_capability_lifecycle(monkeypatch):
     r = client.get(path, headers=auth).json()
     assert r["status"] == "finished" and r["result"]["data"]["scores"]
     assert "token" not in r and task["token"].encode() not in conn.get("openacad:cap:"+task["id"])
+    assert conn.exists(Result.get_key(task["id"]))
     assert client.delete(path, headers=auth).status_code == 200
     assert client.get(path, headers=auth).status_code == 404
+    assert not conn.exists(Result.get_key(task["id"]))
 
 
 def test_schema_chinese_errors():
