@@ -1,0 +1,36 @@
+{
+  "sourceRevision": "27d1b194fc896e0b7e2977e1688ee94c337ef999",
+  "ciRun": 34052400211,
+  "ciBrowserStats": {
+    "expected": 80,
+    "unexpected": 1,
+    "skipped": 223
+  },
+  "localBrowser": "macOS WebKit",
+  "stats": {
+    "startTime": "2026-09-06T18:48:47.634Z",
+    "duration": 1988.9070000000002,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "images": [
+    {
+      "file": "tests/artifacts/font-webkit-matrix-before/sans-400-0-normal.png",
+      "sha256": "5ab044a4eb4cabbf6a0c3734496885cbd44318c711ade8e93d87f215b945580b"
+    },
+    {
+      "file": "tests/artifacts/font-webkit-matrix-before/sans-400-1-italic.png",
+      "sha256": "5ab044a4eb4cabbf6a0c3734496885cbd44318c711ade8e93d87f215b945580b"
+    },
+    {
+      "file": "tests/artifacts/font-webkit-matrix-before/sans-400-2-normal.png",
+      "sha256": "5ab044a4eb4cabbf6a0c3734496885cbd44318c711ade8e93d87f215b945580b"
+    },
+    {
+      "file": "tests/artifacts/font-webkit-matrix-before/screenshot.png",
+      "sha256": "7a56660b1a1f60699055a0e2b6306c6b510b84df0c8740a7bca916e798d4fedc"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "browser": "chromium",
+    "status": "passed",
+    "combinations": 4,
+    "states": 12,
+    "minimumDarkPixels": 1018,
+    "minimumHorizontalInkCoverage": 0.8524590163934426
+  },
+  {
+    "browser": "firefox",
+    "status": "passed",
+    "combinations": 4,
+    "states": 12,
+    "minimumDarkPixels": 419,
+    "minimumHorizontalInkCoverage": 0.7833333333333333
+  },
+  {
+    "browser": "webkit",
+    "status": "passed",
+    "combinations": 4,
+    "states": 12,
+    "minimumDarkPixels": 2123,
+    "minimumHorizontalInkCoverage": 0.8039772727272727
+  }
+]

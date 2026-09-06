@@ -1,0 +1,12 @@
+{
+  "sourceRevision": "27d1b194fc896e0b7e2977e1688ee94c337ef999",
+  "runId": 34052400211,
+  "conclusion": "failure",
+  "reason": "WebKit typography screenshot cropped empty region; see tests/artifacts/font-webkit-matrix-before",
+  "frontendUnitPassed": 311,
+  "backendPassed": 186,
+  "browserPassed": 80,
+  "browserSkipped": 223,
+  "browserFailed": 1,
+  "deployed": false
+}

@@ -1,0 +1,226 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/node_modules/.bin/playwright",
+      "test",
+      "e2e/typography.spec.ts",
+      "--project=webkit",
+      "--workers=1",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/playwright.config.ts",
+    "rootDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://127.0.0.1:5178",
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "typography.spec.ts",
+      "file": "typography.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "中文斜体实际改变字形像素，关闭后恢复原图",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1331,
+                  "error": {
+                    "message": "Error: Noto Sans SC 400 斜体应真实改变字形像素\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"5ab044a4eb4cabbf6a0c3734496885cbd44318c711ade8e93d87f215b945580b\"\u001b[39m",
+                    "stack": "Error: Noto Sans SC 400 斜体应真实改变字形像素\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"5ab044a4eb4cabbf6a0c3734496885cbd44318c711ade8e93d87f215b945580b\"\u001b[39m\n    at /Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/typography.spec.ts:50:71",
+                    "location": {
+                      "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/typography.spec.ts",
+                      "column": 71,
+                      "line": 50
+                    },
+                    "snippet": "  48 |         states.push({ italic, face, screenshot: name, sha256: createHash(\"sha256\").update(png).digest(\"hex\") });\n  49 |       }\n> 50 |       expect(states[1].sha256, `${family} ${weight} 斜体应真实改变字形像素`).not.toBe(states[0].sha256);\n     |                                                                       ^\n  51 |       expect(states[2].sha256, \"关闭斜体应恢复完全相同的像素\").toBe(states[0].sha256);\n  52 |       report.push({ family, weight, states });\n  53 |     }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/typography.spec.ts",
+                        "column": 71,
+                        "line": 50
+                      },
+                      "message": "Error: Noto Sans SC 400 斜体应真实改变字形像素\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"5ab044a4eb4cabbf6a0c3734496885cbd44318c711ade8e93d87f215b945580b\"\u001b[39m\n\n  48 |         states.push({ italic, face, screenshot: name, sha256: createHash(\"sha256\").update(png).digest(\"hex\") });\n  49 |       }\n> 50 |       expect(states[1].sha256, `${family} ${weight} 斜体应真实改变字形像素`).not.toBe(states[0].sha256);\n     |                                                                       ^\n  51 |       expect(states[2].sha256, \"关闭斜体应恢复完全相同的像素\").toBe(states[0].sha256);\n  52 |       report.push({ family, weight, states });\n  53 |     }\n    at /Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/typography.spec.ts:50:71"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-06T18:48:47.813Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "sans-400-0-normal",
+                      "contentType": "image/png",
+                      "body": "iVBORw0KGgoAAAANSUhEUgAAAV4AAABYCAYAAAC9BZ+zAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABXqADAAQAAAABAAAAWAAAAACv5kn5AAADmklEQVR4Ae3d3UpqARSF0W1E0c/7v2cXVm41S8NHcE1hDuHcntUaa/OxkaDN9ms9LT4ECBAgMCbwMDbJIAIECBC4CAivB4EAAQLDAsI7DG4cAQIEhNczQIAAgWEB4R0GN44AAQLC6xkgQIDAsIDwDoMbR4AAAeH1DBAgQGBYQHiHwY0jQICA8HoGCBAgMCwgvMPgxhEgQEB4PQMECBAYFhDeYXDjCBAgILyeAQIECAwLCO8wuHEECBAQXs8AAQIEhgWEdxjcOAIECDymCU6n/z+AsT8cl+33uuz2++V4/Fn8WYz0ZcwnQOBWAncR3o/t1yW6t1rS/0uAAIF7EoiF9/yme/739vK0vL8+35OJn4UAAQI3FYh+x3t+0/UhQIBAm8D4G+/1O911f/D1QtvTZl8CBC4CsTfez93qBAQIEKgUiIV39/fG60OAAIFGgVh4z78y5kOAAIFGgVh4r7+nu9lsGt3tTIBAsUAsvMXmVidAoFwg9lsN5e7WJ0CgWMAbb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZAeHNuJtKgECxgPAWH9/qBAhkBIQ3424qAQLFAsJbfHyrEyCQERDejLupBAgUCwhv8fGtToBARkB4M+6mEiBQLCC8xce3OgECGQHhzbibSoBAsYDwFh/f6gQIZASEN+NuKgECxQLCW3x8qxMgkBEQ3oy7qQQIFAsIb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZAeHNuJtKgECxgPAWH9/qBAhkBIQ3424qAQLFAsJbfHyrEyCQERDejLupBAgUCwhv8fGtToBARkB4M+6mEiBQLCC8xce3OgECGQHhzbibSoBAsYDwFh/f6gQIZASEN+NuKgECxQLCW3x8qxMgkBEQ3oy7qQQIFAsIb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZgV95qTvR1LPIqgAAAABJRU5ErkJggg=="
+                    },
+                    {
+                      "name": "sans-400-1-italic",
+                      "contentType": "image/png",
+                      "body": "iVBORw0KGgoAAAANSUhEUgAAAV4AAABYCAYAAAC9BZ+zAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABXqADAAQAAAABAAAAWAAAAACv5kn5AAADmklEQVR4Ae3d3UpqARSF0W1E0c/7v2cXVm41S8NHcE1hDuHcntUaa/OxkaDN9ms9LT4ECBAgMCbwMDbJIAIECBC4CAivB4EAAQLDAsI7DG4cAQIEhNczQIAAgWEB4R0GN44AAQLC6xkgQIDAsIDwDoMbR4AAAeH1DBAgQGBYQHiHwY0jQICA8HoGCBAgMCwgvMPgxhEgQEB4PQMECBAYFhDeYXDjCBAgILyeAQIECAwLCO8wuHEECBAQXs8AAQIEhgWEdxjcOAIECDymCU6n/z+AsT8cl+33uuz2++V4/Fn8WYz0ZcwnQOBWAncR3o/t1yW6t1rS/0uAAIF7EoiF9/yme/739vK0vL8+35OJn4UAAQI3FYh+x3t+0/UhQIBAm8D4G+/1O911f/D1QtvTZl8CBC4CsTfez93qBAQIEKgUiIV39/fG60OAAIFGgVh4z78y5kOAAIFGgVh4r7+nu9lsGt3tTIBAsUAsvMXmVidAoFwg9lsN5e7WJ0CgWMAbb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZAeHNuJtKgECxgPAWH9/qBAhkBIQ3424qAQLFAsJbfHyrEyCQERDejLupBAgUCwhv8fGtToBARkB4M+6mEiBQLCC8xce3OgECGQHhzbibSoBAsYDwFh/f6gQIZASEN+NuKgECxQLCW3x8qxMgkBEQ3oy7qQQIFAsIb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZAeHNuJtKgECxgPAWH9/qBAhkBIQ3424qAQLFAsJbfHyrEyCQERDejLupBAgUCwhv8fGtToBARkB4M+6mEiBQLCC8xce3OgECGQHhzbibSoBAsYDwFh/f6gQIZASEN+NuKgECxQLCW3x8qxMgkBEQ3oy7qQQIFAsIb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZgV95qTvR1LPIqgAAAABJRU5ErkJggg=="
+                    },
+                    {
+                      "name": "sans-400-2-normal",
+                      "contentType": "image/png",
+                      "body": "iVBORw0KGgoAAAANSUhEUgAAAV4AAABYCAYAAAC9BZ+zAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAABXqADAAQAAAABAAAAWAAAAACv5kn5AAADmklEQVR4Ae3d3UpqARSF0W1E0c/7v2cXVm41S8NHcE1hDuHcntUaa/OxkaDN9ms9LT4ECBAgMCbwMDbJIAIECBC4CAivB4EAAQLDAsI7DG4cAQIEhNczQIAAgWEB4R0GN44AAQLC6xkgQIDAsIDwDoMbR4AAAeH1DBAgQGBYQHiHwY0jQICA8HoGCBAgMCwgvMPgxhEgQEB4PQMECBAYFhDeYXDjCBAgILyeAQIECAwLCO8wuHEECBAQXs8AAQIEhgWEdxjcOAIECDymCU6n/z+AsT8cl+33uuz2++V4/Fn8WYz0ZcwnQOBWAncR3o/t1yW6t1rS/0uAAIF7EoiF9/yme/739vK0vL8+35OJn4UAAQI3FYh+x3t+0/UhQIBAm8D4G+/1O911f/D1QtvTZl8CBC4CsTfez93qBAQIEKgUiIV39/fG60OAAIFGgVh4z78y5kOAAIFGgVh4r7+nu9lsGt3tTIBAsUAsvMXmVidAoFwg9lsN5e7WJ0CgWMAbb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZAeHNuJtKgECxgPAWH9/qBAhkBIQ3424qAQLFAsJbfHyrEyCQERDejLupBAgUCwhv8fGtToBARkB4M+6mEiBQLCC8xce3OgECGQHhzbibSoBAsYDwFh/f6gQIZASEN+NuKgECxQLCW3x8qxMgkBEQ3oy7qQQIFAsIb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZAeHNuJtKgECxgPAWH9/qBAhkBIQ3424qAQLFAsJbfHyrEyCQERDejLupBAgUCwhv8fGtToBARkB4M+6mEiBQLCC8xce3OgECGQHhzbibSoBAsYDwFh/f6gQIZASEN+NuKgECxQLCW3x8qxMgkBEQ3oy7qQQIFAsIb/HxrU6AQEZAeDPuphIgUCwgvMXHtzoBAhkB4c24m0qAQLGA8BYf3+oECGQEhDfjbioBAsUCwlt8fKsTIJAREN6Mu6kECBQLCG/x8a1OgEBGQHgz7qYSIFAsILzFx7c6AQIZgV95qTvR1LPIqgAAAABJRU5ErkJggg=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/test-results/typography-中文斜体实际改变字形像素，关闭后恢复原图-webkit/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/test-results/typography-中文斜体实际改变字形像素，关闭后恢复原图-webkit/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/test-results/typography-中文斜体实际改变字形像素，关闭后恢复原图-webkit/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/typography.spec.ts",
+                    "column": 71,
+                    "line": 50
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "34f7375f007ea02a2901-7971df69c0dcfc5615a9",
+          "file": "typography.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-06T18:48:47.634Z",
+    "duration": 1988.9070000000002,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
