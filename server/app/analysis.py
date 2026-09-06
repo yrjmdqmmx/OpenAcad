@@ -259,6 +259,7 @@ def matrix_operation(payload):
     out = {"diagnostics": diagnostics, "distance": metric, "values": x, "rowLabels": ids, "columnLabels": names}
     for current in (("row", "column") if axis == "both" else (axis,)):
         values, labels = (x, ids) if current == "row" else (x.T, names)
+        require(len(values) >= 2, "计算行距离至少需要两个样本" if current == "row" else "计算列距离至少需要两个数值列")
         d = distances(values, metric, power)
         part = {"labels": labels, "distances": d}
         if method == "cluster":

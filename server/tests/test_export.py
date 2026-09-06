@@ -1,6 +1,7 @@
 import base64
 import shutil
 import struct
+from pathlib import Path
 import pytest
 from app.export import sanitize, render
 from app.errors import AnalysisError
@@ -46,3 +47,13 @@ def test_png_print_resolution(dpi, pixels):
     r = render({"method":"render", "data":{"svg": SVG}, "params":{"format":"png", "dpi":dpi, "width":320, "height":240}})
     actual = base64.b64decode(r["artifact"]["contentBase64"])
     assert struct.unpack(">II", actual[16:24]) == pixels
+
+
+@pytest.mark.skipif(shutil.which("inkscape") is None, reason="需要 Inkscape 集成镜像")
+@pytest.mark.parametrize("chart", ["map", "network", "genome-circos"])
+@pytest.mark.parametrize("fmt", ["png", "pdf", "eps"])
+def test_real_template_exports(chart, fmt):
+    source = (Path(__file__).parent / "fixtures" / f"{chart}.svg").read_text()
+    result = render({"method":"render", "data":{"svg":source}, "params":{"format":fmt, "dpi":150, "outline":True}})
+    content = base64.b64decode(result["artifact"]["contentBase64"])
+    assert len(content) > 1000

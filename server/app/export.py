@@ -151,4 +151,5 @@ def render(payload):
             require(content.startswith(b"%PDF-" if fmt == "pdf" else b"%!PS-Adobe"), "导出文件格式不正确", "EXPORT_FAILED")
         version, _ = run_process([binary, "--version"], timeout=10)
     name = re.sub(r"[^\w\u4e00-\u9fff .-]", "_", str(params.get("filename", "OpenAcad图表")))[:100].strip(" .") or "OpenAcad图表"
+    name = name.encode("utf-8")[:180].decode("utf-8", errors="ignore").strip(" .") or "OpenAcad图表"
     return {"schemaVersion": 1, "method": "render", "data": {}, "artifact": {"filename": f"{name}.{fmt}", "mimeType": MIMES[fmt], "contentBase64": base64.b64encode(content).decode()}, "provenance": {"engine": version.strip(), "format": fmt, "dpi": dpi, "width": width, "height": height, "outline": params.get("outline", False), "sha256": hashlib.sha256(content).hexdigest()}, "diagnostics": diagnostics}

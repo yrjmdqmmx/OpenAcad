@@ -9,7 +9,7 @@ need <- function(test,message) if(!isTRUE(test)) fail(message)
 diagnostics <- list()
 record <- function(code,message) diagnostics[[length(diagnostics)+1]] <<- list(code=code,message=message)
 mat <- function(t) { a<-do.call(rbind,lapply(t$values,unlist)); storage.mode(a)<-"double"; rownames(a)<-unlist(t$rowLabels); colnames(a)<-unlist(t$columnLabels); a }
-find_table <- function(role) { ts<-Filter(function(t)identical(t$role,role),req$tables); need(length(ts)==1,paste0("需要一份角色为 ",role," 的数据表")); ts[[1]] }
+find_table <- function(role) { ts<-Filter(function(t)identical(t$role,role),req$tables); label<-switch(role,response="响应矩阵",environment="环境矩阵",control="独立控制矩阵（control）",community="群落矩阵",role); need(length(ts)==1,paste0("需要且只能提供一份",label)); ts[[1]] }
 align_matrix <- function(a,ids) { need(setequal(rownames(a),ids),"数据表的样本 ID 不一致"); a[ids,,drop=FALSE] }
 ecology_methods <- c("bray","manhattan","euclidean","canberra","clark","kulczynski","jaccard","gower","altGower","morisita","horn","mountford","raup","binomial","chao","cao","mahalanobis","chisq","chord","hellinger","aitchison")
 eco_dist <- function(a,method) {
@@ -118,7 +118,11 @@ result <- tryCatch(withCallingHandlers({
     for(i in seq_along(edges)) edges[[i]]$adjustedP<-q[i]
     list(edges=edges,method=method,permutations=permutations,seed=param("seed",1),alternative="greater")
   } else fail("未知 R 分析方法","UNKNOWN_METHOD")
-},warning=function(w) { record("R_WARNING","计算产生方法学提示，请检查样本数量、秩与拟合稳定性");invokeRestart("muffleWarning") }),error=function(e) {
+},warning=function(w) {
+  raw<-conditionMessage(w)
+  message<-if(grepl("stress.*(nearly|close)|stress is zero",raw,ignore.case=TRUE)) "NMDS stress 接近零，可能因数据点不足或距离关系过于简单；请结合样本数量解释" else if(grepl("span too small|pseudoinverse|near singular",raw,ignore.case=TRUE)) "局部拟合接近奇异，请增大 LOESS 平滑跨度或增加不同 x 的观测" else if(grepl("essentially perfect fit",raw,ignore.case=TRUE)) "数据几乎完全符合回归模型，误差与置信区间估计可能不稳定" else if(grepl("not converg",raw,ignore.case=TRUE)) "模型未充分收敛，请检查数据并调整拟合参数" else "计算产生方法学提示，请检查样本数量、秩与拟合稳定性"
+  record("R_WARNING",message);invokeRestart("muffleWarning")
+}),error=function(e) {
   list(error=list(code=if(inherits(e,"openacad_error")) attr(e,"code") else "STATISTICAL_ERROR",message=if(inherits(e,"openacad_error")) conditionMessage(e) else "统计计算未完成，请检查数据的样本数量、方差、秩及方法适用条件"))
 })
 if(is.null(result$error)) {
