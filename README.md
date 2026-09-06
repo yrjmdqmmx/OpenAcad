@@ -1,9 +1,14 @@
 # OpenAcad 开放学术
 
-中文科研绘图与统计工作台。无需登录，可编辑模板、保存本机草稿和可继续编辑的项目。
+中文科研绘图与统计工作台：55个可编辑模板，直接试用模拟数据、替换自己的数据、调整样式并下载图片或可继续编辑的项目。无需登录。
 
-本仓库按已经批准的 V1 范围分批开发。首批上线不代表全量 V1 完成；实际状态以 `docs/STATUS.md` 与验收记录为准。
+- `web/`：React、TypeScript、D3/SVG；CSV/TSV/Excel、专业文件、IndexedDB草稿。
+- `server/`：FastAPI、RQ、Redis、固定版本Python/R统计和Inkscape导出。
+- [逐图研究](docs/research/README.md)：52个ChiPlot原站入口、54张卡和29×3树图层矩阵，明确区分代码、文档和操作证据。
+- [验收索引](docs/acceptance/README.md)：逐模板输入、样式、图片和项目证据。
+- [部署、更新与恢复](docs/deployment/README.md)。
+- [当前交付状态与限制](docs/STATUS.md)。
 
-工程结构：`web` 为 React/TypeScript/D3；`server` 为 FastAPI/RQ/Python/R；`deploy` 为独立部署配置；`docs/research` 为逐图研究。
+开发：`npm --prefix web ci`，`npm --prefix web run dev`；网页默认127.0.0.1:5178，本地API代理127.0.0.1:18082。构建与检查：`npm --prefix web run build`、`npm --prefix web test`，浏览器检查在web目录运行`npm run test:browser`。真实服务联测设置`OPENACAD_LIVE_API=1`。统计环境见server/README.md。
 
-版权所有。独立私有源码；第三方组件遵循各自许可。模板自制模拟数据单独标明。
+模板和示例独立制作；模拟数据采用CC0并明确标注。第三方数据及字体许可见[数据来源](DATA-SOURCES.md)。源码为独立私有仓库，依赖遵循各自许可。没有将ChiPlot源代码、预览图或研究示例作为本站生产模板。

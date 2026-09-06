@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "id": "7cd8614f-e3c7-4734-8b27-90a320496993",
+  "name": "环形进化树工作台 · 模拟数据",
+  "templateId": "tree-circle",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:48:48.861Z",
+  "updatedAt": "2026-09-06T13:48:53.266Z",
+  "dataset": {
+    "tables": [],
+    "text": "((拟南芥:0.22,油菜:0.31)十字花科:0.28,(水稻:0.38,(玉米:0.18,小麦:0.24)禾本组:0.15)禾本科:0.21,(大豆:0.29,豌豆:0.35)豆科:0.33)植物;",
+    "format": "newick"
+  },
+  "mapping": {},
+  "style": {
+    "width": 900,
+    "height": 900,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 82,
+    "marginRight": 48,
+    "marginBottom": 105,
+    "marginLeft": 95,
+    "title": "植物亲缘关系 · 环形树",
+    "subtitle": "自行生成的模拟树 · 不代表真实系统发育结论",
+    "fontFamily": "Noto Sans SC",
+    "fontSize": 14,
+    "titleSize": 24,
+    "textColor": "#263445",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#587ab8",
+      "#b78bc1",
+      "#b9ac62",
+      "#76b7bc"
+    ],
+    "opacity": 0.9,
+    "showLegend": false,
+    "showGrid": true,
+    "showLabels": false,
+    "xTitle": "",
+    "yTitle": "数值",
+    "pointSize": 5,
+    "lineWidth": 1.7,
+    "orientation": "vertical",
+    "sort": "input",
+    "barPadding": 0.25,
+    "axisRotation": 0,
+    "curve": "linear",
+    "errorType": "sd",
+    "errorInput": "raw",
+    "showPoints": true,
+    "showBox": true,
+    "distribution": "kde",
+    "bandwidthMultiplier": 1,
+    "normalize": false,
+    "treeLayout": "circle",
+    "treeWidth": 340,
+    "labelWidth": 130,
+    "leafSpacing": 28,
+    "useBranchLength": true,
+    "showNodes": true,
+    "nodeSize": 3,
+    "branchColor": "#536875",
+    "nodeColor": "#087f8c",
+    "showSupport": true,
+    "supportSize": 10,
+    "alignLabels": true,
+    "showScale": true,
+    "treeRotation": -90,
+    "angleRange": 360
+  },
+  "layers": [
+    {
+      "id": "2f14e380-62fe-4829-bb51-8392379aff43",
+      "type": "tree:box",
+      "name": "普通箱线",
+      "visible": true,
+      "settings": {
+        "width": 84,
+        "gap": 12,
+        "opacity": 0.88,
+        "color": "#087f8c",
+        "fontSize": 12,
+        "lineWidth": 1.6,
+        "pointSize": 5,
+        "title": "普通箱线",
+        "showTitle": true,
+        "normalize": false,
+        "inherit": false,
+        "showValues": false,
+        "cellPadding": 1
+      },
+      "data": {
+        "tables": [
+          {
+            "id": "annotation",
+            "name": "普通箱线示例",
+            "role": "annotation",
+            "columns": [
+              "nodeID",
+              "数值"
+            ],
+            "rows": [
+              [
+                "拟南芥",
+                15.73
+              ],
+              [
+                "拟南芥",
+                15.75
+              ],
+              [
+                "拟南芥",
+                19.15
+              ],
+              [
+                "拟南芥",
+                22.1
+              ],
+              [
+                "拟南芥",
+                21.35
+              ],
+              [
+                "拟南芥",
+                18.37
+              ],
+              [
+                "拟南芥",
+                17.46
+              ],
+              [
+                "拟南芥",
+                20.3
+              ],
+              [
+                "拟南芥",
+                23.78
+              ],
+              [
+                "拟南芥",
+                23.96
+              ],
+              [
+                "油菜",
+                17.12
+              ],
+              [
+                "油菜",
+                20.15
+              ],
+              [
+                "油菜",
+                23.5
+              ],
+              [
+                "油菜",
+                23.4
+              ],
+              [
+                "油菜",
+                20.5
+              ],
+              [
+                "油菜",
+                19
+              ],
+              [
+                "油菜",
+                21.33
+              ],
+              [
+                "油菜",
+                25.02
+              ],
+              [
+                "油菜",
+                25.88
+              ],
+              [
+                "油菜",
+                23.32
+              ],
+              [
+                "水稻",
+                21.16
+              ],
+              [
+                "水稻",
+                24.78
+              ],
+              [
+                "水稻",
+                25.36
+              ],
+              [
+                "水稻",
+                22.68
+              ],
+              [
+                "水稻",
+                20.66
+              ],
+              [
+                "水稻",
+                22.39
+              ],
+              [
+                "水稻",
+                26.18
+              ],
+              [
+                "水稻",
+                27.7
+              ],
+              [
+                "水稻",
+                25.52
+              ],
+              [
+                "水稻",
+                22.94
+              ],
+              [
+                "玉米",
+                25.97
+              ],
+              [
+                "玉米",
+                27.22
+              ],
+              [
+                "玉米",
+                24.87
+              ],
+              [
+                "玉米",
+                22.43
+              ],
+              [
+                "玉米",
+                23.52
+              ],
+              [
+                "玉米",
+                27.26
+              ],
+              [
+                "玉米",
+                29.39
+              ],
+              [
+                "玉米",
+                27.71
+              ],
+              [
+                "玉米",
+                24.86
+              ],
+              [
+                "玉米",
+                25
+              ],
+              [
+                "小麦",
+                28.97
+              ],
+              [
+                "小麦",
+                27.07
+              ],
+              [
+                "小麦",
+                24.32
+              ],
+              [
+                "小麦",
+                24.73
+              ],
+              [
+                "小麦",
+                28.29
+              ],
+              [
+                "小麦",
+                30.97
+              ],
+              [
+                "小麦",
+                29.86
+              ],
+              [
+                "小麦",
+                26.89
+              ],
+              [
+                "小麦",
+                26.35
+              ],
+              [
+                "小麦",
+                29.45
+              ],
+              [
+                "大豆",
+                29.24
+              ],
+              [
+                "大豆",
+                26.3
+              ],
+              [
+                "大豆",
+                26.04
+              ],
+              [
+                "大豆",
+                29.3
+              ],
+              [
+                "大豆",
+                32.43
+              ],
+              [
+                "大豆",
+                31.95
+              ],
+              [
+                "大豆",
+                28.98
+              ],
+              [
+                "大豆",
+                27.82
+              ],
+              [
+                "大豆",
+                30.46
+              ],
+              [
+                "大豆",
+                34.04
+              ],
+              [
+                "豌豆",
+                28.37
+              ],
+              [
+                "豌豆",
+                27.46
+              ],
+              [
+                "豌豆",
+                30.3
+              ],
+              [
+                "豌豆",
+                33.78
+              ],
+              [
+                "豌豆",
+                33.96
+              ],
+              [
+                "豌豆",
+                31.14
+              ],
+              [
+                "豌豆",
+                29.41
+              ],
+              [
+                "豌豆",
+                31.5
+              ],
+              [
+                "豌豆",
+                35.25
+              ],
+              [
+                "豌豆",
+                36.39
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": {}
+}

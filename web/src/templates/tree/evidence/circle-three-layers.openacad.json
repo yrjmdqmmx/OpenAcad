@@ -1,0 +1,582 @@
+{
+  "schemaVersion": 1,
+  "id": "a81dc767-2c73-48ed-8d0e-be7eacaf539d",
+  "name": "环形进化树工作台 · 模拟数据",
+  "templateId": "tree-circle",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:48:59.679Z",
+  "updatedAt": "2026-09-06T13:49:03.948Z",
+  "dataset": {
+    "tables": [],
+    "text": "((拟南芥:0.22,油菜:0.31)十字花科:0.28,(水稻:0.38,(玉米:0.18,小麦:0.24)禾本组:0.15)禾本科:0.21,(大豆:0.29,豌豆:0.35)豆科:0.33)植物;",
+    "format": "newick"
+  },
+  "mapping": {},
+  "style": {
+    "width": 900,
+    "height": 900,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 82,
+    "marginRight": 48,
+    "marginBottom": 105,
+    "marginLeft": 95,
+    "title": "植物亲缘关系 · 环形树",
+    "subtitle": "自行生成的模拟树 · 不代表真实系统发育结论",
+    "fontFamily": "Noto Serif CJK SC",
+    "fontSize": 14,
+    "titleSize": 24,
+    "textColor": "#263445",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#587ab8",
+      "#b78bc1",
+      "#b9ac62",
+      "#76b7bc"
+    ],
+    "opacity": 0.9,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": false,
+    "xTitle": "",
+    "yTitle": "数值",
+    "pointSize": 5,
+    "lineWidth": 1.7,
+    "orientation": "vertical",
+    "sort": "input",
+    "barPadding": 0.25,
+    "axisRotation": 0,
+    "curve": "linear",
+    "errorType": "sd",
+    "errorInput": "raw",
+    "showPoints": true,
+    "showBox": true,
+    "distribution": "kde",
+    "bandwidthMultiplier": 1,
+    "normalize": false,
+    "treeLayout": "circle",
+    "treeWidth": 340,
+    "labelWidth": 130,
+    "leafSpacing": 28,
+    "useBranchLength": true,
+    "showNodes": true,
+    "nodeSize": 3,
+    "branchColor": "#536875",
+    "nodeColor": "#087f8c",
+    "showSupport": true,
+    "supportSize": 10,
+    "alignLabels": true,
+    "showScale": true,
+    "treeRotation": -90,
+    "angleRange": 360
+  },
+  "layers": [
+    {
+      "id": "140bee9b-278d-4626-a90a-fa297c5cce7b",
+      "type": "tree:leaf-pie",
+      "name": "叶侧饼图",
+      "visible": true,
+      "settings": {
+        "width": 84,
+        "gap": 12,
+        "opacity": 0.88,
+        "color": "#087f8c",
+        "fontSize": 12,
+        "lineWidth": 1.6,
+        "pointSize": 5,
+        "title": "叶侧饼图",
+        "showTitle": true,
+        "normalize": false,
+        "inherit": false,
+        "showValues": false,
+        "cellPadding": 1
+      },
+      "data": {
+        "tables": [
+          {
+            "id": "annotation",
+            "name": "叶侧饼图示例",
+            "role": "annotation",
+            "columns": [
+              "nodeID",
+              "系列",
+              "数值"
+            ],
+            "rows": [
+              [
+                "拟南芥",
+                "功能甲",
+                3
+              ],
+              [
+                "拟南芥",
+                "功能乙",
+                6
+              ],
+              [
+                "拟南芥",
+                "功能丙",
+                9
+              ],
+              [
+                "油菜",
+                "功能甲",
+                4
+              ],
+              [
+                "油菜",
+                "功能乙",
+                7
+              ],
+              [
+                "油菜",
+                "功能丙",
+                10
+              ],
+              [
+                "水稻",
+                "功能甲",
+                5
+              ],
+              [
+                "水稻",
+                "功能乙",
+                8
+              ],
+              [
+                "水稻",
+                "功能丙",
+                11
+              ],
+              [
+                "玉米",
+                "功能甲",
+                6
+              ],
+              [
+                "玉米",
+                "功能乙",
+                9
+              ],
+              [
+                "玉米",
+                "功能丙",
+                12
+              ],
+              [
+                "小麦",
+                "功能甲",
+                7
+              ],
+              [
+                "小麦",
+                "功能乙",
+                10
+              ],
+              [
+                "小麦",
+                "功能丙",
+                3
+              ],
+              [
+                "大豆",
+                "功能甲",
+                8
+              ],
+              [
+                "大豆",
+                "功能乙",
+                11
+              ],
+              [
+                "大豆",
+                "功能丙",
+                4
+              ],
+              [
+                "豌豆",
+                "功能甲",
+                9
+              ],
+              [
+                "豌豆",
+                "功能乙",
+                12
+              ],
+              [
+                "豌豆",
+                "功能丙",
+                5
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "d5b4c350-43e1-4570-86e6-a7d508d6b1de",
+      "type": "tree:heatmap",
+      "name": "热图",
+      "visible": true,
+      "settings": {
+        "width": 84,
+        "gap": 12,
+        "opacity": 0.88,
+        "color": "#087f8c",
+        "fontSize": 12,
+        "lineWidth": 1.6,
+        "pointSize": 5,
+        "title": "热图",
+        "showTitle": true,
+        "normalize": false,
+        "inherit": false,
+        "showValues": false,
+        "cellPadding": 1
+      },
+      "data": {
+        "tables": [
+          {
+            "id": "annotation",
+            "name": "热图示例",
+            "role": "annotation",
+            "columns": [
+              "nodeID",
+              "列",
+              "数值"
+            ],
+            "rows": [
+              [
+                "拟南芥",
+                "指标甲",
+                3
+              ],
+              [
+                "拟南芥",
+                "指标乙",
+                4
+              ],
+              [
+                "拟南芥",
+                "指标丙",
+                5
+              ],
+              [
+                "拟南芥",
+                "指标丁",
+                6
+              ],
+              [
+                "油菜",
+                "指标甲",
+                3
+              ],
+              [
+                "油菜",
+                "指标乙",
+                5
+              ],
+              [
+                "油菜",
+                "指标丙",
+                7
+              ],
+              [
+                "油菜",
+                "指标丁",
+                9
+              ],
+              [
+                "水稻",
+                "指标甲",
+                3
+              ],
+              [
+                "水稻",
+                "指标乙",
+                6
+              ],
+              [
+                "水稻",
+                "指标丙",
+                9
+              ],
+              [
+                "水稻",
+                "指标丁",
+                12
+              ],
+              [
+                "玉米",
+                "指标甲",
+                3
+              ],
+              [
+                "玉米",
+                "指标乙",
+                7
+              ],
+              [
+                "玉米",
+                "指标丙",
+                11
+              ],
+              [
+                "玉米",
+                "指标丁",
+                3
+              ],
+              [
+                "小麦",
+                "指标甲",
+                3
+              ],
+              [
+                "小麦",
+                "指标乙",
+                8
+              ],
+              [
+                "小麦",
+                "指标丙",
+                1
+              ],
+              [
+                "小麦",
+                "指标丁",
+                6
+              ],
+              [
+                "大豆",
+                "指标甲",
+                3
+              ],
+              [
+                "大豆",
+                "指标乙",
+                9
+              ],
+              [
+                "大豆",
+                "指标丙",
+                3
+              ],
+              [
+                "大豆",
+                "指标丁",
+                9
+              ],
+              [
+                "豌豆",
+                "指标甲",
+                3
+              ],
+              [
+                "豌豆",
+                "指标乙",
+                10
+              ],
+              [
+                "豌豆",
+                "指标丙",
+                5
+              ],
+              [
+                "豌豆",
+                "指标丁",
+                12
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "e98ae2d7-57ab-46b8-b476-94f494a8d09b",
+      "type": "tree:motif",
+      "name": "MEME 基序位置",
+      "visible": true,
+      "settings": {
+        "width": 84,
+        "gap": 12,
+        "opacity": 0.88,
+        "color": "#087f8c",
+        "fontSize": 12,
+        "lineWidth": 1.6,
+        "pointSize": 5,
+        "title": "MEME 基序位置",
+        "showTitle": true,
+        "normalize": false,
+        "inherit": false,
+        "showValues": false,
+        "cellPadding": 1
+      },
+      "data": {
+        "tables": [
+          {
+            "id": "annotation",
+            "name": "MEME 基序位置示例",
+            "role": "annotation",
+            "columns": [
+              "nodeID",
+              "起点",
+              "终点",
+              "基序",
+              "序列长度"
+            ],
+            "rows": [
+              [
+                "拟南芥",
+                10,
+                50,
+                "基序甲",
+                350
+              ],
+              [
+                "拟南芥",
+                90,
+                130,
+                "基序乙",
+                350
+              ],
+              [
+                "拟南芥",
+                170,
+                210,
+                "基序丙",
+                350
+              ],
+              [
+                "油菜",
+                12,
+                52,
+                "基序甲",
+                350
+              ],
+              [
+                "油菜",
+                92,
+                132,
+                "基序乙",
+                350
+              ],
+              [
+                "油菜",
+                172,
+                212,
+                "基序丙",
+                350
+              ],
+              [
+                "水稻",
+                14,
+                54,
+                "基序甲",
+                350
+              ],
+              [
+                "水稻",
+                94,
+                134,
+                "基序乙",
+                350
+              ],
+              [
+                "水稻",
+                174,
+                214,
+                "基序丙",
+                350
+              ],
+              [
+                "玉米",
+                16,
+                56,
+                "基序甲",
+                350
+              ],
+              [
+                "玉米",
+                96,
+                136,
+                "基序乙",
+                350
+              ],
+              [
+                "玉米",
+                176,
+                216,
+                "基序丙",
+                350
+              ],
+              [
+                "小麦",
+                18,
+                58,
+                "基序甲",
+                350
+              ],
+              [
+                "小麦",
+                98,
+                138,
+                "基序乙",
+                350
+              ],
+              [
+                "小麦",
+                178,
+                218,
+                "基序丙",
+                350
+              ],
+              [
+                "大豆",
+                20,
+                60,
+                "基序甲",
+                350
+              ],
+              [
+                "大豆",
+                100,
+                140,
+                "基序乙",
+                350
+              ],
+              [
+                "大豆",
+                180,
+                220,
+                "基序丙",
+                350
+              ],
+              [
+                "豌豆",
+                22,
+                62,
+                "基序甲",
+                350
+              ],
+              [
+                "豌豆",
+                102,
+                142,
+                "基序乙",
+                350
+              ],
+              [
+                "豌豆",
+                182,
+                222,
+                "基序丙",
+                350
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": {}
+}

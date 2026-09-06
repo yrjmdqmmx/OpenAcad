@@ -1,0 +1,660 @@
+[
+  {
+    "case": "basic-advanced",
+    "passed": true,
+    "before": {
+      "x": "120.14705882352936",
+      "y": "230.25798525798524"
+    },
+    "after": {
+      "x": "156.22280379588344",
+      "y": "200.19486444769024"
+    },
+    "oneStepUndo": true,
+    "projectRoundtrip": true,
+    "artifacts": [
+      {
+        "format": "svg",
+        "bytes": 9394,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/basic/evidence/bar-advanced.svg"
+      },
+      {
+        "format": "png",
+        "bytes": 104401,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/basic/evidence/bar-advanced.png"
+      },
+      {
+        "format": "pdf",
+        "bytes": 75430,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/basic/evidence/bar-advanced.pdf"
+      },
+      {
+        "format": "eps",
+        "bytes": 217344,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/basic/evidence/bar-advanced.eps"
+      }
+    ]
+  },
+  {
+    "case": "tree-normal",
+    "layers": [
+      {
+        "type": "rename",
+        "name": "替换叶名",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "append",
+        "name": "追加叶名",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "superscript",
+        "name": "叶名上标",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "italic",
+        "name": "局部斜体",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-color",
+        "name": "叶名分类色",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-font",
+        "name": "叶名字体分类",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-color",
+        "name": "分支分类色",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-background",
+        "name": "叶名背景色块",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "node-symbol",
+        "name": "节点符号",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "leaf-pie",
+        "name": "叶侧饼图",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-pie",
+        "name": "分支饼图",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "bar",
+        "name": "普通柱",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "category-bar",
+        "name": "分类柱",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "lollipop",
+        "name": "普通棒棒糖",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "category-lollipop",
+        "name": "分类棒棒糖",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "stacked-bar",
+        "name": "堆叠柱",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "box",
+        "name": "普通箱线",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "category-box",
+        "name": "分类箱线",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "heatmap",
+        "name": "热图",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "binary1",
+        "name": "二值矩阵·色块",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "binary2",
+        "name": "二值矩阵·符号",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "bubble",
+        "name": "气泡矩阵",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "text-matrix",
+        "name": "文本矩阵",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "category-text-matrix",
+        "name": "分类文本矩阵",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-text",
+        "name": "分支文字",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "node-link",
+        "name": "两节点连线",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "geologic",
+        "name": "地质年代尺",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "motif",
+        "name": "MEME 基序位置",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "recombination",
+        "name": "重组片段",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      }
+    ],
+    "passed": true
+  },
+  {
+    "case": "tree-circle",
+    "layers": [
+      {
+        "type": "rename",
+        "name": "替换叶名",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "append",
+        "name": "追加叶名",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "superscript",
+        "name": "叶名上标",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "italic",
+        "name": "局部斜体",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-color",
+        "name": "叶名分类色",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-font",
+        "name": "叶名字体分类",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-color",
+        "name": "分支分类色",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-background",
+        "name": "叶名背景色块",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "node-symbol",
+        "name": "节点符号",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "leaf-pie",
+        "name": "叶侧饼图",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-pie",
+        "name": "分支饼图",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "bar",
+        "name": "普通柱",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "category-bar",
+        "name": "分类柱",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "lollipop",
+        "name": "普通棒棒糖",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "category-lollipop",
+        "name": "分类棒棒糖",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "stacked-bar",
+        "name": "堆叠柱",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "box",
+        "name": "普通箱线",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "category-box",
+        "name": "分类箱线",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "heatmap",
+        "name": "热图",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "binary1",
+        "name": "二值矩阵·色块",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "binary2",
+        "name": "二值矩阵·符号",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "bubble",
+        "name": "气泡矩阵",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "text-matrix",
+        "name": "文本矩阵",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "category-text-matrix",
+        "name": "分类文本矩阵",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-text",
+        "name": "分支文字",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "node-link",
+        "name": "两节点连线",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "geologic",
+        "name": "地质年代尺",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "motif",
+        "name": "MEME 基序位置",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "recombination",
+        "name": "重组片段",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      }
+    ],
+    "passed": true
+  },
+  {
+    "case": "tree-unrooted",
+    "layers": [
+      {
+        "type": "rename",
+        "name": "替换叶名",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "append",
+        "name": "追加叶名",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "superscript",
+        "name": "叶名上标",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "italic",
+        "name": "局部斜体",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-color",
+        "name": "叶名分类色",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-font",
+        "name": "叶名字体分类",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-color",
+        "name": "分支分类色",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "label-background",
+        "name": "叶名背景色块",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "node-symbol",
+        "name": "节点符号",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "leaf-pie",
+        "name": "叶侧饼图",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-pie",
+        "name": "分支饼图",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "branch-text",
+        "name": "分支文字",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      },
+      {
+        "type": "node-link",
+        "name": "两节点连线",
+        "passed": true,
+        "alternateChanged": true,
+        "hiddenChanged": true,
+        "projectRoundtrip": true
+      }
+    ],
+    "passed": true
+  },
+  {
+    "case": "tree-composite-exports",
+    "passed": true,
+    "size": {
+      "width": 1389,
+      "height": 1492,
+      "inner": [
+        [
+          1389,
+          1492
+        ]
+      ]
+    },
+    "artifacts": [
+      {
+        "format": "svg",
+        "bytes": 24013,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/circle-three-layers.svg"
+      },
+      {
+        "format": "png",
+        "bytes": 432894,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/circle-three-layers.png"
+      },
+      {
+        "format": "pdf",
+        "bytes": 110510,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/circle-three-layers.pdf"
+      },
+      {
+        "format": "eps",
+        "bytes": 926736,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/circle-three-layers.eps"
+      }
+    ]
+  }
+]

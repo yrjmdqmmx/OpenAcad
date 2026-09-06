@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "id": "f52ae6a9-7141-46fc-9606-8904d8879883",
+  "name": "误差柱状图 · 模拟数据",
+  "templateId": "bar-error",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:54:42.058Z",
+  "updatedAt": "2026-09-06T13:54:44.014Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "data",
+        "name": "示例数据",
+        "role": "data",
+        "columns": [
+          "类别",
+          "数值",
+          "样本"
+        ],
+        "rows": [
+          [
+            "对照",
+            15,
+            "样本1"
+          ],
+          [
+            "对照",
+            19.075,
+            "样本2"
+          ],
+          [
+            "对照",
+            16.433,
+            "样本3"
+          ],
+          [
+            "对照",
+            12.223,
+            "样本4"
+          ],
+          [
+            "对照",
+            17.582,
+            "样本5"
+          ],
+          [
+            "对照",
+            19.595,
+            "样本6"
+          ],
+          [
+            "对照",
+            12.9,
+            "样本7"
+          ],
+          [
+            "对照",
+            14.246,
+            "样本8"
+          ],
+          [
+            "对照",
+            19.777,
+            "样本9"
+          ],
+          [
+            "对照",
+            16.19,
+            "样本10"
+          ],
+          [
+            "对照",
+            13.216,
+            "样本11"
+          ],
+          [
+            "对照",
+            16.753,
+            "样本12"
+          ],
+          [
+            "处理甲",
+            25.524,
+            "样本1"
+          ],
+          [
+            "处理甲",
+            25.382,
+            "样本2"
+          ],
+          [
+            "处理甲",
+            22.345,
+            "样本3"
+          ],
+          [
+            "处理甲",
+            22.454,
+            "样本4"
+          ],
+          [
+            "处理甲",
+            27.096,
+            "样本5"
+          ],
+          [
+            "处理甲",
+            24.975,
+            "样本6"
+          ],
+          [
+            "处理甲",
+            20.062,
+            "样本7"
+          ],
+          [
+            "处理甲",
+            25.082,
+            "样本8"
+          ],
+          [
+            "处理甲",
+            27.884,
+            "样本9"
+          ],
+          [
+            "处理甲",
+            21.326,
+            "样本10"
+          ],
+          [
+            "处理甲",
+            21.847,
+            "样本11"
+          ],
+          [
+            "处理甲",
+            27.455,
+            "样本12"
+          ],
+          [
+            "处理乙",
+            33.728,
+            "样本1"
+          ],
+          [
+            "处理乙",
+            30.51,
+            "样本2"
+          ],
+          [
+            "处理乙",
+            30.882,
+            "样本3"
+          ],
+          [
+            "处理乙",
+            33.187,
+            "样本4"
+          ],
+          [
+            "处理乙",
+            33.855,
+            "样本5"
+          ],
+          [
+            "处理乙",
+            30.561,
+            "样本6"
+          ],
+          [
+            "处理乙",
+            29.925,
+            "样本7"
+          ],
+          [
+            "处理乙",
+            35.016,
+            "样本8"
+          ],
+          [
+            "处理乙",
+            33.523,
+            "样本9"
+          ],
+          [
+            "处理乙",
+            28.001,
+            "样本10"
+          ],
+          [
+            "处理乙",
+            32.55,
+            "样本11"
+          ],
+          [
+            "处理乙",
+            36.083,
+            "样本12"
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 640,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 82,
+    "marginRight": 48,
+    "marginBottom": 105,
+    "marginLeft": 95,
+    "title": "误差柱状图",
+    "subtitle": "模拟数据 · 用于演示",
+    "fontFamily": "Noto Sans SC",
+    "fontSize": 14,
+    "titleSize": 24,
+    "textColor": "#263445",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#587ab8",
+      "#b78bc1",
+      "#b9ac62",
+      "#76b7bc"
+    ],
+    "opacity": 0.9,
+    "showLegend": false,
+    "showGrid": true,
+    "showLabels": false,
+    "xTitle": "",
+    "yTitle": "数值",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "input",
+    "barPadding": 0.25,
+    "axisRotation": 0,
+    "curve": "linear",
+    "errorType": "sd",
+    "errorInput": "raw",
+    "showPoints": true,
+    "showBox": true,
+    "distribution": "kde",
+    "bandwidthMultiplier": 1,
+    "normalize": false,
+    "titleBold": true,
+    "showXAxis": true,
+    "showYAxis": true,
+    "xTickFontSize": 14,
+    "yTickFontSize": 14,
+    "tickCount": 6,
+    "tickLength": 5,
+    "gridOpacity": 0.1,
+    "axisLineWidth": 1,
+    "axisTitleSize": 14,
+    "xScale": "linear",
+    "yScale": "linear",
+    "xBreak": false,
+    "yBreak": false,
+    "xBreakStart": 10,
+    "xBreakEnd": 20,
+    "yBreakStart": 10,
+    "yBreakEnd": 20,
+    "pattern": "none",
+    "patternSpacing": 8,
+    "patternWidth": 1.5,
+    "pointShape": "circle",
+    "fillArea": false,
+    "showStatistics": true,
+    "statLabel": "letters"
+  },
+  "layers": [],
+  "layout": {
+    "statistics": {
+      "letters:对照": {
+        "x": 25.0526006752458,
+        "y": 18.037872486177037
+      }
+    }
+  },
+  "analysis": {
+    "method": "tests",
+    "params": {
+      "test": "ttest_ind",
+      "comparisons": "all",
+      "alternative": "two-sided",
+      "equalVariance": false,
+      "pAdjust": "BH"
+    },
+    "inputHash": "394f96ce465b539cb6b8f45d74f0f2d6c09cfd4188e5fe63885b7de64577863d",
+    "result": {
+      "schemaVersion": 1,
+      "method": "tests",
+      "data": {
+        "comparisons": [
+          {
+            "left": "对照",
+            "right": "处理甲",
+            "nLeft": 12,
+            "nRight": 12,
+            "statistic": -7.696524927990832,
+            "p": 1.1154174713372637e-7,
+            "meanDifference": -8.203500000000002,
+            "adjustedP": 1.1154174713372637e-7
+          },
+          {
+            "left": "对照",
+            "right": "处理乙",
+            "nLeft": 12,
+            "nRight": 12,
+            "statistic": -15.9715034905397,
+            "p": 1.7028536772644116e-13,
+            "meanDifference": -16.23591666666667,
+            "adjustedP": 5.108561031793235e-13
+          },
+          {
+            "left": "处理甲",
+            "right": "处理乙",
+            "nLeft": 12,
+            "nRight": 12,
+            "statistic": -7.935336227188925,
+            "p": 7.247301951420163e-8,
+            "meanDifference": -8.03241666666667,
+            "adjustedP": 1.0870952927130244e-7
+          }
+        ],
+        "test": "ttest_ind",
+        "pAdjust": "BH",
+        "alternative": "two-sided"
+      },
+      "provenance": {
+        "engine": "Python",
+        "method": "tests",
+        "methodVersion": "openacad-1",
+        "python": "3.12.3",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 1,
+        "inputSha256": "6610519f1e5ae1b7feeef36eaaccda2e1995cdffbfe67d42a46b1713c0eeb1e2",
+        "parameters": {
+          "seed": 1,
+          "idColumn": 0,
+          "test": "ttest_ind",
+          "comparisons": "all",
+          "alternative": "two-sided",
+          "equalVariance": false,
+          "pAdjust": "BH"
+        }
+      },
+      "diagnostics": []
+    }
+  }
+}

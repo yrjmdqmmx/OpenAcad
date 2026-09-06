@@ -66,7 +66,9 @@ test("保存每个声明控件的实际 SVG 变化证据，条件控件另行验
         c.type === "boolean"
           ? [!initial]
           : c.type === "select"
-            ? (c.options || []).map((o) => o.value).filter((v) => v !== initial)
+            ? (c.optionsFor?.(prepared) ?? c.options ?? [])
+                .map((o) => o.value)
+                .filter((v) => v !== initial)
             : c.type === "color"
               ? ["#d42178"]
               : c.type === "text"

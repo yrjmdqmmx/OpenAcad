@@ -145,16 +145,18 @@ try {
 } catch (e) {
   results.push({ id: "genome-custom-tracks", error: e.message });
 }
-const jobs = process.env.OPENACAD_SKIP_ANALYSIS ? [] : [
-  ["circle-heatmap", "cluster", null],
-  ["correlation", "correlation", "raw"],
-  ["double-correlation", "correlation", "raw"],
-  ["mantel", "mantel", "raw"],
-  ["mantel", "mantel.randtest", "raw"],
-  ["mantel", "mantel.rtest", "raw"],
-  ["mantel", "mantel.partial", "raw"],
-  ["genome-circos", "gc", "fasta"],
-];
+const jobs = process.env.OPENACAD_SKIP_ANALYSIS
+  ? []
+  : [
+      ["circle-heatmap", "cluster", null],
+      ["correlation", "correlation", "raw"],
+      ["double-correlation", "correlation", "raw"],
+      ["mantel", "mantel", "raw"],
+      ["mantel", "mantel.randtest", "raw"],
+      ["mantel", "mantel.rtest", "raw"],
+      ["mantel", "mantel.partial", "raw"],
+      ["genome-circos", "gc", "fasta"],
+    ];
 for (const [id, method, mode] of jobs) {
   try {
     await open(id);

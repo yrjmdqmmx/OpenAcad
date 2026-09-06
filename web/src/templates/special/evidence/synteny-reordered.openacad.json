@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "id": "f5a48c0c-d6e2-4248-9188-e6ce3515cc9e",
+  "name": "MCScanX 共线性图 · 模拟数据",
+  "templateId": "synteny",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:51:47.710Z",
+  "updatedAt": "2026-09-06T13:51:47.956Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "chromosomes",
+        "name": "染色体绘图范围（最大基因终点）",
+        "role": "chromosomes",
+        "columns": [
+          "id",
+          "length"
+        ],
+        "rows": [
+          [
+            "染色体A",
+            3400
+          ],
+          [
+            "染色体B",
+            4000
+          ],
+          [
+            "染色体C",
+            2500
+          ]
+        ]
+      },
+      {
+        "id": "synteny-genes",
+        "name": "MCScanX 基因坐标",
+        "role": "synteny-genes",
+        "columns": [
+          "chromosome",
+          "id",
+          "start",
+          "end"
+        ],
+        "rows": [
+          [
+            "染色体A",
+            "A1",
+            100,
+            600
+          ],
+          [
+            "染色体A",
+            "A2",
+            1200,
+            2000
+          ],
+          [
+            "染色体A",
+            "A3",
+            2800,
+            3400
+          ],
+          [
+            "染色体B",
+            "B1",
+            300,
+            900
+          ],
+          [
+            "染色体B",
+            "B2",
+            1700,
+            2300
+          ],
+          [
+            "染色体B",
+            "B3",
+            3300,
+            4000
+          ],
+          [
+            "染色体C",
+            "C1",
+            100,
+            700
+          ],
+          [
+            "染色体C",
+            "C2",
+            1700,
+            2500
+          ]
+        ]
+      },
+      {
+        "id": "synteny-links",
+        "name": "MCScanX 共线性配对",
+        "role": "synteny-links",
+        "columns": [
+          "source",
+          "target",
+          "block",
+          "evalue"
+        ],
+        "rows": [
+          [
+            "A1",
+            "B1",
+            "区块0",
+            0.000001
+          ],
+          [
+            "A2",
+            "B2",
+            "区块0",
+            1e-8
+          ],
+          [
+            "A3",
+            "B3",
+            "区块0",
+            1e-9
+          ],
+          [
+            "B1",
+            "C2",
+            "区块1",
+            1e-7
+          ],
+          [
+            "B2",
+            "C1",
+            "区块1",
+            1e-8
+          ]
+        ]
+      }
+    ],
+    "files": [
+      {
+        "id": "gff",
+        "name": "模拟基因.gff",
+        "role": "gff",
+        "format": "gff",
+        "text": "染色体A\tA1\t100\t600\n染色体A\tA2\t1200\t2000\n染色体A\tA3\t2800\t3400\n染色体B\tB1\t300\t900\n染色体B\tB2\t1700\t2300\n染色体B\tB3\t3300\t4000\n染色体C\tC1\t100\t700\n染色体C\tC2\t1700\t2500"
+      },
+      {
+        "id": "collinearity",
+        "name": "模拟共线性.collinearity",
+        "role": "collinearity",
+        "format": "collinearity",
+        "text": "## Alignment 0: score=120 e_value=1e-12 N=3 染色体A&染色体B plus\n 0- 0: A1 B1 1e-6\n 0- 1: A2 B2 1e-8\n 0- 2: A3 B3 1e-9\n## Alignment 1: score=90 e_value=1e-10 N=2 染色体B&染色体C minus\n 1- 0: B1 C2 1e-7\n 1- 1: B2 C1 1e-8"
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 130,
+    "title": "MCScanX 共线性图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "syntenyInput": "table",
+    "chromosomeSort": "input",
+    "syntenyChromosomeWidth": 15,
+    "chromosomeColor": "#dce5e8",
+    "syntenyAlign": true,
+    "flipAlternate": false,
+    "syntenyLinkShape": "ribbon",
+    "syntenyLineWidth": 2,
+    "syntenyLinkOpacity": 0.3,
+    "syntenyEvalue": 1,
+    "genomeTicks": true
+  },
+  "layers": [],
+  "layout": {
+    "chromosomeOrder": [
+      "染色体B",
+      "染色体C",
+      "染色体A"
+    ]
+  }
+}

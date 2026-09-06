@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "baseUrl": "https://openacad.xyz",
+  "checkedAt": "2026-09-06T14:54:45.726210+00:00",
+  "dataSource": "本脚本确定性生成的模拟数据",
+  "cases": [
+    {
+      "case": "pca",
+      "passed": true,
+      "validation": {
+        "reconstructionMaxAbsoluteError": 5.329070518200751e-15,
+        "explainedRatioSum": 1.0
+      },
+      "provenance": {
+        "engine": "Python",
+        "method": "pca",
+        "methodVersion": "openacad-1",
+        "python": "3.12.3",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 41,
+        "inputSha256": "78877764c0e5aa28046bc6fbe9061dcb07220876e4ec32245367d446333d612e",
+        "parameters": {
+          "seed": 41,
+          "standardization": "None",
+          "direction": "column"
+        }
+      }
+    },
+    {
+      "case": "lm",
+      "passed": true,
+      "validation": {
+        "referenceIntercept": 4.094083486474121,
+        "referenceSlope": 1.484451480355718,
+        "coefficientTolerance": 1e-10,
+        "curvePoints": 80
+      },
+      "provenance": {
+        "engine": "R",
+        "method": "lm",
+        "methodVersion": "openacad-1",
+        "python": "3.12.3",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 41,
+        "inputSha256": "5d4d7b434c56693e27d236e852cede17fd001dcbdc58fdf5a2ce267abc764bd3",
+        "parameters": {
+          "seed": 41,
+          "points": 80,
+          "confidence": 0.95
+        },
+        "r": "4.6.1",
+        "rPackages": {
+          "vegan": "2.7.6",
+          "mgcv": "1.9.4",
+          "ape": "5.8.1",
+          "ade4": "1.7.24",
+          "jsonlite": "2.0.0"
+        },
+        "rng": "L'Ecuyer-CMRG"
+      }
+    },
+    {
+      "case": "png",
+      "passed": true,
+      "validation": {
+        "bytes": 96787,
+        "sha256": "9b810d40c38739686ef56b5dd8bfd0a6ef04d1f7179a1de0c5c1f06437466898",
+        "width": 1500,
+        "height": 875,
+        "decoded": true,
+        "inkBounds": [
+          72,
+          34,
+          1437,
+          824
+        ],
+        "touchesPageEdge": false
+      },
+      "provenance": {
+        "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+        "format": "png",
+        "dpi": 150,
+        "width": 960.0,
+        "height": 560.0,
+        "outline": false,
+        "availableFontsSha256": {
+          "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+          "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+        },
+        "sha256": "9b810d40c38739686ef56b5dd8bfd0a6ef04d1f7179a1de0c5c1f06437466898"
+      },
+      "diagnostics": []
+    }
+  ],
+  "complete": false,
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "服务正常"
+  },
+  "status": "failed",
+  "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
+  "transportRetries": [
+    {
+      "method": "GET",
+      "path": "/api/jobs/{id}",
+      "attempt": 1,
+      "errorType": "SSLEOFError",
+      "delaySeconds": 0.5
+    }
+  ]
+}

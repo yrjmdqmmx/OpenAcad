@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "id": "1a07387e-31a6-4a50-a653-ad77dfca071c",
+  "name": "无根进化树工作台 · 模拟数据",
+  "templateId": "tree-unrooted",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T14:47:01.117Z",
+  "updatedAt": "2026-09-06T14:47:01.851Z",
+  "dataset": {
+    "tables": [],
+    "text": "#NEXUS\nBEGIN TREES;\nTRANSLATE 1 拟南芥,2 油菜,3 水稻,4 玉米,5 小麦,6 大豆,7 豌豆;\nTREE 模拟MCC = [&R] ((1[&height=0]:5,2[&height=1]:4)十字花科[&height=5,height_mean=5.2,height_median=5.1,height_95%_HPD={4.1,6.3},posterior=.98]:7,(3[&height=0]:8,(4[&height=0]:4,5[&height=0]:4)禾本组[&height=4,height_95%_HPD={3.2,5.1}]:4)禾本科[&height=8,height_95%_HPD={6.7,9.5}]:4,(6[&height=0]:6,7[&height=0]:6)豆科[&height=6,height_95%_HPD={5.3,7.4}]:6)植物[&height=12,height_mean=12.2,height_median=12.1,height_95%_HPD={10.5,13.6}];\nEND;",
+    "format": "nexus"
+  },
+  "mapping": {},
+  "style": {
+    "width": 900,
+    "height": 900,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 82,
+    "marginRight": 48,
+    "marginBottom": 105,
+    "marginLeft": 95,
+    "title": "植物亲缘关系 · 无根树",
+    "subtitle": "自行生成的模拟树 · 不代表真实系统发育结论",
+    "fontFamily": "Noto Serif CJK SC",
+    "fontSize": 14,
+    "titleSize": 24,
+    "textColor": "#263445",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#587ab8",
+      "#b78bc1",
+      "#b9ac62",
+      "#76b7bc"
+    ],
+    "opacity": 0.9,
+    "showLegend": false,
+    "showGrid": true,
+    "showLabels": false,
+    "xTitle": "",
+    "yTitle": "数值",
+    "pointSize": 5,
+    "lineWidth": 1.7,
+    "orientation": "vertical",
+    "sort": "input",
+    "branchLinkType": "rectangular",
+    "branchLineCap": "round",
+    "branchOpacity": 1,
+    "supportSource": "support",
+    "supportVariable": "",
+    "supportType": "text",
+    "supportFactor": 1,
+    "supportDecimals": 2,
+    "supportCircleSize": 4,
+    "supportSize": 10,
+    "supportColor": "#536875",
+    "supportAnchor": "start",
+    "supportBold": false,
+    "supportItalic": false,
+    "supportX": 5,
+    "supportY": -6,
+    "barPadding": 0.25,
+    "axisRotation": 0,
+    "curve": "linear",
+    "errorType": "sd",
+    "errorInput": "raw",
+    "showPoints": true,
+    "showBox": true,
+    "distribution": "kde",
+    "bandwidthMultiplier": 1,
+    "normalize": false,
+    "treeLayout": "unrooted",
+    "treeWidth": 340,
+    "labelWidth": 130,
+    "leafSpacing": 28,
+    "useBranchLength": true,
+    "showNodes": true,
+    "nodeSize": 3,
+    "branchColor": "#536875",
+    "nodeColor": "#087f8c",
+    "showSupport": true,
+    "alignLabels": true,
+    "showScale": true,
+    "treeRotation": -90,
+    "angleRange": 360,
+    "timeLayout": "age",
+    "treeDirection": "ltr",
+    "inwardTree": false,
+    "innerRadius": 180,
+    "nodeAgeSource": "height",
+    "showHPD": true,
+    "hpdColor": "#aa4567",
+    "hpdWidth": 11,
+    "hpdOpacity": 0.35,
+    "hpdCaps": true,
+    "showTimeAxis": true,
+    "showNodeAges": true,
+    "showPosterior": true,
+    "ageFontSize": 10,
+    "ageColor": "#314d5a",
+    "timeUnit": "模拟时间单位"
+  },
+  "layers": [],
+  "layout": {
+    "treeState": {
+      "source": "#NEXUS\nBEGIN TREES;\nTRANSLATE 1 拟南芥,2 油菜,3 水稻,4 玉米,5 小麦,6 大豆,7 豌豆;\nTREE 模拟MCC = [&R] ((1[&height=0]:5,2[&height=1]:4)十字花科[&height=5,height_mean=5.2,height_median=5.1,height_95%_HPD={4.1,6.3},posterior=.98]:7,(3[&height=0]:8,(4[&height=0]:4,5[&height=0]:4)禾本组[&height=4,height_95%_HPD={3.2,5.1}]:4)禾本科[&height=8,height_95%_HPD={6.7,9.5}]:4,(6[&height=0]:6,7[&height=0]:6)豆科[&height=6,height_95%_HPD={5.3,7.4}]:6)植物[&height=12,height_mean=12.2,height_median=12.1,height_95%_HPD={10.5,13.6}];\nEND;",
+      "root": {
+        "annotationValues": {
+          "height": 12,
+          "height_mean": 12.2,
+          "height_median": 12.1
+        },
+        "age": 12,
+        "ageMean": 12.2,
+        "ageMedian": 12.1,
+        "hpd": [
+          10.5,
+          13.6
+        ],
+        "timeSource": "BEAST",
+        "hpdKind": "hpd",
+        "ageSource": "file",
+        "id": "植物",
+        "name": "植物",
+        "length": 0,
+        "lengthSpecified": false,
+        "children": [
+          {
+            "annotationValues": {
+              "height": 5,
+              "height_mean": 5.2,
+              "height_median": 5.1,
+              "posterior": 0.98
+            },
+            "age": 5.5,
+            "ageMean": 5.2,
+            "ageMedian": 5.1,
+            "hpd": [
+              4.4,
+              6.8
+            ],
+            "timeSource": "BEAST",
+            "hpdKind": "hpd",
+            "ageSource": "manual",
+            "posterior": 0.98,
+            "id": "十字花科",
+            "name": "十字花科",
+            "length": 7,
+            "lengthSpecified": true,
+            "children": [
+              {
+                "annotationValues": {
+                  "height": 0
+                },
+                "age": 0,
+                "timeSource": "BEAST / 节点年代注释",
+                "ageSource": "file",
+                "id": "拟南芥",
+                "name": "拟南芥",
+                "length": 5,
+                "lengthSpecified": true,
+                "children": []
+              },
+              {
+                "annotationValues": {
+                  "height": 1
+                },
+                "age": 1,
+                "timeSource": "BEAST / 节点年代注释",
+                "ageSource": "file",
+                "id": "油菜",
+                "name": "油菜",
+                "length": 4,
+                "lengthSpecified": true,
+                "children": []
+              }
+            ]
+          },
+          {
+            "annotationValues": {
+              "height": 8
+            },
+            "age": 8,
+            "hpd": [
+              6.7,
+              9.5
+            ],
+            "timeSource": "BEAST",
+            "hpdKind": "hpd",
+            "ageSource": "file",
+            "id": "禾本科",
+            "name": "禾本科",
+            "length": 4,
+            "lengthSpecified": true,
+            "children": [
+              {
+                "annotationValues": {
+                  "height": 0
+                },
+                "age": 0,
+                "timeSource": "BEAST / 节点年代注释",
+                "ageSource": "file",
+                "id": "水稻",
+                "name": "水稻",
+                "length": 8,
+                "lengthSpecified": true,
+                "children": []
+              },
+              {
+                "annotationValues": {
+                  "height": 4
+                },
+                "age": 4,
+                "hpd": [
+                  3.2,
+                  5.1
+                ],
+                "timeSource": "BEAST",
+                "hpdKind": "hpd",
+                "ageSource": "file",
+                "id": "禾本组",
+                "name": "禾本组",
+                "length": 4,
+                "lengthSpecified": true,
+                "children": [
+                  {
+                    "annotationValues": {
+                      "height": 0
+                    },
+                    "age": 0,
+                    "timeSource": "BEAST / 节点年代注释",
+                    "ageSource": "file",
+                    "id": "玉米",
+                    "name": "玉米",
+                    "length": 4,
+                    "lengthSpecified": true,
+                    "children": []
+                  },
+                  {
+                    "annotationValues": {
+                      "height": 0
+                    },
+                    "age": 0,
+                    "timeSource": "BEAST / 节点年代注释",
+                    "ageSource": "file",
+                    "id": "小麦",
+                    "name": "小麦",
+                    "length": 4,
+                    "lengthSpecified": true,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "annotationValues": {
+              "height": 6
+            },
+            "age": 6,
+            "hpd": [
+              5.3,
+              7.4
+            ],
+            "timeSource": "BEAST",
+            "hpdKind": "hpd",
+            "ageSource": "file",
+            "id": "豆科",
+            "name": "豆科",
+            "length": 6,
+            "lengthSpecified": true,
+            "children": [
+              {
+                "annotationValues": {
+                  "height": 0
+                },
+                "age": 0,
+                "timeSource": "BEAST / 节点年代注释",
+                "ageSource": "file",
+                "id": "大豆",
+                "name": "大豆",
+                "length": 6,
+                "lengthSpecified": true,
+                "children": []
+              },
+              {
+                "annotationValues": {
+                  "height": 0
+                },
+                "age": 0,
+                "timeSource": "BEAST / 节点年代注释",
+                "ageSource": "file",
+                "id": "豌豆",
+                "name": "豌豆",
+                "length": 6,
+                "lengthSpecified": true,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "selected": "十字花科"
+    }
+  }
+}

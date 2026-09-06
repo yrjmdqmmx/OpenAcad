@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "0bbcf8db-5701-4a56-80fc-de22c820e643",
+  "name": "桑基流向图 · 模拟数据",
+  "templateId": "sankey",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:51:46.946Z",
+  "updatedAt": "2026-09-06T13:51:47.040Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "links",
+        "name": "能量流模拟数据",
+        "role": "links",
+        "columns": [
+          "source",
+          "target",
+          "value"
+        ],
+        "rows": [
+          [
+            "太阳能",
+            "电力",
+            45
+          ],
+          [
+            "风能",
+            "电力",
+            32
+          ],
+          [
+            "天然气",
+            "热力",
+            38
+          ],
+          [
+            "电力",
+            "工业",
+            40
+          ],
+          [
+            "电力",
+            "居民",
+            37
+          ],
+          [
+            "热力",
+            "工业",
+            22
+          ],
+          [
+            "热力",
+            "居民",
+            16
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 40,
+    "marginBottom": 86,
+    "marginLeft": 40,
+    "title": "桑基流向图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "nodeWidth": 18,
+    "nodeGap": 18,
+    "nodeRadius": 2,
+    "flowOpacity": 0.35,
+    "flowCurvature": 0.5,
+    "flowAlign": "justify",
+    "flowColor": "gradient",
+    "flowSort": "input",
+    "showValues": true
+  },
+  "layers": [],
+  "layout": {}
+}

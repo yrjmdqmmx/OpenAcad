@@ -24,6 +24,7 @@ COPY r/analyze.R /app/r/analyze.R
 COPY r/renv.lock /app/r/renv.lock
 COPY fonts /usr/local/share/fonts/openacad
 RUN printf '%s\n' '<?xml version="1.0"?>' '<!DOCTYPE fontconfig SYSTEM "fonts.dtd">' '<fontconfig><selectfont><rejectfont><glob>/usr/share/fonts/opentype/noto/*</glob></rejectfont></selectfont></fontconfig>' > /etc/fonts/conf.d/99-openacad-fonts.conf && fc-cache -f
+COPY scripts /app/scripts
 COPY tests /app/tests
 COPY requirements-test.lock /app/requirements-test.lock
 RUN pip install --no-cache-dir -r requirements-test.lock

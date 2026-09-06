@@ -1,30 +1,30 @@
 ﻿id,name,sourceNormal,sourceCircle,sourceUnrooted,openacadNormal,openacadCircle,openacadUnrooted,acceptance
-1,替换叶名,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-2,追加叶名,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-3,叶名上标,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-4,局部斜体,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-5,叶名分类颜色,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-6,叶名字体分类,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,计划实现,待验收
-7,分支分类颜色,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-8,叶名背景色块,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-9,节点符号,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-10,叶侧饼图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,计划实现,待验收
-11,分支饼图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,计划实现,待验收
-12,普通柱图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-13,分类柱图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-14,普通棒棒糖,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-15,分类棒棒糖,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-16,堆叠柱,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-17,普通箱线,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-18,分类箱线,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-19,热图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-20,二值类型一,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-21,二值类型二,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-22,气泡,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-23,文本矩阵,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-24,分类文本矩阵,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-25,分支文字,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,计划实现,计划实现,计划实现,待验收
-26,节点连线,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,计划实现,待验收
-27,地质年代尺,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-28,MEME基序,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
-29,重组片段,注册并有绘制路径（C）,注册；绘制路径待核实,未开放新增层（C）,计划实现,计划实现,不适用：布局语义未纳入,待验收
+1,替换叶名,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+2,追加叶名,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+3,叶名上标,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+4,局部斜体,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+5,叶名分类颜色,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+6,叶名字体分类,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+7,分支分类颜色,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+8,叶名背景色块,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+9,节点符号,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+10,叶侧饼图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+11,分支饼图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+12,普通柱图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+13,分类柱图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+14,普通棒棒糖,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+15,分类棒棒糖,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+16,堆叠柱,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+17,普通箱线,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+18,分类箱线,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+19,热图,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+20,二值类型一,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+21,二值类型二,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+22,气泡,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+23,文本矩阵,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+24,分类文本矩阵,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+25,分支文字,注册并有绘制路径（C）,注册并有绘制路径（C）,支持（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+26,节点连线,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+27,地质年代尺,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+28,MEME基序,注册并有绘制路径（C）,注册并有绘制路径（C）,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/
+29,重组片段,注册并有绘制路径（C）,注册；绘制路径待核实,未开放新增层（C）,已实现；Chrome 示例/替换数据/显隐/项目往返通过,已实现；Chrome 示例/替换数据/显隐/项目往返通过,不适用：布局语义未纳入,web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/

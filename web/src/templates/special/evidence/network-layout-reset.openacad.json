@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "c65b4721-bf92-4118-af59-fced26e240d9",
+  "name": "动态关系网络图 · 模拟数据",
+  "templateId": "network",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:51:45.723Z",
+  "updatedAt": "2026-09-06T13:51:46.940Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "nodes",
+        "name": "节点模拟数据",
+        "role": "nodes",
+        "columns": [
+          "id",
+          "label",
+          "group",
+          "size",
+          "shape"
+        ],
+        "rows": [
+          [
+            "n1",
+            "研究主题A",
+            "主题",
+            22,
+            "triangle"
+          ],
+          [
+            "n2",
+            "研究主题B",
+            "主题",
+            18,
+            "cross"
+          ],
+          [
+            "n3",
+            "方法甲",
+            "方法",
+            13,
+            "triangle"
+          ],
+          [
+            "n4",
+            "方法乙",
+            "方法",
+            15,
+            "cross"
+          ],
+          [
+            "n5",
+            "数据集甲",
+            "数据",
+            11,
+            "triangle"
+          ],
+          [
+            "n6",
+            "数据集乙",
+            "数据",
+            16,
+            "cross"
+          ]
+        ]
+      },
+      {
+        "id": "edges",
+        "name": "关系模拟数据",
+        "role": "edges",
+        "columns": [
+          "source",
+          "target",
+          "weight",
+          "label",
+          "group"
+        ],
+        "rows": [
+          [
+            "n1",
+            "n3",
+            3,
+            "关系1",
+            "激活"
+          ],
+          [
+            "n1",
+            "n4",
+            1,
+            "关系2",
+            "抑制"
+          ],
+          [
+            "n2",
+            "n4",
+            2,
+            "关系3",
+            "激活"
+          ],
+          [
+            "n3",
+            "n5",
+            4,
+            "关系4",
+            "抑制"
+          ],
+          [
+            "n4",
+            "n6",
+            3,
+            "关系5",
+            "激活"
+          ],
+          [
+            "n2",
+            "n6",
+            1,
+            "关系6",
+            "抑制"
+          ],
+          [
+            "n1",
+            "n2",
+            2,
+            "关系7",
+            "激活"
+          ],
+          [
+            "n1",
+            "n1",
+            3,
+            "自循环",
+            "抑制"
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 130,
+    "title": "动态关系网络图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "networkLayout": "circle",
+    "linkDistance": 100,
+    "repulsion": 160,
+    "nodeShape": "star",
+    "nodeShapeMode": "column",
+    "nodeOpacity": 1,
+    "nodeStrokeColor": "#ffffff",
+    "nodeStrokeWidth": 2,
+    "nodeSizeMode": "data",
+    "nodeScale": 5,
+    "networkLinkShape": "straight",
+    "directedEdges": true,
+    "weightedEdges": true,
+    "edgeWidth": 1.5,
+    "edgeColorMode": "group",
+    "edgeColor": "#9aadb0",
+    "showEdgeLabels": true,
+    "edgeLabelSize": 11,
+    "edgeLabelColor": "#40555b"
+  },
+  "layers": [],
+  "layout": {}
+}

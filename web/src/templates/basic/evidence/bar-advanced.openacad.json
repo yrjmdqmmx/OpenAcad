@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "id": "bd91b48b-3c4e-4dff-9e90-fd585f86bb87",
+  "name": "柱状图 · 模拟数据",
+  "templateId": "bar",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:48:34.481Z",
+  "updatedAt": "2026-09-06T13:48:35.251Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "data",
+        "name": "示例数据",
+        "role": "data",
+        "columns": [
+          "类别",
+          "数值"
+        ],
+        "rows": [
+          [
+            "对照",
+            24
+          ],
+          [
+            "处理甲",
+            39
+          ],
+          [
+            "处理乙",
+            31
+          ],
+          [
+            "处理丙",
+            48
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 640,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 82,
+    "marginRight": 48,
+    "marginBottom": 105,
+    "marginLeft": 95,
+    "title": "柱状图",
+    "subtitle": "模拟数据 · 用于演示",
+    "fontFamily": "Noto Serif CJK SC",
+    "fontSize": 14,
+    "titleSize": 24,
+    "textColor": "#263445",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#587ab8",
+      "#b78bc1",
+      "#b9ac62",
+      "#76b7bc"
+    ],
+    "opacity": 0.9,
+    "showLegend": false,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "数值",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "input",
+    "barPadding": 0.25,
+    "axisRotation": 0,
+    "curve": "linear",
+    "errorType": "sd",
+    "errorInput": "raw",
+    "showPoints": true,
+    "showBox": true,
+    "distribution": "kde",
+    "bandwidthMultiplier": 1,
+    "normalize": false,
+    "titleBold": true,
+    "showXAxis": true,
+    "showYAxis": true,
+    "xTickFontSize": 14,
+    "yTickFontSize": 14,
+    "tickCount": 6,
+    "tickLength": 5,
+    "gridOpacity": 0.1,
+    "axisLineWidth": 1,
+    "axisTitleSize": 14,
+    "xScale": "linear",
+    "yScale": "linear",
+    "xBreak": false,
+    "yBreak": true,
+    "xBreakStart": 10,
+    "xBreakEnd": 20,
+    "yBreakStart": 26,
+    "yBreakEnd": 29,
+    "pattern": "diagonal",
+    "patternSpacing": 8,
+    "patternWidth": 1.5,
+    "pointShape": "circle",
+    "fillArea": false
+  },
+  "layers": [
+    {
+      "id": "95426e0e-b637-4333-ab16-4d3ba6f8e666",
+      "type": "basic:category-band",
+      "name": "类别注释",
+      "visible": true,
+      "settings": {
+        "axis": "x",
+        "width": 24,
+        "gap": 8,
+        "opacity": 0.85,
+        "fontSize": 11
+      },
+      "data": {
+        "tables": [
+          {
+            "id": "bands",
+            "role": "annotation",
+            "name": "类别色带",
+            "columns": [
+              "类别",
+              "颜色",
+              "文字"
+            ],
+            "rows": [
+              [
+                "对照",
+                "#087f8c",
+                "对照"
+              ],
+              [
+                "处理甲",
+                "#eb8972",
+                "处理甲"
+              ],
+              [
+                "处理乙",
+                "#587ab8",
+                "处理乙"
+              ],
+              [
+                "处理丙",
+                "#b78bc1",
+                "处理丙"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": {
+    "labels": {
+      "bar:对照:数据": {
+        "x": 156.22280379588344,
+        "y": 200.19486444769024
+      }
+    }
+  }
+}

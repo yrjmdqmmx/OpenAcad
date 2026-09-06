@@ -105,15 +105,16 @@ function arrow(
   negative: boolean,
   head: number,
   shoulder = true,
+  headHeight = 1.6,
 ) {
   const a = Math.min(head, width * 0.6),
     pts = shoulder
       ? [
           [0, -height / 2],
           [width - a, -height / 2],
-          [width - a, -height * 0.8],
+          [width - a, (-height * headHeight) / 2],
           [width, 0],
-          [width - a, height * 0.8],
+          [width - a, (height * headHeight) / 2],
           [width - a, height / 2],
           [0, height / 2],
         ]
@@ -286,6 +287,7 @@ function GeneCluster({ project: p }: RendererProps) {
               g.strand === "-",
               value(p, "arrowHead", 14),
               text(p, "geneArrowShape", "shoulder") === "shoulder",
+              value(p, "arrowHeadHeight", 1.6),
             )}
             fill={pal[cats.indexOf(g.category) % pal.length]}
             stroke={text(p, "geneStrokeColor", "#ffffff")}
@@ -892,6 +894,7 @@ export const biologyTemplates: Template[] = [
         ]),
         num("breakGap", "断轴压缩后间距", 5, 40),
         num("arrowHead", "箭头头部长度", 2, 35),
+        num("arrowHeadHeight", "箭头头部高度倍率", 1, 2.5, 0.1),
         num("geneStroke", "箭头描边", 0, 4, 0.5),
         col("geneStrokeColor", "箭头描边颜色"),
         col("backboneColor", "基线颜色"),

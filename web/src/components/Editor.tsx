@@ -1,35 +1,364 @@
-import {useEffect,useRef,useState} from 'react';
-import {Undo2,Redo2,Download,Save,ChevronLeft,HelpCircle,ZoomIn,ZoomOut} from 'lucide-react';
-import type {Project,Template} from '../core/types';
-import {useProjectHistory} from '../core/history';
-import {inputHash,saveProject} from '../core/project';
-import {putProject} from '../core/storage';
-import {OrdinationPanel,ordinationIssues} from '../templates/ordination';
-import {BasicStylePanel,basicTemplates} from '../templates/basic';
-import {SpecialPanel,specialProjectIssues} from '../templates/special';
-import {TreePanel,requiredTreeCanvas} from '../templates/tree';
-import {DataPanel} from './DataPanel';import {Inspector} from './Inspector';import {AnalysisPanel} from './AnalysisPanel';import {LayersPanel} from './LayersPanel';import {RenderedChart} from './RenderedChart';import {ExportDialog} from './ExportDialog';
-export function Editor({initial,template,onExit,onProjectChange}:{initial:Project;template:Template;onExit:()=>void;onProjectChange?:(p:Project)=>void}){
-  const {project,commit,undo,redo,canUndo,canRedo}=useProjectHistory(initial);const [tab,setTab]=useState('data'),[mobile,setMobile]=useState('preview'),[exporting,setExporting]=useState(false),[saveState,setSaveState]=useState('准备保存草稿'),[zoom,setZoom]=useState(1),[stale,setStale]=useState(false);const canvas=useRef<HTMLDivElement>(null);const latest=useRef(project);latest.current=project;
-  const [leftWidth,setLeftWidth]=useState(300),[rightWidth,setRightWidth]=useState(280);const resizing=useRef<'left'|'right'|null>(null);
-  useEffect(()=>{onProjectChange?.(project);},[project]);useEffect(()=>()=>{void putProject(latest.current);},[]);
-  const size=template.id.startsWith('tree-')?requiredTreeCanvas(project):project.style;
-  const issues=[...template.validate(project.dataset,project.style),...specialProjectIssues(project),...ordinationIssues(project)];const errors=issues.filter(i=>i.severity!=='warning');
-  useEffect(()=>{setSaveState('保存草稿中…');const timer=setTimeout(()=>putProject(project).then(()=>setSaveState('本机草稿已保存')).catch(()=>setSaveState('本机存储不可用，请下载项目文件')),650);return()=>clearTimeout(timer);},[project]);
-  useEffect(()=>{let valid=true;if(!project.analysis?.result||project.style.ordinationInput==='scores'){setStale(false);return;}setStale(true);inputHash(project.dataset,project.analysis.method,project.analysis.params).then(h=>{if(valid)setStale(h!==project.analysis?.inputHash);});return()=>{valid=false;};},[project.dataset,project.analysis,project.style.ordinationInput]);
-  useEffect(()=>{function keys(e:KeyboardEvent){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='s'){e.preventDefault();saveProject(project);}if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'&&!['INPUT','TEXTAREA'].includes((e.target as HTMLElement).tagName)){e.preventDefault();e.shiftKey?redo():undo();}}window.addEventListener('keydown',keys);return()=>window.removeEventListener('keydown',keys);},[project,undo,redo]);
-  const shown=stale&&project.analysis?{...project,analysis:{...project.analysis,result:undefined}}:project;
-  return <div className="editor-shell" onPointerMove={e=>{if(resizing.current==='left')setLeftWidth(Math.max(260,Math.min(520,e.clientX)));if(resizing.current==='right')setRightWidth(Math.max(250,Math.min(500,window.innerWidth-e.clientX)));}} onPointerUp={()=>resizing.current=null}>
-    <div className="project-toolbar"><button className="icon-button back-button" onClick={onExit} aria-label="返回模板库"><ChevronLeft size={20}/></button><input className="project-name" aria-label="项目名称" value={project.name} onChange={e=>commit({...project,name:e.target.value})}/><div className="history-buttons"><button disabled={!canUndo} onClick={undo} title="撤销"><Undo2 size={18}/><span>撤销</span></button><button disabled={!canRedo} onClick={redo} title="重做"><Redo2 size={18}/><span>重做</span></button></div><div className="toolbar-actions"><button onClick={()=>saveProject(project)}><Save size={16}/><span>保存项目</span></button><button className="primary" disabled={errors.length>0} onClick={()=>setExporting(true)}><Download size={16}/><span>导出图片</span></button></div></div>
-    <div className="mobile-tabs">{[['data','数据'],['preview','预览'],['settings','设置']].map(([id,label])=><button className={mobile===id?'active':''} key={id} onClick={()=>setMobile(id)}>{label}</button>)}</div>
-    <div className={`editor-layout mobile-${mobile}`} style={{'--left-panel':`${leftWidth}px`,'--right-panel':`${rightWidth}px`} as React.CSSProperties}>
-      <aside className="left-panel"><div className="panel-tabs">{[['data','数据'],['analysis','分析'],['layers','图层']].map(([id,name])=><button key={id} className={tab===id?'active':''} onClick={()=>setTab(id)}>{name}</button>)}</div><div className="panel-content">{template.id.startsWith('tree-')&&tab!=='analysis'?<TreePanel project={project} commit={commit}/>:tab==='data'?<DataPanel project={project} template={template} commit={commit} issues={issues}/>:tab==='analysis'?<AnalysisPanel project={project} template={template} commit={commit} stale={stale}/>:<><LayersPanel project={project} template={template} commit={commit}/><SpecialPanel project={project} commit={commit}/>{template.familyId==='ordination'&&<OrdinationPanel project={project} commit={commit}/>}</>}</div></aside>
-      <div className="panel-resize left-resize" role="separator" aria-label="调整数据面板宽度" onPointerDown={e=>{resizing.current='left';e.currentTarget.setPointerCapture(e.pointerId);}}/>
-      <main className="canvas-workspace"><div className="canvas-topline"><a href={`#help/${template.id}`}><HelpCircle size={14}/>图表帮助</a><div><button className="icon-button" aria-label="缩小" onClick={()=>setZoom(Math.max(.25,zoom-.1))}><ZoomOut size={15}/></button><button className="zoom-value" onClick={()=>setZoom(1)}>{Math.round(zoom*100)}%</button><button className="icon-button" aria-label="放大" onClick={()=>setZoom(Math.min(3,zoom+.1))}><ZoomIn size={15}/></button></div></div>
-      {stale&&<div className="stale-banner">数据或参数已变化，分析结果需要重新计算。</div>}
-      <div className="canvas-scroll"><div ref={canvas} className="figure-paper" style={{width:`${zoom*100}%`,maxWidth:`${size.width*zoom}px`,aspectRatio:`${size.width}/${size.height}`}}>{errors.length?<div className="chart-error"><h3>数据需要修正</h3><p>{errors[0].message}</p><button onClick={()=>{setTab('data');setMobile('data');}}>检查数据</button></div>:<RenderedChart project={shown} template={template} onChange={commit}/>}</div></div>
-      </main><div className="panel-resize right-resize" role="separator" aria-label="调整属性面板宽度" onPointerDown={e=>{resizing.current='right';e.currentTarget.setPointerCapture(e.pointerId);}}/><aside className="right-panel"><Inspector project={project} template={template} commit={commit}/>{basicTemplates.some(t=>t.id===template.id)&&<BasicStylePanel project={project} commit={commit}/>}</aside>
-    </div><footer className="editor-status"><span className={errors.length?'status-error':'status-dot'}/><span>{errors.length?`${errors.length} 个数据问题`:`${project.dataset.tables.reduce((s,t)=>s+t.rows.length,0)} 行数据`}</span><span>{saveState}</span><span className="status-right">{size.width} × {size.height} px · {template.name}</span></footer>
-    {exporting&&<ExportDialog project={shown} getSVG={()=>canvas.current?.querySelector('svg[data-chart]')||null} onClose={()=>setExporting(false)}/>}
-  </div>;
+import { useEffect, useRef, useState } from "react";
+import {
+  Undo2,
+  Redo2,
+  Download,
+  Save,
+  ChevronLeft,
+  HelpCircle,
+  ZoomIn,
+  ZoomOut,
+} from "lucide-react";
+import type { Project, Template } from "../core/types";
+import { useProjectHistory } from "../core/history";
+import { inputHash, saveProject } from "../core/project";
+import { putProject } from "../core/storage";
+import { OrdinationPanel, ordinationIssues } from "../templates/ordination";
+import { BasicStylePanel, basicTemplates } from "../templates/basic";
+import { SpecialPanel, specialProjectIssues } from "../templates/special";
+import {
+  TreePanel,
+  requiredTreeCanvas,
+  treeProjectIssues,
+} from "../templates/tree";
+import { DataPanel } from "./DataPanel";
+import { Inspector } from "./Inspector";
+import { AnalysisPanel } from "./AnalysisPanel";
+import { LayersPanel } from "./LayersPanel";
+import { RenderedChart } from "./RenderedChart";
+import { ExportDialog } from "./ExportDialog";
+export function Editor({
+  initial,
+  template,
+  onExit,
+  onProjectChange,
+}: {
+  initial: Project;
+  template: Template;
+  onExit: () => void;
+  onProjectChange?: (p: Project) => void;
+}) {
+  const { project, commit, undo, redo, canUndo, canRedo } =
+    useProjectHistory(initial);
+  const [tab, setTab] = useState("data"),
+    [mobile, setMobile] = useState("preview"),
+    [exporting, setExporting] = useState(false),
+    [saveState, setSaveState] = useState("准备保存草稿"),
+    [zoom, setZoom] = useState(1),
+    [stale, setStale] = useState(false);
+  const canvas = useRef<HTMLDivElement>(null);
+  const latest = useRef(project);
+  latest.current = project;
+  const [leftWidth, setLeftWidth] = useState(300),
+    [rightWidth, setRightWidth] = useState(280);
+  const resizing = useRef<"left" | "right" | null>(null);
+  useEffect(() => {
+    onProjectChange?.(project);
+  }, [project]);
+  useEffect(
+    () => () => {
+      void putProject(latest.current);
+    },
+    [],
+  );
+  const size = template.id.startsWith("tree-")
+    ? requiredTreeCanvas(project)
+    : project.style;
+  const issues = [
+    ...template.validate(project.dataset, project.style),
+    ...specialProjectIssues(project),
+    ...ordinationIssues(project),
+    ...(template.id.startsWith("tree-") ? treeProjectIssues(project) : []),
+  ];
+  const errors = issues.filter((i) => i.severity !== "warning");
+  useEffect(() => {
+    setSaveState("保存草稿中…");
+    const timer = setTimeout(
+      () =>
+        putProject(project)
+          .then(() => setSaveState("本机草稿已保存"))
+          .catch(() => setSaveState("本机存储不可用，请下载项目文件")),
+      650,
+    );
+    return () => clearTimeout(timer);
+  }, [project]);
+  useEffect(() => {
+    let valid = true;
+    if (
+      !project.analysis?.result ||
+      project.style.ordinationInput === "scores"
+    ) {
+      setStale(false);
+      return;
+    }
+    setStale(true);
+    inputHash(
+      project.dataset,
+      project.analysis.method,
+      project.analysis.params,
+    ).then((h) => {
+      if (valid) setStale(h !== project.analysis?.inputHash);
+    });
+    return () => {
+      valid = false;
+    };
+  }, [project.dataset, project.analysis, project.style.ordinationInput]);
+  useEffect(() => {
+    function keys(e: KeyboardEvent) {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "s") {
+        e.preventDefault();
+        saveProject(project);
+      }
+      if (
+        (e.ctrlKey || e.metaKey) &&
+        e.key.toLowerCase() === "z" &&
+        !["INPUT", "TEXTAREA"].includes((e.target as HTMLElement).tagName)
+      ) {
+        e.preventDefault();
+        e.shiftKey ? redo() : undo();
+      }
+    }
+    window.addEventListener("keydown", keys);
+    return () => window.removeEventListener("keydown", keys);
+  }, [project, undo, redo]);
+  const shown =
+    stale && project.analysis
+      ? { ...project, analysis: { ...project.analysis, result: undefined } }
+      : project;
+  return (
+    <div
+      className="editor-shell"
+      onPointerMove={(e) => {
+        if (resizing.current === "left")
+          setLeftWidth(Math.max(260, Math.min(520, e.clientX)));
+        if (resizing.current === "right")
+          setRightWidth(
+            Math.max(250, Math.min(500, window.innerWidth - e.clientX)),
+          );
+      }}
+      onPointerUp={() => (resizing.current = null)}
+    >
+      <div className="project-toolbar">
+        <button
+          className="icon-button back-button"
+          onClick={onExit}
+          aria-label="返回模板库"
+        >
+          <ChevronLeft size={20} />
+        </button>
+        <input
+          className="project-name"
+          aria-label="项目名称"
+          value={project.name}
+          onChange={(e) => commit({ ...project, name: e.target.value })}
+        />
+        <div className="history-buttons">
+          <button disabled={!canUndo} onClick={undo} title="撤销">
+            <Undo2 size={18} />
+            <span>撤销</span>
+          </button>
+          <button disabled={!canRedo} onClick={redo} title="重做">
+            <Redo2 size={18} />
+            <span>重做</span>
+          </button>
+        </div>
+        <div className="toolbar-actions">
+          <button onClick={() => saveProject(project)}>
+            <Save size={16} />
+            <span>保存项目</span>
+          </button>
+          <button
+            className="primary"
+            disabled={errors.length > 0}
+            onClick={() => setExporting(true)}
+          >
+            <Download size={16} />
+            <span>导出图片</span>
+          </button>
+        </div>
+      </div>
+      <div className="mobile-tabs">
+        {[
+          ["data", "数据"],
+          ["preview", "预览"],
+          ["settings", "设置"],
+        ].map(([id, label]) => (
+          <button
+            className={mobile === id ? "active" : ""}
+            key={id}
+            onClick={() => setMobile(id)}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+      <div
+        className={`editor-layout mobile-${mobile}`}
+        style={
+          {
+            "--left-panel": `${leftWidth}px`,
+            "--right-panel": `${rightWidth}px`,
+          } as React.CSSProperties
+        }
+      >
+        <aside className="left-panel">
+          <div className="panel-tabs">
+            {[
+              ["data", "数据"],
+              ["analysis", "分析"],
+              ["layers", "图层"],
+            ].map(([id, name]) => (
+              <button
+                key={id}
+                className={tab === id ? "active" : ""}
+                onClick={() => setTab(id)}
+              >
+                {name}
+              </button>
+            ))}
+          </div>
+          <div className="panel-content">
+            {template.id.startsWith("tree-") && tab !== "analysis" ? (
+              <TreePanel project={project} commit={commit} />
+            ) : tab === "data" ? (
+              <DataPanel
+                project={project}
+                template={template}
+                commit={commit}
+                issues={issues}
+              />
+            ) : tab === "analysis" ? (
+              <AnalysisPanel
+                project={project}
+                template={template}
+                commit={commit}
+                stale={stale}
+              />
+            ) : (
+              <>
+                <LayersPanel
+                  project={project}
+                  template={template}
+                  commit={commit}
+                />
+                <SpecialPanel project={project} commit={commit} />
+                {template.familyId === "ordination" && (
+                  <OrdinationPanel project={project} commit={commit} />
+                )}
+              </>
+            )}
+          </div>
+        </aside>
+        <div
+          className="panel-resize left-resize"
+          role="separator"
+          aria-label="调整数据面板宽度"
+          onPointerDown={(e) => {
+            resizing.current = "left";
+            e.currentTarget.setPointerCapture(e.pointerId);
+          }}
+        />
+        <main className="canvas-workspace">
+          <div className="canvas-topline">
+            <a href={`#help/${template.id}`}>
+              <HelpCircle size={14} />
+              图表帮助
+            </a>
+            <div>
+              <button
+                className="icon-button"
+                aria-label="缩小"
+                onClick={() => setZoom(Math.max(0.25, zoom - 0.1))}
+              >
+                <ZoomOut size={15} />
+              </button>
+              <button className="zoom-value" onClick={() => setZoom(1)}>
+                {Math.round(zoom * 100)}%
+              </button>
+              <button
+                className="icon-button"
+                aria-label="放大"
+                onClick={() => setZoom(Math.min(3, zoom + 0.1))}
+              >
+                <ZoomIn size={15} />
+              </button>
+            </div>
+          </div>
+          {stale && (
+            <div className="stale-banner">
+              数据或参数已变化，分析结果需要重新计算。
+            </div>
+          )}
+          <div className="canvas-scroll">
+            <div
+              ref={canvas}
+              className="figure-paper"
+              style={{
+                width: `${zoom * 100}%`,
+                maxWidth: `${size.width * zoom}px`,
+                aspectRatio: `${size.width}/${size.height}`,
+              }}
+            >
+              {errors.length ? (
+                <div className="chart-error">
+                  <h3>数据需要修正</h3>
+                  <p>{errors[0].message}</p>
+                  <button
+                    onClick={() => {
+                      setTab("data");
+                      setMobile("data");
+                    }}
+                  >
+                    检查数据
+                  </button>
+                </div>
+              ) : (
+                <RenderedChart
+                  project={shown}
+                  template={template}
+                  onChange={commit}
+                />
+              )}
+            </div>
+          </div>
+        </main>
+        <div
+          className="panel-resize right-resize"
+          role="separator"
+          aria-label="调整属性面板宽度"
+          onPointerDown={(e) => {
+            resizing.current = "right";
+            e.currentTarget.setPointerCapture(e.pointerId);
+          }}
+        />
+        <aside className="right-panel">
+          <Inspector project={project} template={template} commit={commit} />
+          {basicTemplates.some((t) => t.id === template.id) && (
+            <BasicStylePanel project={project} commit={commit} />
+          )}
+        </aside>
+      </div>
+      <footer className="editor-status">
+        <span className={errors.length ? "status-error" : "status-dot"} />
+        <span>
+          {errors.length
+            ? `${errors.length} 个数据问题`
+            : `${project.dataset.tables.reduce((s, t) => s + t.rows.length, 0)} 行数据`}
+        </span>
+        <span>{saveState}</span>
+        <span className="status-right">
+          {size.width} × {size.height} px · {template.name}
+        </span>
+      </footer>
+      {exporting && (
+        <ExportDialog
+          project={shown}
+          getSVG={() =>
+            canvas.current?.querySelector("svg[data-chart]") || null
+          }
+          onClose={() => setExporting(false)}
+        />
+      )}
+    </div>
+  );
 }

@@ -1,7 +1,9 @@
 name: 构建与验收
 on:
   push:
+    paths-ignore: ['docs/**', 'tests/artifacts/**', '**/*.md']
   pull_request:
+    paths-ignore: ['docs/**', 'tests/artifacts/**', '**/*.md']
   workflow_dispatch:
 permissions:
   contents: read
@@ -19,6 +21,9 @@ jobs:
       - run: npm ci
         working-directory: web
       - run: npm run build && npm test
+        working-directory: web
+      - name: 记录发行源码与版本
+        run: node --input-type=commonjs -e 'require("node:fs").writeFileSync("dist/version.json", JSON.stringify({version:require("./package.json").version,revision:process.env.GITHUB_SHA,builtAt:new Date().toISOString()}))'
         working-directory: web
       - run: npx playwright install --with-deps chromium firefox webkit
         working-directory: web

@@ -378,10 +378,17 @@ function Enrichment({ project: p }: RendererProps) {
   if (issues.length) return <Invalid project={p} issues={issues} />;
   const t = pick(p.dataset, "enrichment")!,
     rows = ordered(t, p),
-    { left, top, iw, ih } = dimensions(p),
+    { left, top: baseTop, iw, ih: baseHeight } = dimensions(p),
     pal = palette(p);
   if (circle) return <CircleEnrichment project={p} rows={rows} />;
   const bar = p.templateId === "enrichment-bar",
+    classes = Array.from(new Set(rows.map((r) => r.group))),
+    classSpace =
+      enabled(p, "showEnrichClass", false) && enabled(p, "showLegend")
+        ? Math.ceil(classes.length / 3) * 18
+        : 0,
+    top = baseTop + classSpace,
+    ih = baseHeight - classSpace,
     metric = text(p, "enrichMetric", "ratio"),
     val = (r: (typeof rows)[number]) =>
       metric === "count" ? r.count : r.ratio,
@@ -410,6 +417,19 @@ function Enrichment({ project: p }: RendererProps) {
       ))}
       {rows.map((r, i) => (
         <g key={r.id}>
+          {enabled(p, "showEnrichClass", false) && (
+            <g data-enrich-class={r.group}>
+              <rect
+                x={left - 7}
+                y={top + i * dy + 2}
+                width={5}
+                height={Math.max(1, dy - 4)}
+                fill={pal[classes.indexOf(r.group) % pal.length]}
+              >
+                <title>{`${r.group}`}</title>
+              </rect>
+            </g>
+          )}
           {enabled(p, "showLabels") && (
             <text
               x={left - 13}
@@ -490,6 +510,21 @@ function Enrichment({ project: p }: RendererProps) {
               面积：Count
             </text>
           )}
+        </g>
+      )}
+      {enabled(p, "showEnrichClass", false) && enabled(p, "showLegend") && (
+        <g data-special-layer="enrich-class-legend">
+          {classes.map((c, i) => (
+            <g
+              key={c}
+              transform={`translate(${left + (i % 3) * 150},${top - 55 - Math.floor(i / 3) * 17})`}
+            >
+              <rect y={-7} width={8} height={8} fill={pal[i % pal.length]} />
+              <text x={13} fontSize={10}>
+                {c}
+              </text>
+            </g>
+          ))}
         </g>
       )}
     </Frame>
@@ -691,6 +726,7 @@ export const differentialTemplates: Template[] = [
         defaultStyle: { marginLeft: 210, marginTop: 105 },
         controls: [
           ...enrichControls,
+          bool("showEnrichClass", "显示条目分类色带"),
           opt("enrichMetric", "横轴数值", [
             ["ratio", "GeneRatio"],
             ["count", "Count"],
@@ -706,7 +742,9 @@ export const differentialTemplates: Template[] = [
                 num("enrichBarRadius", "条形圆角", 0, 16),
               ]),
         ],
-        inputHelp: enrichHelp,
+        inputHelp:
+          enrichHelp +
+          " 可选 Class 列填写分类；打开条目分类色带后按 Class 绘制左侧色带及分类图例。",
         sourceUrls: ["https://www.chiplot.online/enrich_plot.html"],
       },
     ),

@@ -3,17 +3,20 @@
 
 Does not change infrastructure, DNS, or other users' tasks. Creates five small
 anonymous test jobs, saves their public results locally, then deletes those jobs.
-Python standard library only; independent PDF/EPS opening uses Poppler and gs.
+Uses the pinned httpx client for connection reuse; independent PDF/EPS opening
+uses Poppler and gs. Existing proxy settings and certificate validation remain.
 """
 import argparse
 import base64
 import binascii
 import datetime as dt
 import hashlib
+import http.client
 import json
 import math
 from pathlib import Path
 import shutil
+import ssl
 import struct
 import subprocess
 import sys
@@ -23,6 +26,8 @@ import urllib.parse
 import urllib.request
 import zlib
 
+import httpx
+
 
 def require(condition, message):
     if not condition:
@@ -30,10 +35,17 @@ def require(condition, message):
 
 
 class Api:
-    def __init__(self, base, timeout):
+    def __init__(self, base, timeout, pooled=False):
         parsed = urllib.parse.urlsplit(base)
         require(parsed.scheme in ('http', 'https') and parsed.netloc and not parsed.username and not parsed.password and not parsed.query and not parsed.fragment, 'base URL 必须是无凭据的 HTTP(S) 网站地址')
         self.base, self.timeout = base.rstrip('/'), timeout
+        self.transport_retries = []
+        self.client = httpx.Client(verify=True, trust_env=True, timeout=15,
+            limits=httpx.Limits(max_connections=1, max_keepalive_connections=1, keepalive_expiry=60)) if pooled else None
+
+    def close(self):
+        if self.client:
+            self.client.close()
 
     def request(self, path, payload=None, token=None, method=None, raw=False):
         headers = {'Content-Type':'application/json', 'User-Agent':'OpenAcad-production-smoke/1'}
@@ -41,11 +53,45 @@ class Api:
             headers['Authorization'] = 'Bearer ' + token
         body = None if payload is None else json.dumps(payload, ensure_ascii=False).encode()
         req = urllib.request.Request(self.base+path, data=body, headers=headers, method=method)
-        try:
-            with urllib.request.urlopen(req, timeout=15) as response:
-                status, content = response.status, response.read(25_000_001)
-        except urllib.error.HTTPError as error:
-            status, content = error.code, error.read(1_000_000)
+        # Read/delete are idempotent; a lost POST response must never create a
+        # second job. HTTP business errors and certificate failures are final.
+        safe_retry = req.get_method() in ('GET', 'DELETE')
+        for attempt in range(4 if safe_retry else 1):
+            try:
+                if self.client:
+                    with self.client.stream(req.get_method(), req.full_url, headers=headers, content=body) as response:
+                        status = response.status_code
+                        chunks, count = [], 0
+                        for chunk in response.iter_bytes():
+                            count += len(chunk)
+                            require(count <= 25_000_000, '响应超过验收脚本大小上限')
+                            chunks.append(chunk)
+                        content = b''.join(chunks)
+                else:
+                    with urllib.request.urlopen(req, timeout=15) as response:
+                        status, content = response.status, response.read(25_000_001)
+                break
+            except urllib.error.HTTPError as error:
+                status, content = error.code, error.read(1_000_000)
+                break
+            except (urllib.error.URLError, OSError, http.client.HTTPException, httpx.TransportError) as error:
+                reason = error.reason if isinstance(error, urllib.error.URLError) else error
+                chain, current = [], reason
+                while current and len(chain) < 8:
+                    chain.append(current)
+                    current = current.__cause__
+                certificate_error = any(isinstance(e, ssl.SSLCertVerificationError) or 'CERTIFICATE_VERIFY_FAILED' in str(e) for e in chain)
+                transient = isinstance(reason, (TimeoutError, ConnectionResetError, ConnectionAbortedError,
+                    BrokenPipeError, ssl.SSLEOFError, http.client.RemoteDisconnected, http.client.IncompleteRead,
+                    httpx.ReadError, httpx.WriteError, httpx.RemoteProtocolError, httpx.TimeoutException)) or any(isinstance(e, ssl.SSLEOFError) or 'UNEXPECTED_EOF_WHILE_READING' in str(e) for e in chain)
+                if not safe_retry or not transient or certificate_error or attempt >= 3:
+                    raise
+                pause = (0.5, 1, 2)[attempt]
+                event = {'method':req.get_method(), 'path':'/api/jobs/{id}' if path.startswith('/api/jobs/') else path,
+                    'attempt':attempt+1, 'errorType':type(reason).__name__, 'delaySeconds':pause}
+                self.transport_retries.append(event)
+                print(f"传输重试 {event['method']} {event['path']}：{event['errorType']}（{attempt+1}/3）", file=sys.stderr, flush=True)
+                time.sleep(pause)
         require(len(content)<=25_000_000, '响应超过验收脚本大小上限')
         return status, content if raw else json.loads(content)
 
@@ -67,7 +113,8 @@ class Api:
                 time.sleep(.4)
             raise RuntimeError('模拟任务等待超时')
         finally:
-            require(self.request(path,token=token,method='DELETE')[0]==200, '模拟任务清理失败')
+            # A retried DELETE can return 404 after the first response was lost.
+            require(self.request(path,token=token,method='DELETE')[0] in (200,404), '模拟任务清理失败')
             require(self.request(path,token=token)[0]==404, '清理后任务凭据未失效')
 
 
@@ -191,10 +238,12 @@ def main():
     parser.add_argument('--skip-independent-open',action='store_true',help='跳过Poppler/Ghostscript；报告标为部分验证')
     args=parser.parse_args(); args.output.mkdir(parents=True,exist_ok=True)
     report={'schemaVersion':1,'baseUrl':args.base_url,'checkedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'dataSource':'本脚本确定性生成的模拟数据','cases':[],'complete':False}
+    api = None
     try:
         if not args.skip_independent_open:
             require(all(shutil.which(name) for name in ['pdftoppm','gs']), '完整导出验收需要本机 Poppler(pdftoppm) 和 Ghostscript(gs)，或显式选择 --skip-independent-open 进行部分验证')
-        api=Api(args.base_url,args.timeout)
+        api=Api(args.base_url,args.timeout,pooled=True)
+        report['transport'] = {'client':'httpx', 'version':httpx.__version__, 'connectionReuse':True, 'certificateVerification':True, 'existingProxySettingsPreserved':True}
         status,page=api.request('/',raw=True);require(status==200 and b'OpenAcad' in page,'网站首页不可访问或标题不符')
         status,health=api.request('/api/health');require(status==200 and health['status']=='ok' and health['workers']>=args.min_workers,'API/worker 健康状态不符')
         report['health']=health
@@ -221,6 +270,9 @@ def main():
     except Exception as error:
         report['status']='failed';report['error']=str(error);print('验收失败：'+str(error),file=sys.stderr)
     finally:
+        report['transportRetries'] = api.transport_retries if api else []
+        if api:
+            api.close()
         (args.output/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     return 0 if report['status'] in ('passed','partial') else 1
 

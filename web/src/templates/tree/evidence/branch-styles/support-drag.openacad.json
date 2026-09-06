@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "id": "2a83a987-1f2e-4227-a8c8-98ac48e3b2c0",
+  "name": "无根进化树工作台 · 模拟数据",
+  "templateId": "tree-unrooted",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T14:39:38.113Z",
+  "updatedAt": "2026-09-06T14:39:39.196Z",
+  "dataset": {
+    "tables": [],
+    "text": "((甲:1,乙:2)85[&other=0.84,posterior=0.84]:3,(丙:2,丁:3)96[&other=0.96,posterior=0.96]:2)100[&other=1,posterior=1];",
+    "format": "newick"
+  },
+  "mapping": {},
+  "style": {
+    "width": 900,
+    "height": 900,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 82,
+    "marginRight": 48,
+    "marginBottom": 105,
+    "marginLeft": 95,
+    "title": "植物亲缘关系 · 无根树",
+    "subtitle": "自行生成的模拟树 · 不代表真实系统发育结论",
+    "fontFamily": "Noto Sans SC",
+    "fontSize": 14,
+    "titleSize": 24,
+    "textColor": "#263445",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#587ab8",
+      "#b78bc1",
+      "#b9ac62",
+      "#76b7bc"
+    ],
+    "opacity": 0.9,
+    "showLegend": false,
+    "showGrid": true,
+    "showLabels": false,
+    "xTitle": "",
+    "yTitle": "数值",
+    "pointSize": 5,
+    "lineWidth": 1.7,
+    "orientation": "vertical",
+    "sort": "input",
+    "branchLinkType": "bezierY",
+    "branchLineCap": "round",
+    "branchOpacity": 1,
+    "supportSource": "variable",
+    "supportVariable": "OTHER",
+    "supportType": "text",
+    "supportFactor": 100,
+    "supportDecimals": 2,
+    "supportCircleSize": 4,
+    "supportSize": 10,
+    "supportColor": "#536875",
+    "supportAnchor": "start",
+    "supportBold": false,
+    "supportItalic": false,
+    "supportX": 5,
+    "supportY": -6,
+    "barPadding": 0.25,
+    "axisRotation": 0,
+    "curve": "linear",
+    "errorType": "sd",
+    "errorInput": "raw",
+    "showPoints": true,
+    "showBox": true,
+    "distribution": "kde",
+    "bandwidthMultiplier": 1,
+    "normalize": false,
+    "treeLayout": "normal",
+    "treeWidth": 340,
+    "labelWidth": 130,
+    "leafSpacing": 28,
+    "useBranchLength": true,
+    "showNodes": true,
+    "nodeSize": 3,
+    "branchColor": "#536875",
+    "nodeColor": "#087f8c",
+    "showSupport": true,
+    "alignLabels": true,
+    "showScale": true,
+    "treeRotation": -90,
+    "angleRange": 360,
+    "timeLayout": "age",
+    "treeDirection": "ltr",
+    "inwardTree": false,
+    "innerRadius": 180,
+    "nodeAgeSource": "height",
+    "showHPD": true,
+    "hpdColor": "#447eaf",
+    "hpdWidth": 7,
+    "hpdOpacity": 0.35,
+    "hpdCaps": true,
+    "showTimeAxis": true,
+    "showNodeAges": false,
+    "showPosterior": false,
+    "ageFontSize": 10,
+    "ageColor": "#314d5a",
+    "timeUnit": "原树时间单位"
+  },
+  "layers": [],
+  "layout": {
+    "treeState": {
+      "source": "((甲:1,乙:2)85[&other=0.84,posterior=0.84]:3,(丙:2,丁:3)96[&other=0.96,posterior=0.96]:2)100[&other=1,posterior=1];",
+      "root": {
+        "annotationValues": {
+          "other": 1,
+          "posterior": 1
+        },
+        "posterior": 1,
+        "id": "100",
+        "name": "100",
+        "length": 0,
+        "lengthSpecified": false,
+        "children": [
+          {
+            "annotationValues": {
+              "other": 0.84,
+              "posterior": 0.84
+            },
+            "posterior": 0.84,
+            "id": "85",
+            "name": "85",
+            "length": 3,
+            "lengthSpecified": true,
+            "children": [
+              {
+                "id": "甲",
+                "name": "甲",
+                "length": 1,
+                "lengthSpecified": true,
+                "children": []
+              },
+              {
+                "id": "乙",
+                "name": "乙",
+                "length": 2,
+                "lengthSpecified": true,
+                "children": []
+              }
+            ],
+            "support": 85
+          },
+          {
+            "annotationValues": {
+              "other": 0.96,
+              "posterior": 0.96
+            },
+            "posterior": 0.96,
+            "id": "96",
+            "name": "96",
+            "length": 2,
+            "lengthSpecified": true,
+            "children": [
+              {
+                "id": "丙",
+                "name": "丙",
+                "length": 2,
+                "lengthSpecified": true,
+                "children": []
+              },
+              {
+                "id": "丁",
+                "name": "丁",
+                "length": 3,
+                "lengthSpecified": true,
+                "children": []
+              }
+            ],
+            "support": 96
+          }
+        ],
+        "support": 100
+      }
+    },
+    "treeSupportOffsets": {
+      "85": {
+        "x": 42.093541202672554,
+        "y": -21.046770601336277
+      }
+    }
+  }
+}

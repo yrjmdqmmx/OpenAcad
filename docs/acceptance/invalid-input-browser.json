@@ -1,0 +1,1300 @@
+{
+  "checkedAt": "2026-09-06T14:04:38.694Z",
+  "method": "实际独立Chrome逐模板导入无数据项目，验证可见中文错误；不是穷举所有字段错误",
+  "results": [
+    {
+      "id": "bar-grouped",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 12
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "scatter",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "横坐标",
+          "original": 1
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“横坐标”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“横坐标”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "line",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 10
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "heatmap",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "matrix",
+          "row": 2,
+          "column": 2,
+          "columnName": "代谢通路A",
+          "original": 2
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“表达量模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字检查数据",
+          "请检查数据“表达量模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "box",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 15
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "pie",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 24
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "bar",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 24
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "bar-category",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 14
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "bar-error",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 15
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "bar-grouped-error",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 15
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "scatter-error",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 15
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "bar-stacked",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 12
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "bar-grouped-stacked",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 12
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "bar-line",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 24
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "lollipop",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 24
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "lollipop-category",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 14
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "line-error",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 10
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "box-grouped",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 15
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "violin",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 15
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "raincloud",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 15
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "ridgeline",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 15
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "upset",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "missing-required-columns"
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正缺少必填列“集合”。请按示例表头命名。检查数据",
+          "请检查数据缺少必填列“集合”。请按示例表头命名。缺少必填列“成员”。请按示例表头命名。"
+        ]
+      }
+    },
+    {
+      "id": "rose",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 24
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "radar",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。雷达图至少需要 3 个不同类别。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "数值",
+          "original": 12
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“数值”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "dumbbell",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "起点",
+          "original": 24
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“起点”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“起点”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "scatter-grouped",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请添加一张数据表。检查数据",
+        "请检查数据请添加一张数据表。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "data",
+          "row": 2,
+          "column": 2,
+          "columnName": "横坐标",
+          "original": 1
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正第 2 行“横坐标”的“不是数字”不是有限数字。请删除单位或其他文字。检查数据",
+          "请检查数据第 2 行“横坐标”的“不是数字”不是有限数字。请删除单位或其他文字。"
+        ]
+      }
+    },
+    {
+      "id": "circle-heatmap",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "matrix",
+          "row": 2,
+          "column": 2,
+          "columnName": "代谢通路A",
+          "original": 2
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“表达量模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字检查数据",
+          "请检查数据“表达量模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "binary-dot",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "matrix",
+          "row": 2,
+          "column": 2,
+          "columnName": "代谢通路A",
+          "original": 0
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“存在与缺失模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字检查数据",
+          "请检查数据“存在与缺失模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字“存在与缺失模拟矩阵”第 2 行、“代谢通路A”：二值矩阵只能填写 0 或 1"
+        ]
+      }
+    },
+    {
+      "id": "binary-rect",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "matrix",
+          "row": 2,
+          "column": 2,
+          "columnName": "代谢通路A",
+          "original": 0
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“存在与缺失模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字检查数据",
+          "请检查数据“存在与缺失模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字“存在与缺失模拟矩阵”第 2 行、“代谢通路A”：二值矩阵只能填写 0 或 1"
+        ]
+      }
+    },
+    {
+      "id": "bubble-matrix",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "matrix",
+          "row": 2,
+          "column": 2,
+          "columnName": "代谢通路A",
+          "original": 2
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“表达量模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字检查数据",
+          "请检查数据“表达量模拟矩阵”第 2 行、“代谢通路A”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "correlation",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "correlation",
+          "row": 2,
+          "column": 2,
+          "columnName": "温度",
+          "original": 1
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“环境相关系数（模拟）”第 2 行、“温度”：“不是数字”不是有限数字检查数据",
+          "请检查数据“环境相关系数（模拟）”第 2 行、“温度”：“不是数字”不是有限数字“环境相关系数（模拟）”第 2 行、“温度”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "double-correlation",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "correlation",
+          "row": 2,
+          "column": 2,
+          "columnName": "基因A",
+          "original": 0.71
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“组间相关系数（模拟）”第 2 行、“基因A”：“不是数字”不是有限数字检查数据",
+          "请检查数据“组间相关系数（模拟）”第 2 行、“基因A”：“不是数字”不是有限数字“组间相关系数（模拟）”第 2 行、“基因A”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "mantel",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "correlation",
+          "row": 2,
+          "column": 2,
+          "columnName": "温度",
+          "original": 1
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“环境相关系数（模拟）”第 2 行、“温度”：“不是数字”不是有限数字检查数据",
+          "请检查数据“环境相关系数（模拟）”第 2 行、“温度”：“不是数字”不是有限数字“环境相关系数（模拟）”第 2 行、“温度”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "venn",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "too-many-sets",
+          "expected": "2～5"
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正韦恩图支持 2～5 个集合，每列代表一个集合检查数据",
+          "请检查数据韦恩图支持 2～5 个集合，每列代表一个集合"
+        ]
+      }
+    },
+    {
+      "id": "packing",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "items",
+          "row": 2,
+          "column": 2,
+          "columnName": "value",
+          "original": 18
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“丰度模拟数据”第 2 行、“value”：“不是数字”不是有限数字检查数据",
+          "请检查数据“丰度模拟数据”第 2 行、“value”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "sankey",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "links",
+          "row": 2,
+          "column": 3,
+          "columnName": "value",
+          "original": 45
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“能量流模拟数据”第 2 行、“value”：“不是数字”不是有限数字检查数据",
+          "请检查数据“能量流模拟数据”第 2 行、“value”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "network",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "nodes",
+          "row": 2,
+          "column": 4,
+          "columnName": "size",
+          "original": 22
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“节点模拟数据”第 2 行、“size”：“不是数字”不是有限数字检查数据",
+          "请检查数据“节点模拟数据”第 2 行、“size”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "map",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "coordinates",
+          "row": 2,
+          "column": 2,
+          "columnName": "longitude",
+          "original": 116.4
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“模拟采样点”第 2 行、“longitude”：“不是数字”不是有限数字检查数据",
+          "请检查数据“模拟采样点”第 2 行、“longitude”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "volcano",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "genes",
+          "row": 2,
+          "column": 2,
+          "columnName": "log2FC",
+          "original": 0
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“差异结果（模拟，非真实统计）”第 2 行、“log2FC”：“不是数字”不是有限数字检查数据",
+          "请检查数据“差异结果（模拟，非真实统计）”第 2 行、“log2FC”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "enrichment-dot",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "enrichment",
+          "row": 2,
+          "column": 4,
+          "columnName": "Qvalue",
+          "original": 0.003
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“富集结果（模拟）”第 2 行、“Qvalue”：“不是数字”不是有限数字检查数据",
+          "请检查数据“富集结果（模拟）”第 2 行、“Qvalue”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "enrichment-bar",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "enrichment",
+          "row": 2,
+          "column": 4,
+          "columnName": "Qvalue",
+          "original": 0.003
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“富集结果（模拟）”第 2 行、“Qvalue”：“不是数字”不是有限数字检查数据",
+          "请检查数据“富集结果（模拟）”第 2 行、“Qvalue”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "enrichment-circle",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "enrichment",
+          "row": 2,
+          "column": 4,
+          "columnName": "Qvalue",
+          "original": 0.003
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“富集结果（模拟）”第 2 行、“Qvalue”：“不是数字”不是有限数字检查数据",
+          "请检查数据“富集结果（模拟）”第 2 行、“Qvalue”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "gene-cluster",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "genes",
+          "row": 2,
+          "column": 3,
+          "columnName": "start",
+          "original": 100
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“模拟基因簇”第 2 行、“start”：“不是数字”不是有限数字检查数据",
+          "请检查数据“模拟基因簇”第 2 行、“start”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "protein-domains",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "sequences",
+          "row": 2,
+          "column": 2,
+          "columnName": "length",
+          "original": 720
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“序列长度”第 2 行、“length”：“不是数字”不是有限数字检查数据",
+          "请检查数据“序列长度”第 2 行、“length”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "protein-motifs",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "sequences",
+          "row": 2,
+          "column": 2,
+          "columnName": "length",
+          "original": 720
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“序列长度”第 2 行、“length”：“不是数字”不是有限数字检查数据",
+          "请检查数据“序列长度”第 2 行、“length”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "genome-circos",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "chromosomes",
+          "row": 2,
+          "column": 2,
+          "columnName": "length",
+          "original": 12000
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“模拟染色体”第 2 行、“length”：“不是数字”不是有限数字检查数据",
+          "请检查数据“模拟染色体”第 2 行、“length”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "synteny",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正缺少数据表，请先载入示例或添加数据表检查数据",
+        "请检查数据缺少数据表，请先载入示例或添加数据表缺少数据表，请先载入示例或添加数据表缺少数据表，请先载入示例或添加数据表"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "chromosomes",
+          "row": 2,
+          "column": 2,
+          "columnName": "length",
+          "original": 3400
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“染色体绘图范围（最大基因终点）”第 2 行、“length”：“不是数字”不是有限数字检查数据",
+          "请检查数据“染色体绘图范围（最大基因终点）”第 2 行、“length”：“不是数字”不是有限数字"
+        ]
+      }
+    },
+    {
+      "id": "pca",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请上传样本与特征矩阵。检查数据",
+        "请检查数据请上传样本与特征矩阵。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "response",
+          "row": 2,
+          "column": 2,
+          "columnName": "物种甲",
+          "original": 13.51
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。检查数据",
+          "请检查数据“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。"
+        ]
+      }
+    },
+    {
+      "id": "pcoa",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请上传样本与特征矩阵。检查数据",
+        "请检查数据请上传样本与特征矩阵。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "response",
+          "row": 2,
+          "column": 2,
+          "columnName": "物种甲",
+          "original": 13.51
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。检查数据",
+          "请检查数据“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。"
+        ]
+      }
+    },
+    {
+      "id": "nmds",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请上传样本与特征矩阵。检查数据",
+        "请检查数据请上传样本与特征矩阵。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "response",
+          "row": 2,
+          "column": 2,
+          "columnName": "物种甲",
+          "original": 13.51
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。检查数据",
+          "请检查数据“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。"
+        ]
+      }
+    },
+    {
+      "id": "cca",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请上传样本与特征矩阵。检查数据",
+        "请检查数据请上传样本与特征矩阵。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "response",
+          "row": 2,
+          "column": 2,
+          "columnName": "物种甲",
+          "original": 13.51
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。检查数据",
+          "请检查数据“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。"
+        ]
+      }
+    },
+    {
+      "id": "rda",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正请上传样本与特征矩阵。检查数据",
+        "请检查数据请上传样本与特征矩阵。"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-number",
+          "table": "response",
+          "row": 2,
+          "column": 2,
+          "columnName": "物种甲",
+          "original": 13.51
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。检查数据",
+          "请检查数据“样本与特征”第 2 行“物种甲”需要有限数字，不能留空。"
+        ]
+      }
+    },
+    {
+      "id": "tree-normal",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正Newick 第 1 个字符：请填写树文本。检查数据"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-newick-length",
+          "expected": "分支长度"
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正Newick 第 8 个字符：分支长度“不是数字”必须是非负有限数字。检查数据"
+        ]
+      }
+    },
+    {
+      "id": "tree-circle",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正Newick 第 1 个字符：请填写树文本。检查数据"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-newick-length",
+          "expected": "分支长度"
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正Newick 第 8 个字符：分支长度“不是数字”必须是非负有限数字。检查数据"
+        ]
+      }
+    },
+    {
+      "id": "tree-unrooted",
+      "status": "passed",
+      "input": "清空数据表与专业文本，保留有效项目版本和样式",
+      "messages": [
+        "数据需要修正Newick 第 1 个字符：请填写树文本。检查数据"
+      ],
+      "fieldCase": {
+        "damage": {
+          "type": "invalid-newick-length",
+          "expected": "分支长度"
+        },
+        "status": "passed",
+        "messages": [
+          "数据需要修正Newick 第 8 个字符：分支长度“不是数字”必须是非负有限数字。检查数据"
+        ]
+      }
+    }
+  ],
+  "fieldCheckedAt": "2026-09-06T14:07:09.872Z"
+}

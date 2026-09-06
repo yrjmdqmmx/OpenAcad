@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "e3fee3aa-5309-410e-9ff6-7f9750a831c4",
+  "name": "韦恩集合交集图 · 模拟数据",
+  "templateId": "venn",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:51:47.255Z",
+  "updatedAt": "2026-09-06T13:51:47.406Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "sets",
+        "name": "基因集合模拟数据",
+        "role": "sets",
+        "columns": [
+          "处理甲",
+          "处理乙",
+          "处理丙"
+        ],
+        "rows": [
+          [
+            "基因01",
+            "基因02",
+            "基因01"
+          ],
+          [
+            "基因02",
+            "基因03",
+            "基因04"
+          ],
+          [
+            "基因03",
+            "基因04",
+            "基因07"
+          ],
+          [
+            "基因05",
+            "基因06",
+            "基因08"
+          ],
+          [
+            "基因09",
+            "基因09",
+            "基因09"
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 130,
+    "title": "韦恩集合交集图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "vennSize": 1,
+    "setOpacity": 0.35,
+    "setStroke": 2,
+    "showZero": false
+  },
+  "layers": [],
+  "layout": {
+    "labelPositions": {
+      "venn-处理甲": {
+        "x": 409.02286621093754,
+        "y": 101.3968634228516
+      }
+    }
+  }
+}

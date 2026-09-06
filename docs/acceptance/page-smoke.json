@@ -1,0 +1,19 @@
+{
+  "checkedAt": "2026-09-06T15:00:49.276Z",
+  "url": "http://127.0.0.1:5178/acceptance/index.html",
+  "browser": "Installed Chrome via Playwright",
+  "desktopRows": 55,
+  "treeSearchRows": 3,
+  "mobile": {
+    "bodyWidth": 390,
+    "windowWidth": 390
+  },
+  "consoleErrors": [],
+  "unitCount": 311,
+  "controlCount": 2371,
+  "treeSeparateFrom82": true,
+  "shownFinalCounts": true,
+  "jsonReportStatus": "complete",
+  "csvStatus": 200,
+  "passed": true
+}

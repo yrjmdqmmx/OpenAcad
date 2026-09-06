@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "72718e24-503a-498e-92a9-87286c8c2538",
+  "name": "富集气泡图 · 模拟数据",
+  "templateId": "enrichment-dot",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:51:48.295Z",
+  "updatedAt": "2026-09-06T13:51:48.390Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "enrichment",
+        "name": "富集结果（模拟）",
+        "role": "enrichment",
+        "columns": [
+          "ID",
+          "GeneRatio",
+          "Description",
+          "Qvalue",
+          "Count",
+          "Class",
+          "Background",
+          "Up",
+          "Down"
+        ],
+        "rows": [
+          [
+            "GO:01",
+            "12/180",
+            "碳代谢调节",
+            0.003,
+            12,
+            "生物过程",
+            180,
+            8,
+            4
+          ],
+          [
+            "GO:02",
+            "9/140",
+            "细胞信号传导",
+            0.018,
+            9,
+            "生物过程",
+            140,
+            3,
+            6
+          ],
+          [
+            "GO:03",
+            "18/210",
+            "膜蛋白运输",
+            0.001,
+            18,
+            "细胞组分",
+            210,
+            10,
+            8
+          ],
+          [
+            "GO:04",
+            "7/120",
+            "抗氧化反应",
+            0.037,
+            7,
+            "分子功能",
+            120,
+            5,
+            2
+          ],
+          [
+            "GO:05",
+            "14/195",
+            "核酸结合",
+            0.009,
+            14,
+            "分子功能",
+            195,
+            6,
+            8
+          ],
+          [
+            "GO:06",
+            "11/150",
+            "细胞器组织",
+            0.025,
+            11,
+            "细胞组分",
+            150,
+            4,
+            7
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 105,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 210,
+    "title": "富集气泡图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "topN": 20,
+    "enrichSort": "qvalue",
+    "lowQColor": "#d3695e",
+    "highQColor": "#387e9e",
+    "qColorMax": 0.05,
+    "showValues": true,
+    "showEnrichClass": true,
+    "enrichMetric": "ratio",
+    "labelLength": 20,
+    "enrichPointSize": 20,
+    "enrichPointStroke": 1
+  },
+  "layers": [],
+  "layout": {}
+}

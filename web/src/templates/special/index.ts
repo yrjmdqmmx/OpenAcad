@@ -18,51 +18,90 @@ export { SpecialPanel, specialProjectIssues } from "./advanced";
 for (const template of specialTemplates) {
   template.controls = template.controls.map((c) => {
     const visible =
-      c.key === "showDendrogram"
+      ["lowColor", "midColor", "highColor", "diverging"].includes(c.key) &&
+      template.id === "bubble-matrix"
         ? (p: import("../../core/types").Project) =>
-            p.analysis?.method === "cluster" && !!p.analysis.result
-        : c.key === "blankZero"
+            !p.style.bubbleColorMode || p.style.bubbleColorMode === "continuous"
+        : ["linkDistance", "repulsion"].includes(c.key) &&
+            template.id === "network"
           ? (p: import("../../core/types").Project) =>
-              p.dataset.tables.some(
-                (t) =>
-                  ["matrix", "correlation"].includes(t.role) &&
-                  t.rows.some((r) => r.slice(1).some((v) => Number(v) === 0)),
-              )
-          : c.key === "homologyOpacity"
+              !p.style.networkLayout || p.style.networkLayout === "force"
+          : c.key === "nodeShape"
             ? (p: import("../../core/types").Project) =>
-                Boolean(p.style.connectCategories)
-            : c.key === "trackValueMax"
+                !p.style.nodeShapeMode || p.style.nodeShapeMode === "uniform"
+            : ["edgeLabelSize", "edgeLabelColor"].includes(c.key)
               ? (p: import("../../core/types").Project) =>
-                  p.dataset.tables.some(
-                    (t) =>
-                      t.role === "tracks" &&
-                      t.rows.some(
-                        (r) => r[t.columns.indexOf("type")] === "value",
-                      ),
-                  )
-              : c.key === "breakGap"
+                  Boolean(p.style.showEdgeLabels)
+              : c.key === "edgeColor"
                 ? (p: import("../../core/types").Project) =>
-                    p.layers.some((l) => l.type === "gene-break" && l.visible)
-                : c.key === "showZero"
-                  ? (p: import("../../core/types").Project) => {
-                      const t = p.dataset.tables[0];
-                      if (!t) return false;
-                      const members = new Map<string, number>();
-                      t.columns.forEach((_, i) =>
-                        t.rows.forEach((r) => {
-                          if (r[i] !== null && String(r[i] ?? "").trim())
-                            members.set(
-                              String(r[i]),
-                              (members.get(String(r[i])) ?? 0) | (1 << i),
-                            );
-                        }),
-                      );
-                      return (
-                        new Set(members.values()).size <
-                        (1 << t.columns.length) - 1
-                      );
-                    }
-                  : undefined;
+                    !p.style.edgeColorMode ||
+                    p.style.edgeColorMode === "uniform"
+                : c.key === "showEnrichClass"
+                  ? (p: import("../../core/types").Project) =>
+                      p.dataset.tables.some(
+                        (t) =>
+                          t.role === "enrichment" &&
+                          t.columns.includes("Class"),
+                      )
+                  : c.key === "arrowHeadHeight"
+                    ? (p: import("../../core/types").Project) =>
+                        p.style.geneArrowShape === "shoulder"
+                    : c.key === "showDendrogram"
+                      ? (p: import("../../core/types").Project) =>
+                          p.analysis?.method === "cluster" &&
+                          !!p.analysis.result
+                      : c.key === "blankZero"
+                        ? (p: import("../../core/types").Project) =>
+                            p.dataset.tables.some(
+                              (t) =>
+                                ["matrix", "correlation"].includes(t.role) &&
+                                t.rows.some((r) =>
+                                  r.slice(1).some((v) => Number(v) === 0),
+                                ),
+                            )
+                        : c.key === "homologyOpacity"
+                          ? (p: import("../../core/types").Project) =>
+                              Boolean(p.style.connectCategories)
+                          : c.key === "trackValueMax"
+                            ? (p: import("../../core/types").Project) =>
+                                p.dataset.tables.some(
+                                  (t) =>
+                                    t.role === "tracks" &&
+                                    t.rows.some(
+                                      (r) =>
+                                        r[t.columns.indexOf("type")] ===
+                                        "value",
+                                    ),
+                                )
+                            : c.key === "breakGap"
+                              ? (p: import("../../core/types").Project) =>
+                                  p.layers.some(
+                                    (l) => l.type === "gene-break" && l.visible,
+                                  )
+                              : c.key === "showZero"
+                                ? (p: import("../../core/types").Project) => {
+                                    const t = p.dataset.tables[0];
+                                    if (!t) return false;
+                                    const members = new Map<string, number>();
+                                    t.columns.forEach((_, i) =>
+                                      t.rows.forEach((r) => {
+                                        if (
+                                          r[i] !== null &&
+                                          String(r[i] ?? "").trim()
+                                        )
+                                          members.set(
+                                            String(r[i]),
+                                            (members.get(String(r[i])) ?? 0) |
+                                              (1 << i),
+                                          );
+                                      }),
+                                    );
+                                    return (
+                                      new Set(members.values()).size <
+                                      (1 << t.columns.length) - 1
+                                    );
+                                  }
+                                : undefined;
     return visible ? { ...c, visible } : c;
   });
 }

@@ -1,5 +1,5 @@
-import React from "react";
-import { extraTracks, specialProjectIssues } from "./advanced";
+import React, { useState } from "react";
+import { extraTracks, specialProjectIssues, specialLayerTable } from "./advanced";
 import { ticks } from "d3";
 import type {
   DataTable,
@@ -540,7 +540,7 @@ function Circos({ project: p }: RendererProps) {
       })}
       <g data-special-layer="dynamic-genome-tracks">
         {customTracks.map((l, li) => {
-          const t = l.data!.tables[0],
+          const t = specialLayerTable(l)!,
             size = Number(l.settings.size || 22),
             outer =
               R -
@@ -561,7 +561,7 @@ function Circos({ project: p }: RendererProps) {
             color = String(l.settings.color || "#397e99");
           return (
             <g key={l.id}>
-              <title>{l.name}</title>
+              <title>{`${l.name}`}</title>
               {kind === "line"
                 ? arcs.map((c) => {
                     const rows = t.rows
@@ -862,7 +862,8 @@ function syntenyIssues(d: Dataset, raw = false): Issue[] {
   });
   return issues;
 }
-function Synteny({ project: p }: RendererProps) {
+function Synteny({ project: p, onLayoutChange }: RendererProps) {
+  const [drag, setDrag] = useState<{ id: string; x: number } | null>(null);
   const raw = text(p, "syntenyInput", "table") === "native",
     issues = syntenyIssues(p.dataset, raw);
   if (issues.length) return <Invalid project={p} issues={issues} />;
@@ -878,6 +879,16 @@ function Synteny({ project: p }: RendererProps) {
     }));
   if (text(p, "chromosomeSort", "input") === "name")
     chrs.sort((a, b) => a.id.localeCompare(b.id, "zh-CN"));
+  else if (Array.isArray(p.layout.chromosomeOrder)) {
+    const order = p.layout.chromosomeOrder as string[];
+    chrs.sort((a, b) => {
+      const rank = (id: string) =>
+        order.includes(id)
+          ? order.indexOf(id)
+          : order.length + chr.rows.findIndex((r) => r[0] === id);
+      return rank(a.id) - rank(b.id);
+    });
+  }
   const { left, top, iw, ih } = dimensions(p),
     pal = palette(p),
     maxLength = Math.max(...chrs.map((c) => c.length)),
@@ -909,8 +920,27 @@ function Synteny({ project: p }: RendererProps) {
       (r) => Number(at(lt, r, "evalue")) <= value(p, "syntenyEvalue", 1),
     ),
     blocks = Array.from(new Set(links.map((r) => String(at(lt, r, "block")))));
+  const pointerX = (e: React.PointerEvent<SVGGElement>) => {
+    const svg = e.currentTarget.ownerSVGElement!,
+      pt = svg.createSVGPoint();
+    pt.x = e.clientX;
+    pt.y = e.clientY;
+    return pt.matrixTransform(svg.getScreenCTM()!.inverse()).x;
+  };
   return (
     <Frame project={p}>
+      {drag && (
+        <line
+          data-synteny-drop-guide="true"
+          x1={drag.x}
+          x2={drag.x}
+          y1={top - 30}
+          y2={top + ih}
+          stroke="#237c83"
+          strokeWidth={2}
+          strokeDasharray="5 4"
+        />
+      )}
       {links.map((r, i) => {
         const a = genes.get(String(at(lt, r, "source")))!,
           b = genes.get(String(at(lt, r, "target")))!;
@@ -938,7 +968,44 @@ function Synteny({ project: p }: RendererProps) {
         );
       })}
       {chrs.map((c, i) => (
-        <g key={c.id}>
+        <g
+          key={c.id}
+          data-drag-chromosome={c.id}
+          style={{
+            cursor:
+              onLayoutChange && text(p, "chromosomeSort", "input") === "input"
+                ? "grab"
+                : "default",
+            touchAction: "none",
+          }}
+          onPointerDown={(e) => {
+            if (
+              !onLayoutChange ||
+              text(p, "chromosomeSort", "input") !== "input"
+            )
+              return;
+            e.currentTarget.setPointerCapture(e.pointerId);
+            setDrag({ id: c.id, x: pointerX(e) });
+          }}
+          onPointerMove={(e) => {
+            if (drag?.id === c.id) setDrag({ id: c.id, x: pointerX(e) });
+          }}
+          onPointerUp={(e) => {
+            if (drag?.id !== c.id) return;
+            const target = Math.max(
+              0,
+              Math.min(
+                chrs.length - 1,
+                Math.floor(((pointerX(e) - left) / iw) * chrs.length),
+              ),
+            );
+            const order = chrs.map((c) => c.id).filter((id) => id !== c.id);
+            order.splice(target, 0, c.id);
+            onLayoutChange?.({ ...p.layout, chromosomeOrder: order });
+            setDrag(null);
+          }}
+          onPointerCancel={() => setDrag(null)}
+        >
           <rect
             x={x(c.id) - width / 2}
             y={top}
@@ -1105,7 +1172,7 @@ export const genomicsTemplates: Template[] = [
           "数据",
         ),
         opt("chromosomeSort", "染色体排列", [
-          ["input", "数据顺序"],
+          ["input", "数据或手动顺序"],
           ["name", "名称升序"],
         ]),
         num("syntenyChromosomeWidth", "染色体宽度", 5, 38),
@@ -1122,7 +1189,7 @@ export const genomicsTemplates: Template[] = [
         bool("genomeTicks", "显示坐标刻度"),
       ],
       inputHelp:
-        "标准化三表：chromosomes（id/length）；synteny-genes（chromosome/id/start/end）；synteny-links（source/target/block/evalue）。原格式是 MCScanX 四列 GFF（染色体 基因 起点 终点）及 .collinearity。不是通用 9 列 GFF3；导入原格式时染色体绘图范围取基因最大终点，可在标准化表格中换成真实染色体长度。",
+        "标准化三表：chromosomes（id/length）；synteny-genes（chromosome/id/start/end）；synteny-links（source/target/block/evalue）。在“数据或手动顺序”模式下可横向拖动染色体调整排列，顺序保存进项目。原格式是 MCScanX 四列 GFF（染色体 基因 起点 终点）及 .collinearity。不是通用 9 列 GFF3；导入原格式时染色体绘图范围取基因最大终点，可在标准化表格中换成真实染色体长度。",
       limitations: [
         "不运行 MCScanX 共线性搜索；只展示用户已得到的区块和基因配对。原格式的最大基因终点不是完整染色体长度。",
       ],

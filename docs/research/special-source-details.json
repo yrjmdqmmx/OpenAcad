@@ -1,6 +1,6 @@
 {
   "asOf": "2026-09-06",
-  "scope": "22 OpenAcad 模板对应 20 个唯一源站入口；二值图两形状与富集点/柱变体不重复计源站功能",
+  "scope": "22 OpenAcad 模板对应 21 个唯一源站入口；圆点与方格二值保留不同源入口、同属二值家族；富集点/柱是同一源入口的模板变体",
   "boundary": "本文件记录可证实源站事实和未确认项，不能用 OpenAcad 实现反推 ChiPlot 功能。交互验收文件仅说明 OpenAcad。",
   "previewSource": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/live-index.js",
   "previewExistenceSamples": [
@@ -54,13 +54,24 @@
         "https://1996xjm.github.io/chiplot/img/cover/heatmap-1.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/heatmap.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "行名＋数值矩阵，可另有行列注释",
+      "sourceMultipleInputs": "单表＋注释",
+      "sourceSpecificStyles": "色阶、格子、数值、零值、注释、聚类树",
+      "sourceStatistics": "真实标准化与聚类",
+      "sourceCommonFormatErrors": "空行名、非数值、注释混数值",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "circle-heatmap",
@@ -78,36 +89,64 @@
         "https://1996xjm.github.io/chiplot/img/cover/circleHeatmap-1.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/circleHeatmap.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "行名＋数值矩阵",
+      "sourceMultipleInputs": "单表＋注释",
+      "sourceSpecificStyles": "环宽、角度、内外圈、标签、注释、聚类",
+      "sourceStatistics": "真实标准化与聚类",
+      "sourceCommonFormatErrors": "非数值、标签对应",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "binary-dot",
       "nameZh": "圆点二值图",
-      "sourceUrl": "https://www.chiplot.online/binary_plot2.html",
+      "sourceUrl": "https://www.chiplot.online/binary_plot.html",
       "sourceFamily": "二值矩阵",
       "evidence": {
         "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
-        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/binary_plot2.html",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/binary_plot.html",
         "scriptSnapshot": null,
-        "scriptSha256": null
+        "scriptSha256": null,
+        "sourceScripts": [
+          "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/binary_plot-BVPlCOmB.js"
+        ],
+        "sourceEvidenceHashes": {
+          "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/binary_plot-BVPlCOmB.js": "91df1a687760ca67b4231de01d6bedc111e0c3235a3a293333917af213daf979"
+        }
       },
-      "confirmed": "存在/缺失矩阵；0/1；圆点与矩形是图形变体。",
+      "confirmed": "圆点二值入口独立页面，与方格二值同属存在/缺失矩阵家族；其专有入口为 binary_plot.html。",
       "previewUrls": [
-        "https://1996xjm.github.io/chiplot/img/cover/binaryPlot2.jpg"
+        "https://1996xjm.github.io/chiplot/img/cover/binaryPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "行名＋0/1矩阵",
+      "sourceMultipleInputs": "单表＋注释",
+      "sourceSpecificStyles": "空心/实心、行列类别色、图例、注释",
+      "sourceStatistics": "此入口未见聚类调用",
+      "sourceCommonFormatErrors": "非0/1、行列名",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "binary-rect",
@@ -120,17 +159,28 @@
         "scriptSnapshot": null,
         "scriptSha256": null
       },
-      "confirmed": "与圆点共用编辑器；两者不能作为独立功能重复计数。",
+      "confirmed": "方格二值入口 binary_plot2.html；与圆点二值共用 OpenAcad 矩阵渲染内核，但源站链接分别保留。",
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/binaryPlot2.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "行名＋0/1矩阵",
+      "sourceMultipleInputs": "单表＋注释",
+      "sourceSpecificStyles": "两类颜色、格子、文字、图例、注释、聚类树",
+      "sourceStatistics": "存在聚类请求",
+      "sourceCommonFormatErrors": "原站是否严格拒绝非0/1待核实",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "bubble-matrix",
@@ -148,13 +198,24 @@
         "https://1996xjm.github.io/chiplot/img/cover/bubblePlot-1.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/bubblePlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "行名＋数值矩阵，不是X/Y/size散点表",
+      "sourceMultipleInputs": "单表＋注释",
+      "sourceSpecificStyles": "大小、连续/分类色、数值、图例、行列注释",
+      "sourceStatistics": "数值映射；正负值映射待核实",
+      "sourceCommonFormatErrors": "错用散点格式、负值映射",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "correlation",
@@ -173,13 +234,24 @@
         "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap-2.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap-1.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "已有方阵r或r/P两表；也有原始样本矩阵计算路径",
+      "sourceMultipleInputs": "一或两表",
+      "sourceSpecificStyles": "全矩阵/三角、对角线、圆/方、系数、星号、聚类；原独立标题被删除",
+      "sourceStatistics": "真实相关分析或已有结果绘图",
+      "sourceCommonFormatErrors": "非方阵、标签、概率",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "double-correlation",
@@ -196,13 +268,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/dubbleMatricesCorrelationHeatmap.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "矩形r＋可选P；或两个原始矩阵",
+      "sourceMultipleInputs": "两表或两工作表",
+      "sourceSpecificStyles": "符号、系数、显著性、色阶、聚类",
+      "sourceStatistics": "真实组间相关；导入r仍请求聚类",
+      "sourceCommonFormatErrors": "样本与r/P标签不对应",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "mantel",
@@ -220,13 +303,24 @@
         "https://1996xjm.github.io/chiplot/img/cover/mantelTestCorrelationHeatmap-1.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/mantelTestCorrelationHeatmap.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "r/P＋mantel/env/r/p结果；或环境＋多个群落矩阵",
+      "sourceMultipleInputs": "多表；partial控制矩阵原契约待核实",
+      "sourceSpecificStyles": "节点、标签、曲线、粗细/色/虚线、筛选",
+      "sourceStatistics": "真实四种Mantel方法与两侧生态距离",
+      "sourceCommonFormatErrors": "样本不一致、结果标签；partial契约待核实",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "venn",
@@ -244,13 +338,24 @@
         "https://1996xjm.github.io/chiplot/img/cover/vennPlot-1.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/vennPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "2～5列集合，成员字符串，允许空白",
+      "sourceMultipleInputs": "单表",
+      "sourceSpecificStyles": "轮廓、集合色、交集数、拖动标签、零交集",
+      "sourceStatistics": "真实集合交集",
+      "sourceCommonFormatErrors": "集合数、空/重复集合名",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "集合成员去重和互斥交集精确；轮廓为非面积比例示意，标签位置可拖动保存。"
+      }
     },
     {
       "openacadId": "packing",
@@ -267,13 +372,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/packingBubblePlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "对象、数值、类别三列；原站仅纳入正值",
+      "sourceMultipleInputs": "单表",
+      "sourceSpecificStyles": "圆大小、间距、类别色、文字、外包围圆、图例",
+      "sourceStatistics": "原站扁平数据，不是任意层级输入",
+      "sourceCommonFormatErrors": "零负值、重复对象",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "sankey",
@@ -290,13 +406,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/sankeyPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "source/target/value边表；自动生成节点",
+      "sourceMultipleInputs": "单表",
+      "sourceSpecificStyles": "节点宽距、对齐、文字、链接色/渐变、排序",
+      "sourceStatistics": "流量求和与布局",
+      "sourceCommonFormatErrors": "自环、环路、负流量、重复边",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "network",
@@ -313,13 +440,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/networkPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "node id/label＋edge id/source/target；可另接注释",
+      "sourceMultipleInputs": "节点与边两表",
+      "sourceSpecificStyles": "力布局、拖动、节点形色大小、连接数、边、注释；原删除X/Y和背景面板",
+      "sourceStatistics": "网络布局；无共现网络推断证据",
+      "sourceCommonFormatErrors": "悬空端点、重复ID",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "节点颜色/形状/标签与边颜色/粗细注释合并为 nodes group/shape/label/size 和 edges group/label/weight 可选列；支持分类形状、边分类色及来源/目标色；并非源站私有叠加图层文件兼容。"
+      }
     },
     {
       "openacadId": "map",
@@ -336,13 +474,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/mapPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "coordinate_id/longitude/latitude；可接ID注释",
+      "sourceMultipleInputs": "点表＋可选注释",
+      "sourceSpecificStyles": "五种投影、中心、缩放、底图、点形大小、颜色层",
+      "sourceStatistics": "坐标投影；无地理编码/区域统计/完整GIS证据",
+      "sourceCommonFormatErrors": "经纬度范围、注释未匹配",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "gene-cluster",
@@ -360,13 +509,24 @@
         "https://1996xjm.github.io/chiplot/img/cover/geneCluster-1.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/geneCluster.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "前五列ID/source/start/end/strand；起止数值、方向+/-",
+      "sourceMultipleInputs": "单表",
+      "sourceSpecificStyles": "箭头形态、头宽高、描边、标尺、分类色、同源连线、断裂区间",
+      "sourceStatistics": "已有基因坐标绘图",
+      "sourceCommonFormatErrors": "方向错误、区间反向、缺ID",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "protein-domains",
@@ -383,13 +543,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/conservedDomainsNCBIPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CDD hitdata.txt 的Query/From/To/Short name＋FASTA蛋白长度；附属注释的表格格式见共同记录",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "CDD hitdata.txt 的Query/From/To/Short name＋FASTA蛋白长度",
+      "sourceMultipleInputs": "CDD＋FASTA两文件",
+      "sourceSpecificStyles": "蛋白基线、结构域位置、颜色、圆角、间距、描边、文字",
+      "sourceStatistics": "展示CDD结果；不执行CDD搜索",
+      "sourceCommonFormatErrors": "缺文件、Query未匹配、区间越界",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "protein-motifs",
@@ -406,13 +577,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/conservedMotifPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "MEME XML序列、motif与scanned site引用；附属注释的表格格式见共同记录",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "MEME XML序列、motif与scanned site引用",
+      "sourceMultipleInputs": "单XML",
+      "sourceSpecificStyles": "基序色、宽度、间距、基线、文字、描边",
+      "sourceStatistics": "展示已有基序；不执行MEME搜索",
+      "sourceCommonFormatErrors": "XML类型、引用和坐标错误",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "genome-circos",
@@ -426,14 +608,27 @@
         "scriptSha256": "a676d83a0bdb2af4d4bfe8320eb2e7145d91c9385d137ad83bbdb46cd0d7952a"
       },
       "confirmed": "FASTA 上传给后端，GC-content 和 GC-skew 窗口参数；也有 localJson/webJson 路径；GC 计算不是单纯绘图。",
-      "previewUrls": ["https://1996xjm.github.io/chiplot/img/cover/circos.jpg"],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/circos.jpg"
+      ],
+      "sourceInputFormats": "JSON contigName/contigLength/GCSkewArr/GCContentArr；或FASTA；可选CDS contig/start/end/strand/type；附属注释的表格格式见共同记录",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "JSON contigName/contigLength/GCSkewArr/GCContentArr；或FASTA；可选CDS contig/start/end/strand/type",
+      "sourceMultipleInputs": "JSON或FASTA，可附CDS表",
+      "sourceSpecificStyles": "环宽、半径、间距、刻度、GC和正负链轨道",
+      "sourceStatistics": "FASTA路径真实窗口GC计算；不执行组装",
+      "sourceCommonFormatErrors": "轨道长度、非数值、contig未匹配",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "FASTA 或规范表格/项目；不导入源站私有圈图 JSON；动态轨道支持独立数据与四类图形。"
+      }
     },
     {
       "openacadId": "volcano",
@@ -450,13 +645,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/volcanoPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "ID、Log2FoldChange、PValue；前三列位置读取",
+      "sourceMultipleInputs": "单表",
+      "sourceSpecificStyles": "阈值、上下调色、符号、点大小、标签、图例",
+      "sourceStatistics": "-log10P与阈值分类；不执行差异表达分析",
+      "sourceCommonFormatErrors": "概率范围、误传原FC或-logP",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "数据字段与操作说明由 OpenAcad 明確定义；具体实现边界见 special-capability-gaps.md。"
+      }
     },
     {
       "openacadId": "enrichment-dot",
@@ -474,13 +680,24 @@
         "https://1996xjm.github.io/chiplot/img/cover/enrichPlot-1.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/enrichPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "Description/GeneRatio/Qvalue/Count按字段读取；示例另含ID",
+      "sourceMultipleInputs": "单表",
+      "sourceSpecificStyles": "条目轴、比例轴、气泡大小、Q色条、分类注释",
+      "sourceStatistics": "已有富集结果绘图；不执行基因富集检验",
+      "sourceCommonFormatErrors": "缺列、比例字符串、非法概率/计数",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "明确表头契约；Class 为可选条目分类。支持分类色带，不执行富集检验。"
+      }
     },
     {
       "openacadId": "enrichment-bar",
@@ -498,13 +715,24 @@
         "https://1996xjm.github.io/chiplot/img/cover/enrichPlot-1.jpg",
         "https://1996xjm.github.io/chiplot/img/cover/enrichPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "Description/GeneRatio/Qvalue/Count按字段读取；示例另含ID",
+      "sourceMultipleInputs": "单表",
+      "sourceSpecificStyles": "条目轴、比例轴、气泡大小、Q色条、分类注释",
+      "sourceStatistics": "已有富集结果绘图；不执行基因富集检验",
+      "sourceCommonFormatErrors": "缺列、比例字符串、非法概率/计数",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "明确表头契约；Class 为可选条目分类。支持分类色带，不执行富集检验。"
+      }
     },
     {
       "openacadId": "enrichment-circle",
@@ -521,13 +749,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/circleEnrichPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "5或6列：条目/类别/PQ/背景数/差异数或上调和下调数",
+      "sourceMultipleInputs": "单表",
+      "sourceSpecificStyles": "分类环、背景环、上下调环、richFactor、宽度、文字、色条",
+      "sourceStatistics": "基于已有结果计算比例；不执行富集检验",
+      "sourceCommonFormatErrors": "列数、零背景、计数越界",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "明确9列契约；不直接接受源站按位置解释的5/6列简写。"
+      }
     },
     {
       "openacadId": "synteny",
@@ -544,13 +783,24 @@
       "previewUrls": [
         "https://1996xjm.github.io/chiplot/img/cover/McScanXSyntenyPlot.jpg"
       ],
-      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
-      "sourceOptionalFields": "待核实",
+      "sourceInputFormats": "collinearity＋无表头4列简化GFF：chr/geneID/start/end；不是9列GFF3；附属注释的表格格式见共同记录",
+      "sourceOptionalFields": "仅所列注释/附属文件已记录；其余待核实",
       "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
       "sourceExportSizeResolutionTransparency": "待核实",
       "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
       "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
-      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+      "implementationEvidence": "web/src/templates/special/special.test.tsx（46项）；evidence/browser-qa.json（22）；browser-interactions.json（SVG实际重开）；browser-advanced.json（注释/断轴/轨道）；browser-real-analysis.json（8次服务真实计算）；browser-coverage.json（最终专项交互与SVG）",
+      "sourceRequiredFields": "collinearity＋无表头4列简化GFF：chr/geneID/start/end；不是9列GFF3",
+      "sourceMultipleInputs": "两文件",
+      "sourceSpecificStyles": "染色体排列、拖序、对齐、宽高、连线块、尺度、基因层",
+      "sourceStatistics": "展示MCScanX结果",
+      "sourceCommonFormatErrors": "错传GFF3、基因ID不匹配",
+      "coverageAudit": {
+        "asOf": "2026-09-06",
+        "basis": "已批准 IMPLEMENTATION.md 与 comparison.json 的具体样式字段；不是上游全部按钮逐项等价承诺",
+        "status": "本次已确认绘图能力已实现；精确上游项目/多文件布局按下述契约差异",
+        "contractDifference": "原格式两文件保留角色；另有标准化三表；在数据或手动顺序下拖动染色体名称或空白条段排序。"
+      }
     }
   ]
 }

@@ -1,0 +1,69 @@
+[
+  {
+    "case": "real-tests-p-letters-drag",
+    "passed": true,
+    "method": "tests",
+    "provenance": {
+      "engine": "Python",
+      "method": "tests",
+      "methodVersion": "openacad-1",
+      "python": "3.12.3",
+      "packages": {
+        "numpy": "2.4.3",
+        "scipy": "1.17.1",
+        "scikit-learn": "1.8.0"
+      },
+      "seed": 1,
+      "inputSha256": "6610519f1e5ae1b7feeef36eaaccda2e1995cdffbfe67d42a46b1713c0eeb1e2",
+      "parameters": {
+        "seed": 1,
+        "idColumn": 0,
+        "test": "ttest_ind",
+        "comparisons": "all",
+        "alternative": "two-sided",
+        "equalVariance": false,
+        "pAdjust": "BH"
+      }
+    },
+    "comparisons": [
+      {
+        "left": "对照",
+        "right": "处理甲",
+        "nLeft": 12,
+        "nRight": 12,
+        "statistic": -7.696524927990832,
+        "p": 1.1154174713372637e-7,
+        "meanDifference": -8.203500000000002,
+        "adjustedP": 1.1154174713372637e-7
+      },
+      {
+        "left": "对照",
+        "right": "处理乙",
+        "nLeft": 12,
+        "nRight": 12,
+        "statistic": -15.9715034905397,
+        "p": 1.7028536772644116e-13,
+        "meanDifference": -16.23591666666667,
+        "adjustedP": 5.108561031793235e-13
+      },
+      {
+        "left": "处理甲",
+        "right": "处理乙",
+        "nLeft": 12,
+        "nRight": 12,
+        "statistic": -7.935336227188925,
+        "p": 7.247301951420163e-8,
+        "meanDifference": -8.03241666666667,
+        "adjustedP": 1.0870952927130244e-7
+      }
+    ],
+    "letters": "cba",
+    "moved": "translate(25.0526006752458,18.037872486177037)",
+    "oneStepUndo": true,
+    "projectRoundtrip": true
+  },
+  {
+    "case": "stale-data-hides-statistics",
+    "passed": true
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "kind": "normal",
+    "values": [
+      "rectangular",
+      "rounded",
+      "linear",
+      "elliptical",
+      "bezierX",
+      "bezierY"
+    ],
+    "value": "rounded",
+    "passed": true
+  },
+  {
+    "kind": "circle",
+    "values": [
+      "rectangular",
+      "linear",
+      "elliptical",
+      "bezierX",
+      "bezierY"
+    ],
+    "value": "bezierX",
+    "passed": true
+  },
+  {
+    "kind": "unrooted",
+    "values": [
+      "linear",
+      "bezierX",
+      "bezierY"
+    ],
+    "value": "bezierX",
+    "passed": true
+  }
+]

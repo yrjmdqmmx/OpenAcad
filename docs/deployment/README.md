@@ -27,6 +27,18 @@ npm run test:browser
 
 Linux amd64 镜像由私有仓库 Actions 构建，执行 Python、R 与 Inkscape 测试后生成 `worker-image` 发行附件。不要把 macOS arm64 镜像部署到 x86_64 服务器。固定 Python 依赖见 `server/requirements.lock`，R 固定包见 `server/r/packages.lock.json` 和 `server/r/renv.lock`，基础镜像固定摘要见 `server/Dockerfile`。
 
+## 下载 Linux 发行附件
+
+若操作机下载大附件较慢，可用 `deploy/fetch-artifact.py` 将附件直接传到已授权服务器：
+
+```sh
+GODEBUG=http2client=0 server/.venv/bin/python deploy/fetch-artifact.py \
+  --run <通过的Actions运行ID> --artifact worker-image \
+  --host root@<服务器IP> --out /opt/openacad/releases/worker-artifact.zip
+```
+
+脚本使用操作机现有 `gh` 登录，仅在内存获取一次性下载地址，通过 SSH 标准输入交给服务器；不保存 GitHub 凭据，并核对 GitHub 附件 SHA-256。`web-evidence` 可用同样方式获取。附件下载与测试通过分别核查；先确认运行完整成功再发布。也可常规使用 `gh run download` 后通过 SCP 上传。
+
 ## 首次安装
 
 前提：Docker Compose、Nginx、Certbot 已安装；SSH 使用已有授权访问；根域 A 记录指向香港服务器；防火墙允许 80/443。不要添加未经验证的 AAAA 记录。
@@ -86,7 +98,7 @@ journalctl -u certbot.service --since '7 days ago'
 任务凭据自创建起最多一小时有效，结果不会晚于凭据期限过期；原输入在执行完成或异常恢复保存前移除。取消会先撤销凭据，再删除任务及结果；并发完成、硬杀后的父进程保存也须遵守该凭据状态。Inkscape/R 的临时文件位于容器 `/tmp`，单任务上下文结束时清理；容器重启也会清空 tmpfs。`/opt/openacad/shared/maintenance` 只控制是否接受新任务，更新或恢复验证成功后移除。
 
 ```sh
-certbot renew --dry-run
+certbot renew --cert-name openacad.xyz --dry-run
 # 确认更新进程已退出且服务正常后，才清理遗留维护标记：
 rm -f /opt/openacad/shared/maintenance
 ```

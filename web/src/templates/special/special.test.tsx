@@ -424,6 +424,143 @@ describe("新增注释、动态轨道、断轴与完整符号", () => {
 });
 
 describe("条件设置在相关数据条件下生效", () => {
+  it("网络边标签、源/目标着色与桑基渐变使用真实数据", () => {
+    const p = makeProject(specialTemplates.find((t) => t.id === "network")!);
+    const edges = p.dataset.tables.find((t) => t.role === "edges")!;
+    edges.columns.push("label");
+    edges.rows.forEach((r, i) => r.push(`关系${i}`));
+    p.style.showEdgeLabels = true;
+    p.style.directedEdges = true;
+    const base = render(p);
+    expect(base).toContain("关系0");
+    p.style.edgeColorMode = "source";
+    const source = render(p);
+    p.style.edgeColorMode = "target";
+    expect(render(p)).not.toEqual(source);
+    expect(source).not.toEqual(base);
+    p.style.edgeLabelColor = "#e41969";
+    expect(render(p)).toContain("#e41969");
+    const s = makeProject(specialTemplates.find((t) => t.id === "sankey")!);
+    s.style.flowColor = "gradient";
+    expect(render(s)).toContain('stroke="url(#flow-gradient-');
+  });
+  it("网络节点分类形状和边分类不依赖全局统一样式", () => {
+    const t = specialTemplates.find((t) => t.id === "network")!,
+      p = makeProject(t),
+      nodes = p.dataset.tables[0],
+      edges = p.dataset.tables[1];
+    nodes.columns.push("shape");
+    nodes.rows.forEach((r, i) => r.push(i % 2 ? "star" : "cross"));
+    edges.columns.push("group");
+    edges.rows.forEach((r, i) => r.push(i % 2 ? "激活" : "抑制"));
+    expect(t.validate(p.dataset)).toEqual([]);
+    p.style.nodeShapeMode = "column";
+    p.style.edgeColorMode = "group";
+    const a = render(p);
+    expect(a).toContain("边：激活");
+    p.style.nodeShapeMode = "group";
+    expect(render(p)).not.toEqual(a);
+    nodes.rows[0][nodes.columns.indexOf("shape")] = "未定义形状";
+    expect(
+      t.validate(p.dataset).some((i) => i.message.includes("节点形状须为")),
+    ).toBe(true);
+  });
+  it("Venn 标签位置和染色体手动顺序进入项目往返及 SVG", () => {
+    const v = makeProject(specialTemplates.find((t) => t.id === "venn")!);
+    const before = render(v);
+    v.layout.labelPositions = {
+      [`venn-${v.dataset.tables[0].columns[0]}`]: { x: 99, y: 123 },
+    };
+    expect(render(v)).not.toEqual(before);
+    expect(render(decodeProject(encodeProject(v), specialTemplates))).toEqual(
+      render(v),
+    );
+    const s = makeProject(specialTemplates.find((t) => t.id === "synteny")!);
+    const original = render(s);
+    s.layout.chromosomeOrder = s.dataset.tables[0].rows
+      .map((r) => String(r[0]))
+      .reverse();
+    expect(render(s)).not.toEqual(original);
+    expect(render(decodeProject(encodeProject(s), specialTemplates))).toEqual(
+      render(s),
+    );
+  });
+  it("箭头肩部高度及富集分类注释可独立调整", () => {
+    const g = makeProject(
+      specialTemplates.find((t) => t.id === "gene-cluster")!,
+    );
+    const original = render(g);
+    g.style.arrowHeadHeight = 2.3;
+    expect(render(g)).not.toEqual(original);
+    for (const id of ["enrichment-dot", "enrichment-bar"]) {
+      const p = makeProject(specialTemplates.find((t) => t.id === id)!);
+      p.style.showEnrichClass = true;
+      expect(render(p)).toContain('data-enrich-class="生物过程"');
+      expect(render(p)).toContain("enrich-class-legend");
+    }
+  });
+  it("气泡矩阵连续数值及行列分类配色实际变化", () => {
+    const p = makeProject(
+      specialTemplates.find((t) => t.id === "bubble-matrix")!,
+    );
+    const a = render(p);
+    p.style.bubbleColorMode = "row";
+    const b = render(p);
+    expect(b).not.toEqual(a);
+    p.style.bubbleColorMode = "column";
+    expect(render(p)).not.toEqual(b);
+  });
+  it("跨图层重叠的断轴被明确拒绝", async () => {
+    const { specialProjectIssues } = await import("./advanced");
+    const p = makeProject(
+      specialTemplates.find((t) => t.id === "gene-cluster")!,
+    );
+    const cluster = String(p.dataset.tables[0].rows[0][0]);
+    p.layers = [0, 1].map((i) => ({
+      id: `break${i}`,
+      type: "gene-break",
+      name: `断轴${i}`,
+      visible: true,
+      settings: {},
+      data: {
+        tables: [
+          {
+            id: `table${i}`,
+            name: `表${i}`,
+            role: "gene-break",
+            columns: ["cluster", "start", "end"],
+            rows: [[cluster, 1600, 1700]],
+          },
+        ],
+      },
+    }));
+    expect(
+      specialProjectIssues(p).some((i) => i.message.includes("前序区间重叠")),
+    ).toBe(true);
+  });
+  it("专有注释按字段名读取，不因上传表列顺序变化而交换数据", async () => {
+    const { specialLayerTable } = await import("./advanced");
+    const result = specialLayerTable({
+      id: "t",
+      type: "genome-track",
+      name: "轨道",
+      visible: true,
+      settings: {},
+      data: {
+        tables: [
+          {
+            id: "a",
+            name: "自定义轨道",
+            role: "track",
+            columns: ["value", "end", "chromosome", "start"],
+            rows: [[3, 200, "染色体甲", 100]],
+          },
+        ],
+      },
+    })!;
+    expect(result.columns).toEqual(["chromosome", "start", "end", "value"]);
+    expect(result.rows).toEqual([["染色体甲", 100, 200, 3]]);
+  });
   it("零值留白、二值缺失色、零交集都在匹配数据上变化", () => {
     const h = makeProject(specialTemplates.find((t) => t.id === "heatmap")!);
     h.dataset.tables[0].rows[0][1] = 0;

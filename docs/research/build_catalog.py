@@ -96,7 +96,13 @@ with (ROOT/'comparison.csv').open('w',encoding='utf-8-sig',newline='') as f:
  for r in records:w.writerow({k:json.dumps(v,ensure_ascii=False) if isinstance(v,(list,dict)) else v for k,v in r.items()})
 layers=['替换叶名','追加叶名','叶名上标','局部斜体','叶名分类颜色','叶名字体分类','分支分类颜色','叶名背景色块','节点符号','叶侧饼图','分支饼图','普通柱图','分类柱图','普通棒棒糖','分类棒棒糖','堆叠柱','普通箱线','分类箱线','热图','二值类型一','二值类型二','气泡','文本矩阵','分类文本矩阵','分支文字','节点连线','地质年代尺','MEME基序','重组片段']
 u={1,2,3,4,5,7,8,9,25};enhance={6,10,11,26}
-lmatrix=[{'id':i,'name':name,'sourceNormal':'注册并有绘制路径（C）','sourceCircle':'注册；绘制路径待核实' if i==29 else '注册并有绘制路径（C）','sourceUnrooted':'支持（C）' if i in u else '未开放新增层（C）','openacadNormal':'计划实现','openacadCircle':'计划实现','openacadUnrooted':'计划实现' if i in u|enhance else '不适用：布局语义未纳入','acceptance':'待验收'} for i,name in enumerate(layers,1)]
+tree_evidence_path=ROOT.parents[1]/'web/src/templates/basic/evidence/browser-advanced.json'
+tree_runs={r['case']:r for r in json.loads(tree_evidence_path.read_text())} if tree_evidence_path.exists() else {}
+layer_types=['rename','append','superscript','italic','label-color','label-font','branch-color','label-background','node-symbol','leaf-pie','branch-pie','bar','category-bar','lollipop','category-lollipop','stacked-bar','box','category-box','heatmap','binary1','binary2','bubble','text-matrix','category-text-matrix','branch-text','node-link','geologic','motif','recombination']
+def layer_status(layout,kind):
+ proof=next((r for r in tree_runs.get('tree-'+layout,{}).get('layers',[]) if r['type']==kind),None)
+ return '已实现；Chrome 示例/替换数据/显隐/项目往返通过' if proof and all(proof.get(k) for k in ['passed','alternateChanged','hiddenChanged','projectRoundtrip']) else '待验收'
+lmatrix=[{'id':i,'name':name,'sourceNormal':'注册并有绘制路径（C）','sourceCircle':'注册；绘制路径待核实' if i==29 else '注册并有绘制路径（C）','sourceUnrooted':'支持（C）' if i in u else '未开放新增层（C）','openacadNormal':layer_status('normal',layer_types[i-1]),'openacadCircle':layer_status('circle',layer_types[i-1]),'openacadUnrooted':layer_status('unrooted',layer_types[i-1]) if i in u|enhance else '不适用：布局语义未纳入','acceptance':'web/src/templates/basic/evidence/browser-advanced.json；逐层项目见 web/src/templates/tree/evidence/'} for i,name in enumerate(layers,1)]
 (ROOT/'tree-layers.json').write_text(json.dumps(lmatrix,ensure_ascii=False,indent=2))
 with (ROOT/'tree-layers.csv').open('w',encoding='utf-8-sig',newline='') as f:w=csv.DictWriter(f,fieldnames=list(lmatrix[0]));w.writeheader();w.writerows(lmatrix)
 payload=json.dumps(result,ensure_ascii=False).replace('</','<\\/')

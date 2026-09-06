@@ -1,0 +1,54 @@
+[
+  {
+    "case": "normal",
+    "passed": true,
+    "artifacts": [
+      {
+        "format": "svg",
+        "bytes": 13969,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/direction-normal.svg"
+      },
+      {
+        "format": "png",
+        "bytes": 81030,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/direction-normal.png"
+      },
+      {
+        "format": "pdf",
+        "bytes": 96061,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/direction-normal.pdf"
+      },
+      {
+        "format": "eps",
+        "bytes": 160399,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/direction-normal.eps"
+      }
+    ]
+  },
+  {
+    "case": "circle",
+    "passed": true,
+    "artifacts": [
+      {
+        "format": "svg",
+        "bytes": 17022,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/direction-circle.svg"
+      },
+      {
+        "format": "png",
+        "bytes": 241378,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/direction-circle.png"
+      },
+      {
+        "format": "pdf",
+        "bytes": 97889,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/direction-circle.pdf"
+      },
+      {
+        "format": "eps",
+        "bytes": 511784,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/direction-circle.eps"
+      }
+    ]
+  }
+]

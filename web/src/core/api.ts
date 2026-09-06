@@ -1,8 +1,86 @@
-async function request(url:string,options?:RequestInit){try{return await fetch(url,options);}catch{throw new Error('无法连接计算服务，请检查网络后重试。已有项目和本地 SVG 下载仍可使用。');}}
-export type JobState={id:string;status:string;result?:Record<string,unknown>;error?:string|{message?:string;detail?:unknown};diagnostics?:string[]};
-export async function createJob(body:unknown):Promise<{id:string;token:string;status:string}>{const res=await request('/api/jobs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const data=await res.json().catch(()=>({}));if(!res.ok)throw new Error(typeof data.detail==='string'?data.detail:data.error?.message||data.message||'任务未能创建，请检查数据或稍后重试。');return data;}
-export async function getJob(id:string,token:string):Promise<JobState>{const res=await request(`/api/jobs/${encodeURIComponent(id)}`,{headers:{Authorization:`Bearer ${token}`}});const data=await res.json();if(!res.ok)throw new Error(typeof data.detail==='string'?data.detail:'任务已过期或无法读取，请重新计算。');return data;}
-export async function cancelJob(id:string,token:string){const res=await request(`/api/jobs/${encodeURIComponent(id)}`,{method:'DELETE',headers:{Authorization:`Bearer ${token}`}});if(!res.ok)throw new Error('取消任务失败，请稍后重试。');}
-export async function waitJob(id:string,token:string,signal:AbortSignal,onStatus?:(s:string)=>void):Promise<Record<string,unknown>>{
-  while(!signal.aborted){const job=await getJob(id,token);onStatus?.(job.status);if(['finished','completed','succeeded','success'].includes(job.status))return job.result||{};if(['failed','canceled','cancelled','stopped'].includes(job.status))throw new Error(typeof job.error==='string'?job.error:job.error?.message||'任务已取消或失败。');await new Promise<void>((resolve,reject)=>{const stop=()=>{clearTimeout(t);reject(new Error('已停止等待。'));};const t=setTimeout(()=>{signal.removeEventListener('abort',stop);resolve();},800);signal.addEventListener('abort',stop,{once:true});});}throw new Error('已停止等待。');
+async function request(url: string, options?: RequestInit) {
+  try {
+    return await fetch(url, options);
+  } catch {
+    throw new Error(
+      "无法连接计算服务，请检查网络后重试。已有项目和本地 SVG 下载仍可使用。",
+    );
+  }
+}
+export type JobState = {
+  id: string;
+  status: string;
+  result?: Record<string, unknown>;
+  error?: string | { message?: string; detail?: unknown };
+  diagnostics?: string[];
+};
+export async function createJob(
+  body: unknown,
+): Promise<{ id: string; token: string; status: string }> {
+  const res = await request("/api/jobs", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok)
+    throw new Error(
+      typeof data.detail === "string"
+        ? data.detail
+        : data.error?.message ||
+            data.message ||
+            "任务未能创建，请检查数据或稍后重试。",
+    );
+  return data;
+}
+export async function getJob(id: string, token: string): Promise<JobState> {
+  const res = await request(`/api/jobs/${encodeURIComponent(id)}`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  const data = await res.json();
+  if (!res.ok)
+    throw new Error(
+      typeof data.detail === "string"
+        ? data.detail
+        : "任务已过期或无法读取，请重新计算。",
+    );
+  return data;
+}
+export async function cancelJob(id: string, token: string) {
+  const res = await request(`/api/jobs/${encodeURIComponent(id)}`, {
+    method: "DELETE",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  if (!res.ok) throw new Error("取消任务失败，请稍后重试。");
+}
+export async function waitJob(
+  id: string,
+  token: string,
+  signal: AbortSignal,
+  onStatus?: (s: string) => void,
+): Promise<Record<string, unknown>> {
+  while (!signal.aborted) {
+    const job = await getJob(id, token);
+    onStatus?.(job.status);
+    if (["finished", "completed", "succeeded", "success"].includes(job.status))
+      return job.result || {};
+    if (["failed", "canceled", "cancelled", "stopped"].includes(job.status))
+      throw new Error(
+        typeof job.error === "string"
+          ? job.error
+          : job.error?.message || "任务已取消或失败。",
+      );
+    await new Promise<void>((resolve, reject) => {
+      const stop = () => {
+        clearTimeout(t);
+        reject(new Error("已停止等待。"));
+      };
+      const t = setTimeout(() => {
+        signal.removeEventListener("abort", stop);
+        resolve();
+      }, 800);
+      signal.addEventListener("abort", stop, { once: true });
+    });
+  }
+  throw new Error("已停止等待。");
 }

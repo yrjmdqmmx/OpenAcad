@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "id": "7cd8614f-e3c7-4734-8b27-90a320496993",
+  "name": "环形进化树工作台 · 模拟数据",
+  "templateId": "tree-circle",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:48:48.861Z",
+  "updatedAt": "2026-09-06T13:48:51.349Z",
+  "dataset": {
+    "tables": [],
+    "text": "((拟南芥:0.22,油菜:0.31)十字花科:0.28,(水稻:0.38,(玉米:0.18,小麦:0.24)禾本组:0.15)禾本科:0.21,(大豆:0.29,豌豆:0.35)豆科:0.33)植物;",
+    "format": "newick"
+  },
+  "mapping": {},
+  "style": {
+    "width": 900,
+    "height": 900,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 82,
+    "marginRight": 48,
+    "marginBottom": 105,
+    "marginLeft": 95,
+    "title": "植物亲缘关系 · 环形树",
+    "subtitle": "自行生成的模拟树 · 不代表真实系统发育结论",
+    "fontFamily": "Noto Sans SC",
+    "fontSize": 14,
+    "titleSize": 24,
+    "textColor": "#263445",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#587ab8",
+      "#b78bc1",
+      "#b9ac62",
+      "#76b7bc"
+    ],
+    "opacity": 0.9,
+    "showLegend": false,
+    "showGrid": true,
+    "showLabels": false,
+    "xTitle": "",
+    "yTitle": "数值",
+    "pointSize": 5,
+    "lineWidth": 1.7,
+    "orientation": "vertical",
+    "sort": "input",
+    "barPadding": 0.25,
+    "axisRotation": 0,
+    "curve": "linear",
+    "errorType": "sd",
+    "errorInput": "raw",
+    "showPoints": true,
+    "showBox": true,
+    "distribution": "kde",
+    "bandwidthMultiplier": 1,
+    "normalize": false,
+    "treeLayout": "circle",
+    "treeWidth": 340,
+    "labelWidth": 130,
+    "leafSpacing": 28,
+    "useBranchLength": true,
+    "showNodes": true,
+    "nodeSize": 3,
+    "branchColor": "#536875",
+    "nodeColor": "#087f8c",
+    "showSupport": true,
+    "supportSize": 10,
+    "alignLabels": true,
+    "showScale": true,
+    "treeRotation": -90,
+    "angleRange": 360
+  },
+  "layers": [
+    {
+      "id": "8f762326-3592-41d6-80a0-288e4ae788d6",
+      "type": "tree:leaf-pie",
+      "name": "叶侧饼图",
+      "visible": true,
+      "settings": {
+        "width": 84,
+        "gap": 12,
+        "opacity": 0.88,
+        "color": "#087f8c",
+        "fontSize": 12,
+        "lineWidth": 1.6,
+        "pointSize": 5,
+        "title": "叶侧饼图",
+        "showTitle": true,
+        "normalize": false,
+        "inherit": false,
+        "showValues": false,
+        "cellPadding": 1
+      },
+      "data": {
+        "tables": [
+          {
+            "id": "annotation",
+            "name": "叶侧饼图示例",
+            "role": "annotation",
+            "columns": [
+              "nodeID",
+              "系列",
+              "数值"
+            ],
+            "rows": [
+              [
+                "拟南芥",
+                "功能甲",
+                7
+              ],
+              [
+                "拟南芥",
+                "功能乙",
+                10
+              ],
+              [
+                "拟南芥",
+                "功能丙",
+                3
+              ],
+              [
+                "油菜",
+                "功能甲",
+                8
+              ],
+              [
+                "油菜",
+                "功能乙",
+                11
+              ],
+              [
+                "油菜",
+                "功能丙",
+                4
+              ],
+              [
+                "水稻",
+                "功能甲",
+                9
+              ],
+              [
+                "水稻",
+                "功能乙",
+                12
+              ],
+              [
+                "水稻",
+                "功能丙",
+                5
+              ],
+              [
+                "玉米",
+                "功能甲",
+                10
+              ],
+              [
+                "玉米",
+                "功能乙",
+                3
+              ],
+              [
+                "玉米",
+                "功能丙",
+                6
+              ],
+              [
+                "小麦",
+                "功能甲",
+                11
+              ],
+              [
+                "小麦",
+                "功能乙",
+                4
+              ],
+              [
+                "小麦",
+                "功能丙",
+                7
+              ],
+              [
+                "大豆",
+                "功能甲",
+                12
+              ],
+              [
+                "大豆",
+                "功能乙",
+                5
+              ],
+              [
+                "大豆",
+                "功能丙",
+                8
+              ],
+              [
+                "豌豆",
+                "功能甲",
+                3
+              ],
+              [
+                "豌豆",
+                "功能乙",
+                6
+              ],
+              [
+                "豌豆",
+                "功能丙",
+                9
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": {}
+}

@@ -22,6 +22,23 @@ export const matrixIds = [
   "double-correlation",
   "mantel",
 ];
+export function specialLayerTable(l: Layer): DataTable | undefined {
+  const t = l.data?.tables[0];
+  if (!t) return;
+  const columns = l.type.startsWith("matrix-")
+    ? ["标签", "值"]
+    : l.type === "gene-break"
+      ? ["cluster", "start", "end"]
+      : l.type === "genome-track"
+        ? ["chromosome", "start", "end", "value"]
+        : t.columns;
+  if (!columns.every((c) => t.columns.includes(c))) return t;
+  return {
+    ...t,
+    columns,
+    rows: t.rows.map((r) => columns.map((c) => r[t.columns.indexOf(c)])),
+  };
+}
 export function matrixAxes(p: Project) {
   const raw = p.style.inputMode === "raw";
   const result = p.analysis?.result?.data as
@@ -61,7 +78,7 @@ export function geneBreaks(p: Project, cluster: string) {
   return p.layers
     .filter((l) => l.visible && l.type === "gene-break")
     .flatMap((l) =>
-      (l.data?.tables[0]?.rows ?? [])
+      (specialLayerTable(l)?.rows ?? [])
         .filter((r) => r[0] === "*" || r[0] === cluster)
         .map((r) => ({ start: Number(r[1]), end: Number(r[2]) })),
     )
@@ -73,8 +90,14 @@ export function extraTracks(p: Project) {
 export function specialProjectIssues(p: Project): Issue[] {
   const issues: Issue[] = [],
     axes = matrixAxes(p);
+  const priorBreaks: {
+    cluster: string;
+    start: number;
+    end: number;
+    name: string;
+  }[] = [];
   for (const l of p.layers.filter((l) => l.visible)) {
-    const t = l.data?.tables[0];
+    const t = specialLayerTable(l);
     if (l.type.startsWith("matrix-")) {
       if (!t) {
         issues.push(error(`“${l.name}”缺少注释表`));
@@ -113,25 +136,30 @@ export function specialProjectIssues(p: Project): Issue[] {
             genes.rows.some(
               (g) =>
                 (r[0] === "*" || g[at("cluster")] === r[0]) &&
-                Number(g[at("start")]) < Number(r[2]) &&
-                Number(g[at("end")]) > Number(r[1]),
+                Number(g[at("start")]) <= Number(r[2]) &&
+                Number(g[at("end")]) >= Number(r[1]),
             )
           )
             issues.push(
               rowIssue(t, i, 1, "断轴区间与基因重叠；请只压缩基因间隔"),
             );
         }
-        if (
-          t.rows
-            .slice(0, i)
-            .some(
-              (a) =>
-                (a[0] === r[0] || a[0] === "*" || r[0] === "*") &&
-                Number(a[1]) < Number(r[2]) &&
-                Number(a[2]) > Number(r[1]),
-            )
-        )
-          issues.push(rowIssue(t, i, 1, "断轴区间与前面的区间重叠"));
+        const conflict = priorBreaks.find(
+          (a) =>
+            (a.cluster === r[0] || a.cluster === "*" || r[0] === "*") &&
+            a.start < Number(r[2]) &&
+            a.end > Number(r[1]),
+        );
+        if (conflict)
+          issues.push(
+            rowIssue(t, i, 1, `断轴区间与“${conflict.name}”的前序区间重叠`),
+          );
+        priorBreaks.push({
+          cluster: String(r[0]),
+          start: Number(r[1]),
+          end: Number(r[2]),
+          name: l.name,
+        });
       });
     }
     if (l.type === "genome-track") {
@@ -213,6 +241,34 @@ export function SpecialPanel({
     genome = p.templateId === "genome-circos";
   const [kind, setKind] = useState("matrix-row-color"),
     [errorText, setError] = useState("");
+  if (["network", "venn", "synteny"].includes(p.templateId))
+    return (
+      <section className="special-panel">
+        <h3>手动布局</h3>
+        <p className="hint">
+          {p.templateId === "network"
+            ? "拖动节点或标签；位置与项目一起保存。清除后会重新按当前力参数或圆形布局计算。"
+            : p.templateId === "venn"
+              ? "直接拖动集合标签避让；位置与项目一起保存。"
+              : "选择“数据或手动顺序”，拖动染色体名称或空白条段调整顺序；排列与项目一起保存。"}
+        </p>
+        <button
+          className="wide"
+          onClick={() => {
+            const layout = { ...p.layout };
+            for (const key of [
+              "nodePositions",
+              "labelPositions",
+              "chromosomeOrder",
+            ])
+              delete layout[key];
+            commit({ ...p, layout });
+          }}
+        >
+          清除手动位置
+        </button>
+      </section>
+    );
   if (!matrix && !gene && !genome) return null;
   const options = matrix
     ? [
@@ -568,7 +624,7 @@ export function MatrixAnnotations({
             ),
             at = offset;
           offset += size + 4;
-          const t = l.data?.tables[0],
+          const t = specialLayerTable(l),
             lookup = new Map(t?.rows.map((r) => [String(r[0]), r[1]]) ?? []),
             names = axis === "row" ? rows : columns,
             categories = Array.from(
@@ -700,7 +756,7 @@ export function CircleAnnotations({
         let offset = 0;
         const layers = annotationLayers(p, axis);
         return layers.map((l, li) => {
-          const t = l.data?.tables[0],
+          const t = specialLayerTable(l),
             lookup = new Map(t?.rows.map((r) => [String(r[0]), r[1]]) ?? []),
             cats = Array.from(new Set(t?.rows.map((r) => String(r[1])) ?? [])),
             size = Math.max(10, Math.min(80, Number(l.settings.size) || 22)),
@@ -809,7 +865,7 @@ export function AnnotationLegend({
   const items = p.layers
     .filter((l) => l.visible && l.type.startsWith("matrix-"))
     .flatMap((l) => {
-      const t = l.data?.tables[0];
+      const t = specialLayerTable(l);
       if (!t) return [];
       if (l.type.endsWith("-color"))
         return Array.from(new Set(t.rows.map((r) => String(r[1])))).map(

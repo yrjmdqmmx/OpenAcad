@@ -57,6 +57,7 @@ def independent_open(path):
 
 
 def run_one(base, source, fmt, target, params=None):
+    target = target.resolve()
     params = {"format":fmt,"dpi":150,"outline":False, **(params or {})}
     svg = source.read_text()
     task = request(base, "/api/jobs", {"kind":"export", "method":"render", "data":{"svg":svg}, "params":params})
@@ -84,17 +85,35 @@ def run_one(base, source, fmt, target, params=None):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--url", default="http://127.0.0.1:18082")
+    parser.add_argument("--url", "--api", default="http://127.0.0.1:18082")
     parser.add_argument("--input", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--report", type=Path, required=True)
+    parser.add_argument("--only-changed", action="store_true", help="复用输入与实际输出SHA均未改变的已有解码证据；引擎/字体改变时不要使用")
     args = parser.parse_args()
+    args.input, args.output, args.report = args.input.resolve(), args.output.resolve(), args.report.resolve()
     assert request(args.url, "/api/health")["status"] == "ok"
     args.output.mkdir(exist_ok=True, parents=True)
     sources = sorted(args.input.glob("*.svg"))
     assert sources, "没有 SVG 输入"
     report = {"schemaVersion":1, "source":"浏览器实际下载的模拟示例 SVG；真实 Redis/RQ/Inkscape 转换；独立解码。源 SVG 边界由浏览器验收另外检查。", "templateCount":len(sources), "files":[], "failures":[]}
     tasks = [(p, f) for p in sources for f in ["png","pdf","eps"]]
+    if args.only_changed and args.report.exists():
+        previous = {(r['template'], r['format']): r for r in json.loads(args.report.read_text()).get('files', [])}
+        pending = []
+        for source, fmt in tasks:
+            old = previous.get((source.stem, fmt))
+            target = args.output / (source.stem + '.' + fmt)
+            if (old and old.get('opened') and old.get('params') == {'format':fmt,'dpi':150,'outline':False}
+                and old.get('sourceSha256') == hashlib.sha256(source.read_text().encode()).hexdigest()
+                and target.is_file() and old.get('sha256') == hashlib.sha256(target.read_bytes()).hexdigest()):
+                report['files'].append({**old, 'file':str(target.resolve())})
+            else:
+                pending.append((source, fmt))
+        tasks = pending
+    report['reusedFiles'] = len(report['files'])
+    report['convertedFiles'] = len(tasks)
+    print(f"复用 {report['reusedFiles']} 份已验证文件；本次转换 {len(tasks)} 份", flush=True)
     with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:
         futures = {executor.submit(run_one, args.url, p, f, args.output / (p.stem + "." + f)): (p,f) for p,f in tasks}
         for future in concurrent.futures.as_completed(futures):
@@ -102,12 +121,18 @@ def main():
             try:
                 result = future.result()
                 report["files"].append(result)
-                print(f"{len(report['files'])}/{len(tasks)} {source.stem}.{fmt} opened", flush=True)
+                print(f"{len(report['files'])}/{len(sources)*3} {source.stem}.{fmt} opened", flush=True)
             except Exception as exc:
                 report["failures"].append({"template":source.stem,"format":fmt,"error":str(exc)})
                 print(f"FAILED {source.stem}.{fmt}: {exc}", flush=True)
             report["files"].sort(key=lambda r:(r["template"],r["format"]))
             args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2)+"\n")
+    report['files'].sort(key=lambda r:(r['template'],r['format']))
+    for result in report['files']:
+        current = args.input / (result['template'] + '.svg')
+        if hashlib.sha256(current.read_text().encode()).hexdigest() != result['sourceSha256']:
+            report['failures'].append({'template':result['template'],'format':result['format'],'error':'验收期间输入SVG发生改变，需要重新运行'})
+    args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
     if report["failures"]:
         raise SystemExit(1)
     print(f"通过：{len(sources)} 个模板、{len(report['files'])} 个文件", flush=True)

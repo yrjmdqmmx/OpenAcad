@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { symbolPath, symbolOptions } from "./symbols";
+import { DraggableLabel } from "./interaction";
 import {
   forceCenter,
   forceCollide,
@@ -77,7 +78,7 @@ function setIssues(d: Dataset): Issue[] {
     issues.push(error("韦恩图支持 2～5 个集合，每列代表一个集合", t));
   return issues;
 }
-function Venn({ project: p }: RendererProps) {
+function Venn({ project: p, onLayoutChange }: RendererProps) {
   const issues = setIssues(p.dataset);
   if (issues.length) return <Invalid project={p} issues={issues} />;
   const t = pick(p.dataset, "sets")!,
@@ -133,7 +134,10 @@ function Venn({ project: p }: RendererProps) {
               strokeWidth={value(p, "setStroke", 2)}
             />
             {enabled(p, "showLabels") && (
-              <text
+              <DraggableLabel
+                project={p}
+                onLayoutChange={onLayoutChange}
+                labelId={`venn-${s.name}`}
                 x={cx + (s.x - cx) * 2.8}
                 y={cy + (s.y - cy) * 2.8}
                 textAnchor="middle"
@@ -142,7 +146,7 @@ function Venn({ project: p }: RendererProps) {
                 fontSize={value(p, "fontSize", 13)}
               >
                 {s.name}（{sets[s.i].size}）
-              </text>
+              </DraggableLabel>
             )}
           </g>
         ))}
@@ -530,6 +534,25 @@ function Sankey({ project: p }: RendererProps) {
     dst = new Map(names.map((n) => [n, 0]));
   return (
     <Frame project={p}>
+      <defs>
+        {links.map((l, i) => (
+          <linearGradient
+            key={i}
+            id={`flow-gradient-${p.id}-${i}`}
+            x1="0%"
+            x2="100%"
+          >
+            <stop
+              offset="0%"
+              stopColor={pal[names.indexOf(l.source) % pal.length]}
+            />
+            <stop
+              offset="100%"
+              stopColor={pal[names.indexOf(l.target) % pal.length]}
+            />
+          </linearGradient>
+        ))}
+      </defs>
       {links.map((l, i) => {
         const a = pos.get(l.source)!,
           b = pos.get(l.target)!,
@@ -547,11 +570,13 @@ function Sankey({ project: p }: RendererProps) {
             key={i}
             d={`M${x0},${y0} C${x0 + c},${y0} ${x1 - c},${y1} ${x1},${y1}`}
             stroke={
-              mode === "target"
-                ? pal[names.indexOf(l.target) % pal.length]
-                : mode === "gray"
-                  ? "#9cabb1"
-                  : pal[names.indexOf(l.source) % pal.length]
+              mode === "gradient"
+                ? `url(#flow-gradient-${p.id}-${i})`
+                : mode === "target"
+                  ? pal[names.indexOf(l.target) % pal.length]
+                  : mode === "gray"
+                    ? "#9cabb1"
+                    : pal[names.indexOf(l.source) % pal.length]
             }
             strokeWidth={Math.max(0.4, thickness)}
             strokeOpacity={value(p, "flowOpacity", 0.35)}
@@ -655,11 +680,15 @@ const networkAlternate = dataset(
     ],
   ),
 );
-function networkIssues(d: Dataset): Issue[] {
+function networkIssues(d: Dataset, style?: Project["style"]): Issue[] {
   const nodes = pick(d, "nodes"),
     edges = d.tables.find((t) => t.role === "edges");
   let issues = tableShape(nodes, 2);
   if (!nodes) return issues;
+  if (style?.nodeShapeMode === "column" && !nodes.columns.includes("shape"))
+    issues.push(
+      error("节点形状选择了读取 shape 列，但节点表缺少“shape”列", nodes),
+    );
   issues.push(
     ...required(nodes, ["id", "label"]),
     ...uniqueIds(nodes, Math.max(0, nodes.columns.indexOf("id"))),
@@ -692,6 +721,22 @@ function networkIssues(d: Dataset): Issue[] {
     nodes.rows.forEach((_, i) =>
       numericCell(nodes, i, nodes.columns.indexOf("size"), issues, { min: 1 }),
     );
+  if (nodes.columns.includes("shape"))
+    nodes.rows.forEach((r, i) => {
+      if (
+        !symbolOptions.some(
+          (o) => o[0] === String(r[nodes.columns.indexOf("shape")]),
+        )
+      )
+        issues.push(
+          rowIssue(
+            nodes,
+            i,
+            nodes.columns.indexOf("shape"),
+            "节点形状须为 circle/cross/diamond/square/star/triangle/wye",
+          ),
+        );
+    });
   if (nodes.rows.length > 300)
     issues.push(error("交互网络图最多支持 300 个节点，请先筛选", nodes));
   return issues;
@@ -701,6 +746,7 @@ type NetNode = {
   label: string;
   group: string;
   size: number;
+  shape: string;
   x?: number;
   y?: number;
   vx?: number;
@@ -710,7 +756,7 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
   const [drag, setDrag] = useState<{ id: string; x: number; y: number } | null>(
     null,
   );
-  const issues = networkIssues(p.dataset);
+  const issues = networkIssues(p.dataset, p.style);
   if (issues.length) return <Invalid project={p} issues={issues} />;
   const nt = pick(p.dataset, "nodes")!,
     et = p.dataset.tables.find((t) => t.role === "edges")!,
@@ -727,11 +773,14 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
     label: String(at(nt, r, "label", "")),
     group: String(at(nt, r, "group", "未分组")),
     size: Number(at(nt, r, "size", 12)),
+    shape: String(at(nt, r, "shape", "circle")),
   }));
   const links = et.rows.map((r) => ({
     source: String(at(et, r, "source", "")),
     target: String(at(et, r, "target", "")),
     weight: Number(at(et, r, "weight", 1)),
+    label: String(at(et, r, "label", at(et, r, "id", ""))),
+    group: String(at(et, r, "group", "未分组")),
   }));
   const groups = Array.from(new Set(nodes.map((n) => n.group)));
   const layout = text(p, "networkLayout", "force");
@@ -769,15 +818,6 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
   const saved = p.layout?.nodePositions as
     | Record<string, { x: number; y: number }>
     | undefined;
-  nodes.forEach((n) => {
-    const chosen = drag?.id === n.id ? drag : saved?.[n.id];
-    if (chosen) {
-      n.x = chosen.x;
-      n.y = chosen.y;
-    }
-    n.x = Math.max(n.size + 20, Math.min(iw - n.size - 20, n.x ?? iw / 2));
-    n.y = Math.max(n.size + 20, Math.min(ih - n.size - 20, n.y ?? ih / 2));
-  });
   const index = new Map(nodes.map((n) => [n.id, n]));
   const nodeSize = (n: NetNode) =>
     text(p, "nodeSizeMode", "data") === "degree"
@@ -792,6 +832,42 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
         ) *
           value(p, "nodeScale", 5)
       : Math.sqrt(n.size) * value(p, "nodeScale", 5);
+  nodes.forEach((n) => {
+    const chosen = drag?.id === n.id ? drag : saved?.[n.id];
+    if (chosen) {
+      n.x = chosen.x;
+      n.y = chosen.y;
+    }
+    const r = nodeSize(n),
+      hasLoop = et.rows.some(
+        (row) =>
+          row[et.columns.indexOf("source")] === n.id &&
+          row[et.columns.indexOf("target")] === n.id,
+      );
+    n.x = Math.max(r + 20, Math.min(iw - r - 20, n.x ?? iw / 2));
+    n.y = Math.max(
+      r * (hasLoop ? 3.8 : 1) + 10,
+      Math.min(ih - r - 28, n.y ?? ih / 2),
+    );
+  });
+  const nodeColor = (n: NetNode) => pal[groups.indexOf(n.group) % pal.length];
+  const edgeGroups = Array.from(new Set(links.map((l) => l.group)));
+  const nodeShape = (n: NetNode) =>
+    text(p, "nodeShapeMode", "uniform") === "column"
+      ? n.shape
+      : text(p, "nodeShapeMode", "uniform") === "group"
+        ? symbolOptions[groups.indexOf(n.group) % symbolOptions.length][0]
+        : text(p, "nodeShape", "circle");
+  const endpoint = (n: unknown) =>
+    typeof n === "string" ? index.get(n)! : (n as NetNode);
+  const edgeColor = (l: (typeof links)[number]) =>
+    text(p, "edgeColorMode", "uniform") === "source"
+      ? nodeColor(endpoint(l.source))
+      : text(p, "edgeColorMode", "uniform") === "target"
+        ? nodeColor(endpoint(l.target))
+        : text(p, "edgeColorMode", "uniform") === "group"
+          ? pal[edgeGroups.indexOf(l.group) % pal.length]
+          : text(p, "edgeColor", "#9aadb0");
   const locate = (e: React.PointerEvent<SVGGElement>) => {
     const svg = e.currentTarget.ownerSVGElement!;
     const pt = svg.createSVGPoint();
@@ -803,17 +879,20 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
   return (
     <Frame project={p}>
       <defs>
-        <marker
-          id={arrowId}
-          markerWidth={8}
-          markerHeight={8}
-          refX={7}
-          refY={4}
-          orient="auto"
-          markerUnits="strokeWidth"
-        >
-          <path d="M0,0 L8,4 L0,8 Z" fill={text(p, "edgeColor", "#9aadb0")} />
-        </marker>
+        {links.map((l, i) => (
+          <marker
+            key={i}
+            id={`${arrowId}-${i}`}
+            markerWidth={8}
+            markerHeight={8}
+            refX={7}
+            refY={4}
+            orient="auto"
+            markerUnits="strokeWidth"
+          >
+            <path d="M0,0 L8,4 L0,8 Z" fill={edgeColor(l)} />
+          </marker>
+        ))}
       </defs>
       <g transform={`translate(${left},${top})`}>
         {links.map((l, i) => {
@@ -835,34 +914,50 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
             ex = b.x! - (dx / len) * offset,
             ey = b.y! - (dy / len) * offset;
           return (
-            <path
-              key={i}
-              markerEnd={
-                enabled(p, "directedEdges", false)
-                  ? `url(#${arrowId})`
-                  : undefined
-              }
-              d={
-                self
-                  ? `M${a.x! + nodeSize(a) * 0.6},${a.y! - nodeSize(a) * 0.6} C${a.x! + loop},${a.y! - loop * 2} ${a.x! - loop},${a.y! - loop * 2} ${a.x! - nodeSize(a) * 0.6},${a.y! - nodeSize(a) * 0.6}`
-                  : curvature
-                    ? `M${a.x},${a.y} Q${((a.x ?? 0) + (b.x ?? 0)) / 2 + 20},${((a.y ?? 0) + (b.y ?? 0)) / 2 - 20} ${ex},${ey}`
-                    : `M${a.x},${a.y} L${ex},${ey}`
-              }
-              stroke={text(p, "edgeColor", "#9aadb0")}
-              strokeWidth={
-                enabled(p, "weightedEdges", true)
-                  ? Math.max(
-                      0.5,
-                      Math.sqrt(l.weight) * value(p, "edgeWidth", 1.5),
-                    )
-                  : value(p, "edgeWidth", 1.5)
-              }
-              fill="none"
-              opacity={0.7}
-            >
-              <title>{`${a.label}—${b.label}；权重 ${l.weight}`}</title>
-            </path>
+            <g key={i} data-network-edge={i}>
+              <path
+                markerEnd={
+                  enabled(p, "directedEdges", false)
+                    ? `url(#${arrowId}-${i})`
+                    : undefined
+                }
+                d={
+                  self
+                    ? `M${a.x! + nodeSize(a) * 0.6},${a.y! - nodeSize(a) * 0.6} C${a.x! + loop},${a.y! - loop * 2} ${a.x! - loop},${a.y! - loop * 2} ${a.x! - nodeSize(a) * 0.6},${a.y! - nodeSize(a) * 0.6}`
+                    : curvature
+                      ? `M${a.x},${a.y} Q${((a.x ?? 0) + (b.x ?? 0)) / 2 + 20},${((a.y ?? 0) + (b.y ?? 0)) / 2 - 20} ${ex},${ey}`
+                      : `M${a.x},${a.y} L${ex},${ey}`
+                }
+                stroke={edgeColor(l)}
+                strokeWidth={
+                  enabled(p, "weightedEdges", true)
+                    ? Math.max(
+                        0.5,
+                        Math.sqrt(l.weight) * value(p, "edgeWidth", 1.5),
+                      )
+                    : value(p, "edgeWidth", 1.5)
+                }
+                fill="none"
+                opacity={0.7}
+              >
+                <title>{`${a.label}—${b.label}；权重 ${l.weight}`}</title>
+              </path>
+              {enabled(p, "showEdgeLabels", false) && (
+                <text
+                  x={self ? a.x : (a.x! + b.x!) / 2 + (curvature ? 10 : 0)}
+                  y={
+                    self
+                      ? a.y! - loop * 1.7
+                      : (a.y! + b.y!) / 2 - (curvature ? 15 : 5)
+                  }
+                  fontSize={value(p, "edgeLabelSize", 11)}
+                  textAnchor="middle"
+                  fill={text(p, "edgeLabelColor", "#40555b")}
+                >
+                  {l.label || fmt(l.weight)}
+                </text>
+              )}
+            </g>
           );
         })}
         {nodes.map((n) => (
@@ -890,23 +985,30 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
           >
             <title>{`${n.label}（${n.id}）；分组：${n.group}`}</title>
             <path
-              d={symbolPath(text(p, "nodeShape", "circle"), nodeSize(n))}
+              d={symbolPath(nodeShape(n), nodeSize(n))}
               fill={pal[groups.indexOf(n.group) % pal.length]}
-              stroke="#ffffff"
-              strokeWidth={2}
+              fillOpacity={value(p, "nodeOpacity", 1)}
+              stroke={text(p, "nodeStrokeColor", "#ffffff")}
+              strokeWidth={value(p, "nodeStrokeWidth", 2)}
             />
-            {enabled(p, "showLabels") && (
-              <text
-                y={nodeSize(n) + 17}
-                textAnchor="middle"
-                fontSize={value(p, "fontSize", 13)}
-              >
-                {n.label}
-              </text>
-            )}
           </g>
         ))}
       </g>
+      {enabled(p, "showLabels") &&
+        nodes.map((n) => (
+          <DraggableLabel
+            key={n.id}
+            project={p}
+            onLayoutChange={onLayoutChange}
+            labelId={`network-${n.id}`}
+            x={left + n.x!}
+            y={top + n.y! + nodeSize(n) + 17}
+            textAnchor="middle"
+            fontSize={value(p, "fontSize", 13)}
+          >
+            {n.label}
+          </DraggableLabel>
+        ))}
       {enabled(p, "showLegend") &&
         groups.map((g, i) => (
           <g
@@ -916,6 +1018,19 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
             <circle r={5} fill={pal[i % pal.length]} />
             <text x={12} y={4} fontSize={11}>
               {g}
+            </text>
+          </g>
+        ))}
+      {enabled(p, "showLegend") &&
+        text(p, "edgeColorMode", "uniform") === "group" &&
+        edgeGroups.map((g, i) => (
+          <g
+            key={g}
+            transform={`translate(${left + i * 140},${top + ih + 50})`}
+          >
+            <path d="M0,0L15,0" stroke={pal[i % pal.length]} strokeWidth={2} />
+            <text x={20} y={4} fontSize={10}>
+              边：{g}
             </text>
           </g>
         ))}
@@ -941,7 +1056,7 @@ export const relationTemplates: Template[] = [
         bool("showZero", "显示零计数区域"),
       ],
       inputHelp:
-        "角色 sets：2～5 列，每列标题是唯一集合名，每个单元格是一个元素标识。不同长度集合可用空白补齐；空白忽略，重复元素自动去重。右侧显示只属于指定集合组合的互斥交集。",
+        "角色 sets：2～5 列，每列标题是唯一集合名，每个单元格是一个元素标识。不同长度集合可用空白补齐；空白忽略，重复元素自动去重。右侧显示只属于指定集合组合的互斥交集。可拖动集合标签避让，位置会保存进项目并用于图片导出。",
       limitations: [
         "集合轮廓为示意，面积不代表数量；精确交集全部在右侧计数表展示，避免在多集合轮廓中误标不存在的区域。",
       ],
@@ -1000,6 +1115,7 @@ export const relationTemplates: Template[] = [
         opt("flowColor", "流带颜色", [
           ["source", "跟随来源"],
           ["target", "跟随目标"],
+          ["gradient", "来源到目标渐变"],
           ["gray", "统一灰色"],
         ]),
         opt("flowSort", "同层排序", [
@@ -1034,6 +1150,14 @@ export const relationTemplates: Template[] = [
         num("linkDistance", "连线目标距离", 30, 250),
         num("repulsion", "节点排斥强度", 10, 700, 10),
         opt("nodeShape", "节点形状", symbolOptions),
+        opt("nodeShapeMode", "节点形状依据", [
+          ["uniform", "统一形状"],
+          ["group", "按节点分组"],
+          ["column", "读取 shape 列"],
+        ]),
+        num("nodeOpacity", "节点填充透明度", 0.1, 1, 0.05),
+        col("nodeStrokeColor", "节点描边颜色"),
+        num("nodeStrokeWidth", "节点描边宽度", 0, 6, 0.5),
         opt("nodeSizeMode", "节点大小依据", [
           ["data", "size 列"],
           ["degree", "连接数量"],
@@ -1046,10 +1170,19 @@ export const relationTemplates: Template[] = [
         bool("directedEdges", "显示方向箭头"),
         bool("weightedEdges", "按权重调整线宽"),
         num("edgeWidth", "线宽倍率", 0.5, 6, 0.5),
+        opt("edgeColorMode", "连线配色", [
+          ["uniform", "统一颜色"],
+          ["source", "来源分组颜色"],
+          ["target", "目标分组颜色"],
+          ["group", "边的 group 分类"],
+        ]),
         col("edgeColor", "连线颜色"),
+        bool("showEdgeLabels", "显示边标签"),
+        num("edgeLabelSize", "边标签字号", 7, 26),
+        col("edgeLabelColor", "边标签颜色"),
       ],
       inputHelp:
-        "角色 nodes 节点表：id（唯一）、label（标签），可选 group、size（正数）。角色 edges 边表：source、target 必须匹配节点 id，可选 weight（非负）。可拖动节点，位置保存在项目文件。",
+        "角色 nodes 节点表：id（唯一）、label（标签），可选 group、size（正数）、shape（circle/cross/diamond/square/star/triangle/wye）。角色 edges 边表：source、target 必须匹配节点 id，可选 weight（非负）、group（边分类）、label（边标签）、id（缺少 label 时用作标签）。没有 label/id 时边标签显示权重。选择按分组或 shape 列可给不同节点设置不同符号；可拖动节点，位置保存在项目文件。",
       limitations: [
         "显示用户提供的网络，不执行共现网络推断。最多 300 个节点；方向箭头使用 source → target；自环使用可见回环，箭头指向 target。",
       ],

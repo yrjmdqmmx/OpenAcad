@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "baseUrl": "https://openacad.xyz",
+  "checkedAt": "2026-09-06T15:00:10.767634+00:00",
+  "dataSource": "本脚本确定性生成的模拟数据",
+  "cases": [],
+  "complete": false,
+  "transport": {
+    "client": "httpx",
+    "version": "0.28.1",
+    "connectionReuse": true,
+    "certificateVerification": true,
+    "existingProxySettingsPreserved": true
+  },
+  "status": "failed",
+  "error": "",
+  "transportRetries": [
+    {
+      "method": "GET",
+      "path": "/",
+      "attempt": 1,
+      "errorType": "ConnectError",
+      "delaySeconds": 0.5
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "attempt": 2,
+      "errorType": "PoolTimeout",
+      "delaySeconds": 1
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "attempt": 3,
+      "errorType": "PoolTimeout",
+      "delaySeconds": 2
+    }
+  ]
+}

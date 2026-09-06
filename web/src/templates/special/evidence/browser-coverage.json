@@ -1,0 +1,107 @@
+{
+  "date": "2026-09-06T13:51:49.175Z",
+  "results": [
+    {
+      "id": "network-labeled-loops",
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "network-attribute-mappings",
+      "labelDrag": true,
+      "projectReopen": true,
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "sankey-gradient",
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "venn-dragged-label",
+      "drag": true,
+      "projectReopen": true,
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "synteny-reordered",
+      "drag": true,
+      "projectReopen": true,
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "enrichment-dot-class",
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "enrichment-bar-class",
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "bubble-matrix-category",
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    }
+  ]
+}

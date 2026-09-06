@@ -702,9 +702,32 @@ function Matrix({ project }: RendererProps) {
     cw = plotW / m,
     ch = plotH / n;
   const maxAbs = Math.max(...vals.map(Math.abs), 1e-10);
+  const bubbleColorMode = bubble
+    ? text(p, "bubbleColorMode", "continuous")
+    : "continuous";
+  const bubbleCategories =
+    bubbleColorMode === "row"
+      ? rows.map((x) => String(x.r[0]))
+      : t.columns.slice(1);
   const legend = (
     <g transform={`translate(${plotX},${top + plotH + 61})`}>
-      {binary ? (
+      {bubble && bubbleColorMode !== "continuous" ? (
+        <>
+          <text y={-14} fontSize={10}>
+            圆面积表示数值绝对值；颜色按
+            {bubbleColorMode === "row" ? "行" : "列"}分类
+          </text>
+          {bubbleCategories.slice(0, 6).map((name, i) => (
+            <g key={name} transform={`translate(${(i * plotW) / 6},0)`}>
+              <circle r={4} fill={pal[i % pal.length]} />
+              <text x={8} y={3} fontSize={9}>
+                {name.length > 7 ? name.slice(0, 6) + "…" : name}
+                <title>{`${name}`}</title>
+              </text>
+            </g>
+          ))}
+        </>
+      ) : binary ? (
         <>
           <circle cx={7} r={5} fill={pal[0]} />
           <text x={19} y={4} fontSize={11}>
@@ -879,7 +902,7 @@ function Matrix({ project }: RendererProps) {
         )}
         {clustering && (
           <text x={cx} y={top + plotH + 30} textAnchor="middle" fontSize={10}>
-            <title>{t.columns.slice(1).join(" / ")}</title>
+            <title>{`${t.columns.slice(1).join(" / ")}`}</title>
             {("由内向外：" + t.columns.slice(1).join(" / ")).slice(
               0,
               Math.floor(iw / 11),
@@ -983,7 +1006,11 @@ function Matrix({ project }: RendererProps) {
                   : text(p, "absentColor", "#f1f4f2")
                 : nv === 0 && enabled(p, "blankZero", false)
                   ? "none"
-                  : scale(nv);
+                  : bubbleColorMode === "row"
+                    ? pal[i % pal.length]
+                    : bubbleColorMode === "column"
+                      ? pal[j % pal.length]
+                      : scale(nv);
               return (
                 <g key={j}>
                   <title>{`${r[0]} / ${t.columns[j + 1]}：${v}${pv ? `；P=${pv.rows[originalI]?.[j + 1]}` : ""}`}</title>
@@ -1243,7 +1270,7 @@ function MantelLinks({
           >
             {g.length > 12 ? g.slice(0, 11) + "…" : g}
           </text>
-          <title>{g}</title>
+          <title>{`${g}`}</title>
         </g>
       ))}
       {enabled(p, "showLegend") && (
@@ -1365,7 +1392,7 @@ export const matrixTemplates: Template[] = [
         },
         validate: (d) => matrixIssues(d, "matrix", true),
         inputHelp: matrixHelp + " 数值必须严格为 0 或 1。",
-        sourceUrls: source("binary_plot2"),
+        sourceUrls: source(mode === "dot" ? "binary_plot" : "binary_plot2"),
         analysisMethods: analysisMethods.slice(1),
       },
     ),
@@ -1384,10 +1411,16 @@ export const matrixTemplates: Template[] = [
       controls: [
         ...commonControls,
         num("bubbleScale", "气泡尺寸倍率", 0.1, 1, 0.05),
+        opt("bubbleColorMode", "气泡配色依据", [
+          ["continuous", "连续数值"],
+          ["row", "按行分类"],
+          ["column", "按列分类"],
+        ]),
       ],
       validate: (d) => matrixIssues(d),
       inputHelp:
-        matrixHelp + " 圆面积映射数值绝对值，颜色保留正负；0 值圆面积为 0。",
+        matrixHelp +
+        " 圆面积映射数值绝对值；连续色保留数值和正负，按行/列分类时颜色只表达类别。0 值圆面积为 0。分类图例显示前 6 项，完整行列名仍在矩阵轴上。",
       sourceUrls: source("bubble_plot"),
     },
   ),

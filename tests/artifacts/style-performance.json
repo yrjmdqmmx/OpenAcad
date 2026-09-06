@@ -1,0 +1,47 @@
+{
+  "note": "同一本机Chrome，常规模拟示例，测量填入标题到预览出现的总耗时（包含自动化交互开销），不代表大数据或统计计算时延。",
+  "rows": [
+    {
+      "template": "bar",
+      "milliseconds": 43
+    },
+    {
+      "template": "line",
+      "milliseconds": 20
+    },
+    {
+      "template": "scatter",
+      "milliseconds": 18
+    },
+    {
+      "template": "box",
+      "milliseconds": 16
+    },
+    {
+      "template": "heatmap",
+      "milliseconds": 17
+    },
+    {
+      "template": "sankey",
+      "milliseconds": 11
+    },
+    {
+      "template": "network",
+      "milliseconds": 15
+    },
+    {
+      "template": "map",
+      "milliseconds": 29
+    },
+    {
+      "template": "pca",
+      "milliseconds": 18
+    },
+    {
+      "template": "tree-normal",
+      "milliseconds": 17
+    }
+  ],
+  "p95": 43,
+  "target": 300
+}

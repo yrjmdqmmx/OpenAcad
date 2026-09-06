@@ -1,0 +1,234 @@
+[
+  {
+    "case": "normal-rectangular",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 1050,
+      "height": 650,
+      "canvas": [
+        1050,
+        650
+      ]
+    }
+  },
+  {
+    "case": "normal-rounded",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 1050,
+      "height": 650,
+      "canvas": [
+        1050,
+        650
+      ]
+    }
+  },
+  {
+    "case": "normal-linear",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 1050,
+      "height": 650,
+      "canvas": [
+        1050,
+        650
+      ]
+    }
+  },
+  {
+    "case": "normal-elliptical",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 1050,
+      "height": 650,
+      "canvas": [
+        1050,
+        650
+      ]
+    }
+  },
+  {
+    "case": "normal-bezierX",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 1050,
+      "height": 650,
+      "canvas": [
+        1050,
+        650
+      ]
+    }
+  },
+  {
+    "case": "normal-bezierY",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 1050,
+      "height": 650,
+      "canvas": [
+        1050,
+        650
+      ]
+    }
+  },
+  {
+    "case": "circle-rectangular",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  },
+  {
+    "case": "circle-linear",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  },
+  {
+    "case": "circle-elliptical",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  },
+  {
+    "case": "circle-bezierX",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  },
+  {
+    "case": "circle-bezierY",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  },
+  {
+    "case": "unrooted-linear",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  },
+  {
+    "case": "unrooted-bezierX",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  },
+  {
+    "case": "unrooted-bezierY",
+    "passed": true,
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  },
+  {
+    "case": "support-variable-circle-filter-drag-undo-redo-reopen",
+    "passed": true,
+    "before": "translate(304,254.25)",
+    "after": "translate(346.09354120267255,233.20322939866372)",
+    "colors": [
+      "#000000",
+      "#808080",
+      "#000000"
+    ],
+    "geometry": {
+      "finite": true,
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "canvas": [
+        900,
+        900
+      ]
+    }
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "case": "normal",
+    "passed": true,
+    "ageBefore": "translate(347.94117647058823,148.14285714285714)",
+    "ageAfter": "translate(333.2352941176471,148.14285714285714)",
+    "artifacts": [
+      {
+        "format": "svg",
+        "bytes": 11975,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-normal.svg"
+      },
+      {
+        "format": "png",
+        "bytes": 68733,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-normal.png"
+      },
+      {
+        "format": "pdf",
+        "bytes": 97222,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-normal.pdf"
+      },
+      {
+        "format": "eps",
+        "bytes": 141040,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-normal.eps"
+      }
+    ]
+  },
+  {
+    "case": "circle",
+    "passed": true,
+    "ageBefore": "translate(557.5468843653132,371.4748463001862)",
+    "ageAfter": "translate(552.660437599888,375.37165756180326)",
+    "artifacts": [
+      {
+        "format": "svg",
+        "bytes": 13135,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-circle.svg"
+      },
+      {
+        "format": "png",
+        "bytes": 103814,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-circle.png"
+      },
+      {
+        "format": "pdf",
+        "bytes": 97815,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-circle.pdf"
+      },
+      {
+        "format": "eps",
+        "bytes": 202037,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-circle.eps"
+      }
+    ]
+  },
+  {
+    "case": "unrooted",
+    "passed": true,
+    "ageBefore": "translate(572.7414840163776,346.85859222371533)",
+    "ageAfter": "translate(565.5453378460544,351.9665469767059)",
+    "artifacts": [
+      {
+        "format": "svg",
+        "bytes": 10821,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-unrooted.svg"
+      },
+      {
+        "format": "png",
+        "bytes": 87318,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-unrooted.png"
+      },
+      {
+        "format": "pdf",
+        "bytes": 92142,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-unrooted.pdf"
+      },
+      {
+        "format": "eps",
+        "bytes": 177357,
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/src/templates/tree/evidence/time-unrooted.eps"
+      }
+    ]
+  }
+]
