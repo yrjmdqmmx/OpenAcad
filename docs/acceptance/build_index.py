@@ -32,6 +32,7 @@ except (OSError,subprocess.CalledProcessError,json.JSONDecodeError) as exc:
  raise SystemExit('无法读取当前模板注册表。请先安装Node并在web目录执行npm ci。'+str(exc))
 invalid=read('docs/acceptance/invalid-input-browser.json')
 browser=read('tests/artifacts/browser-results.json');controls=read('tests/artifacts/control-audit.json')['records'];exports=read('tests/artifacts/export-matrix.json')
+tree_default=read('tests/artifacts/tree-default-refresh.json')
 special=read('web/src/templates/special/evidence/browser-qa.json');special_ids={r['id'] for r in special['report']}
 basic=read('web/src/templates/basic/evidence/browser-advanced.json');advanced=read('server/tests/artifacts/advanced-export-matrix.json')
 source=read('docs/research/comparison.json');sourceByUrl={r['sourceUrl']:r for r in source['records']}
@@ -63,6 +64,11 @@ def walk(suites,prefix='$.suites'):
     checks.append({'file':sp.get('file',s.get('file')),'title':sp['title'],'project':t['projectName'],'status':last.get('status','not-run'),'reportSelector':f'{prefix}[{i}].specs[{j}].tests[{k}]','startedAt':last.get('startTime')})
   walk(s.get('suites',[]),f'{prefix}[{i}].suites')
 walk(browser['suites'])
+main_checks=checks
+checks=[]
+walk(tree_default['suites'])
+tree_default_checks=checks
+checks=main_checks
 browser_groups=collections.Counter(c['file'] for c in checks if c['status']=='passed')
 browser_scope=f"55模板逐图仅Chromium；通用3流程在Chromium/Firefox/WebKit/390px手机共{browser_groups['workflow.spec.ts']}项；{browser_groups['live-analysis.spec.ts']}实际排序分析、{browser_groups['live-export.spec.ts']}真实导出（桌面与手机各四格式）、{browser_groups['ordination-editor.spec.ts']}排序分组/已有坐标/项目恢复、{browser_groups['performance.spec.ts']}性能；其余{browser['stats']['skipped']}项按测试配置跳过。"
 conditional={
@@ -81,6 +87,9 @@ for m in meta:
  id=m['id'];unit='web/src/templates/special/special.test.tsx' if id in special_ids else 'web/tests/tree.test.tsx' if id.startswith('tree-') else 'web/tests/ordination.test.tsx' if id in ['pca','pcoa','nmds','cca','rda'] else 'web/tests/basic.test.tsx'
  b=next((c for c in checks if c['file']=='templates.spec.ts' and c['title']==m['name']+'：示例、几何、项目与 SVG 文件' and c['project']=='chromium'),{'status':'pending-report-refresh','reportSelector':f'待最终总报告: {m["name"]} / Chromium'})
  browserEv=evidence('tests/artifacts/browser-results.json',b['reportSelector'],'browser-Chromium')
+ if id.startswith('tree-'):
+  b=next(c for c in tree_default_checks if c['title']==m['name']+'：示例、几何、项目与 SVG 文件' and c['project']=='chromium')
+  browserEv=evidence('tests/artifacts/tree-default-refresh.json',b['reportSelector'],'browser-Chromium-final-tree-refresh')
  if id in special_ids:
   alternate={'status':'passed','method':'browser','evidence':[evidence('web/src/templates/special/evidence/browser-qa.json',f'report[id={id}].alternate','browser'),evidence(unit,f'{id}：两组数据、SVG、项目重开','unit-SSR')]}
  elif id in ['pca','pcoa','nmds','cca','rda']:
@@ -117,14 +126,16 @@ for m in meta:
   layout=id.removeprefix('tree-')
   rec['treeSupplementalEvidence']={'separateFromMain82':True,'time':next(c for c in tree_time_cases if c['layout']==layout),'direction':next((c for c in tree_direction_cases if c['layout']==layout),{'status':'not-applicable','reason':'无根布局不提供向内或从右向左生长开关。'}),'branchStyles':{'records':[c for c in tree_branches if c['case'].startswith(layout+'-')],'evidence':evidence(TREE+'/evidence/branch-styles/browser-report.json',f'[case begins {layout}-]','browser-specialized')},'dynamicOptions':next(c for c in tree_dynamic if c['kind']==layout),'sharedSupportStyleEvidence':{'evidence':evidence(TREE+'/evidence/branch-styles/browser-report.json','[case=support-variable-circle-filter-drag-undo-redo-reopen]','browser-specialized'),'boundary':'支持度变量、阈值、圆点与拖动为代表综合案例；不把同一案例重复算成三个布局各一次测试。'}}
   rec['styles']['browserEvidence'].extend([evidence(TREE+'/evidence/browser-time.json',f'[case={layout}]','browser-specialized'),evidence(TREE+'/evidence/branch-styles/browser-report.json',f'[case begins {layout}-]','browser-specialized'),evidence(TREE+'/evidence/browser-dynamic-options.json',f'[kind={layout}]','browser-specialized')])
-  rec['exports']['svg']['currentArtifactRefresh']={'basis':'1.0冻结后主任务专门刷新三个默认树SVG；与较早82总套件分开','sha256':svgHash}
+  rec['exports']['svg']['currentArtifactRefresh']={'basis':'1.0冻结后专门刷新三个默认树SVG；与较早82总套件分开','sha256':svgHash,'startedAt':b['startedAt'],'evidence':browserEv}
  records.append(rec)
 sourceMapping=[{'sourceUrl':u,'sourceNameZh':s['chineseName'],'sourceAvailability':s['availability'],'templateIds':[r['templateId'] for r in records if u in r['sourceEntrances']]} for u,s in sourceByUrl.items()]
 inputs=['docs/acceptance/invalid-input-browser.json','tests/artifacts/browser-results.json','tests/artifacts/control-audit.json','tests/artifacts/export-matrix.json','tests/artifacts/template-cases.json','server/tests/artifacts/advanced-export-matrix.json','web/src/templates/basic/evidence/browser-advanced.json','web/src/templates/basic/evidence/browser-statistics.json','web/src/templates/special/evidence/browser-qa.json','web/src/templates/special/evidence/browser-interactions.json','web/src/templates/special/evidence/browser-advanced.json','web/src/templates/special/evidence/browser-real-analysis.json','web/src/templates/special/evidence/browser-coverage.json','docs/research/comparison.json']
 result={'schemaVersion':1,'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'本地交付验收索引；不构成生产HTTPS部署成功声明','counts':{'templates':len(records),'sourceEntrances':len(sourceMapping),'unmappedSourceEntrances':sum(not x['templateIds'] for x in sourceMapping),'browserPassed':browser['stats']['expected'],'browserIntentionalSkips':browser['stats']['skipped'],'browserFailed':browser['stats']['unexpected'],'browserFlaky':browser['stats']['flaky'],'defaultSsrControls':len(controls),'defaultSsrChanged':sum(r['changedFromExample'] for r in controls),'defaultSsrConditional':sum(not r['changedFromExample'] for r in controls),'invalidInputBrowserCases':len(records)*2,'exportFiles':len(exports['files']),'exportFilesDecoded':sum(r.get('opened') is True for r in exports['files']),'exportCurrentSourceShaMismatches':sum(not r['exports'][f]['sourceHashMatchesCurrentSvg'] for r in records for f in ['png','pdf','eps'])},'browserScope':browser_scope,'unitRunReportedByMainTask':{'passed':args.unit_passed,'note':'来自主任务2026-09-06最终单元测试运行反馈；本索引引用具体测试源码与已保存审计，不把源码存在当作浏览器实操。'},'sourceManifests':[{'path':p,'sha256':sha(ROOT/p)} for p in inputs],'sourceMapping':sourceMapping,'templates':records}
-tree_inputs=[TREE+'/ACCEPTANCE.md',TREE+'/evidence/browser-time.json',TREE+'/evidence/browser-directions.json',TREE+'/evidence/branch-styles/browser-report.json',TREE+'/evidence/browser-dynamic-options.json','server/tests/artifacts/tree-branch-export-matrix.json']
+tree_inputs=['tests/artifacts/tree-default-refresh.json',TREE+'/ACCEPTANCE.md',TREE+'/evidence/browser-time.json',TREE+'/evidence/browser-directions.json',TREE+'/evidence/branch-styles/browser-report.json',TREE+'/evidence/browser-dynamic-options.json','server/tests/artifacts/tree-branch-export-matrix.json']
 result['sourceManifests'].extend({'path':p,'sha256':sha(ROOT/p)} for p in tree_inputs)
 result['supplementalTreeEvidence']=tree_supplement
+result['mainBrowserSuite']={'evidence':evidence('tests/artifacts/browser-results.json'),'startedAt':browser['stats']['startTime'],'stats':browser['stats'],'boundary':'82项历史总套件单独保留；之后的三默认树刷新与树功能专项不追记到该报告。'}
+result['supplementalTreeEvidence']['finalDefaultRefresh']={'evidence':evidence('tests/artifacts/tree-default-refresh.json'),'startedAt':tree_default['stats']['startTime'],'stats':tree_default['stats'],'cases':tree_default_checks,'boundary':'311单元测试后的当前默认树SVG、项目下载与重新打开验收。仅3个树模板；其他52默认SVG未改写。'}
 result['browserScope']=browser_scope
 result['browserGroups']=dict(browser_groups)
 result['counts']['exportOutputShaMismatches']=sum(not r['exports'][f]['artifactHashMatches'] for r in records for f in ['png','pdf','eps'])
@@ -142,7 +153,7 @@ if result['reportStatus']=='pending-final-browser-rerun':result['previousObserve
 with (OUT/'templates.csv').open('w',encoding='utf-8-sig',newline='') as f:
  w=csv.writer(f);w.writerow(['模板ID','中文名称','类别','原页面链接','示例','替代数据','错误校验','样式SSR变化/审计数','浏览器样式证据','条件项','SVG文件','PNG文件','PDF文件','EPS文件','导出来源SHA一致','项目证据','逐项结构记录'])
  for r in records:
-  w.writerow([r['templateId'],r['nameZh'],r['category'],' | '.join(r['sourceUrls']),('通过·Chromium' if r['example']['status']=='passed' else '最终总报告重跑中'),r['alternateData']['method'],'通过·浏览器两种错误',f"{r['styles']['ssrAudit']['changedFromExample']}/{r['styles']['ssrAudit']['audited']}",' | '.join(e['path'] for e in r['styles']['browserEvidence']) or '本模板未逐控件浏览器实操；见SSR与公共代表流程',' | '.join(c['key']+':'+c['explanation'] for c in r['styles']['conditionalControls']),*[r['exports'][fmt]['artifact'] for fmt in ['svg','png','pdf','eps']],'是' if all(r['exports'][fmt]['sourceHashMatchesCurrentSvg'] for fmt in ['png','pdf','eps']) else '待刷新当前输入版本','tests/artifacts/browser-results.json；web/tests/project.test.ts；tests/artifacts/template-cases.json',f"docs/acceptance/templates.json → templates[templateId={r['templateId']}]"])
+  w.writerow([r['templateId'],r['nameZh'],r['category'],' | '.join(r['sourceUrls']),('通过·Chromium' if r['example']['status']=='passed' else '最终总报告重跑中'),r['alternateData']['method'],'通过·浏览器两种错误',f"{r['styles']['ssrAudit']['changedFromExample']}/{r['styles']['ssrAudit']['audited']}",' | '.join(e['path'] for e in r['styles']['browserEvidence']) or '本模板未逐控件浏览器实操；见SSR与公共代表流程',' | '.join(c['key']+':'+c['explanation'] for c in r['styles']['conditionalControls']),*[r['exports'][fmt]['artifact'] for fmt in ['svg','png','pdf','eps']],'是' if all(r['exports'][fmt]['sourceHashMatchesCurrentSvg'] for fmt in ['png','pdf','eps']) else '待刷新当前输入版本',r['project']['downloadAndDatasetCheck']['path']+'；web/tests/project.test.ts；tests/artifacts/template-cases.json',f"docs/acceptance/templates.json → templates[templateId={r['templateId']}]"])
 c=result['counts']
 readme=f'''# OpenAcad 逐模板验收索引
 
@@ -154,7 +165,7 @@ readme=f'''# OpenAcad 逐模板验收索引
 
 ## 最终运行结果及解释
 
-主浏览器套件：**{c['browserPassed']} 通过，{c['browserFailed']} 失败，{c['browserIntentionalSkips']} 按配置跳过，{c['browserFlaky']} 重试不稳定**。55 个模板均在 Chromium 实际显示、下载项目、下载 SVG 并重新打开 SVG；3 个通用工作流另在 Chromium、Firefox、WebKit 和 390px 手机配置各运行一次。{browser_groups['live-analysis.spec.ts']} 项排序分析使用真实后端，{browser_groups['live-export.spec.ts']} 项验证实际图片导出（桌面与手机各四格式），{browser_groups['ordination-editor.spec.ts']} 项检查排序图分组/已有坐标模式/项目恢复，{browser_groups['performance.spec.ts']} 项检查样式响应时间。{c['browserIntentionalSkips']} 个跳过项表示按场景只在指定配置运行，不能说55图均完成四浏览器逐项验收。原报告：[browser-results.json](../../tests/artifacts/browser-results.json)。
+主浏览器套件（开始时间：{browser['stats']['startTime']}）：**{c['browserPassed']} 通过，{c['browserFailed']} 失败，{c['browserIntentionalSkips']} 按配置跳过，{c['browserFlaky']} 重试不稳定**。55 个模板均在 Chromium 实际显示、下载项目、下载 SVG 并重新打开 SVG；3 个通用工作流另在 Chromium、Firefox、WebKit 和 390px 手机配置各运行一次。{browser_groups['live-analysis.spec.ts']} 项排序分析使用真实后端，{browser_groups['live-export.spec.ts']} 项验证实际图片导出（桌面与手机各四格式），{browser_groups['ordination-editor.spec.ts']} 项检查排序图分组/已有坐标模式/项目恢复，{browser_groups['performance.spec.ts']} 项检查样式响应时间。{c['browserIntentionalSkips']} 个跳过项表示按场景只在指定配置运行，不能说55图均完成四浏览器逐项验收。原报告：[browser-results.json](../../tests/artifacts/browser-results.json)。
 
 默认样式审计记录 **{c['defaultSsrControls']} 项**，其中 **{c['defaultSsrChanged']} 项**改变服务器端 React SVG 序列化，另 **{c['defaultSsrConditional']} 项**依赖特定数据或布局。它不是{c['defaultSsrControls']}次浏览器操作，也不证明任意参数组合。每个模板的真实浏览器样式覆盖单独列出。主任务最终单元测试反馈为{args.unit_passed}项通过；本索引把具体断言位置与运行报告分开引用。
 
@@ -182,7 +193,7 @@ readme=f'''# OpenAcad 逐模板验收索引
 |分支/支持度|14个布局×路径组合＋1个支持度综合案例，共15通过|16份SVG，另48份PNG/PDF/EPS独立打开；综合案例前后SVG不算两个测试|[浏览器报告](../../web/src/templates/tree/evidence/branch-styles/browser-report.json)、[导出报告](../../server/tests/artifacts/tree-branch-export-matrix.json)|
 |动态分支菜单|同一项目切换3布局|当前有效路径选项为6/5/3；无额外图片计数|[菜单记录](../../web/src/templates/tree/evidence/browser-dynamic-options.json)|
 
-三个默认树SVG在1.0功能冻结后由主任务专门刷新，对应9份PNG/PDF/EPS也已与当前源SHA同步；这次刷新单独标注，不把它追记为较早总套件的一部分。已有时间树编辑使用用户已有年代、后验摘要与可信区间；不运行BEAST/MCMCTree，也不从单树估计分歧时间或收敛。[树工作台验收与边界](../../web/src/templates/tree/ACCEPTANCE.md)。
+三个默认树SVG在1.0功能冻结后专门刷新：[独立机器报告](../../tests/artifacts/tree-default-refresh.json) 开始于 {tree_default['stats']['startTime']}，3项通过；对应9份PNG/PDF/EPS也已与当前源SHA同步。这次刷新单独标注，不把它追记为较早总套件的一部分。已有时间树编辑使用用户已有年代、后验摘要与可信区间；不运行BEAST/MCMCTree，也不从单树估计分歧时间或收敛。[树工作台验收与边界](../../web/src/templates/tree/ACCEPTANCE.md)。
 
 ## 四个默认未变的条件项
 

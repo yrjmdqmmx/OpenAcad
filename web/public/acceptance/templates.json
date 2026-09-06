@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-06T15:00:48.479785+00:00",
+  "generatedAt": "2026-09-06T15:37:35.388595+00:00",
   "scope": "本地交付验收索引；不构成生产HTTPS部署成功声明",
   "counts": {
     "templates": 55,
@@ -84,6 +84,10 @@
     {
       "path": "docs/research/comparison.json",
       "sha256": "2c370ae226b9141fd1274cd422cf8990b79698632e2c8f58fdb5f29f34ff8caf"
+    },
+    {
+      "path": "tests/artifacts/tree-default-refresh.json",
+      "sha256": "23de586a33abc0a57b14f0f92e6a65b4d78a2c0912bddce2db26ce659d88cdc4"
     },
     {
       "path": "web/src/templates/tree/ACCEPTANCE.md",
@@ -27428,9 +27432,9 @@
         "status": "passed",
         "method": "browser-Chromium",
         "evidence": {
-          "path": "tests/artifacts/browser-results.json",
-          "selector": "$.suites[4].specs[52].tests[0]",
-          "kind": "browser-Chromium"
+          "path": "tests/artifacts/tree-default-refresh.json",
+          "selector": "$.suites[0].specs[0].tests[0]",
+          "kind": "browser-Chromium-final-tree-refresh"
         }
       },
       "alternateData": {
@@ -27757,13 +27761,19 @@
           "actualDownload": true,
           "reopenedInBrowser": true,
           "evidence": {
-            "path": "tests/artifacts/browser-results.json",
-            "selector": "$.suites[4].specs[52].tests[0]",
-            "kind": "browser-Chromium"
+            "path": "tests/artifacts/tree-default-refresh.json",
+            "selector": "$.suites[0].specs[0].tests[0]",
+            "kind": "browser-Chromium-final-tree-refresh"
           },
           "currentArtifactRefresh": {
-            "basis": "1.0冻结后主任务专门刷新三个默认树SVG；与较早82总套件分开",
-            "sha256": "bc84435804684ce9f8321857adcd312f4129f7feed35f84676e8bc7069b2ef75"
+            "basis": "1.0冻结后专门刷新三个默认树SVG；与较早82总套件分开",
+            "sha256": "bc84435804684ce9f8321857adcd312f4129f7feed35f84676e8bc7069b2ef75",
+            "startedAt": "2026-09-06T14:59:58.746Z",
+            "evidence": {
+              "path": "tests/artifacts/tree-default-refresh.json",
+              "selector": "$.suites[0].specs[0].tests[0]",
+              "kind": "browser-Chromium-final-tree-refresh"
+            }
           }
         },
         "png": {
@@ -27833,9 +27843,9 @@
       "project": {
         "status": "passed",
         "downloadAndDatasetCheck": {
-          "path": "tests/artifacts/browser-results.json",
-          "selector": "$.suites[4].specs[52].tests[0]",
-          "kind": "browser-Chromium"
+          "path": "tests/artifacts/tree-default-refresh.json",
+          "selector": "$.suites[0].specs[0].tests[0]",
+          "kind": "browser-Chromium-final-tree-refresh"
         },
         "serializationRoundtrip": {
           "path": "web/tests/project.test.ts",
@@ -28351,9 +28361,9 @@
         "status": "passed",
         "method": "browser-Chromium",
         "evidence": {
-          "path": "tests/artifacts/browser-results.json",
-          "selector": "$.suites[4].specs[53].tests[0]",
-          "kind": "browser-Chromium"
+          "path": "tests/artifacts/tree-default-refresh.json",
+          "selector": "$.suites[0].specs[1].tests[0]",
+          "kind": "browser-Chromium-final-tree-refresh"
         }
       },
       "alternateData": {
@@ -28668,13 +28678,19 @@
           "actualDownload": true,
           "reopenedInBrowser": true,
           "evidence": {
-            "path": "tests/artifacts/browser-results.json",
-            "selector": "$.suites[4].specs[53].tests[0]",
-            "kind": "browser-Chromium"
+            "path": "tests/artifacts/tree-default-refresh.json",
+            "selector": "$.suites[0].specs[1].tests[0]",
+            "kind": "browser-Chromium-final-tree-refresh"
           },
           "currentArtifactRefresh": {
-            "basis": "1.0冻结后主任务专门刷新三个默认树SVG；与较早82总套件分开",
-            "sha256": "0f9f1a3d5e653f34498f80904eb8f503201b7e307cda77aa237a4d78db255717"
+            "basis": "1.0冻结后专门刷新三个默认树SVG；与较早82总套件分开",
+            "sha256": "0f9f1a3d5e653f34498f80904eb8f503201b7e307cda77aa237a4d78db255717",
+            "startedAt": "2026-09-06T14:59:59.939Z",
+            "evidence": {
+              "path": "tests/artifacts/tree-default-refresh.json",
+              "selector": "$.suites[0].specs[1].tests[0]",
+              "kind": "browser-Chromium-final-tree-refresh"
+            }
           }
         },
         "png": {
@@ -28744,9 +28760,9 @@
       "project": {
         "status": "passed",
         "downloadAndDatasetCheck": {
-          "path": "tests/artifacts/browser-results.json",
-          "selector": "$.suites[4].specs[53].tests[0]",
-          "kind": "browser-Chromium"
+          "path": "tests/artifacts/tree-default-refresh.json",
+          "selector": "$.suites[0].specs[1].tests[0]",
+          "kind": "browser-Chromium-final-tree-refresh"
         },
         "serializationRoundtrip": {
           "path": "web/tests/project.test.ts",
@@ -29246,9 +29262,9 @@
         "status": "passed",
         "method": "browser-Chromium",
         "evidence": {
-          "path": "tests/artifacts/browser-results.json",
-          "selector": "$.suites[4].specs[54].tests[0]",
-          "kind": "browser-Chromium"
+          "path": "tests/artifacts/tree-default-refresh.json",
+          "selector": "$.suites[0].specs[2].tests[0]",
+          "kind": "browser-Chromium-final-tree-refresh"
         }
       },
       "alternateData": {
@@ -29542,13 +29558,19 @@
           "actualDownload": true,
           "reopenedInBrowser": true,
           "evidence": {
-            "path": "tests/artifacts/browser-results.json",
-            "selector": "$.suites[4].specs[54].tests[0]",
-            "kind": "browser-Chromium"
+            "path": "tests/artifacts/tree-default-refresh.json",
+            "selector": "$.suites[0].specs[2].tests[0]",
+            "kind": "browser-Chromium-final-tree-refresh"
           },
           "currentArtifactRefresh": {
-            "basis": "1.0冻结后主任务专门刷新三个默认树SVG；与较早82总套件分开",
-            "sha256": "6ec9ee63e8f316fb80885e385803a898dd7c3f786195346270ba4a9590601be5"
+            "basis": "1.0冻结后专门刷新三个默认树SVG；与较早82总套件分开",
+            "sha256": "6ec9ee63e8f316fb80885e385803a898dd7c3f786195346270ba4a9590601be5",
+            "startedAt": "2026-09-06T15:00:00.652Z",
+            "evidence": {
+              "path": "tests/artifacts/tree-default-refresh.json",
+              "selector": "$.suites[0].specs[2].tests[0]",
+              "kind": "browser-Chromium-final-tree-refresh"
+            }
           }
         },
         "png": {
@@ -29618,9 +29640,9 @@
       "project": {
         "status": "passed",
         "downloadAndDatasetCheck": {
-          "path": "tests/artifacts/browser-results.json",
-          "selector": "$.suites[4].specs[54].tests[0]",
-          "kind": "browser-Chromium"
+          "path": "tests/artifacts/tree-default-refresh.json",
+          "selector": "$.suites[0].specs[2].tests[0]",
+          "kind": "browser-Chromium-final-tree-refresh"
         },
         "serializationRoundtrip": {
           "path": "web/tests/project.test.ts",
@@ -31331,7 +31353,63 @@
     ],
     "acceptanceDocument": {
       "path": "web/src/templates/tree/ACCEPTANCE.md"
+    },
+    "finalDefaultRefresh": {
+      "evidence": {
+        "path": "tests/artifacts/tree-default-refresh.json"
+      },
+      "startedAt": "2026-09-06T14:59:58.545Z",
+      "stats": {
+        "startTime": "2026-09-06T14:59:58.545Z",
+        "duration": 2885.576,
+        "expected": 3,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "file": "templates.spec.ts",
+          "title": "矩形进化树工作台：示例、几何、项目与 SVG 文件",
+          "project": "chromium",
+          "status": "passed",
+          "reportSelector": "$.suites[0].specs[0].tests[0]",
+          "startedAt": "2026-09-06T14:59:58.746Z"
+        },
+        {
+          "file": "templates.spec.ts",
+          "title": "环形进化树工作台：示例、几何、项目与 SVG 文件",
+          "project": "chromium",
+          "status": "passed",
+          "reportSelector": "$.suites[0].specs[1].tests[0]",
+          "startedAt": "2026-09-06T14:59:59.939Z"
+        },
+        {
+          "file": "templates.spec.ts",
+          "title": "无根进化树工作台：示例、几何、项目与 SVG 文件",
+          "project": "chromium",
+          "status": "passed",
+          "reportSelector": "$.suites[0].specs[2].tests[0]",
+          "startedAt": "2026-09-06T15:00:00.652Z"
+        }
+      ],
+      "boundary": "311单元测试后的当前默认树SVG、项目下载与重新打开验收。仅3个树模板；其他52默认SVG未改写。"
     }
+  },
+  "mainBrowserSuite": {
+    "evidence": {
+      "path": "tests/artifacts/browser-results.json"
+    },
+    "startedAt": "2026-09-06T14:14:54.234Z",
+    "stats": {
+      "startTime": "2026-09-06T14:14:54.234Z",
+      "duration": 72135.183,
+      "expected": 82,
+      "skipped": 194,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "boundary": "82项历史总套件单独保留；之后的三默认树刷新与树功能专项不追记到该报告。"
   },
   "browserGroups": {
     "live-analysis.spec.ts": 5,

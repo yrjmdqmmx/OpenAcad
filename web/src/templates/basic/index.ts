@@ -753,7 +753,7 @@ export const basicTemplates: Template[] = [
         });
       return a;
     },
-    limitations: ["首版最多 12 个集合；只绘制实际非空的独有交集。"],
+    limitations: ["首版最多 12 个集合；默认显示非空的独有交集，可开启“显示空交集”显示零计数组合。"],
   }),
   recipe({
     id: "rose",
