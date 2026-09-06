@@ -1,0 +1,187 @@
+[
+  {
+    "template": "binary-dot-annotated",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "DYRNGD+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "bubble-matrix-annotated",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "RHNHUY+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "bubble-matrix-category",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "ZUWKFR+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "circle-heatmap-annotated",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "XLRVYN+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "circle-heatmap-cluster",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "FRDGSR+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "enrichment-bar-class",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "AQDAQO+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "enrichment-dot-class",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "MLBROH+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "gene-cluster-broken",
+    "explicitSourceWeights": [
+      "650",
+      "bold",
+      "bold",
+      "bold"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "ULBIRR+NotoSansCJKsc-Regular",
+      "YJHNZA+NotoSansCJKsc-Bold"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "genome-custom-tracks",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "OEKLRW+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "heatmap-annotated",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "IUPECA+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "network-attribute-mappings",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "PVIVTK+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "network-labeled-loops",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "OQNVMT+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "sankey-gradient",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "FKGCYZ+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "synteny-reordered",
+    "explicitSourceWeights": [
+      "650",
+      "bold",
+      "bold",
+      "bold"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "YKYBPF+NotoSansCJKsc-Regular",
+      "DGUNKS+NotoSansCJKsc-Bold"
+    ],
+    "syntheticCairoFont": false
+  },
+  {
+    "template": "venn-dragged-label",
+    "explicitSourceWeights": [
+      "650",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "pdfFontResources": [
+      "FUUQEA+NotoSansCJKsc-Regular",
+      "OOEDFW+NotoSansCJKsc-Bold"
+    ],
+    "syntheticCairoFont": false
+  }
+]

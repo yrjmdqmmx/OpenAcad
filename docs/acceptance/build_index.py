@@ -269,3 +269,8 @@ assert len(records)==55 and len(sourceMapping)==52 and all(x['templateIds'] for 
 assert all(r['invalidData']['status']=='passed' for r in records)
 assert not any(c['status']=='unresolved' for r in records for c in r['styles']['conditionalControls'])
 print(json.dumps(result['counts'],ensure_ascii=False))
+
+# Keep separately verified typography runs when rebuilding the historical index.
+import sys
+if (ROOT/"tests/artifacts/font-bold-refresh/normalized-weight/verification-summary.json").exists():
+ subprocess.run([sys.executable, str(OUT/"append_font_evidence.py")], check=True)

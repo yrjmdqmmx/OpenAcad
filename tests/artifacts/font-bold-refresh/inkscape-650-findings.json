@@ -1,0 +1,377 @@
+{
+  "status": "failed-before-numeric-weight-compatibility-fix",
+  "affectedSourceCount": 37,
+  "findings": [
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/circle-heatmap-cluster.svg",
+      "texts": [
+        {
+          "text": "圈形热图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/binary-dot-annotated.svg",
+      "texts": [
+        {
+          "text": "圆点二值图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/synteny-reordered.svg",
+      "texts": [
+        {
+          "text": "MCScanX 共线性图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/bubble-matrix-annotated.svg",
+      "texts": [
+        {
+          "text": "数值气泡矩阵",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/gene-cluster-broken.svg",
+      "texts": [
+        {
+          "text": "基因簇排列图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/network-labeled-loops.svg",
+      "texts": [
+        {
+          "text": "动态关系网络图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/circle-heatmap-annotated.svg",
+      "texts": [
+        {
+          "text": "圈形热图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/heatmap-annotated.svg",
+      "texts": [
+        {
+          "text": "数值热图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/enrichment-dot-class.svg",
+      "texts": [
+        {
+          "text": "富集气泡图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/bubble-matrix-category.svg",
+      "texts": [
+        {
+          "text": "数值气泡矩阵",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/genome-custom-tracks.svg",
+      "texts": [
+        {
+          "text": "基因组圈图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/network-attribute-mappings.svg",
+      "texts": [
+        {
+          "text": "动态关系网络图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/sankey-gradient.svg",
+      "texts": [
+        {
+          "text": "桑基流向图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/enrichment-bar-class.svg",
+      "texts": [
+        {
+          "text": "富集条形图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/advanced/sources/venn-dragged-label.svg",
+      "texts": [
+        {
+          "text": "韦恩集合交集图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/sankey.svg",
+      "texts": [
+        {
+          "text": "桑基流向图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/mantel.svg",
+      "texts": [
+        {
+          "text": "Mantel 关联热图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/volcano.svg",
+      "texts": [
+        {
+          "text": "差异表达火山图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/circle-heatmap.svg",
+      "texts": [
+        {
+          "text": "圈形热图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/packing.svg",
+      "texts": [
+        {
+          "text": "分组圆堆砌图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/binary-dot.svg",
+      "texts": [
+        {
+          "text": "圆点二值图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/double-correlation.svg",
+      "texts": [
+        {
+          "text": "组间相关性热图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/gene-cluster.svg",
+      "texts": [
+        {
+          "text": "基因簇排列图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/map.svg",
+      "texts": [
+        {
+          "text": "地理采样点地图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/protein-domains.svg",
+      "texts": [
+        {
+          "text": "蛋白保守结构域图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/enrichment-dot.svg",
+      "texts": [
+        {
+          "text": "富集气泡图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/bubble-matrix.svg",
+      "texts": [
+        {
+          "text": "数值气泡矩阵",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/heatmap.svg",
+      "texts": [
+        {
+          "text": "数值热图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/synteny.svg",
+      "texts": [
+        {
+          "text": "MCScanX 共线性图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/network.svg",
+      "texts": [
+        {
+          "text": "动态关系网络图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/binary-rect.svg",
+      "texts": [
+        {
+          "text": "方格二值图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/genome-circos.svg",
+      "texts": [
+        {
+          "text": "基因组圈图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/venn.svg",
+      "texts": [
+        {
+          "text": "韦恩集合交集图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/enrichment-bar.svg",
+      "texts": [
+        {
+          "text": "富集条形图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/correlation.svg",
+      "texts": [
+        {
+          "text": "组内相关性热图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/protein-motifs.svg",
+      "texts": [
+        {
+          "text": "蛋白保守基序图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    },
+    {
+      "source": "tests/artifacts/font-bold-refresh/default/sources/enrichment-circle.svg",
+      "texts": [
+        {
+          "text": "富集圈图",
+          "weight": "650",
+          "element": "text"
+        }
+      ]
+    }
+  ],
+  "basis": "源SVG保持650，Chromium静态400/700匹配700；Inkscape1.2.2安装真实Bold后仍将650解释为Regular。PDF只有Regular的28项由verification-summary独立列出；其他9项有另外的粗体文本，不能仅靠存在Bold资源判标题正确。"
+}

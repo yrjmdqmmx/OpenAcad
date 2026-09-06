@@ -1,0 +1,199 @@
+{
+  "family": "Noto Serif CJK SC",
+  "weight": 700,
+  "passed": true,
+  "normalAndItalicGeometryDiffer": true,
+  "normalAndItalicPixelsDiffer": true,
+  "requiresVisibleSlant": true,
+  "exports": {
+    "normal": {
+      "svg": {
+        "file": "NotoSerifCJKsc-700-normal.svg",
+        "sha256": "e2dd09beb14d0779cc952a9280faace497d7cb4e7dc7d16d01ccca821376020f",
+        "provenance": {
+          "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+          "format": "svg",
+          "dpi": 150,
+          "width": 512.0,
+          "height": 128.0,
+          "outline": true,
+          "availableFontsSha256": {
+            "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+            "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+            "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+            "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+            "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+            "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+            "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+            "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+          },
+          "sha256": "e2dd09beb14d0779cc952a9280faace497d7cb4e7dc7d16d01ccca821376020f"
+        }
+      },
+      "png": {
+        "file": "NotoSerifCJKsc-700-normal.png",
+        "sha256": "03aecdd6eda54c9675f782a274d2ce3e824f83fc2ea929b9a96384410c0e412f",
+        "provenance": {
+          "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+          "format": "png",
+          "dpi": 150,
+          "width": 512.0,
+          "height": 128.0,
+          "outline": false,
+          "availableFontsSha256": {
+            "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+            "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+            "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+            "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+            "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+            "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+            "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+            "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+          },
+          "sha256": "03aecdd6eda54c9675f782a274d2ce3e824f83fc2ea929b9a96384410c0e412f"
+        },
+        "width": 800,
+        "height": 200,
+        "darkPixelEquivalent": 16566.921568627404,
+        "decodedPixelSha256": "f8df5d175a467d9260f5f83e6885f7186e0b4ee3452617199700aebd51cf08de"
+      },
+      "pdf": {
+        "file": "NotoSerifCJKsc-700-normal.pdf",
+        "sha256": "493fe99c6e20be03903aae4088e4d5320c2bbcdd1bee2928a10b6fd5993f3b9f",
+        "provenance": {
+          "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+          "format": "pdf",
+          "dpi": 150,
+          "width": 512.0,
+          "height": 128.0,
+          "outline": false,
+          "availableFontsSha256": {
+            "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+            "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+            "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+            "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+            "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+            "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+            "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+            "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+          },
+          "sha256": "493fe99c6e20be03903aae4088e4d5320c2bbcdd1bee2928a10b6fd5993f3b9f"
+        },
+        "pdfFontResources": [
+          "EWBWPP+NotoSerifCJKsc-Bold"
+        ],
+        "independentDecoder": "Poppler 26.08.0",
+        "independentFontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nEWBWPP+NotoSerifCJKsc-Bold           CID Type 0C       Identity-H       yes yes yes      7  0\n",
+        "independentPreview": "NotoSerifCJKsc-700-normal-pdf-preview.png",
+        "independentPreviewSha256": "e2e1a9cca0febc706d437a1386eb67502d09f8f9c7335f1a621d777cab81a3bb",
+        "independentPixels": {
+          "width": 512,
+          "height": 128,
+          "decoded": true,
+          "inkBounds": [
+            22,
+            35,
+            448,
+            95
+          ],
+          "touchesPageEdge": false
+        }
+      }
+    },
+    "italic": {
+      "svg": {
+        "file": "NotoSerifCJKsc-700-italic.svg",
+        "sha256": "46767b97abab88bf1a51f7038bdc4fedf18c44917e6866447f5a3dc8e93b9d4b",
+        "provenance": {
+          "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+          "format": "svg",
+          "dpi": 150,
+          "width": 512.0,
+          "height": 128.0,
+          "outline": true,
+          "availableFontsSha256": {
+            "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+            "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+            "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+            "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+            "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+            "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+            "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+            "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+          },
+          "sha256": "46767b97abab88bf1a51f7038bdc4fedf18c44917e6866447f5a3dc8e93b9d4b"
+        }
+      },
+      "png": {
+        "file": "NotoSerifCJKsc-700-italic.png",
+        "sha256": "7db684f9867774d453aa67e4177a13aa7860ce228a640ce1b96eab890e1da3fa",
+        "provenance": {
+          "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+          "format": "png",
+          "dpi": 150,
+          "width": 512.0,
+          "height": 128.0,
+          "outline": false,
+          "availableFontsSha256": {
+            "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+            "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+            "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+            "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+            "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+            "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+            "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+            "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+          },
+          "sha256": "7db684f9867774d453aa67e4177a13aa7860ce228a640ce1b96eab890e1da3fa"
+        },
+        "width": 800,
+        "height": 200,
+        "darkPixelEquivalent": 16575.56078431374,
+        "decodedPixelSha256": "7b28de5897347dfddcccfc2d82c28d24ecb7ea5fc17b677f300db3b9f5dec1ec"
+      },
+      "pdf": {
+        "file": "NotoSerifCJKsc-700-italic.pdf",
+        "sha256": "9c7e0cd7371fe10ab4f962c770410841d881f9ecabcb34046ce3b7c8bde7e64b",
+        "provenance": {
+          "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+          "format": "pdf",
+          "dpi": 150,
+          "width": 512.0,
+          "height": 128.0,
+          "outline": false,
+          "availableFontsSha256": {
+            "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+            "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+            "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+            "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+            "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+            "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+            "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+            "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+          },
+          "sha256": "9c7e0cd7371fe10ab4f962c770410841d881f9ecabcb34046ce3b7c8bde7e64b"
+        },
+        "pdfFontResources": [
+          "QQLPEA+OpenAcadNotoSerifCJKsc-BoldOblique"
+        ],
+        "independentDecoder": "Poppler 26.08.0",
+        "independentFontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nQQLPEA+OpenAcadNotoSerifCJKsc-BoldOblique CID Type 0C       Identity-H       yes yes yes      7  0\n",
+        "independentPreview": "NotoSerifCJKsc-700-italic-pdf-preview.png",
+        "independentPreviewSha256": "ed2a18c3d7c6e8f1406c1b13d77ed3578f624b5b20c5976b4136c9a6efc9c0e2",
+        "independentPixels": {
+          "width": 512,
+          "height": 128,
+          "decoded": true,
+          "inkBounds": [
+            21,
+            35,
+            454,
+            95
+          ],
+          "touchesPageEdge": false
+        }
+      }
+    }
+  },
+  "normalAndItalicIndependentPdfPreviewsDiffer": true
+}

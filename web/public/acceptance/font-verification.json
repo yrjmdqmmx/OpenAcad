@@ -1,0 +1,3861 @@
+{
+  "scope": "本机隔离环境；同86份SVG与真实400/700字体，258份实际服务转换及独立打开，不是生产域名验收",
+  "sourceReport": "tests/artifacts/font-bold-refresh/normalized-weight/verification-summary.json",
+  "sourceReportSha256": "16e046f42486376a0642848b3412bc97ce633dd1c892a8fcbc1ef2cad5a134eb",
+  "fontManifest": {
+    "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+    "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+    "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+  },
+  "verifiedAt": "2026-09-06T18:07:22.178374+00:00",
+  "groups": {
+    "default": {
+      "sourceCount": 55,
+      "reportRows": 165,
+      "uniqueOutputPaths": 165,
+      "actualOutputFiles": 165,
+      "convertedFiles": 165,
+      "reusedFiles": 0,
+      "openedFiles": 165,
+      "touchesPageEdge": 0,
+      "outputsDifferentFromRegularRun": 165,
+      "pdfsWithRealBoldResource": 55,
+      "pngNormalizationComparisons": 55,
+      "pngChangedFor650": 22,
+      "pngUnchangedWithout650": 33,
+      "report": "tests/artifacts/font-bold-refresh/normalized-weight/default/export-matrix.json",
+      "reportSha256": "455f1c851bc29351b64e8a11c1614815fcee1471d7f202e6c0d7e618970baedd"
+    },
+    "advanced": {
+      "sourceCount": 15,
+      "reportRows": 45,
+      "uniqueOutputPaths": 45,
+      "actualOutputFiles": 45,
+      "convertedFiles": 45,
+      "reusedFiles": 0,
+      "openedFiles": 45,
+      "touchesPageEdge": 0,
+      "outputsDifferentFromRegularRun": 45,
+      "pdfsWithRealBoldResource": 15,
+      "pngNormalizationComparisons": 15,
+      "pngChangedFor650": 15,
+      "pngUnchangedWithout650": 0,
+      "report": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/export-matrix.json",
+      "reportSha256": "f9b3277ff9d7f0eea1eddb3ca8e6939682b733b5f6d7c67fde10449b707470a2"
+    },
+    "tree-branch": {
+      "sourceCount": 16,
+      "reportRows": 48,
+      "uniqueOutputPaths": 48,
+      "actualOutputFiles": 48,
+      "convertedFiles": 48,
+      "reusedFiles": 0,
+      "openedFiles": 48,
+      "touchesPageEdge": 0,
+      "outputsDifferentFromRegularRun": 48,
+      "pdfsWithRealBoldResource": 16,
+      "pngNormalizationComparisons": 16,
+      "pngChangedFor650": 0,
+      "pngUnchangedWithout650": 16,
+      "report": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/export-matrix.json",
+      "reportSha256": "56fdd004c555b13db47529a872c44862bfcb829978572ada32af61c74028a05c"
+    }
+  },
+  "files": [
+    {
+      "group": "default",
+      "templateId": "bar",
+      "format": "eps",
+      "sourceSha256": "226ba7479c8577258db395b74273e0b2c6deaeaae387954afebf5608e5d86375",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar.eps",
+      "sha256": "93394f059e7aad57eec0e5f8c014c25f3efbb340ccd89609f51fbe55b3883b86",
+      "bytes": 43462,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bar",
+      "format": "pdf",
+      "sourceSha256": "226ba7479c8577258db395b74273e0b2c6deaeaae387954afebf5608e5d86375",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar.pdf",
+      "sha256": "c5b6fa618c6b53b2858a45afd7f0d0dcb18162276f1b381ab8c1a0be2dea730a",
+      "bytes": 123967,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar",
+      "format": "png",
+      "sourceSha256": "226ba7479c8577258db395b74273e0b2c6deaeaae387954afebf5608e5d86375",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar.png",
+      "sha256": "d2860c8c16a34a6e57bb4dd546cc3fe5b80a31ddb472773b0edf0ba3aaa62f39",
+      "bytes": 34944,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-category",
+      "format": "eps",
+      "sourceSha256": "3dbdad4709d10a49550c41e457aaa67235b6dd5be9e5cfdaa59d18545e7e88db",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-category.eps",
+      "sha256": "a23b41d01269601eca2ff0d5320d28eac55a53799513dd936116d0f78919bb62",
+      "bytes": 57348,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bar-category",
+      "format": "pdf",
+      "sourceSha256": "3dbdad4709d10a49550c41e457aaa67235b6dd5be9e5cfdaa59d18545e7e88db",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-category.pdf",
+      "sha256": "110e914074e7b7d74a989873414b515eae49f0cc927624143421cdade5b6067e",
+      "bytes": 127376,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-category",
+      "format": "png",
+      "sourceSha256": "3dbdad4709d10a49550c41e457aaa67235b6dd5be9e5cfdaa59d18545e7e88db",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-category.png",
+      "sha256": "14d1f60f6123d974786bd94397e23bc887aba2185c720248c49eae0a3f271c55",
+      "bytes": 48321,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-error",
+      "format": "eps",
+      "sourceSha256": "b52f102ba9be57a9e678ea299b48d484287e4c2403f49060e7d2dae4df39e6a5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-error.eps",
+      "sha256": "5fd683b7c8795d9c969ef376cff19dc4387d7c6cce6270f05214730a552d81a1",
+      "bytes": 54329,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bar-error",
+      "format": "pdf",
+      "sourceSha256": "b52f102ba9be57a9e678ea299b48d484287e4c2403f49060e7d2dae4df39e6a5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-error.pdf",
+      "sha256": "f972a4d2a270ace5562101186ccd932fc8f4a4d62904a96c9c66c0a993e8cc51",
+      "bytes": 145822,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-error",
+      "format": "png",
+      "sourceSha256": "b52f102ba9be57a9e678ea299b48d484287e4c2403f49060e7d2dae4df39e6a5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-error.png",
+      "sha256": "c406fe313d4843ac321cb8ffe5d80c046f9a72de4c2d2430e08e0b7dbf79a5fb",
+      "bytes": 44794,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped",
+      "format": "eps",
+      "sourceSha256": "28085d3403d976a816064f657e913d0505499d10058791bf0108f1f5228a98e3",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped.eps",
+      "sha256": "7d0b95a4733cfbcb958342adb57df82ddddad445cd2938ecfeb8380991362547",
+      "bytes": 57149,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped",
+      "format": "pdf",
+      "sourceSha256": "28085d3403d976a816064f657e913d0505499d10058791bf0108f1f5228a98e3",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped.pdf",
+      "sha256": "b2cdd85428042096eb69b2284dc04f8f5efc5d357d1c0603552d88dba09324ed",
+      "bytes": 128111,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped",
+      "format": "png",
+      "sourceSha256": "28085d3403d976a816064f657e913d0505499d10058791bf0108f1f5228a98e3",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped.png",
+      "sha256": "65c41a15241dbc3f24c913b6df44c3f8e58f3e70cba2f87833246b0097d11bfc",
+      "bytes": 42227,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped-error",
+      "format": "eps",
+      "sourceSha256": "2bf906bfeec155059acc4f02d9cb5ee3e26248f8a3ff588cc751aad08e0a91b5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped-error.eps",
+      "sha256": "7ebaebe6d106301ca02be05908c3f80fd63daa641cf59d29637e05faf782728c",
+      "bytes": 67156,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped-error",
+      "format": "pdf",
+      "sourceSha256": "2bf906bfeec155059acc4f02d9cb5ee3e26248f8a3ff588cc751aad08e0a91b5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped-error.pdf",
+      "sha256": "09a5c6490a5c82e4d57f7774e89ab3698021c48ab575315249ea27830e54ef1a",
+      "bytes": 168809,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped-error",
+      "format": "png",
+      "sourceSha256": "2bf906bfeec155059acc4f02d9cb5ee3e26248f8a3ff588cc751aad08e0a91b5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped-error.png",
+      "sha256": "c9c335825a0eec575703c207dc6235c272894966cfc52f78e05dc940b74a398f",
+      "bytes": 56843,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped-stacked",
+      "format": "eps",
+      "sourceSha256": "940c1b7643747425396bfe17f49049a44a20cfde813b5ce7838739b89059f34c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped-stacked.eps",
+      "sha256": "d3abb026cd81af817cf25afbdfefd333be64ca6d66153f8644448552c5b1cd87",
+      "bytes": 71852,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped-stacked",
+      "format": "pdf",
+      "sourceSha256": "940c1b7643747425396bfe17f49049a44a20cfde813b5ce7838739b89059f34c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped-stacked.pdf",
+      "sha256": "9a486c37a34bbcb1c99dc9746258a096d96608de66882a129096fa9830a25b8c",
+      "bytes": 137049,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-grouped-stacked",
+      "format": "png",
+      "sourceSha256": "940c1b7643747425396bfe17f49049a44a20cfde813b5ce7838739b89059f34c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-grouped-stacked.png",
+      "sha256": "9dcd835fe3ede8a4d7134ee3d462a09bfb08733bcff4f62f79ad5ca98aa2ae7e",
+      "bytes": 65039,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-line",
+      "format": "eps",
+      "sourceSha256": "47dd5acc0a8ba79f00b3e7227a2a05db9d4d04147400ab999a33157fd74d4902",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-line.eps",
+      "sha256": "693538d75488c492cf0c189a19acd45e98483015604573d20dbe6f1808672609",
+      "bytes": 75606,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bar-line",
+      "format": "pdf",
+      "sourceSha256": "47dd5acc0a8ba79f00b3e7227a2a05db9d4d04147400ab999a33157fd74d4902",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-line.pdf",
+      "sha256": "56529d2a641a9866e70b47a4a623c7a63f8078277367e615306cd582ee4240dd",
+      "bytes": 127953,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-line",
+      "format": "png",
+      "sourceSha256": "47dd5acc0a8ba79f00b3e7227a2a05db9d4d04147400ab999a33157fd74d4902",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-line.png",
+      "sha256": "6dca17d179bd208e20db5b199c6cea17629c4decbc90d285f567536251ed8e51",
+      "bytes": 71104,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-stacked",
+      "format": "eps",
+      "sourceSha256": "224c48fcb23b60391a01524c57c1b67877e46b0af444cd8ec62beaecebd0fe44",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-stacked.eps",
+      "sha256": "aa2cdba609ca9a983216eb315ad8c7f6878acc6cb0d9240a693812d40f3ce9d6",
+      "bytes": 47367,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bar-stacked",
+      "format": "pdf",
+      "sourceSha256": "224c48fcb23b60391a01524c57c1b67877e46b0af444cd8ec62beaecebd0fe44",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-stacked.pdf",
+      "sha256": "4a4710f5d457b8334c46b8074fe3b0c089cef58044dbdc75e45db6a1b96e0a9a",
+      "bytes": 127891,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bar-stacked",
+      "format": "png",
+      "sourceSha256": "224c48fcb23b60391a01524c57c1b67877e46b0af444cd8ec62beaecebd0fe44",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bar-stacked.png",
+      "sha256": "38b97f4267982e171407c213a2a86cca300df23f126c017ea5856693be729000",
+      "bytes": 41005,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "binary-dot",
+      "format": "eps",
+      "sourceSha256": "8aecb545b70d27e1d9c7f00cc202f2924e7824bd0198f65d9da09b45eed66f3d",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/binary-dot.eps",
+      "sha256": "d94ebba23fdb6a9e8e2c8c8f7c44306598a813c4a06ce5b00b79ad3417ae592c",
+      "bytes": 31688,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "binary-dot",
+      "format": "pdf",
+      "sourceSha256": "8aecb545b70d27e1d9c7f00cc202f2924e7824bd0198f65d9da09b45eed66f3d",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/binary-dot.pdf",
+      "sha256": "0066a22418c2943a94deec59c9ce79bd90abe500f250de485f035d876832093f",
+      "bytes": 117358,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "binary-dot",
+      "format": "png",
+      "sourceSha256": "8aecb545b70d27e1d9c7f00cc202f2924e7824bd0198f65d9da09b45eed66f3d",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/binary-dot.png",
+      "sha256": "e072fc18b97c21e0c2e3fce4148d66501522ccd94d10d3aa7e1321a596718a8a",
+      "bytes": 99351,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "binary-rect",
+      "format": "eps",
+      "sourceSha256": "1d242a90a94002e9eb118fcaa3bf4fa04961a00da0544a090f4df2c340adffc5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/binary-rect.eps",
+      "sha256": "a7e2c18f9018f954e17dca1302c17a3dbed7aaa69e31cb756a5a5f3115610620",
+      "bytes": 24185,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "binary-rect",
+      "format": "pdf",
+      "sourceSha256": "1d242a90a94002e9eb118fcaa3bf4fa04961a00da0544a090f4df2c340adffc5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/binary-rect.pdf",
+      "sha256": "7bd9fc1fbda1b64cb0903e08ffc032cf424450b910f422d6bf1a4232bbff6470",
+      "bytes": 116534,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "binary-rect",
+      "format": "png",
+      "sourceSha256": "1d242a90a94002e9eb118fcaa3bf4fa04961a00da0544a090f4df2c340adffc5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/binary-rect.png",
+      "sha256": "76d2e72b26c9f44627ca7192f0af9b577e205e7d16e639ef6142f5c47774856f",
+      "bytes": 55491,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "box",
+      "format": "eps",
+      "sourceSha256": "166a1ea885b1571cf82066388d31203370ff20d7d9f8574a23b5b1c137e23f69",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/box.eps",
+      "sha256": "282bc77a0dd63709a0819b567610dbf5e90232a8dbfee8454bcd54379aba2cd4",
+      "bytes": 43022,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "box",
+      "format": "pdf",
+      "sourceSha256": "166a1ea885b1571cf82066388d31203370ff20d7d9f8574a23b5b1c137e23f69",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/box.pdf",
+      "sha256": "aeb13436cf68368170454b8ed3c4b04c2ee8bcd940c5feb3c2897c2c4f38a934",
+      "bytes": 142478,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "box",
+      "format": "png",
+      "sourceSha256": "166a1ea885b1571cf82066388d31203370ff20d7d9f8574a23b5b1c137e23f69",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/box.png",
+      "sha256": "ef75b11cd8ff3f717c500a408ae2cc670a26c4da6d75a531ddb4b174f83bf7fc",
+      "bytes": 42641,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "box-grouped",
+      "format": "eps",
+      "sourceSha256": "097fb7ed27694ef006d88c0d874615b8a5367ced1b8acc2238df6ab56ff2c3ff",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/box-grouped.eps",
+      "sha256": "721988ff6595b6b61fd9f262d13d0df4bb10973fef1b22b2e759bad001066982",
+      "bytes": 59093,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "box-grouped",
+      "format": "pdf",
+      "sourceSha256": "097fb7ed27694ef006d88c0d874615b8a5367ced1b8acc2238df6ab56ff2c3ff",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/box-grouped.pdf",
+      "sha256": "04fc35deca6db472950da62647de818585a8522e08009158cbde26dd390d9233",
+      "bytes": 166981,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "box-grouped",
+      "format": "png",
+      "sourceSha256": "097fb7ed27694ef006d88c0d874615b8a5367ced1b8acc2238df6ab56ff2c3ff",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/box-grouped.png",
+      "sha256": "23c0849c968652b826a4bea87be3d47e0f9fbdb49ea18bbb0c1816fbf32a4c64",
+      "bytes": 59744,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bubble-matrix",
+      "format": "eps",
+      "sourceSha256": "1905ef112fdaf41d81235adee5bf9be7f238a236861b57517f1fc94abecf8d1f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bubble-matrix.eps",
+      "sha256": "0ce9dae3a6769765eff7e93bbb4e8185e8815b09c0d41710ef7bab87d702740b",
+      "bytes": 41948,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "bubble-matrix",
+      "format": "pdf",
+      "sourceSha256": "1905ef112fdaf41d81235adee5bf9be7f238a236861b57517f1fc94abecf8d1f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bubble-matrix.pdf",
+      "sha256": "566ba0f586d753f9b35bb41db571143eef77fd04949b9b469062a007f8c89301",
+      "bytes": 118423,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "bubble-matrix",
+      "format": "png",
+      "sourceSha256": "1905ef112fdaf41d81235adee5bf9be7f238a236861b57517f1fc94abecf8d1f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/bubble-matrix.png",
+      "sha256": "c3998ee09cd7f80fadda93acc97bb094be38737e2ed1fdca4766acde839674b8",
+      "bytes": 106812,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "cca",
+      "format": "eps",
+      "sourceSha256": "6820cc1d060453bbbc866815959734519a11ef85e3e79b648df9b8ba358996fd",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/cca.eps",
+      "sha256": "6bbefda592827101fc8b73cbc0048cc1dc47f7f1e5bc55e1bdd7b6a4b8520dac",
+      "bytes": 100066,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "cca",
+      "format": "pdf",
+      "sourceSha256": "6820cc1d060453bbbc866815959734519a11ef85e3e79b648df9b8ba358996fd",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/cca.pdf",
+      "sha256": "e6ea40244b2cd835d78fb20842cf4dd77dbe07054ca53777a3e438f004237a82",
+      "bytes": 132712,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "cca",
+      "format": "png",
+      "sourceSha256": "6820cc1d060453bbbc866815959734519a11ef85e3e79b648df9b8ba358996fd",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/cca.png",
+      "sha256": "a558fbf8de45859c0cdab186a4689fb3832c367c2f68a6f8922e00059d78a198",
+      "bytes": 94907,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "circle-heatmap",
+      "format": "eps",
+      "sourceSha256": "18ef2a631480c416f459025db2430267a692f2c1eb42349f9c831fa38f67259e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/circle-heatmap.eps",
+      "sha256": "33835111f1ddf74522565e7030481875e3d6c2e4669847242e86effa9daf1d0a",
+      "bytes": 32407,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "circle-heatmap",
+      "format": "pdf",
+      "sourceSha256": "18ef2a631480c416f459025db2430267a692f2c1eb42349f9c831fa38f67259e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/circle-heatmap.pdf",
+      "sha256": "3a23c04fdaa7fbe069921c171663ae9555d26fbacafccbf6eea6d254a140b037",
+      "bytes": 117246,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "circle-heatmap",
+      "format": "png",
+      "sourceSha256": "18ef2a631480c416f459025db2430267a692f2c1eb42349f9c831fa38f67259e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/circle-heatmap.png",
+      "sha256": "c729d18b00dea29811ad55e3564b5abac10e6211ba1e4a6f9c60021ac167ba9d",
+      "bytes": 122692,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "correlation",
+      "format": "eps",
+      "sourceSha256": "a831fc2086fd9f2009b2d9e0ac820b41912236bf9844e9df306ed8f7634a75c9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/correlation.eps",
+      "sha256": "8c6040b28ce75458d96bc56f514311224c630c8f42dd534b2b470ff0e21a7ce3",
+      "bytes": 27702,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "correlation",
+      "format": "pdf",
+      "sourceSha256": "a831fc2086fd9f2009b2d9e0ac820b41912236bf9844e9df306ed8f7634a75c9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/correlation.pdf",
+      "sha256": "b373154139f7b768ed69f5e7977435ba9727579bfb688219a28ef9b9135602dc",
+      "bytes": 114521,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "correlation",
+      "format": "png",
+      "sourceSha256": "a831fc2086fd9f2009b2d9e0ac820b41912236bf9844e9df306ed8f7634a75c9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/correlation.png",
+      "sha256": "818a38bc8c2f35dc32a76f85c26791bb476e39f9851ff127c0f589f828843927",
+      "bytes": 59118,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "double-correlation",
+      "format": "eps",
+      "sourceSha256": "9461e4e6820a2595243d4ff77f6643d2112a41fd597afa346478b60d2b941e39",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/double-correlation.eps",
+      "sha256": "c142f492e803a5bf7b13302a9d6a7551c6ca624e51db22b6d68a78d146a4b1cd",
+      "bytes": 28819,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "double-correlation",
+      "format": "pdf",
+      "sourceSha256": "9461e4e6820a2595243d4ff77f6643d2112a41fd597afa346478b60d2b941e39",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/double-correlation.pdf",
+      "sha256": "2676e5234b31f778e64e2c1e930fa971b08976b130eaf293f409c556fb47ed1a",
+      "bytes": 115600,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "double-correlation",
+      "format": "png",
+      "sourceSha256": "9461e4e6820a2595243d4ff77f6643d2112a41fd597afa346478b60d2b941e39",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/double-correlation.png",
+      "sha256": "6ac185e47ede131c6d302b9263b21f8b6d53c93065fd330d40e69452f87228d2",
+      "bytes": 56667,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "dumbbell",
+      "format": "eps",
+      "sourceSha256": "8acdaaa9ab33af50483f78c89da3ed5f1824f08e472dc93d15de43f7a0e5dad4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/dumbbell.eps",
+      "sha256": "2219f7c5e4cf8472eccc5c8217efde5be536f25fd2c52c871d8ddc1914d2e716",
+      "bytes": 54746,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "dumbbell",
+      "format": "pdf",
+      "sourceSha256": "8acdaaa9ab33af50483f78c89da3ed5f1824f08e472dc93d15de43f7a0e5dad4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/dumbbell.pdf",
+      "sha256": "298f0d39b51646fda0c76be0840cf948f0284ef04cf0986086c5d9cdc0170cb1",
+      "bytes": 129002,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "dumbbell",
+      "format": "png",
+      "sourceSha256": "8acdaaa9ab33af50483f78c89da3ed5f1824f08e472dc93d15de43f7a0e5dad4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/dumbbell.png",
+      "sha256": "d8afca20ccb74df05054e84bc39d1623e210c59f576842d91374f70133ca04cf",
+      "bytes": 42258,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-bar",
+      "format": "eps",
+      "sourceSha256": "18c13f8cda129746edd36af573e6882bc046052dfa3b81475f118dd30713edb7",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-bar.eps",
+      "sha256": "26b7a814689ecb5e85f9380e7f0251464c04d208426dcd61fe8f341ae6a54f42",
+      "bytes": 39253,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-bar",
+      "format": "pdf",
+      "sourceSha256": "18c13f8cda129746edd36af573e6882bc046052dfa3b81475f118dd30713edb7",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-bar.pdf",
+      "sha256": "5358aa79bdb5e6370a2d1450fbf87ad2ee7fa7cd33a00bf134cd3ddef9589236",
+      "bytes": 120704,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-bar",
+      "format": "png",
+      "sourceSha256": "18c13f8cda129746edd36af573e6882bc046052dfa3b81475f118dd30713edb7",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-bar.png",
+      "sha256": "715b16af52b9cecc6a164c79bc5ad25d8e60109606d6dc44bcc3c9d9e723caf7",
+      "bytes": 62791,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-circle",
+      "format": "eps",
+      "sourceSha256": "3152f1ae6d45262bfa5408a1187aa8e3dddf86e32c2f2057341c6bd845d13dfa",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-circle.eps",
+      "sha256": "75b3705d5a81992e2423eac7d659582c00bb08f73084f8376031328eb0930384",
+      "bytes": 129071,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-circle",
+      "format": "pdf",
+      "sourceSha256": "3152f1ae6d45262bfa5408a1187aa8e3dddf86e32c2f2057341c6bd845d13dfa",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-circle.pdf",
+      "sha256": "726ef69d18425737745e70d9fa6bc81ec98da27104c8eb12497db877cd09a638",
+      "bytes": 126188,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-circle",
+      "format": "png",
+      "sourceSha256": "3152f1ae6d45262bfa5408a1187aa8e3dddf86e32c2f2057341c6bd845d13dfa",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-circle.png",
+      "sha256": "1f993a9920c6b0847650fe152b6599fce96d007b412a560accf88058fc1ef60c",
+      "bytes": 139968,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-dot",
+      "format": "eps",
+      "sourceSha256": "5bea494654f30bd8dc079820ef1c8f69e0f0e9a1c6b49a5860b6b77929ed8c3b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-dot.eps",
+      "sha256": "a4e6e0f6e75d403aec74187e4f232e248feaf855f04e9166129b339453646592",
+      "bytes": 42054,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-dot",
+      "format": "pdf",
+      "sourceSha256": "5bea494654f30bd8dc079820ef1c8f69e0f0e9a1c6b49a5860b6b77929ed8c3b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-dot.pdf",
+      "sha256": "c593cd8b613268d07bab30143214a61a406ff771b539752e7fd764d3cb559135",
+      "bytes": 123956,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "enrichment-dot",
+      "format": "png",
+      "sourceSha256": "5bea494654f30bd8dc079820ef1c8f69e0f0e9a1c6b49a5860b6b77929ed8c3b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/enrichment-dot.png",
+      "sha256": "381bb36a6af0f93d2e6435748d2aa395e9358a6e95646434e33eb42634a74d7e",
+      "bytes": 70440,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "gene-cluster",
+      "format": "eps",
+      "sourceSha256": "533b3184399263b55f83a8980f6829bcb4cb788d76d169d2688a3d4f9292e51f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/gene-cluster.eps",
+      "sha256": "f5e3fe8996ab02ed5d51debe28ca5c010dd9ba2e5c490f749141799d0d603110",
+      "bytes": 30989,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "gene-cluster",
+      "format": "pdf",
+      "sourceSha256": "533b3184399263b55f83a8980f6829bcb4cb788d76d169d2688a3d4f9292e51f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/gene-cluster.pdf",
+      "sha256": "8a9cc893a9b44a7bb6ade78e8057e883aa5003d8fac95338b9b00ba6a03b8aff",
+      "bytes": 116105,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "gene-cluster",
+      "format": "png",
+      "sourceSha256": "533b3184399263b55f83a8980f6829bcb4cb788d76d169d2688a3d4f9292e51f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/gene-cluster.png",
+      "sha256": "82964f02eecfc53428accf277d1b579198a79dc286115799550ddf7dba9a8b9e",
+      "bytes": 79580,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "genome-circos",
+      "format": "eps",
+      "sourceSha256": "5a136105e0b6329195c9527fca3285940d4f15f607fd37965cad2d73f63d7afc",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/genome-circos.eps",
+      "sha256": "829016682f0044ef9cf0d13e23b26cbd208728138b161f5796c709fa20564f4a",
+      "bytes": 118963,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "genome-circos",
+      "format": "pdf",
+      "sourceSha256": "5a136105e0b6329195c9527fca3285940d4f15f607fd37965cad2d73f63d7afc",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/genome-circos.pdf",
+      "sha256": "6057dabe4d6aac10d83d2d7cfced2b8f29c220c46702c5114c2f71beb3718a22",
+      "bytes": 126120,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "genome-circos",
+      "format": "png",
+      "sourceSha256": "5a136105e0b6329195c9527fca3285940d4f15f607fd37965cad2d73f63d7afc",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/genome-circos.png",
+      "sha256": "cfeff856a53b804d850c34b8c136bc2f70a229e13a71a6d44eb0c63d7509946d",
+      "bytes": 132043,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "heatmap",
+      "format": "eps",
+      "sourceSha256": "74c0dc64d62a20dba92e71d63820d27f06463578e731a0aaa0fc1ebe8cc7016d",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/heatmap.eps",
+      "sha256": "01f2da7248ee4cbec9ad61679613903a30ff0551b18aabb28616c318e421d113",
+      "bytes": 28459,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "heatmap",
+      "format": "pdf",
+      "sourceSha256": "74c0dc64d62a20dba92e71d63820d27f06463578e731a0aaa0fc1ebe8cc7016d",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/heatmap.pdf",
+      "sha256": "9058d81c326148af11ccae53e6b6486dd6c79258ca194e3aac8bfea4ce40180a",
+      "bytes": 114664,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "heatmap",
+      "format": "png",
+      "sourceSha256": "74c0dc64d62a20dba92e71d63820d27f06463578e731a0aaa0fc1ebe8cc7016d",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/heatmap.png",
+      "sha256": "e1d6d1b30adf5d4d2fbccd3fdcbce44e2d7ed7448f2c10c9ffff6872edd5326b",
+      "bytes": 66063,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "line",
+      "format": "eps",
+      "sourceSha256": "86e84d5a42dbee90b7446c495f8b820acefc3000daa24cd8c2f4a27d2ceefa1b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/line.eps",
+      "sha256": "e21195696303e530ddd6d3267a730a89f3bb2109f128a6fd9e7b3e7224d2ceb0",
+      "bytes": 46998,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "line",
+      "format": "pdf",
+      "sourceSha256": "86e84d5a42dbee90b7446c495f8b820acefc3000daa24cd8c2f4a27d2ceefa1b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/line.pdf",
+      "sha256": "2a8a9f7ec48e871e1311b28c198236fb3168597927c4bb0114c9ff7325477dcb",
+      "bytes": 130753,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "line",
+      "format": "png",
+      "sourceSha256": "86e84d5a42dbee90b7446c495f8b820acefc3000daa24cd8c2f4a27d2ceefa1b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/line.png",
+      "sha256": "38e4b582b1d7605d02dcf5a0028769bca386634ee298e5010f7ee6d607f6f060",
+      "bytes": 48104,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "line-error",
+      "format": "eps",
+      "sourceSha256": "58d5d0a024944ef5ab40b88ee110bfad7ebac2d3edbc19b7b37eaa7b99198b10",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/line-error.eps",
+      "sha256": "75f2af6a7b926c4fc8ca3a680a764f7a856c43ebda01d9e1e7e011279a2fd6f6",
+      "bytes": 65371,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "line-error",
+      "format": "pdf",
+      "sourceSha256": "58d5d0a024944ef5ab40b88ee110bfad7ebac2d3edbc19b7b37eaa7b99198b10",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/line-error.pdf",
+      "sha256": "a16cdae01a0d6e1b93b7fd3103027818463b3612a2e20344b57404623e5f61fc",
+      "bytes": 131145,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "line-error",
+      "format": "png",
+      "sourceSha256": "58d5d0a024944ef5ab40b88ee110bfad7ebac2d3edbc19b7b37eaa7b99198b10",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/line-error.png",
+      "sha256": "a5033066d7b819f321e9a63324062f72fe0acd7a497abca3fc6a946fd756aadc",
+      "bytes": 67347,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "lollipop",
+      "format": "eps",
+      "sourceSha256": "4bfa38f89607beb4ba5e0c099811ee0d61759fb3e788c68881e6e316869bac0a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/lollipop.eps",
+      "sha256": "f66c2252cfb008a0edaf02ab35fd3b3f34b8c4113767c8a60fa44a489c4c2f57",
+      "bytes": 43194,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "lollipop",
+      "format": "pdf",
+      "sourceSha256": "4bfa38f89607beb4ba5e0c099811ee0d61759fb3e788c68881e6e316869bac0a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/lollipop.pdf",
+      "sha256": "76d7f3915380f896f30daeda0ba96b347de6696dff9958f685935d9b1924e857",
+      "bytes": 124516,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "lollipop",
+      "format": "png",
+      "sourceSha256": "4bfa38f89607beb4ba5e0c099811ee0d61759fb3e788c68881e6e316869bac0a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/lollipop.png",
+      "sha256": "d7b77431bfdf239d2f412fbb36f78df88c3e1689f531a02066e8f175f0f8502f",
+      "bytes": 38250,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "lollipop-category",
+      "format": "eps",
+      "sourceSha256": "b2d815eb7f2dde4bb4d5d1fcc9970ae0aaa593b17c46defc83d52d60d03bb218",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/lollipop-category.eps",
+      "sha256": "93206c2142efc2812548543424b8ecefa739dd12c0ddaa231685ad0652fb7d4c",
+      "bytes": 59179,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "lollipop-category",
+      "format": "pdf",
+      "sourceSha256": "b2d815eb7f2dde4bb4d5d1fcc9970ae0aaa593b17c46defc83d52d60d03bb218",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/lollipop-category.pdf",
+      "sha256": "c1039b9f4eb663a850cdd6bd9f9da513a17fb856317b7e5be8a87e9b1dffcd9f",
+      "bytes": 127956,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "lollipop-category",
+      "format": "png",
+      "sourceSha256": "b2d815eb7f2dde4bb4d5d1fcc9970ae0aaa593b17c46defc83d52d60d03bb218",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/lollipop-category.png",
+      "sha256": "971eed7af43f0a1ff6a1a7c29dbb7123dc781e9302d665a5e59e0055e104f3f5",
+      "bytes": 52606,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "mantel",
+      "format": "eps",
+      "sourceSha256": "a01721e7eafc692a63229f9abe4120479ca3f6682e53c450bf7fb37e72bccd64",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/mantel.eps",
+      "sha256": "08ba4bd9a5e0407cd09df4732203d8fa9af3f247d8f75416c584f9e2950c033e",
+      "bytes": 38752,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "mantel",
+      "format": "pdf",
+      "sourceSha256": "a01721e7eafc692a63229f9abe4120479ca3f6682e53c450bf7fb37e72bccd64",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/mantel.pdf",
+      "sha256": "b31495e4abdfbe4ae042eace203fd0cf24d3df287ef7f926e7385b91ef659bb4",
+      "bytes": 121901,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "mantel",
+      "format": "png",
+      "sourceSha256": "a01721e7eafc692a63229f9abe4120479ca3f6682e53c450bf7fb37e72bccd64",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/mantel.png",
+      "sha256": "d42928bdf7aeaaf2b48fd574b223254cc932503cc1d5aeb70e87fd4958bac9c4",
+      "bytes": 91902,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "map",
+      "format": "eps",
+      "sourceSha256": "49b665aba2ae58d491c602e89fbad01d1a3b92b58bce8e6897d2bf780441b73f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/map.eps",
+      "sha256": "ccbcc7f6481fc31690ce2dd89bb38a56a468cec78fcbbf746dc360bacc7b3596",
+      "bytes": 359730,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "map",
+      "format": "pdf",
+      "sourceSha256": "49b665aba2ae58d491c602e89fbad01d1a3b92b58bce8e6897d2bf780441b73f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/map.pdf",
+      "sha256": "467977a494d38615f96de94648949d1152d5ea736bfdbef9f41a686591f964b7",
+      "bytes": 164388,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "map",
+      "format": "png",
+      "sourceSha256": "49b665aba2ae58d491c602e89fbad01d1a3b92b58bce8e6897d2bf780441b73f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/map.png",
+      "sha256": "a2275a208d674a8a1847d2f5153547311e731176e402dd27b09a66c6f6b3eafb",
+      "bytes": 383465,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "network",
+      "format": "eps",
+      "sourceSha256": "0e967fc08a04d1cc1d50a661e11f0b1602295139957f13c9d6053efc16e1de36",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/network.eps",
+      "sha256": "3bde47fbe95dd875b023c9801db859c163a3a61b2faa775d0bcc9d1b5318cd71",
+      "bytes": 52875,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "network",
+      "format": "pdf",
+      "sourceSha256": "0e967fc08a04d1cc1d50a661e11f0b1602295139957f13c9d6053efc16e1de36",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/network.pdf",
+      "sha256": "3cc8a9cbd03ee039514f06954ff411f441662386e2ff820b43bd889d5f0c7d85",
+      "bytes": 118206,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "network",
+      "format": "png",
+      "sourceSha256": "0e967fc08a04d1cc1d50a661e11f0b1602295139957f13c9d6053efc16e1de36",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/network.png",
+      "sha256": "1fb227aa9f4f6fe872e3b19d69e58e25feea50b20db4430f6b4c9e6f463440b0",
+      "bytes": 60720,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "nmds",
+      "format": "eps",
+      "sourceSha256": "6050ce8eafcde1f5581c7fd43c69d4bdf1ea0498cd51f298b61c41a9fad349ee",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/nmds.eps",
+      "sha256": "f996ade64279b8b26dfd88d4d68f9af2b2055bc6ead760100d8d279100ec389f",
+      "bytes": 96460,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "nmds",
+      "format": "pdf",
+      "sourceSha256": "6050ce8eafcde1f5581c7fd43c69d4bdf1ea0498cd51f298b61c41a9fad349ee",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/nmds.pdf",
+      "sha256": "bafd9074f683e76c4d6d506d56088fcefd5f922c44822bdce7d6b068f2a1f230",
+      "bytes": 130174,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "nmds",
+      "format": "png",
+      "sourceSha256": "6050ce8eafcde1f5581c7fd43c69d4bdf1ea0498cd51f298b61c41a9fad349ee",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/nmds.png",
+      "sha256": "efca0b927d85785d317e8944e445dc49ff77c520badc7ea6cdcfd961274049eb",
+      "bytes": 89487,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "packing",
+      "format": "eps",
+      "sourceSha256": "893bbb912d8d1b58a988a5ba9f0531c8605def6b8807a5cbb09cab2efa24eb46",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/packing.eps",
+      "sha256": "caaf0aaf7f04dcd0726f74758701797275bed75deb4fca406d6f76f21f4174a3",
+      "bytes": 101595,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "packing",
+      "format": "pdf",
+      "sourceSha256": "893bbb912d8d1b58a988a5ba9f0531c8605def6b8807a5cbb09cab2efa24eb46",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/packing.pdf",
+      "sha256": "e0b2ac5188d45f26164f67e9c02dcd6c5504c66310acbced7875fc87e2a849ee",
+      "bytes": 114266,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "packing",
+      "format": "png",
+      "sourceSha256": "893bbb912d8d1b58a988a5ba9f0531c8605def6b8807a5cbb09cab2efa24eb46",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/packing.png",
+      "sha256": "31911508551935f6928a1e3820bd32bc7a4bb44dee7be5d3f8dca87401ed98ed",
+      "bytes": 109198,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "pca",
+      "format": "eps",
+      "sourceSha256": "d7089b2ec4b559ef32499a09bff2aa8fcae848d762137528be91b35f7ed604dd",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pca.eps",
+      "sha256": "15b81e968c3b17920f68b0afd5f0529451aa26c7693e7a966388d63655f4359c",
+      "bytes": 104479,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "pca",
+      "format": "pdf",
+      "sourceSha256": "d7089b2ec4b559ef32499a09bff2aa8fcae848d762137528be91b35f7ed604dd",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pca.pdf",
+      "sha256": "e60ee3e3237c2170ce2a7c0c226b1cdf5c04b416b9f71cdd36d6971aaa730222",
+      "bytes": 131798,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "pca",
+      "format": "png",
+      "sourceSha256": "d7089b2ec4b559ef32499a09bff2aa8fcae848d762137528be91b35f7ed604dd",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pca.png",
+      "sha256": "7a6fa092dda2127708262dacb4b616fdec09e4127faf35fce4c2f91416e9ad71",
+      "bytes": 99811,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "pcoa",
+      "format": "eps",
+      "sourceSha256": "8239e6e440b9454ebf2fe19a18d97afe425f2f9aeb337d524f12f2feeba27396",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pcoa.eps",
+      "sha256": "bf129d405824bfd73facddc1f281d5ee3bffc15013d1107569afe8ba5d71c38d",
+      "bytes": 93793,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "pcoa",
+      "format": "pdf",
+      "sourceSha256": "8239e6e440b9454ebf2fe19a18d97afe425f2f9aeb337d524f12f2feeba27396",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pcoa.pdf",
+      "sha256": "e5f5a80d48fbe7cb53c98a8c5448e15d633d814e5aad7ffcc29e8501401c56d2",
+      "bytes": 129262,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "pcoa",
+      "format": "png",
+      "sourceSha256": "8239e6e440b9454ebf2fe19a18d97afe425f2f9aeb337d524f12f2feeba27396",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pcoa.png",
+      "sha256": "97c49c1daa5dc749f4c4d5b2b904126a4980e307b34cb84bbe0a7f8a929ef62c",
+      "bytes": 83822,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "pie",
+      "format": "eps",
+      "sourceSha256": "da92f01499266798f2cc83abd3b641f24a94fc3c341362b1a20b4b4980296805",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pie.eps",
+      "sha256": "399c13ed182d268f86303b4aa3662c3932102773a9b295227ba867b37cb55bf0",
+      "bytes": 57223,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "pie",
+      "format": "pdf",
+      "sourceSha256": "da92f01499266798f2cc83abd3b641f24a94fc3c341362b1a20b4b4980296805",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pie.pdf",
+      "sha256": "7d95c4d5616f5e5cf1518adc8b129a1baaff55d5fd6381cac31ea27c034ca44d",
+      "bytes": 120867,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "pie",
+      "format": "png",
+      "sourceSha256": "da92f01499266798f2cc83abd3b641f24a94fc3c341362b1a20b4b4980296805",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/pie.png",
+      "sha256": "bfeb46fdb287ce83e40364205608953b9a7cbcaff655ae0478b731eab2171b3e",
+      "bytes": 60991,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "protein-domains",
+      "format": "eps",
+      "sourceSha256": "85a8058f1593e387ad32a5eb2ccd7ccea753c075236e65ea34f1e57db042614e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/protein-domains.eps",
+      "sha256": "5ac436a305c722365e0b33a585f26477775a82b2cdeb42ea8e702212d68c50e2",
+      "bytes": 22225,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "protein-domains",
+      "format": "pdf",
+      "sourceSha256": "85a8058f1593e387ad32a5eb2ccd7ccea753c075236e65ea34f1e57db042614e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/protein-domains.pdf",
+      "sha256": "1accffed6945426f642793c267c148a610953556ec2202d14629353bd49861ba",
+      "bytes": 113834,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "protein-domains",
+      "format": "png",
+      "sourceSha256": "85a8058f1593e387ad32a5eb2ccd7ccea753c075236e65ea34f1e57db042614e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/protein-domains.png",
+      "sha256": "86454eec10162fb599de4cb4a08853c5011692b799e0cc38ae685b41244f17ed",
+      "bytes": 50589,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "protein-motifs",
+      "format": "eps",
+      "sourceSha256": "5bd8c79f20d3b3fa2750a368635e9826033d37f6af2213082e4b4ee50f507700",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/protein-motifs.eps",
+      "sha256": "dd483ebbc066936a85a4ab8a4f42a178d3a388249ed1869fdde2f16cf410c4d2",
+      "bytes": 21397,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "protein-motifs",
+      "format": "pdf",
+      "sourceSha256": "5bd8c79f20d3b3fa2750a368635e9826033d37f6af2213082e4b4ee50f507700",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/protein-motifs.pdf",
+      "sha256": "80a44bf8c2573021aa77a528fe71168c1baed85cec95243f7019aefeba6a852a",
+      "bytes": 113299,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "protein-motifs",
+      "format": "png",
+      "sourceSha256": "5bd8c79f20d3b3fa2750a368635e9826033d37f6af2213082e4b4ee50f507700",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/protein-motifs.png",
+      "sha256": "0bbb3b0833d1c26b60a9219af7053fcdd10b8930ac614de39995d227fd1d727f",
+      "bytes": 48575,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "radar",
+      "format": "eps",
+      "sourceSha256": "574a65d9d7d93249da502bc5bd8a2f987433435f60c71c132d8152d05385708b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/radar.eps",
+      "sha256": "97bea5a271cd69240c094567aed69f60d9eea82bf1f3bb85ea4e7a3bdf8c532f",
+      "bytes": 60093,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "radar",
+      "format": "pdf",
+      "sourceSha256": "574a65d9d7d93249da502bc5bd8a2f987433435f60c71c132d8152d05385708b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/radar.pdf",
+      "sha256": "a7ca1e8cbc8541053de223da624985401c9409a428b986e7ee3fd6eca722b1c2",
+      "bytes": 128926,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "radar",
+      "format": "png",
+      "sourceSha256": "574a65d9d7d93249da502bc5bd8a2f987433435f60c71c132d8152d05385708b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/radar.png",
+      "sha256": "9e599f635981376058990885aeeed3a59cb007b26121e34a91a83e5c317e1ac4",
+      "bytes": 70726,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "raincloud",
+      "format": "eps",
+      "sourceSha256": "dfcc30b01f525e4e76ed1b3b5810f6f4cd1c816c7bbd169aa96508275d7c1c7e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/raincloud.eps",
+      "sha256": "2dd6c2edd4918fc0e8e9aa039b8a23079b3ea56f4c7097a472d5c52e50a97b50",
+      "bytes": 54035,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "raincloud",
+      "format": "pdf",
+      "sourceSha256": "dfcc30b01f525e4e76ed1b3b5810f6f4cd1c816c7bbd169aa96508275d7c1c7e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/raincloud.pdf",
+      "sha256": "6c5008460f13291c7e96e1b6752a2e1dbf6ed642b91fe60346159026a426aa72",
+      "bytes": 188198,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "raincloud",
+      "format": "png",
+      "sourceSha256": "dfcc30b01f525e4e76ed1b3b5810f6f4cd1c816c7bbd169aa96508275d7c1c7e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/raincloud.png",
+      "sha256": "b818fe246ad53e8c4d5e15d8c865e89f4129d8e56acd0b71847b684cbdf58c38",
+      "bytes": 43313,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "rda",
+      "format": "eps",
+      "sourceSha256": "e106d83136a372ac88d1d0971e33134666e0759015f2ec0a2e443e4ad21d6040",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/rda.eps",
+      "sha256": "b51806d2ed423803885c7c96f6ae005b2b2578e682161a3fab21cd7cb20508ac",
+      "bytes": 100153,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "rda",
+      "format": "pdf",
+      "sourceSha256": "e106d83136a372ac88d1d0971e33134666e0759015f2ec0a2e443e4ad21d6040",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/rda.pdf",
+      "sha256": "97bd3a74925bf7cd5109e23e5a77aefee3ebd7365c275c632ef182cc294747da",
+      "bytes": 132852,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "rda",
+      "format": "png",
+      "sourceSha256": "e106d83136a372ac88d1d0971e33134666e0759015f2ec0a2e443e4ad21d6040",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/rda.png",
+      "sha256": "61e5c27ff5e843afbc14a4b940d006a3edb220db53c8c78efc75195cdf2f4e0a",
+      "bytes": 93039,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "ridgeline",
+      "format": "eps",
+      "sourceSha256": "02dcfb73a1c7db8d2d51410fdd193a389a0ebfb8fb1c4c71bf247d57d33119ee",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/ridgeline.eps",
+      "sha256": "9609bef30878b17ebe4f3040df317d28752552ddd42648fc8ac545e0f6c2d309",
+      "bytes": 50990,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "ridgeline",
+      "format": "pdf",
+      "sourceSha256": "02dcfb73a1c7db8d2d51410fdd193a389a0ebfb8fb1c4c71bf247d57d33119ee",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/ridgeline.pdf",
+      "sha256": "20d8f7059b835c4115e1ed72c8ac0a701eccd3114b4dc71d8557dbd106768772",
+      "bytes": 168117,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "ridgeline",
+      "format": "png",
+      "sourceSha256": "02dcfb73a1c7db8d2d51410fdd193a389a0ebfb8fb1c4c71bf247d57d33119ee",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/ridgeline.png",
+      "sha256": "9f87d35e7666de68e250076cef3376c0e4df6d56997230c2e9ee2f0e162b687f",
+      "bytes": 39437,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "rose",
+      "format": "eps",
+      "sourceSha256": "96ca85902d8d1a54dbe9203d8c1523bbde66fe2f30aa354ed82717719b46c29e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/rose.eps",
+      "sha256": "fddf5768db7369197a86e148da437dbbbee2d968845f830f3c1dd4c98d37ff59",
+      "bytes": 69795,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "rose",
+      "format": "pdf",
+      "sourceSha256": "96ca85902d8d1a54dbe9203d8c1523bbde66fe2f30aa354ed82717719b46c29e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/rose.pdf",
+      "sha256": "0769589bc4b029c361c7a4d2e147de4d50d273b04a73eef0b78490e33142b3bb",
+      "bytes": 124329,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "rose",
+      "format": "png",
+      "sourceSha256": "96ca85902d8d1a54dbe9203d8c1523bbde66fe2f30aa354ed82717719b46c29e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/rose.png",
+      "sha256": "59897e2096d9c91df3c33dc05ffac7258663d1e9a1d5d2a0dd5d4e2f2f86b1ad",
+      "bytes": 72625,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "sankey",
+      "format": "eps",
+      "sourceSha256": "dba2ee716f9b6c6cdcea966c423581a833bce6505d63f99f2d0a42e94801fbbe",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/sankey.eps",
+      "sha256": "00618f7f2217c4a824009542467fbd42b489f19a95e2642586be06e9b0642a2b",
+      "bytes": 67528,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "sankey",
+      "format": "pdf",
+      "sourceSha256": "dba2ee716f9b6c6cdcea966c423581a833bce6505d63f99f2d0a42e94801fbbe",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/sankey.pdf",
+      "sha256": "dcbf89c4be02609b85e786c0870ff3f28f54d55ac03243567578f544485c12fd",
+      "bytes": 120243,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "sankey",
+      "format": "png",
+      "sourceSha256": "dba2ee716f9b6c6cdcea966c423581a833bce6505d63f99f2d0a42e94801fbbe",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/sankey.png",
+      "sha256": "28a8ccaadd3f8ded19fb42682d7220cd0eb8184b74afba83701262ac9e4a328a",
+      "bytes": 63885,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "scatter",
+      "format": "eps",
+      "sourceSha256": "ce3b74d59fc92fdcc5358849672c71a0bdd6fbb9c5e6f68f75f806dbcc2ec5b4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter.eps",
+      "sha256": "6aeda3f0fdf408bfae80f6789233fc9f1e9da403564499140ef5df8d144c4d0b",
+      "bytes": 57357,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "scatter",
+      "format": "pdf",
+      "sourceSha256": "ce3b74d59fc92fdcc5358849672c71a0bdd6fbb9c5e6f68f75f806dbcc2ec5b4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter.pdf",
+      "sha256": "e497c98ee74e6cf0017a7fdbb6983e2edbcf1ef7bfacadb935605fcb4b8583d0",
+      "bytes": 138423,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "scatter",
+      "format": "png",
+      "sourceSha256": "ce3b74d59fc92fdcc5358849672c71a0bdd6fbb9c5e6f68f75f806dbcc2ec5b4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter.png",
+      "sha256": "04fe837a73e995221ab351929b0b7052a0c9daeb87942cfe1882faa3ef80616a",
+      "bytes": 46409,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "scatter-error",
+      "format": "eps",
+      "sourceSha256": "aded38d8b21e22023900edf9ece2c7a9d43411a7f08864caf498a45738c7ae14",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter-error.eps",
+      "sha256": "58252ae9f15252e916c1e535b4b55a85b5f8163bb68e2d841e6d2f1d73b6188f",
+      "bytes": 43812,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "scatter-error",
+      "format": "pdf",
+      "sourceSha256": "aded38d8b21e22023900edf9ece2c7a9d43411a7f08864caf498a45738c7ae14",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter-error.pdf",
+      "sha256": "74efc0c4e3be8f84a0c94f1265d1662c42f897d48043f2fb6622002c1f33c547",
+      "bytes": 145982,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "scatter-error",
+      "format": "png",
+      "sourceSha256": "aded38d8b21e22023900edf9ece2c7a9d43411a7f08864caf498a45738c7ae14",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter-error.png",
+      "sha256": "59bc32590df6cb74980814ea0d72dbb151d41a68bd7e34759e5a989d48f5c857",
+      "bytes": 45540,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "scatter-grouped",
+      "format": "eps",
+      "sourceSha256": "29f632ab580a7ce64a2cc87c622708ce8356d5e54ee6fd6b26966f858ccd8389",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter-grouped.eps",
+      "sha256": "ea724a7b582202f39ab053d3f4bf0ac8d305f01b0151c13ad67f4ab1a33858f3",
+      "bytes": 62217,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "scatter-grouped",
+      "format": "pdf",
+      "sourceSha256": "29f632ab580a7ce64a2cc87c622708ce8356d5e54ee6fd6b26966f858ccd8389",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter-grouped.pdf",
+      "sha256": "e4720ae88c6b2fde7e3b150498236a88f111854090bae3697205cb59a5bb3f2e",
+      "bytes": 140557,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "scatter-grouped",
+      "format": "png",
+      "sourceSha256": "29f632ab580a7ce64a2cc87c622708ce8356d5e54ee6fd6b26966f858ccd8389",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/scatter-grouped.png",
+      "sha256": "12b16c50e4033d2afd911e62859df1bd44609ce148a7f31c230f9051ac16ab5c",
+      "bytes": 51552,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "synteny",
+      "format": "eps",
+      "sourceSha256": "d799f37976ad737b2457ea22a7302281354903176fe8f152b367c59c61ace4c9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/synteny.eps",
+      "sha256": "4aefa2ba51d703d4754e38a23034d4bc5e399ea3fd2803ae01555c926d9efcce",
+      "bytes": 73372,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "synteny",
+      "format": "pdf",
+      "sourceSha256": "d799f37976ad737b2457ea22a7302281354903176fe8f152b367c59c61ace4c9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/synteny.pdf",
+      "sha256": "93c4d749234db48295ee4d000fbfdb7a2f5c7224c2392b681dd2f397552826e0",
+      "bytes": 119992,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "synteny",
+      "format": "png",
+      "sourceSha256": "d799f37976ad737b2457ea22a7302281354903176fe8f152b367c59c61ace4c9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/synteny.png",
+      "sha256": "818354833625da898d44d9d04b0fb895545b2477da497204c9df70d538b21b6f",
+      "bytes": 75148,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "tree-circle",
+      "format": "eps",
+      "sourceSha256": "0f9f1a3d5e653f34498f80904eb8f503201b7e307cda77aa237a4d78db255717",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-circle.eps",
+      "sha256": "35c261b39a9d5a5e562b706e069c8070312cb6a477e1d04791c2de629517a87a",
+      "bytes": 68327,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "tree-circle",
+      "format": "pdf",
+      "sourceSha256": "0f9f1a3d5e653f34498f80904eb8f503201b7e307cda77aa237a4d78db255717",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-circle.pdf",
+      "sha256": "fc27d22ae0c0171a7ac5c09e717a06c4f138c67f7f6cf39877b7286dbb3c2bf5",
+      "bytes": 145423,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "tree-circle",
+      "format": "png",
+      "sourceSha256": "0f9f1a3d5e653f34498f80904eb8f503201b7e307cda77aa237a4d78db255717",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-circle.png",
+      "sha256": "a5c00279a761487a0e250e9f15646a9d6ddcf89fa016f91cf4d17ec2d54cc633",
+      "bytes": 81596,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "tree-normal",
+      "format": "eps",
+      "sourceSha256": "bc84435804684ce9f8321857adcd312f4129f7feed35f84676e8bc7069b2ef75",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-normal.eps",
+      "sha256": "4e528e76669c06765cff8db940f38f3d17239fe6cb31402f66b1684f87efc333",
+      "bytes": 50394,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "tree-normal",
+      "format": "pdf",
+      "sourceSha256": "bc84435804684ce9f8321857adcd312f4129f7feed35f84676e8bc7069b2ef75",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-normal.pdf",
+      "sha256": "888f82ad4505ae786428bbacd6e7abe60b78d6fac2c2d962c3d29e4490c6836a",
+      "bytes": 145106,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "tree-normal",
+      "format": "png",
+      "sourceSha256": "bc84435804684ce9f8321857adcd312f4129f7feed35f84676e8bc7069b2ef75",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-normal.png",
+      "sha256": "8fa7167473c55cdeb4ac6b6e92276374660ddaa0a190f9b7ca29e148ba34495d",
+      "bytes": 55691,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "tree-unrooted",
+      "format": "eps",
+      "sourceSha256": "6ec9ee63e8f316fb80885e385803a898dd7c3f786195346270ba4a9590601be5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-unrooted.eps",
+      "sha256": "499d7cd92a9e0c9b420d321c9b6e8c6816b8532be17e80d4287ca5d7c7cf0e37",
+      "bytes": 63423,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "tree-unrooted",
+      "format": "pdf",
+      "sourceSha256": "6ec9ee63e8f316fb80885e385803a898dd7c3f786195346270ba4a9590601be5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-unrooted.pdf",
+      "sha256": "65a6237a7f8d9451a237f7fdc1b910f99b0fcb6d91143cdd04b1c678de9d48d8",
+      "bytes": 145098,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "tree-unrooted",
+      "format": "png",
+      "sourceSha256": "6ec9ee63e8f316fb80885e385803a898dd7c3f786195346270ba4a9590601be5",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/tree-unrooted.png",
+      "sha256": "8a2e51a0518ec186046d6b72d812531ae6d523a6c8b92a2d1bdf22b812fc55d8",
+      "bytes": 76543,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "upset",
+      "format": "eps",
+      "sourceSha256": "036a774e7a26e76bda7f5dbd8b7bc92625fb20cd319664cf8161af5f5d2110a9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/upset.eps",
+      "sha256": "212bacb4fb11620690eb970e35741a7d7eb7683184a745042e244e10001dc0f8",
+      "bytes": 64836,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "upset",
+      "format": "pdf",
+      "sourceSha256": "036a774e7a26e76bda7f5dbd8b7bc92625fb20cd319664cf8161af5f5d2110a9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/upset.pdf",
+      "sha256": "8ba56fa67b93a187d3fbcc18d9fc84d569a6ab393bec8d29bd79973c79affc5a",
+      "bytes": 128899,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "upset",
+      "format": "png",
+      "sourceSha256": "036a774e7a26e76bda7f5dbd8b7bc92625fb20cd319664cf8161af5f5d2110a9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/upset.png",
+      "sha256": "e61738877f3acc005a7cfc81854e82888067f30eaa9a72e24afd16212feb7858",
+      "bytes": 60123,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "venn",
+      "format": "eps",
+      "sourceSha256": "9dd5f3b29bac177064f99742a49a9123864bd1d1d6db13fe7a650fdb1b0b2210",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/venn.eps",
+      "sha256": "bd569342273ec8312e497a663bc42f3dba064ab68cdc7405634729d86bb786ff",
+      "bytes": 123551,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "venn",
+      "format": "pdf",
+      "sourceSha256": "9dd5f3b29bac177064f99742a49a9123864bd1d1d6db13fe7a650fdb1b0b2210",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/venn.pdf",
+      "sha256": "b42c9e72b0e23ddc9b65b9c0002fe75558e9cdd6d54211eb3e696e507388bb9b",
+      "bytes": 129522,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "venn",
+      "format": "png",
+      "sourceSha256": "9dd5f3b29bac177064f99742a49a9123864bd1d1d6db13fe7a650fdb1b0b2210",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/venn.png",
+      "sha256": "089fd92a088917dad3281a8186aa23aa5e851b6f0bd2662908cd33020efb5eae",
+      "bytes": 128661,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "violin",
+      "format": "eps",
+      "sourceSha256": "7492ae31020f8113f9efe0572a689fb1c5a561d63582ffb35605c880443b45b0",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/violin.eps",
+      "sha256": "9e2cba7f92f7e16dfba90a95b76f72ac6f42bcf5281edfb37e57bb82b9057300",
+      "bytes": 52567,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "violin",
+      "format": "pdf",
+      "sourceSha256": "7492ae31020f8113f9efe0572a689fb1c5a561d63582ffb35605c880443b45b0",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/violin.pdf",
+      "sha256": "246916fcf3f02be94bb00b70bf75a78914d7db284522fb30d424344dae95a9f3",
+      "bytes": 196987,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "violin",
+      "format": "png",
+      "sourceSha256": "7492ae31020f8113f9efe0572a689fb1c5a561d63582ffb35605c880443b45b0",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/violin.png",
+      "sha256": "ce3c40f95a708d3cbec5be80b9dee718bd37fc014a4541c2c50fbfb441d56ab0",
+      "bytes": 50571,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "volcano",
+      "format": "eps",
+      "sourceSha256": "356ab38e9fb046c48afe76b542a25799c8cfe8f880073dfb2983bd205fc6d632",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/volcano.eps",
+      "sha256": "ee761dec37947ea1cc23c690310fddb1e0d6b1f2e56ae53e38ea1b9b4d66d185",
+      "bytes": 98229,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "default",
+      "templateId": "volcano",
+      "format": "pdf",
+      "sourceSha256": "356ab38e9fb046c48afe76b542a25799c8cfe8f880073dfb2983bd205fc6d632",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/volcano.pdf",
+      "sha256": "d2119abd45c159e1432b3f4d523694bd4eedb62860ada5b1b5a548eed4ab6024",
+      "bytes": 119922,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "default",
+      "templateId": "volcano",
+      "format": "png",
+      "sourceSha256": "356ab38e9fb046c48afe76b542a25799c8cfe8f880073dfb2983bd205fc6d632",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/default/outputs/volcano.png",
+      "sha256": "6b391d58ab6ac476232d14a5d327fb9aafec19926c5eb0c0862d18b5ccb7cc9a",
+      "bytes": 84584,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "binary-dot-annotated",
+      "format": "eps",
+      "sourceSha256": "d2bb0eef37f11a026272af74e75cbf169fea77923356d3ebef13746779b41b14",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/binary-dot-annotated.eps",
+      "sha256": "f5a8c6a7769ef9de473ba2907e39495ee44f038ba30f6521842ba2005ade9978",
+      "bytes": 39692,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "binary-dot-annotated",
+      "format": "pdf",
+      "sourceSha256": "d2bb0eef37f11a026272af74e75cbf169fea77923356d3ebef13746779b41b14",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/binary-dot-annotated.pdf",
+      "sha256": "89e6d022efc57a482e4f629e87039db5ec00db61e29b128bb74fe0076fdf67a5",
+      "bytes": 120155,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "binary-dot-annotated",
+      "format": "png",
+      "sourceSha256": "d2bb0eef37f11a026272af74e75cbf169fea77923356d3ebef13746779b41b14",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/binary-dot-annotated.png",
+      "sha256": "e58509213992050e4a967bc1d8108bdbce739058c83b9305fa138ef891d2efa1",
+      "bytes": 106186,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "bubble-matrix-annotated",
+      "format": "eps",
+      "sourceSha256": "66d48478efa6030fc553abc6b7a9ac8f148f56407be8a13017a415b8be58fe45",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/bubble-matrix-annotated.eps",
+      "sha256": "ae0ace3b2893eac1a565780bc5941445e6122f14ba247c1207dfd5e4fde43b1f",
+      "bytes": 48171,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "bubble-matrix-annotated",
+      "format": "pdf",
+      "sourceSha256": "66d48478efa6030fc553abc6b7a9ac8f148f56407be8a13017a415b8be58fe45",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/bubble-matrix-annotated.pdf",
+      "sha256": "44ddaeaa307e8de96a28315b23efbf29f4b526c5a51f094d5ecfc02a8fc58fc8",
+      "bytes": 123447,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "bubble-matrix-annotated",
+      "format": "png",
+      "sourceSha256": "66d48478efa6030fc553abc6b7a9ac8f148f56407be8a13017a415b8be58fe45",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/bubble-matrix-annotated.png",
+      "sha256": "36d114d575425ebb1378b7d7ee19ec6a25795cbc3e3c3a335475a9cf67e60600",
+      "bytes": 113300,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "bubble-matrix-category",
+      "format": "eps",
+      "sourceSha256": "0b612a1369aed2d3b57593fa92cf09c70e09635ae739c3a13a98bb0239b5c602",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/bubble-matrix-category.eps",
+      "sha256": "9a2406f9d14874aea623ebe47e3d4a835cf3ac77cc1247e355f32163f84d2098",
+      "bytes": 42458,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "bubble-matrix-category",
+      "format": "pdf",
+      "sourceSha256": "0b612a1369aed2d3b57593fa92cf09c70e09635ae739c3a13a98bb0239b5c602",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/bubble-matrix-category.pdf",
+      "sha256": "2253ac7bd7c813945db11f30f85badc456a0f374ee98f83898aa46c6f87e3676",
+      "bytes": 122017,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "bubble-matrix-category",
+      "format": "png",
+      "sourceSha256": "0b612a1369aed2d3b57593fa92cf09c70e09635ae739c3a13a98bb0239b5c602",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/bubble-matrix-category.png",
+      "sha256": "9833c32df3f881893817ab7b1cf768c4f1ebfe58d3e008f3a929b4cee52f414e",
+      "bytes": 120373,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "circle-heatmap-annotated",
+      "format": "eps",
+      "sourceSha256": "5b930a86f369c760992351a0c924f3d238c30b6da3d5139fece577685658e835",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/circle-heatmap-annotated.eps",
+      "sha256": "040db55473f372d9c728379a0acb3a6e15f9010436988c27c08f2728292037c6",
+      "bytes": 40958,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "circle-heatmap-annotated",
+      "format": "pdf",
+      "sourceSha256": "5b930a86f369c760992351a0c924f3d238c30b6da3d5139fece577685658e835",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/circle-heatmap-annotated.pdf",
+      "sha256": "a25edf7a038f3cd0d31ce6b70759d8d99959db18fce26b9ac0889cd988bfa3a2",
+      "bytes": 123051,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "circle-heatmap-annotated",
+      "format": "png",
+      "sourceSha256": "5b930a86f369c760992351a0c924f3d238c30b6da3d5139fece577685658e835",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/circle-heatmap-annotated.png",
+      "sha256": "65d18cc67bfbd6f3dc57a76503dc4e198d4a2acc88d5bec554f5189499fd8d3a",
+      "bytes": 155206,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "circle-heatmap-cluster",
+      "format": "eps",
+      "sourceSha256": "fdb788db45ba6b52ba9a70ec4fa0c55fda58ab8ab684ae0d5c79e6024161236c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/circle-heatmap-cluster.eps",
+      "sha256": "754f048b395c37ebd3acc9f68c9a0583d119f08387f2a27febb9328b84c2cd5b",
+      "bytes": 33489,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "circle-heatmap-cluster",
+      "format": "pdf",
+      "sourceSha256": "fdb788db45ba6b52ba9a70ec4fa0c55fda58ab8ab684ae0d5c79e6024161236c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/circle-heatmap-cluster.pdf",
+      "sha256": "1b5ae0cb90326c2a2004f526be925a7162997bf29a1685c952b6ac9340949fe8",
+      "bytes": 120277,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "circle-heatmap-cluster",
+      "format": "png",
+      "sourceSha256": "fdb788db45ba6b52ba9a70ec4fa0c55fda58ab8ab684ae0d5c79e6024161236c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/circle-heatmap-cluster.png",
+      "sha256": "6caf7826e913c8576991d157150137986077df03632f32c6880f7d4d3178de30",
+      "bytes": 136339,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "enrichment-bar-class",
+      "format": "eps",
+      "sourceSha256": "58b762f6d3df7d9a11b31f81cc8e7651f615aa51f97aa15662826d7af87338c0",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/enrichment-bar-class.eps",
+      "sha256": "7e38228d402db2ace5ab378ee07769fc0d800ad1a108a4851178345ad3a81f7e",
+      "bytes": 44415,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "enrichment-bar-class",
+      "format": "pdf",
+      "sourceSha256": "58b762f6d3df7d9a11b31f81cc8e7651f615aa51f97aa15662826d7af87338c0",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/enrichment-bar-class.pdf",
+      "sha256": "146506595115657195d008fdf98acc0e541346e896f6aa23fced6d900620e029",
+      "bytes": 122412,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "enrichment-bar-class",
+      "format": "png",
+      "sourceSha256": "58b762f6d3df7d9a11b31f81cc8e7651f615aa51f97aa15662826d7af87338c0",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/enrichment-bar-class.png",
+      "sha256": "949fe438db372b7532538fd96ffbbfc511492661b99c1673e81a3805ffa945d4",
+      "bytes": 68784,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "enrichment-dot-class",
+      "format": "eps",
+      "sourceSha256": "a5359a31975fd69040c712a6fd383b5ea0d165cf04a88db96bf19fceb178e2ef",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/enrichment-dot-class.eps",
+      "sha256": "86237f0e3bd2522838333d6f9e751a89451dbadac365546f5c77e4d9ad76d329",
+      "bytes": 47213,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "enrichment-dot-class",
+      "format": "pdf",
+      "sourceSha256": "a5359a31975fd69040c712a6fd383b5ea0d165cf04a88db96bf19fceb178e2ef",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/enrichment-dot-class.pdf",
+      "sha256": "d7faa5431b87c9d2d74c673e73f7e42afada6f75e6ec9327318af0a64bb0a4d9",
+      "bytes": 125834,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "enrichment-dot-class",
+      "format": "png",
+      "sourceSha256": "a5359a31975fd69040c712a6fd383b5ea0d165cf04a88db96bf19fceb178e2ef",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/enrichment-dot-class.png",
+      "sha256": "89974dc2a972a17ddee4818fae0f87e1f6d9109782363e31c2a070e94a5abeb1",
+      "bytes": 76486,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "gene-cluster-broken",
+      "format": "eps",
+      "sourceSha256": "f6d2a2e274a8e1a6d267e50328a9cf77779fa44a25c52ae00cde7cc746d7087a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/gene-cluster-broken.eps",
+      "sha256": "c1ee5c010f61cd7c81f6907ebcaa32c8c23a25fa6dfaf228604e3cdd4143d41b",
+      "bytes": 30499,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "gene-cluster-broken",
+      "format": "pdf",
+      "sourceSha256": "f6d2a2e274a8e1a6d267e50328a9cf77779fa44a25c52ae00cde7cc746d7087a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/gene-cluster-broken.pdf",
+      "sha256": "d5a9679394b9f13d4cdc7250a0f8f607de6e99f32ad2d1e6171234566685debc",
+      "bytes": 116144,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "gene-cluster-broken",
+      "format": "png",
+      "sourceSha256": "f6d2a2e274a8e1a6d267e50328a9cf77779fa44a25c52ae00cde7cc746d7087a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/gene-cluster-broken.png",
+      "sha256": "b573d9540eee28416fe2725f47b3a5e5f1cffc3c33106eb52de9b079f2754bcb",
+      "bytes": 78635,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "genome-custom-tracks",
+      "format": "eps",
+      "sourceSha256": "bcfdaa919ca35a5266912efe926983ec023697a23506b1f1b556b5ced2c52039",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/genome-custom-tracks.eps",
+      "sha256": "b24b3ab25702cc6313e4c13e581fce034d18a5f3eeeabd3a0912393d764926d5",
+      "bytes": 145917,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "genome-custom-tracks",
+      "format": "pdf",
+      "sourceSha256": "bcfdaa919ca35a5266912efe926983ec023697a23506b1f1b556b5ced2c52039",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/genome-custom-tracks.pdf",
+      "sha256": "31309cb632e4149a00e1bf0d30b5494da4244a3338d8ec1647b81826a8799db6",
+      "bytes": 129654,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "genome-custom-tracks",
+      "format": "png",
+      "sourceSha256": "bcfdaa919ca35a5266912efe926983ec023697a23506b1f1b556b5ced2c52039",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/genome-custom-tracks.png",
+      "sha256": "6f3aa8c3941eceaa1b6f551a64685f592798e186b1dc721546b9c9295893183d",
+      "bytes": 161293,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "heatmap-annotated",
+      "format": "eps",
+      "sourceSha256": "47a5a4b378e1b6144e1158cb582f8fff33b8e42a77681f4c3ab5bfb5a4341da3",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/heatmap-annotated.eps",
+      "sha256": "66b7df263387aab0655aceef7e2a6899b2dbd6296eb6304287a236e16a648aff",
+      "bytes": 35863,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "heatmap-annotated",
+      "format": "pdf",
+      "sourceSha256": "47a5a4b378e1b6144e1158cb582f8fff33b8e42a77681f4c3ab5bfb5a4341da3",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/heatmap-annotated.pdf",
+      "sha256": "c0d94c0c392e0533e60c44e2e6faca7fb941a58f74e519cbc16859fd0bb9123d",
+      "bytes": 120526,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "heatmap-annotated",
+      "format": "png",
+      "sourceSha256": "47a5a4b378e1b6144e1158cb582f8fff33b8e42a77681f4c3ab5bfb5a4341da3",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/heatmap-annotated.png",
+      "sha256": "896f7bb1d87cf66ddf8881c779a2b4eb2e281197799442bcc00862cfb84107ce",
+      "bytes": 74988,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "network-attribute-mappings",
+      "format": "eps",
+      "sourceSha256": "39143fab507ae30c238b0daf2f916fce6edd8244101df881cbc044e840906b90",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/network-attribute-mappings.eps",
+      "sha256": "e97c423f6b07d58e357c909229856b5ba900afb959296e52740c6f3821249bc2",
+      "bytes": 83791,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "network-attribute-mappings",
+      "format": "pdf",
+      "sourceSha256": "39143fab507ae30c238b0daf2f916fce6edd8244101df881cbc044e840906b90",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/network-attribute-mappings.pdf",
+      "sha256": "65538e7507f10b94416f61577a00ed9a331e48730574f28c1d0d2c0d29dbf25e",
+      "bytes": 124334,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "network-attribute-mappings",
+      "format": "png",
+      "sourceSha256": "39143fab507ae30c238b0daf2f916fce6edd8244101df881cbc044e840906b90",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/network-attribute-mappings.png",
+      "sha256": "e873c2c205cd7c1ab42357d0921e527daa58542af97905519d84be47a4debd39",
+      "bytes": 91912,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "network-labeled-loops",
+      "format": "eps",
+      "sourceSha256": "aeddde8d27b8797f17ebe0b889c1094d75419cec8d0f3702751213f8c83368a1",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/network-labeled-loops.eps",
+      "sha256": "cb75935d1c48253c8b9053f7f31e79464f4905c8d7c0f542d86edb26d8513660",
+      "bytes": 87746,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "network-labeled-loops",
+      "format": "pdf",
+      "sourceSha256": "aeddde8d27b8797f17ebe0b889c1094d75419cec8d0f3702751213f8c83368a1",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/network-labeled-loops.pdf",
+      "sha256": "1287fd710ff3294564415672b9b32bad3a61ef3c6d1548115aa5d5b462661781",
+      "bytes": 120459,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "network-labeled-loops",
+      "format": "png",
+      "sourceSha256": "aeddde8d27b8797f17ebe0b889c1094d75419cec8d0f3702751213f8c83368a1",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/network-labeled-loops.png",
+      "sha256": "8de283561339caadf95d62b3a799c0a6f449d08ae8a266ef91893f7d7cfa9c74",
+      "bytes": 96362,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "sankey-gradient",
+      "format": "eps",
+      "sourceSha256": "dbaa8845cc210c316e9436fa9509bc91ed66e490fc58cbb1664c0f2048426ece",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/sankey-gradient.eps",
+      "sha256": "789e40740c3ca469763fdbbc2d208e180241d8e3daf40c18f37cc820e42cf4ec",
+      "bytes": 84783,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "sankey-gradient",
+      "format": "pdf",
+      "sourceSha256": "dbaa8845cc210c316e9436fa9509bc91ed66e490fc58cbb1664c0f2048426ece",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/sankey-gradient.pdf",
+      "sha256": "90b7e9663b46233831393cb7828342b3792834371d2f6c58821c3a339c260b32",
+      "bytes": 133697,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "sankey-gradient",
+      "format": "png",
+      "sourceSha256": "dbaa8845cc210c316e9436fa9509bc91ed66e490fc58cbb1664c0f2048426ece",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/sankey-gradient.png",
+      "sha256": "d3b4689cd97661b93325ef38eab62f6a904e7767aa71ecd92a0fd328e625c3e6",
+      "bytes": 65801,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "synteny-reordered",
+      "format": "eps",
+      "sourceSha256": "a763f75e051c9b5ce4f2030642dce0023af7a1f6124335e1aae7ed943ec01e0b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/synteny-reordered.eps",
+      "sha256": "d5e8f59c12201b0abbd2ac0b253792e6673282cd7b51529e9e3032159abe74ad",
+      "bytes": 77532,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "synteny-reordered",
+      "format": "pdf",
+      "sourceSha256": "a763f75e051c9b5ce4f2030642dce0023af7a1f6124335e1aae7ed943ec01e0b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/synteny-reordered.pdf",
+      "sha256": "0b1f0802435192422190abb50aa7b5fdeef65c09f1d4548f2e96ec43ed29f154",
+      "bytes": 119997,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "synteny-reordered",
+      "format": "png",
+      "sourceSha256": "a763f75e051c9b5ce4f2030642dce0023af7a1f6124335e1aae7ed943ec01e0b",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/synteny-reordered.png",
+      "sha256": "ef0dacafd0160aea348b8742aa11fbfc23b390bf07224a7a1486ab799d6585c1",
+      "bytes": 72974,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "venn-dragged-label",
+      "format": "eps",
+      "sourceSha256": "c6787a368fa85e97a1294448212a381aa006e0157eba6533fe4bc923f6eec4b9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/venn-dragged-label.eps",
+      "sha256": "57a2767663d4ada2ff8e20822f05abbf928559ed891e54dea4294b5ab6cb9dee",
+      "bytes": 123249,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "advanced",
+      "templateId": "venn-dragged-label",
+      "format": "pdf",
+      "sourceSha256": "c6787a368fa85e97a1294448212a381aa006e0157eba6533fe4bc923f6eec4b9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/venn-dragged-label.pdf",
+      "sha256": "67f73bbb4e67547539d78f9bfae94c50d1154df378ebadd2264fd2aa786df7fc",
+      "bytes": 129522,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "advanced",
+      "templateId": "venn-dragged-label",
+      "format": "png",
+      "sourceSha256": "c6787a368fa85e97a1294448212a381aa006e0157eba6533fe4bc923f6eec4b9",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/outputs/venn-dragged-label.png",
+      "sha256": "ff7e8262e89c1fa2d0f10f5af35797b2bf355c9c199d3bd9242e9e104152e742",
+      "bytes": 128396,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-bezierX",
+      "format": "eps",
+      "sourceSha256": "bf59d8f3282f8e9f90a4aba9c03ec404448144cdcf83dc28794be0b4082d8a8a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-bezierX.eps",
+      "sha256": "bb556d8de62cdf8996a3e56e070e582db3e98298fc1bb48699ae1c52d78124da",
+      "bytes": 49466,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-bezierX",
+      "format": "pdf",
+      "sourceSha256": "bf59d8f3282f8e9f90a4aba9c03ec404448144cdcf83dc28794be0b4082d8a8a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-bezierX.pdf",
+      "sha256": "30a23c5333aba49256e926a71190307012242d14dff40405152420a58aecc0af",
+      "bytes": 140536,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-bezierX",
+      "format": "png",
+      "sourceSha256": "bf59d8f3282f8e9f90a4aba9c03ec404448144cdcf83dc28794be0b4082d8a8a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-bezierX.png",
+      "sha256": "9b35aee406b8fc8bb6ea2624ac86794397523146bb12c35756cd3be0c25ffff9",
+      "bytes": 57749,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-bezierY",
+      "format": "eps",
+      "sourceSha256": "64bec30a313e4be2329018f369b81d15f2bafafc3aea5544812f551ba9a8b22f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-bezierY.eps",
+      "sha256": "d513d200d35c45a6f4d598ccfb06531d44495462a932ac5066e790fc6f808051",
+      "bytes": 49347,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-bezierY",
+      "format": "pdf",
+      "sourceSha256": "64bec30a313e4be2329018f369b81d15f2bafafc3aea5544812f551ba9a8b22f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-bezierY.pdf",
+      "sha256": "5c788094539e719755082296160112939a8661cdbc19019b2f422ad9e50e0aa4",
+      "bytes": 140524,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-bezierY",
+      "format": "png",
+      "sourceSha256": "64bec30a313e4be2329018f369b81d15f2bafafc3aea5544812f551ba9a8b22f",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-bezierY.png",
+      "sha256": "afb736d4451f02bb3af6c2fe95e69a207741a8b410ffaf6b7c597d20de61f294",
+      "bytes": 58389,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-elliptical",
+      "format": "eps",
+      "sourceSha256": "5765bc73a177ea4f775f2270389bff050f84b480d6dec6d6ad334fb9ff5a101a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-elliptical.eps",
+      "sha256": "6db5c2c9f03343ad306055d2979468f21f2e48f5d9bcca8a8472d1d2243ac167",
+      "bytes": 49318,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-elliptical",
+      "format": "pdf",
+      "sourceSha256": "5765bc73a177ea4f775f2270389bff050f84b480d6dec6d6ad334fb9ff5a101a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-elliptical.pdf",
+      "sha256": "397e722dbdf635a3c3978cdd2421beb881d2bf2baeef419d7c15a9ab43104ce8",
+      "bytes": 140578,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-elliptical",
+      "format": "png",
+      "sourceSha256": "5765bc73a177ea4f775f2270389bff050f84b480d6dec6d6ad334fb9ff5a101a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-elliptical.png",
+      "sha256": "19176a4e60b344967ae99012925aaaa3d177dabf48d8eecbe3d7ac02c99cc214",
+      "bytes": 57886,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-linear",
+      "format": "eps",
+      "sourceSha256": "702618cc418c4af525b5c3c7aa3c02525a1fe57cf03414f1338a097e6ef28d6e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-linear.eps",
+      "sha256": "e691e4fc1f8628d7e43e4c0c645d8fd6a7c4a307540275d7898f91125a618272",
+      "bytes": 49506,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-linear",
+      "format": "pdf",
+      "sourceSha256": "702618cc418c4af525b5c3c7aa3c02525a1fe57cf03414f1338a097e6ef28d6e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-linear.pdf",
+      "sha256": "2651680df7c98b06ad17cb0a909ba6790565280c4cb4e4b9f17da0cf28c5159f",
+      "bytes": 140478,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-linear",
+      "format": "png",
+      "sourceSha256": "702618cc418c4af525b5c3c7aa3c02525a1fe57cf03414f1338a097e6ef28d6e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-linear.png",
+      "sha256": "e3ea7902043a01d7884db32eaa28070051734f0925d10ed50cad444bc91152b1",
+      "bytes": 58175,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-rectangular",
+      "format": "eps",
+      "sourceSha256": "25418f24c28d1b6531ca502456b9bb78e47aad7bc71b2d9eb28e440b8472f250",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-rectangular.eps",
+      "sha256": "91f8510ba25136d627b498e98ec18c33212a0c4ffd8751959d9c194c11dec34c",
+      "bytes": 46266,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-rectangular",
+      "format": "pdf",
+      "sourceSha256": "25418f24c28d1b6531ca502456b9bb78e47aad7bc71b2d9eb28e440b8472f250",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-rectangular.pdf",
+      "sha256": "593a2ec2c98c7b7f2e766ec11db3e97a3b261eb7e570f7037b347b5ec6cc3015",
+      "bytes": 140585,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "circle-rectangular",
+      "format": "png",
+      "sourceSha256": "25418f24c28d1b6531ca502456b9bb78e47aad7bc71b2d9eb28e440b8472f250",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/circle-rectangular.png",
+      "sha256": "18e9215e346ee74713a360f3a85188fc6a3b2199c93984f824b369876c97536b",
+      "bytes": 56696,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-bezierX",
+      "format": "eps",
+      "sourceSha256": "478fd3363eba843927c0cb7a44c51424027e5797895774f5908f1aaff335758c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-bezierX.eps",
+      "sha256": "beadbd35b3dbf90cc27d8556e463ff0398cbf26de39387b8fb041078a36c341f",
+      "bytes": 60175,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-bezierX",
+      "format": "pdf",
+      "sourceSha256": "478fd3363eba843927c0cb7a44c51424027e5797895774f5908f1aaff335758c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-bezierX.pdf",
+      "sha256": "876d3e7c420d05ae3d2a98b999907668834fa51829b6f6a35bdb049f5c4090cc",
+      "bytes": 140442,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-bezierX",
+      "format": "png",
+      "sourceSha256": "478fd3363eba843927c0cb7a44c51424027e5797895774f5908f1aaff335758c",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-bezierX.png",
+      "sha256": "7100bcafaeec13f23451d9f2187f1089ff15ac3936ff87faf6bf38c5d8a4ee44",
+      "bytes": 71058,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-bezierY",
+      "format": "eps",
+      "sourceSha256": "c30a58e6cea24600e4f22b8d2694e632e57378e9482240764556534e6c4a3eaf",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-bezierY.eps",
+      "sha256": "f5e656e5f7314d9fa06023247b31dd3710b185f2331da77dbe0c9de342b5d563",
+      "bytes": 59550,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-bezierY",
+      "format": "pdf",
+      "sourceSha256": "c30a58e6cea24600e4f22b8d2694e632e57378e9482240764556534e6c4a3eaf",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-bezierY.pdf",
+      "sha256": "3d423309643b836e2ce66b668128d39706e15e342e322ceb8144ade49e6cdd7c",
+      "bytes": 140451,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-bezierY",
+      "format": "png",
+      "sourceSha256": "c30a58e6cea24600e4f22b8d2694e632e57378e9482240764556534e6c4a3eaf",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-bezierY.png",
+      "sha256": "51fd27a5cc9b155f67e2fdaa2879112639b5c82b7f555f2586a75d4febf100f2",
+      "bytes": 69001,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-elliptical",
+      "format": "eps",
+      "sourceSha256": "f6afe714e364982f41b76edaebb6d38b3bef118f7d33617ef74c57a9d9859929",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-elliptical.eps",
+      "sha256": "d7b9a9ad515769e7ba70b38e50364cc5e93945093ea6f39e5d3c9e976e728eb2",
+      "bytes": 60907,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-elliptical",
+      "format": "pdf",
+      "sourceSha256": "f6afe714e364982f41b76edaebb6d38b3bef118f7d33617ef74c57a9d9859929",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-elliptical.pdf",
+      "sha256": "587e339652c6c23eb50d330b49a581101be8e21d392b4bc679cfbcce0daccf9b",
+      "bytes": 140474,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-elliptical",
+      "format": "png",
+      "sourceSha256": "f6afe714e364982f41b76edaebb6d38b3bef118f7d33617ef74c57a9d9859929",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-elliptical.png",
+      "sha256": "e38d85b3d91b5205ce35ffb53066196bb50853f0e3780e98f6b32aaf155177d0",
+      "bytes": 70083,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-linear",
+      "format": "eps",
+      "sourceSha256": "0e343e70368c0aab2e874a436fb5c22a9bf17b332ee0873314ea3ecd6dfa7802",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-linear.eps",
+      "sha256": "274badeb3d77208533098e10ad68e0360a0ed25c53a97f8c92eb0004be600cf7",
+      "bytes": 59398,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-linear",
+      "format": "pdf",
+      "sourceSha256": "0e343e70368c0aab2e874a436fb5c22a9bf17b332ee0873314ea3ecd6dfa7802",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-linear.pdf",
+      "sha256": "f1f5916a7219f1093eff86a5c4992ca1814f610218d6d3c231e084cec1077565",
+      "bytes": 140413,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-linear",
+      "format": "png",
+      "sourceSha256": "0e343e70368c0aab2e874a436fb5c22a9bf17b332ee0873314ea3ecd6dfa7802",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-linear.png",
+      "sha256": "6596be59221b852feeafc1ec61338b4dd8c3bc2df24b324f220f17283fd7d295",
+      "bytes": 69947,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-rectangular",
+      "format": "eps",
+      "sourceSha256": "dfdd2a961dd31eacebb4b714e0ee35d6b0f2357936304c0c764878f6b79868f7",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-rectangular.eps",
+      "sha256": "c7fdf1bd7e09ec4dd430ffd1ff8b5388fb167fb189937d1d2b75006e4dbbf5bc",
+      "bytes": 42210,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-rectangular",
+      "format": "pdf",
+      "sourceSha256": "dfdd2a961dd31eacebb4b714e0ee35d6b0f2357936304c0c764878f6b79868f7",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-rectangular.pdf",
+      "sha256": "1df14f7b94a10efd5bbb8b0882bfa01298532f80c6a290c15ba23f6d7f9282c3",
+      "bytes": 140426,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-rectangular",
+      "format": "png",
+      "sourceSha256": "dfdd2a961dd31eacebb4b714e0ee35d6b0f2357936304c0c764878f6b79868f7",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-rectangular.png",
+      "sha256": "899a6130a663e76082ba5039e23f94de2231aebb0f8758f4f99904fa0184a3d3",
+      "bytes": 47714,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-rounded",
+      "format": "eps",
+      "sourceSha256": "edff22d877a5efd65b81a8aab4c82a60f9e942699349f186200439332fcb740a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-rounded.eps",
+      "sha256": "bd27fe9c9065024cc66ab42292754503537155818ef91ad5d26d4d873171413d",
+      "bytes": 44059,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-rounded",
+      "format": "pdf",
+      "sourceSha256": "edff22d877a5efd65b81a8aab4c82a60f9e942699349f186200439332fcb740a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-rounded.pdf",
+      "sha256": "2cb946c273a1806131e628743c9a324d559603a6156a3e9c408cd60421dfa016",
+      "bytes": 140541,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "normal-rounded",
+      "format": "png",
+      "sourceSha256": "edff22d877a5efd65b81a8aab4c82a60f9e942699349f186200439332fcb740a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/normal-rounded.png",
+      "sha256": "5b54f1b5eb032f285edb6813a774a14f717e747b329e73672c86eb60a6a78de5",
+      "bytes": 49772,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "support-circles",
+      "format": "eps",
+      "sourceSha256": "657c6617e4a5de4692384a179b048fa26a352a8a3224026ececc51da9552a032",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/support-circles.eps",
+      "sha256": "f953550f206007bd60910d0d3d7ca684046db3415a4739d8f3ae27c326dd2335",
+      "bytes": 60749,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "support-circles",
+      "format": "pdf",
+      "sourceSha256": "657c6617e4a5de4692384a179b048fa26a352a8a3224026ececc51da9552a032",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/support-circles.pdf",
+      "sha256": "3678f8a35f5a03b023280802df93ba43d9a9e50946d630062b8d6bc44c293e3f",
+      "bytes": 140202,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "support-circles",
+      "format": "png",
+      "sourceSha256": "657c6617e4a5de4692384a179b048fa26a352a8a3224026ececc51da9552a032",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/support-circles.png",
+      "sha256": "485fc76f0966dc38283021fb72c095b64d8fe461616c3f8ae23ca4240be200ee",
+      "bytes": 72726,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "support-drag",
+      "format": "eps",
+      "sourceSha256": "e87ee936a487edf52bdb1e501d9b4282afe1dc8336ff2d70d2dceac02d5f7ba4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/support-drag.eps",
+      "sha256": "e1cf5d2c3563bd2a12f4e729d6a0b685276eeea5d62281649f8c1a999210e65e",
+      "bytes": 63938,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "support-drag",
+      "format": "pdf",
+      "sourceSha256": "e87ee936a487edf52bdb1e501d9b4282afe1dc8336ff2d70d2dceac02d5f7ba4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/support-drag.pdf",
+      "sha256": "649619c24b2cc49de798d86c25f667c4fb764639ddb14c274a683839c4bca380",
+      "bytes": 140475,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "support-drag",
+      "format": "png",
+      "sourceSha256": "e87ee936a487edf52bdb1e501d9b4282afe1dc8336ff2d70d2dceac02d5f7ba4",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/support-drag.png",
+      "sha256": "53620de7924b42a0296edeb07a096f262cbc8f4186c4b3a47d760ad90fad883c",
+      "bytes": 75915,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-bezierX",
+      "format": "eps",
+      "sourceSha256": "99956aaf12d2ed56a2d240e88b34ce842645ddd0df6efdc10c65861de6945c1a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-bezierX.eps",
+      "sha256": "715f7eb4fe47fef45b1861ee74a2919a830b1ab4839674518c3e218b429d3d91",
+      "bytes": 44217,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-bezierX",
+      "format": "pdf",
+      "sourceSha256": "99956aaf12d2ed56a2d240e88b34ce842645ddd0df6efdc10c65861de6945c1a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-bezierX.pdf",
+      "sha256": "30c80ee5c2d8a953b50c13cc03a06703269f38bc43469e0a198f12b6467955c1",
+      "bytes": 140506,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-bezierX",
+      "format": "png",
+      "sourceSha256": "99956aaf12d2ed56a2d240e88b34ce842645ddd0df6efdc10c65861de6945c1a",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-bezierX.png",
+      "sha256": "42d7d51ccc35c6aa502cc1065548d3bb27fd9776d0035f164f4635f658cb982e",
+      "bytes": 55708,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-bezierY",
+      "format": "eps",
+      "sourceSha256": "2e22a04fde06c07d1db0c7119a12fab78d4be2626b0348bb996aeca7600c3580",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-bezierY.eps",
+      "sha256": "b5416a69281c23d8cf266fc473a817a4e71e9d5aac962b2af4f67cee973d976d",
+      "bytes": 43856,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-bezierY",
+      "format": "pdf",
+      "sourceSha256": "2e22a04fde06c07d1db0c7119a12fab78d4be2626b0348bb996aeca7600c3580",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-bezierY.pdf",
+      "sha256": "674557c2e0bb8ce2db32290fa78ab61839e092fc7b849eeb12052ca832d6056c",
+      "bytes": 140489,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-bezierY",
+      "format": "png",
+      "sourceSha256": "2e22a04fde06c07d1db0c7119a12fab78d4be2626b0348bb996aeca7600c3580",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-bezierY.png",
+      "sha256": "a1f91e4d7c4c90ff9f06be07943b66206c7b350c76e9bd9d09c83851c354e92c",
+      "bytes": 55370,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-linear",
+      "format": "eps",
+      "sourceSha256": "2e8b4f4ba426896787dcffc721d362ab56a62fc182b0ee09e2464459d835353e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-linear.eps",
+      "sha256": "4a184d090bc4f1f79f2fd377d858cae24593b1dceea7c50a47b3bf9ad3bfc4c5",
+      "bytes": 38397,
+      "decoder": "Ghostscript",
+      "opened": true,
+      "diagnostics": [
+        {
+          "code": "EPS_ALPHA_FLATTENED",
+          "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+        },
+        {
+          "code": "EPS_BACKGROUND",
+          "message": "EPS 使用不透明背景 #ffffff"
+        }
+      ]
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-linear",
+      "format": "pdf",
+      "sourceSha256": "2e8b4f4ba426896787dcffc721d362ab56a62fc182b0ee09e2464459d835353e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-linear.pdf",
+      "sha256": "f8fd9975039a44ef8f983e7f56a3b2bf2eb4eb61a4db47b3884a69d048de928e",
+      "bytes": 140457,
+      "decoder": "Poppler",
+      "opened": true,
+      "diagnostics": []
+    },
+    {
+      "group": "tree-branch",
+      "templateId": "unrooted-linear",
+      "format": "png",
+      "sourceSha256": "2e8b4f4ba426896787dcffc721d362ab56a62fc182b0ee09e2464459d835353e",
+      "file": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/outputs/unrooted-linear.png",
+      "sha256": "61eb2c0486b0294e8e93e32fdcd5944f776fd31e6142809dfb08e16f815c2116",
+      "bytes": 49236,
+      "decoder": "Pillow",
+      "opened": true,
+      "diagnostics": []
+    }
+  ],
+  "relatedEvidence": [
+    "tests/artifacts/font-delivery-oblique/README.md",
+    "tests/artifacts/font-weight-export/README.md",
+    "tests/artifacts/font-italic-after/README.md",
+    "tests/artifacts/font-oblique-layout/README.md",
+    "server/fonts/SOURCES.md"
+  ],
+  "boundaries": [
+    "旧字体及第一轮650失败结果保留，未覆盖旧证据。",
+    "650到700采用已提供静态字体的匹配规则；斜体使用明确标注的12度派生Oblique面，网页和服务使用同源字体。",
+    "独立打开及边界检查不等于全部图形内部组合的穷举证明。"
+  ]
+}

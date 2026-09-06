@@ -1,0 +1,737 @@
+[
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/binary-dot-annotated.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/bubble-matrix-annotated.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/bubble-matrix-category.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/circle-heatmap-annotated.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/circle-heatmap-cluster.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/enrichment-bar-class.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/enrichment-dot-class.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/gene-cluster-broken.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 3
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/genome-custom-tracks.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/heatmap-annotated.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/network-attribute-mappings.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/network-labeled-loops.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/sankey-gradient.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/synteny-reordered.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 3
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/advanced/sources/venn-dragged-label.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 11
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bar-category.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 13
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bar-error.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 12
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bar-grouped-error.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 9
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bar-grouped-stacked.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 13,
+      "600": 2
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 3
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bar-grouped.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 11
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bar-line.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 11
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bar-stacked.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 10
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bar.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 11
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/binary-dot.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/binary-rect.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/box-grouped.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 11
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/box.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 9
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/bubble-matrix.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/cca.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 29
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 14
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/circle-heatmap.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/correlation.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/double-correlation.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/dumbbell.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 12
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/enrichment-bar.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/enrichment-circle.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/enrichment-dot.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/gene-cluster.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 3
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/genome-circos.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/heatmap.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/line-error.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 12
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/line.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 13
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/lollipop-category.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 13
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/lollipop.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 11
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/mantel.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/map.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/network.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/nmds.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 25
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 13
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/packing.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/pca.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 27
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 14
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/pcoa.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 25
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 13
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/pie.svg",
+    "explicitFontWeightCounts": {
+      "700": 1
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 4
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/protein-domains.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 3
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/protein-motifs.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 3
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/radar.svg",
+    "explicitFontWeightCounts": {
+      "700": 1
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/raincloud.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 9
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/rda.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 30
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 14
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/ridgeline.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 9
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/rose.svg",
+    "explicitFontWeightCounts": {
+      "700": 1
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 4
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/sankey.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/scatter-error.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 12
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/scatter-grouped.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 13
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 2
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/scatter.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 13
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 1
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/synteny.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 3
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/tree-circle.svg",
+    "explicitFontWeightCounts": {
+      "700": 1
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/tree-normal.svg",
+    "explicitFontWeightCounts": {
+      "700": 1
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/tree-unrooted.svg",
+    "explicitFontWeightCounts": {
+      "700": 1
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/upset.svg",
+    "explicitFontWeightCounts": {
+      "700": 1
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 3
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/venn.svg",
+    "explicitFontWeightCounts": {
+      "650": 1,
+      "bold": 11
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/violin.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 9
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/default/sources/volcano.svg",
+    "explicitFontWeightCounts": {
+      "650": 1
+    },
+    "explicitFontFamilies": {}
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/circle-bezierX.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/circle-bezierY.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/circle-elliptical.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/circle-linear.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/circle-rectangular.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/normal-bezierX.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/normal-bezierY.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/normal-elliptical.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/normal-linear.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/normal-rectangular.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/normal-rounded.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/support-circles.svg",
+    "explicitFontWeightCounts": {
+      "700": 1
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/support-drag.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/unrooted-bezierX.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/unrooted-bezierY.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  },
+  {
+    "source": "tests/artifacts/font-bold-refresh/tree-branch/sources/unrooted-linear.svg",
+    "explicitFontWeightCounts": {
+      "700": 1,
+      "400": 3
+    },
+    "explicitFontFamilies": {
+      "Noto Sans SC": 7
+    }
+  }
+]

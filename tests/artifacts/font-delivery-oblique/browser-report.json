@@ -1,0 +1,553 @@
+{
+  "source": "four pinned upstream Regular400/Bold700 faces plus four disclosed OpenAcad12degree CFF Oblique derivatives; complete unicode-range delivery; actual SVG weight/style and precise PostScript face checked",
+  "browser": "152.0.7977.76",
+  "network": {
+    "latencyMS": 80,
+    "downloadBytesPerSecond": 163840,
+    "cacheDisabled": true
+  },
+  "elapsedMilliseconds": 76218,
+  "cases": [
+    {
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "fontStyle": "normal",
+      "text": "中文科研图表",
+      "milliseconds": 4528,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "normal 400 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [],
+      "screenshot": "sans-400-normal-common.png",
+      "screenshotSha256": "c873252388fd9a627d7e0016610080547cb7fa2386125b96d631b052deec6303"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "fontStyle": "normal",
+      "text": "𠮷",
+      "milliseconds": 1482,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "normal 400 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-39.e62717f96507.woff2"
+      ],
+      "screenshot": "sans-400-normal-rare.png",
+      "screenshotSha256": "0f5fe5a800f73d89241431427318a0455a171ec4c14fe93d3b8aae60fe41cec5"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "fontStyle": "italic",
+      "text": "中文科研图表",
+      "milliseconds": 2391,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "italic 400 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "OpenAcadNotoSansCJKsc-Oblique",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-sans-sc-oblique-common-00.e9077456b678.woff2"
+      ],
+      "screenshot": "sans-400-italic-common.png",
+      "screenshotSha256": "a9d5868f8f319f37bd2fd74a9a269b2e2a5ab0f0cc2e750a89bef0b5e5bd4b22"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "fontStyle": "italic",
+      "text": "𠮷",
+      "milliseconds": 127,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "italic 400 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "OpenAcadNotoSansCJKsc-Oblique",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "sans-400-italic-rare.png",
+      "screenshotSha256": "61bd1052e62409251af120607aeec9b1abe42a462d059adf859fb13b080fe786"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "fontStyle": "normal",
+      "text": "中文科研图表",
+      "milliseconds": 1492,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "normal 700 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [],
+      "screenshot": "sans-700-normal-common.png",
+      "screenshotSha256": "817b55b7bb350a8afc0a61b1e152a17f90ba89f38ea9805fff1d27d11db104e3"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "fontStyle": "normal",
+      "text": "𠮷",
+      "milliseconds": 127,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "normal 700 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Bold",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "sans-700-normal-rare.png",
+      "screenshotSha256": "02a3a07001e0472956f39530ad7f46e14d3cd81ce63d0b22e021399ba5432ef3"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "fontStyle": "italic",
+      "text": "中文科研图表",
+      "milliseconds": 2468,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "italic 700 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "OpenAcadNotoSansCJKsc-BoldOblique",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-sans-sc-bold-oblique-common-00.674630c4572d.woff2"
+      ],
+      "screenshot": "sans-700-italic-common.png",
+      "screenshotSha256": "e47160499fe14bf6e4aaaa9047a314baa462df5336beed5c09b477522ef96990"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "fontStyle": "italic",
+      "text": "𠮷",
+      "milliseconds": 114,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "italic 700 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "OpenAcadNotoSansCJKsc-BoldOblique",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "sans-700-italic-rare.png",
+      "screenshotSha256": "d8fb4050aec9fe3d9bb240062ee2c19dd49706b81b0730c7fd5e71a3ef5fff64"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "fontStyle": "normal",
+      "text": "中文科研图表",
+      "milliseconds": 9407,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "normal 400 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [],
+      "screenshot": "serif-400-normal-common.png",
+      "screenshotSha256": "0025cfd348c6c34feb795e72de95b96401fa0ea33c9ae92bc6c4703280a4378d"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "fontStyle": "normal",
+      "text": "𠮷",
+      "milliseconds": 134,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "normal 400 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "serif-400-normal-rare.png",
+      "screenshotSha256": "d545c072703fe7cc76f07d8dcfac55e3218da23f8712658ccee66f064a0a717f"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "fontStyle": "italic",
+      "text": "中文科研图表",
+      "milliseconds": 3538,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "italic 400 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "OpenAcadNotoSerifCJKsc-Oblique",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-oblique-common-00.d63da4f36203.woff2"
+      ],
+      "screenshot": "serif-400-italic-common.png",
+      "screenshotSha256": "1e21493bb7ae48b1c71a612ae753d25f9ebf180c78e90ccc29fe45c7a5f75674"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "fontStyle": "italic",
+      "text": "𠮷",
+      "milliseconds": 129,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "italic 400 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "OpenAcadNotoSerifCJKsc-Oblique",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "serif-400-italic-rare.png",
+      "screenshotSha256": "473d1ddee940b96833275973803ea374fbae6257b24d94a103b3720a561629bf"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "fontStyle": "normal",
+      "text": "中文科研图表",
+      "milliseconds": 1590,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "normal 700 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-bold-common-00.278b516084d8.woff2"
+      ],
+      "screenshot": "serif-700-normal-common.png",
+      "screenshotSha256": "c3603c083e001163bc68c964726aef3659b193ee6b803e37553be3431c36f599"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "fontStyle": "normal",
+      "text": "𠮷",
+      "milliseconds": 130,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "normal 700 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Bold",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "serif-700-normal-rare.png",
+      "screenshotSha256": "866a078b4cc00e147cb9e91787da0819b25f8e68ddcd71b088bb7fd325f151a7"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "fontStyle": "italic",
+      "text": "中文科研图表",
+      "milliseconds": 1585,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "italic 700 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "OpenAcadNotoSerifCJKsc-BoldOblique",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-bold-oblique-common-00.44554373f39c.woff2"
+      ],
+      "screenshot": "serif-700-italic-common.png",
+      "screenshotSha256": "0771187f62e5a06b1f42928b437233c836308313e18ad5a1840c94557234e5f9"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "fontStyle": "italic",
+      "text": "𠮷",
+      "milliseconds": 131,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "italic 700 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "OpenAcadNotoSerifCJKsc-BoldOblique",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "serif-700-italic-rare.png",
+      "screenshotSha256": "0165c00b2ef9fc1f9febe46febd8e76b4155fa09a810af98aea9aa0a011a5b9d"
+    }
+  ],
+  "requestedShards": [
+    {
+      "file": "woff2/noto-sans-sc-latin.d32b30de4552.woff2",
+      "bytes": 80520,
+      "name": "latin",
+      "fontWeight": 400,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-sans-sc-bold-common-00.dd5968857b6f.woff2",
+      "bytes": 158580,
+      "name": "common-00",
+      "fontWeight": 700,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-sans-sc-common-00.8c5ce7f7e41d.woff2",
+      "bytes": 155176,
+      "name": "common-00",
+      "fontWeight": 400,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-sans-sc-common-01.7418d1e38253.woff2",
+      "bytes": 120924,
+      "name": "common-01",
+      "fontWeight": 400,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-sans-sc-bold-common-01.27546456cc5e.woff2",
+      "bytes": 124336,
+      "name": "common-01",
+      "fontWeight": 700,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-sans-sc-bold-latin.b0d379715a27.woff2",
+      "bytes": 80952,
+      "name": "latin",
+      "fontWeight": 700,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-sans-sc-rest-39.e62717f96507.woff2",
+      "bytes": 209596,
+      "name": "rest-39",
+      "fontWeight": 400,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/openacad-noto-sans-sc-oblique-rest-39.d50ef3643023.woff2",
+      "bytes": 209568,
+      "name": "rest-39",
+      "fontWeight": 400,
+      "fontStyle": "italic"
+    },
+    {
+      "file": "woff2/openacad-noto-sans-sc-oblique-common-00.e9077456b678.woff2",
+      "bytes": 154860,
+      "name": "common-00",
+      "fontWeight": 400,
+      "fontStyle": "italic"
+    },
+    {
+      "file": "woff2/noto-sans-sc-bold-rest-39.eaaa6f200378.woff2",
+      "bytes": 216808,
+      "name": "rest-39",
+      "fontWeight": 700,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/openacad-noto-sans-sc-bold-oblique-rest-39.0eb7f9a75469.woff2",
+      "bytes": 217116,
+      "name": "rest-39",
+      "fontWeight": 700,
+      "fontStyle": "italic"
+    },
+    {
+      "file": "woff2/openacad-noto-sans-sc-bold-oblique-common-00.674630c4572d.woff2",
+      "bytes": 158736,
+      "name": "common-00",
+      "fontWeight": 700,
+      "fontStyle": "italic"
+    },
+    {
+      "file": "woff2/openacad-noto-serif-sc-bold-oblique-rest-39.38c8fdeaf88c.woff2",
+      "bytes": 343788,
+      "name": "rest-39",
+      "fontWeight": 700,
+      "fontStyle": "italic"
+    },
+    {
+      "file": "woff2/noto-serif-sc-common-00.92282e42190f.woff2",
+      "bytes": 219160,
+      "name": "common-00",
+      "fontWeight": 400,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-serif-sc-common-01.09ddb2488f29.woff2",
+      "bytes": 169368,
+      "name": "common-01",
+      "fontWeight": 400,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-serif-sc-latin.c3274cded872.woff2",
+      "bytes": 116116,
+      "name": "latin",
+      "fontWeight": 400,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-serif-sc-bold-rest-39.363924a03689.woff2",
+      "bytes": 344096,
+      "name": "rest-39",
+      "fontWeight": 700,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/noto-serif-sc-rest-39.030cd3a4bc15.woff2",
+      "bytes": 330720,
+      "name": "rest-39",
+      "fontWeight": 400,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/openacad-noto-serif-sc-oblique-rest-39.280881103b78.woff2",
+      "bytes": 331176,
+      "name": "rest-39",
+      "fontWeight": 400,
+      "fontStyle": "italic"
+    },
+    {
+      "file": "woff2/openacad-noto-serif-sc-oblique-common-00.d63da4f36203.woff2",
+      "bytes": 219224,
+      "name": "common-00",
+      "fontWeight": 400,
+      "fontStyle": "italic"
+    },
+    {
+      "file": "woff2/noto-serif-sc-bold-common-00.278b516084d8.woff2",
+      "bytes": 226116,
+      "name": "common-00",
+      "fontWeight": 700,
+      "fontStyle": "normal"
+    },
+    {
+      "file": "woff2/openacad-noto-serif-sc-bold-oblique-common-00.44554373f39c.woff2",
+      "bytes": 226072,
+      "name": "common-00",
+      "fontWeight": 700,
+      "fontStyle": "italic"
+    }
+  ],
+  "commonBytes": 2210140,
+  "totalFontBytes": 4413008,
+  "fullOtfRequests": 0,
+  "pageErrors": [],
+  "passed": true
+}

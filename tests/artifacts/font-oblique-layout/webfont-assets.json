@@ -1,0 +1,209 @@
+{
+  "verifiedAt": "2026-09-06T18:33:02.333653+00:00",
+  "cssSha256": "c24bf743927c7945903eedbbc61b64ebbcb90ecfb9d2ba3d899a65546710ad9c",
+  "webManifestSha256": "f5653820a0275c11b10c98f26a8e2e654cc3928346b9a07f1a9e4e37791ee9a8",
+  "declaredFaces": 8,
+  "fontUrlsObservedInActualBrowser": [
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-common-00.dd5968857b6f.woff2",
+      "sha256": "dd5968857b6f2f4e1139755360388f0cef71ed6e8b2e9463852d9c91836e8e0a",
+      "bytes": 158580,
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "style": "normal",
+      "source": "NotoSansCJKsc-Bold.otf",
+      "sourceSha256": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-common-01.27546456cc5e.woff2",
+      "sha256": "27546456cc5ea14f9f0aabba9d8ff073be25276d20626deeb96bfd4747050792",
+      "bytes": 124336,
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "style": "normal",
+      "source": "NotoSansCJKsc-Bold.otf",
+      "sourceSha256": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-latin.b0d379715a27.woff2",
+      "sha256": "b0d379715a27810feceea210db30e74d4a05125db1ad1c5e2a99297771908a28",
+      "bytes": 80952,
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "style": "normal",
+      "source": "NotoSansCJKsc-Bold.otf",
+      "sourceSha256": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-common-00.8c5ce7f7e41d.woff2",
+      "sha256": "8c5ce7f7e41de4a46229f4948cf06b6d2e000449e61acd666f6c8eae0ee32186",
+      "bytes": 155176,
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "style": "normal",
+      "source": "NotoSansCJKsc-Regular.otf",
+      "sourceSha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-common-01.7418d1e38253.woff2",
+      "sha256": "7418d1e382536e18f685b1641dcea65a84874a42fc65d52654518f2a403045c6",
+      "bytes": 120924,
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "style": "normal",
+      "source": "NotoSansCJKsc-Regular.otf",
+      "sourceSha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-latin.d32b30de4552.woff2",
+      "sha256": "d32b30de45525fcd354bbbf7b011b3acd2d6ed6619e267d25e5d1248ef6e22de",
+      "bytes": 80520,
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "style": "normal",
+      "source": "NotoSansCJKsc-Regular.otf",
+      "sourceSha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-09.d23bc7088c37.woff2",
+      "sha256": "d23bc7088c375f003ea74715b5ca58eb226b8692ff8c693554532702cf68b08c",
+      "bytes": 320592,
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "style": "normal",
+      "source": "NotoSansCJKsc-Regular.otf",
+      "sourceSha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-14.28c6a698395d.woff2",
+      "sha256": "28c6a698395d25b6610f44af8c1ecc0d898371d56eeeab934f1abf088d5b7371",
+      "bytes": 339228,
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "style": "normal",
+      "source": "NotoSansCJKsc-Regular.otf",
+      "sourceSha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-bold-common-00.278b516084d8.woff2",
+      "sha256": "278b516084d84a3b02852e2823c256691a724ff75c59e7931f4366eceb4d3118",
+      "bytes": 226116,
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "style": "normal",
+      "source": "NotoSerifCJKsc-Bold.otf",
+      "sourceSha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-bold-common-01.e04a32a6a33c.woff2",
+      "sha256": "e04a32a6a33cdfb5c57768e6407c0c26a6231f0cd10dc4a60f50e9a8d446a68c",
+      "bytes": 175332,
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "style": "normal",
+      "source": "NotoSerifCJKsc-Bold.otf",
+      "sourceSha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-bold-latin.2eca0693da1f.woff2",
+      "sha256": "2eca0693da1ffe824a0d398fe7e49392269108a04c47690b54148f0a61c07bd3",
+      "bytes": 117496,
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "style": "normal",
+      "source": "NotoSerifCJKsc-Bold.otf",
+      "sourceSha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-common-00.92282e42190f.woff2",
+      "sha256": "92282e42190f69bfc73202900d8105575b785c450fd292759f8bd3976621014e",
+      "bytes": 219160,
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "style": "normal",
+      "source": "NotoSerifCJKsc-Regular.otf",
+      "sourceSha256": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-common-01.09ddb2488f29.woff2",
+      "sha256": "09ddb2488f29c50a323317f4ef73b691d8d85efd0cb9f9ff9b9caf00644588f5",
+      "bytes": 169368,
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "style": "normal",
+      "source": "NotoSerifCJKsc-Regular.otf",
+      "sourceSha256": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-latin.c3274cded872.woff2",
+      "sha256": "c3274cded872ae327a3e50caec9820f0f39fe8e52960db8415502152c5ca91cb",
+      "bytes": 116116,
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "style": "normal",
+      "source": "NotoSerifCJKsc-Regular.otf",
+      "sourceSha256": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/openacad-noto-sans-sc-oblique-common-00.e9077456b678.woff2",
+      "sha256": "e9077456b678ed4b94f369f4bdf6e3429eaaafb37ac2884b6985b45a8607d06e",
+      "bytes": 154860,
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "style": "italic",
+      "source": "OpenAcadNotoSansCJKsc-Oblique.otf",
+      "sourceSha256": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/openacad-noto-sans-sc-oblique-common-01.0a049a53ac25.woff2",
+      "sha256": "0a049a53ac256e59751df763a3ef1bc67f036ea54ca0a8c218eed67fb4c50614",
+      "bytes": 121496,
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "style": "italic",
+      "source": "OpenAcadNotoSansCJKsc-Oblique.otf",
+      "sourceSha256": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-bold-oblique-common-00.44554373f39c.woff2",
+      "sha256": "44554373f39c04b43fb973cb446a2af3ee6ed892fe3ed4f52c43c76ce5cd2cd4",
+      "bytes": 226072,
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "style": "italic",
+      "source": "OpenAcadNotoSerifCJKsc-BoldOblique.otf",
+      "sourceSha256": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-bold-oblique-common-01.005bd7f0ae9b.woff2",
+      "sha256": "005bd7f0ae9be0dfd79aeb3c85e2d102af47f2d6baa3ec6bbc00ada4cf0d6553",
+      "bytes": 175564,
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "style": "italic",
+      "source": "OpenAcadNotoSerifCJKsc-BoldOblique.otf",
+      "sourceSha256": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-bold-oblique-latin.778e79a62e17.woff2",
+      "sha256": "778e79a62e179a695876054109c763e2723df6f4b5e32a0dbd9e51ec975f4f6c",
+      "bytes": 117908,
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "style": "italic",
+      "source": "OpenAcadNotoSerifCJKsc-BoldOblique.otf",
+      "sourceSha256": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+    },
+    {
+      "url": "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-oblique-common-00.d63da4f36203.woff2",
+      "sha256": "d63da4f36203623e9912f32ae65208d97bd55aa795c1f39153f1bddcb879eda3",
+      "bytes": 219224,
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "style": "italic",
+      "source": "OpenAcadNotoSerifCJKsc-Oblique.otf",
+      "sourceSha256": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412"
+    }
+  ],
+  "allServedBytesMatchManifest": true
+}

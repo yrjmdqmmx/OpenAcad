@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-06T18:06:25.106332+00:00",
+  "complete": true,
+  "passed": true,
+  "tests": {
+    "linuxActualInkscape": "51 passed in 6.27s",
+    "macOS": "29 passed, 22 skipped because Inkscape is absent"
+  },
+  "sourceExportSha256": "99eb7d3cac5a3e3008b5b481e652a0ab074e880e3b0c4dd107979ba1a94e8ec5",
+  "testSha256": "879b678ca42dc87ca40348bd9ce9833f9ed5261d78ee153cb70c5141a8e47caa",
+  "actualConversions": 18,
+  "independentlyOpenedPdfFiles": 6,
+  "weight650And700SvgPathsPngPixelsPdfFontsAndPdfPreviewsIdentical": true,
+  "normalization": "font-weight attribute, inline declarations, and style-element declarations: valid numeric 1..1000 select 400 when <=500, otherwise 700; normal/bold map to 400/700; relative/inherited/variable values remain contextual",
+  "security": "Original SVG attribute/CSS checks run before normalization; unsafe URLs, data links, and comments still rejected",
+  "preserved": "declaration order, !important, selectors, non-weight properties, custom-property values, quoted strings, and SVG text content",
+  "productionChanges": "Only server/app/export.py and its dedicated regression test; no font files, deployment, or running production services changed"
+}

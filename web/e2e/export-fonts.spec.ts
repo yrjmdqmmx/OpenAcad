@@ -157,3 +157,28 @@ test("当前图表字体请求失败时明确提示且不提交导出", async ({
   expect(downloads).toBe(0);
   await evidence("font-load-failure", { posts, downloads, message: await page.getByRole("alert").innerText() });
 });
+
+
+test("保留文字的SVG下载保存真实字重匹配且不改预览", async ({ page }, info) => {
+  test.skip(info.project.name !== "chromium", "静态字重匹配专项使用 Chromium");
+  await page.goto("/#editor/heatmap");
+  const title = page.locator('.figure-paper text[font-weight="650"]').first();
+  await expect(title).toBeVisible();
+  const text = await title.textContent();
+  await page.getByRole("button", { name: "导出图片", exact: true }).click();
+  const pending = page.waitForEvent("download");
+  await page.getByRole("button", { name: "下载图片", exact: true }).click();
+  const downloaded = await pending;
+  const content = await readFile((await downloaded.path())!, "utf8");
+  const weights = await page.evaluate(({ content, text }) => {
+    const svg = new DOMParser().parseFromString(content, "image/svg+xml");
+    if (svg.querySelector("parsererror")) throw new Error("导出SVG无法解析");
+    const nodes = [...svg.querySelectorAll<SVGElement>("text")];
+    const title = nodes.find((node) => node.textContent === text);
+    return { title: title?.style.fontWeight, normal: nodes.filter((node) => node.style.fontWeight === "400").length };
+  }, { content, text });
+  expect(weights.title).toBe("700");
+  expect(weights.normal).toBeGreaterThan(0);
+  await expect(title).toHaveAttribute("font-weight", "650");
+  await evidence("static-weight-svg", { originalTitleWeight: 650, exportedTitleWeight: 700, normalTextCount: weights.normal, browserPreviewUnmodified: true });
+});

@@ -1,0 +1,283 @@
+{
+  "source": "same-version pinned Regular400/Bold700 OTFs, complete unicode-range WOFF2 delivery; actual SVG weight and PostScript face checked",
+  "browser": "152.0.7977.76",
+  "network": {
+    "latencyMS": 80,
+    "downloadBytesPerSecond": 163840,
+    "cacheDisabled": true
+  },
+  "elapsedMilliseconds": 62353,
+  "cases": [
+    {
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "text": "中文科研图表",
+      "milliseconds": 4501,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "normal 400 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [],
+      "screenshot": "sans-400-common.png",
+      "screenshotSha256": "c873252388fd9a627d7e0016610080547cb7fa2386125b96d631b052deec6303"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 400,
+      "text": "𠮷",
+      "milliseconds": 1471,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "normal 400 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-39.e62717f96507.woff2"
+      ],
+      "screenshot": "sans-400-rare.png",
+      "screenshotSha256": "0f5fe5a800f73d89241431427318a0455a171ec4c14fe93d3b8aae60fe41cec5"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "text": "中文科研图表",
+      "milliseconds": 1501,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "normal 700 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [],
+      "screenshot": "sans-700-common.png",
+      "screenshotSha256": "817b55b7bb350a8afc0a61b1e152a17f90ba89f38ea9805fff1d27d11db104e3"
+    },
+    {
+      "family": "Noto Sans SC",
+      "weight": 700,
+      "text": "𠮷",
+      "milliseconds": 125,
+      "faces": 1,
+      "fontFamily": "\"Noto Sans SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "normal 700 24px \"Noto Sans SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Sans CJK SC",
+          "postScriptName": "NotoSansCJKsc-Bold",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "sans-700-rare.png",
+      "screenshotSha256": "02a3a07001e0472956f39530ad7f46e14d3cd81ce63d0b22e021399ba5432ef3"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "text": "中文科研图表",
+      "milliseconds": 7349,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "normal 400 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [],
+      "screenshot": "serif-400-common.png",
+      "screenshotSha256": "0025cfd348c6c34feb795e72de95b96401fa0ea33c9ae92bc6c4703280a4378d"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 400,
+      "text": "𠮷",
+      "milliseconds": 131,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "400",
+      "fontDescriptor": "normal 400 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Regular",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "serif-400-rare.png",
+      "screenshotSha256": "d545c072703fe7cc76f07d8dcfac55e3218da23f8712658ccee66f064a0a717f"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "text": "中文科研图表",
+      "milliseconds": 1587,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "normal 700 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Bold",
+          "isCustomFont": true,
+          "glyphCount": 6
+        }
+      ],
+      "requested": [
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-bold-common-00.278b516084d8.woff2"
+      ],
+      "screenshot": "serif-700-common.png",
+      "screenshotSha256": "c3603c083e001163bc68c964726aef3659b193ee6b803e37553be3431c36f599"
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "weight": 700,
+      "text": "𠮷",
+      "milliseconds": 130,
+      "faces": 1,
+      "fontFamily": "\"Noto Serif CJK SC\"",
+      "fontWeight": "700",
+      "fontDescriptor": "normal 700 24px \"Noto Serif CJK SC\"",
+      "check": true,
+      "platformFonts": [
+        {
+          "familyName": "Noto Serif CJK SC",
+          "postScriptName": "NotoSerifCJKsc-Bold",
+          "isCustomFont": true,
+          "glyphCount": 1
+        }
+      ],
+      "requested": [],
+      "screenshot": "serif-700-rare.png",
+      "screenshotSha256": "866a078b4cc00e147cb9e91787da0819b25f8e68ddcd71b088bb7fd325f151a7"
+    }
+  ],
+  "requestedShards": [
+    {
+      "file": "woff2/noto-sans-sc-latin.d32b30de4552.woff2",
+      "bytes": 80520,
+      "name": "latin",
+      "fontWeight": 400
+    },
+    {
+      "file": "woff2/noto-sans-sc-bold-common-00.dd5968857b6f.woff2",
+      "bytes": 158580,
+      "name": "common-00",
+      "fontWeight": 700
+    },
+    {
+      "file": "woff2/noto-sans-sc-common-00.8c5ce7f7e41d.woff2",
+      "bytes": 155176,
+      "name": "common-00",
+      "fontWeight": 400
+    },
+    {
+      "file": "woff2/noto-sans-sc-common-01.7418d1e38253.woff2",
+      "bytes": 120924,
+      "name": "common-01",
+      "fontWeight": 400
+    },
+    {
+      "file": "woff2/noto-sans-sc-bold-common-01.27546456cc5e.woff2",
+      "bytes": 124336,
+      "name": "common-01",
+      "fontWeight": 700
+    },
+    {
+      "file": "woff2/noto-sans-sc-bold-latin.b0d379715a27.woff2",
+      "bytes": 80952,
+      "name": "latin",
+      "fontWeight": 700
+    },
+    {
+      "file": "woff2/noto-sans-sc-rest-39.e62717f96507.woff2",
+      "bytes": 209596,
+      "name": "rest-39",
+      "fontWeight": 400
+    },
+    {
+      "file": "woff2/noto-sans-sc-bold-rest-39.eaaa6f200378.woff2",
+      "bytes": 216808,
+      "name": "rest-39",
+      "fontWeight": 700
+    },
+    {
+      "file": "woff2/noto-serif-sc-bold-rest-39.363924a03689.woff2",
+      "bytes": 344096,
+      "name": "rest-39",
+      "fontWeight": 700
+    },
+    {
+      "file": "woff2/noto-serif-sc-common-00.92282e42190f.woff2",
+      "bytes": 219160,
+      "name": "common-00",
+      "fontWeight": 400
+    },
+    {
+      "file": "woff2/noto-serif-sc-common-01.09ddb2488f29.woff2",
+      "bytes": 169368,
+      "name": "common-01",
+      "fontWeight": 400
+    },
+    {
+      "file": "woff2/noto-serif-sc-latin.c3274cded872.woff2",
+      "bytes": 116116,
+      "name": "latin",
+      "fontWeight": 400
+    },
+    {
+      "file": "woff2/noto-serif-sc-rest-39.030cd3a4bc15.woff2",
+      "bytes": 330720,
+      "name": "rest-39",
+      "fontWeight": 400
+    },
+    {
+      "file": "woff2/noto-serif-sc-bold-common-00.278b516084d8.woff2",
+      "bytes": 226116,
+      "name": "common-00",
+      "fontWeight": 700
+    }
+  ],
+  "commonBytes": 1451248,
+  "totalFontBytes": 2552468,
+  "fullOtfRequests": 0,
+  "pageErrors": [],
+  "passed": true
+}

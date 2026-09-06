@@ -80,4 +80,8 @@ dpi仅150/300/600；SVG单位px，宽高可显式覆盖正数(最多16000)。PNG
 
 `Noto Sans SC` 字体家族在导出时归一化为镜像实际安装的 `Noto Sans CJK SC`。覆盖背景色会增加画布背景，但不删除图表自身的矩形或其他可见元素。
 
+镜像提供两种字体各自真实的 Regular（400）和 Bold（700）。直接 API SVG 的 `font-weight` 属性、行内样式及样式表声明按这两种静态字重匹配：有效数值 1..1000 中，<=500 选择 400，>500 选择 700；`normal`/`bold` 等价于 400/700。声明顺序、`!important`、其他属性、CSS 字符串和 custom property 保持原样。
+
+直接 API SVG 若同时包含有效 `bolder`/`lighter` 相对字重声明及必须改变数值的字重映射，会返回 `RELATIVE_FONT_WEIGHT` 中文错误，要求先将文字字重转换为明确的 400/700；后端不猜测完整 CSS 级联，以免改写祖先数值后导致子文字相对字重变义。仅 `normal`/`bold` 或 `400.0`→`400` 等数值不变的替换不会触发此限制，字符串和 custom property 中的相对字重词也不计入。正常网页导出会先把各文本实际计算后的字重保存为绝对值，因此不依赖这一相对声明分支。
+
 返回 `result={schemaVersion:1,method:"render",data:{},artifact:{filename,mimeType,contentBase64},provenance:{...},diagnostics:[]}`。前端base64解码后Blob下载，不需要公开文件地址。SVG/PDF/EPS/PNG均通过真实Inkscape处理并检查魔数；导出异常返回具体中文说明。

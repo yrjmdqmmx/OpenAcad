@@ -1,0 +1,497 @@
+[
+  {
+    "template": "bar",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bar-category",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bar-error",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bar-grouped",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bar-grouped-error",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bar-grouped-stacked",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bar-line",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bar-stacked",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "binary-dot",
+    "sourceContains650": true,
+    "changedPixels": 2664,
+    "differenceBounds": [
+      658,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "binary-rect",
+    "sourceContains650": true,
+    "changedPixels": 2568,
+    "differenceBounds": [
+      657,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "box",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "box-grouped",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bubble-matrix",
+    "sourceContains650": true,
+    "changedPixels": 3294,
+    "differenceBounds": [
+      638,
+      22,
+      862,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "cca",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "circle-heatmap",
+    "sourceContains650": true,
+    "changedPixels": 2418,
+    "differenceBounds": [
+      677,
+      22,
+      823,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "correlation",
+    "sourceContains650": true,
+    "changedPixels": 3775,
+    "differenceBounds": [
+      620,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "double-correlation",
+    "sourceContains650": true,
+    "changedPixels": 3853,
+    "differenceBounds": [
+      620,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "dumbbell",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "enrichment-bar",
+    "sourceContains650": true,
+    "changedPixels": 2976,
+    "differenceBounds": [
+      658,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "enrichment-circle",
+    "sourceContains650": true,
+    "changedPixels": 2505,
+    "differenceBounds": [
+      677,
+      22,
+      823,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "enrichment-dot",
+    "sourceContains650": true,
+    "changedPixels": 2898,
+    "differenceBounds": [
+      658,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "gene-cluster",
+    "sourceContains650": true,
+    "changedPixels": 3646,
+    "differenceBounds": [
+      638,
+      22,
+      860,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "genome-circos",
+    "sourceContains650": true,
+    "changedPixels": 3151,
+    "differenceBounds": [
+      657,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "heatmap",
+    "sourceContains650": true,
+    "changedPixels": 2446,
+    "differenceBounds": [
+      675,
+      22,
+      823,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "line",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "line-error",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "lollipop",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "lollipop-category",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "mantel",
+    "sourceContains650": true,
+    "changedPixels": 5383,
+    "differenceBounds": [
+      735,
+      22,
+      1016,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "map",
+    "sourceContains650": true,
+    "changedPixels": 4010,
+    "differenceBounds": [
+      729,
+      22,
+      989,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "network",
+    "sourceContains650": true,
+    "changedPixels": 3997,
+    "differenceBounds": [
+      620,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "nmds",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "packing",
+    "sourceContains650": true,
+    "changedPixels": 3470,
+    "differenceBounds": [
+      638,
+      22,
+      860,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "pca",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "pcoa",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "pie",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "protein-domains",
+    "sourceContains650": true,
+    "changedPixels": 4433,
+    "differenceBounds": [
+      600,
+      22,
+      898,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "protein-motifs",
+    "sourceContains650": true,
+    "changedPixels": 3826,
+    "differenceBounds": [
+      619,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "radar",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "raincloud",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "rda",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "ridgeline",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "rose",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "sankey",
+    "sourceContains650": true,
+    "changedPixels": 3090,
+    "differenceBounds": [
+      657,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "scatter",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "scatter-error",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "scatter-grouped",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "synteny",
+    "sourceContains650": true,
+    "changedPixels": 5803,
+    "differenceBounds": [
+      590,
+      22,
+      911,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "tree-circle",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "tree-normal",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "tree-unrooted",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "upset",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "venn",
+    "sourceContains650": true,
+    "changedPixels": 3822,
+    "differenceBounds": [
+      621,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "violin",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "volcano",
+    "sourceContains650": true,
+    "changedPixels": 3577,
+    "differenceBounds": [
+      619,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  }
+]

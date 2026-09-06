@@ -1,0 +1,114 @@
+[
+  {
+    "template": "circle-bezierX",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "circle-bezierY",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "circle-elliptical",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "circle-linear",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "circle-rectangular",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "normal-bezierX",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "normal-bezierY",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "normal-elliptical",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "normal-linear",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "normal-rectangular",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "normal-rounded",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "support-circles",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "support-drag",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "unrooted-bezierX",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "unrooted-bezierY",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "unrooted-linear",
+    "sourceContains650": false,
+    "changedPixels": 0,
+    "differenceBounds": null,
+    "matchesExpectedChange": true
+  }
+]

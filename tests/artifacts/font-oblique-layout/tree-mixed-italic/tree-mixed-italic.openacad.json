@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "id": "78fafa32-c421-4d94-b96b-96b997f20768",
+  "name": "tree-mixed-italic",
+  "templateId": "tree-normal",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T18:30:25.887Z",
+  "updatedAt": "2026-09-06T18:30:26.672Z",
+  "dataset": {
+    "tables": [],
+    "text": "((拟南芥:0.22,油菜:0.31)十字花科:0.28,(水稻:0.38,(玉米:0.18,小麦:0.24)禾本组:0.15)禾本科:0.21,(大豆:0.29,豌豆:0.35)豆科:0.33)植物;",
+    "format": "newick"
+  },
+  "mapping": {},
+  "style": {
+    "width": 1050,
+    "height": 650,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 82,
+    "marginRight": 48,
+    "marginBottom": 105,
+    "marginLeft": 95,
+    "title": "植物亲缘关系 · 矩形树",
+    "subtitle": "自行生成的模拟树 · 不代表真实系统发育结论",
+    "fontFamily": "Noto Sans SC",
+    "fontSize": 14,
+    "titleSize": 24,
+    "textColor": "#263445",
+    "palette": [
+      "#087f8c",
+      "#eb8972",
+      "#587ab8",
+      "#b78bc1",
+      "#b9ac62",
+      "#76b7bc"
+    ],
+    "opacity": 0.9,
+    "showLegend": false,
+    "showGrid": true,
+    "showLabels": false,
+    "xTitle": "",
+    "yTitle": "数值",
+    "pointSize": 5,
+    "lineWidth": 1.7,
+    "orientation": "vertical",
+    "sort": "input",
+    "branchLinkType": "rectangular",
+    "branchLineCap": "round",
+    "branchOpacity": 1,
+    "supportSource": "support",
+    "supportVariable": "",
+    "supportType": "text",
+    "supportFactor": 1,
+    "supportDecimals": 2,
+    "supportCircleSize": 4,
+    "supportSize": 10,
+    "supportColor": "#536875",
+    "supportAnchor": "start",
+    "supportBold": false,
+    "supportItalic": false,
+    "supportX": 5,
+    "supportY": -6,
+    "barPadding": 0.25,
+    "axisRotation": 0,
+    "curve": "linear",
+    "errorType": "sd",
+    "errorInput": "raw",
+    "showPoints": true,
+    "showBox": true,
+    "distribution": "kde",
+    "bandwidthMultiplier": 1,
+    "normalize": false,
+    "treeLayout": "normal",
+    "treeWidth": 400,
+    "labelWidth": 130,
+    "leafSpacing": 28,
+    "useBranchLength": true,
+    "showNodes": true,
+    "nodeSize": 3,
+    "branchColor": "#536875",
+    "nodeColor": "#087f8c",
+    "showSupport": true,
+    "alignLabels": true,
+    "showScale": true,
+    "treeRotation": -90,
+    "angleRange": 360,
+    "timeLayout": "age",
+    "treeDirection": "ltr",
+    "inwardTree": false,
+    "innerRadius": 180,
+    "nodeAgeSource": "height",
+    "showHPD": true,
+    "hpdColor": "#447eaf",
+    "hpdWidth": 7,
+    "hpdOpacity": 0.35,
+    "hpdCaps": true,
+    "showTimeAxis": true,
+    "showNodeAges": false,
+    "showPosterior": false,
+    "ageFontSize": 10,
+    "ageColor": "#314d5a",
+    "timeUnit": "原树时间单位"
+  },
+  "layers": [
+    {
+      "id": "10165b34-1d98-4ae5-a350-956e2093cd1e",
+      "type": "tree:italic",
+      "name": "局部斜体",
+      "visible": true,
+      "settings": {
+        "width": 84,
+        "gap": 12,
+        "opacity": 0.88,
+        "color": "#087f8c",
+        "fontSize": 12,
+        "lineWidth": 1.6,
+        "pointSize": 5,
+        "title": "局部斜体",
+        "showTitle": true,
+        "normalize": false,
+        "inherit": false,
+        "showValues": false,
+        "cellPadding": 1
+      },
+      "data": {
+        "tables": [
+          {
+            "id": "aed2cdba-2c51-4e86-b4d1-a318b73991e5",
+            "name": "粘贴数据",
+            "role": "annotation",
+            "columns": [
+              "nodeID",
+              "文字"
+            ],
+            "rows": [
+              [
+                "拟南芥",
+                "南芥"
+              ],
+              [
+                "油菜",
+                "菜"
+              ],
+              [
+                "水稻",
+                "稻"
+              ]
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "layout": {}
+}

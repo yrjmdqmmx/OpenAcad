@@ -1,0 +1,636 @@
+{
+  "scope": "local-oblique-layout",
+  "verifiedAt": "2026-09-06T18:31:23.872251+00:00",
+  "browserReportSha256": "9cdbe3d52b316d089eb4a1d41e9f5696c0a2a9b9efc85f77939569b7e9653aab",
+  "fontManifest": {
+    "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+    "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+    "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+    "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+    "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+    "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+    "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+  },
+  "fontManifestSha256": "1b9662ad58a38f4fa328b602d4504afbd78ab4bb5a57b6bd1cbdea2c015d6139",
+  "cases": [
+    {
+      "id": "tree-mixed-italic",
+      "files": [
+        {
+          "format": "svg",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.svg",
+          "bytes": 52656,
+          "sha256": "249f9caf93d10dd842368115a1994d81c078347ea750ad839e7aff0563570885",
+          "suggestedFilename": "tree-mixed-italic.svg",
+          "outline": true,
+          "sourceSha256": "19832b7bb39e7991ea1697c5be63abbbde46e995aa4361b72a91d7fd21806a10",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "svg",
+            "dpi": 300,
+            "width": 1050,
+            "height": 650,
+            "outline": true,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "249f9caf93d10dd842368115a1994d81c078347ea750ad839e7aff0563570885"
+          },
+          "decoder": "Chromium image decoder",
+          "width": 1050,
+          "height": 650,
+          "complete": true,
+          "opened": true,
+          "xmlParsed": true,
+          "textConvertedToPaths": true,
+          "independentRenderedImage": {
+            "decoder": "Pillow",
+            "opened": true,
+            "rasterSize": [
+              1050,
+              650
+            ],
+            "inkBounds": [
+              92,
+              14,
+              650,
+              626
+            ],
+            "touchesPageEdge": false
+          }
+        },
+        {
+          "format": "png",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.png",
+          "bytes": 56463,
+          "sha256": "5fa81bf0356e4822f96d837bf8165c00790cce52ae79db95d562a02be184841c",
+          "suggestedFilename": "tree-mixed-italic.png",
+          "outline": false,
+          "sourceSha256": "19832b7bb39e7991ea1697c5be63abbbde46e995aa4361b72a91d7fd21806a10",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "png",
+            "dpi": 150,
+            "width": 1050,
+            "height": 650,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "5fa81bf0356e4822f96d837bf8165c00790cce52ae79db95d562a02be184841c"
+          },
+          "decoder": "Pillow",
+          "opened": true,
+          "rasterSize": [
+            1641,
+            1016
+          ],
+          "inkBounds": [
+            143,
+            22,
+            1016,
+            978
+          ],
+          "touchesPageEdge": false
+        },
+        {
+          "format": "pdf",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.pdf",
+          "bytes": 198740,
+          "sha256": "6a698a6e28ee13191b418eff180b6d8f3b44bc0368750026900ebf151c4abf74",
+          "suggestedFilename": "tree-mixed-italic.pdf",
+          "outline": false,
+          "sourceSha256": "19832b7bb39e7991ea1697c5be63abbbde46e995aa4361b72a91d7fd21806a10",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "pdf",
+            "dpi": 150,
+            "width": 1050,
+            "height": 650,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "6a698a6e28ee13191b418eff180b6d8f3b44bc0368750026900ebf151c4abf74"
+          },
+          "decoder": "Poppler",
+          "opened": true,
+          "rasterSize": [
+            788,
+            488
+          ],
+          "inkBounds": [
+            69,
+            10,
+            487,
+            469
+          ],
+          "touchesPageEdge": false,
+          "pdfFontResources": [
+            "DDEIPJ+NotoSansCJKsc-Bold",
+            "OAMASD+NotoSansCJKsc-Regular",
+            "UWUMCK+OpenAcadNotoSansCJKsc-Oblique"
+          ]
+        },
+        {
+          "format": "eps",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.eps",
+          "bytes": 51069,
+          "sha256": "0a4698d724f1240abd3bc16b2b4c5f268496c5b6ab3129d271d6c69ebda13cd4",
+          "suggestedFilename": "tree-mixed-italic.eps",
+          "outline": false,
+          "sourceSha256": "19832b7bb39e7991ea1697c5be63abbbde46e995aa4361b72a91d7fd21806a10",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "eps",
+            "dpi": 150,
+            "width": 1050,
+            "height": 650,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "0a4698d724f1240abd3bc16b2b4c5f268496c5b6ab3129d271d6c69ebda13cd4"
+          },
+          "decoder": "Ghostscript",
+          "opened": true,
+          "rasterSize": [
+            788,
+            488
+          ],
+          "inkBounds": [
+            68,
+            10,
+            488,
+            469
+          ],
+          "touchesPageEdge": false
+        }
+      ],
+      "projectReopened": true,
+      "mixedOrRotatedLayout": [
+        {
+          "text": "拟南芥",
+          "runs": [
+            {
+              "text": "拟",
+              "style": "normal"
+            },
+            {
+              "text": "南芥",
+              "style": "italic"
+            },
+            {
+              "text": "",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "油菜",
+          "runs": [
+            {
+              "text": "油",
+              "style": "normal"
+            },
+            {
+              "text": "菜",
+              "style": "italic"
+            },
+            {
+              "text": "",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "水稻",
+          "runs": [
+            {
+              "text": "水",
+              "style": "normal"
+            },
+            {
+              "text": "稻",
+              "style": "italic"
+            },
+            {
+              "text": "",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "玉米",
+          "runs": [
+            {
+              "text": "玉米",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "小麦",
+          "runs": [
+            {
+              "text": "小麦",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "大豆",
+          "runs": [
+            {
+              "text": "大豆",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "豌豆",
+          "runs": [
+            {
+              "text": "豌豆",
+              "style": "normal"
+            }
+          ]
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "bar-rotated-bold-italic",
+      "files": [
+        {
+          "format": "svg",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.svg",
+          "bytes": 79759,
+          "sha256": "255d2413475e53cd352db29f65c04c0b68fd49872086ec8c3beac76e481d27d6",
+          "suggestedFilename": "bar-rotated-bold-italic.svg",
+          "outline": true,
+          "sourceSha256": "8d32d4a1f065a0014ea2d3edd3c90106755f3f3de697397019d0652d1d8bbff6",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "svg",
+            "dpi": 300,
+            "width": 960,
+            "height": 640,
+            "outline": true,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "255d2413475e53cd352db29f65c04c0b68fd49872086ec8c3beac76e481d27d6"
+          },
+          "decoder": "Chromium image decoder",
+          "width": 960,
+          "height": 640,
+          "complete": true,
+          "opened": true,
+          "xmlParsed": true,
+          "textConvertedToPaths": true,
+          "independentRenderedImage": {
+            "decoder": "Pillow",
+            "opened": true,
+            "rasterSize": [
+              960,
+              640
+            ],
+            "inkBounds": [
+              10,
+              13,
+              912,
+              536
+            ],
+            "touchesPageEdge": false
+          }
+        },
+        {
+          "format": "png",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.png",
+          "bytes": 117313,
+          "sha256": "f0216bccfb6b4da8362304d7bf5684232fde7f579616fe503ed01fb2670d21fb",
+          "suggestedFilename": "bar-rotated-bold-italic.png",
+          "outline": false,
+          "sourceSha256": "8d32d4a1f065a0014ea2d3edd3c90106755f3f3de697397019d0652d1d8bbff6",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "png",
+            "dpi": 150,
+            "width": 960,
+            "height": 640,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "f0216bccfb6b4da8362304d7bf5684232fde7f579616fe503ed01fb2670d21fb"
+          },
+          "decoder": "Pillow",
+          "opened": true,
+          "rasterSize": [
+            1500,
+            1000
+          ],
+          "inkBounds": [
+            16,
+            20,
+            1425,
+            836
+          ],
+          "touchesPageEdge": false
+        },
+        {
+          "format": "pdf",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.pdf",
+          "bytes": 178052,
+          "sha256": "dad7af89ac39dbfb1290b022805bd3c4f10e31abb2738c1c5912154bafee5f0c",
+          "suggestedFilename": "bar-rotated-bold-italic.pdf",
+          "outline": false,
+          "sourceSha256": "8d32d4a1f065a0014ea2d3edd3c90106755f3f3de697397019d0652d1d8bbff6",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "pdf",
+            "dpi": 150,
+            "width": 960,
+            "height": 640,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "dad7af89ac39dbfb1290b022805bd3c4f10e31abb2738c1c5912154bafee5f0c"
+          },
+          "decoder": "Poppler",
+          "opened": true,
+          "rasterSize": [
+            720,
+            480
+          ],
+          "inkBounds": [
+            7,
+            9,
+            685,
+            402
+          ],
+          "touchesPageEdge": false,
+          "pdfFontResources": [
+            "ZCLGPD+OpenAcadNotoSerifCJKsc-BoldOblique",
+            "XUVBJO+OpenAcadNotoSerifCJKsc-Oblique",
+            "NDGABZ+NotoSerifCJKsc-Regular"
+          ]
+        },
+        {
+          "format": "eps",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.eps",
+          "bytes": 102213,
+          "sha256": "a3a5c2290f7ac50904f34087f21b4bec1277a1873f66e43feb9d7ab62040aedc",
+          "suggestedFilename": "bar-rotated-bold-italic.eps",
+          "outline": false,
+          "sourceSha256": "8d32d4a1f065a0014ea2d3edd3c90106755f3f3de697397019d0652d1d8bbff6",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "eps",
+            "dpi": 150,
+            "width": 960,
+            "height": 640,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "a3a5c2290f7ac50904f34087f21b4bec1277a1873f66e43feb9d7ab62040aedc"
+          },
+          "decoder": "Ghostscript",
+          "opened": true,
+          "rasterSize": [
+            720,
+            480
+          ],
+          "inkBounds": [
+            7,
+            9,
+            685,
+            402
+          ],
+          "touchesPageEdge": false
+        }
+      ],
+      "projectReopened": true,
+      "mixedOrRotatedLayout": [
+        {
+          "text": "粗斜体标题 · 开放学术 Aa12",
+          "weight": "700",
+          "style": "italic",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "模拟数据 · 用于演示",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "对照",
+          "weight": "400",
+          "style": "italic",
+          "transform": "rotate(35,0,20)",
+          "anchor": "end"
+        },
+        {
+          "text": "处理甲",
+          "weight": "400",
+          "style": "italic",
+          "transform": "rotate(35,0,20)",
+          "anchor": "end"
+        },
+        {
+          "text": "处理乙",
+          "weight": "400",
+          "style": "italic",
+          "transform": "rotate(35,0,20)",
+          "anchor": "end"
+        },
+        {
+          "text": "处理丙",
+          "weight": "400",
+          "style": "italic",
+          "transform": "rotate(35,0,20)",
+          "anchor": "end"
+        },
+        {
+          "text": "0",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "10",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "20",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "30",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "40",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "50",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "数值",
+          "weight": "400",
+          "style": "normal",
+          "transform": "translate(-73,188.5) rotate(-90)",
+          "anchor": "middle"
+        },
+        {
+          "text": "对照",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "处理甲",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "处理乙",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "处理丙",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "类别注释",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "24",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "39",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "31",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "48",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true,
+  "downloadedFileCount": 8
+}

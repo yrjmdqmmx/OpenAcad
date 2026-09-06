@@ -66,3 +66,11 @@ python3 /你的仓库路径/OpenAcad/docs/acceptance/build_index.py --unit-passe
 `sourceUrls`保留注册模板的全部来源链接；`sourceEntrances`只统计52个ChiPlot入口，自然地理数据许可证链接不计为图表入口。圆点二值对应 `binary_plot.html`，方格二值对应 `binary_plot2.html`；富集点/柱同源入口，三树布局同源tvBOT入口。JSON顶层 `sourceMapping` 保留52→55映射。
 
 每份输入报告在 `sourceManifests` 中记录SHA，图片记录输出SHA与源SVG SHA。若重跑浏览器生成新SVG，必须同步刷新导出矩阵再刷新索引；只改文字/UUID也不应静默当作同字节来源。索引不修改研究生成器、原站事实或生产发布状态。
+
+<!-- font-evidence:start -->
+## 1.0.2 字体与导出补充
+
+真实400/700字体与静态字重匹配修复后，对相同86个源SVG全量重转258份PNG/PDF/EPS，独立打开全部通过，未复用旧输出。86个PDF有真实Bold资源；37个650源图产生预期像素变化，其余49个PNG保持一致。[补充索引](font-verification.json)列出每份源/输出SHA、独立工具和字体身份；每模板的3份新默认输出另列于完整JSON的 `fontWeightExports`，不覆盖历史 `exports`。
+
+此轮使用本机隔离镜像和明确SHA的修复导出模块；后续相对字重输入拒绝规则另经服务测试验证。不能把这258份文件称作生产域名下载。浏览器字重、稀有字、实际斜体像素以及服务器63项字体测试、42份实际小夹具导出及14份PDF独立打开分别记录；原始1.0.1与第一轮650失败样品仍保留。正式部署状态见[发布记录](../deployment/production-record.md)。
+<!-- font-evidence:end -->

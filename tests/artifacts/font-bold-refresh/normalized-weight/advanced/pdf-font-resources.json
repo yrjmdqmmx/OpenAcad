@@ -1,0 +1,244 @@
+[
+  {
+    "template": "binary-dot-annotated",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "RGISOB+NotoSansCJKsc-Bold",
+      "AIQYHN+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "bubble-matrix-annotated",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "LIXQVO+NotoSansCJKsc-Bold",
+      "MRVIFS+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "bubble-matrix-category",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "LIXQVO+NotoSansCJKsc-Bold",
+      "CGVSTK+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "circle-heatmap-annotated",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "JZUFXC+NotoSansCJKsc-Bold",
+      "CTKTFC+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "circle-heatmap-cluster",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "JZUFXC+NotoSansCJKsc-Bold",
+      "DNLVCY+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "enrichment-bar-class",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "OLJAMJ+NotoSansCJKsc-Bold",
+      "ZDNRCP+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "enrichment-dot-class",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "SAKQCN+NotoSansCJKsc-Bold",
+      "SCAUAF+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "gene-cluster-broken",
+    "explicitSourceWeights": [
+      "650",
+      "bold",
+      "bold",
+      "bold"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "DUIXLX+NotoSansCJKsc-Bold",
+      "MHPNJF+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "genome-custom-tracks",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "TPPSHU+NotoSansCJKsc-Bold",
+      "CHFNJC+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "heatmap-annotated",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "VSOVIO+NotoSansCJKsc-Bold",
+      "FIFXPI+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "network-attribute-mappings",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "RDWLHI+NotoSansCJKsc-Bold",
+      "RAGZDW+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "network-labeled-loops",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "RDWLHI+NotoSansCJKsc-Bold",
+      "BNIDEX+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "sankey-gradient",
+    "explicitSourceWeights": [
+      "650"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "NJRVCP+NotoSansCJKsc-Bold",
+      "CPENHW+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "synteny-reordered",
+    "explicitSourceWeights": [
+      "650",
+      "bold",
+      "bold",
+      "bold"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "NDMLRU+NotoSansCJKsc-Bold",
+      "LDJAXQ+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  },
+  {
+    "template": "venn-dragged-label",
+    "explicitSourceWeights": [
+      "650",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold",
+      "bold"
+    ],
+    "expectsBoldFromExplicitAttributes": true,
+    "explicitSourceStyles": [],
+    "sourceHasItalic": false,
+    "pdfFontResources": [
+      "TVQWLB+NotoSansCJKsc-Bold",
+      "XUQZBG+NotoSansCJKsc-Regular"
+    ],
+    "syntheticCairoFont": false,
+    "italicSynthesisNeedsVisualReview": false
+  }
+]

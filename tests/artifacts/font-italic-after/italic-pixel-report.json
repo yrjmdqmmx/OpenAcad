@@ -1,0 +1,86 @@
+[
+  {
+    "family": "Noto Sans SC",
+    "weight": 400,
+    "states": [
+      {
+        "italic": false,
+        "screenshot": "sans-400-0-normal",
+        "sha256": "42392066ecc60372aaa92d3aa4f01b899b2ddefa12c4de5251288c34b1dfe6f5"
+      },
+      {
+        "italic": true,
+        "screenshot": "sans-400-1-italic",
+        "sha256": "3554a9b24355bee7201424c6c0622ec04d56a6ddde3da3d39015ca52e716fdd2"
+      },
+      {
+        "italic": false,
+        "screenshot": "sans-400-2-normal",
+        "sha256": "42392066ecc60372aaa92d3aa4f01b899b2ddefa12c4de5251288c34b1dfe6f5"
+      }
+    ]
+  },
+  {
+    "family": "Noto Sans SC",
+    "weight": 700,
+    "states": [
+      {
+        "italic": false,
+        "screenshot": "sans-700-0-normal",
+        "sha256": "43800ccc16f955589d8f18c89cca90a09a528042593152fda67a01f502e665bc"
+      },
+      {
+        "italic": true,
+        "screenshot": "sans-700-1-italic",
+        "sha256": "3a735c2c43356dc8d4bc869e653914812d18585f4975131cf78c011f3d6b0938"
+      },
+      {
+        "italic": false,
+        "screenshot": "sans-700-2-normal",
+        "sha256": "43800ccc16f955589d8f18c89cca90a09a528042593152fda67a01f502e665bc"
+      }
+    ]
+  },
+  {
+    "family": "Noto Serif CJK SC",
+    "weight": 400,
+    "states": [
+      {
+        "italic": false,
+        "screenshot": "serif-400-0-normal",
+        "sha256": "1f81ddc7a663fd89b7c817353d6d92e800a13dd82ac1352320a34771a941c528"
+      },
+      {
+        "italic": true,
+        "screenshot": "serif-400-1-italic",
+        "sha256": "4610096bb34663e127d2bccc740a81201c3de5282d52682acaf9a17f3d427af4"
+      },
+      {
+        "italic": false,
+        "screenshot": "serif-400-2-normal",
+        "sha256": "1f81ddc7a663fd89b7c817353d6d92e800a13dd82ac1352320a34771a941c528"
+      }
+    ]
+  },
+  {
+    "family": "Noto Serif CJK SC",
+    "weight": 700,
+    "states": [
+      {
+        "italic": false,
+        "screenshot": "serif-700-0-normal",
+        "sha256": "ff4ab5a23730f13b19115ee92f14da0588751d4b854fd0a93df1ecb9e0d2e30c"
+      },
+      {
+        "italic": true,
+        "screenshot": "serif-700-1-italic",
+        "sha256": "f6c1bd8cec1bed8700d5325097b601bb122b8dbf6d51d61d9742289b50a7bd2e"
+      },
+      {
+        "italic": false,
+        "screenshot": "serif-700-2-normal",
+        "sha256": "ff4ab5a23730f13b19115ee92f14da0588751d4b854fd0a93df1ecb9e0d2e30c"
+      }
+    ]
+  }
+]

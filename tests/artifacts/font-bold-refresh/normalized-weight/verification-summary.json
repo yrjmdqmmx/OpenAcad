@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "scope": "local-isolated-font-refresh",
+  "verifiedAt": "2026-09-06T18:07:22.178374+00:00",
+  "fontManifestSha256": "e71119a850afcd426b8e5a366f24a74b87cdb4fb46ca576e2e25efb2c78df734",
+  "fontManifest": {
+    "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+    "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+    "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+  },
+  "groups": {
+    "default": {
+      "sourceCount": 55,
+      "reportRows": 165,
+      "uniqueOutputPaths": 165,
+      "actualOutputFiles": 165,
+      "convertedFiles": 165,
+      "reusedFiles": 0,
+      "openedFiles": 165,
+      "touchesPageEdge": 0,
+      "outputsDifferentFromRegularRun": 165,
+      "pdfsWithRealBoldResource": 55,
+      "pngNormalizationComparisons": 55,
+      "pngChangedFor650": 22,
+      "pngUnchangedWithout650": 33,
+      "report": "tests/artifacts/font-bold-refresh/normalized-weight/default/export-matrix.json",
+      "reportSha256": "455f1c851bc29351b64e8a11c1614815fcee1471d7f202e6c0d7e618970baedd"
+    },
+    "advanced": {
+      "sourceCount": 15,
+      "reportRows": 45,
+      "uniqueOutputPaths": 45,
+      "actualOutputFiles": 45,
+      "convertedFiles": 45,
+      "reusedFiles": 0,
+      "openedFiles": 45,
+      "touchesPageEdge": 0,
+      "outputsDifferentFromRegularRun": 45,
+      "pdfsWithRealBoldResource": 15,
+      "pngNormalizationComparisons": 15,
+      "pngChangedFor650": 15,
+      "pngUnchangedWithout650": 0,
+      "report": "tests/artifacts/font-bold-refresh/normalized-weight/advanced/export-matrix.json",
+      "reportSha256": "f9b3277ff9d7f0eea1eddb3ca8e6939682b733b5f6d7c67fde10449b707470a2"
+    },
+    "tree-branch": {
+      "sourceCount": 16,
+      "reportRows": 48,
+      "uniqueOutputPaths": 48,
+      "actualOutputFiles": 48,
+      "convertedFiles": 48,
+      "reusedFiles": 0,
+      "openedFiles": 48,
+      "touchesPageEdge": 0,
+      "outputsDifferentFromRegularRun": 48,
+      "pdfsWithRealBoldResource": 16,
+      "pngNormalizationComparisons": 16,
+      "pngChangedFor650": 0,
+      "pngUnchangedWithout650": 16,
+      "report": "tests/artifacts/font-bold-refresh/normalized-weight/tree-branch/export-matrix.json",
+      "reportSha256": "56fdd004c555b13db47529a872c44862bfcb829978572ada32af61c74028a05c"
+    }
+  },
+  "failures": [],
+  "passed": true
+}

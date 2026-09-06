@@ -1,0 +1,27 @@
+{
+  "rows": [
+    {
+      "fontStyle": "normal",
+      "fontSynthesis": "weight",
+      "fontWeight": "400",
+      "file": "0-normal.png",
+      "sha256": "1f81ddc7a663fd89b7c817353d6d92e800a13dd82ac1352320a34771a941c528"
+    },
+    {
+      "fontStyle": "italic",
+      "fontSynthesis": "weight",
+      "fontWeight": "400",
+      "file": "1-italic.png",
+      "sha256": "1f81ddc7a663fd89b7c817353d6d92e800a13dd82ac1352320a34771a941c528"
+    },
+    {
+      "fontStyle": "normal",
+      "fontSynthesis": "weight",
+      "fontWeight": "400",
+      "file": "2-normal.png",
+      "sha256": "1f81ddc7a663fd89b7c817353d6d92e800a13dd82ac1352320a34771a941c528"
+    }
+  ],
+  "unchanged": true,
+  "returnExact": true
+}

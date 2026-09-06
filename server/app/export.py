@@ -16,6 +16,88 @@ from .process import run_process
 NS = "http://www.w3.org/2000/svg"
 ET.register_namespace("", NS)
 MIMES = {"svg": "image/svg+xml", "png": "image/png", "pdf": "application/pdf", "eps": "application/postscript"}
+ABSOLUTE_WEIGHT = re.compile(r"(\s*)(normal|bold|[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?)(\s*!\s*important)?(\s*)", re.I)
+
+
+def static_font_weight(value, *, important=False):
+    """Match the shipped 400/700 static faces using CSS font-weight matching."""
+    match = ABSOLUTE_WEIGHT.fullmatch(value)
+    if not match or (match[3] and not important):
+        return value  # Relative/inherited/variable values need their CSS context.
+    number = {"normal": 400, "bold": 700}.get(match[2].lower())
+    if number is None:
+        number = float(match[2])
+    if not math.isfinite(number) or not 1 <= number <= 1000:
+        return value
+    return match[1] + ("400" if number <= 500 else "700") + (match[3] or "") + match[4]
+
+
+def static_weight_declarations(css, observe=None):
+    """Rewrite complete declarations, without touching strings/custom values.
+
+    The scanner preserves selectors, nesting, declaration order and !important.
+    It deliberately does not evaluate relative weights, var(), or font shorthand.
+    """
+    replacements, blocks = [], []
+    start, quote, parentheses, brackets, custom_depth = 0, None, 0, 0, 0
+
+    def declaration(end):
+        match = re.fullmatch(r"(\s*font-weight\s*:\s*)(.*)", css[start:end], re.I | re.S)
+        if match:
+            if observe:
+                observe(match[2], important=True)
+            value = static_font_weight(match[2], important=True)
+            if value != match[2]:
+                replacements.append((start, end, match[1] + value))
+
+    escaped = False
+    for i, char in enumerate(css):
+        if quote:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == quote:
+                quote = None
+            continue
+        if char in ("'", '"'):
+            quote = char
+        elif char == "(":
+            parentheses += 1
+        elif char == ")":
+            parentheses = max(0, parentheses - 1)
+        elif char == "[":
+            brackets += 1
+        elif char == "]":
+            brackets = max(0, brackets - 1)
+        elif not parentheses and not brackets:
+            if char == "{":
+                custom = bool(custom_depth or re.match(r"\s*--[\w-]+\s*:", css[start:i]))
+                blocks.append((custom, start))
+                if custom:
+                    custom_depth += 1
+                else:
+                    start = i + 1
+            elif char == "}":
+                if blocks:
+                    custom, previous = blocks.pop()
+                    if custom:
+                        custom_depth -= 1
+                        start = previous
+                    else:
+                        declaration(i)
+                        start = i + 1
+            elif char == ";" and not custom_depth:
+                declaration(i)
+                start = i + 1
+    if not custom_depth:
+        declaration(len(css))
+    pieces, previous = [], 0
+    for begin, end, value in replacements:
+        pieces.extend((css[previous:begin], value))
+        previous = end
+    pieces.append(css[previous:])
+    return "".join(pieces)
 
 
 def dimension(value):
@@ -69,6 +151,33 @@ def sanitize(source, params):
                     transparency = transparency or float(opacity) < 1
                 except ValueError:
                     transparency = True
+    # Keep validation on the original values above: normalization must never
+    # hide an unsafe resource or alter custom properties/string contents.
+    relative_weight, remapped_number = False, False
+
+    def observe_weight(value, *, important=False):
+        nonlocal relative_weight, remapped_number
+        relative = re.fullmatch(r"\s*(bolder|lighter)(\s*!\s*important)?\s*", value, re.I)
+        relative_weight |= bool(relative and (important or not relative[2]))
+        absolute = ABSOLUTE_WEIGHT.fullmatch(value)
+        if absolute and (important or not absolute[3]) and absolute[2].lower() not in ("normal", "bold"):
+            number = float(absolute[2])
+            if math.isfinite(number) and 1 <= number <= 1000:
+                remapped_number |= number != (400 if number <= 500 else 700)
+
+    for node in elements:
+        if node.tag.rsplit("}", 1)[-1].lower() == "style" and node.text:
+            node.text = static_weight_declarations(node.text, observe_weight)
+        for key, value in list(node.attrib.items()):
+            local = key.rsplit("}", 1)[-1].lower()
+            if local == "font-weight":
+                observe_weight(value)
+                node.set(key, static_font_weight(value))
+            elif local == "style":
+                node.set(key, static_weight_declarations(value, observe_weight))
+    require(not (relative_weight and remapped_number),
+            "SVG 同时包含相对字重（bolder/lighter）和需要映射的数值字重，无法保证继承关系不变。请先将文字字重转换为明确的 400 或 700 后导出。",
+            "RELATIVE_FONT_WEIGHT")
     vb = root.get("viewBox", "").replace(",", " ").split()
     width = dimension(params.get("width", root.get("width", vb[2] if len(vb) == 4 else "800")))
     height = dimension(params.get("height", root.get("height", vb[3] if len(vb) == 4 else "600")))

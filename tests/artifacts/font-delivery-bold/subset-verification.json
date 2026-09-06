@@ -1,0 +1,88 @@
+{
+  "fonts": [
+    {
+      "family": "Noto Sans SC",
+      "fontWeight": 400,
+      "sourceSha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "sourceBytes": 16437364,
+      "totalWoff2Bytes": 12685736,
+      "commonWoff2Bytes": 356620,
+      "verification": {
+        "fontWeight": 400,
+        "sourceCodepoints": 44810,
+        "coveredCodepoints": 44810,
+        "variationSequences": 25,
+        "metricsChecked": 44810,
+        "outlineGlyphsChecked": 64682,
+        "missingCodepoints": 0,
+        "overlappingCodepoints": 0,
+        "metricsMismatches": 0,
+        "outlineMismatches": 0
+      }
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "fontWeight": 400,
+      "sourceSha256": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+      "sourceBytes": 24543080,
+      "totalWoff2Bytes": 19607436,
+      "commonWoff2Bytes": 504644,
+      "verification": {
+        "fontWeight": 400,
+        "sourceCodepoints": 44777,
+        "coveredCodepoints": 44777,
+        "variationSequences": 25,
+        "metricsChecked": 44777,
+        "outlineGlyphsChecked": 64586,
+        "missingCodepoints": 0,
+        "overlappingCodepoints": 0,
+        "metricsMismatches": 0,
+        "outlineMismatches": 0
+      }
+    },
+    {
+      "family": "Noto Sans SC",
+      "fontWeight": 700,
+      "sourceSha256": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+      "sourceBytes": 17002248,
+      "totalWoff2Bytes": 13310104,
+      "commonWoff2Bytes": 363868,
+      "verification": {
+        "fontWeight": 700,
+        "sourceCodepoints": 44810,
+        "coveredCodepoints": 44810,
+        "variationSequences": 25,
+        "metricsChecked": 44810,
+        "outlineGlyphsChecked": 64682,
+        "missingCodepoints": 0,
+        "overlappingCodepoints": 0,
+        "metricsMismatches": 0,
+        "outlineMismatches": 0
+      }
+    },
+    {
+      "family": "Noto Serif CJK SC",
+      "fontWeight": 700,
+      "sourceSha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+      "sourceBytes": 25521460,
+      "totalWoff2Bytes": 20584524,
+      "commonWoff2Bytes": 518944,
+      "verification": {
+        "fontWeight": 700,
+        "sourceCodepoints": 44777,
+        "coveredCodepoints": 44777,
+        "variationSequences": 25,
+        "metricsChecked": 44777,
+        "outlineGlyphsChecked": 64586,
+        "missingCodepoints": 0,
+        "overlappingCodepoints": 0,
+        "metricsMismatches": 0,
+        "outlineMismatches": 0
+      }
+    }
+  ],
+  "cssPathsVerified": 184,
+  "fileHashesVerified": 184,
+  "regularSourceOtfsUnchanged": true,
+  "boldSources": "official Sans2.004 and Serif2.003 release tags"
+}

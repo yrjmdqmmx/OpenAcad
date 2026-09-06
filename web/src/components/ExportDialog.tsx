@@ -80,6 +80,22 @@ function svgFontRequests(svg: SVGSVGElement) {
   }));
 }
 
+function preserveStaticFontWeights(source: SVGSVGElement, clone: SVGSVGElement) {
+  const original = source.querySelectorAll<SVGElement>("text, tspan, textPath");
+  const copied = clone.querySelectorAll<SVGElement>("text, tspan, textPath");
+  original.forEach((run, index) => {
+    const style = getComputedStyle(run);
+    const families = style.fontFamily.split(",").map((name) => name.trim().replace(/^["']|["']$/g, ""));
+    if (!families.some((name) => ["Noto Sans SC", "Noto Sans CJK SC", "Noto Serif CJK SC"].includes(name))) return;
+    const weight = Number(style.fontWeight);
+    if (!Number.isFinite(weight) || weight < 1 || weight > 1000) return;
+    // These families ship real 400/700 faces. Resolve the browser's match
+    // explicitly: Inkscape 1.2 treats values such as 650 as Regular instead.
+    // Inline computed runs also preserve inherited/relative style decisions.
+    copied[index].style.setProperty("font-weight", weight <= 500 ? "400" : "700", "important");
+  });
+}
+
 async function prepareSvgFonts(svg: SVGSVGElement, signal: AbortSignal) {
   // Async analysis may update the figure while its font is loading. Recheck
   // the actual runs before measuring; unrelated page fonts are never awaited.
@@ -151,6 +167,7 @@ export function ExportDialog({
       if (attempt.abort.signal.aborted || !current()) throw abortError();
       if (getSVG() !== node) throw new Error("图表预览已更新，请重新导出。");
       const svg = node.cloneNode(true) as SVGSVGElement;
+      preserveStaticFontWeights(node, svg);
       svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
       svg.setAttribute("width", String(width));
       svg.setAttribute("height", String(height));

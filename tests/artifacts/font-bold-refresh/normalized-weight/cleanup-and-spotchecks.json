@@ -1,0 +1,43 @@
+{
+  "finishedAt": "2026-09-06T18:08:13.458191+00:00",
+  "scope": "仅删除本任务创建的本机隔离容器/网络；qa和生产未操作",
+  "results": [
+    {
+      "command": [
+        "docker",
+        "rm",
+        "-f",
+        "openacad-bold-refresh-api",
+        "openacad-bold-refresh-worker",
+        "openacad-bold-refresh-redis"
+      ],
+      "returncode": 0,
+      "output": "openacad-bold-refresh-api\nopenacad-bold-refresh-worker\nopenacad-bold-refresh-redis"
+    },
+    {
+      "command": [
+        "docker",
+        "network",
+        "rm",
+        "openacad-bold-refresh"
+      ],
+      "returncode": 0,
+      "output": "openacad-bold-refresh"
+    }
+  ],
+  "currentRepositoryFontsStillMatch": true,
+  "visualSpotChecks": [
+    {
+      "file": "normalized-weight/advanced/outputs/circle-heatmap-cluster.png",
+      "finding": "标题真实粗体，与第一轮650常规体效果不同；其余图形保持布局"
+    },
+    {
+      "file": "default/outputs/bar.png",
+      "finding": "真实700标题，无明显文字裁切"
+    },
+    {
+      "file": "default/outputs/tree-circle.png",
+      "finding": "标题真实粗体，中文标签和画布边距完整"
+    }
+  ]
+}

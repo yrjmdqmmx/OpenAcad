@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-06T18:17:31.641642+00:00",
+  "complete": false,
+  "status": "failed",
+  "pytest": {
+    "passed": 59,
+    "failed": 2,
+    "seconds": 7.6
+  },
+  "failedCases": "Two actual synthetic italic export checks",
+  "sourceExportSha256": "3928cc6ea1a6984983fa8e91446041c074e07cd07d4f0aa3e16248d9bbce7366",
+  "fontState": "Only true Regular/Bold faces installed; no real oblique face",
+  "findings": [
+    {
+      "font": "NotoSansCJKsc",
+      "normalItalicPngBytesIdentical": true,
+      "normalPngSha256": "8e625caf010d1484e5aaca94bd5fc911f093408a0722658c24d227e4f17fe3d8",
+      "italicPngSha256": "8e625caf010d1484e5aaca94bd5fc911f093408a0722658c24d227e4f17fe3d8",
+      "normalItalicOutlinedGeometryIdentical": true
+    },
+    {
+      "font": "NotoSerifCJKsc",
+      "normalItalicPngBytesIdentical": true,
+      "normalPngSha256": "b076b57a9e38c2c09e06d99cb6b0b73ddf3fdb1b42b028aa9a15ae5fd621c0cf",
+      "italicPngSha256": "b076b57a9e38c2c09e06d99cb6b0b73ddf3fdb1b42b028aa9a15ae5fd621c0cf",
+      "normalItalicOutlinedGeometryIdentical": true
+    }
+  ],
+  "fontconfig": "italic/oblique requests already returned slant110 and synthetic matrix 1 0.2 0 1, but this Inkscape output path did not apply it",
+  "limitations": "Preserved evidence of the failure before any derived-oblique-font prototype; not a successful release verification"
+}

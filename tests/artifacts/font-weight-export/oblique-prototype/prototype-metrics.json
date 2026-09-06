@@ -1,0 +1,26 @@
+{
+  "prototypeSha256": "fb3ec5c8335a45f82d63277a6643ff591dc10d0a2de67ddad49cee5392d3e1c7",
+  "glyphOrderEqual": true,
+  "horizontalAdvanceAndSidebearingsEqual": true,
+  "verticalAdvanceAndSidebearingsEqual": true,
+  "cmapEqual": true,
+  "originalFontMatrix": [
+    0.001,
+    0,
+    0,
+    0.001,
+    0,
+    0
+  ],
+  "prototypeFontMatrix": [
+    0.001,
+    0,
+    0.00021255656,
+    0.001,
+    0,
+    0
+  ],
+  "matrixHorizontalAdvanceTransform": "For advance (w,0), the matrix leaves x advance unchanged; visible glyph ink extents may change by design.",
+  "realInkscapeTest": "1 passed in 0.70s; fontconfig selected actual Italic face, without a synthetic fontconfig matrix",
+  "visualReview": "Chinese and Latin glyphs are visibly slanted, legible, and remain inside the small fixture canvas."
+}

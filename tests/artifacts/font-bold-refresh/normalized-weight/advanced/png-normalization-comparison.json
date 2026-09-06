@@ -1,0 +1,182 @@
+[
+  {
+    "template": "binary-dot-annotated",
+    "sourceContains650": true,
+    "changedPixels": 2664,
+    "differenceBounds": [
+      658,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bubble-matrix-annotated",
+    "sourceContains650": true,
+    "changedPixels": 3294,
+    "differenceBounds": [
+      638,
+      22,
+      862,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "bubble-matrix-category",
+    "sourceContains650": true,
+    "changedPixels": 3294,
+    "differenceBounds": [
+      638,
+      22,
+      862,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "circle-heatmap-annotated",
+    "sourceContains650": true,
+    "changedPixels": 2418,
+    "differenceBounds": [
+      677,
+      22,
+      823,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "circle-heatmap-cluster",
+    "sourceContains650": true,
+    "changedPixels": 2418,
+    "differenceBounds": [
+      677,
+      22,
+      823,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "enrichment-bar-class",
+    "sourceContains650": true,
+    "changedPixels": 2976,
+    "differenceBounds": [
+      658,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "enrichment-dot-class",
+    "sourceContains650": true,
+    "changedPixels": 2898,
+    "differenceBounds": [
+      658,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "gene-cluster-broken",
+    "sourceContains650": true,
+    "changedPixels": 3646,
+    "differenceBounds": [
+      638,
+      22,
+      860,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "genome-custom-tracks",
+    "sourceContains650": true,
+    "changedPixels": 3151,
+    "differenceBounds": [
+      657,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "heatmap-annotated",
+    "sourceContains650": true,
+    "changedPixels": 2446,
+    "differenceBounds": [
+      675,
+      22,
+      823,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "network-attribute-mappings",
+    "sourceContains650": true,
+    "changedPixels": 3997,
+    "differenceBounds": [
+      620,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "network-labeled-loops",
+    "sourceContains650": true,
+    "changedPixels": 3997,
+    "differenceBounds": [
+      620,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "sankey-gradient",
+    "sourceContains650": true,
+    "changedPixels": 3090,
+    "differenceBounds": [
+      657,
+      22,
+      842,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "synteny-reordered",
+    "sourceContains650": true,
+    "changedPixels": 5803,
+    "differenceBounds": [
+      590,
+      22,
+      911,
+      59
+    ],
+    "matchesExpectedChange": true
+  },
+  {
+    "template": "venn-dragged-label",
+    "sourceContains650": true,
+    "changedPixels": 3822,
+    "differenceBounds": [
+      621,
+      22,
+      879,
+      59
+    ],
+    "matchesExpectedChange": true
+  }
+]

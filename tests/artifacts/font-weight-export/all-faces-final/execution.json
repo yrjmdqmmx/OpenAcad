@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-06T18:24:35.068456+00:00",
+  "complete": true,
+  "passed": true,
+  "scope": "Final local Linux engine regression; not a new production deployment claim",
+  "tests": {
+    "linuxActualInkscape": "63 passed in 39.27s",
+    "sourceExportSha256": "3928cc6ea1a6984983fa8e91446041c074e07cd07d4f0aa3e16248d9bbce7366",
+    "testSha256": "e17cc29b8348f8b0a75e2a9b92d966b243d543ee8ee40159ce47aa5b97d2f892"
+  },
+  "fontManifest": {
+    "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+    "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+    "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+    "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+    "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+    "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+    "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+  },
+  "obliqueDerivationEvidenceSha256": "33012a8d94931fb12e819116610c7506d28abb90d24431d25d626d6562376e81",
+  "actualFontFixtureConversions": 42,
+  "independentlyOpenedPdfFiles": 14,
+  "casesWithGenuineBoldMatching": 2,
+  "casesWithActualObliqueAndBoldOblique": 4,
+  "weight650And700Equivalent": true,
+  "allPdfFontsEmbedded": true,
+  "allIndependentPdfInkBoundsInsideCanvas": true,
+  "originalFailureEvidence": "../final-regression/regression-status.json",
+  "relativeWeightGuard": "Explicit Chinese RELATIVE_FONT_WEIGHT only when effective declaration syntax contains bolder/lighter AND a valid numeric weight must change value; equivalent aliases/400.0 are allowed; strings/custom properties ignored",
+  "productionCodeChanges": [
+    "server/app/export.py"
+  ],
+  "testCode": [
+    "server/tests/test_font_weights.py"
+  ],
+  "methodDocs": [
+    "server/docs/API.md"
+  ],
+  "limitations": [
+    "Exact cross-format antialiasing equality is not claimed.",
+    "The oblique faces are explicitly derived by the documented 12-degree CFF FontMatrix, not original designer-drawn italic faces.",
+    "The direct-API relative-weight/cascade boundary is documented; browser exports supply computed absolute weights."
+  ],
+  "visualReview": {
+    "checkedAt": "2026-09-06T18:25:23.215897+00:00",
+    "allFourObliquePdfPreviewsInspected": true,
+    "chineseAndLatinReadable": true,
+    "visibleSlant": true,
+    "obviousClipping": false
+  }
+}

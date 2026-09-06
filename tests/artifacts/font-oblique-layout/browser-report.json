@@ -1,0 +1,1438 @@
+{
+  "scope": "local-browser-oblique-layout",
+  "startedAt": "2026-09-06T18:30:25.588Z",
+  "browser": "152.0.7977.76",
+  "cases": [
+    {
+      "id": "tree-mixed-italic",
+      "fontUrls": [
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-latin.d32b30de4552.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-latin.b0d379715a27.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-common-00.8c5ce7f7e41d.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-common-01.7418d1e38253.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-common-01.27546456cc5e.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-common-00.dd5968857b6f.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-sans-sc-oblique-common-01.0a049a53ac25.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-sans-sc-oblique-common-00.e9077456b678.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-09.d23bc7088c37.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-14.28c6a698395d.woff2"
+      ],
+      "submittedSources": [
+        {
+          "format": "svg",
+          "sourceSha256": "19832b7bb39e7991ea1697c5be63abbbde46e995aa4361b72a91d7fd21806a10"
+        },
+        {
+          "format": "png",
+          "sourceSha256": "19832b7bb39e7991ea1697c5be63abbbde46e995aa4361b72a91d7fd21806a10"
+        },
+        {
+          "format": "pdf",
+          "sourceSha256": "19832b7bb39e7991ea1697c5be63abbbde46e995aa4361b72a91d7fd21806a10"
+        },
+        {
+          "format": "eps",
+          "sourceSha256": "19832b7bb39e7991ea1697c5be63abbbde46e995aa4361b72a91d7fd21806a10"
+        }
+      ],
+      "exportResults": [
+        {
+          "format": "svg",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "svg",
+            "dpi": 300,
+            "width": 1050,
+            "height": 650,
+            "outline": true,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "249f9caf93d10dd842368115a1994d81c078347ea750ad839e7aff0563570885"
+          },
+          "diagnostics": []
+        },
+        {
+          "format": "png",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "png",
+            "dpi": 150,
+            "width": 1050,
+            "height": 650,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "5fa81bf0356e4822f96d837bf8165c00790cce52ae79db95d562a02be184841c"
+          },
+          "diagnostics": []
+        },
+        {
+          "format": "pdf",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "pdf",
+            "dpi": 150,
+            "width": 1050,
+            "height": 650,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "6a698a6e28ee13191b418eff180b6d8f3b44bc0368750026900ebf151c4abf74"
+          },
+          "diagnostics": []
+        },
+        {
+          "format": "eps",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "eps",
+            "dpi": 150,
+            "width": 1050,
+            "height": 650,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "0a4698d724f1240abd3bc16b2b4c5f268496c5b6ab3129d271d6c69ebda13cd4"
+          },
+          "diagnostics": [
+            {
+              "code": "EPS_ALPHA_FLATTENED",
+              "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+            },
+            {
+              "code": "EPS_BACKGROUND",
+              "message": "EPS 使用不透明背景 #ffffff"
+            }
+          ]
+        }
+      ],
+      "normal": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/normal.png",
+        "sha256": "46db1fe75739806035dada8a319b7edffee02cefb595570ab1c4c7dbff5b4bb9"
+      },
+      "italic": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/italic.png",
+        "sha256": "f9395b4ec0a75c39a4da52034e771f579ad87d86940b47cdde67bd490ee534a2"
+      },
+      "mixedRuns": [
+        {
+          "text": "拟南芥",
+          "runs": [
+            {
+              "text": "拟",
+              "style": "normal"
+            },
+            {
+              "text": "南芥",
+              "style": "italic"
+            },
+            {
+              "text": "",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "油菜",
+          "runs": [
+            {
+              "text": "油",
+              "style": "normal"
+            },
+            {
+              "text": "菜",
+              "style": "italic"
+            },
+            {
+              "text": "",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "水稻",
+          "runs": [
+            {
+              "text": "水",
+              "style": "normal"
+            },
+            {
+              "text": "稻",
+              "style": "italic"
+            },
+            {
+              "text": "",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "玉米",
+          "runs": [
+            {
+              "text": "玉米",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "小麦",
+          "runs": [
+            {
+              "text": "小麦",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "大豆",
+          "runs": [
+            {
+              "text": "大豆",
+              "style": "normal"
+            }
+          ]
+        },
+        {
+          "text": "豌豆",
+          "runs": [
+            {
+              "text": "豌豆",
+              "style": "normal"
+            }
+          ]
+        }
+      ],
+      "anchors": [
+        {
+          "id": "拟南芥",
+          "transform": "translate(505,115.07142857142857) rotate(0)",
+          "anchor": "start"
+        },
+        {
+          "id": "油菜",
+          "transform": "translate(505,181.21428571428572) rotate(0)",
+          "anchor": "start"
+        },
+        {
+          "id": "水稻",
+          "transform": "translate(505,247.35714285714286) rotate(0)",
+          "anchor": "start"
+        },
+        {
+          "id": "玉米",
+          "transform": "translate(505,313.5) rotate(0)",
+          "anchor": "start"
+        },
+        {
+          "id": "小麦",
+          "transform": "translate(505,379.64285714285717) rotate(0)",
+          "anchor": "start"
+        },
+        {
+          "id": "大豆",
+          "transform": "translate(505,445.7857142857143) rotate(0)",
+          "anchor": "start"
+        },
+        {
+          "id": "豌豆",
+          "transform": "translate(505,511.92857142857144) rotate(0)",
+          "anchor": "start"
+        }
+      ],
+      "restoredNormal": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/restored-normal.png",
+        "sha256": "46db1fe75739806035dada8a319b7edffee02cefb595570ab1c4c7dbff5b4bb9"
+      },
+      "reopened": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/reopened.png",
+        "sha256": "f9395b4ec0a75c39a4da52034e771f579ad87d86940b47cdde67bd490ee534a2"
+      },
+      "actualFontsAndBounds": {
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 1050,
+          "height": 650
+        },
+        "viewBox": {
+          "width": 1050,
+          "height": 650
+        },
+        "loaded": [
+          {
+            "text": "植物亲缘关系 · 矩形树",
+            "font": "normal 700 24px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "700",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "700",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "700",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "自行生成的模拟树 · 不代表真实系统发育结论",
+            "font": "normal 400 12px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "拟南芥",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "拟",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "南芥",
+            "font": "italic 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "油菜",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "油",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "菜",
+            "font": "italic 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "水稻",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "水",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "稻",
+            "font": "italic 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "玉米",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "玉米",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "小麦",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "小麦",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "大豆",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "大豆",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "豌豆",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "豌豆",
+            "font": "normal 400 14px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "0.12 分支长度",
+            "font": "normal 400 10px \"Noto Sans SC\"",
+            "faces": [
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Sans SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          }
+        ]
+      },
+      "project": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.openacad.json",
+        "sha256": "dfa846151b2b2c41590770a69c09cad4626d1b41ee07c9a6eac042d825acccb8",
+        "reopenedInFreshContext": true
+      },
+      "downloads": [
+        {
+          "format": "svg",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.svg",
+          "bytes": 52656,
+          "sha256": "249f9caf93d10dd842368115a1994d81c078347ea750ad839e7aff0563570885",
+          "suggestedFilename": "tree-mixed-italic.svg",
+          "outline": true
+        },
+        {
+          "format": "png",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.png",
+          "bytes": 56463,
+          "sha256": "5fa81bf0356e4822f96d837bf8165c00790cce52ae79db95d562a02be184841c",
+          "suggestedFilename": "tree-mixed-italic.png",
+          "outline": false
+        },
+        {
+          "format": "pdf",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.pdf",
+          "bytes": 198740,
+          "sha256": "6a698a6e28ee13191b418eff180b6d8f3b44bc0368750026900ebf151c4abf74",
+          "suggestedFilename": "tree-mixed-italic.pdf",
+          "outline": false
+        },
+        {
+          "format": "eps",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/tree-mixed-italic/tree-mixed-italic.eps",
+          "bytes": 51069,
+          "sha256": "0a4698d724f1240abd3bc16b2b4c5f268496c5b6ab3129d271d6c69ebda13cd4",
+          "suggestedFilename": "tree-mixed-italic.eps",
+          "outline": false
+        }
+      ],
+      "svgIndependentOpen": {
+        "decoder": "Chromium image decoder",
+        "width": 1050,
+        "height": 650,
+        "complete": true
+      },
+      "passed": true
+    },
+    {
+      "id": "bar-rotated-bold-italic",
+      "fontUrls": [
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-common-01.7418d1e38253.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-latin.b0d379715a27.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-latin.d32b30de4552.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-common-01.27546456cc5e.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-common-00.8c5ce7f7e41d.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-bold-common-00.dd5968857b6f.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-09.d23bc7088c37.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-latin.c3274cded872.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-common-01.09ddb2488f29.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-common-00.92282e42190f.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-bold-common-00.278b516084d8.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-bold-latin.2eca0693da1f.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-serif-sc-bold-common-01.e04a32a6a33c.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-bold-oblique-latin.778e79a62e17.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-bold-oblique-common-01.005bd7f0ae9b.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-bold-oblique-common-00.44554373f39c.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/openacad-noto-serif-sc-oblique-common-00.d63da4f36203.woff2",
+        "http://127.0.0.1:5178/fonts/woff2/noto-sans-sc-rest-14.28c6a698395d.woff2"
+      ],
+      "submittedSources": [
+        {
+          "format": "svg",
+          "sourceSha256": "8d32d4a1f065a0014ea2d3edd3c90106755f3f3de697397019d0652d1d8bbff6"
+        },
+        {
+          "format": "png",
+          "sourceSha256": "8d32d4a1f065a0014ea2d3edd3c90106755f3f3de697397019d0652d1d8bbff6"
+        },
+        {
+          "format": "pdf",
+          "sourceSha256": "8d32d4a1f065a0014ea2d3edd3c90106755f3f3de697397019d0652d1d8bbff6"
+        },
+        {
+          "format": "eps",
+          "sourceSha256": "8d32d4a1f065a0014ea2d3edd3c90106755f3f3de697397019d0652d1d8bbff6"
+        }
+      ],
+      "exportResults": [
+        {
+          "format": "svg",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "svg",
+            "dpi": 300,
+            "width": 960,
+            "height": 640,
+            "outline": true,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "255d2413475e53cd352db29f65c04c0b68fd49872086ec8c3beac76e481d27d6"
+          },
+          "diagnostics": []
+        },
+        {
+          "format": "png",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "png",
+            "dpi": 150,
+            "width": 960,
+            "height": 640,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "f0216bccfb6b4da8362304d7bf5684232fde7f579616fe503ed01fb2670d21fb"
+          },
+          "diagnostics": []
+        },
+        {
+          "format": "pdf",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "pdf",
+            "dpi": 150,
+            "width": 960,
+            "height": 640,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "dad7af89ac39dbfb1290b022805bd3c4f10e31abb2738c1c5912154bafee5f0c"
+          },
+          "diagnostics": []
+        },
+        {
+          "format": "eps",
+          "provenance": {
+            "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+            "format": "eps",
+            "dpi": 150,
+            "width": 960,
+            "height": 640,
+            "outline": false,
+            "availableFontsSha256": {
+              "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+              "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+              "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+              "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+              "OpenAcadNotoSansCJKsc-Oblique.otf": "c66c5a7e7cce1e2687e9b90da1dc0a4c6a87c0b1107af581ba0985fb6ba9179a",
+              "OpenAcadNotoSerifCJKsc-Oblique.otf": "be024213ec3c4ae587f03e4d6c8c27b401399c3950b649b2f0383e3e1b3f7412",
+              "OpenAcadNotoSansCJKsc-BoldOblique.otf": "cf3098963a9aaacb31aa2443f5c9533485ce6480fb1d67bd61f4f61d3731b782",
+              "OpenAcadNotoSerifCJKsc-BoldOblique.otf": "9bb692f79a301972131dee1f8f5eb2ecbd3412f798fb8104c0914f9a809f5408"
+            },
+            "sha256": "a3a5c2290f7ac50904f34087f21b4bec1277a1873f66e43feb9d7ab62040aedc"
+          },
+          "diagnostics": [
+            {
+              "code": "EPS_ALPHA_FLATTENED",
+              "message": "EPS 不支持透明效果，已按 150 DPI 合并到背景色；此 EPS 内含栅格图像"
+            },
+            {
+              "code": "EPS_BACKGROUND",
+              "message": "EPS 使用不透明背景 #ffffff"
+            }
+          ]
+        }
+      ],
+      "normal": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/normal.png",
+        "sha256": "bbe420981f9e83db1b30a1bed0b5f6510a3e58b3988246a8d54d828a985b7b2c"
+      },
+      "italic": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/italic.png",
+        "sha256": "8ae9552635ef7b06bda15b82a02d2ee7b32e586206ccb53c66736d4e39d5b65b"
+      },
+      "textRuns": [
+        {
+          "text": "粗斜体标题 · 开放学术 Aa12",
+          "weight": "700",
+          "style": "italic",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "模拟数据 · 用于演示",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "对照",
+          "weight": "400",
+          "style": "italic",
+          "transform": "rotate(35,0,20)",
+          "anchor": "end"
+        },
+        {
+          "text": "处理甲",
+          "weight": "400",
+          "style": "italic",
+          "transform": "rotate(35,0,20)",
+          "anchor": "end"
+        },
+        {
+          "text": "处理乙",
+          "weight": "400",
+          "style": "italic",
+          "transform": "rotate(35,0,20)",
+          "anchor": "end"
+        },
+        {
+          "text": "处理丙",
+          "weight": "400",
+          "style": "italic",
+          "transform": "rotate(35,0,20)",
+          "anchor": "end"
+        },
+        {
+          "text": "0",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "10",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "20",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "30",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "40",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "50",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "数值",
+          "weight": "400",
+          "style": "normal",
+          "transform": "translate(-73,188.5) rotate(-90)",
+          "anchor": "middle"
+        },
+        {
+          "text": "对照",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "处理甲",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "处理乙",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "处理丙",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "类别注释",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "end"
+        },
+        {
+          "text": "24",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "39",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "31",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        },
+        {
+          "text": "48",
+          "weight": "400",
+          "style": "normal",
+          "transform": null,
+          "anchor": "middle"
+        }
+      ],
+      "restoredNormal": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/restored-normal.png",
+        "sha256": "bbe420981f9e83db1b30a1bed0b5f6510a3e58b3988246a8d54d828a985b7b2c"
+      },
+      "reopened": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/reopened.png",
+        "sha256": "8ae9552635ef7b06bda15b82a02d2ee7b32e586206ccb53c66736d4e39d5b65b"
+      },
+      "actualFontsAndBounds": {
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 960,
+          "height": 640
+        },
+        "viewBox": {
+          "width": 960,
+          "height": 640
+        },
+        "loaded": [
+          {
+            "text": "粗斜体标题 · 开放学术 Aa12",
+            "font": "italic 700 24px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "700",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "700",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "700",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "粗斜体标题 · 开放学术 Aa12",
+            "font": "italic 700 24px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "700",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "700",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "700",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "模拟数据 · 用于演示",
+            "font": "normal 400 12px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "模拟数据 · 用于演示",
+            "font": "normal 400 12px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              },
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "对照",
+            "font": "italic 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "对照",
+            "font": "italic 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理甲",
+            "font": "italic 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理甲",
+            "font": "italic 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理乙",
+            "font": "italic 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理乙",
+            "font": "italic 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理丙",
+            "font": "italic 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理丙",
+            "font": "italic 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "italic",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "0",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "10",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "20",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "30",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "40",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "50",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "数值",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "数值",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "对照",
+            "font": "normal 400 11px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理甲",
+            "font": "normal 400 11px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理乙",
+            "font": "normal 400 11px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "处理丙",
+            "font": "normal 400 11px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "类别注释",
+            "font": "normal 400 11px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "24",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "39",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "31",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          },
+          {
+            "text": "48",
+            "font": "normal 400 14px \"Noto Serif CJK SC\"",
+            "faces": [
+              {
+                "family": "Noto Serif CJK SC",
+                "style": "normal",
+                "weight": "400",
+                "status": "loaded"
+              }
+            ]
+          }
+        ]
+      },
+      "project": {
+        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.openacad.json",
+        "sha256": "bc81b3631c2ade777c5d65011497cab684db1a43d5dea20da07318a1f9904e80",
+        "reopenedInFreshContext": true
+      },
+      "downloads": [
+        {
+          "format": "svg",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.svg",
+          "bytes": 79759,
+          "sha256": "255d2413475e53cd352db29f65c04c0b68fd49872086ec8c3beac76e481d27d6",
+          "suggestedFilename": "bar-rotated-bold-italic.svg",
+          "outline": true
+        },
+        {
+          "format": "png",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.png",
+          "bytes": 117313,
+          "sha256": "f0216bccfb6b4da8362304d7bf5684232fde7f579616fe503ed01fb2670d21fb",
+          "suggestedFilename": "bar-rotated-bold-italic.png",
+          "outline": false
+        },
+        {
+          "format": "pdf",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.pdf",
+          "bytes": 178052,
+          "sha256": "dad7af89ac39dbfb1290b022805bd3c4f10e31abb2738c1c5912154bafee5f0c",
+          "suggestedFilename": "bar-rotated-bold-italic.pdf",
+          "outline": false
+        },
+        {
+          "format": "eps",
+          "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/font-oblique-layout/bar-rotated-bold-italic/bar-rotated-bold-italic.eps",
+          "bytes": 102213,
+          "sha256": "a3a5c2290f7ac50904f34087f21b4bec1277a1873f66e43feb9d7ab62040aedc",
+          "suggestedFilename": "bar-rotated-bold-italic.eps",
+          "outline": false
+        }
+      ],
+      "svgIndependentOpen": {
+        "decoder": "Chromium image decoder",
+        "width": 960,
+        "height": 640,
+        "complete": true
+      },
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "finishedAt": "2026-09-06T18:30:38.934Z",
+  "passed": true
+}

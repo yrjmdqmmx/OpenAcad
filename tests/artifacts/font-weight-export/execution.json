@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-06T17:55:39.666559+00:00",
+  "scope": "Two real Inkscape font-weight integration cases; 2 font families × 2 weights × SVG/PNG/PDF = 12 actual conversions, plus 4 independent PDF opens",
+  "complete": true,
+  "passed": true,
+  "testsPassed": 2,
+  "pytestSeconds": 4.05,
+  "localMacTestStatus": "2 skipped because Inkscape is absent on the Mac host; the real tests passed inside the Linux container",
+  "engineImage": "openacad-server:local",
+  "engineImageId": "sha256:145de50afbef57dcc70701185c9e95d934689aa00bbb65d6712a9b6d7126e6ae",
+  "containerLimits": {
+    "readOnlyImage": true,
+    "readOnlyFontMount": true,
+    "user": "10001:10001",
+    "cpus": 1,
+    "memoryMiB": 512,
+    "pidsLimit": 128,
+    "tmpfsMiB": 128
+  },
+  "sourceExportSha256": "d809b24f79831e5b979e4b243142021a86b5e445c3833f58e0eb46d71e5f9a16",
+  "containerExportSha256": "d809b24f79831e5b979e4b243142021a86b5e445c3833f58e0eb46d71e5f9a16",
+  "testSha256": "8e6990efdbf6675a6c3b22231911c4ab6e1a8f9fd6fca21b20d724678335e9a0",
+  "fontManifest": {
+    "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca",
+    "NotoSansCJKsc-Bold.otf": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+    "NotoSerifCJKsc-Bold.otf": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73"
+  },
+  "fontconfigResolvedFiles": [
+    "NotoSansCJKsc-Regular.otf",
+    "NotoSansCJKsc-Bold.otf",
+    "NotoSerifCJKsc-Regular.otf",
+    "NotoSerifCJKsc-Bold.otf"
+  ],
+  "noProductExportCodeChangeRequired": true,
+  "visualReview": "Regular/Bold PNG and independently rasterized PDFs show meaningful stroke-weight changes, readable mixed Chinese/Latin text, and no obvious clipping. SVG path data differs between weights. Pixel-identical rendering across formats is not claimed."
+}
