@@ -3,3 +3,6 @@
 **/__pycache__
 *.pyc
 docs
+*.log
+.test-bin
+.r-library

@@ -3,6 +3,7 @@ import hmac
 import json
 import os
 import secrets
+from pathlib import Path
 from uuid import UUID, uuid4
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.exceptions import RequestValidationError
@@ -62,6 +63,8 @@ def health():
 
 @app.post("/api/jobs", status_code=202)
 def submit(payload: JobRequest):
+    if Path(os.getenv("OPENACAD_MAINTENANCE_FILE", "/run/openacad/maintenance")).exists():
+        raise HTTPException(status_code=503, detail="网站正在更新，暂时不接收新任务；已有任务仍可查看和取消，请稍后重试")
     conn = connection()
     if queue(conn).count >= 100:
         raise HTTPException(status_code=503, detail="当前等待任务过多，请稍后重试")
@@ -71,7 +74,7 @@ def submit(payload: JobRequest):
     key = f"openacad:cap:{job_id}"
     conn.set(key, json.dumps({"hash": digest(token), "createdAt": now.isoformat(), "expiresAt": expires}), ex=TTL)
     try:
-        queue(conn).enqueue("app.jobs.execute", payload.model_dump(), job_id=job_id, job_timeout=TIMEOUT, ttl=TTL, result_ttl=TTL, failure_ttl=TTL)
+        queue(conn).enqueue("app.jobs.execute", payload.model_dump(), job_id=job_id, description="OpenAcad 统计任务" if payload.kind == "analysis" else "OpenAcad 图片导出", job_timeout=TIMEOUT, ttl=TTL, result_ttl=TTL, failure_ttl=TTL)
     except Exception:
         conn.delete(key)
         raise

@@ -80,6 +80,7 @@ result <- tryCatch(withCallingHandlers({
       } else {
         need(length(unique(df$x))>=4,"GAM 至少需要 4 个不同 x")
         k<-min(param("basisDimension",10),length(unique(df$x))-1)
+        if(k<param("basisDimension",10)) record("GAM_BASIS_REDUCED",paste0("组“",group,"”不同 x 数量有限，GAM 基维数已调整为 ",k))
         fit<-mgcv::gam(y~s(x,bs="tp",k=k),data=df,family=gaussian(),method="REML",na.action=na.fail)
         pred<-predict(fit,newdata=grid,se.fit=TRUE,unconditional=TRUE); margin<-qnorm((1+level)/2)*pred$se.fit; pr<-cbind(pred$fit,pred$fit-margin,pred$fit+margin)
         sm<-summary(fit); model$formula<-paste0("y ~ s(x, bs='tp', k=",k,") [REML]");model$edf<-unname(sm$s.table[1,1]);model$p<-unname(sm$s.table[1,ncol(sm$s.table)]);model$rSquared<-sm$r.sq

@@ -1,13 +1,18 @@
 FROM ghcr.io/rocker-org/r-ver:4.6.1@sha256:a5df0ae591422cc1733e97da03a9f4eff4cf172e40895225959aa93bb7ff7517 AS r-engine
 WORKDIR /app
 COPY r/packages.lock.json r/install.R /app/r/
-RUN Rscript --vanilla /app/r/install.R
+ARG TARGETARCH
+RUN --mount=type=cache,id=openacad-r-4.6.1-${TARGETARCH},target=/opt/r-build-cache,sharing=locked \
+    R_LIBS_USER=/opt/r-build-cache Rscript --vanilla /app/r/install.R \
+    && cp -a /opt/r-build-cache/. /usr/local/lib/R/site-library/
 
 FROM r-engine
+ARG APT_MIRROR=""
 ENV DEBIAN_FRONTEND=noninteractive PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 \
     OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
     R_DEFAULT_INTERNET_TIMEOUT=300 PATH=/opt/openacad/bin:$PATH HOME=/tmp
 RUN sed -i 's|http://|https://|g' /etc/apt/sources.list.d/ubuntu.sources \
+    && if [ -n "$APT_MIRROR" ]; then sed -i -E "s|https://(ports.ubuntu.com/ubuntu-ports\|archive.ubuntu.com/ubuntu\|security.ubuntu.com/ubuntu)|$APT_MIRROR|g" /etc/apt/sources.list.d/ubuntu.sources; fi \
     && apt-get update && apt-get install -y --no-install-recommends \
     python3 python3-venv inkscape fonts-noto-cjk fontconfig libgomp1 \
     && rm -rf /var/lib/apt/lists/* && fc-cache -f

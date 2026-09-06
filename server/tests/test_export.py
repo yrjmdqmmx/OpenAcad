@@ -1,5 +1,6 @@
 import base64
 import shutil
+import struct
 import pytest
 from app.export import sanitize, render
 from app.errors import AnalysisError
@@ -17,6 +18,11 @@ def test_internal_references_allowed():
     sanitize(SVG.replace("</svg>", '<defs><linearGradient id="g"/></defs><rect fill="url(#g)"/></svg>'), {})
 
 
+def test_noto_family_normalization():
+    root, *_ = sanitize(SVG.replace("Noto Sans CJK SC", "Noto Sans SC"), {})
+    assert list(root)[1].get("font-family") == "Noto Sans CJK SC"
+
+
 @pytest.mark.skipif(shutil.which("inkscape") is None, reason="需要 Inkscape 集成镜像")
 @pytest.mark.parametrize("fmt", ["svg", "png", "pdf", "eps"])
 @pytest.mark.parametrize("outline", [False, True])
@@ -32,3 +38,11 @@ def test_actual_export(fmt, outline):
 def test_eps_transparency_explicit():
     r = render({"method": "render", "data": {"svg": SVG.replace('fill="#2171b5"', 'fill="#2171b5" opacity="0.5"')}, "params": {"format": "eps", "dpi": 150}})
     assert "EPS_ALPHA_FLATTENED" in [d["code"] for d in r["diagnostics"]]
+
+
+@pytest.mark.skipif(shutil.which("inkscape") is None, reason="需要 Inkscape 集成镜像")
+@pytest.mark.parametrize("dpi,pixels", [(300, (1000, 750)), (600, (2000, 1500))])
+def test_png_print_resolution(dpi, pixels):
+    r = render({"method":"render", "data":{"svg": SVG}, "params":{"format":"png", "dpi":dpi, "width":320, "height":240}})
+    actual = base64.b64decode(r["artifact"]["contentBase64"])
+    assert struct.unpack(">II", actual[16:24]) == pixels

@@ -40,8 +40,12 @@ def sanitize(source, params):
         require(name not in unsafe, f"SVG 含不允许的元素：{name}", "UNSAFE_SVG")
         require(not node.tag.startswith("{") or node.tag.startswith("{" + NS + "}"), "SVG 含不允许的外部命名空间", "UNSAFE_SVG")
         texts = [node.text or ""] if name == "style" else []
+        if name == "style" and node.text:
+            node.text = node.text.replace("Noto Sans SC", "Noto Sans CJK SC")
         for key, value in node.attrib.items():
             local = key.rsplit("}", 1)[-1].lower()
+            if local in ("font-family", "style"):
+                node.set(key, value.replace("Noto Sans SC", "Noto Sans CJK SC"))
             require(not local.startswith("on") and local != "base", "SVG 不允许事件处理或外部基址", "UNSAFE_SVG")
             if local in ("href", "src"):
                 require(bool(re.fullmatch(r"#[A-Za-z0-9_.:-]+", value)), "SVG 不允许外部链接或嵌入式图片", "UNSAFE_SVG")

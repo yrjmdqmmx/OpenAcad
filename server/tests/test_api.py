@@ -14,6 +14,7 @@ def test_capability_lifecycle(monkeypatch):
     reply = client.post("/api/jobs", json=payload("pca"))
     assert reply.status_code == 202
     task = reply.json(); path = "/api/jobs/" + task["id"]
+    assert queue(conn).fetch_job(task["id"]).description == "OpenAcad 统计任务"
     assert client.get(path).status_code == 404
     assert client.get(path, headers={"Authorization": "Bearer wrong"}).status_code == 404
     auth = {"Authorization": "Bearer " + task["token"]}
@@ -31,3 +32,12 @@ def test_schema_chinese_errors():
     result = client.post("/api/jobs", json={"kind": "bad"})
     assert result.status_code == 422
     assert result.json()["error"]["message"] == "请检查请求字段"
+
+
+def test_maintenance_rejects_new_jobs(monkeypatch, tmp_path):
+    marker = tmp_path / "maintenance"
+    marker.touch()
+    monkeypatch.setenv("OPENACAD_MAINTENANCE_FILE", str(marker))
+    client = TestClient(main.app)
+    result = client.post("/api/jobs", json=payload("pca"))
+    assert result.status_code == 503 and "已有任务仍可查看和取消" in result.json()["detail"]

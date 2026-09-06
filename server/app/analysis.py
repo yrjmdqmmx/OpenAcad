@@ -19,6 +19,29 @@ R_METHODS = {"pcoa", "nmds", "cca", "rda", "lm", "loess", "gam", "mantel", "mant
 METHODS = R_METHODS | {"descriptive", "density", "correlation", "tests", "standardize", "distance", "cluster", "pca", "gc"}
 DISTANCES = {"euclidean", "sqeuclidean", "braycurtis", "canberra", "chebyshev", "cityblock", "correlation", "cosine", "dice", "hamming", "jaccard", "jensenshannon", "kulczynski1", "kulsinski", "mahalanobis", "matching", "minkowski", "rogerstanimoto", "russellrao", "seuclidean", "sokalmichener", "sokalsneath", "yule"}
 BINARY = {"dice", "jaccard", "kulczynski1", "kulsinski", "rogerstanimoto", "russellrao", "sokalmichener", "sokalsneath", "yule"}
+DEFAULTS = {
+    "descriptive": {"idColumn": 0},
+    "density": {"idColumn": 0, "points": 256, "bandwidth": "scott", "trim": True, "bins": 30},
+    "correlation": {"correlation": "pearson", "alternative": "two-sided", "pAdjust": "none"},
+    "tests": {"idColumn": 0, "test": "ttest_ind", "comparisons": "all", "alternative": "two-sided", "equalVariance": False, "pAdjust": "none"},
+    "gc": {"contentWindow": 2000, "skewWindow": 2000},
+}
+for _method in ("standardize", "distance", "cluster", "pca", "pcoa", "nmds", "cca", "rda"):
+    DEFAULTS[_method] = {"standardization": "None", "direction": "column"}
+for _method in ("distance", "cluster", "pcoa"):
+    DEFAULTS[_method].update(distance="euclidean", minkowskiP=2)
+for _method in ("distance", "cluster"):
+    DEFAULTS[_method].update(axis="row")
+DEFAULTS["cluster"]["linkage"] = "complete"
+DEFAULTS["pcoa"]["correction"] = "none"
+DEFAULTS["nmds"].update(distance="bray", dimensions=2, **{"try":20}, tryMax=100, pseudocount=0)
+DEFAULTS["cca"]["scaling"] = DEFAULTS["rda"]["scaling"] = 2
+for _method in ("lm", "loess", "gam"):
+    DEFAULTS[_method] = {"points": 200, "confidence": .95}
+DEFAULTS["loess"].update(span=.5, degree=2)
+DEFAULTS["gam"].update(basisDimension=10)
+for _method in ("mantel", "mantel.randtest", "mantel.rtest", "mantel.partial"):
+    DEFAULTS[_method] = {"speciesDistance":"bray", "environmentDistance":"euclidean", "controlDistance":"euclidean", "correlation":"pearson", "permutations":999, "pAdjust":"none", "pseudocount":0}
 
 
 def clean(value):
@@ -289,7 +312,7 @@ def gc(payload):
 def run_analysis(payload):
     method = payload["method"]
     require(method in METHODS, f"未知分析方法：{method}", "UNKNOWN_METHOD")
-    payload.setdefault("params", {})
+    payload = {**payload, "params": {"seed": 1, **DEFAULTS.get(method, {}), **payload.get("params", {})}}
     p = payload["params"]
     for name in ("equalVariance", "trim"):
         if name in p:

@@ -12,6 +12,8 @@
 
 响应 HTTP 202：`{id,token,status:"queued",expiresAt}`。token 是仅返回一次的随机 capability。调用 `GET /api/jobs/{id}`、`DELETE /api/jobs/{id}` 时携带 `Authorization: Bearer <token>`。GET 返回 `{id,status,createdAt,expiresAt,result?,error?}`；status 为 queued/started/finished/failed/canceled。DELETE 取消排队或运行任务，并删除数据和结果。未知任务、过期或错误 token 均返回404。`GET /api/health` 检查 Redis 和已注册 worker；不公开数据。
 
+维护标记 `OPENACAD_MAINTENANCE_FILE`（默认 `/run/openacad/maintenance`）存在时，新建任务返回中文503；查询和取消仍可用。队列达到100个等待任务时拒绝新建。单次请求体最多25 MB。
+
 结果：`{schemaVersion:1,method,data,provenance,diagnostics}`。provenance 含引擎/包版本、methodVersion、seed、输入SHA256和参数；diagnostics 是 `{code,message}` 数组。失败的 error 为 `{code,message,table?,row?,column?}`，row 为含表头的1起始行号。
 
 表格每行必须等长，列名唯一非空，ID唯一非空。默认首列是样本ID，其余数值；null仅在描述统计/密度/独立组检验中表示缺失。其他分析拒绝缺失。两矩阵按样本ID对齐，不按上传顺序猜测；ID集合不一致报错。最大100万单元格。所有选择项使用下列固定字符串。
@@ -75,5 +77,7 @@ Mantel 结果额外有 `environmentCorrelation:{r,p,adjustedP,rowLabels,columnLa
 `{kind:"export",method:"render",data:{svg:"<svg ...>...</svg>"},params:{format:"svg|png|pdf|eps",dpi:300,outline:false,filename:"图表",width?:800,height?:600,background?:"#ffffff"}}`。
 
 dpi仅150/300/600；SVG单位px，宽高可显式覆盖正数(最多16000)。PNG依据96 CSS px/in换算DPI。默认保留SVG背景/透明度；`background:"transparent"`或十六进制色明确覆盖。EPS不支持半透明，需背景色(默认白)且主动栅格化透明效果，结果诊断明确标注；outline=true先将文字转曲线。拒绝script、foreignObject、事件、外链href、外部CSS及外部URL；内部#引用允许。镜像提供Noto CJK中文字体。
+
+`Noto Sans SC` 字体家族在导出时归一化为镜像实际安装的 `Noto Sans CJK SC`。覆盖背景色会增加画布背景，但不删除图表自身的矩形或其他可见元素。
 
 返回 `result={schemaVersion:1,method:"render",data:{},artifact:{filename,mimeType,contentBase64},provenance:{...},diagnostics:[]}`。前端base64解码后Blob下载，不需要公开文件地址。SVG/PDF/EPS/PNG均通过真实Inkscape处理并检查魔数；导出异常返回具体中文说明。
