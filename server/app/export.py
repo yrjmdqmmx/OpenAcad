@@ -1,5 +1,6 @@
 import base64
 import hashlib
+import json
 import math
 import os
 import re
@@ -152,4 +153,6 @@ def render(payload):
         version, _ = run_process([binary, "--version"], timeout=10)
     name = re.sub(r"[^\w\u4e00-\u9fff .-]", "_", str(params.get("filename", "OpenAcad图表")))[:100].strip(" .") or "OpenAcad图表"
     name = name.encode("utf-8")[:180].decode("utf-8", errors="ignore").strip(" .") or "OpenAcad图表"
-    return {"schemaVersion": 1, "method": "render", "data": {}, "artifact": {"filename": f"{name}.{fmt}", "mimeType": MIMES[fmt], "contentBase64": base64.b64encode(content).decode()}, "provenance": {"engine": version.strip(), "format": fmt, "dpi": dpi, "width": width, "height": height, "outline": params.get("outline", False), "sha256": hashlib.sha256(content).hexdigest()}, "diagnostics": diagnostics}
+    font_manifest = Path("/usr/local/share/fonts/openacad/manifest.json")
+    available_fonts = json.loads(font_manifest.read_text()) if font_manifest.exists() else {}
+    return {"schemaVersion": 1, "method": "render", "data": {}, "artifact": {"filename": f"{name}.{fmt}", "mimeType": MIMES[fmt], "contentBase64": base64.b64encode(content).decode()}, "provenance": {"engine": version.strip(), "format": fmt, "dpi": dpi, "width": width, "height": height, "outline": params.get("outline", False), "availableFontsSha256": available_fonts, "sha256": hashlib.sha256(content).hexdigest()}, "diagnostics": diagnostics}

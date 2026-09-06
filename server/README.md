@@ -11,7 +11,7 @@ API 默认 `uvicorn app.main:app --host 0.0.0.0 --port 8000 --no-access-log`。�
 
 任务数据默认保留最多 3600 秒，`JOB_TTL_SECONDS` 可调；运行完成即清除队列中的原始参数，仅保留结果至 capability 到期。单任务超时默认 300 秒，`JOB_TIMEOUT_SECONDS` 可调；R 子进程默认 240 秒，`R_TIMEOUT_SECONDS` 可调。取消/超时由 RQ 终止工作子进程；Linux 子进程设置父进程死亡信号，避免 R/Inkscape 遗留。Redis 建议关闭磁盘持久化，配置内存限额，API 前代理限制请求速率及 25 MB 请求体。
 
-镜像固定 R 4.6.1 及基础镜像 digest。R 包及传递依赖使用 `r/packages.lock.json` 和 Posit 的 2026-09-06 CRAN 快照，安装后逐一核对版本。Python 完整版本固定在 `requirements.lock`。Inkscape/中文 Noto CJK 由镜像 apt 安装，具体版本写入导出 provenance；正式发布必须按构建后的镜像 digest 部署，不按浮动镜像标签更新。
+镜像固定 R 4.6.1 及基础镜像 digest。R 包及传递依赖使用 `r/packages.lock.json` 和 Posit 的 2026-09-06 CRAN 快照，安装后逐一核对版本。`r/renv.lock` 由该实际 R 环境通过 renv 1.2.4 生成，包含 16 个包的准确版本与来源；`r/write-lock.R` 保留生成步骤。Python 完整版本固定在 `requirements.lock`。Inkscape 由镜像 apt 安装，具体版本写入导出 provenance；正式发布必须按构建后的镜像 digest 部署，不按浮动镜像标签更新。中文字体使用 `fonts/` 内与网页来源逐字节一致的黑体、宋体完整 OTF，许可证和 SHA-256 同目录保留，镜像配置屏蔽 apt 的旧 CJK TTC。导出 provenance 包含可用字体哈希。
 
 数值测试包含 Python 的距离语义、P 校正、PCA 重构、缩放方向、KDE 积分、检验和 GC；R 集成测试包含四种排序、三种回归、四种 Mantel、PCoA 负特征值修正及跨引擎 P 校正。R/Inkscape 缺失时仅跳过相应集成测试，发布验收必须在完整镜像内执行并要求零跳过。
 

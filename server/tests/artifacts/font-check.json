@@ -1,0 +1,166 @@
+[
+  {
+    "template": "sans",
+    "format": "png",
+    "params": {
+      "format": "png",
+      "dpi": 150,
+      "outline": false
+    },
+    "sourceSha256": "f62fed91cd7bf0600aa2aeb5f26b426c9efd916de38a6d689713e0226ca510da",
+    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/sans.png",
+    "bytes": 36639,
+    "sha256": "e2b7dbf8ff58ff9e167b3b359d848cc4829c44abee2cecf9f2be1de7ed1cbb6d",
+    "provenance": {
+      "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+      "format": "png",
+      "dpi": 150,
+      "width": 720.0,
+      "height": 220.0,
+      "outline": false,
+      "availableFontsSha256": {
+        "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+        "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+      },
+      "sha256": "e2b7dbf8ff58ff9e167b3b359d848cc4829c44abee2cecf9f2be1de7ed1cbb6d"
+    },
+    "diagnostics": [],
+    "decoder": "Pillow",
+    "opened": true,
+    "rasterSize": [
+      1125,
+      344
+    ],
+    "inkBounds": [
+      57,
+      74,
+      803,
+      236
+    ],
+    "touchesPageEdge": false
+  },
+  {
+    "template": "sans",
+    "format": "pdf",
+    "params": {
+      "format": "pdf",
+      "dpi": 150,
+      "outline": false
+    },
+    "sourceSha256": "f62fed91cd7bf0600aa2aeb5f26b426c9efd916de38a6d689713e0226ca510da",
+    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/sans.pdf",
+    "bytes": 62503,
+    "sha256": "afed0e824725a153233d15c0c0b58e26ac407a9ec467f4037a6b06faaab6b8fe",
+    "provenance": {
+      "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+      "format": "pdf",
+      "dpi": 150,
+      "width": 720.0,
+      "height": 220.0,
+      "outline": false,
+      "availableFontsSha256": {
+        "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+        "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+      },
+      "sha256": "afed0e824725a153233d15c0c0b58e26ac407a9ec467f4037a6b06faaab6b8fe"
+    },
+    "diagnostics": [],
+    "decoder": "Poppler",
+    "opened": true,
+    "rasterSize": [
+      540,
+      165
+    ],
+    "inkBounds": [
+      27,
+      35,
+      385,
+      113
+    ],
+    "touchesPageEdge": false,
+    "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nWGFGJC+NotoSansCJKsc-Regular         CID Type 0C       Identity-H       yes yes yes      7  0\n",
+    "extractedText": "开放学术：相关系数与主成分分析\n中⽂宋体⿊体 ABC ��� α β ≥ ±\n\n\f"
+  },
+  {
+    "template": "serif",
+    "format": "png",
+    "params": {
+      "format": "png",
+      "dpi": 150,
+      "outline": false
+    },
+    "sourceSha256": "dd52b34e1aec533aea896ba05ba81c1037e072a9ec660f6e24138db5350d0a58",
+    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/serif.png",
+    "bytes": 40798,
+    "sha256": "8f44c41c5359ade8c141e9d5141b45a869111acf9f1b52b0e9c4e1696f828365",
+    "provenance": {
+      "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+      "format": "png",
+      "dpi": 150,
+      "width": 720.0,
+      "height": 220.0,
+      "outline": false,
+      "availableFontsSha256": {
+        "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+        "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+      },
+      "sha256": "8f44c41c5359ade8c141e9d5141b45a869111acf9f1b52b0e9c4e1696f828365"
+    },
+    "diagnostics": [],
+    "decoder": "Pillow",
+    "opened": true,
+    "rasterSize": [
+      1125,
+      344
+    ],
+    "inkBounds": [
+      56,
+      75,
+      803,
+      236
+    ],
+    "touchesPageEdge": false
+  },
+  {
+    "template": "serif",
+    "format": "pdf",
+    "params": {
+      "format": "pdf",
+      "dpi": 150,
+      "outline": false
+    },
+    "sourceSha256": "dd52b34e1aec533aea896ba05ba81c1037e072a9ec660f6e24138db5350d0a58",
+    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/server/tests/artifacts/serif.pdf",
+    "bytes": 61212,
+    "sha256": "ce3f7b97c3e4aa1882617af9a264e06b2efc3e62a735121bc9901eae964d4402",
+    "provenance": {
+      "engine": "Inkscape 1.2.2 (b0a8486541, 2022-12-01)",
+      "format": "pdf",
+      "dpi": 150,
+      "width": 720.0,
+      "height": 220.0,
+      "outline": false,
+      "availableFontsSha256": {
+        "NotoSansCJKsc-Regular.otf": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+        "NotoSerifCJKsc-Regular.otf": "2a2eae2628df83556c54018c41e20fa532c1b862c5256ae8b3f23feb918d12ca"
+      },
+      "sha256": "ce3f7b97c3e4aa1882617af9a264e06b2efc3e62a735121bc9901eae964d4402"
+    },
+    "diagnostics": [],
+    "decoder": "Poppler",
+    "opened": true,
+    "rasterSize": [
+      540,
+      165
+    ],
+    "inkBounds": [
+      26,
+      35,
+      386,
+      113
+    ],
+    "touchesPageEdge": false,
+    "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nVKMIWM+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes      7  0\n",
+    "extractedText": "开放学术：相关系数与主成分分析\n中⽂宋体⿊体 ABC ��� α β ≥ ±\n\n\f"
+  }
+]
