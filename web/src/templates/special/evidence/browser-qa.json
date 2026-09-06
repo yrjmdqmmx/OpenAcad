@@ -1,0 +1,228 @@
+{
+  "date": "2026-09-06T13:00:07.074Z",
+  "url": "http://127.0.0.1:5178",
+  "browser": "installed Google Chrome; separate headless context",
+  "report": [
+    {
+      "id": "heatmap",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "circle-heatmap",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "binary-dot",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "binary-rect",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "bubble-matrix",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "correlation",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "double-correlation",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "mantel",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "venn",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "packing",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "sankey",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "network",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "map",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "gene-cluster",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "protein-domains",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "protein-motifs",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "genome-circos",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "volcano",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "enrichment-dot",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "enrichment-bar",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "enrichment-circle",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    },
+    {
+      "id": "synteny",
+      "clipped": [],
+      "example": true,
+      "alternate": true,
+      "undo": true,
+      "title": true,
+      "projectDownload": true,
+      "projectReopen": true
+    }
+  ],
+  "errors": []
+}

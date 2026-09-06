@@ -24,7 +24,7 @@ export interface Project {
 export interface Control {
   key: string; label: string; type: 'number'|'text'|'color'|'boolean'|'select';
   min?: number; max?: number; step?: number; options?: {value: string; label: string}[];
-  section?: string; help?: string;
+  section?: string; help?: string; visible?: (project:Project)=>boolean;
 }
 export interface RendererProps { project: Project; thumbnail?: boolean; onLayoutChange?: (layout: Record<string, unknown>) => void; }
 export interface Template {
@@ -36,6 +36,7 @@ export interface Template {
   validate: (dataset: Dataset, style?: ChartStyle) => Issue[];
   Renderer: ComponentType<RendererProps>;
   analysisMethods?: {method: string; label: string; description: string; params?: Record<string,unknown>}[];
+  exampleAnalysis?: AnalysisState;
   prepareAnalysis?: (method:string,dataset:Dataset,params:Record<string,unknown>)=>{data:Record<string,unknown>;params:Record<string,unknown>};
   layerTypes?: {type:string; label:string; help:string; example?: Dataset}[];
 }

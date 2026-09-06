@@ -7,3 +7,6 @@ __pycache__/
 .env
 *.log
 tests/artifacts/tmp/
+
+web/test-results/
+*.tsbuildinfo

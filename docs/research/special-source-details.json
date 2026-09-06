@@ -1,0 +1,556 @@
+{
+  "asOf": "2026-09-06",
+  "scope": "22 OpenAcad 模板对应 20 个唯一源站入口；二值图两形状与富集点/柱变体不重复计源站功能",
+  "boundary": "本文件记录可证实源站事实和未确认项，不能用 OpenAcad 实现反推 ChiPlot 功能。交互验收文件仅说明 OpenAcad。",
+  "previewSource": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/live-index.js",
+  "previewExistenceSamples": [
+    {
+      "id": "heatmap",
+      "url": "https://1996xjm.github.io/chiplot/img/cover/heatmap-1.jpg",
+      "status": 200,
+      "check": "2026-09-06 13:07 UTC curl HEAD，系统证书校验开启",
+      "initialPythonTransportError": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>",
+      "contentType": "image/jpeg"
+    },
+    {
+      "id": "protein-domains",
+      "url": "https://1996xjm.github.io/chiplot/img/cover/conservedDomainsNCBIPlot.jpg",
+      "status": 200,
+      "check": "2026-09-06 13:07 UTC curl HEAD，系统证书校验开启",
+      "initialPythonTransportError": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1077)>",
+      "contentType": "image/jpeg"
+    },
+    {
+      "id": "network",
+      "url": "https://1996xjm.github.io/chiplot/img/cover/networkPlot.jpg",
+      "status": 200,
+      "check": "2026-09-06 13:07 UTC curl HEAD，系统证书校验开启",
+      "initialPythonTransportError": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>",
+      "contentType": "image/jpeg"
+    },
+    {
+      "id": "map",
+      "url": "https://1996xjm.github.io/chiplot/img/cover/mapPlot.jpg",
+      "status": 200,
+      "check": "2026-09-06 13:07 UTC curl HEAD，系统证书校验开启",
+      "initialPythonTransportError": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1077)>",
+      "contentType": "image/jpeg"
+    }
+  ],
+  "records": [
+    {
+      "openacadId": "heatmap",
+      "nameZh": "数值热图",
+      "sourceUrl": "https://www.chiplot.online/heatmap.html",
+      "sourceFamily": "热图/聚类热图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/heatmap.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/heatmap.js",
+        "scriptSha256": "bf115c271659db873c918c54198ba2142546c5df1b992aeb1dfca2044b597ed9"
+      },
+      "confirmed": "数值矩阵，第一列标识，其余数值；标准化/距离/聚类属于实际统计分支。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/heatmap-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/heatmap.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "circle-heatmap",
+      "nameZh": "圈形热图",
+      "sourceUrl": "https://www.chiplot.online/circle_heatmap.html",
+      "sourceFamily": "热图/聚类热图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/circle_heatmap.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/heatmap.js",
+        "scriptSha256": "bf115c271659db873c918c54198ba2142546c5df1b992aeb1dfca2044b597ed9"
+      },
+      "confirmed": "与矩形热图共享数值矩阵族，圈形布局；不作为第二套统计算法计数。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/circleHeatmap-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/circleHeatmap.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "binary-dot",
+      "nameZh": "圆点二值图",
+      "sourceUrl": "https://www.chiplot.online/binary_plot2.html",
+      "sourceFamily": "二值矩阵",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/binary_plot2.html",
+        "scriptSnapshot": null,
+        "scriptSha256": null
+      },
+      "confirmed": "存在/缺失矩阵；0/1；圆点与矩形是图形变体。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/binaryPlot2.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "binary-rect",
+      "nameZh": "方格二值图",
+      "sourceUrl": "https://www.chiplot.online/binary_plot2.html",
+      "sourceFamily": "二值矩阵",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/binary_plot2.html",
+        "scriptSnapshot": null,
+        "scriptSha256": null
+      },
+      "confirmed": "与圆点共用编辑器；两者不能作为独立功能重复计数。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/binaryPlot2.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "bubble-matrix",
+      "nameZh": "数值气泡矩阵",
+      "sourceUrl": "https://www.chiplot.online/bubble_plot.html",
+      "sourceFamily": "气泡矩阵",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/bubble_plot.html",
+        "scriptSnapshot": null,
+        "scriptSha256": null
+      },
+      "confirmed": "数值同时映射大小及颜色；精确上游列角色待核实。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/bubblePlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/bubblePlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "correlation",
+      "nameZh": "组内相关性热图",
+      "sourceUrl": "https://www.chiplot.online/correlation_heatmap.html",
+      "sourceFamily": "相关性",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/correlation_heatmap.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/heatmap.js",
+        "scriptSha256": "bf115c271659db873c918c54198ba2142546c5df1b992aeb1dfca2044b597ed9"
+      },
+      "confirmed": "原始样本矩阵可以统计计算；结果矩阵仅绘图，两种路径须区分。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap-2.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap-1.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "double-correlation",
+      "nameZh": "组间相关性热图",
+      "sourceUrl": "https://www.chiplot.online/dubble_matrices_correlation_heatmap.html",
+      "sourceFamily": "相关性",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/dubble_matrices_correlation_heatmap.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/heatmap.js",
+        "scriptSha256": "bf115c271659db873c918c54198ba2142546c5df1b992aeb1dfca2044b597ed9"
+      },
+      "confirmed": "两组原始样本矩阵；组間相关矩阵可以非方阵。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/dubbleMatricesCorrelationHeatmap.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "mantel",
+      "nameZh": "Mantel 关联热图",
+      "sourceUrl": "https://www.chiplot.online/mantel_test_correlation_heatmap.html",
+      "sourceFamily": "相关性+Mantel",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/mantel_test_correlation_heatmap.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/mantel_test_correlation_heatmap.js",
+        "scriptSha256": "010b3c638dfe1d6c271b5f9a7bf9ff8eb78f6046763eeacdfb090992f4625c41"
+      },
+      "confirmed": "环境变量、群落矩阵；mantel.partial 在 OpenAcad 必须另给独立控制矩阵；不能按上游页面不明字段猜测。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/mantelTestCorrelationHeatmap-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/mantelTestCorrelationHeatmap.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "venn",
+      "nameZh": "韦恩集合交集图",
+      "sourceUrl": "https://www.chiplot.online/vennPlot.html",
+      "sourceFamily": "集合交集",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/vennPlot.html",
+        "scriptSnapshot": null,
+        "scriptSha256": null
+      },
+      "confirmed": "按集合元素求交并；源站支持的组数上限和特殊交集样式待核实。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/vennPlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/vennPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "packing",
+      "nameZh": "分组圆堆砌图",
+      "sourceUrl": "https://www.chiplot.online/packing_bubble_plot.html",
+      "sourceFamily": "圆堆砌",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/packing_bubble_plot.html",
+        "scriptSnapshot": null,
+        "scriptSha256": null
+      },
+      "confirmed": "数量/类别驱动圆堆砌；具体输入字段和分组层级待核实。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/packingBubblePlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "sankey",
+      "nameZh": "桑基流向图",
+      "sourceUrl": "https://www.chiplot.online/sankey_plot.html",
+      "sourceFamily": "桑基图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/sankey_plot.html",
+        "scriptSnapshot": null,
+        "scriptSha256": null
+      },
+      "confirmed": "来源、目标与数值流量；源站环路处理待核实。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/sankeyPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "network",
+      "nameZh": "动态网络图",
+      "sourceUrl": "https://www.chiplot.online/network_plot.html",
+      "sourceFamily": "关系网络",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/network_plot.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/network_plot.js",
+        "scriptSha256": "3436ed69a193c117938c8c0b5b90ed1222364477b241875a0df4fa9c52a33aed"
+      },
+      "confirmed": "实际入口加载 nodes.tsv 与 links.tsv 两文件；节点/边标签、点型、力参数、arc/line、uniform/source/target 边颜色。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/networkPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "map",
+      "nameZh": "地图数据可视化",
+      "sourceUrl": "https://www.chiplot.online/map_plot.html",
+      "sourceFamily": "地理绘图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/map_plot.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/map_plot.js",
+        "scriptSha256": "66cdf35d8785dba2ce7c1aa0035e7f1125b1de6cfa84830caeb4848595138184"
+      },
+      "confirmed": "map_coordinate.tsv；代码确认五种投影以及中心经纬度/比例/点样式；原站 worldGEO_revised_China.json 不直接复用。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/mapPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "gene-cluster",
+      "nameZh": "基因簇排列图",
+      "sourceUrl": "https://www.chiplot.online/gene_cluster.html",
+      "sourceFamily": "基因簇",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/gene_cluster.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/gene_cluster.js",
+        "scriptSha256": "dcb453f1fbe36a1f0bc3cd4696f16bbaf1df120a0310e5bca1973cb50a21065f"
+      },
+      "confirmed": "gene_cluster_gap.tsv；代码包含两类箭头、断轴、标签、比例轴、类别颜色、同源连接图层；非序列比对。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/geneCluster-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/geneCluster.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "protein-domains",
+      "nameZh": "保守结构域",
+      "sourceUrl": "https://www.chiplot.online/conserved_domains_plot.html",
+      "sourceFamily": "蛋白区间",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/conserved_domains_plot.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/conserved_domains_plot.js",
+        "scriptSha256": "61bdd879bf7d975fa36590d48ddbef2255d602793aa214beb6e8e4f9b0735c52"
+      },
+      "confirmed": "两个文件：CDD hitdata.txt+sequence.fasta；命中 Query/From/To/Short name 与 FASTA 序列长度连接。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/conservedDomainsNCBIPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "protein-motifs",
+      "nameZh": "保守基序",
+      "sourceUrl": "https://www.chiplot.online/conserved_motif_plot.html",
+      "sourceFamily": "蛋白区间",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/conserved_motif_plot.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/conserved_motif_plot.js",
+        "scriptSha256": "692fde18892a3cc38f5bb4f88aad3a8ed7712043b7e3db8276e44c546a5f9e88"
+      },
+      "confirmed": "单 MEME XML：sequence id/name/length，motif id/width，scanned_sites sequence_id，scanned_site motif_id/position；position+1 转起点。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/conservedMotifPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "genome-circos",
+      "nameZh": "基因组圈图",
+      "sourceUrl": "https://www.chiplot.online/circos.html",
+      "sourceFamily": "基因组圈图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/circos.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/circos.js",
+        "scriptSha256": "a676d83a0bdb2af4d4bfe8320eb2e7145d91c9385d137ad83bbdb46cd0d7952a"
+      },
+      "confirmed": "FASTA 上传给后端，GC-content 和 GC-skew 窗口参数；也有 localJson/webJson 路径；GC 计算不是单纯绘图。",
+      "previewUrls": ["https://1996xjm.github.io/chiplot/img/cover/circos.jpg"],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "volcano",
+      "nameZh": "火山图",
+      "sourceUrl": "https://www.chiplot.online/Volcano_plot.html",
+      "sourceFamily": "火山图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/Volcano_plot.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/Volcano_plot.js",
+        "scriptSha256": "11170c44d8e7f46397a106403de44e1e51a9bc640aba6fd2248536c49e8de724"
+      },
+      "confirmed": "输入差异分析结果；代码读第2列 log2FC、第3列显著性数据并阈值分类，不执行差异表达检验。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/volcanoPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "enrichment-dot",
+      "nameZh": "富集气泡图",
+      "sourceUrl": "https://www.chiplot.online/enrich_plot.html",
+      "sourceFamily": "富集图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/enrich_plot.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/enrich_plot.js",
+        "scriptSha256": "e8e3fd68f3f30257894ade6e387bec52d19ed734ac4cb854947bfef20c4a3457"
+      },
+      "confirmed": "示例 GO_enrich.tsv 列 ID/GeneRatio/Description/Qvalue/Count；展示用户已计算结果。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/enrichPlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/enrichPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "enrichment-bar",
+      "nameZh": "富集条形图",
+      "sourceUrl": "https://www.chiplot.online/enrich_plot.html",
+      "sourceFamily": "富集图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/enrich_plot.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/enrich_plot.js",
+        "scriptSha256": "e8e3fd68f3f30257894ade6e387bec52d19ed734ac4cb854947bfef20c4a3457"
+      },
+      "confirmed": "与气泡共用富集入口和输入；OpenAcad 增加独立条形模板，不计为新增源站编辑器。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/enrichPlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/enrichPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "enrichment-circle",
+      "nameZh": "富集圈图",
+      "sourceUrl": "https://www.chiplot.online/circle_enrich_plot.html",
+      "sourceFamily": "富集图",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/circle_enrich_plot.html",
+        "scriptSnapshot": null,
+        "scriptSha256": null
+      },
+      "confirmed": "源站圈形入口；原始全部可选列语义待核实，OpenAcad 使用明确的类别/背景/上下调契约。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/circleEnrichPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    },
+    {
+      "openacadId": "synteny",
+      "nameZh": "MCScanX 共线性图",
+      "sourceUrl": "https://www.chiplot.online/McScanX_synteny_plot.html",
+      "sourceFamily": "基因组共线性",
+      "evidence": {
+        "kind": "公开页面清单与本地缓存前端代码检查，未声称源站逐项实际操作",
+        "pageSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/McScanX_synteny_plot.html",
+        "scriptSnapshot": "/Users/a1-6/Documents/Codex/Research/2026-09-06-chiplot/evidence/public-pages/McScanX_synteny_plot.js",
+        "scriptSha256": "3b8877af79c74eeba682242d0b14924178f8e2974b28b326abc94f98ea14460c"
+      },
+      "confirmed": "同时加载 combined.gff 与 combined.collinearity；展示已计算共线性，不在该前端重新执行 MCScanX。",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/McScanXSyntenyPlot.jpg"
+      ],
+      "sourceInputFormats": "逐图已确认示例扩展名见 confirmed；通用上传/粘贴/表格填写能力及所有接受格式待核实",
+      "sourceOptionalFields": "待核实",
+      "sourceExportFormats": "待核实：不能以共享按钮推定各图已可成功导出",
+      "sourceExportSizeResolutionTransparency": "待核实",
+      "sourceProjectReopen": "前端代码存在状态路径不等于逐图重开验证；待核实",
+      "sourceAvailability": "公开入口在已取得的清单中；页面/代码已取回不等于交互完整可用",
+      "implementationEvidence": "web/src/templates/special/evidence/browser-qa.json；special.test.tsx；browser-interactions.json"
+    }
+  ]
+}

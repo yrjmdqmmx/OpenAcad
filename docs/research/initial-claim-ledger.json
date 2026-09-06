@@ -1,0 +1,499 @@
+{
+  "date": "2026-09-06",
+  "sources": [
+    {
+      "id": "S01",
+      "url": "https://www.chiplot.online/",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S02",
+      "url": "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/index-Da5ncyjd.js",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "deployed_frontend",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S03",
+      "url": "https://www.chiplot.online/dubble_matrices_correlation_heatmap.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S04",
+      "url": "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/dubble_matrices_correlation_heatmap-DgaCqKzj.js",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "deployed_frontend",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S05",
+      "url": "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/XYPlotCore-BNMdQbUR.js",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "deployed_frontend",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S06",
+      "url": "https://www.chiplot.online/tvbot.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S07",
+      "url": "https://www.chiplot.online/treeVersionHistory.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S08",
+      "url": "https://1996xjm.github.io/tvbot/user_interface/attribute_main/data.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S09",
+      "url": "https://1996xjm.github.io/tvbot/tree_annotation/dataset_layer_data_file.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S10",
+      "url": "https://1996xjm.github.io/tvbot/tree_annotation/dataset_layer.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S11",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10320113/",
+      "accessed": "2026-09-06",
+      "publisher": "Nucleic Acids Research via PMC",
+      "type": "paper",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S12",
+      "url": "https://www.chiplot.online/#BioPlot",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S13",
+      "url": "https://www.chiplot.online/static/help_book/polarAxis-like_plot/circleEnrichPlot/data.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S14",
+      "url": "https://www.chiplot.online/circos.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S15",
+      "url": "https://www.chiplot.online/pca.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S16",
+      "url": "https://www.chiplot.online/pcoa.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S17",
+      "url": "https://www.chiplot.online/nmds.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S18",
+      "url": "https://www.chiplot.online/CCA.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S19",
+      "url": "https://www.chiplot.online/RDA.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S20",
+      "url": "https://www.chiplot.online/mantel_test_correlation_heatmap.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S21",
+      "url": "https://www.chiplot.online/group_error_bar_plot.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S22",
+      "url": "https://www.chiplot.online/bar_plot.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S23",
+      "url": "https://www.chiplot.online/network_plot.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S24",
+      "url": "https://www.chiplot.online/map_plot.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S25",
+      "url": "https://www.chiplot.online/static/ChiBioTools/src/ab1_file.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S26",
+      "url": "https://www.chiplot.online/static/ChiBioTools/src/ko2pathwayInfo.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S27",
+      "url": "https://www.chiplot.online/static/help_book/user_interface/",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S28",
+      "url": "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/MainPlotCore-DVhumK6J.js",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "deployed_frontend",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S29",
+      "url": "https://www.chiplot.online/static/help_book/user_interface/attribute_main/export.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S30",
+      "url": "https://1996xjm.github.io/tvbot/user_interface/attribute_main/export.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S31",
+      "url": "https://www.chiplot.online/myTrees.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S32",
+      "url": "https://github.com/1996xjm/TVBOT/issues/4",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "user_issue",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S33",
+      "url": "https://figshare.com/articles/software/Source_code_for_tvBOT/22682701",
+      "accessed": "2026-09-06",
+      "publisher": "Figshare",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S34",
+      "url": "https://www.chiplot.online/bar_with_line_plot.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S35",
+      "url": "https://github.com/1996xjm/TVBOT/issues/13",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "user_issue",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S36",
+      "url": "https://github.com/1996xjm/TVBOT/issues/9",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "user_issue",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S37",
+      "url": "https://github.com/1996xjm/TVBOT/issues/11",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "user_issue",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S38",
+      "url": "https://www.chiplot.online/treeGallery.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S39",
+      "url": "https://www.chiplot.online/legacy-index.html",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S40",
+      "url": "https://1996xjm.github.io/tvbot/",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S41",
+      "url": "https://github.com/1996xjm/TVBOT/issues",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "official_page",
+      "caveat": "Current deployed files may change; issue reports are unverified unless explicitly reproduced."
+    },
+    {
+      "id": "S42",
+      "url": "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/mantel_test_correlation_heatmap-D4fXgFxq.js",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "deployed_frontend"
+    },
+    {
+      "id": "S43",
+      "url": "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/packing_bubble_plot-BuKmEPir.js",
+      "accessed": "2026-09-06",
+      "publisher": "ChiPlot / tvBOT",
+      "type": "deployed_frontend"
+    }
+  ],
+  "claims": [
+    {
+      "id": "video-scope",
+      "claim": "58.4-second local video covers gallery and one double-matrix correlation workflow",
+      "evidence_level": "high-direct",
+      "evidence": [
+        "video/extract.log",
+        "video/transcript.srt",
+        "video/ocr.json",
+        "video/contact-1.jpg",
+        "video/contact-2.jpg"
+      ],
+      "limits": "Video publish date unknown; audio transcription corrected against frames."
+    },
+    {
+      "id": "catalog-count",
+      "claim": "54 drawing cards across 15 plotting categories; 52 unique homepage drawing paths; 8 courses separate",
+      "evidence_level": "high-direct",
+      "evidence": [
+        "chiplot-catalog.json",
+        "live-index.js"
+      ],
+      "limits": "Three tree cards share tvBOT portal; counts are not algorithms or passed tests."
+    },
+    {
+      "id": "availability",
+      "claim": "51 of 52 unique drawing paths return 200; bar_with_line_plot.html returns 404",
+      "evidence_level": "high-direct",
+      "evidence": [
+        "chiplot-page-status.json"
+      ],
+      "limits": "HTTP status does not validate full module behavior."
+    },
+    {
+      "id": "correlation-paths",
+      "claim": "Both precomputed r/P matrices and raw double-matrix correlation requests are implemented",
+      "evidence_level": "high-implementation",
+      "evidence": [
+        "live-correlation.js"
+      ],
+      "limits": "Raw input numerical computation not independently tested."
+    },
+    {
+      "id": "correlation-server",
+      "claim": "Precomputed r upload also calls /ChiPlot/heatmap for clustering",
+      "evidence_level": "high-implementation",
+      "evidence": [
+        "live-correlation.js"
+      ],
+      "limits": "No server retention audit."
+    },
+    {
+      "id": "statistics",
+      "claim": "PCA/PCoA/NMDS/CCA/RDA and Mantel expose data analysis requests",
+      "evidence_level": "high-implementation",
+      "evidence": [
+        "public-pages"
+      ],
+      "limits": "Backend algorithms and numerical accuracy not audited."
+    },
+    {
+      "id": "bioplot",
+      "claim": "CDD, MEME, MCScanX, volcano and enrichment generally visualize upstream results",
+      "evidence_level": "high-implementation",
+      "evidence": [
+        "public-pages"
+      ],
+      "limits": "Circos has a FASTA-derived GC calculation branch."
+    },
+    {
+      "id": "tvbot",
+      "claim": "Tree layouts, edits and multi-layer annotation supported in docs and paper",
+      "evidence_level": "high-docs",
+      "evidence": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10320113/",
+        "https://1996xjm.github.io/tvbot/"
+      ],
+      "limits": "26 annotation types is 2023 paper scope; current total not asserted."
+    },
+    {
+      "id": "svg-live",
+      "claim": "Default double-matrix example rendered; edited legend exported and recovered in SVG",
+      "evidence_level": "high-direct",
+      "evidence": [
+        "chiplot-research-correlation.svg"
+      ],
+      "limits": "32577 bytes; 82 rect; 25 text; embedded 20x200 PNG gradient. One example only."
+    },
+    {
+      "id": "json-live",
+      "claim": "Default example drawing-state save showed No user data!",
+      "evidence_level": "high-direct",
+      "evidence": [
+        "Browser CUA observation in task transcript"
+      ],
+      "limits": "No uploaded-user-data save/restore loop tested; not a general failure claim."
+    },
+    {
+      "id": "pca-live",
+      "claim": "Default PCA scatter rendered with PC1 92.46% and PC2 5.31%; controls visible",
+      "evidence_level": "high-direct",
+      "evidence": [
+        "Browser CUA observation in task transcript"
+      ],
+      "limits": "Default example only; no independent numerical validation."
+    },
+    {
+      "id": "export-server",
+      "claim": "SVG is downloaded from a browser Blob; PDF/EPS/PNG send SVG to server conversion",
+      "evidence_level": "high-implementation",
+      "evidence": [
+        "live-export-core.js"
+      ],
+      "limits": "Other formats not live-tested."
+    },
+    {
+      "id": "tree-storage",
+      "claim": "My Trees page says guest files kept for three months and account permanent storage forthcoming",
+      "evidence_level": "high-page",
+      "evidence": [
+        "https://www.chiplot.online/myTrees.html"
+      ],
+      "limits": "Actual retention/deletion behavior not tested."
+    },
+    {
+      "id": "fee-license",
+      "claim": "Public sample edit/SVG available without login/payment; paid courses separate; archive CC BY 4.0",
+      "evidence_level": "high-bounded",
+      "evidence": [
+        "https://www.chiplot.online/",
+        "https://figshare.com/articles/software/Source_code_for_tvBOT/22682701",
+        "https://github.com/1996xjm/TVBOT/issues/4"
+      ],
+      "limits": "No permanent free promise; archive license cannot be generalized to all current site code."
+    },
+    {
+      "id": "chibiotools",
+      "claim": "AB1 viewer and KO-to-pathway tool are separate server-assisted tools",
+      "evidence_level": "high-implementation",
+      "evidence": [
+        "public-pages",
+        "https://www.chiplot.online/static/ChiBioTools/src/ab1_file.html",
+        "https://www.chiplot.online/static/ChiBioTools/src/ko2pathwayInfo.html"
+      ],
+      "limits": "No private samples uploaded; database freshness unknown."
+    }
+  ],
+  "review_corrections": [
+    "Path A server clustering made explicit",
+    "Mantel methods and data contracts added",
+    "Circle Packing narrowed to flat value/category data"
+  ]
+}

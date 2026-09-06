@@ -1,0 +1,344 @@
+[
+  {
+    "url": "https://www.chiplot.online/static/Ali/data/NJ_tree.treefile",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/CCA_data/seq_table_prop_no_chloro_mito.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/CCA_data/varechem.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/GO_enrich.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/McScanX/combined.collinearity",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/McScanX/combined.gff",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/Volcanoplot.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_category.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data-1.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/binary_plot.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/binary_plot2.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/boxplot_test_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/bubble_plot.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/circleEnrichPlot.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/circlePackingPlot.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/circos.json",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/json",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/conserved_domain/hitdata.txt",
+    "checkedAt": "2026-09-06",
+    "http": "200 text/plain",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/conserved_domain/meme_4.xml",
+    "checkedAt": "2026-09-06",
+    "http": "200 text/xml",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/conserved_domain/sequence.fasta",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/corr_pValue.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/corr_rValue.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/correlation_heatmap.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/dumbbell_data.csv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/energy.csv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/gene_cluster_gap.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/group_line_plot.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/heatmap_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/lollipop_plot_category.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/lowess_fit.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_data/Spec01.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_data/Spec02.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_data/Spec03.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_data/varechem.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/Spec01.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/Spec02.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/Spec03.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/pValue.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/rValue.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/map_coordinate.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/network/unweight.glasso_edge.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/network/unweight.glasso_node.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/pcoa_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/pie_plot_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/radar_plot_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/raincloud_plot_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/scatter_plot_errorBar_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/scatter_plot_group.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data-1.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data-2.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data-3.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data-4.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/upsetPlot.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/vennPlot.tsv",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/octet-stream",
+    "transportError": ""
+  },
+  {
+    "url": "https://www.chiplot.online/static/xiaochiPlot/data/worldGEO_revised_China.json",
+    "checkedAt": "2026-09-06",
+    "http": "200 application/json",
+    "transportError": ""
+  }
+]

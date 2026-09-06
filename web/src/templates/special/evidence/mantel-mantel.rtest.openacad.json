@@ -1,0 +1,641 @@
+{
+  "schemaVersion": 1,
+  "id": "8f64226f-fded-47fe-a4b5-c99802d42b50",
+  "name": "Mantel 关联热图 · 模拟数据",
+  "templateId": "mantel",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:24:17.086Z",
+  "updatedAt": "2026-09-06T13:24:22.288Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "correlation",
+        "name": "环境相关系数（模拟）",
+        "role": "correlation",
+        "columns": [
+          "变量",
+          "温度",
+          "水分",
+          "氮含量",
+          "有机质"
+        ],
+        "rows": [
+          [
+            "温度",
+            1,
+            0.67,
+            -0.42,
+            0.21
+          ],
+          [
+            "水分",
+            0.67,
+            1,
+            -0.25,
+            0.58
+          ],
+          [
+            "氮含量",
+            -0.42,
+            -0.25,
+            1,
+            -0.73
+          ],
+          [
+            "有机质",
+            0.21,
+            0.58,
+            -0.73,
+            1
+          ]
+        ]
+      },
+      {
+        "id": "pvalues",
+        "name": "显著性 P 值（模拟）",
+        "role": "pvalues",
+        "columns": [
+          "变量",
+          "温度",
+          "水分",
+          "氮含量",
+          "有机质"
+        ],
+        "rows": [
+          [
+            "温度",
+            0,
+            0.003,
+            0.04,
+            0.3
+          ],
+          [
+            "水分",
+            0.003,
+            0,
+            0.3,
+            0.04
+          ],
+          [
+            "氮含量",
+            0.04,
+            0.3,
+            0,
+            0.003
+          ],
+          [
+            "有机质",
+            0.3,
+            0.04,
+            0.003,
+            0
+          ]
+        ]
+      },
+      {
+        "id": "mantel",
+        "name": "Mantel 检验结果（模拟）",
+        "role": "mantel",
+        "columns": [
+          "source",
+          "target",
+          "r",
+          "p"
+        ],
+        "rows": [
+          [
+            "细菌群落",
+            "温度",
+            0.36,
+            0.01
+          ],
+          [
+            "细菌群落",
+            "水分",
+            0.61,
+            0.003
+          ],
+          [
+            "真菌群落",
+            "氮含量",
+            0.28,
+            0.08
+          ],
+          [
+            "真菌群落",
+            "有机质",
+            -0.42,
+            0.02
+          ],
+          [
+            "真菌群落",
+            "温度",
+            0.15,
+            0.2
+          ]
+        ]
+      },
+      {
+        "id": "raw-environment",
+        "name": "原始环境观测（模拟，可执行分析）",
+        "role": "raw-environment",
+        "columns": [
+          "样本",
+          "温度",
+          "水分",
+          "氮含量",
+          "有机质"
+        ],
+        "rows": [
+          [
+            "样本1",
+            12,
+            20,
+            15,
+            3
+          ],
+          [
+            "样本2",
+            13.9,
+            23.4,
+            16.7,
+            3.65
+          ],
+          [
+            "样本3",
+            15.8,
+            26.8,
+            14.4,
+            4.3
+          ],
+          [
+            "样本4",
+            14.7,
+            30.2,
+            16.1,
+            3.75
+          ],
+          [
+            "样本5",
+            16.6,
+            25.6,
+            13.8,
+            4.4
+          ],
+          [
+            "样本6",
+            18.5,
+            29,
+            15.5,
+            5.05
+          ],
+          [
+            "样本7",
+            17.4,
+            32.4,
+            13.2,
+            4.5
+          ],
+          [
+            "样本8",
+            19.3,
+            35.8,
+            14.9,
+            5.15
+          ],
+          [
+            "样本9",
+            21.2,
+            31.2,
+            12.6,
+            5.8
+          ],
+          [
+            "样本10",
+            20.1,
+            34.6,
+            14.3,
+            5.25
+          ],
+          [
+            "样本11",
+            22,
+            38,
+            12,
+            5.9
+          ],
+          [
+            "样本12",
+            23.9,
+            41.4,
+            13.7,
+            6.55
+          ]
+        ]
+      },
+      {
+        "id": "raw-community",
+        "name": "原始群落丰度（模拟，可执行分析）",
+        "role": "raw-community",
+        "columns": [
+          "样本",
+          "物种甲",
+          "物种乙",
+          "物种丙"
+        ],
+        "rows": [
+          [
+            "样本1",
+            8,
+            25,
+            5
+          ],
+          [
+            "样本2",
+            11,
+            27,
+            9
+          ],
+          [
+            "样本3",
+            14,
+            29,
+            13
+          ],
+          [
+            "样本4",
+            14,
+            31,
+            17
+          ],
+          [
+            "样本5",
+            17,
+            21,
+            21
+          ],
+          [
+            "样本6",
+            20,
+            23,
+            5
+          ],
+          [
+            "样本7",
+            20,
+            25,
+            9
+          ],
+          [
+            "样本8",
+            23,
+            27,
+            13
+          ],
+          [
+            "样本9",
+            26,
+            17,
+            17
+          ],
+          [
+            "样本10",
+            26,
+            19,
+            21
+          ],
+          [
+            "样本11",
+            29,
+            21,
+            5
+          ],
+          [
+            "样本12",
+            32,
+            23,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "raw-control",
+        "name": "偏 Mantel 控制数据（模拟）",
+        "role": "raw-control",
+        "columns": [
+          "样本",
+          "海拔",
+          "距离"
+        ],
+        "rows": [
+          [
+            "样本1",
+            50,
+            3
+          ],
+          [
+            "样本2",
+            62,
+            5.8
+          ],
+          [
+            "样本3",
+            74,
+            8.6
+          ],
+          [
+            "样本4",
+            86,
+            11.4
+          ],
+          [
+            "样本5",
+            78,
+            6.2
+          ],
+          [
+            "样本6",
+            90,
+            9
+          ],
+          [
+            "样本7",
+            102,
+            11.8
+          ],
+          [
+            "样本8",
+            114,
+            14.600000000000001
+          ],
+          [
+            "样本9",
+            106,
+            9.4
+          ],
+          [
+            "样本10",
+            118,
+            12.2
+          ],
+          [
+            "样本11",
+            130,
+            15
+          ],
+          [
+            "样本12",
+            142,
+            17.8
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 1120,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 180,
+    "title": "Mantel 关联热图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "cellGap": 2,
+    "cellStroke": 0.5,
+    "cellStrokeColor": "#ffffff",
+    "showValues": true,
+    "digits": 2,
+    "lowColor": "#287d8e",
+    "midColor": "#f9f6eb",
+    "highColor": "#c45963",
+    "diverging": true,
+    "rowOrder": "input",
+    "labelAngle": -35,
+    "triangle": "full",
+    "cellShape": "rect",
+    "hideDiagonal": false,
+    "showStars": true,
+    "pFilter": 1,
+    "linkWidthScale": 8,
+    "linkShape": "curve",
+    "significantColor": "#3d977f",
+    "nonsignificantColor": "#bec8ca",
+    "negativeDash": true,
+    "colorCenter": 0,
+    "inputMode": "raw"
+  },
+  "layers": [],
+  "layout": {},
+  "analysis": {
+    "method": "mantel.rtest",
+    "params": {
+      "speciesDistance": "bray",
+      "environmentDistance": "euclidean",
+      "controlDistance": "euclidean",
+      "permutations": 999,
+      "seed": 2026
+    },
+    "inputHash": "ccccdfd629fa0d52fdc21fa820d15c744a7c87d514de8649a675fe0cb38a7e9d",
+    "result": {
+      "schemaVersion": 1,
+      "method": "mantel.rtest",
+      "data": {
+        "edges": [
+          {
+            "source": "raw-community",
+            "target": "温度",
+            "r": 0.6736461064415339,
+            "p": 0.001,
+            "n": 12,
+            "adjustedP": 0.001
+          },
+          {
+            "source": "raw-community",
+            "target": "水分",
+            "r": 0.4368986591027589,
+            "p": 0.005,
+            "n": 12,
+            "adjustedP": 0.005
+          },
+          {
+            "source": "raw-community",
+            "target": "氮含量",
+            "r": 0.186438101462982,
+            "p": 0.102,
+            "n": 12,
+            "adjustedP": 0.102
+          },
+          {
+            "source": "raw-community",
+            "target": "有机质",
+            "r": 0.6298437931434407,
+            "p": 0.001,
+            "n": 12,
+            "adjustedP": 0.001
+          }
+        ],
+        "method": "mantel.rtest",
+        "permutations": 999,
+        "seed": 2026,
+        "alternative": "greater",
+        "environmentCorrelation": {
+          "rowLabels": [
+            "温度",
+            "水分",
+            "氮含量",
+            "有机质"
+          ],
+          "columnLabels": [
+            "温度",
+            "水分",
+            "氮含量",
+            "有机质"
+          ],
+          "r": [
+            [
+              1,
+              0.9017484978910266,
+              -0.656730331198131,
+              0.9959920490321839
+            ],
+            [
+              0.9017484978910266,
+              1,
+              -0.5122265432233263,
+              0.8760173255850219
+            ],
+            [
+              -0.656730331198131,
+              -0.5122265432233263,
+              1,
+              -0.6424132397304021
+            ],
+            [
+              0.9959920490321839,
+              0.8760173255850219,
+              -0.6424132397304021,
+              0.9999999999999999
+            ]
+          ],
+          "p": [
+            [
+              1,
+              0.00006101961622858045,
+              0.020342680817162898,
+              8.09020065824228e-12
+            ],
+            [
+              0.00006101961622858045,
+              1,
+              0.08864216196159913,
+              0.00018669613787254837
+            ],
+            [
+              0.020342680817162898,
+              0.08864216196159913,
+              1,
+              0.024278271877143077
+            ],
+            [
+              8.09020065824228e-12,
+              0.00018669613787254837,
+              0.024278271877143077,
+              1
+            ]
+          ],
+          "adjustedP": [
+            [
+              1,
+              0.00006101961622858045,
+              0.020342680817162898,
+              8.09020065824228e-12
+            ],
+            [
+              0.00006101961622858045,
+              1,
+              0.08864216196159913,
+              0.00018669613787254837
+            ],
+            [
+              0.020342680817162898,
+              0.08864216196159913,
+              1,
+              0.024278271877143077
+            ],
+            [
+              8.09020065824228e-12,
+              0.00018669613787254837,
+              0.024278271877143077,
+              1
+            ]
+          ],
+          "n": 12,
+          "correlation": "pearson",
+          "hypothesisCount": 6,
+          "pAdjust": "none"
+        }
+      },
+      "provenance": {
+        "engine": "R",
+        "method": "mantel.rtest",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 2026,
+        "inputSha256": "bf9b86f4eb72af1c65de967bf1a98790e6c81330f1754f85175bd40660d89dd7",
+        "parameters": {
+          "seed": 2026,
+          "speciesDistance": "bray",
+          "environmentDistance": "euclidean",
+          "controlDistance": "euclidean",
+          "correlation": "pearson",
+          "permutations": 999,
+          "pAdjust": "none",
+          "pseudocount": 0
+        },
+        "r": "4.6.1",
+        "rPackages": {
+          "vegan": "2.7.6",
+          "mgcv": "1.9.4",
+          "ape": "5.8.1",
+          "ade4": "1.7.24",
+          "jsonlite": "2.0.0"
+        },
+        "rng": "L'Ecuyer-CMRG"
+      },
+      "diagnostics": []
+    }
+  }
+}

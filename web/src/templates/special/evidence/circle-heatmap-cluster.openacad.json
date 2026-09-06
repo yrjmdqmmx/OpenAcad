@@ -1,0 +1,343 @@
+{
+  "schemaVersion": 1,
+  "id": "82e4d061-073c-49c6-89aa-1a82d1458f33",
+  "name": "圈形热图 · 模拟数据",
+  "templateId": "circle-heatmap",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:24:12.083Z",
+  "updatedAt": "2026-09-06T13:24:13.538Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "matrix",
+        "name": "表达量模拟矩阵",
+        "role": "matrix",
+        "columns": [
+          "样本",
+          "代谢通路A",
+          "代谢通路B",
+          "代谢通路C",
+          "代谢通路D"
+        ],
+        "rows": [
+          [
+            "样本甲",
+            2,
+            6,
+            11,
+            4
+          ],
+          [
+            "样本乙",
+            6,
+            11.7,
+            5.4,
+            10.1
+          ],
+          [
+            "样本丙",
+            11,
+            5.4,
+            10.8,
+            6.199999999999999
+          ],
+          [
+            "样本丁",
+            4,
+            10.1,
+            6.199999999999999,
+            12.3
+          ],
+          [
+            "样本戊",
+            8,
+            4.8,
+            11.6,
+            19.4
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 110,
+    "title": "圈形热图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "cellGap": 2,
+    "cellStroke": 0.5,
+    "cellStrokeColor": "#ffffff",
+    "showValues": true,
+    "digits": 2,
+    "lowColor": "#287d8e",
+    "midColor": "#f9f6eb",
+    "highColor": "#c45963",
+    "diverging": true,
+    "rowOrder": "input",
+    "innerRadius": 65,
+    "startAngle": -90,
+    "sweepAngle": 310,
+    "blankZero": false,
+    "showDendrogram": true
+  },
+  "layers": [],
+  "layout": {},
+  "analysis": {
+    "method": "cluster",
+    "params": {
+      "linkage": "complete",
+      "distance": "euclidean",
+      "standardization": "None",
+      "direction": "column",
+      "axis": "both"
+    },
+    "inputHash": "0907121fd59cce509ee60b2eef471ae356e41e9c8d3f23f36d2cbbef1c78551b",
+    "result": {
+      "schemaVersion": 1,
+      "method": "cluster",
+      "data": {
+        "distance": "euclidean",
+        "values": [
+          [
+            2,
+            6,
+            11,
+            4
+          ],
+          [
+            6,
+            11.7,
+            5.4,
+            10.1
+          ],
+          [
+            11,
+            5.4,
+            10.8,
+            6.199999999999999
+          ],
+          [
+            4,
+            10.1,
+            6.199999999999999,
+            12.3
+          ],
+          [
+            8,
+            4.8,
+            11.6,
+            19.4
+          ]
+        ],
+        "rowLabels": [
+          "样本甲",
+          "样本乙",
+          "样本丙",
+          "样本丁",
+          "样本戊"
+        ],
+        "columnLabels": [
+          "代谢通路A",
+          "代谢通路B",
+          "代谢通路C",
+          "代谢通路D"
+        ],
+        "row": {
+          "labels": [
+            "样本甲",
+            "样本乙",
+            "样本丙",
+            "样本丁",
+            "样本戊"
+          ],
+          "distances": [
+            [
+              0,
+              10.81942697188719,
+              9.28654941299512,
+              10.617909398747006,
+              16.581917862539303
+            ],
+            [
+              10.81942697188719,
+              0,
+              10.44317959244214,
+              3.4698703145794947,
+              13.286835590162164
+            ],
+            [
+              9.28654941299512,
+              10.44317959244214,
+              0,
+              11.378049041905207,
+              13.57350360076572
+            ],
+            [
+              10.617909398747006,
+              3.4698703145794947,
+              11.378049041905207,
+              0,
+              11.12025179571038
+            ],
+            [
+              16.581917862539303,
+              13.286835590162164,
+              13.57350360076572,
+              11.12025179571038,
+              0
+            ]
+          ],
+          "linkage": [
+            [
+              1,
+              3,
+              3.4698703145794947,
+              2
+            ],
+            [
+              0,
+              2,
+              9.28654941299512,
+              2
+            ],
+            [
+              5,
+              6,
+              11.378049041905207,
+              4
+            ],
+            [
+              4,
+              7,
+              16.581917862539303,
+              5
+            ]
+          ],
+          "order": [
+            4,
+            1,
+            3,
+            0,
+            2
+          ],
+          "method": "complete"
+        },
+        "column": {
+          "labels": [
+            "代谢通路A",
+            "代谢通路B",
+            "代谢通路C",
+            "代谢通路D"
+          ],
+          "distances": [
+            [
+              0,
+              11.282730166054668,
+              9.959919678390985,
+              15.578831791889916
+            ],
+            [
+              11.282730166054668,
+              0,
+              12.461942063739505,
+              15.006665185843254
+            ],
+            [
+              9.959919678390985,
+              12.461942063739505,
+              0,
+              13.794926603646719
+            ],
+            [
+              15.578831791889916,
+              15.006665185843254,
+              13.794926603646719,
+              0
+            ]
+          ],
+          "linkage": [
+            [
+              0,
+              2,
+              9.959919678390985,
+              2
+            ],
+            [
+              1,
+              4,
+              12.461942063739505,
+              3
+            ],
+            [
+              3,
+              5,
+              15.578831791889916,
+              4
+            ]
+          ],
+          "order": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "method": "complete"
+        }
+      },
+      "provenance": {
+        "engine": "Python",
+        "method": "cluster",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 1,
+        "inputSha256": "c6ba37a988e32f8f85193be6136a7c7d5bdf64fd3e3d796a2b43744d1b215053",
+        "parameters": {
+          "seed": 1,
+          "standardization": "None",
+          "direction": "column",
+          "distance": "euclidean",
+          "minkowskiP": 2,
+          "axis": "both",
+          "linkage": "complete"
+        }
+      },
+      "diagnostics": []
+    }
+  }
+}

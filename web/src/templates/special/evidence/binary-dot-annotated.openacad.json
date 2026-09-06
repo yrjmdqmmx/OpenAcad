@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "id": "bab25f16-32d4-4c6e-90f4-90fab745bdf7",
+  "name": "圆点二值图 · 模拟数据",
+  "templateId": "binary-dot",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:29:30.216Z",
+  "updatedAt": "2026-09-06T13:29:30.584Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "matrix",
+        "name": "存在与缺失模拟矩阵",
+        "role": "matrix",
+        "columns": [
+          "样本",
+          "代谢通路A",
+          "代谢通路B",
+          "代谢通路C",
+          "代谢通路D"
+        ],
+        "rows": [
+          [
+            "样本甲",
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            "样本乙",
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            "样本丙",
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            "样本丁",
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            "样本戊",
+            1,
+            1,
+            0,
+            1
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 130,
+    "title": "圆点二值图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "cellGap": 2,
+    "cellStroke": 0.5,
+    "absentColor": "#eef3f1",
+    "showValues": true,
+    "rowOrder": "input",
+    "labelAngle": -35,
+    "presentColor": "#237c83",
+    "showDendrogram": true
+  },
+  "layers": [
+    {
+      "id": "1da3438c-8837-46be-b8e3-8d2fdb1b3fc5",
+      "type": "matrix-row-color",
+      "name": "行分类色带",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "1da3438c-8837-46be-b8e3-8d2fdb1b3fc5",
+            "name": "注释数据",
+            "role": "annotation",
+            "columns": [
+              "标签",
+              "值"
+            ],
+            "rows": [
+              [
+                "样本甲",
+                "分组 1"
+              ],
+              [
+                "样本乙",
+                "分组 2"
+              ],
+              [
+                "样本丙",
+                "分组 1"
+              ],
+              [
+                "样本丁",
+                "分组 2"
+              ],
+              [
+                "样本戊",
+                "分组 1"
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "bar",
+        "pointSize": 3
+      }
+    },
+    {
+      "id": "246eca42-6f40-425f-ac87-3146a27c0e07",
+      "type": "matrix-column-bar",
+      "name": "列数值条形",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "246eca42-6f40-425f-ac87-3146a27c0e07",
+            "name": "注释数据",
+            "role": "annotation",
+            "columns": [
+              "标签",
+              "值"
+            ],
+            "rows": [
+              [
+                "代谢通路A",
+                1
+              ],
+              [
+                "代谢通路B",
+                2
+              ],
+              [
+                "代谢通路C",
+                3
+              ],
+              [
+                "代谢通路D",
+                4
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "bar",
+        "pointSize": 3
+      }
+    }
+  ],
+  "layout": {}
+}

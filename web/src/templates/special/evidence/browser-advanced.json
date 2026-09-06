@@ -1,0 +1,86 @@
+{
+  "date": "2026-09-06T13:29:33.372Z",
+  "results": [
+    {
+      "id": "heatmap-annotations",
+      "layers": 2,
+      "projectReopen": true,
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "binary-dot-annotations",
+      "layers": 2,
+      "projectReopen": true,
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "bubble-matrix-annotations",
+      "layers": 2,
+      "projectReopen": true,
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "circle-heatmap-annotations",
+      "layers": 2,
+      "projectReopen": true,
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "gene-cluster-break",
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    },
+    {
+      "id": "genome-custom-tracks",
+      "tracks": 2,
+      "svg": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "canvasWidth": 960,
+        "canvasHeight": 680
+      }
+    }
+  ]
+}

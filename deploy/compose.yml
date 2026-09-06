@@ -1,0 +1,61 @@
+name: openacad
+x-worker: &worker
+  image: ${OPENACAD_IMAGE:-openacad-worker:verified}
+  restart: unless-stopped
+  init: true
+  read_only: true
+  tmpfs:
+    - /tmp:size=512m,mode=1777
+  security_opt:
+    - no-new-privileges:true
+  cap_drop: [ALL]
+  environment: &environment
+    REDIS_URL: redis://redis:6379/0
+    JOB_TTL_SECONDS: '3600'
+    JOB_TIMEOUT_SECONDS: '300'
+    OPENBLAS_NUM_THREADS: '1'
+    OMP_NUM_THREADS: '1'
+    MKL_NUM_THREADS: '1'
+    OPENACAD_MAINTENANCE_FILE: /run/openacad/maintenance
+  depends_on:
+    redis:
+      condition: service_healthy
+  mem_limit: 3g
+  cpus: 1.2
+  pids_limit: 256
+  logging:
+    driver: json-file
+    options: {max-size: '10m', max-file: '3'}
+services:
+  redis:
+    image: redis:7.4.7-alpine
+    command: [redis-server, --save, '', --appendonly, 'no', --maxmemory, 256mb, --maxmemory-policy, noeviction]
+    restart: unless-stopped
+    mem_limit: 320m
+    cpus: 0.25
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      timeout: 2s
+      retries: 10
+    logging:
+      driver: json-file
+      options: {max-size: '10m', max-file: '3'}
+  api:
+    <<: *worker
+    ports: ['127.0.0.1:13310:8000']
+    volumes: ['/opt/openacad/shared:/run/openacad:ro']
+    mem_limit: 768m
+    cpus: 0.5
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      retries: 12
+      start_period: 20s
+  worker-one:
+    <<: *worker
+    command: [python, -m, app.worker]
+  worker-two:
+    <<: *worker
+    command: [python, -m, app.worker]

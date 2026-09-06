@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "id": "37f9673a-7d90-4915-8a60-b265c3130d84",
+  "name": "圈形热图 · 模拟数据",
+  "templateId": "circle-heatmap",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:29:31.585Z",
+  "updatedAt": "2026-09-06T13:29:31.968Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "matrix",
+        "name": "表达量模拟矩阵",
+        "role": "matrix",
+        "columns": [
+          "样本",
+          "代谢通路A",
+          "代谢通路B",
+          "代谢通路C",
+          "代谢通路D"
+        ],
+        "rows": [
+          [
+            "样本甲",
+            2,
+            6,
+            11,
+            4
+          ],
+          [
+            "样本乙",
+            6,
+            11.7,
+            5.4,
+            10.1
+          ],
+          [
+            "样本丙",
+            11,
+            5.4,
+            10.8,
+            6.199999999999999
+          ],
+          [
+            "样本丁",
+            4,
+            10.1,
+            6.199999999999999,
+            12.3
+          ],
+          [
+            "样本戊",
+            8,
+            4.8,
+            11.6,
+            19.4
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 110,
+    "title": "圈形热图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "cellGap": 2,
+    "cellStroke": 0.5,
+    "cellStrokeColor": "#ffffff",
+    "showValues": true,
+    "digits": 2,
+    "lowColor": "#287d8e",
+    "midColor": "#f9f6eb",
+    "highColor": "#c45963",
+    "diverging": true,
+    "rowOrder": "input",
+    "innerRadius": 65,
+    "startAngle": -90,
+    "sweepAngle": 310,
+    "blankZero": false,
+    "showDendrogram": true
+  },
+  "layers": [
+    {
+      "id": "7f0415d0-ba22-41a1-a144-183813152b7f",
+      "type": "matrix-row-color",
+      "name": "行分类色带",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "7f0415d0-ba22-41a1-a144-183813152b7f",
+            "name": "注释数据",
+            "role": "annotation",
+            "columns": [
+              "标签",
+              "值"
+            ],
+            "rows": [
+              [
+                "样本甲",
+                "分组 1"
+              ],
+              [
+                "样本乙",
+                "分组 2"
+              ],
+              [
+                "样本丙",
+                "分组 1"
+              ],
+              [
+                "样本丁",
+                "分组 2"
+              ],
+              [
+                "样本戊",
+                "分组 1"
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "bar",
+        "pointSize": 3
+      }
+    },
+    {
+      "id": "803dc258-7272-49c4-b02e-b04511f1396e",
+      "type": "matrix-column-bar",
+      "name": "列数值条形",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "803dc258-7272-49c4-b02e-b04511f1396e",
+            "name": "注释数据",
+            "role": "annotation",
+            "columns": [
+              "标签",
+              "值"
+            ],
+            "rows": [
+              [
+                "代谢通路A",
+                1
+              ],
+              [
+                "代谢通路B",
+                2
+              ],
+              [
+                "代谢通路C",
+                3
+              ],
+              [
+                "代谢通路D",
+                4
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "bar",
+        "pointSize": 3
+      }
+    }
+  ],
+  "layout": {}
+}

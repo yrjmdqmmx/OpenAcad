@@ -1,0 +1,975 @@
+{
+  "checkedAt": "2026-09-06",
+  "catalog": [
+    {
+      "category": "生信付费课程",
+      "id": "bioinformatics-course",
+      "count": 8,
+      "cards": [
+        {
+          "name": "三代基因组测序的组装和校正",
+          "url": "https://www.cctalk.com/m/group/90940712"
+        },
+        {
+          "name": "Snakemake生信分析流程自动化系统教程",
+          "url": "https://www.cctalk.com/m/group/90950232"
+        },
+        {
+          "name": "antiSMASH-7批量预测真/细菌次级代谢产物及可视化",
+          "url": "https://www.cctalk.com/m/group/91051422"
+        },
+        {
+          "name": "细菌二代基因组测序的组装和功能注释",
+          "url": "https://www.cctalk.com/m/group/90953624"
+        },
+        {
+          "name": "16S扩增子测序Snakemake自动化分析（非统一裁剪）",
+          "url": "https://www.cctalk.com/m/group/91110180"
+        },
+        {
+          "name": "【Snakemake】EzAAI批量自动化计算AAI与可视化",
+          "url": "https://mp.weixin.qq.com/s/uQRWCgvySpibeXnh7AqSNw"
+        },
+        {
+          "name": "微生物共现网络计算与可视化",
+          "url": "https://mp.weixin.qq.com/s/VIgD_74Sx2D3l1k4z7NtWg"
+        },
+        {
+          "name": "【Mantel test】环境因子与群落组成相关性分析与可视化",
+          "url": "https://mp.weixin.qq.com/s/JuM9u72B78M8Tylv-d8xdA"
+        }
+      ]
+    },
+    {
+      "category": "Phylogenetic Tree",
+      "id": "Phylogenetic-Tree",
+      "count": 3,
+      "cards": [
+        {
+          "name": "Normal layout",
+          "url": "/tvbot.html"
+        },
+        {
+          "name": "Circular layout",
+          "url": "/tvbot.html"
+        },
+        {
+          "name": "Unrooted layout",
+          "url": "/tvbot.html"
+        }
+      ]
+    },
+    {
+      "category": "BioPlot",
+      "id": "BioPlot",
+      "count": 8,
+      "cards": [
+        {
+          "name": "基因簇",
+          "url": "/gene_cluster.html"
+        },
+        {
+          "name": "保守结构域 (NCBI CDD)",
+          "url": "/conserved_domains_plot.html"
+        },
+        {
+          "name": "Motif (MEME)",
+          "url": "/conserved_motif_plot.html"
+        },
+        {
+          "name": "基因组圈图",
+          "url": "/circos.html"
+        },
+        {
+          "name": "火山图",
+          "url": "/Volcano_plot.html"
+        },
+        {
+          "name": "KEGG/GO富集图",
+          "url": "/enrich_plot.html"
+        },
+        {
+          "name": "KEGG/GO富集图 (圈)",
+          "url": "/circle_enrich_plot.html"
+        },
+        {
+          "name": "McScanX 基因组共线性图",
+          "url": "/McScanX_synteny_plot.html"
+        }
+      ]
+    },
+    {
+      "category": "Network plot",
+      "id": "Network-plot",
+      "count": 1,
+      "cards": [
+        {
+          "name": "网络图（动态）",
+          "url": "/network_plot.html"
+        }
+      ]
+    },
+    {
+      "category": "Map plot",
+      "id": "Map-plot",
+      "count": 1,
+      "cards": [
+        {
+          "name": "地图数据可视化",
+          "url": "/map_plot.html"
+        }
+      ]
+    },
+    {
+      "category": "Scatter plot",
+      "id": "Scatter-plot",
+      "count": 7,
+      "cards": [
+        {
+          "name": "基础散点图",
+          "url": "/scatter_plot.html"
+        },
+        {
+          "name": "分组散点图",
+          "url": "/group_scatter_plot.html"
+        },
+        {
+          "name": "PCoA 主坐标分析",
+          "url": "/pcoa.html"
+        },
+        {
+          "name": "PCA 主成分分析",
+          "url": "/pca.html"
+        },
+        {
+          "name": "NMDS 非度量多维尺度分析",
+          "url": "/nmds.html"
+        },
+        {
+          "name": "CCA",
+          "url": "/CCA.html"
+        },
+        {
+          "name": "RDA",
+          "url": "/RDA.html"
+        }
+      ]
+    },
+    {
+      "category": "Line plot",
+      "id": "Line-plot",
+      "count": 3,
+      "cards": [
+        {
+          "name": "折线图/分组折线图",
+          "url": "/group_line_plot.html"
+        },
+        {
+          "name": "分组误差折线图",
+          "url": "/group_error_line_plot.html"
+        },
+        {
+          "name": "峰峦图",
+          "url": "/ridgelinePlot.html"
+        }
+      ]
+    },
+    {
+      "category": "Bar plot",
+      "id": "Bar-plot",
+      "count": 13,
+      "cards": [
+        {
+          "name": "棒棒糖图",
+          "url": "/lollipop_plot.html"
+        },
+        {
+          "name": "分类棒棒糖图",
+          "url": "/lollipop_plot_with_category.html"
+        },
+        {
+          "name": "散点误差图",
+          "url": "/scatter_plot_errorBar.html"
+        },
+        {
+          "name": "upset 图",
+          "url": "/upset_plot.html"
+        },
+        {
+          "name": "柱状图",
+          "url": "/bar_plot.html"
+        },
+        {
+          "name": "分类柱状图",
+          "url": "/bar_plot_width_category.html"
+        },
+        {
+          "name": "误差柱状图",
+          "url": "/bar_plot_errorBar.html"
+        },
+        {
+          "name": "分组柱状图",
+          "url": "/group_bar_plot.html"
+        },
+        {
+          "name": "分组误差柱状图",
+          "url": "/group_error_bar_plot.html"
+        },
+        {
+          "name": "柱状图+折线图",
+          "url": "/bar_with_line_plot.html"
+        },
+        {
+          "name": "堆叠柱状图",
+          "url": "/stackedbar_plot.html"
+        },
+        {
+          "name": "分组堆叠柱状图",
+          "url": "/group_stackedbar_plot.html"
+        },
+        {
+          "name": "玫瑰图/花瓣图",
+          "url": "/rosePlot.html"
+        }
+      ]
+    },
+    {
+      "category": "Box plot",
+      "id": "Box-plot",
+      "count": 4,
+      "cards": [
+        {
+          "name": "箱型图",
+          "url": "/box_plot.html"
+        },
+        {
+          "name": "分组箱型图",
+          "url": "/group_box_plot.html"
+        },
+        {
+          "name": "小提琴图",
+          "url": "/violin_plot.html"
+        },
+        {
+          "name": "云雨图",
+          "url": "/raincloud_plot.html"
+        }
+      ]
+    },
+    {
+      "category": "Pie plot",
+      "id": "Pie-plot",
+      "count": 1,
+      "cards": [
+        {
+          "name": "饼图",
+          "url": "/piePlot.html"
+        }
+      ]
+    },
+    {
+      "category": "Venn plot",
+      "id": "Venn-plot",
+      "count": 1,
+      "cards": [
+        {
+          "name": "韦恩图",
+          "url": "/vennPlot.html"
+        }
+      ]
+    },
+    {
+      "category": "Radar plot",
+      "id": "Radar-plot",
+      "count": 1,
+      "cards": [
+        {
+          "name": "雷达图",
+          "url": "/radarPlot.html"
+        }
+      ]
+    },
+    {
+      "category": "Heatmap",
+      "id": "Heatmap",
+      "count": 6,
+      "cards": [
+        {
+          "name": "热图/聚类热图",
+          "url": "/heatmap.html"
+        },
+        {
+          "name": "热图/聚类热图（圈形）",
+          "url": "/circle_heatmap.html"
+        },
+        {
+          "name": "组内相关性分析&热图",
+          "url": "/correlation_heatmap.html"
+        },
+        {
+          "name": "组间相关性分析&热图",
+          "url": "/dubble_matrices_correlation_heatmap.html"
+        },
+        {
+          "name": "交互式Mantel test相关性热图",
+          "url": "/mantel_test_correlation_heatmap.html"
+        },
+        {
+          "name": "二值图",
+          "url": "/binary_plot2.html"
+        }
+      ]
+    },
+    {
+      "category": "Dumbbell plot",
+      "id": "Dumbbell-plot",
+      "count": 1,
+      "cards": [
+        {
+          "name": "哑铃图",
+          "url": "/dumbbell_plot.html"
+        }
+      ]
+    },
+    {
+      "category": "Bubble plot",
+      "id": "Bubble-plot",
+      "count": 3,
+      "cards": [
+        {
+          "name": "气泡图",
+          "url": "/bubble_plot.html"
+        },
+        {
+          "name": "圆堆砌图 (Circle Packing)",
+          "url": "/packing_bubble_plot.html"
+        },
+        {
+          "name": "二值图",
+          "url": "/binary_plot.html"
+        }
+      ]
+    },
+    {
+      "category": "Sankey plot",
+      "id": "Sankey-plot",
+      "count": 1,
+      "cards": [
+        {
+          "name": "桑基图",
+          "url": "/sankey_plot.html"
+        }
+      ]
+    }
+  ],
+  "statuses": [
+    {
+      "path": "/CCA.html",
+      "status": 200,
+      "title": "CCA plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/CCA-DO_rGZG_.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ]
+    },
+    {
+      "path": "/McScanX_synteny_plot.html",
+      "status": 200,
+      "title": "McScanX synteny plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/McScanX_synteny_plot-CvDb1Fhq.js",
+        "/static/xiaochiPlot/js/bootstrap.bundle.min.js"
+      ]
+    },
+    {
+      "path": "/RDA.html",
+      "status": 200,
+      "title": "RDA plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/RDA-tR_zzhGb.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ]
+    },
+    {
+      "path": "/Volcano_plot.html",
+      "status": 200,
+      "title": "volcano plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/Volcano_plot-CHfoYy41.js"
+      ]
+    },
+    {
+      "path": "/bar_plot.html",
+      "status": 200,
+      "title": "bar plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/bar_plot-C7X4hzKn.js"
+      ]
+    },
+    {
+      "path": "/bar_plot_errorBar.html",
+      "status": 200,
+      "title": "bar plot with error bar",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/bar_plot_errorBar-ezF5Dred.js"
+      ]
+    },
+    {
+      "path": "/bar_plot_width_category.html",
+      "status": 200,
+      "title": "bar plot with category",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/bar_plot_width_category-Dl2zFdf4.js"
+      ]
+    },
+    {
+      "path": "/bar_with_line_plot.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "/binary_plot.html",
+      "status": 200,
+      "title": "binary plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/binary_plot-BVPlCOmB.js"
+      ]
+    },
+    {
+      "path": "/binary_plot2.html",
+      "status": 200,
+      "title": "binary plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/binary_plot2-BK1MmT7I.js"
+      ]
+    },
+    {
+      "path": "/box_plot.html",
+      "status": 200,
+      "title": "box plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/box_plot-DF_twh1X.js"
+      ]
+    },
+    {
+      "path": "/bubble_plot.html",
+      "status": 200,
+      "title": "bubble plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/bubble_plot-YmPI0R2m.js"
+      ]
+    },
+    {
+      "path": "/circle_enrich_plot.html",
+      "status": 200,
+      "title": "circle enrich plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/circle_enrich_plot-DwrHgPGi.js"
+      ]
+    },
+    {
+      "path": "/circle_heatmap.html",
+      "status": 200,
+      "title": "circle heatmap",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/circle_heatmap-DEeTGag_.js"
+      ]
+    },
+    {
+      "path": "/circos.html",
+      "status": 200,
+      "title": "circos",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/circos-Dvb6yF2b.js"
+      ]
+    },
+    {
+      "path": "/conserved_domains_plot.html",
+      "status": 200,
+      "title": "Conserved Domains plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/conserved_domains_plot-IxqHGLCq.js"
+      ]
+    },
+    {
+      "path": "/conserved_motif_plot.html",
+      "status": 200,
+      "title": "Conserved Motif plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/conserved_motif_plot-DyS_Kd_t.js"
+      ]
+    },
+    {
+      "path": "/correlation_heatmap.html",
+      "status": 200,
+      "title": "correlation heatmap",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/correlation_heatmap-B3g2HSVz.js"
+      ]
+    },
+    {
+      "path": "/dubble_matrices_correlation_heatmap.html",
+      "status": 200,
+      "title": "dubble matrices correlation heatmap",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/dubble_matrices_correlation_heatmap-DgaCqKzj.js"
+      ]
+    },
+    {
+      "path": "/dumbbell_plot.html",
+      "status": 200,
+      "title": "dumbbell plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/dumbbell_plot-CLUDVVI4.js"
+      ]
+    },
+    {
+      "path": "/enrich_plot.html",
+      "status": 200,
+      "title": "enrich plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/enrich_plot-U1mfKkf9.js"
+      ]
+    },
+    {
+      "path": "/gene_cluster.html",
+      "status": 200,
+      "title": "gene cluster",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/gene_cluster-eo1227SO.js"
+      ]
+    },
+    {
+      "path": "/group_bar_plot.html",
+      "status": 200,
+      "title": "group bar plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/group_bar_plot-BZn-jzYM.js"
+      ]
+    },
+    {
+      "path": "/group_box_plot.html",
+      "status": 200,
+      "title": "group box plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/group_box_plot-Bd_YdDQB.js"
+      ]
+    },
+    {
+      "path": "/group_error_bar_plot.html",
+      "status": 200,
+      "title": "group bar plot with error bar",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/group_error_bar_plot-CCwX7sSO.js"
+      ]
+    },
+    {
+      "path": "/group_error_line_plot.html",
+      "status": 200,
+      "title": "group line plot with error bar",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/group_error_line_plot-B1unFShQ.js"
+      ]
+    },
+    {
+      "path": "/group_line_plot.html",
+      "status": 200,
+      "title": "line plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/group_line_plot-BPudoWZk.js"
+      ]
+    },
+    {
+      "path": "/group_scatter_plot.html",
+      "status": 200,
+      "title": "group scatter plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/group_scatter_plot-ff2hba75.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ]
+    },
+    {
+      "path": "/group_stackedbar_plot.html",
+      "status": 200,
+      "title": "group stackedbar plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/group_stackedbar_plot-aQ4dUllK.js"
+      ]
+    },
+    {
+      "path": "/heatmap.html",
+      "status": 200,
+      "title": "heatmap",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/heatmap-SytbYWmA.js"
+      ]
+    },
+    {
+      "path": "/lollipop_plot.html",
+      "status": 200,
+      "title": "lollipop plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/lollipop_plot-VGwq2Vgz.js"
+      ]
+    },
+    {
+      "path": "/lollipop_plot_with_category.html",
+      "status": 200,
+      "title": "lollipop plot with category",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/lollipop_plot_with_category-DyuqV9KD.js"
+      ]
+    },
+    {
+      "path": "/mantel_test_correlation_heatmap.html",
+      "status": 200,
+      "title": "mantel test correlation heatmap",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/mantel_test_correlation_heatmap-D4fXgFxq.js"
+      ]
+    },
+    {
+      "path": "/map_plot.html",
+      "status": 200,
+      "title": "map plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/map_plot-DPSMdVaZ.js"
+      ]
+    },
+    {
+      "path": "/network_plot.html",
+      "status": 200,
+      "title": "network plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/network_plot-DEx1tG3B.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ]
+    },
+    {
+      "path": "/nmds.html",
+      "status": 200,
+      "title": "NMDS",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/nmds-BF817FvD.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ]
+    },
+    {
+      "path": "/packing_bubble_plot.html",
+      "status": 200,
+      "title": "packing bubble plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/packing_bubble_plot-BuKmEPir.js"
+      ]
+    },
+    {
+      "path": "/pca.html",
+      "status": 200,
+      "title": "PCA",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/pca-BKADROCf.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ]
+    },
+    {
+      "path": "/pcoa.html",
+      "status": 200,
+      "title": "PCoA",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/pcoa-te18XhcC.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ]
+    },
+    {
+      "path": "/piePlot.html",
+      "status": 200,
+      "title": "pie plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/piePlot-DJzby37u.js"
+      ]
+    },
+    {
+      "path": "/radarPlot.html",
+      "status": 200,
+      "title": "radar plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/radarPlot-9TC4Zpnr.js"
+      ]
+    },
+    {
+      "path": "/raincloud_plot.html",
+      "status": 200,
+      "title": "raincloud plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/raincloud_plot-BGdlkS4a.js"
+      ]
+    },
+    {
+      "path": "/ridgelinePlot.html",
+      "status": 200,
+      "title": "ridgeline plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/ridgelinePlot-CMppRpxs.js"
+      ]
+    },
+    {
+      "path": "/rosePlot.html",
+      "status": 200,
+      "title": "rose plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/rosePlot-DhFr75S1.js"
+      ]
+    },
+    {
+      "path": "/sankey_plot.html",
+      "status": 200,
+      "title": "sankey plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/sankey_plot-CbNOv3RG.js"
+      ]
+    },
+    {
+      "path": "/scatter_plot.html",
+      "status": 200,
+      "title": "scatter plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/scatter_plot-BtfKXAfe.js"
+      ]
+    },
+    {
+      "path": "/scatter_plot_errorBar.html",
+      "status": 200,
+      "title": "scatter plot with error bar",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/scatter_plot_errorBar-Fh6uo4ET.js"
+      ]
+    },
+    {
+      "path": "/stackedbar_plot.html",
+      "status": 200,
+      "title": "stackedbar plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/stackedbar_plot-DBAKX6Zk.js"
+      ]
+    },
+    {
+      "path": "/tvbot.html",
+      "status": 200,
+      "title": "TVBOT",
+      "scripts": [
+        "/static/xiaochiPlot/js/bootstrap.bundle.min.js",
+        "/static/xiaochiPlot/vue3_dist/assets/tvbot-Cgt3ah5D.js",
+        "https://badge.dimensions.ai/badge.js"
+      ]
+    },
+    {
+      "path": "/upset_plot.html",
+      "status": 200,
+      "title": "upset plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/upset_plot-CGzvhqoP.js"
+      ]
+    },
+    {
+      "path": "/vennPlot.html",
+      "status": 200,
+      "title": "venn plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/vennPlot-Br7twAMN.js"
+      ]
+    },
+    {
+      "path": "/violin_plot.html",
+      "status": 200,
+      "title": "violin plot",
+      "scripts": [
+        "/static/xiaochiPlot/vue3_dist/assets/violin_plot-M0WCtBjK.js"
+      ]
+    }
+  ],
+  "previews": {
+    "/tvbot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/TG_assembly.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/circleTree.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/unrootedTree.jpg"
+    ],
+    "/gene_cluster.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/geneCluster-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/geneCluster.jpg"
+    ],
+    "/conserved_domains_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/conservedDomainsNCBIPlot.jpg"
+    ],
+    "/conserved_motif_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/conservedMotifPlot.jpg"
+    ],
+    "/circos.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/circos.jpg"
+    ],
+    "/Volcano_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/volcanoPlot.jpg"
+    ],
+    "/enrich_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/enrichPlot-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/enrichPlot.jpg"
+    ],
+    "/circle_enrich_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/circleEnrichPlot.jpg"
+    ],
+    "/McScanX_synteny_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/McScanXSyntenyPlot.jpg"
+    ],
+    "/network_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/networkPlot.jpg"
+    ],
+    "/map_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/mapPlot.jpg"
+    ],
+    "/scatter_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/scatterPlot-3.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/scatterPlot.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/scatterPlot-2.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/scatterPlot-1.jpg"
+    ],
+    "/group_scatter_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/groupScatterPlot.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/groupScatterPlot-1.jpg"
+    ],
+    "/pcoa.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/pcoa.jpg"
+    ],
+    "/pca.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/pca.jpg"
+    ],
+    "/nmds.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/nmds.jpg"
+    ],
+    "/CCA.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/CCAPlot.jpg"
+    ],
+    "/RDA.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/RDAPlot.jpg"
+    ],
+    "/group_line_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/groupLinePlot.jpg"
+    ],
+    "/group_error_line_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/groupErrorLinePlot.jpg"
+    ],
+    "/ridgelinePlot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/ridgeLinePlot.jpg"
+    ],
+    "/lollipop_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/lollipopPlot.jpg"
+    ],
+    "/lollipop_plot_with_category.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/lollipopCategoryPlot.jpg"
+    ],
+    "/scatter_plot_errorBar.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/scatterErrorBarPlot.jpg"
+    ],
+    "/upset_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/upsetPlot.jpg"
+    ],
+    "/bar_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/barplot.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/barplot-1.jpg"
+    ],
+    "/bar_plot_width_category.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/barCategoryPlot.jpg"
+    ],
+    "/bar_plot_errorBar.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/bar%26errorPlot-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/bar%26errorPlot.jpeg"
+    ],
+    "/group_bar_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/groupBarPlot-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/groupBarPlot-2.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/groupBarPlot.jpg"
+    ],
+    "/group_error_bar_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/groupErrorBarPlot.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/groupErrorBarPlot-2.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/groupErrorBarPlot-1.jpg"
+    ],
+    "/bar_with_line_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/bar%26linePlot.jpg"
+    ],
+    "/stackedbar_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/stackedbar.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/stackedbar-1.jpg"
+    ],
+    "/group_stackedbar_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/groupStackedbarPlot.jpg"
+    ],
+    "/rosePlot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/rosePlot.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/rosePlot-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/rosePlot-2.jpg"
+    ],
+    "/box_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/boxplot-2.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/boxplot.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/boxplot-1.jpg"
+    ],
+    "/group_box_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/groupBoxPlot.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/groupBoxPlot-1.jpg"
+    ],
+    "/violin_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/violinPlot-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/violinPlot.jpg"
+    ],
+    "/raincloud_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/rainCloudPlot.jpg"
+    ],
+    "/piePlot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/piePlot.jpg"
+    ],
+    "/vennPlot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/vennPlot-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/vennPlot.jpg"
+    ],
+    "/radarPlot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/radarPlot.jpg"
+    ],
+    "/heatmap.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/heatmap-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/heatmap.jpg"
+    ],
+    "/circle_heatmap.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/circleHeatmap-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/circleHeatmap.jpg"
+    ],
+    "/correlation_heatmap.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap-2.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap-1.jpg"
+    ],
+    "/dubble_matrices_correlation_heatmap.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/dubbleMatricesCorrelationHeatmap.jpg"
+    ],
+    "/mantel_test_correlation_heatmap.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/mantelTestCorrelationHeatmap-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/mantelTestCorrelationHeatmap.jpg"
+    ],
+    "/binary_plot2.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/binaryPlot2.jpg"
+    ],
+    "/dumbbell_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/dumbbellPlot.jpg"
+    ],
+    "/bubble_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/bubblePlot-1.jpg",
+      "https://1996xjm.github.io/chiplot/img/cover/bubblePlot.jpg"
+    ],
+    "/packing_bubble_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/packingBubblePlot.jpg"
+    ],
+    "/binary_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/binaryPlot.jpg"
+    ],
+    "/sankey_plot.html": [
+      "https://1996xjm.github.io/chiplot/img/cover/sankeyPlot.jpg"
+    ]
+  }
+}

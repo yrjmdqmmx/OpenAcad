@@ -1,0 +1,340 @@
+{
+  "date": "2026-09-06T13:09:10.744Z",
+  "results": [
+    {
+      "id": "heatmap",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 14718
+    },
+    {
+      "id": "circle-heatmap",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 16181
+    },
+    {
+      "id": "binary-dot",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 8388
+    },
+    {
+      "id": "binary-rect",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 8477
+    },
+    {
+      "id": "bubble-matrix",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 14692
+    },
+    {
+      "id": "correlation",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 14171
+    },
+    {
+      "id": "double-correlation",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 13369
+    },
+    {
+      "id": "mantel",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1120,
+        "height": 680,
+        "svgWidth": 1120,
+        "svgHeight": 680
+      },
+      "bytes": 15815
+    },
+    {
+      "id": "venn",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 4087
+    },
+    {
+      "id": "packing",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 4205
+    },
+    {
+      "id": "sankey",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 3686
+    },
+    {
+      "id": "network",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 4183
+    },
+    {
+      "id": "map",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1100,
+        "height": 670,
+        "svgWidth": 1100,
+        "svgHeight": 670
+      },
+      "bytes": 131634
+    },
+    {
+      "id": "gene-cluster",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 10008
+    },
+    {
+      "id": "protein-domains",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 4333
+    },
+    {
+      "id": "protein-motifs",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 4329
+    },
+    {
+      "id": "genome-circos",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 24775
+    },
+    {
+      "id": "volcano",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 16845
+    },
+    {
+      "id": "enrichment-dot",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 7999
+    },
+    {
+      "id": "enrichment-bar",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 7812
+    },
+    {
+      "id": "enrichment-circle",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 9694
+    },
+    {
+      "id": "synteny",
+      "svgDownload": true,
+      "reopenedInChrome": true,
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 960,
+        "height": 680,
+        "svgWidth": 960,
+        "svgHeight": 680
+      },
+      "bytes": 5207
+    },
+    {
+      "id": "network-drag",
+      "before": "translate(446.3019472961001,265.7476004305539)",
+      "after": "translate(496.40673828125,293.5970458984375)",
+      "persisted": {
+        "n1": {
+          "x": 496.40673828125,
+          "y": 293.5970458984375
+        }
+      }
+    },
+    {
+      "id": "protein-domains-native",
+      "native": true,
+      "alternateNative": true
+    },
+    {
+      "id": "protein-motifs-native",
+      "native": true,
+      "alternateNative": true
+    },
+    {
+      "id": "synteny-native",
+      "native": true,
+      "alternateNative": true
+    }
+  ],
+  "nativeRerunDate": "2026-09-06T13:10:29.764Z"
+}

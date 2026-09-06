@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "id": "d01e8f7f-a6da-4e54-84b5-acba581c28a7",
+  "name": "基因簇排列图 · 模拟数据",
+  "templateId": "gene-cluster",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:29:32.266Z",
+  "updatedAt": "2026-09-06T13:29:32.484Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "genes",
+        "name": "模拟基因簇",
+        "role": "genes",
+        "columns": [
+          "cluster",
+          "id",
+          "start",
+          "end",
+          "strand",
+          "category"
+        ],
+        "rows": [
+          [
+            "菌株甲",
+            "甲_转录因子",
+            100,
+            760,
+            "+",
+            "调节"
+          ],
+          [
+            "菌株甲",
+            "甲_酶A",
+            920,
+            1660,
+            "+",
+            "代谢"
+          ],
+          [
+            "菌株甲",
+            "甲_转运蛋白",
+            1900,
+            2680,
+            "-",
+            "运输"
+          ],
+          [
+            "菌株甲",
+            "甲_酶B",
+            2860,
+            3560,
+            "+",
+            "代谢"
+          ],
+          [
+            "菌株乙",
+            "乙_转录因子",
+            50,
+            750,
+            "+",
+            "调节"
+          ],
+          [
+            "菌株乙",
+            "乙_酶A",
+            1010,
+            1710,
+            "-",
+            "代谢"
+          ],
+          [
+            "菌株乙",
+            "乙_转运蛋白",
+            2200,
+            3000,
+            "-",
+            "运输"
+          ],
+          [
+            "菌株丙",
+            "丙_调节蛋白",
+            480,
+            1290,
+            "-",
+            "调节"
+          ],
+          [
+            "菌株丙",
+            "丙_转运蛋白",
+            1550,
+            2450,
+            "+",
+            "运输"
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 130,
+    "title": "基因簇排列图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "geneScale": "global",
+    "geneHeight": 24,
+    "arrowHead": 14,
+    "geneStroke": 1,
+    "geneStrokeColor": "#ffffff",
+    "backboneColor": "#aab7bf",
+    "backboneWidth": 1,
+    "geneTicks": true,
+    "geneLabelAngle": 0,
+    "connectCategories": false,
+    "homologyOpacity": 0.1,
+    "geneArrowShape": "simple"
+  },
+  "layers": [
+    {
+      "id": "dd380e10-f74a-4ce3-9375-698be8a9662c",
+      "type": "gene-break",
+      "name": "基因簇断轴区间",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "dd380e10-f74a-4ce3-9375-698be8a9662c",
+            "name": "断轴区间",
+            "role": "gene-break",
+            "columns": [
+              "cluster",
+              "start",
+              "end"
+            ],
+            "rows": [
+              [
+                "菌株甲",
+                761,
+                919
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "bar",
+        "pointSize": 3
+      }
+    }
+  ],
+  "layout": {}
+}

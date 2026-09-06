@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "0bcb570f-27f8-4e56-b199-b35a7d469d7e",
+  "name": "数值气泡矩阵 · 模拟数据",
+  "templateId": "bubble-matrix",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:29:30.898Z",
+  "updatedAt": "2026-09-06T13:29:31.267Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "matrix",
+        "name": "表达量模拟矩阵",
+        "role": "matrix",
+        "columns": [
+          "样本",
+          "代谢通路A",
+          "代谢通路B",
+          "代谢通路C",
+          "代谢通路D"
+        ],
+        "rows": [
+          [
+            "样本甲",
+            2,
+            6,
+            11,
+            4
+          ],
+          [
+            "样本乙",
+            6,
+            11.7,
+            5.4,
+            10.1
+          ],
+          [
+            "样本丙",
+            11,
+            5.4,
+            10.8,
+            6.199999999999999
+          ],
+          [
+            "样本丁",
+            4,
+            10.1,
+            6.199999999999999,
+            12.3
+          ],
+          [
+            "样本戊",
+            8,
+            4.8,
+            11.6,
+            19.4
+          ]
+        ]
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 52,
+    "marginBottom": 86,
+    "marginLeft": 130,
+    "title": "数值气泡矩阵",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "cellGap": 2,
+    "cellStroke": 0.5,
+    "cellStrokeColor": "#ffffff",
+    "showValues": true,
+    "digits": 2,
+    "lowColor": "#287d8e",
+    "midColor": "#f9f6eb",
+    "highColor": "#c45963",
+    "diverging": true,
+    "rowOrder": "input",
+    "labelAngle": -35,
+    "bubbleScale": 0.86
+  },
+  "layers": [
+    {
+      "id": "b3b22479-1ebb-4b30-a1d7-b960d1d1ee0f",
+      "type": "matrix-row-color",
+      "name": "行分类色带",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "b3b22479-1ebb-4b30-a1d7-b960d1d1ee0f",
+            "name": "注释数据",
+            "role": "annotation",
+            "columns": [
+              "标签",
+              "值"
+            ],
+            "rows": [
+              [
+                "样本甲",
+                "分组 1"
+              ],
+              [
+                "样本乙",
+                "分组 2"
+              ],
+              [
+                "样本丙",
+                "分组 1"
+              ],
+              [
+                "样本丁",
+                "分组 2"
+              ],
+              [
+                "样本戊",
+                "分组 1"
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "bar",
+        "pointSize": 3
+      }
+    },
+    {
+      "id": "3e6a1e25-3b2b-438f-8119-d85405cf12c6",
+      "type": "matrix-column-bar",
+      "name": "列数值条形",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "3e6a1e25-3b2b-438f-8119-d85405cf12c6",
+            "name": "注释数据",
+            "role": "annotation",
+            "columns": [
+              "标签",
+              "值"
+            ],
+            "rows": [
+              [
+                "代谢通路A",
+                1
+              ],
+              [
+                "代谢通路B",
+                2
+              ],
+              [
+                "代谢通路C",
+                3
+              ],
+              [
+                "代谢通路D",
+                4
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "bar",
+        "pointSize": 3
+      }
+    }
+  ],
+  "layout": {}
+}

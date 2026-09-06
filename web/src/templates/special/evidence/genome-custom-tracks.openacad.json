@@ -1,0 +1,983 @@
+{
+  "schemaVersion": 1,
+  "id": "ee7f51fb-f64b-48f5-bf17-a348682a4113",
+  "name": "基因组圈图 · 模拟数据",
+  "templateId": "genome-circos",
+  "templateVersion": 1,
+  "createdAt": "2026-09-06T13:29:32.663Z",
+  "updatedAt": "2026-09-06T13:29:33.050Z",
+  "dataset": {
+    "tables": [
+      {
+        "id": "chromosomes",
+        "name": "模拟染色体",
+        "role": "chromosomes",
+        "columns": [
+          "id",
+          "length"
+        ],
+        "rows": [
+          [
+            "染色体甲",
+            12000
+          ],
+          [
+            "染色体乙",
+            9000
+          ],
+          [
+            "染色体丙",
+            7000
+          ]
+        ]
+      },
+      {
+        "id": "tracks",
+        "name": "模拟区间轨道",
+        "role": "tracks",
+        "columns": [
+          "chromosome",
+          "start",
+          "end",
+          "value",
+          "type"
+        ],
+        "rows": [
+          [
+            "染色体甲",
+            1,
+            1000,
+            35,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            1,
+            1000,
+            0,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            1001,
+            2000,
+            52,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            1001,
+            2000,
+            0.5048825908847379,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            2001,
+            3000,
+            35,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            2001,
+            3000,
+            0.545578456095409,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            3001,
+            4000,
+            52,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            3001,
+            4000,
+            0.08467200483592033,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            4001,
+            5000,
+            35,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            4001,
+            5000,
+            -0.4540814971847569,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            5001,
+            6000,
+            52,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            5001,
+            6000,
+            -0.575354564797883,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            6001,
+            7000,
+            35,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            6001,
+            7000,
+            -0.1676492989193555,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            7001,
+            8000,
+            52,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            7001,
+            8000,
+            0.3941919592312734,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            8001,
+            9000,
+            35,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            8001,
+            9000,
+            0.593614947974029,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            9001,
+            10000,
+            52,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            9001,
+            10000,
+            0.24727109114505394,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            10001,
+            11000,
+            35,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            10001,
+            11000,
+            -0.32641266653362183,
+            "gc-skew"
+          ],
+          [
+            "染色体甲",
+            11001,
+            12000,
+            52,
+            "gc-content"
+          ],
+          [
+            "染色体甲",
+            11001,
+            12000,
+            -0.5999941239304221,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            1,
+            1000,
+            42,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            1,
+            1000,
+            0.5048825908847379,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            1001,
+            2000,
+            59,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            1001,
+            2000,
+            0.545578456095409,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            2001,
+            3000,
+            42,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            2001,
+            3000,
+            0.08467200483592033,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            3001,
+            4000,
+            59,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            3001,
+            4000,
+            -0.4540814971847569,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            4001,
+            5000,
+            42,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            4001,
+            5000,
+            -0.575354564797883,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            5001,
+            6000,
+            59,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            5001,
+            6000,
+            -0.1676492989193555,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            6001,
+            7000,
+            42,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            6001,
+            7000,
+            0.3941919592312734,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            7001,
+            8000,
+            59,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            7001,
+            8000,
+            0.593614947974029,
+            "gc-skew"
+          ],
+          [
+            "染色体乙",
+            8001,
+            9000,
+            42,
+            "gc-content"
+          ],
+          [
+            "染色体乙",
+            8001,
+            9000,
+            0.24727109114505394,
+            "gc-skew"
+          ],
+          [
+            "染色体丙",
+            1,
+            1000,
+            49,
+            "gc-content"
+          ],
+          [
+            "染色体丙",
+            1,
+            1000,
+            0.545578456095409,
+            "gc-skew"
+          ],
+          [
+            "染色体丙",
+            1001,
+            2000,
+            66,
+            "gc-content"
+          ],
+          [
+            "染色体丙",
+            1001,
+            2000,
+            0.08467200483592033,
+            "gc-skew"
+          ],
+          [
+            "染色体丙",
+            2001,
+            3000,
+            49,
+            "gc-content"
+          ],
+          [
+            "染色体丙",
+            2001,
+            3000,
+            -0.4540814971847569,
+            "gc-skew"
+          ],
+          [
+            "染色体丙",
+            3001,
+            4000,
+            66,
+            "gc-content"
+          ],
+          [
+            "染色体丙",
+            3001,
+            4000,
+            -0.575354564797883,
+            "gc-skew"
+          ],
+          [
+            "染色体丙",
+            4001,
+            5000,
+            49,
+            "gc-content"
+          ],
+          [
+            "染色体丙",
+            4001,
+            5000,
+            -0.1676492989193555,
+            "gc-skew"
+          ],
+          [
+            "染色体丙",
+            5001,
+            6000,
+            66,
+            "gc-content"
+          ],
+          [
+            "染色体丙",
+            5001,
+            6000,
+            0.3941919592312734,
+            "gc-skew"
+          ],
+          [
+            "染色体丙",
+            6001,
+            7000,
+            49,
+            "gc-content"
+          ],
+          [
+            "染色体丙",
+            6001,
+            7000,
+            0.593614947974029,
+            "gc-skew"
+          ]
+        ]
+      },
+      {
+        "id": "annotations",
+        "name": "模拟基因注释",
+        "role": "annotations",
+        "columns": [
+          "chromosome",
+          "start",
+          "end",
+          "name",
+          "strand"
+        ],
+        "rows": [
+          [
+            "染色体甲",
+            1000,
+            2300,
+            "基因甲",
+            "+"
+          ],
+          [
+            "染色体乙",
+            3900,
+            5800,
+            "基因乙",
+            "-"
+          ],
+          [
+            "染色体丙",
+            2000,
+            3000,
+            "基因丙",
+            "+"
+          ]
+        ]
+      },
+      {
+        "id": "genome-links",
+        "name": "模拟区间关联",
+        "role": "genome-links",
+        "columns": [
+          "source",
+          "sourceStart",
+          "sourceEnd",
+          "target",
+          "targetStart",
+          "targetEnd",
+          "value"
+        ],
+        "rows": [
+          [
+            "染色体甲",
+            1500,
+            2500,
+            "染色体乙",
+            4500,
+            5600,
+            3
+          ],
+          [
+            "染色体乙",
+            1500,
+            2500,
+            "染色体丙",
+            3300,
+            4200,
+            2
+          ],
+          [
+            "染色体甲",
+            8500,
+            9500,
+            "染色体丙",
+            1500,
+            2300,
+            1
+          ]
+        ]
+      }
+    ],
+    "files": [
+      {
+        "id": "fasta",
+        "name": "模拟DNA.fasta",
+        "role": "fasta",
+        "format": "fasta",
+        "text": ">模拟片段甲\nACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACAATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATAGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCAGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACAATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATAGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCAGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACAATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATAGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCAGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACAATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATAGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCAGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTGTGCATACACGTG\n>模拟片段乙\nGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCATCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCTGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCAGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCATCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCTGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCAGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCATCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCTGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTGTTCATGCATGTTCATGCATGTTCATGCATGTTCATGCAGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTCATCATGCATGTTCATGCATGTTCATGCATGTTCATGCATGTTGTTCATGCATGTTCATGCAT"
+      }
+    ]
+  },
+  "mapping": {},
+  "style": {
+    "width": 960,
+    "height": 680,
+    "background": "#ffffff",
+    "transparent": false,
+    "marginTop": 92,
+    "marginRight": 85,
+    "marginBottom": 80,
+    "marginLeft": 85,
+    "title": "基因组圈图",
+    "subtitle": "",
+    "fontFamily": "Noto Sans SC, sans-serif",
+    "fontSize": 13,
+    "titleSize": 24,
+    "textColor": "#243947",
+    "palette": [
+      "#237c83",
+      "#e59347",
+      "#6375bd",
+      "#b75673",
+      "#70a077",
+      "#9d78ad",
+      "#ccbd65",
+      "#4c94b3"
+    ],
+    "opacity": 1,
+    "showLegend": true,
+    "showGrid": true,
+    "showLabels": true,
+    "xTitle": "",
+    "yTitle": "",
+    "pointSize": 5,
+    "lineWidth": 2,
+    "orientation": "vertical",
+    "sort": "original",
+    "genomeInput": "table",
+    "chromosomeGap": 5,
+    "chromosomeWidth": 18,
+    "trackWidth": 28,
+    "genomeStartAngle": -90,
+    "genomeTicks": true,
+    "showGCContent": true,
+    "showGCSkew": true,
+    "gcColor": "#3b9aa0",
+    "skewPositive": "#9772aa",
+    "skewNegative": "#69a36f",
+    "trackValueMax": 100,
+    "showAnnotations": true,
+    "plusColor": "#659bbd",
+    "minusColor": "#e49950",
+    "showGenomeLinks": true,
+    "genomeLinkWidth": 2,
+    "genomeLinkOpacity": 0.45
+  },
+  "layers": [
+    {
+      "id": "7f957399-c436-4658-b17a-084a1c611e08",
+      "type": "genome-track",
+      "name": "自定义数值轨道",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "7f957399-c436-4658-b17a-084a1c611e08",
+            "name": "自定义轨道数据",
+            "role": "genome-track",
+            "columns": [
+              "chromosome",
+              "start",
+              "end",
+              "value"
+            ],
+            "rows": [
+              [
+                "染色体甲",
+                1,
+                1000,
+                35
+              ],
+              [
+                "染色体甲",
+                1001,
+                2000,
+                52
+              ],
+              [
+                "染色体甲",
+                2001,
+                3000,
+                35
+              ],
+              [
+                "染色体甲",
+                3001,
+                4000,
+                52
+              ],
+              [
+                "染色体甲",
+                4001,
+                5000,
+                35
+              ],
+              [
+                "染色体甲",
+                5001,
+                6000,
+                52
+              ],
+              [
+                "染色体甲",
+                6001,
+                7000,
+                35
+              ],
+              [
+                "染色体甲",
+                7001,
+                8000,
+                52
+              ],
+              [
+                "染色体甲",
+                8001,
+                9000,
+                35
+              ],
+              [
+                "染色体甲",
+                9001,
+                10000,
+                52
+              ],
+              [
+                "染色体甲",
+                10001,
+                11000,
+                35
+              ],
+              [
+                "染色体甲",
+                11001,
+                12000,
+                52
+              ],
+              [
+                "染色体乙",
+                1,
+                1000,
+                42
+              ],
+              [
+                "染色体乙",
+                1001,
+                2000,
+                59
+              ],
+              [
+                "染色体乙",
+                2001,
+                3000,
+                42
+              ],
+              [
+                "染色体乙",
+                3001,
+                4000,
+                59
+              ],
+              [
+                "染色体乙",
+                4001,
+                5000,
+                42
+              ],
+              [
+                "染色体乙",
+                5001,
+                6000,
+                59
+              ],
+              [
+                "染色体乙",
+                6001,
+                7000,
+                42
+              ],
+              [
+                "染色体乙",
+                7001,
+                8000,
+                59
+              ],
+              [
+                "染色体乙",
+                8001,
+                9000,
+                42
+              ],
+              [
+                "染色体丙",
+                1,
+                1000,
+                49
+              ],
+              [
+                "染色体丙",
+                1001,
+                2000,
+                66
+              ],
+              [
+                "染色体丙",
+                2001,
+                3000,
+                49
+              ],
+              [
+                "染色体丙",
+                3001,
+                4000,
+                66
+              ],
+              [
+                "染色体丙",
+                4001,
+                5000,
+                49
+              ],
+              [
+                "染色体丙",
+                5001,
+                6000,
+                66
+              ],
+              [
+                "染色体丙",
+                6001,
+                7000,
+                49
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "bar",
+        "pointSize": 3
+      }
+    },
+    {
+      "id": "9a950bf0-cc35-461b-bc8a-0c2f2d7a5803",
+      "type": "genome-track",
+      "name": "自定义数值轨道",
+      "visible": true,
+      "data": {
+        "tables": [
+          {
+            "id": "9a950bf0-cc35-461b-bc8a-0c2f2d7a5803",
+            "name": "自定义轨道数据",
+            "role": "genome-track",
+            "columns": [
+              "chromosome",
+              "start",
+              "end",
+              "value"
+            ],
+            "rows": [
+              [
+                "染色体甲",
+                1,
+                1000,
+                35
+              ],
+              [
+                "染色体甲",
+                1001,
+                2000,
+                52
+              ],
+              [
+                "染色体甲",
+                2001,
+                3000,
+                35
+              ],
+              [
+                "染色体甲",
+                3001,
+                4000,
+                52
+              ],
+              [
+                "染色体甲",
+                4001,
+                5000,
+                35
+              ],
+              [
+                "染色体甲",
+                5001,
+                6000,
+                52
+              ],
+              [
+                "染色体甲",
+                6001,
+                7000,
+                35
+              ],
+              [
+                "染色体甲",
+                7001,
+                8000,
+                52
+              ],
+              [
+                "染色体甲",
+                8001,
+                9000,
+                35
+              ],
+              [
+                "染色体甲",
+                9001,
+                10000,
+                52
+              ],
+              [
+                "染色体甲",
+                10001,
+                11000,
+                35
+              ],
+              [
+                "染色体甲",
+                11001,
+                12000,
+                52
+              ],
+              [
+                "染色体乙",
+                1,
+                1000,
+                42
+              ],
+              [
+                "染色体乙",
+                1001,
+                2000,
+                59
+              ],
+              [
+                "染色体乙",
+                2001,
+                3000,
+                42
+              ],
+              [
+                "染色体乙",
+                3001,
+                4000,
+                59
+              ],
+              [
+                "染色体乙",
+                4001,
+                5000,
+                42
+              ],
+              [
+                "染色体乙",
+                5001,
+                6000,
+                59
+              ],
+              [
+                "染色体乙",
+                6001,
+                7000,
+                42
+              ],
+              [
+                "染色体乙",
+                7001,
+                8000,
+                59
+              ],
+              [
+                "染色体乙",
+                8001,
+                9000,
+                42
+              ],
+              [
+                "染色体丙",
+                1,
+                1000,
+                49
+              ],
+              [
+                "染色体丙",
+                1001,
+                2000,
+                66
+              ],
+              [
+                "染色体丙",
+                2001,
+                3000,
+                49
+              ],
+              [
+                "染色体丙",
+                3001,
+                4000,
+                66
+              ],
+              [
+                "染色体丙",
+                4001,
+                5000,
+                49
+              ],
+              [
+                "染色体丙",
+                5001,
+                6000,
+                66
+              ],
+              [
+                "染色体丙",
+                6001,
+                7000,
+                49
+              ]
+            ]
+          }
+        ]
+      },
+      "settings": {
+        "size": 22,
+        "color": "#397e99",
+        "negativeColor": "#d2786c",
+        "kind": "line",
+        "pointSize": 3
+      }
+    }
+  ],
+  "layout": {}
+}

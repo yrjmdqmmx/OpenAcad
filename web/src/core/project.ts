@@ -13,7 +13,7 @@ export const defaults: ChartStyle = {
 };
 export function makeProject(t: Template): Project {
   const now = new Date().toISOString();
-  return {schemaVersion:1,id:crypto.randomUUID(),name:`${t.name} · 模拟数据`,templateId:t.id,templateVersion:t.version,createdAt:now,updatedAt:now,dataset:structuredClone(t.example),mapping:{},style:{...structuredClone(defaults),...structuredClone(t.defaultStyle)},layers:[],layout:{}};
+  return {schemaVersion:1,id:crypto.randomUUID(),name:`${t.name} · 模拟数据`,templateId:t.id,templateVersion:t.version,createdAt:now,updatedAt:now,dataset:structuredClone(t.example),mapping:{},style:{...structuredClone(defaults),...structuredClone(t.defaultStyle)},layers:[],layout:{},...(t.exampleAnalysis?{analysis:structuredClone(t.exampleAnalysis)}:{})};
 }
 export function encodeProject(project:Project) {return JSON.stringify({...project,updatedAt:new Date().toISOString()},null,2);}
 export function decodeProject(text:string,templates:Template[]):Project {

@@ -15,7 +15,7 @@ export function parseText(text:string,delimiter?:string):DataTable{
 export async function parseFile(file:File,forceText=false):Promise<Dataset>{
   if(file.size>10*1024*1024)throw new Error(`“${file.name}”超过 10 MB。请拆分表格后再上传。`);
   if(/\.(xlsx?|csv|tsv)$/i.test(file.name)||(!forceText&&/\.txt$/i.test(file.name))){
-    const book=XLSX.read(await file.arrayBuffer(),{type:'array',raw:true,codepage:65001});
+    let book:XLSX.WorkBook;try{book=XLSX.read(await file.arrayBuffer(),{type:'array',raw:true,codepage:65001});}catch{throw new Error(`无法解析“${file.name}”。请确认它是有效的 CSV、TSV 或 Excel 文件；若 Excel 设置了密码，请先另存为未加密文件。`);}
     return {tables:book.SheetNames.map((name,i)=>tableFromRows(XLSX.utils.sheet_to_json(book.Sheets[name],{header:1,raw:true,defval:''}) as Cell[][],book.SheetNames.length===1?file.name:name,i===0?'data':`table-${i+1}`))};
   }
   const text=await file.text(),format=file.name.split('.').at(-1)?.toLowerCase()||'txt';

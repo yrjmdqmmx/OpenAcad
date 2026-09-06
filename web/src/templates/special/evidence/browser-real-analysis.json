@@ -1,0 +1,345 @@
+{
+  "date": "2026-09-06",
+  "source": "浏览器真实运行后的项目及图片留存文件",
+  "results": [
+    {
+      "id": "correlation-correlation",
+      "templateId": "correlation",
+      "method": "correlation",
+      "params": {
+        "correlation": "pearson"
+      },
+      "realAnalysis": true,
+      "resultMethod": "correlation",
+      "provenance": {
+        "engine": "Python",
+        "method": "correlation",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 1,
+        "inputSha256": "e0342862374b7a6c76ed20415183aff95161fc63b3825801e6bce4bb4c2b8ebe",
+        "parameters": {
+          "seed": 1,
+          "correlation": "pearson",
+          "alternative": "two-sided",
+          "pAdjust": "none"
+        }
+      },
+      "projectArtifact": "correlation-correlation.openacad.json",
+      "svgArtifact": "correlation-correlation.svg",
+      "svgExists": true,
+      "evidence": "2026-09-06 browser-advanced 真实计算日志通过；本条从留存的完整项目与 SVG 核验生成"
+    },
+    {
+      "id": "mantel-mantel.randtest",
+      "templateId": "mantel",
+      "method": "mantel.randtest",
+      "params": {
+        "speciesDistance": "bray",
+        "environmentDistance": "euclidean",
+        "controlDistance": "euclidean",
+        "permutations": 999,
+        "seed": 2026
+      },
+      "realAnalysis": true,
+      "resultMethod": "mantel.randtest",
+      "provenance": {
+        "engine": "R",
+        "method": "mantel.randtest",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 2026,
+        "inputSha256": "bf9b86f4eb72af1c65de967bf1a98790e6c81330f1754f85175bd40660d89dd7",
+        "parameters": {
+          "seed": 2026,
+          "speciesDistance": "bray",
+          "environmentDistance": "euclidean",
+          "controlDistance": "euclidean",
+          "correlation": "pearson",
+          "permutations": 999,
+          "pAdjust": "none",
+          "pseudocount": 0
+        },
+        "r": "4.6.1",
+        "rPackages": {
+          "vegan": "2.7.6",
+          "mgcv": "1.9.4",
+          "ape": "5.8.1",
+          "ade4": "1.7.24",
+          "jsonlite": "2.0.0"
+        },
+        "rng": "L'Ecuyer-CMRG"
+      },
+      "projectArtifact": "mantel-mantel.randtest.openacad.json",
+      "svgArtifact": "mantel-mantel.randtest.svg",
+      "svgExists": true,
+      "evidence": "2026-09-06 browser-advanced 真实计算日志通过；本条从留存的完整项目与 SVG 核验生成"
+    },
+    {
+      "id": "mantel-mantel.rtest",
+      "templateId": "mantel",
+      "method": "mantel.rtest",
+      "params": {
+        "speciesDistance": "bray",
+        "environmentDistance": "euclidean",
+        "controlDistance": "euclidean",
+        "permutations": 999,
+        "seed": 2026
+      },
+      "realAnalysis": true,
+      "resultMethod": "mantel.rtest",
+      "provenance": {
+        "engine": "R",
+        "method": "mantel.rtest",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 2026,
+        "inputSha256": "bf9b86f4eb72af1c65de967bf1a98790e6c81330f1754f85175bd40660d89dd7",
+        "parameters": {
+          "seed": 2026,
+          "speciesDistance": "bray",
+          "environmentDistance": "euclidean",
+          "controlDistance": "euclidean",
+          "correlation": "pearson",
+          "permutations": 999,
+          "pAdjust": "none",
+          "pseudocount": 0
+        },
+        "r": "4.6.1",
+        "rPackages": {
+          "vegan": "2.7.6",
+          "mgcv": "1.9.4",
+          "ape": "5.8.1",
+          "ade4": "1.7.24",
+          "jsonlite": "2.0.0"
+        },
+        "rng": "L'Ecuyer-CMRG"
+      },
+      "projectArtifact": "mantel-mantel.rtest.openacad.json",
+      "svgArtifact": "mantel-mantel.rtest.svg",
+      "svgExists": true,
+      "evidence": "2026-09-06 browser-advanced 真实计算日志通过；本条从留存的完整项目与 SVG 核验生成"
+    },
+    {
+      "id": "mantel-mantel.partial",
+      "templateId": "mantel",
+      "method": "mantel.partial",
+      "params": {
+        "speciesDistance": "bray",
+        "environmentDistance": "euclidean",
+        "controlDistance": "euclidean",
+        "permutations": 999,
+        "seed": 2026
+      },
+      "realAnalysis": true,
+      "resultMethod": "mantel.partial",
+      "provenance": {
+        "engine": "R",
+        "method": "mantel.partial",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 2026,
+        "inputSha256": "6e9e6cbc3e31f2e826dcfac3854885be03c0f2f11f0a33ea1b556e4ae164668c",
+        "parameters": {
+          "seed": 2026,
+          "speciesDistance": "bray",
+          "environmentDistance": "euclidean",
+          "controlDistance": "euclidean",
+          "correlation": "pearson",
+          "permutations": 999,
+          "pAdjust": "none",
+          "pseudocount": 0
+        },
+        "r": "4.6.1",
+        "rPackages": {
+          "vegan": "2.7.6",
+          "mgcv": "1.9.4",
+          "ape": "5.8.1",
+          "ade4": "1.7.24",
+          "jsonlite": "2.0.0"
+        },
+        "rng": "L'Ecuyer-CMRG"
+      },
+      "projectArtifact": "mantel-mantel.partial.openacad.json",
+      "svgArtifact": "mantel-mantel.partial.svg",
+      "svgExists": true,
+      "evidence": "2026-09-06 browser-advanced 真实计算日志通过；本条从留存的完整项目与 SVG 核验生成"
+    },
+    {
+      "id": "circle-heatmap-cluster",
+      "templateId": "circle-heatmap",
+      "method": "cluster",
+      "params": {
+        "linkage": "complete",
+        "distance": "euclidean",
+        "standardization": "None",
+        "direction": "column",
+        "axis": "both"
+      },
+      "realAnalysis": true,
+      "resultMethod": "cluster",
+      "provenance": {
+        "engine": "Python",
+        "method": "cluster",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 1,
+        "inputSha256": "c6ba37a988e32f8f85193be6136a7c7d5bdf64fd3e3d796a2b43744d1b215053",
+        "parameters": {
+          "seed": 1,
+          "standardization": "None",
+          "direction": "column",
+          "distance": "euclidean",
+          "minkowskiP": 2,
+          "axis": "both",
+          "linkage": "complete"
+        }
+      },
+      "projectArtifact": "circle-heatmap-cluster.openacad.json",
+      "svgArtifact": "circle-heatmap-cluster.svg",
+      "svgExists": true,
+      "evidence": "2026-09-06 browser-advanced 真实计算日志通过；本条从留存的完整项目与 SVG 核验生成"
+    },
+    {
+      "id": "genome-circos-gc",
+      "templateId": "genome-circos",
+      "method": "gc",
+      "params": {
+        "contentWindow": 200,
+        "skewWindow": 200
+      },
+      "realAnalysis": true,
+      "resultMethod": "gc",
+      "provenance": {
+        "engine": "Python",
+        "method": "gc",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 1,
+        "inputSha256": "6351b84287d2c6265ba6b90c82e96437086d679fb38f951dd3854319cc5b5831",
+        "parameters": {
+          "seed": 1,
+          "contentWindow": 200,
+          "skewWindow": 200
+        }
+      },
+      "projectArtifact": "genome-circos-gc.openacad.json",
+      "svgArtifact": "genome-circos-gc.svg",
+      "svgExists": true,
+      "evidence": "2026-09-06 browser-advanced 真实计算日志通过；本条从留存的完整项目与 SVG 核验生成"
+    },
+    {
+      "id": "mantel-mantel",
+      "templateId": "mantel",
+      "method": "mantel",
+      "params": {
+        "speciesDistance": "bray",
+        "environmentDistance": "euclidean",
+        "controlDistance": "euclidean",
+        "permutations": 999,
+        "seed": 2026
+      },
+      "realAnalysis": true,
+      "resultMethod": "mantel",
+      "provenance": {
+        "engine": "R",
+        "method": "mantel",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 2026,
+        "inputSha256": "bf9b86f4eb72af1c65de967bf1a98790e6c81330f1754f85175bd40660d89dd7",
+        "parameters": {
+          "seed": 2026,
+          "speciesDistance": "bray",
+          "environmentDistance": "euclidean",
+          "controlDistance": "euclidean",
+          "correlation": "pearson",
+          "permutations": 999,
+          "pAdjust": "none",
+          "pseudocount": 0
+        },
+        "r": "4.6.1",
+        "rPackages": {
+          "vegan": "2.7.6",
+          "mgcv": "1.9.4",
+          "ape": "5.8.1",
+          "ade4": "1.7.24",
+          "jsonlite": "2.0.0"
+        },
+        "rng": "L'Ecuyer-CMRG"
+      },
+      "projectArtifact": "mantel-mantel.openacad.json",
+      "svgArtifact": "mantel-mantel.svg",
+      "svgExists": true,
+      "evidence": "2026-09-06 browser-advanced 真实计算日志通过；本条从留存的完整项目与 SVG 核验生成"
+    },
+    {
+      "id": "double-correlation-correlation",
+      "templateId": "double-correlation",
+      "method": "correlation",
+      "params": {
+        "correlation": "pearson"
+      },
+      "realAnalysis": true,
+      "resultMethod": "correlation",
+      "provenance": {
+        "engine": "Python",
+        "method": "correlation",
+        "methodVersion": "openacad-1",
+        "python": "3.12.14",
+        "packages": {
+          "numpy": "2.4.3",
+          "scipy": "1.17.1",
+          "scikit-learn": "1.8.0"
+        },
+        "seed": 1,
+        "inputSha256": "05674a018c69bc84afcc94e999fde0e4d5229b503f1bbd958927cfe5698a2c32",
+        "parameters": {
+          "seed": 1,
+          "correlation": "pearson",
+          "alternative": "two-sided",
+          "pAdjust": "none"
+        }
+      },
+      "projectArtifact": "double-correlation-correlation.openacad.json",
+      "svgArtifact": "double-correlation-correlation.svg",
+      "svgExists": true,
+      "evidence": "2026-09-06 browser-advanced 真实计算日志通过；本条从留存的完整项目与 SVG 核验生成"
+    }
+  ]
+}

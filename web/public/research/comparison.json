@@ -1,0 +1,2277 @@
+{
+  "title": "ChiPlot逐图研究与OpenAcad功能对照",
+  "checkedAt": "2026-09-06",
+  "counts": {
+    "drawingCards": 54,
+    "uniqueEntrances": 52,
+    "HTTP200": 51,
+    "HTTP404": 1,
+    "previewCardsReachable": 54
+  },
+  "profiles": {
+    "E": {
+      "formats": [
+        "SVG",
+        "PNG",
+        "透明PNG",
+        "PDF",
+        "EPS"
+      ],
+      "evidence": "代码分支存在，不等于逐图导出通过",
+      "size": "画布宽高；导出物理尺寸和实际像素逐图待核实",
+      "dpi": "独立DPI控件待核实",
+      "transparent": "透明PNG分支有代码；其他格式背景逐图待核实",
+      "fontClipping": "中文字体与裁切逐图待核实"
+    },
+    "P": {
+      "format": "JSON编辑状态",
+      "contains": "数据、样式、图层有代码路径",
+      "reopen": "保存/恢复代码存在；逐图往返待核实",
+      "example": "默认示例可能No user data，不能视为所有示例都可保存"
+    }
+  },
+  "records": [
+    {
+      "chineseName": "系统发育树",
+      "requiredFields": "Newick/Nexus/phyloXML；注释表首列节点ID；部分时间树依据文档",
+      "multipleInputs": "树文件＋多种节点注释表",
+      "specificStyles": "矩形/圆形/无根；重定根、排序、折叠、删除枝叶、枝长、支持度、29类注释",
+      "statistics": "编辑已有树；不执行序列建树",
+      "errorCheckpoints": "树语法、非数字枝长、重复ID、注释ID未匹配",
+      "openacadEnhancement": "三布局、完整注释；无根增加分类字体/两类饼图/节点连线",
+      "id": "tvbot",
+      "sourceUrl": "https://www.chiplot.online/tvbot.html",
+      "category": "Phylogenetic Tree",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/TG_assembly.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/circleTree.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/unrootedTree.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C",
+        "D"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "Newick/Nexus/phyloXML；注释表首列节点ID；部分时间树依据文档；附属注释的表格格式见共同记录",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "矩形/圆形/无根；重定根、排序、折叠、删除枝叶、枝长、支持度、29类注释",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/Ali/data/NJ_tree.treefile"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/js/bootstrap.bundle.min.js",
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/tvbot-Cgt3ah5D.js",
+        "https://badge.dimensions.ai/badge.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/tvbot-Cgt3ah5D.js": "57b7f32506b65b2143f22d3d5bde9a81c764e4bbdb31ce21ae7a8c32fbbfdc55"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "基因簇",
+      "requiredFields": "前五列ID/source/start/end/strand；起止数值、方向+/-",
+      "multipleInputs": "单表",
+      "specificStyles": "箭头形态、头宽高、描边、标尺、分类色、同源连线、断裂区间",
+      "statistics": "已有基因坐标绘图",
+      "errorCheckpoints": "方向错误、区间反向、缺ID",
+      "openacadEnhancement": "中文逐区间校验",
+      "id": "gene_cluster",
+      "sourceUrl": "https://www.chiplot.online/gene_cluster.html",
+      "category": "BioPlot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/geneCluster-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/geneCluster.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "箭头形态、头宽高、描边、标尺、分类色、同源连线、断裂区间",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/gene_cluster_gap.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/gene_cluster-eo1227SO.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/gene_cluster-eo1227SO.js": "dcb453f1fbe36a1f0bc3cd4696f16bbaf1df120a0310e5bca1973cb50a21065f"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "CDD保守结构域",
+      "requiredFields": "CDD hitdata.txt 的Query/From/To/Short name＋FASTA蛋白长度",
+      "multipleInputs": "CDD＋FASTA两文件",
+      "specificStyles": "蛋白基线、结构域位置、颜色、圆角、间距、描边、文字",
+      "statistics": "展示CDD结果；不执行CDD搜索",
+      "errorCheckpoints": "缺文件、Query未匹配、区间越界",
+      "openacadEnhancement": "保留文件角色并提供标准化表格",
+      "id": "conserved_domains_plot",
+      "sourceUrl": "https://www.chiplot.online/conserved_domains_plot.html",
+      "category": "BioPlot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/conservedDomainsNCBIPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CDD hitdata.txt 的Query/From/To/Short name＋FASTA蛋白长度；附属注释的表格格式见共同记录",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "蛋白基线、结构域位置、颜色、圆角、间距、描边、文字",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/conserved_domain/hitdata.txt",
+        "https://www.chiplot.online/static/xiaochiPlot/data/conserved_domain/sequence.fasta"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/conserved_domains_plot-IxqHGLCq.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/conserved_domains_plot-IxqHGLCq.js": "61bdd879bf7d975fa36590d48ddbef2255d602793aa214beb6e8e4f9b0735c52"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "MEME保守基序",
+      "requiredFields": "MEME XML序列、motif与scanned site引用",
+      "multipleInputs": "单XML",
+      "specificStyles": "基序色、宽度、间距、基线、文字、描边",
+      "statistics": "展示已有基序；不执行MEME搜索",
+      "errorCheckpoints": "XML类型、引用和坐标错误",
+      "openacadEnhancement": "中文XML定位与可编辑注释",
+      "id": "conserved_motif_plot",
+      "sourceUrl": "https://www.chiplot.online/conserved_motif_plot.html",
+      "category": "BioPlot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/conservedMotifPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "MEME XML序列、motif与scanned site引用；附属注释的表格格式见共同记录",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "基序色、宽度、间距、基线、文字、描边",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/conserved_domain/meme_4.xml"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/conserved_motif_plot-DyS_Kd_t.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/conserved_motif_plot-DyS_Kd_t.js": "692fde18892a3cc38f5bb4f88aad3a8ed7712043b7e3db8276e44c546a5f9e88"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "基因组圈图",
+      "requiredFields": "JSON contigName/contigLength/GCSkewArr/GCContentArr；或FASTA；可选CDS contig/start/end/strand/type",
+      "multipleInputs": "JSON或FASTA，可附CDS表",
+      "specificStyles": "环宽、半径、间距、刻度、GC和正负链轨道",
+      "statistics": "FASTA路径真实窗口GC计算；不执行组装",
+      "errorCheckpoints": "轨道长度、非数值、contig未匹配",
+      "openacadEnhancement": "窗口与有效碱基分母明确",
+      "id": "circos",
+      "sourceUrl": "https://www.chiplot.online/circos.html",
+      "category": "BioPlot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/circos.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "JSON contigName/contigLength/GCSkewArr/GCContentArr；或FASTA；可选CDS contig/start/end/strand/type；附属注释的表格格式见共同记录",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "环宽、半径、间距、刻度、GC和正负链轨道",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/circos.json"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/circos-Dvb6yF2b.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/circos-Dvb6yF2b.js": "a676d83a0bdb2af4d4bfe8320eb2e7145d91c9385d137ad83bbdb46cd0d7952a"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "火山图",
+      "requiredFields": "ID、Log2FoldChange、PValue；前三列位置读取",
+      "multipleInputs": "单表",
+      "specificStyles": "阈值、上下调色、符号、点大小、标签、图例",
+      "statistics": "-log10P与阈值分类；不执行差异表达分析",
+      "errorCheckpoints": "概率范围、误传原FC或-logP",
+      "openacadEnhancement": "P=0明确处理；不伪造P值",
+      "id": "Volcano_plot",
+      "sourceUrl": "https://www.chiplot.online/Volcano_plot.html",
+      "category": "BioPlot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/volcanoPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "阈值、上下调色、符号、点大小、标签、图例",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/Volcanoplot.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/Volcano_plot-CHfoYy41.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/Volcano_plot-CHfoYy41.js": "11170c44d8e7f46397a106403de44e1e51a9bc640aba6fd2248536c49e8de724"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "富集气泡图",
+      "requiredFields": "Description/GeneRatio/Qvalue/Count按字段读取；示例另含ID",
+      "multipleInputs": "单表",
+      "specificStyles": "条目轴、比例轴、气泡大小、Q色条、分类注释",
+      "statistics": "已有富集结果绘图；不执行基因富集检验",
+      "errorCheckpoints": "缺列、比例字符串、非法概率/计数",
+      "openacadEnhancement": "点/柱两种真实布局",
+      "id": "enrich_plot",
+      "sourceUrl": "https://www.chiplot.online/enrich_plot.html",
+      "category": "BioPlot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/enrichPlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/enrichPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "条目轴、比例轴、气泡大小、Q色条、分类注释",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/GO_enrich.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/enrich_plot-U1mfKkf9.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/enrich_plot-U1mfKkf9.js": "e8e3fd68f3f30257894ade6e387bec52d19ed734ac4cb854947bfef20c4a3457"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "圆形富集图",
+      "requiredFields": "5或6列：条目/类别/PQ/背景数/差异数或上调和下调数",
+      "multipleInputs": "单表",
+      "specificStyles": "分类环、背景环、上下调环、richFactor、宽度、文字、色条",
+      "statistics": "基于已有结果计算比例；不执行富集检验",
+      "errorCheckpoints": "列数、零背景、计数越界",
+      "openacadEnhancement": "字段角色与计算说明",
+      "id": "circle_enrich_plot",
+      "sourceUrl": "https://www.chiplot.online/circle_enrich_plot.html",
+      "category": "BioPlot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/circleEnrichPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "分类环、背景环、上下调环、richFactor、宽度、文字、色条",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/circleEnrichPlot.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/circle_enrich_plot-DwrHgPGi.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/circle_enrich_plot-DwrHgPGi.js": "cbd9d3bc2348e23682c9402edfb52eec9cc72504c4c7d6e6ab549a824586243f"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "MCScanX共线性",
+      "requiredFields": "collinearity＋无表头4列简化GFF：chr/geneID/start/end；不是9列GFF3",
+      "multipleInputs": "两文件",
+      "specificStyles": "染色体排列、拖序、对齐、宽高、连线块、尺度、基因层",
+      "statistics": "展示MCScanX结果",
+      "errorCheckpoints": "错传GFF3、基因ID不匹配",
+      "openacadEnhancement": "明确格式区别与可编辑次序",
+      "id": "McScanX_synteny_plot",
+      "sourceUrl": "https://www.chiplot.online/McScanX_synteny_plot.html",
+      "category": "BioPlot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/McScanXSyntenyPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "collinearity＋无表头4列简化GFF：chr/geneID/start/end；不是9列GFF3；附属注释的表格格式见共同记录",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "染色体排列、拖序、对齐、宽高、连线块、尺度、基因层",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/McScanX/combined.gff",
+        "https://www.chiplot.online/static/xiaochiPlot/data/McScanX/combined.collinearity"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/McScanX_synteny_plot-CvDb1Fhq.js",
+        "https://www.chiplot.online/static/xiaochiPlot/js/bootstrap.bundle.min.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/McScanX_synteny_plot-CvDb1Fhq.js": "3b8877af79c74eeba682242d0b14924178f8e2974b28b326abc94f98ea14460c"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "动态网络图",
+      "requiredFields": "node id/label＋edge id/source/target；可另接注释",
+      "multipleInputs": "节点与边两表",
+      "specificStyles": "力布局、拖动、节点形色大小、连接数、边、注释；原删除X/Y和背景面板",
+      "statistics": "网络布局；无共现网络推断证据",
+      "errorCheckpoints": "悬空端点、重复ID",
+      "openacadEnhancement": "补背景、稳定布局和位置保存",
+      "id": "network_plot",
+      "sourceUrl": "https://www.chiplot.online/network_plot.html",
+      "category": "Network plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/networkPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "力布局、拖动、节点形色大小、连接数、边、注释；原删除X/Y和背景面板",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/network/unweight.glasso_node.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/network/unweight.glasso_edge.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/network_plot-DEx1tG3B.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/network_plot-DEx1tG3B.js": "3436ed69a193c117938c8c0b5b90ed1222364477b241875a0df4fa9c52a33aed"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "地图点位",
+      "requiredFields": "coordinate_id/longitude/latitude；可接ID注释",
+      "multipleInputs": "点表＋可选注释",
+      "specificStyles": "五种投影、中心、缩放、底图、点形大小、颜色层",
+      "statistics": "坐标投影；无地理编码/区域统计/完整GIS证据",
+      "errorCheckpoints": "经纬度范围、注释未匹配",
+      "openacadEnhancement": "许可明确底图、中文坐标校验",
+      "id": "map_plot",
+      "sourceUrl": "https://www.chiplot.online/map_plot.html",
+      "category": "Map plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/mapPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "五种投影、中心、缩放、底图、点形大小、颜色层",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/map_coordinate.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/worldGEO_revised_China.json"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/map_plot-DPSMdVaZ.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/map_plot-DPSMdVaZ.js": "66cdf35d8785dba2ce7c1aa0035e7f1125b1de6cfa84830caeb4848595138184"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "基础散点图",
+      "requiredFields": "前三列ID/数值X/数值Y；可关联注释",
+      "multipleInputs": "单表＋可选注释",
+      "specificStyles": "点形、大小、色、标签、边缘密度、LM/LOESS/GAM与置信带",
+      "statistics": "存在真实回归请求",
+      "errorCheckpoints": "非数值、ID、有效点数",
+      "openacadEnhancement": "真实模型统计与置信带，不伪线性拟合",
+      "id": "scatter_plot",
+      "sourceUrl": "https://www.chiplot.online/scatter_plot.html",
+      "category": "Scatter plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/scatterPlot-3.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/scatterPlot.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/scatterPlot-2.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/scatterPlot-1.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "点形、大小、色、标签、边缘密度、LM/LOESS/GAM与置信带",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/lowess_fit.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/scatter_plot-BtfKXAfe.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/scatter_plot-BtfKXAfe.js": "28b836adbaf842db9fe26535a0de26ca6f5b50d47ce60feb23eff1e6336ef674"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "分组散点图",
+      "requiredFields": "ID/X/Y/组别",
+      "multipleInputs": "单表",
+      "specificStyles": "分组色、点形、图例、逐组拟合、置信带；边缘密度待核实",
+      "statistics": "真实分组回归请求",
+      "errorCheckpoints": "缺组别、组内数据量",
+      "openacadEnhancement": "方法参数和实际n",
+      "id": "group_scatter_plot",
+      "sourceUrl": "https://www.chiplot.online/group_scatter_plot.html",
+      "category": "Scatter plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/groupScatterPlot.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/groupScatterPlot-1.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "分组色、点形、图例、逐组拟合、置信带；边缘密度待核实",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/scatter_plot_group.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_scatter_plot-ff2hba75.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_scatter_plot-ff2hba75.js": "e2695af3142e8e93abb0e4c3b44daca5bed8906599a24001f144522357ebdafc"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "主坐标分析PCoA",
+      "requiredFields": "样本ID＋数值特征矩阵",
+      "multipleInputs": "单表",
+      "specificStyles": "距离、标准化、坐标、解释率、分组、标签",
+      "statistics": "真实距离与PCoA排序",
+      "errorCheckpoints": "距离数据域、全零行、无效距离",
+      "openacadEnhancement": "保留负特征值诊断与校正选项",
+      "id": "pcoa",
+      "sourceUrl": "https://www.chiplot.online/pcoa.html",
+      "category": "Scatter plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/pcoa.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "距离、标准化、坐标、解释率、分组、标签",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/pcoa_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/pcoa-te18XhcC.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/pcoa-te18XhcC.js": "646ee1a4de1f868af2713b2082faf13db14dc8d5354d7b2ab312aa95996c6d14"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "主成分分析PCA",
+      "requiredFields": "样本ID＋数值特征矩阵",
+      "multipleInputs": "单表",
+      "specificStyles": "标准化及方向、得分、载荷、解释率、点与注释",
+      "statistics": "真实PCA计算",
+      "errorCheckpoints": "缺失、重复ID、零方差、有效维数",
+      "openacadEnhancement": "固定SVD与中心化定义",
+      "id": "pca",
+      "sourceUrl": "https://www.chiplot.online/pca.html",
+      "category": "Scatter plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/pca.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C",
+        "O"
+      ],
+      "actualOperation": "默认示例显示已有操作证据；PC1 92.46%、PC2 5.31%；未独立复算",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "标准化及方向、得分、载荷、解释率、点与注释",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/pcoa_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/pca-BKADROCf.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/pca-BKADROCf.js": "5a4fa1b7e312c9259e3fa54aa173168d50f3d648b86914667f1e6b8c972fd588"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "非度量多维尺度NMDS",
+      "requiredFields": "样本ID＋数值特征矩阵",
+      "multipleInputs": "单表",
+      "specificStyles": "生态距离、标准化、点、标签、stress；种子/收敛控件待核实",
+      "statistics": "真实迭代排序；stress不是解释率",
+      "errorCheckpoints": "重复ID、全零行、无效距离",
+      "openacadEnhancement": "种子、收敛、关闭隐式变换",
+      "id": "nmds",
+      "sourceUrl": "https://www.chiplot.online/nmds.html",
+      "category": "Scatter plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/nmds.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "生态距离、标准化、点、标签、stress；种子/收敛控件待核实",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/pcoa_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/nmds-BF817FvD.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/nmds-BF817FvD.js": "5628bea11a3f0ea89d69879c7f35d2cd288b4e783c43444939ff9466e8332945"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "典范对应分析CCA",
+      "requiredFields": "物种矩阵与环境矩阵；原首列表头sample/env区分角色",
+      "multipleInputs": "两表或两工作表",
+      "specificStyles": "样本/物种/环境得分、箭头、解释率、标准化",
+      "statistics": "真实典范对应分析；不是典型相关分析",
+      "errorCheckpoints": "样本匹配、非负响应、矩阵秩",
+      "openacadEnhancement": "显式角色与解释率分母",
+      "id": "CCA",
+      "sourceUrl": "https://www.chiplot.online/CCA.html",
+      "category": "Scatter plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/CCAPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "样本/物种/环境得分、箭头、解释率、标准化",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/CCA_data/seq_table_prop_no_chloro_mito.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/CCA_data/varechem.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/CCA-DO_rGZG_.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/CCA-DO_rGZG_.js": "93d5a558b0808e2e3d14d56836f8b8cc91f9dcd8c0d01784d30b26862c8c4cc8"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "冗余分析RDA",
+      "requiredFields": "响应矩阵与环境矩阵；样本ID对应",
+      "multipleInputs": "两表或两工作表",
+      "specificStyles": "得分、箭头、解释率、标准化",
+      "statistics": "真实RDA；与CCA共展示内核",
+      "errorCheckpoints": "缺失、样本不匹配、共线性",
+      "openacadEnhancement": "固定scaling与诊断",
+      "id": "RDA",
+      "sourceUrl": "https://www.chiplot.online/RDA.html",
+      "category": "Scatter plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/RDAPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "得分、箭头、解释率、标准化",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/CCA_data/seq_table_prop_no_chloro_mito.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/CCA_data/varechem.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/RDA-tR_zzhGb.js",
+        "https://cdn.bootcdn.net/ajax/libs/numeric/1.2.6/numeric.min.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/RDA-tR_zzhGb.js": "fb69151344dd98365905440dd939860a040108bfb555ec099a517251fe67f9a9"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "折线与分组折线",
+      "requiredFields": "宽表每行一个系列；首列系列名，其余列名是X、单元格是Y",
+      "multipleInputs": "单表",
+      "specificStyles": "线色、虚线、线宽、透明、张力、点形、图例、断轴",
+      "statistics": "已有数值绘图",
+      "errorCheckpoints": "转置方向、X表头、非数值",
+      "openacadEnhancement": "长表映射与专属坐标控件",
+      "id": "group_line_plot",
+      "sourceUrl": "https://www.chiplot.online/group_line_plot.html",
+      "category": "Line plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/groupLinePlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "线色、虚线、线宽、透明、张力、点形、图例、断轴",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/group_line_plot.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_line_plot-BPudoWZk.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_line_plot-BPudoWZk.js": "5ee387d47172eb5fb32a02af9eab81a4e43f47a2bb63fd2efd0471b128ad7452"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "分组误差折线",
+      "requiredFields": "每表一个组的重复观测宽表",
+      "multipleInputs": "多表或多工作表",
+      "specificStyles": "线点、误差线、分类/数值X",
+      "statistics": "均值、样本SD；ANOVA代码存在但公开显著性面板待核实",
+      "errorCheckpoints": "条件列不一致、组名、样本量",
+      "openacadEnhancement": "SD/SE/CI与真实检验明确分开",
+      "id": "group_error_line_plot",
+      "sourceUrl": "https://www.chiplot.online/group_error_line_plot.html",
+      "category": "Line plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/groupErrorLinePlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "线点、误差线、分类/数值X",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data-1.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_error_line_plot-B1unFShQ.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_error_line_plot-B1unFShQ.js": "0d11f1c52d394583eb55c3e9221dcb25e0f4fdc4e62a7546f2ead7afcad56b9a"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "峰峦图",
+      "requiredFields": "样本ID＋多列原始数值",
+      "multipleInputs": "实际使用首表",
+      "specificStyles": "分箱、trim、峰间距、填充、描边、分位线",
+      "statistics": "确认分箱频数；标准KDE待核实",
+      "errorCheckpoints": "空列、常量、样本量",
+      "openacadEnhancement": "标准Gaussian KDE与频数分开",
+      "id": "ridgelinePlot",
+      "sourceUrl": "https://www.chiplot.online/ridgelinePlot.html",
+      "category": "Line plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/ridgeLinePlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "分箱、trim、峰间距、填充、描边、分位线",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/boxplot_test_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/ridgelinePlot-CMppRpxs.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/ridgelinePlot-CMppRpxs.js": "b84678f194abbc3f7c58da678a2dd2cac7f2b6cbecab6e2e2f8e3519ef03fb0e"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "棒棒糖图",
+      "requiredFields": "标签、数值两列",
+      "multipleInputs": "单表",
+      "specificStyles": "横纵向、点大小映射、杆线、间距、颜色、文字、纹理",
+      "statistics": "已有数值绘图",
+      "errorCheckpoints": "缺列、数值混单位",
+      "openacadEnhancement": "排序与色觉友好配色",
+      "id": "lollipop_plot",
+      "sourceUrl": "https://www.chiplot.online/lollipop_plot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/lollipopPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "横纵向、点大小映射、杆线、间距、颜色、文字、纹理",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/lollipop_plot-VGwq2Vgz.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/lollipop_plot-VGwq2Vgz.js": "522ddfb120808ded7b2a5915220a741e601ac5569c7d44ea42392f9a474c430c"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "分类棒棒糖",
+      "requiredFields": "标签、数值、类别",
+      "multipleInputs": "单表",
+      "specificStyles": "分类配色、纹理、大小、杆线、图例、排序",
+      "statistics": "已有数值绘图",
+      "errorCheckpoints": "类别缺失、列错位",
+      "openacadEnhancement": "完整中文字段映射",
+      "id": "lollipop_plot_with_category",
+      "sourceUrl": "https://www.chiplot.online/lollipop_plot_with_category.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/lollipopCategoryPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "分类配色、纹理、大小、杆线、图例、排序",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/lollipop_plot_category.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/lollipop_plot_with_category-DyuqV9KD.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/lollipop_plot_with_category-DyuqV9KD.js": "27afd422964bf8e5daf76c4ad9f21f2f2f131c4f172f2df2778d06f4618f9d71"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "散点误差图",
+      "requiredFields": "重复编号＋每类观测列；原始重复矩阵",
+      "multipleInputs": "单表",
+      "specificStyles": "均值点、误差线、单侧显示、原始点、文字",
+      "statistics": "均值和样本SD",
+      "errorCheckpoints": "误传均值±SD、观测不足",
+      "openacadEnhancement": "原始/汇总两种输入、SD/SE/CI",
+      "id": "scatter_plot_errorBar",
+      "sourceUrl": "https://www.chiplot.online/scatter_plot_errorBar.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/scatterErrorBarPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "均值点、误差线、单侧显示、原始点、文字",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/scatter_plot_errorBar_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/scatter_plot_errorBar-Fh6uo4ET.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/scatter_plot_errorBar-Fh6uo4ET.js": "d597b8d2da26f4af0aec43b313d61dc7964744729ee885f44f2e8f4d0c4bcd54"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "UpSet集合交集图",
+      "requiredFields": "每列一个集合，单元格为成员ID，允许空白补齐",
+      "multipleInputs": "单表",
+      "specificStyles": "交集排序、零交集、集合大小子图、柱样式、成员结果",
+      "statistics": "去重与真实集合交集",
+      "errorCheckpoints": "集合名、成员规范",
+      "openacadEnhancement": "互斥交集与包含式交集含义明确",
+      "id": "upset_plot",
+      "sourceUrl": "https://www.chiplot.online/upset_plot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/upsetPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "交集排序、零交集、集合大小子图、柱样式、成员结果",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/upsetPlot.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/upset_plot-CGzvhqoP.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/upset_plot-CGzvhqoP.js": "179a7b3616352e8f69b0f0a62bf03005be61603c21519431b6a1deca027f02c6"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "普通柱图",
+      "requiredFields": "标签、数值两列",
+      "multipleInputs": "单表",
+      "specificStyles": "横纵向、逐柱色、圆角、纹理、文字、间距、对数轴、断轴",
+      "statistics": "已有数值绘图",
+      "errorCheckpoints": "非数值、对数非正值",
+      "openacadEnhancement": "中文校验和可靠导出",
+      "id": "bar_plot",
+      "sourceUrl": "https://www.chiplot.online/bar_plot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/barplot.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/barplot-1.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "横纵向、逐柱色、圆角、纹理、文字、间距、对数轴、断轴",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/bar_plot-C7X4hzKn.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/bar_plot-C7X4hzKn.js": "1664936280e70ee9f99ccfbfb4505a32d5e667190c6937e91f232b52f5977cc3"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "分类柱图",
+      "requiredFields": "标签、数值、类别",
+      "multipleInputs": "单表",
+      "specificStyles": "分类排序、颜色、纹理、条宽、圆角、图例",
+      "statistics": "已有数值绘图",
+      "errorCheckpoints": "缺类别、非数值",
+      "openacadEnhancement": "字段映射与分类说明",
+      "id": "bar_plot_width_category",
+      "sourceUrl": "https://www.chiplot.online/bar_plot_width_category.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/barCategoryPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "分类排序、颜色、纹理、条宽、圆角、图例",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_category.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/bar_plot_width_category-Dl2zFdf4.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/bar_plot_width_category-Dl2zFdf4.js": "16092e0a33845b4bb5b6c436068222034f83166b5f58ead1a9a21b4292c0d87e"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "误差柱图",
+      "requiredFields": "重复编号＋每类原始观测",
+      "multipleInputs": "单表",
+      "specificStyles": "柱样式、误差线、原始点、单侧误差、数值、断轴",
+      "statistics": "均值和SD",
+      "errorCheckpoints": "组内不足两项、混入汇总值",
+      "openacadEnhancement": "原始/汇总两种输入、SD/SE/CI",
+      "id": "bar_plot_errorBar",
+      "sourceUrl": "https://www.chiplot.online/bar_plot_errorBar.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/bar%26errorPlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/bar%26errorPlot.jpeg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "柱样式、误差线、原始点、单侧误差、数值、断轴",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/bar_plot_errorBar-ezF5Dred.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/bar_plot_errorBar-ezF5Dred.js": "d66417d4380f33441df81d7ef10d47f96729d86145f53f203333a7c701380ae9"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "分组柱图",
+      "requiredFields": "首列类别，其余系列数值；单元格直接成柱",
+      "multipleInputs": "单宽表",
+      "specificStyles": "组间距、系列色、纹理、文字、图例、横纵向",
+      "statistics": "不求均值，直接绘图",
+      "errorCheckpoints": "误把重复观测当汇总值",
+      "openacadEnhancement": "清楚区分分组柱与分组误差柱",
+      "id": "group_bar_plot",
+      "sourceUrl": "https://www.chiplot.online/group_bar_plot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/groupBarPlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/groupBarPlot-2.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/groupBarPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "组间距、系列色、纹理、文字、图例、横纵向",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_bar_plot-BZn-jzYM.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_bar_plot-BZn-jzYM.js": "fa5d86f4506cb56c060488229145fc1ec2ca1bbdc1a5bf61a2742a878f9e43ec"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "分组误差柱图",
+      "requiredFields": "多个大组表，子组列名和顺序一致",
+      "multipleInputs": "多表或多工作表",
+      "specificStyles": "均值、SD、误差、原始点、排序、显著性线、两两/对照",
+      "statistics": "真实t/Wilcoxon类检验",
+      "errorCheckpoints": "组列不一致、样本量、配对关系",
+      "openacadEnhancement": "明确检验名、P校正与有效n",
+      "id": "group_error_bar_plot",
+      "sourceUrl": "https://www.chiplot.online/group_error_bar_plot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/groupErrorBarPlot.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/groupErrorBarPlot-2.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/groupErrorBarPlot-1.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "均值、SD、误差、原始点、排序、显著性线、两两/对照",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data-1.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_error_bar_plot-CCwX7sSO.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_error_bar_plot-CCwX7sSO.js": "1178ea7befcc8a02ffbdce1204f56c0a369fdcfe2c226e1dbdcb48c521bd3ff7"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "柱线组合图",
+      "requiredFields": "待核实：当前入口404",
+      "multipleInputs": "待核实",
+      "specificStyles": "待核实",
+      "statistics": "待核实",
+      "errorCheckpoints": "待核实",
+      "openacadEnhancement": "自主实现共享X、柱线系列、单/双Y轴、独立单位和图例",
+      "id": "bar_with_line_plot",
+      "sourceUrl": "https://www.chiplot.online/bar_with_line_plot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/bar%26linePlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": "待核实",
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "待核实（入口404）",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "待核实（入口404）",
+      "text": "待核实（入口404）",
+      "axes": "待核实（入口404）",
+      "colorsLegend": "待核实（入口404）",
+      "elementsLayout": "待核实（入口404）",
+      "exportProfile": "待核实（入口404）",
+      "projectProfile": "待核实（入口404）",
+      "exampleUrls": [],
+      "sourceScripts": [],
+      "sourceEvidenceHashes": {},
+      "exampleStatus": "示例文件名已在研究方案记录；完整URL待补充核验"
+    },
+    {
+      "chineseName": "堆叠柱图",
+      "requiredFields": "首列样本，其余组成数值",
+      "multipleInputs": "单表",
+      "specificStyles": "横纵向、组成色、文字、相邻色块连接、图例",
+      "statistics": "原站百分比归一化待核实",
+      "errorCheckpoints": "空值、负值、列角色",
+      "openacadEnhancement": "增加百分比堆叠",
+      "id": "stackedbar_plot",
+      "sourceUrl": "https://www.chiplot.online/stackedbar_plot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/stackedbar.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/stackedbar-1.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "横纵向、组成色、文字、相邻色块连接、图例",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/stackedbar_plot-DBAKX6Zk.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/stackedbar_plot-DBAKX6Zk.js": "3fadb2935dfd482a3a33fe8f63e42fb333a0fa4fa7ecc554cebeae99fdc8d69a"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "分组堆叠柱图",
+      "requiredFields": "多个组成表，需跨表样本和列对齐",
+      "multipleInputs": "多表或多工作表",
+      "specificStyles": "组间距、颜色、文字、图例、堆叠",
+      "statistics": "原站百分比归一化待核实",
+      "errorCheckpoints": "跨表样本/组分不一致",
+      "openacadEnhancement": "分组百分比堆叠",
+      "id": "group_stackedbar_plot",
+      "sourceUrl": "https://www.chiplot.online/group_stackedbar_plot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/groupStackedbarPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "组间距、颜色、文字、图例、堆叠",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data-1.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data-2.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data-3.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/stackedbar_test_data-4.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_stackedbar_plot-aQ4dUllK.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_stackedbar_plot-aQ4dUllK.js": "bf8bb6a15a1ab651804fa694a42453a737667467f26b3b6667c92b05672d5cc2"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "玫瑰与花瓣图",
+      "requiredFields": "标签、数值两列",
+      "multipleInputs": "单表",
+      "specificStyles": "弧/菱形/花瓣、内径、间距、径向刻度、颜色、文字、动画；原独立图例未实现",
+      "statistics": "径向已有数值展示",
+      "errorCheckpoints": "负值和全零处理待核实",
+      "openacadEnhancement": "补图例与负值明确校验",
+      "id": "rosePlot",
+      "sourceUrl": "https://www.chiplot.online/rosePlot.html",
+      "category": "Bar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/rosePlot.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/rosePlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/rosePlot-2.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "弧/菱形/花瓣、内径、间距、径向刻度、颜色、文字、动画；原独立图例未实现",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/rosePlot-DhFr75S1.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/rosePlot-DhFr75S1.js": "b5e6c9f1d33e898e1e11cb79071239415b1c667894dd8ee1be99e50cfc6b42e4"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "箱线图",
+      "requiredFields": "样本ID＋每变量原始观测；不是五数概括",
+      "multipleInputs": "单表",
+      "specificStyles": "箱体、须、离群点、原始点、间距、显著性",
+      "statistics": "分位数/IQR，真实组间检验",
+      "errorCheckpoints": "错传五数概括、空列",
+      "openacadEnhancement": "标准Tukey观测须端",
+      "id": "box_plot",
+      "sourceUrl": "https://www.chiplot.online/box_plot.html",
+      "category": "Box plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/boxplot-2.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/boxplot.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/boxplot-1.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "箱体、须、离群点、原始点、间距、显著性",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/boxplot_test_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/box_plot-DF_twh1X.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/box_plot-DF_twh1X.js": "551d58bf30564b2428350e42445246232f0d20d4693bac3484c864aed3279c81"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "分组箱线图",
+      "requiredFields": "多个观测表，子组列一致",
+      "multipleInputs": "多表或多工作表",
+      "specificStyles": "箱图＋组顺序、间距、配色、图例",
+      "statistics": "真实组间检验",
+      "errorCheckpoints": "组名、列、配对关系",
+      "openacadEnhancement": "明确P校正与样本数",
+      "id": "group_box_plot",
+      "sourceUrl": "https://www.chiplot.online/group_box_plot.html",
+      "category": "Box plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/groupBoxPlot.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/groupBoxPlot-1.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "箱图＋组顺序、间距、配色、图例",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/bar_plot_errorBar_data-1.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_box_plot-Bd_YdDQB.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/group_box_plot-Bd_YdDQB.js": "8e8fcb816e0c69cfb7f79a045026d589272d3aa06e5050dd39be61af1e6e1d79"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "小提琴图",
+      "requiredFields": "样本ID＋数值变量原始观测",
+      "multipleInputs": "单表",
+      "specificStyles": "分箱、排除值、宽度、间距、颜色、箱图、抖动点",
+      "statistics": "原站标准KDE待核实",
+      "errorCheckpoints": "常量、样本量",
+      "openacadEnhancement": "标准Gaussian KDE、Scott/Silverman/自定义",
+      "id": "violin_plot",
+      "sourceUrl": "https://www.chiplot.online/violin_plot.html",
+      "category": "Box plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/violinPlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/violinPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "分箱、排除值、宽度、间距、颜色、箱图、抖动点",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/boxplot_test_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/violin_plot-M0WCtBjK.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/violin_plot-M0WCtBjK.js": "dcee12d11049b039a6006f55e9c91cd894b6fd8b6eb4d097b55aa96a54325fa2"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "云雨图",
+      "requiredFields": "单观测矩阵",
+      "multipleInputs": "单表",
+      "specificStyles": "分布、箱体、点、trim、分箱、间距、分位线",
+      "statistics": "描述统计；未调用检验函数不算可用检验",
+      "errorCheckpoints": "空列、非数值、样本量",
+      "openacadEnhancement": "明确分布估计与检验边界",
+      "id": "raincloud_plot",
+      "sourceUrl": "https://www.chiplot.online/raincloud_plot.html",
+      "category": "Box plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/rainCloudPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "分布、箱体、点、trim、分箱、间距、分位线",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/raincloud_plot_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/raincloud_plot-BGdlkS4a.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/raincloud_plot-BGdlkS4a.js": "5c2252cd84d2bd374ed5af287152d44f162478fe2f2f19a24baf85819ed32f6b"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "饼与圆环图",
+      "requiredFields": "分类、数值两列",
+      "multipleInputs": "单表",
+      "specificStyles": "内径、扇区色、透明、描边、数值/百分比、引导线",
+      "statistics": "占比计算",
+      "errorCheckpoints": "负值、全零、重复类别",
+      "openacadEnhancement": "中文比例与零和校验",
+      "id": "piePlot",
+      "sourceUrl": "https://www.chiplot.online/piePlot.html",
+      "category": "Pie plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/piePlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "内径、扇区色、透明、描边、数值/百分比、引导线",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/pie_plot_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/piePlot-DJzby37u.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/piePlot-DJzby37u.js": "6df05399ba27092905482b1f4b5ea787364ab42b91101c716258b74c3b3fdc8f"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "韦恩图",
+      "requiredFields": "2～5列集合，成员字符串，允许空白",
+      "multipleInputs": "单表",
+      "specificStyles": "轮廓、集合色、交集数、拖动标签、零交集",
+      "statistics": "真实集合交集",
+      "errorCheckpoints": "集合数、空/重复集合名",
+      "openacadEnhancement": "精确互斥结果与面积语义说明",
+      "id": "vennPlot",
+      "sourceUrl": "https://www.chiplot.online/vennPlot.html",
+      "category": "Venn plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/vennPlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/vennPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "轮廓、集合色、交集数、拖动标签、零交集",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/vennPlot.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/vennPlot-Br7twAMN.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/vennPlot-Br7twAMN.js": "4bec8797b279f7f34ca59814b9b589aef91f4b3274b514ca317925afb1a99539"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "雷达图",
+      "requiredFields": "首列系列，后续为数值指标",
+      "multipleInputs": "单表",
+      "specificStyles": "面积、顶点、描边、径向范围/网格/刻度",
+      "statistics": "自动跨指标标准化待核实",
+      "errorCheckpoints": "量纲不一致、非数值",
+      "openacadEnhancement": "归一化与共同尺度明确",
+      "id": "radarPlot",
+      "sourceUrl": "https://www.chiplot.online/radarPlot.html",
+      "category": "Radar plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/radarPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "面积、顶点、描边、径向范围/网格/刻度",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/radar_plot_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/radarPlot-9TC4Zpnr.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/radarPlot-9TC4Zpnr.js": "0387606347e9fc24f66438fd57aa6d476914791fc7f13b84bc40d33e0e9fa8fe"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "矩形热图",
+      "requiredFields": "行名＋数值矩阵，可另有行列注释",
+      "multipleInputs": "单表＋注释",
+      "specificStyles": "色阶、格子、数值、零值、注释、聚类树",
+      "statistics": "真实标准化与聚类",
+      "errorCheckpoints": "空行名、非数值、注释混数值",
+      "openacadEnhancement": "明确距离/连接适用域",
+      "id": "heatmap",
+      "sourceUrl": "https://www.chiplot.online/heatmap.html",
+      "category": "Heatmap",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/heatmap-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/heatmap.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "色阶、格子、数值、零值、注释、聚类树",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/heatmap_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/heatmap-SytbYWmA.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/heatmap-SytbYWmA.js": "bf115c271659db873c918c54198ba2142546c5df1b992aeb1dfca2044b597ed9"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "圈形热图",
+      "requiredFields": "行名＋数值矩阵",
+      "multipleInputs": "单表＋注释",
+      "specificStyles": "环宽、角度、内外圈、标签、注释、聚类",
+      "statistics": "真实标准化与聚类",
+      "errorCheckpoints": "非数值、标签对应",
+      "openacadEnhancement": "与矩形同家族独立布局",
+      "id": "circle_heatmap",
+      "sourceUrl": "https://www.chiplot.online/circle_heatmap.html",
+      "category": "Heatmap",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/circleHeatmap-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/circleHeatmap.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "环宽、角度、内外圈、标签、注释、聚类",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/heatmap_data.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/circle_heatmap-DEeTGag_.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/circle_heatmap-DEeTGag_.js": "248260cd9f246c084bd58b657aa47664bbb45c0f358d2897dd03f1dbc3bfa0a5"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "组内相关热图",
+      "requiredFields": "已有方阵r或r/P两表；也有原始样本矩阵计算路径",
+      "multipleInputs": "一或两表",
+      "specificStyles": "全矩阵/三角、对角线、圆/方、系数、星号、聚类；原独立标题被删除",
+      "statistics": "真实相关分析或已有结果绘图",
+      "errorCheckpoints": "非方阵、标签、概率",
+      "openacadEnhancement": "补标题、实际n、P校正、区分原始/结果",
+      "id": "correlation_heatmap",
+      "sourceUrl": "https://www.chiplot.online/correlation_heatmap.html",
+      "category": "Heatmap",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap-2.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/correlationHeatmap-1.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "全矩阵/三角、对角线、圆/方、系数、星号、聚类；原独立标题被删除",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/correlation_heatmap.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/correlation_heatmap-B3g2HSVz.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/correlation_heatmap-B3g2HSVz.js": "1e0da098faee2cb6017e57cb41bdd057eb7d833d0024dc10b34363666add0c1c"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "组间相关热图",
+      "requiredFields": "矩形r＋可选P；或两个原始矩阵",
+      "multipleInputs": "两表或两工作表",
+      "specificStyles": "符号、系数、显著性、色阶、聚类",
+      "statistics": "真实组间相关；导入r仍请求聚类",
+      "errorCheckpoints": "样本与r/P标签不对应",
+      "openacadEnhancement": "本地结果绘图与统计分开",
+      "id": "dubble_matrices_correlation_heatmap",
+      "sourceUrl": "https://www.chiplot.online/dubble_matrices_correlation_heatmap.html",
+      "category": "Heatmap",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/dubbleMatricesCorrelationHeatmap.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C",
+        "O"
+      ],
+      "actualOperation": "已编辑图例并下载32577字节SVG，解析通过；长图例出现裁切；项目默认示例保存报No user data",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "符号、系数、显著性、色阶、聚类",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/corr_rValue.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/corr_pValue.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/dubble_matrices_correlation_heatmap-DgaCqKzj.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/dubble_matrices_correlation_heatmap-DgaCqKzj.js": "305c12e55db5f178e73d01f587fe9b5fb1e4e4054a2a5336fba195194d1134e5"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "Mantel关联热图",
+      "requiredFields": "r/P＋mantel/env/r/p结果；或环境＋多个群落矩阵",
+      "multipleInputs": "多表；partial控制矩阵原契约待核实",
+      "specificStyles": "节点、标签、曲线、粗细/色/虚线、筛选",
+      "statistics": "真实四种Mantel方法与两侧生态距离",
+      "errorCheckpoints": "样本不一致、结果标签；partial契约待核实",
+      "openacadEnhancement": "独立控制矩阵Z、明确单侧/置换/种子",
+      "id": "mantel_test_correlation_heatmap",
+      "sourceUrl": "https://www.chiplot.online/mantel_test_correlation_heatmap.html",
+      "category": "Heatmap",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/mantelTestCorrelationHeatmap-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/mantelTestCorrelationHeatmap.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "节点、标签、曲线、粗细/色/虚线、筛选",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/rValue.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/pValue.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/Spec01.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/Spec02.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_result/Spec03.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_data/varechem.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_data/Spec01.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_data/Spec02.tsv",
+        "https://www.chiplot.online/static/xiaochiPlot/data/mantel_test_data/Spec03.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/mantel_test_correlation_heatmap-D4fXgFxq.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/mantel_test_correlation_heatmap-D4fXgFxq.js": "010b3c638dfe1d6c271b5f9a7bf9ff8eb78f6046763eeacdfb090992f4625c41"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "方格二值图",
+      "requiredFields": "行名＋0/1矩阵",
+      "multipleInputs": "单表＋注释",
+      "specificStyles": "两类颜色、格子、文字、图例、注释、聚类树",
+      "statistics": "存在聚类请求",
+      "errorCheckpoints": "原站是否严格拒绝非0/1待核实",
+      "openacadEnhancement": "严格0/1校验",
+      "id": "binary_plot2",
+      "sourceUrl": "https://www.chiplot.online/binary_plot2.html",
+      "category": "Heatmap",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/binaryPlot2.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "两类颜色、格子、文字、图例、注释、聚类树",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/binary_plot2.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/binary_plot2-BK1MmT7I.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/binary_plot2-BK1MmT7I.js": "b0a453fc7d2f70d01a340b90272dc9012f8ed5057a372ec1bab546bc562f6765"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "哑铃图",
+      "requiredFields": "对象名＋两个或更多数值系列",
+      "multipleInputs": "单表",
+      "specificStyles": "点、系列色、连接线、轴、图例",
+      "statistics": "连接每行最小和最大值；无推断统计",
+      "errorCheckpoints": "非数值、系列不足",
+      "openacadEnhancement": "多端点与差值含义明确",
+      "id": "dumbbell_plot",
+      "sourceUrl": "https://www.chiplot.online/dumbbell_plot.html",
+      "category": "Dumbbell plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/dumbbellPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "点、系列色、连接线、轴、图例",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/dumbbell_data.csv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/dumbbell_plot-CLUDVVI4.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/dumbbell_plot-CLUDVVI4.js": "05ca51e8fc83d10523868fe310d58867dcc6be80138b0335703428195ce293fc"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "数值气泡矩阵",
+      "requiredFields": "行名＋数值矩阵，不是X/Y/size散点表",
+      "multipleInputs": "单表＋注释",
+      "specificStyles": "大小、连续/分类色、数值、图例、行列注释",
+      "statistics": "数值映射；正负值映射待核实",
+      "errorCheckpoints": "错用散点格式、负值映射",
+      "openacadEnhancement": "按面积编码绝对值、颜色区分符号",
+      "id": "bubble_plot",
+      "sourceUrl": "https://www.chiplot.online/bubble_plot.html",
+      "category": "Bubble plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/bubblePlot-1.jpg",
+        "https://1996xjm.github.io/chiplot/img/cover/bubblePlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "大小、连续/分类色、数值、图例、行列注释",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/bubble_plot.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/bubble_plot-YmPI0R2m.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/bubble_plot-YmPI0R2m.js": "94c3b176d316bd9fe24da7499a8493b4bd4f01a5d6638b5a53a01e8b133d964e"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "圆堆砌",
+      "requiredFields": "对象、数值、类别三列；原站仅纳入正值",
+      "multipleInputs": "单表",
+      "specificStyles": "圆大小、间距、类别色、文字、外包围圆、图例",
+      "statistics": "原站扁平数据，不是任意层级输入",
+      "errorCheckpoints": "零负值、重复对象",
+      "openacadEnhancement": "不静默丢弃无效数值",
+      "id": "packing_bubble_plot",
+      "sourceUrl": "https://www.chiplot.online/packing_bubble_plot.html",
+      "category": "Bubble plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/packingBubblePlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "圆大小、间距、类别色、文字、外包围圆、图例",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/circlePackingPlot.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/packing_bubble_plot-BuKmEPir.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/packing_bubble_plot-BuKmEPir.js": "77f222bb66b90e637b104ad47c219f3e1e60f67e8d2e62385cfae7d92235253c"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "圆点二值图",
+      "requiredFields": "行名＋0/1矩阵",
+      "multipleInputs": "单表＋注释",
+      "specificStyles": "空心/实心、行列类别色、图例、注释",
+      "statistics": "此入口未见聚类调用",
+      "errorCheckpoints": "非0/1、行列名",
+      "openacadEnhancement": "与方格二值合并为家族变体",
+      "id": "binary_plot",
+      "sourceUrl": "https://www.chiplot.online/binary_plot.html",
+      "category": "Bubble plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/binaryPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "直角坐标核心有代码；具体范围/对数/刻度选项逐项待实测",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "空心/实心、行列类别色、图例、注释",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/binary_plot.tsv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/binary_plot-BVPlCOmB.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/binary_plot-BVPlCOmB.js": "91df1a687760ca67b4231de01d6bedc111e0c3235a3a293333917af213daf979"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    },
+    {
+      "chineseName": "桑基图",
+      "requiredFields": "source/target/value边表；自动生成节点",
+      "multipleInputs": "单表",
+      "specificStyles": "节点宽距、对齐、文字、链接色/渐变、排序",
+      "statistics": "流量求和与布局",
+      "errorCheckpoints": "自环、环路、负流量、重复边",
+      "openacadEnhancement": "中文拓扑错误提示",
+      "id": "sankey_plot",
+      "sourceUrl": "https://www.chiplot.online/sankey_plot.html",
+      "category": "Sankey plot",
+      "previewUrls": [
+        "https://1996xjm.github.io/chiplot/img/cover/sankeyPlot.jpg"
+      ],
+      "checkedAt": "2026-09-06",
+      "availability": 200,
+      "evidenceTypes": [
+        "C"
+      ],
+      "actualOperation": "待逐图操作验收",
+      "uploadFormats": "CSV、TSV、XLS、XLSX 解析路径有代码证据；逐格式操作待核实",
+      "pasteInput": "待核实",
+      "editableTableInput": "待核实",
+      "optionalFields": "仅所列注释/附属文件已记录；其余待核实",
+      "canvas": "宽、高、四边距、全局字体有公共核心代码证据；背景按单图差异",
+      "text": "全局字体有代码；标题/局部文字/标签按专有项，未列明待核实",
+      "axes": "普通X/Y直角坐标不适用；专有尺度见图表设置",
+      "colorsLegend": "专有样式列出已确认项；其他待核实",
+      "elementsLayout": "节点宽距、对齐、文字、链接色/渐变、排序",
+      "exportProfile": "E",
+      "projectProfile": "P",
+      "exampleUrls": [
+        "https://www.chiplot.online/static/xiaochiPlot/data/energy.csv"
+      ],
+      "sourceScripts": [
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/sankey_plot-CbNOv3RG.js"
+      ],
+      "sourceEvidenceHashes": {
+        "https://www.chiplot.online/static/xiaochiPlot/vue3_dist/assets/sankey_plot-CbNOv3RG.js": "51019c3a5816a4d4df25281a5d9a7a3d302bbf320dffb33bebe6f8aa4c292863"
+      },
+      "exampleStatus": "公开脚本中的直接示例URL；访问可用性按证据日期"
+    }
+  ],
+  "evidencePolicy": "C=代码 D=官方文档 O=实际操作。HTTP200不等于功能可用。没有统一假设输入、导出或项目全支持。原站限制不是OpenAcad能力上限。"
+}

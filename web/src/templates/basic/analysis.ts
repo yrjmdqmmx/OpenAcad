@@ -1,11 +1,37 @@
 import type { Dataset, Template } from '../../core/types';
 import { records, unique } from './shared';
 /** Convert long observations to the documented API wide matrix. Paired identities are never inferred. */
-export function prepareBasicAnalysis(method:string,dataset:Dataset,params:Record<string,unknown>){const rows=records(dataset);if(['lm','loess','gam'].includes(method)){return {data:{tables:[{id:'regression',name:'回归观测',role:'matrix',columns:['样本','x','y','分组'],rows:rows.map((r,i)=>[String(r['名称']||r['样本']||`第${i+1}行`),Number(r['横坐标']),Number(r['纵坐标']),String(r['分组']||'数据')])}]},params:{...params,groupColumn:3}};}
-if(dataset.tables[0]?.columns.includes('标准差'))throw new Error('组间检验需要原始重复观测，不能把汇总均值当成样本。请切换并上传原始数据。');
-const paired=['ttest_rel','wilcoxon_rel'].includes(String(params.test));const hasId=dataset.tables[0]?.columns.includes('样本');if(paired&&!hasId)throw new Error('配对检验需要“样本”列，使用同一 ID 表示同一对象的两次观测。不能自动猜测配对关系。');
-const label=(r:Record<string,unknown>)=>String(r['类别'])+(r['分组']?' · '+r['分组']:'');const groups=unique(rows.map(label));const values=groups.map(group=>rows.filter(r=>label(r)===group));let ids:string[],dataRows:(string|number|null)[][];
-if(paired){ids=unique(rows.map(r=>String(r['样本'])));for(const group of values){const keys=group.map(r=>String(r['样本']));if(new Set(keys).size!==keys.length)throw new Error('同一类别与分组中“样本”ID 重复；配对检验要求每个对象只有一条观测。');if(ids.some(id=>!keys.includes(id)))throw new Error('各组的“样本”ID 不一致。配对检验要求每组包含同一批对象，不能单独删除缺失观测。');}dataRows=ids.map(id=>[id,...values.map(a=>Number(a.find(r=>String(r['样本'])===id)!['数值']))]);}else{ids=Array.from({length:Math.max(...values.map(a=>a.length))},(_,i)=>`观测${i+1}`);dataRows=ids.map((id,i)=>[id,...values.map(a=>a[i]?Number(a[i]['数值']):null)]);}
-return {data:{tables:[{id:'observations',name:'类别与分组的原始观测',role:'matrix',columns:['样本',...groups],rows:dataRows}]},params};}
-export const groupAnalysisMethods:NonNullable<Template['analysisMethods']>=[{method:'tests',label:'组间统计检验',description:'把各类别×分组的原始观测分别作为一组；显式选择独立、配对或方差分析及多重检验校正。',params:{test:'ttest_ind',comparisons:'all',alternative:'two-sided',equalVariance:false,pAdjust:'BH'}},{method:'descriptive',label:'描述统计明细',description:'输出各组样本量、均值、样本 SD、SE、R-7 分位数和实际观测须端。'}];
-export const regressionMethods:NonNullable<Template['analysisMethods']>=[{method:'lm',label:'线性回归',description:'服务器拟合真实线性模型并返回均值响应 95% 置信带。',params:{confidence:.95}},{method:'loess',label:'LOESS 平滑回归',description:'服务器局部多项式拟合，按分组绘制真实曲线与置信带。',params:{span:.5,degree:2,confidence:.95}},{method:'gam',label:'GAM 广义加性模型',description:'服务器使用高斯族薄板样条与 REML 拟合，返回曲线和近似置信带。',params:{basisDimension:10,confidence:.95}}];
+export function prepareBasicAnalysis(method: string, dataset: Dataset, params: Record<string, unknown>) {
+    const rows = records(dataset);
+    if (['lm', 'loess', 'gam'].includes(method)) {
+        return { data: { tables: [{ id: 'regression', name: '回归观测', role: 'matrix', columns: ['样本', 'x', 'y', '分组'], rows: rows.map((r, i) => [String(r['名称'] || r['样本'] || `第${i + 1}行`), Number(r['横坐标']), Number(r['纵坐标']), String(r['分组'] || '数据')]) }] }, params: { ...params, groupColumn: 3 } };
+    }
+    if (dataset.tables[0]?.columns.includes('标准差'))
+        throw new Error('组间检验需要原始重复观测，不能把汇总均值当成样本。请切换并上传原始数据。');
+    const paired = ['ttest_rel', 'wilcoxon_rel'].includes(String(params.test));
+    const hasId = dataset.tables[0]?.columns.includes('样本');
+    if (paired && !hasId)
+        throw new Error('配对检验需要“样本”列，使用同一 ID 表示同一对象的两次观测。不能自动猜测配对关系。');
+    const label = (r: Record<string, unknown>) => String(r['类别']) + (r['分组'] ? ' · ' + r['分组'] : '');
+    const groups = unique(rows.map(label));
+    const values = groups.map(group => rows.filter(r => label(r) === group));
+    let ids: string[], dataRows: (string | number | null)[][];
+    if (paired) {
+        ids = unique(rows.map(r => String(r['样本'])));
+        for (const group of values) {
+            const keys = group.map(r => String(r['样本']));
+            if (new Set(keys).size !== keys.length)
+                throw new Error('同一类别与分组中“样本”ID 重复；配对检验要求每个对象只有一条观测。');
+            if (ids.some(id => !keys.includes(id)))
+                throw new Error('各组的“样本”ID 不一致。配对检验要求每组包含同一批对象，不能单独删除缺失观测。');
+        }
+        dataRows = ids.map(id => [id, ...values.map(a => Number(a.find(r => String(r['样本']) === id)!['数值']))]);
+    }
+    else {
+        ids = Array.from({ length: Math.max(...values.map(a => a.length)) }, (_, i) => `观测${i + 1}`);
+        dataRows = ids.map((id, i) => [id, ...values.map(a => a[i] ? Number(a[i]['数值']) : null)]);
+    }
+    return { data: { tables: [{ id: 'observations', name: '类别与分组的原始观测', role: 'matrix', columns: ['样本', ...groups], rows: dataRows }] }, params };
+}
+export const groupAnalysisMethods: NonNullable<Template['analysisMethods']> = [{ method: 'tests', label: '组间统计检验', description: '把各类别×分组的原始观测分别作为一组；显式选择独立、配对或方差分析及多重检验校正。', params: { test: 'ttest_ind', comparisons: 'all', alternative: 'two-sided', equalVariance: false, pAdjust: 'BH' } }, { method: 'descriptive', label: '描述统计明细', description: '输出各组样本量、均值、样本 SD、SE、R-7 分位数和实际观测须端。' }];
+export const regressionMethods: NonNullable<Template['analysisMethods']> = [{ method: 'lm', label: '线性回归', description: '服务器拟合真实线性模型并返回均值响应 95% 置信带。', params: { confidence: .95 } }, { method: 'loess', label: 'LOESS 平滑回归', description: '服务器局部多项式拟合，按分组绘制真实曲线与置信带。', params: { span: .5, degree: 2, confidence: .95 } }, { method: 'gam', label: 'GAM 广义加性模型', description: '服务器使用高斯族薄板样条与 REML 拟合，返回曲线和近似置信带。', params: { basisDimension: 10, confidence: .95 } }];

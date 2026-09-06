@@ -20,7 +20,7 @@ export function AnalysisPanel({project,template,commit,stale}:{project:Project;t
   const task=useRef<{id:string;token:string;abort:AbortController}|null>(null),current=useRef(project);current.current=project;
   useEffect(()=>()=>{task.current?.abort.abort();},[]);
   const setParam=(key:string,value:unknown)=>commit({...project,analysis:{method,params:{...params,[key]:value},inputHash:project.analysis?.inputHash||'',result:project.analysis?.result}});
-  function select(label:string,key:string,values:string[][],fallback:string){return <label className="analysis-control">{label}<select value={String(params[key]??fallback)} onChange={e=>setParam(key,e.target.value)}>{values.map(([v,l])=><option key={v} value={v}>{l}</option>)}</select></label>;}
+  function select(label:string,key:string,values:string[][],fallback:string){return <label className="analysis-control">{label}<select value={String(params[key]??fallback)} onChange={e=>setParam(key,['permutations','scaling'].includes(key)?Number(e.target.value):e.target.value)}>{values.map(([v,l])=><option key={v} value={v}>{l}</option>)}</select></label>;}
   function num(label:string,key:string,fallback:number,min:number,max:number,step=1){return <label className="analysis-control">{label}<input type="number" value={Number(params[key]??fallback)} min={min} max={max} step={step} onChange={e=>setParam(key,+e.target.value)}/></label>;}
   async function run(){setError('');setBusy(true);setStatus('准备计算');const snapshot=current.current;
     try{const hash=await inputHash(snapshot.dataset,method,params);const payload=template.prepareAnalysis?.(method,snapshot.dataset,params)||{data:{tables:snapshot.dataset.tables,sequences:snapshot.dataset.text},params};const job=await createJob({kind:'analysis',method,...payload});const abort=new AbortController();task.current={...job,abort};const result=await waitJob(job.id,job.token,abort.signal,s=>setStatus(names[s]||s));
@@ -29,6 +29,7 @@ export function AnalysisPanel({project,template,commit,stale}:{project:Project;t
       else{commit({...now,analysis:{method,params,inputHash:hash,result}});setStatus('计算完成');}
     }catch(e){setError((e as Error).message);}finally{setBusy(false);task.current=null;}
   }
+  if(project.style.ordinationInput==='scores')return <div className="analysis-panel"><h3>已有坐标绘图</h3><p>当前直接展示上传的坐标，不执行统计，也不会生成解释率或 P 值。需要从原始数据计算时，在右侧将输入内容切换为原始矩阵。</p></div>;
   if(!options.length)return <div className="analysis-panel"><h3>绘图与计算</h3><p>此模板直接展示你提供的数据，不执行推断统计。</p><p className="hint">比例、集合或描述统计会在图表说明中单独注明。预先计算的 P 值不会被当作本站检验结果。</p></div>;
   return <div className="analysis-panel"><h3>真实统计计算</h3><label className="analysis-control">分析方法<select value={method} disabled={busy} onChange={e=>{const m=options.find(m=>m.method===e.target.value)!;commit({...project,analysis:{method:m.method,params:m.params||{},inputHash:'',result:undefined}});}}>{options.map(m=><option key={m.method} value={m.method}>{m.label}</option>)}</select></label><p className="help-copy">{selected?.description}</p>
     {['pca','pcoa','nmds','cca','rda','cluster','distance','standardize'].includes(method)&&<>{select('标准化','standardization',scaling,'None')}{select('标准化方向','direction',[['column','按变量列'],['row','按样本行']],'column')}</>}
@@ -38,6 +39,7 @@ export function AnalysisPanel({project,template,commit,stale}:{project:Project;t
     {['pcoa','cluster','distance'].includes(method)&&select('通用距离','distance',distances.map(v=>[v,v]),'euclidean')}
     {['cluster','distance'].includes(method)&&select('计算方向','axis',[['row','行'],['column','列'],['both','行和列']],'both')}
     {method==='cluster'&&select('聚类连接方法','linkage',[['complete','最远距离'],['single','最近距离'],['average','平均距离'],['weighted','加权平均'],['centroid','质心'],['median','中位数'],['ward','Ward 最小方差']],'complete')}
+    {['cca','rda'].includes(method)&&select('排序得分缩放','scaling',[['1','Ⅰ型：侧重样本距离'],['2','Ⅱ型：侧重变量关系']],'2')}
     {method==='pcoa'&&select('负特征值校正','correction',[['none','不校正（保留诊断）'],['lingoes','Lingoes'],['cailliez','Cailliez']],'none')}
     {method==='nmds'&&<>{select('生态距离','distance',eco.map(v=>[v,v]),'bray')}{num('最多起点数','tryMax',100,20,100)}{num('伪计数（仅显式添加）','pseudocount',0,0,10,0.01)}</>}
     {method.startsWith('mantel')&&<>{select('群落生态距离','speciesDistance',eco.map(v=>[v,v]),'bray')}{select('环境生态距离','environmentDistance',eco.map(v=>[v,v]),'euclidean')}{method==='mantel.partial'&&select('控制矩阵生态距离','controlDistance',eco.map(v=>[v,v]),'euclidean')}{select('置换次数','permutations',[['999','999'],['9999','9999'],['99999','99999']],'999')}<p className="hint">检验正关联，单侧。Partial 模式必须提供独立控制矩阵。</p></>}
