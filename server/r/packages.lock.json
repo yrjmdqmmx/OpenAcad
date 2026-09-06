@@ -1,0 +1,11 @@
+{
+  "R": "4.6.1",
+  "repository": "https://packagemanager.posit.co/cran/2026-09-06",
+  "packages": {
+    "jsonlite": "2.0.0", "lattice": "0.23-1", "MASS": "7.3-66",
+    "Matrix": "1.7-6", "nlme": "3.1-171", "mgcv": "1.9-4",
+    "cluster": "2.1.8.3", "permute": "0.9-10", "vegan": "2.7-6",
+    "Rcpp": "1.1.2", "RcppArmadillo": "15.4.2-1", "digest": "0.6.39",
+    "pixmap": "0.4-14", "sp": "2.2-3", "ape": "5.8-1", "ade4": "1.7-24"
+  }
+}
