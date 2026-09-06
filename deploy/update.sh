@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -Eeuo pipefail
 release_dir=${1:?用法：update.sh /opt/openacad/releases/版本}
 [[ "$release_dir" == /opt/openacad/releases/* && -f "$release_dir/compose.yml" && -f "$release_dir/release.env" && -f "$release_dir/web/index.html" ]] || { echo '发行目录结构不完整'; exit 1; }
 mkdir -p /opt/openacad/shared
