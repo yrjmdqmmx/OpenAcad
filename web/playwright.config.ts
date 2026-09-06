@@ -40,7 +40,9 @@ export default defineConfig({
   webServer: process.env.OPENACAD_BASE_URL
     ? undefined
     : {
-        command: "npm run dev",
+        command: process.env.CI
+          ? "npm run preview -- --host 127.0.0.1 --port 5178"
+          : "npm run dev",
         url: "http://127.0.0.1:5178",
         reuseExistingServer: !process.env.CI,
       },

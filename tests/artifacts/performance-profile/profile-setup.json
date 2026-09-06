@@ -1,0 +1,7 @@
+{
+  "source": "2794ea6",
+  "cpuSlowdown": 4,
+  "testSource": "web/e2e/performance.spec.ts",
+  "temporaryConfig": "/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-profile-p6yldcnr/playwright.config.mjs",
+  "productSourceModified": false
+}

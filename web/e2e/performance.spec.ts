@@ -197,9 +197,9 @@ test("常规示例样式更新响应时间", async ({ page }, info) => {
   const result = {
     schemaVersion: 2,
     measurement: "browser-input-to-svg-two-animation-frames-v1",
-    note: "常规模拟数据；浏览器捕获真实 input 事件起，用 MutationObserver 确认可见 SVG 标题更新，再等待连续两次 requestAnimationFrame 跨过一次渲染机会。全部主计时使用同一页面 performance.now()；不包含 Playwright 定位、滚动和往返。双帧是浏览器渲染机会估计，不等同屏幕光学或合成器完成时间，不代表大数据或统计计算延迟。",
+    note: "常规模拟数据，仅测标题编辑路径，不能外推其他样式或数据重布局；浏览器捕获真实 input 事件起，用 MutationObserver 确认可见 SVG 标题更新，再等待连续两次 requestAnimationFrame 跨过一次渲染机会。全部主计时使用同一页面 performance.now()；不包含 Playwright 定位、滚动和往返。双帧是浏览器渲染机会估计，不等同屏幕光学或合成器完成时间，不代表大数据或统计计算延迟。",
     automationNote:
-      "automationUntilTitleMilliseconds 保留旧口径（Node 端填入到断言标题可见），automationTotalMilliseconds 另包含读取跨帧结果；两者均含自动化开销，不作为 300ms 产品目标判断。",
+      "automationUntilTitleMilliseconds 保留旧口径（Node 端填入到断言标题文本出现），automationTotalMilliseconds 另包含读取跨帧结果；两者均含自动化开销，不作为 300ms 产品目标判断。",
     generatedAt: new Date().toISOString(),
     project: info.project.name,
     url: page.url(),

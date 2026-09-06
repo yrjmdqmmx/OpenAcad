@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { FolderOpen } from "lucide-react";
 import { templates } from "./templates";
 import type { Project } from "./core/types";
@@ -16,14 +16,24 @@ export default function App() {
     [project, setProject] = useState<Project | null>(null),
     [error, setError] = useState(""),
     [openRevision, setOpenRevision] = useState(0);
+  // Editor owns its history. Retain the latest project for route navigation
+  // without rendering App again for every edit or remounting a new example.
+  const latestProject = useRef<Project | null>(null);
+  const retainProject = useCallback((next: Project) => {
+    latestProject.current = next;
+  }, []);
   const file = useRef<HTMLInputElement>(null);
   useEffect(() => {
-    const change = () => setRoute(location.hash.slice(1) || "catalog");
+    const change = () => {
+      setProject(latestProject.current);
+      setRoute(location.hash.slice(1) || "catalog");
+    };
     window.addEventListener("hashchange", change);
     return () => window.removeEventListener("hashchange", change);
   }, []);
   function start(p: Project) {
     setOpenRevision((v) => v + 1);
+    latestProject.current = p;
     setProject(p);
     location.hash = `editor/${p.templateId}`;
     setRoute(`editor/${p.templateId}`);
@@ -84,10 +94,10 @@ export default function App() {
       )}
       {editing ? (
         <Editor
-          key={`${id}-${project?.id || "example"}-${openRevision}`}
+          key={`${id}-${openRevision}`}
           initial={project?.templateId === id ? project : makeProject(template)}
           template={template}
-          onProjectChange={setProject}
+          onProjectChange={retainProject}
           onExit={() => {
             location.hash = "catalog";
           }}

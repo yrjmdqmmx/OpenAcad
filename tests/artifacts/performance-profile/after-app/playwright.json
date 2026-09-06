@@ -1,0 +1,155 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/node_modules/.bin/playwright",
+      "test",
+      "--config=/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc/playwright.config.mjs"
+    ],
+    "configFile": "/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc/playwright.config.mjs",
+    "rootDir": "/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/performance-profile/after-app/results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/performance-profile/after-app/playwright.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "performance.spec.ts",
+      "file": "performance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "常规示例样式更新响应时间",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5855,
+                  "error": {
+                    "message": "Error: bar 第 1 次测量失败\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeUndefined\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"未在 5 秒内观察到输入、SVG 标题更新及后续绘制帧\"\u001b[39m",
+                    "stack": "Error: bar 第 1 次测量失败\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeUndefined\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"未在 5 秒内观察到输入、SVG 标题更新及后续绘制帧\"\u001b[39m\n    at /private/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc/performance.spec.ts:180:58",
+                    "location": {
+                      "file": "/private/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc/performance.spec.ts",
+                      "column": 58,
+                      "line": 180
+                    },
+                    "snippet": "  178 |           automationTotalMilliseconds: performance.now() - automationStart,\n  179 |         });\n> 180 |         expect(browser.error, `${id} 第 ${sample} 次测量失败`).toBeUndefined();\n      |                                                          ^\n  181 |       }\n  182 |     }\n  183 |   } catch (error) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/private/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc/performance.spec.ts",
+                        "column": 58,
+                        "line": 180
+                      },
+                      "message": "Error: bar 第 1 次测量失败\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeUndefined\u001b[2m()\u001b[22m\n\nReceived: \u001b[31m\"未在 5 秒内观察到输入、SVG 标题更新及后续绘制帧\"\u001b[39m\n\n  178 |           automationTotalMilliseconds: performance.now() - automationStart,\n  179 |         });\n> 180 |         expect(browser.error, `${id} 第 ${sample} 次测量失败`).toBeUndefined();\n      |                                                          ^\n  181 |       }\n  182 |     }\n  183 |   } catch (error) {\n    at /private/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc/performance.spec.ts:180:58"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-06T16:09:58.286Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "样式响应时间独立测量",
+                      "contentType": "application/json",
+                      "body": "ewogICJzY2hlbWFWZXJzaW9uIjogMiwKICAibWVhc3VyZW1lbnQiOiAiYnJvd3Nlci1pbnB1dC10by1zdmctdHdvLWFuaW1hdGlvbi1mcmFtZXMtdjEiLAogICJub3RlIjogIuW4uOinhOaooeaLn+aVsOaNru+8jOS7hea1i+agh+mimOe8lui+kei3r+W+hO+8jOS4jeiDveWkluaOqOWFtuS7luagt+W8j+aIluaVsOaNrumHjeW4g+WxgO+8m+a1j+iniOWZqOaNleiOt+ecn+WuniBpbnB1dCDkuovku7botbfvvIznlKggTXV0YXRpb25PYnNlcnZlciDnoa7orqTlj6/op4EgU1ZHIOagh+mimOabtOaWsO+8jOWGjeetieW+hei/nue7reS4pOasoSByZXF1ZXN0QW5pbWF0aW9uRnJhbWUg6Leo6L+H5LiA5qyh5riy5p+T5py65Lya44CC5YWo6YOo5Li76K6h5pe25L2/55So5ZCM5LiA6aG16Z2iIHBlcmZvcm1hbmNlLm5vdygp77yb5LiN5YyF5ZCrIFBsYXl3cmlnaHQg5a6a5L2N44CB5rua5Yqo5ZKM5b6A6L+U44CC5Y+M5bin5piv5rWP6KeI5Zmo5riy5p+T5py65Lya5Lyw6K6h77yM5LiN562J5ZCM5bGP5bmV5YWJ5a2m5oiW5ZCI5oiQ5Zmo5a6M5oiQ5pe26Ze077yM5LiN5Luj6KGo5aSn5pWw5o2u5oiW57uf6K6h6K6h566X5bu26L+f44CCIiwKICAiYXV0b21hdGlvbk5vdGUiOiAiYXV0b21hdGlvblVudGlsVGl0bGVNaWxsaXNlY29uZHMg5L+d55WZ5pen5Y+j5b6E77yITm9kZSDnq6/loavlhaXliLDmlq3oqIDmoIfpopjmlofmnKzlh7rnjrDvvInvvIxhdXRvbWF0aW9uVG90YWxNaWxsaXNlY29uZHMg5Y+m5YyF5ZCr6K+75Y+W6Leo5bin57uT5p6c77yb5Lik6ICF5Z2H5ZCr6Ieq5Yqo5YyW5byA6ZSA77yM5LiN5L2c5Li6IDMwMG1zIOS6p+WTgeebruagh+WIpOaWreOAgiIsCiAgImdlbmVyYXRlZEF0IjogIjIwMjYtMDktMDZUMTY6MTA6MDQuNDc4WiIsCiAgInByb2plY3QiOiAiY2hyb21pdW0iLAogICJ1cmwiOiAiaHR0cDovLzEyNy4wLjAuMTo1MTc4LyNlZGl0b3IvYmFyIiwKICAiYnJvd3NlclZlcnNpb24iOiAiMTUyLjAuNzk3Ny43NiIsCiAgInJvd3MiOiBbCiAgICB7CiAgICAgICJ0ZW1wbGF0ZSI6ICJiYXIiLAogICAgICAic2FtcGxlIjogMSwKICAgICAgImVycm9yIjogIuacquWcqCA1IOenkuWGheinguWvn+WIsOi+k+WFpeOAgVNWRyDmoIfpopjmm7TmlrDlj4rlkI7nu63nu5jliLbluKciLAogICAgICAibWlsbGlzZWNvbmRzIjogbnVsbCwKICAgICAgInN2Z011dGF0aW9uTWlsbGlzZWNvbmRzIjogbnVsbCwKICAgICAgImZyYW1lV2FpdE1pbGxpc2Vjb25kcyI6IG51bGwsCiAgICAgICJhdXRvbWF0aW9uVW50aWxUaXRsZU1pbGxpc2Vjb25kcyI6IDc1LjU3ODcwOCwKICAgICAgImF1dG9tYXRpb25Ub3RhbE1pbGxpc2Vjb25kcyI6IDUwMDEuNDQ0NzkxCiAgICB9CiAgXSwKICAiYnlUZW1wbGF0ZSI6IFsKICAgIHsKICAgICAgInRlbXBsYXRlIjogImJhciIsCiAgICAgICJzYW1wbGVzIjogMCwKICAgICAgInA5NSI6IG51bGwsCiAgICAgICJtYXgiOiBudWxsCiAgICB9LAogICAgewogICAgICAidGVtcGxhdGUiOiAibGluZSIsCiAgICAgICJzYW1wbGVzIjogMCwKICAgICAgInA5NSI6IG51bGwsCiAgICAgICJtYXgiOiBudWxsCiAgICB9LAogICAgewogICAgICAidGVtcGxhdGUiOiAic2NhdHRlciIsCiAgICAgICJzYW1wbGVzIjogMCwKICAgICAgInA5NSI6IG51bGwsCiAgICAgICJtYXgiOiBudWxsCiAgICB9LAogICAgewogICAgICAidGVtcGxhdGUiOiAiYm94IiwKICAgICAgInNhbXBsZXMiOiAwLAogICAgICAicDk1IjogbnVsbCwKICAgICAgIm1heCI6IG51bGwKICAgIH0sCiAgICB7CiAgICAgICJ0ZW1wbGF0ZSI6ICJoZWF0bWFwIiwKICAgICAgInNhbXBsZXMiOiAwLAogICAgICAicDk1IjogbnVsbCwKICAgICAgIm1heCI6IG51bGwKICAgIH0sCiAgICB7CiAgICAgICJ0ZW1wbGF0ZSI6ICJzYW5rZXkiLAogICAgICAic2FtcGxlcyI6IDAsCiAgICAgICJwOTUiOiBudWxsLAogICAgICAibWF4IjogbnVsbAogICAgfSwKICAgIHsKICAgICAgInRlbXBsYXRlIjogIm5ldHdvcmsiLAogICAgICAic2FtcGxlcyI6IDAsCiAgICAgICJwOTUiOiBudWxsLAogICAgICAibWF4IjogbnVsbAogICAgfSwKICAgIHsKICAgICAgInRlbXBsYXRlIjogIm1hcCIsCiAgICAgICJzYW1wbGVzIjogMCwKICAgICAgInA5NSI6IG51bGwsCiAgICAgICJtYXgiOiBudWxsCiAgICB9LAogICAgewogICAgICAidGVtcGxhdGUiOiAicGNhIiwKICAgICAgInNhbXBsZXMiOiAwLAogICAgICAicDk1IjogbnVsbCwKICAgICAgIm1heCI6IG51bGwKICAgIH0sCiAgICB7CiAgICAgICJ0ZW1wbGF0ZSI6ICJ0cmVlLW5vcm1hbCIsCiAgICAgICJzYW1wbGVzIjogMCwKICAgICAgInA5NSI6IG51bGwsCiAgICAgICJtYXgiOiBudWxsCiAgICB9CiAgXSwKICAicDk1IjogbnVsbCwKICAiYXV0b21hdGlvblA5NSI6IDc1LjU3ODcwOCwKICAidGFyZ2V0IjogMzAwLAogICJleHBlY3RlZFNhbXBsZXMiOiAzMCwKICAibWVhc3VyZWRTYW1wbGVzIjogMCwKICAib3ZlclRhcmdldCI6IFtdLAogICJlcnJvciI6ICJFcnJvcjogYmFyIOesrCAxIOasoea1i+mHj+Wksei0pVxuXG5cdTAwMWJbMm1leHBlY3QoXHUwMDFiWzIybVx1MDAxYlszMW1yZWNlaXZlZFx1MDAxYlszOW1cdTAwMWJbMm0pLlx1MDAxYlsyMm10b0JlVW5kZWZpbmVkXHUwMDFiWzJtKClcdTAwMWJbMjJtXG5cblJlY2VpdmVkOiBcdTAwMWJbMzFtXCLmnKrlnKggNSDnp5LlhoXop4Llr5/liLDovpPlhaXjgIFTVkcg5qCH6aKY5pu05paw5Y+K5ZCO57ut57uY5Yi25binXCJcdTAwMWJbMzltIgp9"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/a1-6/Documents/ChatGPT/OpenAcad/tests/artifacts/performance-profile/after-app/results/performance-常规示例样式更新响应时间-chromium/error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/private/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc/performance.spec.ts",
+                    "column": 58,
+                    "line": 180
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b15d6361b2fc38288977-3d52c4b68ca4ce356361",
+          "file": "../../../../../../private/var/folders/j9/mr21v8tx3nqf_yd0sfxvvrk80000gn/T/openacad-after-app-5yl3rlxc/performance.spec.ts",
+          "line": 27,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-06T16:09:58.094Z",
+    "duration": 6577.824,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

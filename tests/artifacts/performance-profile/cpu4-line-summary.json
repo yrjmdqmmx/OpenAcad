@@ -1,0 +1,368 @@
+{
+  "file": "cpu4-line.cpuprofile",
+  "totalMS": 569.426,
+  "self": [
+    {
+      "function": "(program)",
+      "url": "",
+      "line": 0,
+      "ms": 295.655
+    },
+    {
+      "function": "exports.jsxDEV",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 239,
+      "ms": 133.757
+    },
+    {
+      "function": "(idle)",
+      "url": "",
+      "line": 0,
+      "ms": 18.862
+    },
+    {
+      "function": "exports.createElement",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/chunk-TAJOU4CS.js?v=fba49b62",
+      "line": 761,
+      "ms": 12.72
+    },
+    {
+      "function": "(garbage collector)",
+      "url": "",
+      "line": 0,
+      "ms": 7.052
+    },
+    {
+      "function": "ReactElement",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 127,
+      "ms": 5.364
+    },
+    {
+      "function": "set value",
+      "url": "",
+      "line": 0,
+      "ms": 5.29
+    },
+    {
+      "function": "belongsToDisplayNoneOrAriaHiddenOrNonSlotted",
+      "url": "",
+      "line": 3565,
+      "ms": 3.554
+    },
+    {
+      "function": "updateProperties",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 14786,
+      "ms": 3.024
+    },
+    {
+      "function": "getAriaRole",
+      "url": "",
+      "line": 3521,
+      "ms": 2.959
+    },
+    {
+      "function": "addObjectDiffToProperties",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 3081,
+      "ms": 2.839
+    },
+    {
+      "function": "getComponentNameFromType",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 13,
+      "ms": 2.385
+    },
+    {
+      "function": "query",
+      "url": "",
+      "line": 5413,
+      "ms": 2.32
+    },
+    {
+      "function": "getExplicitAriaRole",
+      "url": "",
+      "line": 3514,
+      "ms": 2.132
+    },
+    {
+      "function": "createTask",
+      "url": "",
+      "line": 0,
+      "ms": 2.029
+    },
+    {
+      "function": "updateElement",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 4698,
+      "ms": 1.992
+    },
+    {
+      "function": "select",
+      "url": "",
+      "line": 0,
+      "ms": 1.948
+    },
+    {
+      "function": "run",
+      "url": "",
+      "line": 0,
+      "ms": 1.936
+    },
+    {
+      "function": "beginWork",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 8416,
+      "ms": 1.84
+    },
+    {
+      "function": "updatedAncestorInfoDev",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 1991,
+      "ms": 1.783
+    },
+    {
+      "function": "validateProperty$1",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 2298,
+      "ms": 1.573
+    },
+    {
+      "function": "validateProperty",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 2345,
+      "ms": 1.527
+    },
+    {
+      "function": "checkVisibility",
+      "url": "",
+      "line": 0,
+      "ms": 1.511
+    },
+    {
+      "function": "ReactElement",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/chunk-TAJOU4CS.js?v=fba49b62",
+      "line": 166,
+      "ms": 1.439
+    },
+    {
+      "function": "validatePropertiesInDevelopment",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 14116,
+      "ms": 1.355
+    },
+    {
+      "function": "now",
+      "url": "",
+      "line": 0,
+      "ms": 1.323
+    },
+    {
+      "function": "reconcileChildrenArray",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 4936,
+      "ms": 1.312
+    },
+    {
+      "function": "flushMutationEffects",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 12807,
+      "ms": 1.276
+    },
+    {
+      "function": "",
+      "url": "",
+      "line": 2,
+      "ms": 1.182
+    },
+    {
+      "function": "getTitle",
+      "url": "",
+      "line": 5,
+      "ms": 1.164
+    }
+  ],
+  "inclusiveApplication": [
+    {
+      "function": "Inspector",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 83,
+      "ms": 50.167
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 131,
+      "ms": 46.84
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 138,
+      "ms": 39.993
+    },
+    {
+      "function": "DataPanel",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 16,
+      "ms": 33.672
+    },
+    {
+      "function": "Editor",
+      "url": "http://127.0.0.1:5178/src/components/Editor.tsx",
+      "line": 31,
+      "ms": 28.331
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 172,
+      "ms": 17.268
+    },
+    {
+      "function": "ChartFrame",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 314,
+      "ms": 16.776
+    },
+    {
+      "function": "BasicStylePanel",
+      "url": "http://127.0.0.1:5178/src/templates/basic/BasicStylePanel.tsx",
+      "line": 22,
+      "ms": 13.979
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 179,
+      "ms": 13.336
+    },
+    {
+      "function": "Axes",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 787,
+      "ms": 10.881
+    },
+    {
+      "function": "children",
+      "url": "http://127.0.0.1:5178/src/templates/basic/renderers.tsx",
+      "line": 668,
+      "ms": 10.372
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/renderers.tsx",
+      "line": 693,
+      "ms": 8.704
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/renderers.tsx",
+      "line": 742,
+      "ms": 8.016
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 934,
+      "ms": 4.905
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 178,
+      "ms": 4.8
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 871,
+      "ms": 4.499
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 847,
+      "ms": 3.932
+    },
+    {
+      "function": "PointGlyph",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 1243,
+      "ms": 2.791
+    },
+    {
+      "function": "t.validate",
+      "url": "http://127.0.0.1:5178/src/templates/basic/index.ts",
+      "line": 1515,
+      "ms": 2.653
+    },
+    {
+      "function": "t.validate",
+      "url": "http://127.0.0.1:5178/src/templates/basic/index.ts",
+      "line": 1418,
+      "ms": 2.501
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 696,
+      "ms": 2.469
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/BasicStylePanel.tsx",
+      "line": 118,
+      "ms": 2.266
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 861,
+      "ms": 2.143
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Editor.tsx",
+      "line": 254,
+      "ms": 1.76
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 906,
+      "ms": 1.69
+    },
+    {
+      "function": "legendRows",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 258,
+      "ms": 1.648
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Editor.tsx",
+      "line": 290,
+      "ms": 1.444
+    },
+    {
+      "function": "format",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 255,
+      "ms": 1.443
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 260,
+      "ms": 1.4
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 264,
+      "ms": 1.028
+    }
+  ]
+}

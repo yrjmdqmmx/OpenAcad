@@ -1,0 +1,739 @@
+{
+  "rate": 4,
+  "profile": false,
+  "source": "2794ea6",
+  "instrumentation": "document-capture/body-MO dynamic identity diagnostics; NOT acceptance substitution",
+  "rows": [
+    {
+      "template": "bar",
+      "sample": 1,
+      "inputAt": 675,
+      "mutationAt": 722.9000000022352,
+      "firstFrameAt": 724.4000000022352,
+      "paintedFrameAt": 771.1000000014901,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 675,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 107.29154199999994,
+      "inputToMutation": 47.900000002235174,
+      "mutationToFirstFrame": 1.5,
+      "firstToSecondFrame": 46.69999999925494,
+      "inputToSecondFrame": 96.10000000149012
+    },
+    {
+      "template": "bar",
+      "sample": 2,
+      "inputAt": 791.4000000022352,
+      "mutationAt": 839.8000000007451,
+      "firstFrameAt": 840.5,
+      "paintedFrameAt": 885.3000000007451,
+      "longTasks": [
+        {
+          "startTime": 790.4000000022352,
+          "duration": 50
+        }
+      ],
+      "events": [
+        {
+          "time": 791.4000000022352,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 104.31899999999996,
+      "inputToMutation": 48.399999998509884,
+      "mutationToFirstFrame": 0.6999999992549419,
+      "firstToSecondFrame": 44.80000000074506,
+      "inputToSecondFrame": 93.89999999850988
+    },
+    {
+      "template": "bar",
+      "sample": 3,
+      "inputAt": 901.4000000022352,
+      "mutationAt": 946,
+      "firstFrameAt": 947.9000000022352,
+      "paintedFrameAt": 967.5,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 901.4000000022352,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 74.14583300000004,
+      "inputToMutation": 44.599999997764826,
+      "mutationToFirstFrame": 1.9000000022351742,
+      "firstToSecondFrame": 19.599999997764826,
+      "inputToSecondFrame": 66.09999999776483
+    },
+    {
+      "template": "line",
+      "sample": 1,
+      "inputAt": 1239.199999999255,
+      "mutationAt": 1303.300000000745,
+      "firstFrameAt": 1305.800000000745,
+      "paintedFrameAt": 1370.199999999255,
+      "longTasks": [
+        {
+          "startTime": 1238.9000000022352,
+          "duration": 65
+        },
+        {
+          "startTime": 1308.9000000022352,
+          "duration": 60
+        }
+      ],
+      "events": [
+        {
+          "time": 1239.199999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 138.6366660000001,
+      "inputToMutation": 64.10000000149012,
+      "mutationToFirstFrame": 2.5,
+      "firstToSecondFrame": 64.39999999850988,
+      "inputToSecondFrame": 131
+    },
+    {
+      "template": "line",
+      "sample": 2,
+      "inputAt": 1385.199999999255,
+      "mutationAt": 1453.300000000745,
+      "firstFrameAt": 1453.4000000022352,
+      "paintedFrameAt": 1518.199999999255,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 1385.199999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 140.9095000000002,
+      "inputToMutation": 68.10000000149012,
+      "mutationToFirstFrame": 0.10000000149011612,
+      "firstToSecondFrame": 64.79999999701977,
+      "inputToSecondFrame": 133
+    },
+    {
+      "template": "line",
+      "sample": 3,
+      "inputAt": 1536.5,
+      "mutationAt": 1558.699999999255,
+      "firstFrameAt": 1561.199999999255,
+      "paintedFrameAt": 1577.800000000745,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 1536.5,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 51.40362499999992,
+      "inputToMutation": 22.199999999254942,
+      "mutationToFirstFrame": 2.5,
+      "firstToSecondFrame": 16.600000001490116,
+      "inputToSecondFrame": 41.30000000074506
+    },
+    {
+      "template": "scatter",
+      "sample": 1,
+      "inputAt": 1740.300000000745,
+      "mutationAt": 1753.800000000745,
+      "firstFrameAt": 1754.6000000014901,
+      "paintedFrameAt": 1773,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 1740.300000000745,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 42.1723750000001,
+      "inputToMutation": 13.5,
+      "mutationToFirstFrame": 0.8000000007450581,
+      "firstToSecondFrame": 18.399999998509884,
+      "inputToSecondFrame": 32.69999999925494
+    },
+    {
+      "template": "scatter",
+      "sample": 2,
+      "inputAt": 1791.4000000022352,
+      "mutationAt": 1805.1000000014901,
+      "firstFrameAt": 1805.9000000022352,
+      "paintedFrameAt": 1824.4000000022352,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 1791.4000000022352,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 43.5134579999999,
+      "inputToMutation": 13.699999999254942,
+      "mutationToFirstFrame": 0.8000000007450581,
+      "firstToSecondFrame": 18.5,
+      "inputToSecondFrame": 33
+    },
+    {
+      "template": "scatter",
+      "sample": 3,
+      "inputAt": 1843,
+      "mutationAt": 1855.699999999255,
+      "firstFrameAt": 1856.300000000745,
+      "paintedFrameAt": 1874.199999999255,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 1843,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 41.62112500000012,
+      "inputToMutation": 12.699999999254942,
+      "mutationToFirstFrame": 0.6000000014901161,
+      "firstToSecondFrame": 17.899999998509884,
+      "inputToSecondFrame": 31.199999999254942
+    },
+    {
+      "template": "box",
+      "sample": 1,
+      "inputAt": 2024.5,
+      "mutationAt": 2037.9000000022352,
+      "firstFrameAt": 2040.6000000014901,
+      "paintedFrameAt": 2099.699999999255,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 2024.5,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 84.84654199999977,
+      "inputToMutation": 13.400000002235174,
+      "mutationToFirstFrame": 2.699999999254942,
+      "firstToSecondFrame": 59.099999997764826,
+      "inputToSecondFrame": 75.19999999925494
+    },
+    {
+      "template": "box",
+      "sample": 2,
+      "inputAt": 2117.699999999255,
+      "mutationAt": 2172.60000000149,
+      "firstFrameAt": 2174.5,
+      "paintedFrameAt": 2231,
+      "longTasks": [
+        {
+          "startTime": 2116.300000000745,
+          "duration": 56
+        },
+        {
+          "startTime": 2178.199999999255,
+          "duration": 52
+        }
+      ],
+      "events": [
+        {
+          "time": 2117.699999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 123.07470799999965,
+      "inputToMutation": 54.900000002235174,
+      "mutationToFirstFrame": 1.8999999985098839,
+      "firstToSecondFrame": 56.5,
+      "inputToSecondFrame": 113.30000000074506
+    },
+    {
+      "template": "box",
+      "sample": 3,
+      "inputAt": 2246.199999999255,
+      "mutationAt": 2303.5,
+      "firstFrameAt": 2305.699999999255,
+      "paintedFrameAt": 2360.10000000149,
+      "longTasks": [
+        {
+          "startTime": 2244.699999999255,
+          "duration": 59
+        },
+        {
+          "startTime": 2309.10000000149,
+          "duration": 50
+        }
+      ],
+      "events": [
+        {
+          "time": 2246.199999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 122.93770799999993,
+      "inputToMutation": 57.30000000074506,
+      "mutationToFirstFrame": 2.199999999254942,
+      "firstToSecondFrame": 54.400000002235174,
+      "inputToSecondFrame": 113.90000000223517
+    },
+    {
+      "template": "heatmap",
+      "sample": 1,
+      "inputAt": 2585.699999999255,
+      "mutationAt": 2596.699999999255,
+      "firstFrameAt": 2598.800000000745,
+      "paintedFrameAt": 2612.60000000149,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 2585.699999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 33.68683299999975,
+      "inputToMutation": 11,
+      "mutationToFirstFrame": 2.100000001490116,
+      "firstToSecondFrame": 13.800000000745058,
+      "inputToSecondFrame": 26.900000002235174
+    },
+    {
+      "template": "heatmap",
+      "sample": 2,
+      "inputAt": 2624.699999999255,
+      "mutationAt": 2634.699999999255,
+      "firstFrameAt": 2635.800000000745,
+      "paintedFrameAt": 2649.5,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 2624.699999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 30.17504100000042,
+      "inputToMutation": 10,
+      "mutationToFirstFrame": 1.1000000014901161,
+      "firstToSecondFrame": 13.699999999254942,
+      "inputToSecondFrame": 24.800000000745058
+    },
+    {
+      "template": "heatmap",
+      "sample": 3,
+      "inputAt": 2664,
+      "mutationAt": 2673.699999999255,
+      "firstFrameAt": 2684.199999999255,
+      "paintedFrameAt": 2691.400000002235,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 2664,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 35.31995800000004,
+      "inputToMutation": 9.699999999254942,
+      "mutationToFirstFrame": 10.5,
+      "firstToSecondFrame": 7.200000002980232,
+      "inputToSecondFrame": 27.400000002235174
+    },
+    {
+      "template": "sankey",
+      "sample": 1,
+      "inputAt": 2803.800000000745,
+      "mutationAt": 2811.199999999255,
+      "firstFrameAt": 2812.800000000745,
+      "paintedFrameAt": 2825,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 2803.800000000745,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 28.443416999999954,
+      "inputToMutation": 7.399999998509884,
+      "mutationToFirstFrame": 1.6000000014901161,
+      "firstToSecondFrame": 12.199999999254942,
+      "inputToSecondFrame": 21.199999999254942
+    },
+    {
+      "template": "sankey",
+      "sample": 2,
+      "inputAt": 2835.300000000745,
+      "mutationAt": 2843.10000000149,
+      "firstFrameAt": 2851.5,
+      "paintedFrameAt": 2858.300000000745,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 2835.300000000745,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 28.34912499999973,
+      "inputToMutation": 7.800000000745058,
+      "mutationToFirstFrame": 8.399999998509884,
+      "firstToSecondFrame": 6.800000000745058,
+      "inputToSecondFrame": 23
+    },
+    {
+      "template": "sankey",
+      "sample": 3,
+      "inputAt": 2870.300000000745,
+      "mutationAt": 2877.400000002235,
+      "firstFrameAt": 2878.699999999255,
+      "paintedFrameAt": 2891,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 2870.300000000745,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 26.69404200000008,
+      "inputToMutation": 7.100000001490116,
+      "mutationToFirstFrame": 1.2999999970197678,
+      "firstToSecondFrame": 12.300000000745058,
+      "inputToSecondFrame": 20.699999999254942
+    },
+    {
+      "template": "network",
+      "sample": 1,
+      "inputAt": 3037.699999999255,
+      "mutationAt": 3052,
+      "firstFrameAt": 3053.400000002235,
+      "paintedFrameAt": 3100,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 3037.699999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 69.06624999999985,
+      "inputToMutation": 14.300000000745058,
+      "mutationToFirstFrame": 1.4000000022351742,
+      "firstToSecondFrame": 46.599999997764826,
+      "inputToSecondFrame": 62.30000000074506
+    },
+    {
+      "template": "network",
+      "sample": 2,
+      "inputAt": 3111.5,
+      "mutationAt": 3157.10000000149,
+      "firstFrameAt": 3157.300000000745,
+      "paintedFrameAt": 3206.800000000745,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 3111.5,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 100.7864169999998,
+      "inputToMutation": 45.600000001490116,
+      "mutationToFirstFrame": 0.19999999925494194,
+      "firstToSecondFrame": 49.5,
+      "inputToSecondFrame": 95.30000000074506
+    },
+    {
+      "template": "network",
+      "sample": 3,
+      "inputAt": 3222.60000000149,
+      "mutationAt": 3265.699999999255,
+      "firstFrameAt": 3267.800000000745,
+      "paintedFrameAt": 3311.900000002235,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 3222.60000000149,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 97.7177499999998,
+      "inputToMutation": 43.099999997764826,
+      "mutationToFirstFrame": 2.100000001490116,
+      "firstToSecondFrame": 44.100000001490116,
+      "inputToSecondFrame": 89.30000000074506
+    },
+    {
+      "template": "map",
+      "sample": 1,
+      "inputAt": 3610.300000000745,
+      "mutationAt": 3668.300000000745,
+      "firstFrameAt": 3669.699999999255,
+      "paintedFrameAt": 3724,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 3610.300000000745,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 120.39074999999957,
+      "inputToMutation": 58,
+      "mutationToFirstFrame": 1.3999999985098839,
+      "firstToSecondFrame": 54.30000000074506,
+      "inputToSecondFrame": 113.69999999925494
+    },
+    {
+      "template": "map",
+      "sample": 2,
+      "inputAt": 3740,
+      "mutationAt": 3766.5,
+      "firstFrameAt": 3768,
+      "paintedFrameAt": 3797,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 3740,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 66.01379100000031,
+      "inputToMutation": 26.5,
+      "mutationToFirstFrame": 1.5,
+      "firstToSecondFrame": 29,
+      "inputToSecondFrame": 57
+    },
+    {
+      "template": "map",
+      "sample": 3,
+      "inputAt": 3810.900000002235,
+      "mutationAt": 3837.800000000745,
+      "firstFrameAt": 3839.699999999255,
+      "paintedFrameAt": 3868.300000000745,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 3810.900000002235,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 66.5340839999999,
+      "inputToMutation": 26.899999998509884,
+      "mutationToFirstFrame": 1.8999999985098839,
+      "firstToSecondFrame": 28.600000001490116,
+      "inputToSecondFrame": 57.399999998509884
+    },
+    {
+      "template": "pca",
+      "sample": 1,
+      "inputAt": 3988.10000000149,
+      "mutationAt": 3998.300000000745,
+      "firstFrameAt": 4001,
+      "paintedFrameAt": 4015.699999999255,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 3988.10000000149,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 35.390041999999994,
+      "inputToMutation": 10.199999999254942,
+      "mutationToFirstFrame": 2.699999999254942,
+      "firstToSecondFrame": 14.699999999254942,
+      "inputToSecondFrame": 27.599999997764826
+    },
+    {
+      "template": "pca",
+      "sample": 2,
+      "inputAt": 4031.199999999255,
+      "mutationAt": 4041.199999999255,
+      "firstFrameAt": 4051.900000002235,
+      "paintedFrameAt": 4056.699999999255,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 4031.199999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 34.907499999999345,
+      "inputToMutation": 10,
+      "mutationToFirstFrame": 10.700000002980232,
+      "firstToSecondFrame": 4.799999997019768,
+      "inputToSecondFrame": 25.5
+    },
+    {
+      "template": "pca",
+      "sample": 3,
+      "inputAt": 4070.199999999255,
+      "mutationAt": 4124.800000000745,
+      "firstFrameAt": 4127.400000002235,
+      "paintedFrameAt": 4182.900000002235,
+      "longTasks": [
+        {
+          "startTime": 4069.10000000149,
+          "duration": 56
+        },
+        {
+          "startTime": 4130.60000000149,
+          "duration": 51
+        }
+      ],
+      "events": [
+        {
+          "time": 4070.199999999255,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 119.55262499999935,
+      "inputToMutation": 54.600000001490116,
+      "mutationToFirstFrame": 2.600000001490116,
+      "firstToSecondFrame": 55.5,
+      "inputToSecondFrame": 112.70000000298023
+    },
+    {
+      "template": "tree-normal",
+      "sample": 1,
+      "inputAt": 4402.10000000149,
+      "mutationAt": 4440.199999999255,
+      "firstFrameAt": 4442.60000000149,
+      "paintedFrameAt": 4485.400000002235,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 4402.10000000149,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 88.29162499999984,
+      "inputToMutation": 38.099999997764826,
+      "mutationToFirstFrame": 2.400000002235174,
+      "firstToSecondFrame": 42.80000000074506,
+      "inputToSecondFrame": 83.30000000074506
+    },
+    {
+      "template": "tree-normal",
+      "sample": 2,
+      "inputAt": 4499.5,
+      "mutationAt": 4540,
+      "firstFrameAt": 4542,
+      "paintedFrameAt": 4582.699999999255,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 4499.5,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 91.32099999999991,
+      "inputToMutation": 40.5,
+      "mutationToFirstFrame": 2,
+      "firstToSecondFrame": 40.69999999925494,
+      "inputToSecondFrame": 83.19999999925494
+    },
+    {
+      "template": "tree-normal",
+      "sample": 3,
+      "inputAt": 4594.900000002235,
+      "mutationAt": 4633.60000000149,
+      "firstFrameAt": 4635.60000000149,
+      "paintedFrameAt": 4658.300000000745,
+      "longTasks": [],
+      "events": [
+        {
+          "time": 4594.900000002235,
+          "sameTarget": true,
+          "originalConnected": true
+        }
+      ],
+      "originalConnected": true,
+      "paperConnected": true,
+      "automation": 69.88341700000001,
+      "inputToMutation": 38.69999999925494,
+      "mutationToFirstFrame": 2,
+      "firstToSecondFrame": 22.699999999254942,
+      "inputToSecondFrame": 63.399999998509884
+    }
+  ]
+}

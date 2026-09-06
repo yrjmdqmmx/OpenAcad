@@ -1,0 +1,87 @@
+{
+  "baseSource": "2794ea6",
+  "productChangeOwnedByParent": "App.tsx retains latest project in ref and stable editor key; no chart algorithm changes",
+  "cpuThrottlingRate": 4,
+  "browser": "Chrome 152.0.7977.76 macOS",
+  "thresholdMS": 300,
+  "runs": [
+    {
+      "run": "after-app-dev-idle",
+      "measured": 30,
+      "p95": 83.20000000298023,
+      "max": 84.10000000149012,
+      "slowest": "line",
+      "maxInputToDOM": 70,
+      "maxFrameWait": 14.100000001490116
+    },
+    {
+      "run": "after-app-prod-idle",
+      "measured": 30,
+      "p95": 29.699999999254942,
+      "max": 32.5,
+      "slowest": "map",
+      "maxInputToDOM": 24.199999999254942,
+      "maxFrameWait": 8.300000000745058
+    },
+    {
+      "run": "after-app-dev-concurrent",
+      "measured": 30,
+      "p95": 86,
+      "max": 90.59999999776483,
+      "slowest": "line",
+      "maxInputToDOM": 75.80000000074506,
+      "maxFrameWait": 14.799999997019768
+    },
+    {
+      "run": "after-app-prod-concurrent",
+      "measured": 30,
+      "p95": 28.300000000745058,
+      "max": 33.400000002235174,
+      "slowest": "map",
+      "maxInputToDOM": 24.200000002980232,
+      "maxFrameWait": 9.199999999254942
+    }
+  ],
+  "appSHA256": "a2f8ec2b9a78eb731212bb0b6c672089481093274e2e013ca0db1d7119917b39",
+  "notes": [
+    "Each run uses real locator.fill, input capture, exact SVG text via MutationObserver, two requestAnimationFrame callbacks; 10 templates x3 samples.",
+    "Concurrent runs retain two Playwright workers; second worker executes original workflow tests (data validation/edit/save/reopen, SVG download, page navigation). Only measurement page gets 4x CPU throttle.",
+    "Diagnostic baseline uses document input capture + body MutationObserver for identity investigation; it is not substituted for the acceptance test.",
+    "Early tmp test failures were a CJS-transformation diagnostic error (_nodePerf_hooks undefined), not evidence of remount or product latency. Adding package.json type=module restored the repository test environment.",
+    "Linux baseline has 30 valid measurements, pooled p95=369.5ms and 3 samples above300ms. The top3 have near-equal input\u2192DOM and later-frame costs, compatible with the confirmed second full render; no Linux CPU trace exists to isolate CPU contention contribution."
+  ],
+  "linuxBefore": {
+    "run": "34043637129",
+    "source": "2794ea6",
+    "browserVersion": "153.0.8010.12",
+    "p95": 369.5,
+    "measuredSamples": 30,
+    "thresholdMS": 300,
+    "overTarget": [
+      {
+        "template": "pca",
+        "sample": 1,
+        "milliseconds": 376.5,
+        "inputToDOM": 184.40000000002328,
+        "domToFirstFrame": 1.3999999999650754,
+        "firstToSecondFrame": 190.70000000001164
+      },
+      {
+        "template": "map",
+        "sample": 2,
+        "milliseconds": 369.5,
+        "inputToDOM": 199.40000000002328,
+        "domToFirstFrame": 3.2999999999883585,
+        "firstToSecondFrame": 166.79999999998836
+      },
+      {
+        "template": "box",
+        "sample": 3,
+        "milliseconds": 309.0999999999767,
+        "inputToDOM": 140.09999999997672,
+        "domToFirstFrame": 2.7999999999883585,
+        "firstToSecondFrame": 166.20000000001164
+      }
+    ]
+  }
+}

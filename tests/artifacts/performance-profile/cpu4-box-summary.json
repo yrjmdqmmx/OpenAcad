@@ -1,0 +1,368 @@
+{
+  "file": "cpu4-box.cpuprofile",
+  "totalMS": 333.331,
+  "self": [
+    {
+      "function": "(program)",
+      "url": "",
+      "line": 0,
+      "ms": 111.956
+    },
+    {
+      "function": "exports.jsxDEV",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 239,
+      "ms": 108.369
+    },
+    {
+      "function": "(idle)",
+      "url": "",
+      "line": 0,
+      "ms": 17.076
+    },
+    {
+      "function": "exports.createElement",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/chunk-TAJOU4CS.js?v=fba49b62",
+      "line": 761,
+      "ms": 11.191
+    },
+    {
+      "function": "ReactElement",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 127,
+      "ms": 6.403
+    },
+    {
+      "function": "set value",
+      "url": "",
+      "line": 0,
+      "ms": 4.818
+    },
+    {
+      "function": "getExplicitAriaRole",
+      "url": "",
+      "line": 3514,
+      "ms": 3.644
+    },
+    {
+      "function": "",
+      "url": "",
+      "line": 1,
+      "ms": 3.365
+    },
+    {
+      "function": "run",
+      "url": "",
+      "line": 0,
+      "ms": 3.008
+    },
+    {
+      "function": "select",
+      "url": "",
+      "line": 0,
+      "ms": 2.441
+    },
+    {
+      "function": "defineKeyPropWarningGetter",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 106,
+      "ms": 2.253
+    },
+    {
+      "function": "queryRole",
+      "url": "",
+      "line": 5371,
+      "ms": 2.214
+    },
+    {
+      "function": "updatedAncestorInfoDev",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 1991,
+      "ms": 2.154
+    },
+    {
+      "function": "(garbage collector)",
+      "url": "",
+      "line": 0,
+      "ms": 2.042
+    },
+    {
+      "function": "now",
+      "url": "",
+      "line": 0,
+      "ms": 1.908
+    },
+    {
+      "function": "addObjectDiffToProperties",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 3081,
+      "ms": 1.897
+    },
+    {
+      "function": "",
+      "url": "",
+      "line": 0,
+      "ms": 1.825
+    },
+    {
+      "function": "createTask",
+      "url": "",
+      "line": 0,
+      "ms": 1.758
+    },
+    {
+      "function": "getImplicitAriaRole",
+      "url": "",
+      "line": 3411,
+      "ms": 1.623
+    },
+    {
+      "function": "checkVisibility",
+      "url": "",
+      "line": 0,
+      "ms": 1.547
+    },
+    {
+      "function": "shouldSetTextContent",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 15847,
+      "ms": 1.431
+    },
+    {
+      "function": "updateProperties",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 14786,
+      "ms": 1.309
+    },
+    {
+      "function": "belongsToDisplayNoneOrAriaHiddenOrNonSlotted",
+      "url": "",
+      "line": 3565,
+      "ms": 1.163
+    },
+    {
+      "function": "validateProperties$2",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 2328,
+      "ms": 1.039
+    },
+    {
+      "function": "getTitle",
+      "url": "",
+      "line": 5,
+      "ms": 1.031
+    },
+    {
+      "function": "getComponentNameFromType",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 13,
+      "ms": 1.004
+    },
+    {
+      "function": "isTypedArray",
+      "url": "",
+      "line": 65,
+      "ms": 0.971
+    },
+    {
+      "function": "RenderedChart",
+      "url": "http://127.0.0.1:5178/src/components/RenderedChart.tsx",
+      "line": 6,
+      "ms": 0.961
+    },
+    {
+      "function": "isNumericAxis",
+      "url": "http://127.0.0.1:5178/src/templates/basic/index.ts",
+      "line": 1154,
+      "ms": 0.959
+    },
+    {
+      "function": "setValueForStyles",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 2232,
+      "ms": 0.932
+    }
+  ],
+  "inclusiveApplication": [
+    {
+      "function": "DataPanel",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 16,
+      "ms": 43.002
+    },
+    {
+      "function": "Inspector",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 83,
+      "ms": 32.312
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 131,
+      "ms": 30.481
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 138,
+      "ms": 26.106
+    },
+    {
+      "function": "Editor",
+      "url": "http://127.0.0.1:5178/src/components/Editor.tsx",
+      "line": 31,
+      "ms": 25.328
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 172,
+      "ms": 21.845
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 179,
+      "ms": 17.388
+    },
+    {
+      "function": "ChartFrame",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 314,
+      "ms": 15.401
+    },
+    {
+      "function": "children",
+      "url": "http://127.0.0.1:5178/src/templates/basic/renderers.tsx",
+      "line": 1644,
+      "ms": 13.947
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/renderers.tsx",
+      "line": 1681,
+      "ms": 11.855
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/renderers.tsx",
+      "line": 1838,
+      "ms": 8.972
+    },
+    {
+      "function": "Axes",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 787,
+      "ms": 6.777
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 847,
+      "ms": 6.656
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 178,
+      "ms": 4.554
+    },
+    {
+      "function": "BasicStylePanel",
+      "url": "http://127.0.0.1:5178/src/templates/basic/BasicStylePanel.tsx",
+      "line": 22,
+      "ms": 3.813
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 934,
+      "ms": 3.626
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 861,
+      "ms": 3.478
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/shared.tsx",
+      "line": 871,
+      "ms": 2.37
+    },
+    {
+      "function": "t.validate",
+      "url": "http://127.0.0.1:5178/src/templates/basic/index.ts",
+      "line": 1515,
+      "ms": 2.138
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/BasicStylePanel.tsx",
+      "line": 118,
+      "ms": 1.45
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/BasicStylePanel.tsx",
+      "line": 343,
+      "ms": 1.36
+    },
+    {
+      "function": "DistributionRenderer",
+      "url": "http://127.0.0.1:5178/src/templates/basic/renderers.tsx",
+      "line": 1621,
+      "ms": 1.269
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 283,
+      "ms": 1.213
+    },
+    {
+      "function": "t.validate",
+      "url": "http://127.0.0.1:5178/src/templates/basic/index.ts",
+      "line": 1418,
+      "ms": 1.179
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/DataPanel.tsx",
+      "line": 92,
+      "ms": 1.136
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Editor.tsx",
+      "line": 254,
+      "ms": 1.13
+    },
+    {
+      "function": "RenderedChart",
+      "url": "http://127.0.0.1:5178/src/components/RenderedChart.tsx",
+      "line": 6,
+      "ms": 1.093
+    },
+    {
+      "function": "isNumericAxis",
+      "url": "http://127.0.0.1:5178/src/templates/basic/index.ts",
+      "line": 1154,
+      "ms": 0.959
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/basic/renderers.tsx",
+      "line": 1813,
+      "ms": 0.864
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Editor.tsx",
+      "line": 290,
+      "ms": 0.847
+    }
+  ]
+}

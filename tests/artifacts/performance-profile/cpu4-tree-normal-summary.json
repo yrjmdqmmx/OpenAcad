@@ -1,0 +1,368 @@
+{
+  "file": "cpu4-tree-normal.cpuprofile",
+  "totalMS": 284.917,
+  "self": [
+    {
+      "function": "(program)",
+      "url": "",
+      "line": 0,
+      "ms": 131.882
+    },
+    {
+      "function": "exports.jsxDEV",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 239,
+      "ms": 60.129
+    },
+    {
+      "function": "(idle)",
+      "url": "",
+      "line": 0,
+      "ms": 16.349
+    },
+    {
+      "function": "walk",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 2,
+      "ms": 3.633
+    },
+    {
+      "function": "node",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 80,
+      "ms": 2.984
+    },
+    {
+      "function": "(garbage collector)",
+      "url": "",
+      "line": 0,
+      "ms": 2.9
+    },
+    {
+      "function": "parseTimeAnnotations",
+      "url": "http://127.0.0.1:5178/src/templates/tree/time.ts",
+      "line": 2,
+      "ms": 2.885
+    },
+    {
+      "function": "ReactElement",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 127,
+      "ms": 2.882
+    },
+    {
+      "function": "exports.createElement",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/chunk-TAJOU4CS.js?v=fba49b62",
+      "line": 761,
+      "ms": 2.877
+    },
+    {
+      "function": "",
+      "url": "",
+      "line": 0,
+      "ms": 2.734
+    },
+    {
+      "function": "assignIds",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 13,
+      "ms": 2.644
+    },
+    {
+      "function": "jsxDEVImpl",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=fba49b62",
+      "line": 168,
+      "ms": 1.957
+    },
+    {
+      "function": "createTask",
+      "url": "",
+      "line": 0,
+      "ms": 1.793
+    },
+    {
+      "function": "getCSSContent",
+      "url": "",
+      "line": 3618,
+      "ms": 1.693
+    },
+    {
+      "function": "timeInfo",
+      "url": "http://127.0.0.1:5178/src/templates/tree/time.ts",
+      "line": 96,
+      "ms": 1.693
+    },
+    {
+      "function": "setProp",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 14173,
+      "ms": 1.693
+    },
+    {
+      "function": "select",
+      "url": "",
+      "line": 0,
+      "ms": 1.419
+    },
+    {
+      "function": "updateSlot",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 4790,
+      "ms": 1.401
+    },
+    {
+      "function": "getAriaRole",
+      "url": "",
+      "line": 3521,
+      "ms": 1.387
+    },
+    {
+      "function": "visit",
+      "url": "http://127.0.0.1:5178/src/templates/tree/time.ts",
+      "line": 1,
+      "ms": 1.371
+    },
+    {
+      "function": "commitRoot",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 12716,
+      "ms": 1.265
+    },
+    {
+      "function": "run",
+      "url": "",
+      "line": 0,
+      "ms": 1.158
+    },
+    {
+      "function": "leaves",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 6,
+      "ms": 1.049
+    },
+    {
+      "function": "TreePanel",
+      "url": "http://127.0.0.1:5178/src/templates/tree/TreePanel.tsx",
+      "line": 538,
+      "ms": 1.042
+    },
+    {
+      "function": "getTextAlternativeInternal",
+      "url": "",
+      "line": 3807,
+      "ms": 0.986
+    },
+    {
+      "function": "commitMutationEffectsOnFiber",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 10398,
+      "ms": 0.975
+    },
+    {
+      "function": "specialProjectIssues",
+      "url": "http://127.0.0.1:5178/src/templates/special/advanced.tsx",
+      "line": 68,
+      "ms": 0.966
+    },
+    {
+      "function": "query",
+      "url": "",
+      "line": 5413,
+      "ms": 0.954
+    },
+    {
+      "function": "recurse",
+      "url": "http://127.0.0.1:5178/src/templates/tree/geometry.ts",
+      "line": 26,
+      "ms": 0.925
+    },
+    {
+      "function": "validateProperty$1",
+      "url": "http://127.0.0.1:5178/node_modules/.vite/deps/react-dom_client.js?v=fba49b62",
+      "line": 2298,
+      "ms": 0.91
+    }
+  ],
+  "inclusiveApplication": [
+    {
+      "function": "Inspector",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 83,
+      "ms": 36.595
+    },
+    {
+      "function": "Editor",
+      "url": "http://127.0.0.1:5178/src/components/Editor.tsx",
+      "line": 31,
+      "ms": 26.763
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 131,
+      "ms": 19.771
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 93,
+      "ms": 16.51
+    },
+    {
+      "function": "TreePanel",
+      "url": "http://127.0.0.1:5178/src/templates/tree/TreePanel.tsx",
+      "line": 538,
+      "ms": 15.52
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 138,
+      "ms": 14.305
+    },
+    {
+      "function": "parseNewick",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 34,
+      "ms": 13.41
+    },
+    {
+      "function": "parseTree",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 272,
+      "ms": 13.41
+    },
+    {
+      "function": "stateFor",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 275,
+      "ms": 13.385
+    },
+    {
+      "function": "TreeRenderer",
+      "url": "http://127.0.0.1:5178/src/templates/tree/Renderer.tsx",
+      "line": 560,
+      "ms": 12.078
+    },
+    {
+      "function": "visible",
+      "url": "http://127.0.0.1:5178/src/templates/tree/index.ts",
+      "line": 396,
+      "ms": 10.102
+    },
+    {
+      "function": "node",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 80,
+      "ms": 7.395
+    },
+    {
+      "function": "assignIds",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 13,
+      "ms": 5.141
+    },
+    {
+      "function": "visible",
+      "url": "http://127.0.0.1:5178/src/templates/tree/branch-style.tsx",
+      "line": 94,
+      "ms": 4.896
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/tree/TreePanel.tsx",
+      "line": 1159,
+      "ms": 4.392
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/tree/Renderer.tsx",
+      "line": 807,
+      "ms": 4.144
+    },
+    {
+      "function": "walk",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 2,
+      "ms": 3.633
+    },
+    {
+      "function": "parseTimeAnnotations",
+      "url": "http://127.0.0.1:5178/src/templates/tree/time.ts",
+      "line": 2,
+      "ms": 3.417
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 178,
+      "ms": 3.189
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/tree/Renderer.tsx",
+      "line": 957,
+      "ms": 3.07
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/components/Inspector.tsx",
+      "line": 283,
+      "ms": 2.472
+    },
+    {
+      "function": "timeInfo",
+      "url": "http://127.0.0.1:5178/src/templates/tree/time.ts",
+      "line": 96,
+      "ms": 2.402
+    },
+    {
+      "function": "requiredTreeCanvas",
+      "url": "http://127.0.0.1:5178/src/templates/tree/Renderer.tsx",
+      "line": 1371,
+      "ms": 1.524
+    },
+    {
+      "function": "control.visible",
+      "url": "http://127.0.0.1:5178/src/templates/tree/index.ts",
+      "line": 433,
+      "ms": 1.512
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/tree/Renderer.tsx",
+      "line": 738,
+      "ms": 1.398
+    },
+    {
+      "function": "visit",
+      "url": "http://127.0.0.1:5178/src/templates/tree/time.ts",
+      "line": 1,
+      "ms": 1.371
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/tree/TreePanel.tsx",
+      "line": 772,
+      "ms": 1.233
+    },
+    {
+      "function": "",
+      "url": "http://127.0.0.1:5178/src/templates/tree/TreePanel.tsx",
+      "line": 1076,
+      "ms": 1.05
+    },
+    {
+      "function": "leaves",
+      "url": "http://127.0.0.1:5178/src/templates/tree/model.ts",
+      "line": 6,
+      "ms": 1.049
+    },
+    {
+      "function": "specialProjectIssues",
+      "url": "http://127.0.0.1:5178/src/templates/special/advanced.tsx",
+      "line": 68,
+      "ms": 0.966
+    }
+  ]
+}
