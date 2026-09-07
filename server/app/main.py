@@ -18,8 +18,10 @@ from rq.results import Result
 from .jobs import connection, queue, digest
 from .models import JobRequest
 from .worker_health import fresh_workers
+from .bio import router as bio_router
 
-app = FastAPI(title="OpenAcad 开放学术", version="1.0.0", docs_url=None, redoc_url=None)
+app = FastAPI(title="OpenAcad 开放学术", version="1.1.0", docs_url=None, redoc_url=None)
+app.include_router(bio_router)
 TTL = int(os.getenv("JOB_TTL_SECONDS", "3600"))
 TIMEOUT = int(os.getenv("JOB_TIMEOUT_SECONDS", "300"))
 

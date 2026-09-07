@@ -1,11 +1,15 @@
 # OpenAcad 开放学术
 
-中文科研绘图与统计工作台：55个可编辑模板，直接试用模拟数据、替换自己的数据、调整样式并下载图片或可继续编辑的项目。无需登录。
+面向科研与学术工作的中文平台：55个可编辑科研绘图模板、真实统计、AB1 测序查看和 KO 到 pathway 表格转换。无需登录。
 
 正式网站：[https://openacad.xyz](https://openacad.xyz) · 当前已部署 **1.0.2**。V1功能、完整Linux CI、正式域名验收和恢复演练已完成；[发布记录](docs/deployment/production-record.md)保留运行源码、测试范围及限制。
 
 - `web/`：React、TypeScript、D3/SVG；CSV/TSV/Excel、专业文件、IndexedDB草稿。
 - `server/`：FastAPI、RQ、Redis、固定版本Python/R统计和Inkscape导出。
+- [生物信息学工具](docs/bio-tools.md)：浏览器本地 AB1 解析、KEGG 对应关系转换与来源记录。
+
+1.1.0 已完成本地实现，正在执行独立的 CI、镜像与正式域名上线验收。上方线上版本在发布成功后更新。
+
 - [逐图研究](docs/research/README.md)：52个ChiPlot原站入口、54张卡和29×3树图层矩阵，明确区分代码、文档和操作证据。
 - [验收索引](docs/acceptance/README.md)：逐模板输入、样式、图片和项目证据。
 - [部署、更新与恢复](docs/deployment/README.md)。

@@ -48,10 +48,22 @@ jobs:
         with:
           context: server
           load: true
+          platforms: linux/amd64
           tags: openacad-worker:verified
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - run: docker run --rm --entrypoint python openacad-worker:verified -m pytest -q tests
+      - name: 记录已验证镜像身份
+        run: |
+          docker image inspect openacad-worker:verified > worker-image-inspect.json
+          printf '%s\n' "$GITHUB_SHA" > WORKER_REVISION
+      - uses: actions/upload-artifact@v4
+        with:
+          name: worker-identity
+          path: |
+            worker-image-inspect.json
+            WORKER_REVISION
+          retention-days: 7
       - run: docker save openacad-worker:verified | gzip > openacad-worker.tar.gz
       - uses: actions/upload-artifact@v4
         with:

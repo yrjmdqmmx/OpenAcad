@@ -1,10 +1,12 @@
 import { test, expect } from "@playwright/test";
-import { readFile, mkdir } from "node:fs/promises";
-test("模板搜索、数据更换、错误定位、撤销和项目往返", async ({
+import { readFile } from "node:fs/promises";
+test("从平台首页进入绘图、模板搜索、数据更换、错误定位、撤销和项目往返", async ({
   page,
   browser,
 }, testInfo) => {
   await page.goto("/");
+  await page.getByRole("link", { name: "进入科研绘图", exact: true }).click();
+  await expect(page).toHaveURL(/#catalog$/);
   await page.getByRole("textbox", { name: "搜索图表" }).fill("分组柱状");
   await expect(page.locator(".template-card")).toHaveCount(1);
   await page.getByRole("button", { name: "用示例开始", exact: true }).click();
@@ -53,6 +55,12 @@ test("模板搜索、数据更换、错误定位、撤销和项目往返", async
   );
   const reopen = await context.newPage();
   await reopen.goto("/");
+  await expect(reopen.getByRole("heading", { level: 1 })).toHaveText(
+    /^专注研究，\s*从容表达。$/,
+  );
+  await expect(
+    reopen.getByRole("button", { name: "打开项目", exact: true }),
+  ).toBeVisible();
   await reopen.locator("input[type=file]").first().setInputFiles(path!);
   await expect(reopen.locator(".figure-paper svg").first()).toBeAttached();
   if (testInfo.project.name === "mobile")
@@ -93,10 +101,9 @@ test("样式修改、图层保存、SVG 实际下载", async ({ page }, testInfo
   expect(content).toContain("中文导出验收");
   expect(content).not.toMatch(/NaN|Infinity/);
   if (testInfo.project.name === "chromium") {
-    await mkdir("../tests/artifacts", { recursive: true });
-    await dl.saveAs("../tests/artifacts/bar-cn.svg");
+    await dl.saveAs(testInfo.outputPath("bar-cn.svg"));
     await page.getByRole("button", { name: "关闭", exact: true }).click();
-    await page.screenshot({ path: "../tests/artifacts/editor-desktop.png" });
+    await page.screenshot({ path: testInfo.outputPath("editor-desktop.png") });
   }
 });
 test("模板库、详情、帮助与手机页面无横向溢出", async ({ page }, testInfo) => {
@@ -117,7 +124,7 @@ test("模板库、详情、帮助与手机页面无横向溢出", async ({ page 
   }
   await page.goto("/#catalog");
   if (testInfo.project.name === "chromium")
-    await page.screenshot({ path: "../tests/artifacts/catalog-desktop.png" });
+    await page.screenshot({ path: testInfo.outputPath("catalog-desktop.png") });
   if (testInfo.project.name === "mobile")
-    await page.screenshot({ path: "../tests/artifacts/catalog-mobile.png" });
+    await page.screenshot({ path: testInfo.outputPath("catalog-mobile.png") });
 });

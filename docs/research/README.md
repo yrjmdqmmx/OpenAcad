@@ -16,4 +16,4 @@ C 表示代码检查，D 表示官方文档，O 表示实际操作。HTTP 可达
 
 OpenAcad 的模板和模拟数据独立制作，没有将原站预览图片、示例研究数据或源代码加入生产模板。相关许可见项目数据来源文件。
 
-在任意检出目录运行 `python3 docs/research/build_catalog.py` 可从已保存的目录元数据和示例证据重建 HTML/CSV/JSON，并同步到 `web/public/research/`。无需访问前一会话的绝对路径。原视频较大且由用户提供，不放入代码仓库。
+在任意检出目录运行 `python3 docs/research/build_catalog.py` 可从已保存的目录元数据和示例证据重建本目录的 HTML/CSV/JSON。研究记录仅供内部使用，不随网站发布。无需访问前一会话的绝对路径。原视频较大且由用户提供，不放入代码仓库。

@@ -3,6 +3,7 @@ import { Search, ArrowRight } from "lucide-react";
 import type { Template, Project } from "../core/types";
 import { makeProject } from "../core/project";
 import { RenderedChart } from "./RenderedChart";
+import { groupCatalogTemplates } from "../core/catalog";
 export function TemplatePreview({ template }: { template: Template }) {
   const p = useMemo(() => {
     const p = makeProject(template);
@@ -19,11 +20,8 @@ export function Catalog({
 }) {
   const [query, setQuery] = useState(""),
     [category, setCategory] = useState("全部模板");
-  const categories = [
-    "全部模板",
-    ...Array.from(new Set(templates.map((t) => t.category))),
-  ];
-  const shown = templates.filter(
+  const { categories, ordered } = useMemo(() => groupCatalogTemplates(templates), [templates]);
+  const shown = ordered.filter(
     (t) =>
       (category === "全部模板" || t.category === category) &&
       `${t.name} ${t.description} ${t.tags.join(" ")}`
@@ -33,7 +31,7 @@ export function Catalog({
   return (
     <main className="catalog-page">
       <div className="catalog-intro">
-        <h1>选择一种图，开始探索数据。</h1>
+        <h1>科研绘图模板库</h1>
         <p>使用示例开始，替换数据，保存可继续编辑的项目。</p>
         <label className="search">
           <Search size={20} />

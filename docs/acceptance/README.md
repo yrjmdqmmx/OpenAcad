@@ -4,7 +4,7 @@
 
 - [逐模板表格](templates.csv)：适合筛选模板、来源、四种图片文件和条件项。
 - [完整结构记录](templates.json)：每项检查的方法、报告选择路径、原始中文错误、文件 SHA、条件分支和源站一对多映射。
-- [公开简要页面](../../web/public/acceptance/index.html)：部署路径 `/acceptance/index.html`，提供中文检索及相同 JSON/CSV 下载。
+- [内部简要页面](index.html)：提供中文检索及相同 JSON/CSV 下载，不随网站发布。
 
 ## 1.0.2 最终发行与生产验收
 

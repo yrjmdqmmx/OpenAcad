@@ -1,0 +1,13 @@
+.site-header nav.site-navigation a { gap: 5px; white-space: nowrap; }
+@media (max-width: 760px) {
+  .site-header nav.site-navigation {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 40px);
+    gap: 0 5px;
+    height: 80px;
+    overflow: visible;
+  }
+  .site-header nav.site-navigation a { justify-content: center; padding: 0 2px; }
+  .site-header ~ .editor-shell { height: calc(100dvh - 146px); }
+}

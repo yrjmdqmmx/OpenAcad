@@ -1,0 +1,8 @@
+基因ID	KO	备注
+geneA	K00001	一对多
+geneB	ko:K00844	带前缀
+geneC	K00001	重复KO保留原行
+geneD	K99999	格式有效但可能未收录
+geneE	BAD	无效编号
+geneF		空值
+geneG	K00001;K00844;K00001	同格重复去重

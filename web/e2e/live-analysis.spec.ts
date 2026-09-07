@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 for (const id of ["pca", "pcoa", "nmds", "cca", "rda"])
   test(`${id} 真实服务计算、失效结果和项目保留`, async ({ page }, info) => {
     test.skip(
@@ -37,9 +37,8 @@ for (const id of ["pca", "pcoa", "nmds", "cca", "rda"])
       p.dataset.tables[0].rows.length,
     );
     expect(p.analysis.result.provenance).toBeTruthy();
-    await mkdir("../tests/artifacts/analysis", { recursive: true });
     await writeFile(
-      "../tests/artifacts/analysis/" + id + ".openacad.json",
+      info.outputPath(id + ".openacad.json"),
       content,
     );
     await page

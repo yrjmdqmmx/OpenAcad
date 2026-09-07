@@ -6,7 +6,6 @@ import re
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'docs/acceptance'
-PUBLIC = ROOT / 'web/public/acceptance'
 SOURCE = ROOT / 'tests/artifacts/font-bold-refresh/normalized-weight/verification-summary.json'
 if not SOURCE.exists():
     raise SystemExit('字体补充报告尚未生成；不标记成功。')
@@ -46,7 +45,7 @@ result = {'scope': '本机隔离环境；同86份SVG与真实400/700字体，258
           'boundaries': ['旧字体及第一轮650失败结果保留，未覆盖旧证据。',
                          '650到700采用已提供静态字体的匹配规则；斜体使用明确标注的12度派生Oblique面，网页和服务使用同源字体。',
                          '独立打开及边界检查不等于全部图形内部组合的穷举证明。']}
-for base in (OUT, PUBLIC):
+for base in (OUT,):
     (base / 'font-verification.json').write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
     index = base / 'templates.json'
     data = json.loads(index.read_text())
@@ -56,7 +55,7 @@ for base in (OUT, PUBLIC):
         template['fontWeightExports'] = [row for row in rows if row['group'] == 'default' and row['templateId'] == template['templateId']]
         assert len(template['fontWeightExports']) == 3
     index.write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
-page = PUBLIC / 'index.html'
+page = OUT / 'index.html'
 s = page.read_text()
 block = '''<!-- font-evidence:start -->
 <h2>1.0.2 字体与导出补充</h2>

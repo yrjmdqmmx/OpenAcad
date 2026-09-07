@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { readFile, mkdir } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 for (const format of ["svg", "png", "pdf", "eps"])
   test(`真实 ${format.toUpperCase()} 下载与中文字体`, async ({
     page,
@@ -49,11 +49,7 @@ for (const format of ["svg", "png", "pdf", "eps"])
       expect(bytes.toString()).toContain("<svg");
       expect(bytes.toString()).not.toMatch(/<text\b/);
     }
-    await mkdir("../tests/artifacts/live-exports", { recursive: true });
     await dl.saveAs(
-      "../tests/artifacts/live-exports/" +
-        info.project.name +
-        "-chinese-serif." +
-        format,
+      info.outputPath(info.project.name + "-chinese-serif." + format),
     );
   });

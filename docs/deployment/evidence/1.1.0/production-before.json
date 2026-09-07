@@ -1,0 +1,107 @@
+{
+  "capturedAt": "2026-09-07T11:56:01.596436+00:00",
+  "current": "/opt/openacad/releases/1.0.2-4433576",
+  "revision": "443357603240c87b9d28ebce346e8e87ea0d7f88",
+  "containers": [
+    {
+      "name": "paperbanana-hk-auth-gateway-1",
+      "id": "14adc28bbcb66b661a978a9c04e5bf805e6d7b426937766869dc3389b14695ac",
+      "imageId": "sha256:9feee7f1744bfcdf2eec970bfb84349255e1ad62ea22ff99b4e94daeb2f3d058",
+      "startedAt": "2026-09-07T08:07:44.491706866Z",
+      "project": "paperbanana-hk"
+    },
+    {
+      "name": "paperbanana-hk-benchmark-worker-1",
+      "id": "ffca1d12c8078ab7952d2da4b5a34c8a6214ae76be68978661babbc15d4a79c0",
+      "imageId": "sha256:781b51951e0fad600ab7f0ed1126346a5fc8e7d11348d85c0f0532a9db85d641",
+      "startedAt": "2026-09-07T08:04:40.694623341Z",
+      "project": "paperbanana-hk"
+    },
+    {
+      "name": "paperbanana-hk-paperbanana-api-1",
+      "id": "c1ce55591bd5a175b6f9ad9c23e733b9a1a06da61e21f31eeca63bf4018e8d78",
+      "imageId": "sha256:b7167668bc94fe7ad4512a63ab7b97b3ff2b840da047ff37ca738fb4e3555503",
+      "startedAt": "2026-09-07T08:07:38.609986381Z",
+      "project": "paperbanana-hk"
+    },
+    {
+      "name": "openacad-api-1",
+      "id": "262b4c5f3e4155c7a2520d7c2054db292fc90ab481f286ae9bfc54af8e3a9b33",
+      "imageId": "sha256:31827c08ecfc92178d3bb26bb8adc29467070a11471b8068f898188d4c93acda",
+      "startedAt": "2026-09-06T19:23:18.752816546Z",
+      "project": "openacad"
+    },
+    {
+      "name": "openacad-worker-one-1",
+      "id": "17ddd3fd492a4ce6323e39bca6e0a0f450e3b5b0258b24052746ce0b7db859b5",
+      "imageId": "sha256:31827c08ecfc92178d3bb26bb8adc29467070a11471b8068f898188d4c93acda",
+      "startedAt": "2026-09-06T19:23:18.748261628Z",
+      "project": "openacad"
+    },
+    {
+      "name": "openacad-worker-two-1",
+      "id": "16f3de051be1892a11186d94fe4dddd961f3cce87f2b75d7164c5ed33227b897",
+      "imageId": "sha256:31827c08ecfc92178d3bb26bb8adc29467070a11471b8068f898188d4c93acda",
+      "startedAt": "2026-09-06T19:23:18.751141585Z",
+      "project": "openacad"
+    },
+    {
+      "name": "openacad-redis-1",
+      "id": "0c3182b6d59c3b73429429165586c0c54638dbc6dd7362be02d1c586e37e43e4",
+      "imageId": "sha256:02f2cc4882f8bf87c79a220ac958f58c700bdec0dfb9b9ea61b62fb0e8f1bfcf",
+      "startedAt": "2026-09-06T14:44:47.398742717Z",
+      "project": "openacad"
+    },
+    {
+      "name": "paperbanana-hk-plot-worker-1",
+      "id": "d48cdb32f4613a83910a721464113b8cd915e38eb16bab7c51550bd69f840a62",
+      "imageId": "sha256:23894f4844c4145046f882a8eff7665c907d1e433d1afaa8edc8fcdab337d2e3",
+      "startedAt": "2026-08-19T03:03:07.109583832Z",
+      "project": "paperbanana-hk"
+    },
+    {
+      "name": "tensor-auto-web-1",
+      "id": "442bb7cf14593d988b1de3a15cce9c7377d59797a2219f50c49b21f71a7952ca",
+      "imageId": "sha256:eaeecdba76a64c8150c533db8945d0d7eb82cb36a3668ebbd30f0c8e5cc4f0d4",
+      "startedAt": "2026-08-18T05:16:10.02228225Z",
+      "project": "tensor-auto"
+    },
+    {
+      "name": "tensor-auto-api-1",
+      "id": "d7807827910cf1fd7453cdba308740dbc82b3434d5c92803861d79408f7d165a",
+      "imageId": "sha256:e4539d9d051948e731efe68aa50ecbc89416aeba1017766120735f9cc36f79a5",
+      "startedAt": "2026-08-18T05:15:54.320461073Z",
+      "project": "tensor-auto"
+    },
+    {
+      "name": "tensor-auto-harness-worker-1",
+      "id": "939d22f43b1fd05130b7489c0d9a904a2155fe1221df046531c7497b43a93dc0",
+      "imageId": "sha256:bee2131f77c8bee446bf387d4664e4929fe09303c8e7bfdf72c980320d596c06",
+      "startedAt": "2026-08-18T05:15:38.671302172Z",
+      "project": "tensor-auto"
+    },
+    {
+      "name": "tensor-auto-backup-1",
+      "id": "f46ca7bbdfb63c2d83ca9aff305d69e04c78af6fe40767ea8da1131f70eec626",
+      "imageId": "sha256:6567bca8d7bc8c82c5922425a0baee57be8402df92bae5eacad5f01ae9544daa",
+      "startedAt": "2026-08-15T03:41:03.061643707Z",
+      "project": "tensor-auto"
+    },
+    {
+      "name": "tensor-auto-postgres-1",
+      "id": "4f29944e9f6d54ee09a061122dc473353a7e1fbdc5f330deea3529d0afe06bcb",
+      "imageId": "sha256:6567bca8d7bc8c82c5922425a0baee57be8402df92bae5eacad5f01ae9544daa",
+      "startedAt": "2026-08-15T03:40:52.355514429Z",
+      "project": "tensor-auto"
+    },
+    {
+      "name": "paperbanana-hk-mongodb-1",
+      "id": "46b3df0ce6f36da01f4d69fef77d514231e22fc2e0810ca07ec39cef2a6cf31e",
+      "imageId": "sha256:5dda65a823a0d73d9caae4f449ab01973cf9884cea4ef56f9cb84dbe5e00acbd",
+      "startedAt": "2026-08-14T17:43:59.2723552Z",
+      "project": "paperbanana-hk"
+    }
+  ],
+  "maintenance": false,
+  "baselineArchiveExists": true
+}

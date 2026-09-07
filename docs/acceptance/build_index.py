@@ -1,4 +1,4 @@
-import json,csv,pathlib,hashlib,datetime,collections,subprocess,argparse,shutil,html
+import json,csv,pathlib,hashlib,datetime,collections,subprocess,argparse,html
 ROOT=pathlib.Path(__file__).resolve().parents[2]
 parser=argparse.ArgumentParser(description='从仓库中的实际报告构建55模板验收索引。此脚本不重新执行浏览器或导出任务。')
 parser.add_argument('--unit-passed',type=int,default=311,help='主任务已完成单元测试数；默认是1.0功能冻结运行311')
@@ -161,7 +161,7 @@ readme=f'''# OpenAcad 逐模板验收索引
 
 - [逐模板表格](templates.csv)：适合筛选模板、来源、四种图片文件和条件项。
 - [完整结构记录](templates.json)：每项检查的方法、报告选择路径、原始中文错误、文件 SHA、条件分支和源站一对多映射。
-- [公开简要页面](../../web/public/acceptance/index.html)：部署路径 `/acceptance/index.html`，提供中文检索及相同 JSON/CSV 下载。
+- [内部简要页面](index.html)：提供中文检索及相同 JSON/CSV 下载，不随网站发布。
 
 ## 最终运行结果及解释
 
@@ -223,10 +223,7 @@ python3 /你的仓库路径/OpenAcad/docs/acceptance/build_index.py --unit-passe
 if result['reportStatus']=='pending-final-browser-rerun':readme=readme.replace('## 最终运行结果及解释','## 当前总报告待刷新\n\n此前已读取77通过/195有意跳过/0失败的完整报告；后续一次测试文件路径错误覆盖为空。主任务正重跑完整套件，当前默认逐图记录标记 pending-report-refresh。已完成的110次注错、165份独立导出和模块专项仍有独立证据。下述总浏览器数字来自当前文件，不能视为最终完成声明。\n\n## 最终运行结果及解释')
 if result['reportStatus']=='pending-export-refresh':readme=readme.replace('## 最终运行结果及解释','## 当前导出版本待同步\n\n浏览器报告已通过；部分导出使用的源SVG校验值与当前输入不同，正在重新转换。索引状态为 pending-export-refresh，不能用旧导出完成当前版本验收。\n\n## 最终运行结果及解释')
 (OUT/'README.md').write_text(readme)
-PUBLIC=ROOT/'web/public/acceptance'
-PUBLIC.mkdir(parents=True,exist_ok=True)
-for name in ['templates.json','templates.csv']:
- shutil.copyfile(OUT/name,PUBLIC/name)
+# Acceptance records stay in docs/acceptance and are not website assets.
 summary_state='本地验收记录已同步' if result['reportStatus']=='complete' else '证据版本正在同步，请以各项记录为准'
 page='''<!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -236,13 +233,13 @@ page='''<!doctype html>
 body{max-width:1180px;margin:0 auto;padding:28px 20px}a{color:#17644d}h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.25}h2{font-size:1.2rem}
 .links{display:flex;gap:20px;flex-wrap:wrap}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:24px 0}.card{padding:16px;background:white;border:1px solid #d4ded6;border-radius:10px}.card strong{display:block;font-size:1.6rem}.note{padding:16px;border-left:4px solid #b68b35;background:#fff9e9}.table-wrap{overflow-x:auto;border:1px solid #d4ded6;border-radius:8px;background:white}table{border-collapse:collapse;min-width:850px;width:100%;font-size:.91rem}th,td{padding:12px;text-align:left;border-bottom:1px solid #e1e7e0;vertical-align:top}th{background:#e8f0e7}small{display:block;color:#57655d}input{box-sizing:border-box;width:100%;padding:12px;border:1px solid #afbeb2;border-radius:6px;margin:8px 0 16px;font:inherit}code{overflow-wrap:anywhere}footer{color:#57655d;margin-top:24px}
 </style></head><body>
-<nav class="links"><a href="/">返回 OpenAcad</a><a href="/research/index.html">图表功能研究</a></nav>
+<nav class="links"><a href="../research/index.html">内部图表功能研究</a></nav>
 <h1>逐模板验收记录</h1>
 <p>@@STATE@@。这里记录 55 个可编辑模板与 52 个源站入口的对应关系，区分浏览器操作、代码渲染检查与实际文件解码。</p>
 <p class="links"><a href="templates.csv" download>下载逐模板 CSV</a><a href="templates.json" download>下载完整 JSON 证据索引</a></p>
 <div class="cards"><div class="card"><strong>@@BROWSER@@</strong>浏览器测试通过</div><div class="card"><strong>@@ERRORS@@</strong>实际输入错误检查</div><div class="card"><strong>@@EXPORTS@@</strong>默认图片独立解码</div><div class="card"><strong>@@SPECIAL@@</strong>复杂配置图片独立解码</div></div>
 <p class="note">55 个模板逐图验收运行于 Chromium；3 个通用流程覆盖 Chromium、Firefox、WebKit 和 390px 手机。@@CONTROLS@@ 项默认控件审计是 SVG 渲染检查，其中 @@CONDITIONAL@@ 项有条件分支专项证据，不能当作逐控件浏览器点击。EPS 透明效果可能栅格化。</p>
-<p>图片格式为 SVG、PNG、PDF、EPS；可继续编辑的项目文件为 <code>.openacad.json</code>。完整 JSON 内记录证据路径与 SHA，源码仓库保留对应报告和文件；本公开页面不镜像所有测试图片，也不代表正式服务器部署验收结论。</p>
+<p>图片格式为 SVG、PNG、PDF、EPS；可继续编辑的项目文件为 <code>.openacad.json</code>。完整 JSON 内记录证据路径与 SHA，源码仓库保留对应报告和文件；本内部页面不镜像所有测试图片，也不代表正式服务器部署验收结论。</p>
 <h2>1.0 树功能追加专项</h2><p>前端单元测试 @@UNIT@@ 项通过。以下专项独立于82项总浏览器套件：已有时间树3个案例、12份图片；矩形RTL与环形向内2个案例、8份图片；分支及支持度15个案例、16份SVG，另48份PNG/PDF/EPS独立打开。布局组合、下载文件和截图数量不相加成测试数。三布局的动态分支选项分别为6/5/3。</p><p>树图展示用户已有年代及区间，不运行BEAST/MCMCTree估计分歧时间。完整JSON中的 <code>supplementalTreeEvidence</code> 提供专项路径、文件SHA和边界。</p>
 <label for="search">搜索模板名称或编号</label><input id="search" type="search" placeholder="例如：热图、network、PCA">
 <p id="count" aria-live="polite"></p>
@@ -264,7 +261,7 @@ for r in records:
 tokens={'STATE':summary_state,'UNIT':str(args.unit_passed),'BROWSER':str(c['browserPassed']),'ERRORS':str(c['invalidInputBrowserCases']),'EXPORTS':str(c['exportFilesDecoded']),'SPECIAL':str(c['advancedExportFiles']),'CONTROLS':str(c['defaultSsrControls']),'CONDITIONAL':str(c['defaultSsrConditional']),'UPDATED':result['generatedAt'],'SKIPS':str(c['browserIntentionalSkips'])}
 for token,value in tokens.items():page=page.replace('@@'+token+'@@',html.escape(value))
 page=page.replace('@@ROWS@@',json.dumps(public_rows,ensure_ascii=False).replace('<','\\u003c'))
-(PUBLIC/'index.html').write_text(page)
+(OUT/'index.html').write_text(page)
 assert len(records)==55 and len(sourceMapping)==52 and all(x['templateIds'] for x in sourceMapping)
 assert all(r['invalidData']['status']=='passed' for r in records)
 assert not any(c['status']=='unresolved' for r in records for c in r['styles']['conditionalControls'])

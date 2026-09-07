@@ -1,0 +1,35 @@
+.tuyan-carousel { grid-column: 1; grid-row: 1; min-width: 0; margin: 0; }
+.tuyan-carousel-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 12px; color: #53666c; min-height: 44px; }
+.tuyan-carousel-heading > span { letter-spacing: .6px; }
+.tuyan-carousel button { min-width: 44px; min-height: 44px; padding: 8px; border: 0; border-radius: 2px; background: transparent; color: #314b55; }
+.tuyan-carousel button:hover { background: #e9e5dc; }
+.tuyan-carousel-viewport { position: relative; aspect-ratio: 8 / 5; border: 1px solid #dbdcd4; overflow: hidden; background: #fffdf8; touch-action: pan-y pinch-zoom; }
+.tuyan-slide { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .35s ease, visibility .35s; pointer-events: none; }
+.tuyan-slide.is-current { opacity: 1; visibility: visible; pointer-events: auto; }
+.tuyan-slide > a, .tuyan-slide img { width: 100%; height: 100%; display: block; }
+.tuyan-slide img { object-fit: contain; user-select: none; -webkit-user-drag: none; }
+.tuyan-carousel-viewport a:focus-visible { outline-offset: -4px; }
+.tuyan-image-fallback { display: flex; flex-direction: column; gap: 12px; justify-content: center; align-items: center; text-align: center; width: 100%; height: 100%; padding: 20px; font-size: 14px; }
+.tuyan-carousel-caption { padding-top: 16px; min-height: 83px; }
+.tuyan-carousel-caption strong { display: block; font-size: 16px; font-weight: 600; line-height: 1.6; }
+.tuyan-carousel-caption > div { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 14px; margin-top: 6px; font-size: 11px; line-height: 1.8; color: #53666c; }
+.tuyan-carousel-caption a { display: inline-flex; align-items: center; gap: 3px; white-space: nowrap; }
+.tuyan-carousel-controls { display: flex; align-items: center; gap: 4px; border-top: 1px solid #dcd9ce; margin-top: 12px; }
+.tuyan-carousel-dots { display: flex; justify-content: center; margin-left: auto; }
+.tuyan-carousel .tuyan-carousel-dots button { min-width: 30px; width: 30px; padding: 9px; }
+.tuyan-carousel-dots button span { width: 6px; height: 6px; border-radius: 50%; background: #adb8b5; }
+.tuyan-carousel-dots button[aria-current] span { width: 16px; border-radius: 4px; background: #087f8c; }
+.tuyan-carousel-count { margin-left: auto; padding-inline: 8px; color: #53666c; font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 760px) {
+  .tuyan-carousel { grid-column: 1; grid-row: 2; margin-inline: -5px; }
+  .tuyan-carousel-caption { min-height: 102px; padding-top: 14px; }
+  .tuyan-carousel-caption strong { font-size: 15px; }
+  .tuyan-carousel-caption > div > span { flex-basis: 100%; }
+  .tuyan-carousel-caption a { margin-top: 4px; min-height: 32px; }
+  .tuyan-carousel-controls { gap: 0; margin-top: 4px; }
+  .tuyan-carousel-count { padding-inline: 3px; }
+  .tuyan-carousel .tuyan-carousel-dots button { min-width: 27px; width: 27px; padding: 5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tuyan-slide { transition: none; }
+}
