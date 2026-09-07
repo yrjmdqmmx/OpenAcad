@@ -1,0 +1,20 @@
+{
+  "run": 34119366158,
+  "url": "https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34119366158",
+  "sourceRevision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+  "conclusion": "success",
+  "frontendUnitPassed": 332,
+  "frontendFiles": 11,
+  "browser": {
+    "passed": 131,
+    "skipped": 233,
+    "failed": 0,
+    "durationMinutesRounded": 8.2,
+    "liveApiEnabled": false
+  },
+  "backendPassed": 196,
+  "backendBuildAndRunCountsAreSameSuite": true,
+  "releaseToolsPassed": 13,
+  "architecture": "linux/amd64",
+  "ciImageId": "sha256:c2cc25af01a34b9f4f8f4609f953530efd18ecb168eb48107e7f09b83c147b35"
+}

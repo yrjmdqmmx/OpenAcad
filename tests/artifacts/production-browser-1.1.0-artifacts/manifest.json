@@ -1,0 +1,291 @@
+{
+  "sourceRevision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+  "baseUrl": "https://openacad.xyz",
+  "files": [
+    {
+      "path": "live-analysis-pca-真实服务计算、失效结果和项目保留-chromium/pca.openacad.json",
+      "bytes": 7390,
+      "sha256": "790b8ace5d5277e5f317f355ea915803f0fb5cf13f2ccc85ba7779911ae967fd"
+    },
+    {
+      "path": "live-export-真实-PDF-下载与中文字体-chromium/chromium-chinese-serif.pdf",
+      "bytes": 122771,
+      "sha256": "0fe4a8905bc602da0e380caee2d599497dc5b05d485f76862971b462fb7faa50"
+    },
+    {
+      "path": "live-export-真实-EPS-下载与中文字体-chromium/chromium-chinese-serif.eps",
+      "bytes": 128352,
+      "sha256": "d42bbfbe47a5b0001e625f117918c5e63ddb2fb0585e5ffc3439ac527fb04a9a"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-webkit/ko-filtered.xlsx",
+      "bytes": 22438,
+      "sha256": "b3bad95df56132bdd8fb603123784b789d36448ace7d0da5d4c7f0e4e3914328"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-webkit/ko-filtered.csv",
+      "bytes": 1122,
+      "sha256": "1f4e4023c31809cb694f5f33875f5a6af3b42635423dbb147fe31f8514fbfc38"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-webkit/ko-result.png",
+      "bytes": 762896,
+      "sha256": "3113065757a58290f52c6d31e0f6b674138f81bd0b73e1d8033beb8505d1480b"
+    },
+    {
+      "path": "live-analysis-nmds-真实服务计算、失效结果和项目保留-chromium/nmds.openacad.json",
+      "bytes": 6127,
+      "sha256": "3d831fcccadf4bd0048ebe9f6d058dfa8d4d20d3088d37b42a6b02e6cc9f9e38"
+    },
+    {
+      "path": "bio-tools-KO-真实-KEGG-已知对应关系与实时获取时间-mobile/live-summary.txt",
+      "bytes": 122,
+      "sha256": "0c5d3dda08389bdbfc3ebcfdfde4c14a46b663348839f46d10862055e63aed65"
+    },
+    {
+      "path": "bio-tools-KO-真实-KEGG-已知对应关系与实时获取时间-mobile/ko-live.xlsx",
+      "bytes": 69535,
+      "sha256": "93ce13058f03112a5a5049861ff1706b35a1e70dd7699d0f260cf5b93db68a1e"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-webkit/ab1-export.png",
+      "bytes": 179286,
+      "sha256": "16883acb00394ec87e533bbf82f90f877050d94d17a829b20f9c03ef260112ca"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-webkit/ab1-result.png",
+      "bytes": 716078,
+      "sha256": "a868d1d8b1f771ebee7ad174b52a79b9d75833e5676e49969d3615d1d88698e1"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-webkit/ab1-export.svg",
+      "bytes": 35414,
+      "sha256": "263fad8f28de46356cb174f07b47200c44b2919fc98bf9fb579d6a62e1c0e456"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-webkit/ab1-export.fasta",
+      "bytes": 1186,
+      "sha256": "5a468c6ae2b1671b628368234338142d72b0a97e917fff3f3a6d1f45a719deaa"
+    },
+    {
+      "path": "platform-home-平台首页呈现已上线绘图、独立图研入口和后续工具说明-mobile/platform-home.png",
+      "bytes": 1275124,
+      "sha256": "4dba355037f52de19e51fde3cba675f329219fdb43975836f44436c27cc8aa27"
+    },
+    {
+      "path": "bio-tools-KO-真实-KEGG-已知对应关系与实时获取时间-firefox/live-summary.txt",
+      "bytes": 122,
+      "sha256": "0c5d3dda08389bdbfc3ebcfdfde4c14a46b663348839f46d10862055e63aed65"
+    },
+    {
+      "path": "bio-tools-KO-真实-KEGG-已知对应关系与实时获取时间-firefox/ko-live.xlsx",
+      "bytes": 69535,
+      "sha256": "817ccedde26377f457664dfcc191aa9d1600b1c6a46f5afa8cdeeb1fda7c94e3"
+    },
+    {
+      "path": "live-export-真实-PDF-下载与中文字体-mobile/mobile-chinese-serif.pdf",
+      "bytes": 122771,
+      "sha256": "d9269c83ab7b753f9304a6ca34e3943a184a8da957415bc53e4bd1efe2fc1066"
+    },
+    {
+      "path": "live-analysis-pcoa-真实服务计算、失效结果和项目保留-chromium/pcoa.openacad.json",
+      "bytes": 6849,
+      "sha256": "132431d503214ba19a82830485d9c1e7c9dbc33f496053e652f80e985af76024"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-chromium/ab1-export.png",
+      "bytes": 221086,
+      "sha256": "fb1a144b5051d0d3fea94381fe561b820bb15d82d08f67bc6078fbdc675307c4"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-chromium/ab1-result.png",
+      "bytes": 247471,
+      "sha256": "5f40b16b759b5d491cc20d83b365f1d8f96b38229b38ae2105fd2677f750a63d"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-chromium/ab1-export.svg",
+      "bytes": 35553,
+      "sha256": "ed00e5c23cd68738f60f86de1571adc0c9e9c9bec32b5828c89ee0c37598dcf0"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-chromium/ab1-export.fasta",
+      "bytes": 1186,
+      "sha256": "5a468c6ae2b1671b628368234338142d72b0a97e917fff3f3a6d1f45a719deaa"
+    },
+    {
+      "path": "live-analysis-cca-真实服务计算、失效结果和项目保留-chromium/cca.openacad.json",
+      "bytes": 8145,
+      "sha256": "6930490aad315fb45cffd20373386ea7827b46444b6a246bf492a3b4fa46810e"
+    },
+    {
+      "path": "workflow-样式修改、图层保存、SVG-实际下载-chromium/editor-desktop.png",
+      "bytes": 141184,
+      "sha256": "2af273e945ad2ce929fc7cded8726b98dfdbbb146e4680204e6b0b2bf558061c"
+    },
+    {
+      "path": "workflow-样式修改、图层保存、SVG-实际下载-chromium/bar-cn.svg",
+      "bytes": 6232,
+      "sha256": "177cbde91156003378b58487c59ab5f80b97f646eed613e5d631dd9d314d4b48"
+    },
+    {
+      "path": "workflow-模板库、详情、帮助与手机页面无横向溢出-mobile/catalog-mobile.png",
+      "bytes": 241114,
+      "sha256": "b12bc2cf208a705b8d0a2c85287bbc1ac2d40cdca2f39870313587e9114755ba"
+    },
+    {
+      "path": "bio-tools-KO-真实-KEGG-已知对应关系与实时获取时间-webkit/live-summary.txt",
+      "bytes": 122,
+      "sha256": "0c5d3dda08389bdbfc3ebcfdfde4c14a46b663348839f46d10862055e63aed65"
+    },
+    {
+      "path": "bio-tools-KO-真实-KEGG-已知对应关系与实时获取时间-webkit/ko-live.xlsx",
+      "bytes": 69535,
+      "sha256": "b5d12ab3f0d50f927378a02d88865c56df20b401378b7434bbb961664f9ea567"
+    },
+    {
+      "path": "platform-home-平台首页呈现已上线绘图、独立图研入口和后续工具说明-chromium/platform-home.png",
+      "bytes": 419853,
+      "sha256": "3816414c5f16fe7312cc0e7d257d0cf0f5525d06e1a9b962537e16fffd61902b"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-chromium/ko-filtered.xlsx",
+      "bytes": 22438,
+      "sha256": "3ed64b862b3b7ecc26d6529a1ea3386926f21b9bc3e644665059ec8f6e6ad11b"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-chromium/ko-filtered.csv",
+      "bytes": 1122,
+      "sha256": "1f4e4023c31809cb694f5f33875f5a6af3b42635423dbb147fe31f8514fbfc38"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-chromium/ko-result.png",
+      "bytes": 254241,
+      "sha256": "457e7fee34e2008b872677c0111229b2ccf250f0b57fa49ff145626d48c6625c"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-mobile/ab1-export.png",
+      "bytes": 102392,
+      "sha256": "ab21169b0cb5d866a1ff25ced9ebef13d549e4d36056b00a380ea5f522674f95"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-mobile/ab1-result.png",
+      "bytes": 844903,
+      "sha256": "b0b3365189fd205c6b1697184cc86c9e476fe5e1b1a08071c1c61f28508665d7"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-mobile/ab1-export.svg",
+      "bytes": 30915,
+      "sha256": "12336b0651c59b04583fce2dc5a0cff1600a16735137790241b07da3efe45dce"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-mobile/ab1-export.fasta",
+      "bytes": 1186,
+      "sha256": "5a468c6ae2b1671b628368234338142d72b0a97e917fff3f3a6d1f45a719deaa"
+    },
+    {
+      "path": "live-export-真实-PNG-下载与中文字体-mobile/mobile-chinese-serif.png",
+      "bytes": 46906,
+      "sha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25"
+    },
+    {
+      "path": "platform-home-平台首页呈现已上线绘图、独立图研入口和后续工具说明-webkit/platform-home.png",
+      "bytes": 1279734,
+      "sha256": "3c998968145829bb969ee3fd40d96dbd767430da9e548d46ac4891782ae3549f"
+    },
+    {
+      "path": "live-export-真实-SVG-下载与中文字体-mobile/mobile-chinese-serif.svg",
+      "bytes": 51782,
+      "sha256": "a5ff94138e66fa1431e916e32d0a076fad2fc6590312068e20677e6b990223d9"
+    },
+    {
+      "path": "platform-home-平台首页呈现已上线绘图、独立图研入口和后续工具说明-firefox/platform-home.png",
+      "bytes": 447238,
+      "sha256": "c8ea4541f48626fc20f50c1d9b834592e4840693291ce63163316a43bd76f4d4"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-firefox/ab1-export.png",
+      "bytes": 189533,
+      "sha256": "638088ee0c7c5f41ec3ba54f1966b9fbad57d3aa8c873011f10f7124cfc35e77"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-firefox/ab1-result.png",
+      "bytes": 280735,
+      "sha256": "bd7c5979395debc4c9d28bf6fab31b2596924e4f9f26e9143fa49ae1beb0819b"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-firefox/ab1-export.svg",
+      "bytes": 35414,
+      "sha256": "263fad8f28de46356cb174f07b47200c44b2919fc98bf9fb579d6a62e1c0e456"
+    },
+    {
+      "path": "bio-tools-AB1-真实文件导入、定位、缩放、拖动、联动及三种实际导出-firefox/ab1-export.fasta",
+      "bytes": 1186,
+      "sha256": "5a468c6ae2b1671b628368234338142d72b0a97e917fff3f3a6d1f45a719deaa"
+    },
+    {
+      "path": "live-export-真实-SVG-下载与中文字体-chromium/chromium-chinese-serif.svg",
+      "bytes": 51782,
+      "sha256": "a5ff94138e66fa1431e916e32d0a076fad2fc6590312068e20677e6b990223d9"
+    },
+    {
+      "path": "live-analysis-rda-真实服务计算、失效结果和项目保留-chromium/rda.openacad.json",
+      "bytes": 8112,
+      "sha256": "db0cb216592c980aaa696301ade35c2803cb0c90a21db886672bc7dff6acf057"
+    },
+    {
+      "path": "bio-tools-KO-真实-KEGG-已知对应关系与实时获取时间-chromium/live-summary.txt",
+      "bytes": 122,
+      "sha256": "0c5d3dda08389bdbfc3ebcfdfde4c14a46b663348839f46d10862055e63aed65"
+    },
+    {
+      "path": "bio-tools-KO-真实-KEGG-已知对应关系与实时获取时间-chromium/ko-live.xlsx",
+      "bytes": 69535,
+      "sha256": "06df60fd01141f46d4824f19b056129185f467dfe3507469020939da9872b7e5"
+    },
+    {
+      "path": "workflow-模板库、详情、帮助与手机页面无横向溢出-chromium/catalog-desktop.png",
+      "bytes": 148167,
+      "sha256": "d5561c63aa6fe78128f5fe72dffc60710968f78517df2ccf4f6f77688b047666"
+    },
+    {
+      "path": "live-export-真实-EPS-下载与中文字体-mobile/mobile-chinese-serif.eps",
+      "bytes": 128352,
+      "sha256": "946b15acedff6d1c58212458b1a3b3d9594644631bc952a9b02819f120a5e979"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-mobile/ko-filtered.xlsx",
+      "bytes": 22438,
+      "sha256": "a9ff4945117fee5a618cc46b3438219d6426a1985c2151e0446b6941e6193cbf"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-mobile/ko-filtered.csv",
+      "bytes": 1122,
+      "sha256": "1f4e4023c31809cb694f5f33875f5a6af3b42635423dbb147fe31f8514fbfc38"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-mobile/ko-result.png",
+      "bytes": 812762,
+      "sha256": "ba949ae240747870ec33685072613bfe37ec49c36d48a933848d72046afdfedb"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-firefox/ko-filtered.xlsx",
+      "bytes": 22438,
+      "sha256": "7b04ddf6b90e51d232bbe087200d075204a76aff3dc20fead6f34cbf51399072"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-firefox/ko-filtered.csv",
+      "bytes": 1122,
+      "sha256": "1f4e4023c31809cb694f5f33875f5a6af3b42635423dbb147fe31f8514fbfc38"
+    },
+    {
+      "path": "bio-tools-KO-Excel列选择、部分失败重试、原行保留、筛选与实际导出-firefox/ko-result.png",
+      "bytes": 268158,
+      "sha256": "b49cc0f47b3725c1410a08bee78cb5e6d3fc0a7d4a78f3ca45bd8f99aa980641"
+    },
+    {
+      "path": "live-export-真实-PNG-下载与中文字体-chromium/chromium-chinese-serif.png",
+      "bytes": 46906,
+      "sha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25"
+    }
+  ]
+}

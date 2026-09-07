@@ -1,6 +1,43 @@
 # OpenAcad 正式发布记录
 
-状态：**2026-09-07（北京时间），1.0.2 正式交付，完整 Linux CI、正式域名功能与独立文件复验、实际回退／再升级演练全部通过。** 下方保留各历史版本的失败与修复过程，不将旧运行改写为本次证据。
+状态：**2026-09-07（北京时间），1.1.0 已正式上线。完整 Linux CI、正式域名功能验收、独立文件复验及实际回退／再升级演练通过。** 下方保留历史版本记录，不将旧运行改写为本次证据。
+
+## 1.1.0 发行与验收
+
+本次发布平台首页与导航、AB1 本地查看器、KO 转 pathway 信息表，以及公开参考站文案与报告入口清理。内部研究和验收记录保留；绘图项目 schema、计算白名单及既有统计服务兼容。
+
+- 正式入口：[首页](https://openacad.xyz)、[AB1 查看器](https://openacad.xyz/#bio/ab1)、[KO 转换器](https://openacad.xyz/#bio/ko)。
+- 前后端运行源码：`7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff`，发布分支 `codex/platform-home`。文档归档提交与运行源码分开记录。
+- 发行目录：`/opt/openacad/releases/1.1.0-7e68b5b`；镜像 `openacad-worker:1.1.0-7e68b5b`，Linux amd64。
+- CI config digest：`sha256:c2cc25af01a34b9f4f8f4609f953530efd18ecb168eb48107e7f09b83c147b35`。
+- 实际 containerd/OCI 根：`sha256:dbcd2de2f108dd8d8cd82bdf404a760c8c2b3b35b411380a082f13df3948c85d`。全部 RootFS 和运行配置核验通过，见[镜像加载核验](evidence/1.1.0/image/loaded-image-verification.json)。
+- 上一版 `1.0.2-4433576` 及对应镜像保留；不复用旧后端处理本次新增接口。
+
+| 检查 | 本次结果与证据 |
+|---|---|
+| 完整 Linux CI | [34119366158](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34119366158)：332前端单测、131浏览器用例、196后端、13发布工具回归通过；233浏览器用例按配置跳过、0失败。镜像内重复执行同一196项，不重复相加。[结构化摘要](evidence/1.1.0/ci-summary.json)。 |
+| 网页发行包 | 201441711字节；SHA `f3a255b187072a8b840015b134e38a53167d74c15aac44622285317a0eda7a95` 与GitHub一致。393个文件、368字体分片核验；5个示例文件SHA与源码一致。[准备报告](evidence/1.1.0/staged-web.json)。 |
+| 镜像传输 | [增量34120388279](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34120388279)绑定本次完整成功CI/源码。ZIP 148385951字节，SHA `8225fc2c863e6e5ed076ef4498acb7e51be7abdaaa37a389a40d8eb4d72bc2c5`；56成员全部核验后重组加载。[来源及准备](evidence/1.1.0/image/staging-report.json)。 |
+| 正式浏览器 | [完整结果](../../tests/artifacts/production-browser-1.1.0.json)：83通过、29跳过、0失败/不稳定，331秒；57份下载/截图另存[清单](../../tests/artifacts/production-browser-1.1.0-artifacts/manifest.json)。 |
+| 实际计算和独立导出 | [7项汇总](../../tests/artifacts/production-smoke-1.1.0/summary.json)：标准5项和粗斜PNG/PDF2项分别保留原报告，全部通过；没有POST重试。PCA重构误差5.329e-15，R LM与独立OLS在1e-10容差内一致。 |
+| 浏览器实际下载复验 | [8份结果](../../tests/artifacts/production-browser-1.1.0-artifacts/independent-export-verification.json)：SVG转曲结构、PNG像素、PDF/EPS独立解码通过；尺寸960×640或1500×1000，PDF真嵌入宋体Bold，墨迹不触边。 |
+| 正式HTTPS与移除入口 | [公网核验](evidence/1.1.0/public-final.json)确认1.1.0/完整源码和两worker；旧研究、验收URL返回SPA壳，不再发布旧报告，不将HTTP200写成报告仍存在。方法页实际确认相关文案与链接已移除。 |
+| 回退与恢复 | [1.1.0→1.0.2→1.1.0](evidence/1.1.0/version-rehearsal/report.json)成功；各步核对网页SHA、服务镜像/健康和维护标记。 |
+| 同机隔离 | [核对记录](evidence/1.1.0/isolation-verification.json)：10个其他应用容器的ID、镜像、启动时间保持一致；HTTPS Nginx配置SHA未变。 |
+
+83项生产浏览器的范围：生信25、首页12、轮播/目录17、通用绘图流程12、项目导航4、真实统计5、桌面/手机真实导出8。29项跳过为其他配置重复统计15、Firefox/WebKit服务导出8、非Chromium原生触摸6。KO部分失败和停止恢复有8项模拟响应测试；其余真实KEGG查询4项单独计数，不把模拟故障写成真实上游失败。
+
+AB1生产实际导入3730真实样例并逐字符核对序列；定位100位为G/Q50/PLOC1279，通道A0、C19、G651、T0，四色曲线与质量柱目视正确。KO正式查询K00001/K00844/K99999，分别8/18/0条PATHWAY；7行模拟原表展开63行，去重KO计数为有效3、匹配2、未匹配1，无效项1、空行1。匹配含map00010及实际分类，保留获取时间。[正式原始响应](evidence/1.1.0/kegg-production-response.json)、[人工浏览器核对](evidence/1.1.0/manual-browser.json)。
+
+本轮限制：KEGG为实时公开来源，结果随上游更新，最多6小时缓存；未进行大并发压测或多API进程限速验收，当前生产仅一个API进程。手机是390px浏览器模拟及Chromium原生触摸测试，未验实体设备。AB1仅核验明确来源的4份历史仪器样本，不支持重新base calling；生信数据不写入绘图项目，刷新前需导出。EPS透明效果可能含栅格。证书续期配置本次未修改，续期dry-run属于下方历史验证，不冒充本次执行。
+
+### 1.1.0 恢复命令
+
+```sh
+bash /opt/openacad/bin/update.sh /opt/openacad/releases/1.0.2-4433576
+# 已实际验证可重新升级：
+bash /opt/openacad/bin/update.sh /opt/openacad/releases/1.1.0-7e68b5b
+```
 
 ## 1.0.2 发行与验收
 
@@ -92,7 +129,7 @@
 
 导出只等待图内实际使用的字体、字重及文字；需要的字体失败时给出中文提示，30秒准备超时可取消，不再等待无关字体。提交POST之前即可取消；迟到的任务编号会触发删除，不继续轮询或下载。四项新增异常分支测试在本机、CI和生产页面均通过。1.0.1正常生产浏览器中，NMDS场景10.9秒，桌面四格式12.2～21.9秒，手机四格式12.1～14.9秒，包含页面加载、编辑及下载，不将其当成纯服务执行耗时。[完整生产运行](../../tests/artifacts/production-browser.json)。
 
-## 交付与保留限制
+## 历史：1.0.2 交付与保留限制
 
 55模板和52入口对照均有逐项证据；默认/变体/复杂样式、统计基准、树图层和项目往返各自列出方法，不将SSR属性审计写成逐控件浏览器实测。[验收索引](../acceptance/README.md)保留早期完整本地运行，后续生产21份实际下载和截图另存，原输入与图片SHA没有被新时间戳静默覆盖。
 

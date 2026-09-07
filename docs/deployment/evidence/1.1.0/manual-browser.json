@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-09-07T12:18:37.072475+00:00",
+  "origin": "https://openacad.xyz",
+  "scope": "Codex in-app browser manual verification",
+  "ab1": {
+    "sample": "3730.ab1",
+    "bases": 1165,
+    "position1Based": 100,
+    "base": "G",
+    "quality": 50,
+    "sampleIndex0Based": 1279,
+    "channels": {
+      "A": 0,
+      "C": 19,
+      "G": 651,
+      "T": 0
+    },
+    "fourColourTraceVisuallyInspected": true
+  },
+  "ko": {
+    "sample": "OpenAcad synthetic TSV; live KEGG lookup",
+    "inputRows": 7,
+    "distinctValidKo": 3,
+    "matchedKo": 2,
+    "unmatchedKo": 1,
+    "failedKo": 0,
+    "invalidItems": 1,
+    "emptyRows": 1,
+    "expandedRows": 63,
+    "knownPathway": "map00010",
+    "name": "Glycolysis / Gluconeogenesis",
+    "classification": "Metabolism; Carbohydrate metabolism",
+    "visibleFetchedAt": "2026/9/7 20:17:40"
+  },
+  "methodsPage": {
+    "chiPlotSentenceAbsent": true,
+    "publicResearchAndAcceptanceLinksAbsent": true
+  }
+}

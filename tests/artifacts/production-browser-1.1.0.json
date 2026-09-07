@@ -1,0 +1,4574 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/node_modules/.bin/playwright",
+      "test",
+      "e2e/bio-tools.spec.ts",
+      "e2e/platform-home.spec.ts",
+      "e2e/carousel-catalog.spec.ts",
+      "e2e/workflow.spec.ts",
+      "e2e/project-navigation.spec.ts",
+      "e2e/live-analysis.spec.ts",
+      "e2e/live-export.spec.ts",
+      "--output=/tmp/openacad-production-browser-1.1.0-artifacts",
+      "--reporter=list,json"
+    ],
+    "configFile": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/playwright.config.ts",
+    "rootDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/tmp/openacad-production-browser-1.1.0-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/tmp/openacad-production-browser-1.1.0-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/tmp/openacad-production-browser-1.1.0-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "/tmp/openacad-production-browser-1.1.0-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "bio-tools.spec.ts",
+      "file": "bio-tools.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "AB1 真实文件导入、定位、缩放、拖动、联动及三种实际导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6889,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:16:44.189Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-bd2bb9ac774508b874d6",
+          "file": "bio-tools.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "AB1 损坏文件、缺失质量字段与导航返回保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:16:51.359Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-01373c482894b4dddd0a",
+          "file": "bio-tools.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "KO Excel列选择、部分失败重试、原行保留、筛选与实际导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:16:58.948Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-015fddfd5b8c15b27f60",
+          "file": "bio-tools.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "KO 粘贴、CSV、TSV和空输入错误",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7419,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:05.338Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-113896009e53cb23e796",
+          "file": "bio-tools.spec.ts",
+          "line": 91,
+          "column": 1
+        },
+        {
+          "title": "KO 批次停止保留完成结果并可恢复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5849,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:12.762Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-b85b44a22f1a68359208",
+          "file": "bio-tools.spec.ts",
+          "line": 102,
+          "column": 1
+        },
+        {
+          "title": "AB1 手机原生触摸平移，竖向滑动保留页面滚动",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7673,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:18.617Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-65b82f40fc17e2a36ae4",
+          "file": "bio-tools.spec.ts",
+          "line": 117,
+          "column": 1
+        },
+        {
+          "title": "KO 真实 KEGG 已知对应关系与实时获取时间",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14003,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:26.294Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-78753b12b390d95a52b5",
+          "file": "bio-tools.spec.ts",
+          "line": 140,
+          "column": 1
+        },
+        {
+          "title": "AB1 真实文件导入、定位、缩放、拖动、联动及三种实际导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8648,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:20.309Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-695306c86c47dcb02d90",
+          "file": "bio-tools.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "AB1 损坏文件、缺失质量字段与导航返回保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 15853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:29.884Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-b4520c86eaaf3e071167",
+          "file": "bio-tools.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "KO Excel列选择、部分失败重试、原行保留、筛选与实际导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12004,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:45.742Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-4e0f9be20c485e952eb0",
+          "file": "bio-tools.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "KO 粘贴、CSV、TSV和空输入错误",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 10140,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:57.756Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-024f76021db45b68e6e7",
+          "file": "bio-tools.spec.ts",
+          "line": 91,
+          "column": 1
+        },
+        {
+          "title": "KO 批次停止保留完成结果并可恢复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:07.903Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-3311d55b5026ec394629",
+          "file": "bio-tools.spec.ts",
+          "line": 102,
+          "column": 1
+        },
+        {
+          "title": "AB1 手机原生触摸平移，竖向滑动保留页面滚动",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "原生触摸输入用 Chromium CDP；其他浏览器覆盖按钮、定位、滑块及拖动",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/bio-tools.spec.ts",
+                    "line": 118,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:14.449Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "原生触摸输入用 Chromium CDP；其他浏览器覆盖按钮、定位、滑块及拖动",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/bio-tools.spec.ts",
+                        "line": 118,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "3e52d82788d344dab053-855a4265a1fa7e21be2f",
+          "file": "bio-tools.spec.ts",
+          "line": 117,
+          "column": 1
+        },
+        {
+          "title": "KO 真实 KEGG 已知对应关系与实时获取时间",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 24767,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:14.453Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-87afcb758ac94dcaa7ac",
+          "file": "bio-tools.spec.ts",
+          "line": 140,
+          "column": 1
+        },
+        {
+          "title": "AB1 真实文件导入、定位、缩放、拖动、联动及三种实际导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6204,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:45.282Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-e2eebd53f8ecda86d9a9",
+          "file": "bio-tools.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "AB1 损坏文件、缺失质量字段与导航返回保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5273,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:51.949Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-a020572fbd2ce1e8585b",
+          "file": "bio-tools.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "KO Excel列选择、部分失败重试、原行保留、筛选与实际导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:57.226Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-fec3773ce62647da3bc7",
+          "file": "bio-tools.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "KO 粘贴、CSV、TSV和空输入错误",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4606,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:02.120Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-652ca449dc1b9a48a4d1",
+          "file": "bio-tools.spec.ts",
+          "line": 91,
+          "column": 1
+        },
+        {
+          "title": "KO 批次停止保留完成结果并可恢复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6185,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:06.730Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-7f7c5003bd6500d5c17f",
+          "file": "bio-tools.spec.ts",
+          "line": 102,
+          "column": 1
+        },
+        {
+          "title": "AB1 手机原生触摸平移，竖向滑动保留页面滚动",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "原生触摸输入用 Chromium CDP；其他浏览器覆盖按钮、定位、滑块及拖动",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/bio-tools.spec.ts",
+                    "line": 118,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:12.920Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "原生触摸输入用 Chromium CDP；其他浏览器覆盖按钮、定位、滑块及拖动",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/bio-tools.spec.ts",
+                        "line": 118,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "3e52d82788d344dab053-a90ffc02cfd037152dd6",
+          "file": "bio-tools.spec.ts",
+          "line": 117,
+          "column": 1
+        },
+        {
+          "title": "KO 真实 KEGG 已知对应关系与实时获取时间",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8137,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:12.925Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-aab94c0180206b8983c7",
+          "file": "bio-tools.spec.ts",
+          "line": 140,
+          "column": 1
+        },
+        {
+          "title": "AB1 真实文件导入、定位、缩放、拖动、联动及三种实际导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7507,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:41.665Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-f389c745afc6d7d2a361",
+          "file": "bio-tools.spec.ts",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "AB1 损坏文件、缺失质量字段与导航返回保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5573,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:49.338Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-bc962d05d03002b807d3",
+          "file": "bio-tools.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "KO Excel列选择、部分失败重试、原行保留、筛选与实际导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7368,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:54.916Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-4ed9bb3455a2d307cefe",
+          "file": "bio-tools.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "KO 粘贴、CSV、TSV和空输入错误",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6398,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:02.292Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-5b8b335d987683e25791",
+          "file": "bio-tools.spec.ts",
+          "line": 91,
+          "column": 1
+        },
+        {
+          "title": "KO 批次停止保留完成结果并可恢复",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5837,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:08.699Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-8287b3e421afb18b182a",
+          "file": "bio-tools.spec.ts",
+          "line": 102,
+          "column": 1
+        },
+        {
+          "title": "AB1 手机原生触摸平移，竖向滑动保留页面滚动",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "原生触摸输入用 Chromium CDP；其他浏览器覆盖按钮、定位、滑块及拖动",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/bio-tools.spec.ts",
+                    "line": 118,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:14.543Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "原生触摸输入用 Chromium CDP；其他浏览器覆盖按钮、定位、滑块及拖动",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/bio-tools.spec.ts",
+                        "line": 118,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "3e52d82788d344dab053-7e05568b73100ecc690d",
+          "file": "bio-tools.spec.ts",
+          "line": 117,
+          "column": 1
+        },
+        {
+          "title": "KO 真实 KEGG 已知对应关系与实时获取时间",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7862,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:14.548Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3e52d82788d344dab053-01fc08cf51e99752203a",
+          "file": "bio-tools.spec.ts",
+          "line": 140,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "carousel-catalog.spec.ts",
+      "file": "carousel-catalog.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "官网轮播支持手动循环、逐张来源及键盘切换",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6961,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:16:44.175Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-997e9c5c9f1455aed40c",
+          "file": "carousel-catalog.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7027,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:16:51.417Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-7e2e98b336b5a849e221",
+          "file": "carousel-catalog.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "减少动态效果时默认暂停，仍可手动选择截图",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7306,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:16:58.449Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-08ba71401ed4124ab825",
+          "file": "carousel-catalog.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "全部模板、分类和搜索共用分类导航顺序，网格按行阅读",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5972,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:05.759Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-35726fd89ca9f0cc5afe",
+          "file": "carousel-catalog.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "手机原生触摸：左右滑动切图不打开链接，竖向滑动仍滚动页面",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6740,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:11.748Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-77e5a43826e417f7d8c2",
+          "file": "carousel-catalog.spec.ts",
+          "line": 128,
+          "column": 1
+        },
+        {
+          "title": "官网轮播支持手动循环、逐张来源及键盘切换",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9339,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:41.982Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-2c9990255ca1bae949f6",
+          "file": "carousel-catalog.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7286,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:51.695Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-241c452d05b0f638a0d0",
+          "file": "carousel-catalog.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "减少动态效果时默认暂停，仍可手动选择截图",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9460,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:58.986Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-2e82059c348996c5c181",
+          "file": "carousel-catalog.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "全部模板、分类和搜索共用分类导航顺序，网格按行阅读",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8128,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:08.449Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-890e6406d5c62ab648d8",
+          "file": "carousel-catalog.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "手机原生触摸：左右滑动切图不打开链接，竖向滑动仍滚动页面",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "此项使用 Chromium 原生触摸输入；其余浏览器覆盖按钮、键盘、自动轮播和排序",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/carousel-catalog.spec.ts",
+                    "line": 129,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:16.581Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "此项使用 Chromium 原生触摸输入；其余浏览器覆盖按钮、键盘、自动轮播和排序",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/carousel-catalog.spec.ts",
+                        "line": 129,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-5575525df69216ad5d4e",
+          "file": "carousel-catalog.spec.ts",
+          "line": 128,
+          "column": 1
+        },
+        {
+          "title": "官网轮播支持手动循环、逐张来源及键盘切换",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7850,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:05.702Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-099ebb4720bdb42573bb",
+          "file": "carousel-catalog.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6562,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:13.699Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-c65116a2287dc1a69bae",
+          "file": "carousel-catalog.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "减少动态效果时默认暂停，仍可手动选择截图",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7017,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:20.267Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-6a2070988d256545c869",
+          "file": "carousel-catalog.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "全部模板、分类和搜索共用分类导航顺序，网格按行阅读",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6214,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:27.292Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-115dce97d05dc093bbbe",
+          "file": "carousel-catalog.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "手机原生触摸：左右滑动切图不打开链接，竖向滑动仍滚动页面",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "此项使用 Chromium 原生触摸输入；其余浏览器覆盖按钮、键盘、自动轮播和排序",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/carousel-catalog.spec.ts",
+                    "line": 129,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:33.512Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "此项使用 Chromium 原生触摸输入；其余浏览器覆盖按钮、键盘、自动轮播和排序",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/carousel-catalog.spec.ts",
+                        "line": 129,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-9eb3eb9cb1257371a26d",
+          "file": "carousel-catalog.spec.ts",
+          "line": 128,
+          "column": 1
+        },
+        {
+          "title": "官网轮播支持手动循环、逐张来源及键盘切换",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6825,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:06.936Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-39d83837f514b5de1948",
+          "file": "carousel-catalog.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8608,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:13.904Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-8e75530cc2e78a36526c",
+          "file": "carousel-catalog.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "减少动态效果时默认暂停，仍可手动选择截图",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7402,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:22.517Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-f296e860c6625654b7ae",
+          "file": "carousel-catalog.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "全部模板、分类和搜索共用分类导航顺序，网格按行阅读",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7114,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:29.923Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-15776b5e8a2da84f7a54",
+          "file": "carousel-catalog.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "手机原生触摸：左右滑动切图不打开链接，竖向滑动仍滚动页面",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "此项使用 Chromium 原生触摸输入；其余浏览器覆盖按钮、键盘、自动轮播和排序",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/carousel-catalog.spec.ts",
+                    "line": 129,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:37.041Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "此项使用 Chromium 原生触摸输入；其余浏览器覆盖按钮、键盘、自动轮播和排序",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/carousel-catalog.spec.ts",
+                        "line": 129,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "7881f8e27ae48490bb92-80146889e3b97860add9",
+          "file": "carousel-catalog.spec.ts",
+          "line": 128,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "live-analysis.spec.ts",
+      "file": "live-analysis.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5454,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:18.499Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-25f0b9208d3499c7aee3",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8257,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:23.957Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-f931feb3f9d493cdc428",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6152,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:32.219Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-b54c0b43fc97ffecdef2",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7549,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:38.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-bfbb3ed0e26d50fa18d5",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8135,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:45.927Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-54877021ef3919616926",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 124,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:16.593Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-eb54ea9877dd96ea57b0",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 123,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:16.721Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-2b52d317ece20cf4e49f",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 122,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:16.847Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-b495763ebfbac89047c5",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 397,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:16.974Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-e6fa053da5aaf979708f",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 236,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:17.376Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-d495a550be42050d7ff3",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 139,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:21.072Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-b6240c37c6a27e7bcfca",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 144,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:21.215Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-594e2138fc0a574f1046",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 139,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:21.363Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-acaff8403c4dd60d276d",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 146,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:21.507Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-ca1a9b391e6134ac8b7d",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 146,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:21.657Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-1fe12ec15b782436dea7",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 151,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:22.426Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-e610bb66ad89c2bb5930",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 130,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:22.583Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-610fe5149e02dd2110e0",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 128,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:22.718Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-cf8d5a88461852d63876",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 126,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:22.849Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-36f45145d2830b3db16e",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 131,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:22.981Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-263df5491400f88d46c1",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "live-export.spec.ts",
+      "file": "live-export.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8504,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:40.311Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-f887c30dd9fb97321c2c",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9522,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:48.820Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-363e758629269aa313b2",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7487,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:58.346Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-13b4c0d10c5639e7687e",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12865,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:05.839Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-1296b30181c42b1008ab",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 941,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:17.646Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-712ef5005195fd971e25",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 221,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:18.595Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-414f88a46a83eef0a6da",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 223,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:18.821Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-32a8a27af3a2d4deca61",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 239,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:19.049Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-a5dd17e580c8fbf84d31",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:21.810Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-f31da5023c05e9b56c2e",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 137,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:21.956Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-96f379c751f182a3db8b",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:22.096Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-e49c2444ca035c29837f",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 133,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:22.233Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-74fcaf12d6a27640f405",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8460,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:23.118Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-698948c7f64b80e79e7f",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7542,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:31.584Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-9fd25b2c54729d2501d2",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:39.130Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-87cb6c91b5f592139dc9",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7875,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:46.277Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-4606fb3d9ff06127e7f9",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "platform-home.spec.ts",
+      "file": "platform-home.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "平台首页呈现已上线绘图、独立图研入口和后续工具说明",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6763,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:17:54.073Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-9472d6c5e8af43169cf2",
+          "file": "platform-home.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "绘图直链保留模板库、模板详情与工作台导航状态",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5008,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:00.840Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-49a02a7dda4478a7190b",
+          "file": "platform-home.spec.ts",
+          "line": 88,
+          "column": 1
+        },
+        {
+          "title": "工作台经首页前进后退及本机草稿继续保留数据与样式",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7362,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:05.853Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-5ceaaf23627e64348e78",
+          "file": "platform-home.spec.ts",
+          "line": 112,
+          "column": 1
+        },
+        {
+          "title": "平台首页呈现已上线绘图、独立图研入口和后续工具说明",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8756,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:19.302Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-ae844386989e295eca7b",
+          "file": "platform-home.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "绘图直链保留模板库、模板详情与工作台导航状态",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6323,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:28.063Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-1c7c7c6e3cbc19bedbff",
+          "file": "platform-home.spec.ts",
+          "line": 88,
+          "column": 1
+        },
+        {
+          "title": "工作台经首页前进后退及本机草稿继续保留数据与样式",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7614,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:34.391Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-72cb871722224368cf8f",
+          "file": "platform-home.spec.ts",
+          "line": 112,
+          "column": 1
+        },
+        {
+          "title": "平台首页呈现已上线绘图、独立图研入口和后续工具说明",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5930,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:22.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-04e51928332bd84f531d",
+          "file": "platform-home.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "绘图直链保留模板库、模板详情与工作台导航状态",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6185,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:28.309Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-f98e69e9f6d7c597267c",
+          "file": "platform-home.spec.ts",
+          "line": 88,
+          "column": 1
+        },
+        {
+          "title": "工作台经首页前进后退及本机草稿继续保留数据与样式",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5806,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:34.498Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-7a3f0ae4ba5bfa1791a5",
+          "file": "platform-home.spec.ts",
+          "line": 112,
+          "column": 1
+        },
+        {
+          "title": "平台首页呈现已上线绘图、独立图研入口和后续工具说明",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6564,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:37.052Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-767b3629f07dd73dd632",
+          "file": "platform-home.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "绘图直链保留模板库、模板详情与工作台导航状态",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5093,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:43.619Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-01ccfb441a60d2b6c3b0",
+          "file": "platform-home.spec.ts",
+          "line": 88,
+          "column": 1
+        },
+        {
+          "title": "工作台经首页前进后退及本机草稿继续保留数据与样式",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5928,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:48.716Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "eecbe9d5cadf65db9ba5-7b2efc1d4f25da6c69c1",
+          "file": "platform-home.spec.ts",
+          "line": 112,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "project-navigation.spec.ts",
+      "file": "project-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "离开工作台再返回保留最新数据与样式",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6773,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:13.232Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77b2c39d0ca85af27f91-2f469e569d488c21d4be",
+          "file": "project-navigation.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "离开工作台再返回保留最新数据与样式",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:39.231Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77b2c39d0ca85af27f91-64dc21699882ff2a6869",
+          "file": "project-navigation.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "离开工作台再返回保留最新数据与样式",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7917,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:33.520Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77b2c39d0ca85af27f91-3e7316175f53f8804705",
+          "file": "project-navigation.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "离开工作台再返回保留最新数据与样式",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4774,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:54.165Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "77b2c39d0ca85af27f91-c90990cb3d0e012c6ab4",
+          "file": "project-navigation.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "workflow.spec.ts",
+      "file": "workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "从平台首页进入绘图、模板搜索、数据更换、错误定位、撤销和项目往返",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11080,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:18.717Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-2662adfa4f5591bc7bae",
+          "file": "workflow.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "样式修改、图层保存、SVG 实际下载",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5579,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:29.802Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-71ecdcf577cde5303919",
+          "file": "workflow.spec.ts",
+          "line": 84,
+          "column": 1
+        },
+        {
+          "title": "模板库、详情、帮助与手机页面无横向溢出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6366,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:18:35.384Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-ab8d51cd77fae78035cb",
+          "file": "workflow.spec.ts",
+          "line": 109,
+          "column": 1
+        },
+        {
+          "title": "从平台首页进入绘图、模板搜索、数据更换、错误定位、撤销和项目往返",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12002,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:42.015Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-066dff4fa2de4c6926a8",
+          "file": "workflow.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "样式修改、图层保存、SVG 实际下载",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5111,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:54.024Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-aab196c4bffecac7f13f",
+          "file": "workflow.spec.ts",
+          "line": 84,
+          "column": 1
+        },
+        {
+          "title": "模板库、详情、帮助与手机页面无横向溢出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6106,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:19:59.139Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-adcd45faf69c60720acd",
+          "file": "workflow.spec.ts",
+          "line": 109,
+          "column": 1
+        },
+        {
+          "title": "从平台首页进入绘图、模板搜索、数据更换、错误定位、撤销和项目往返",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 11668,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:40.312Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-ffbe2b31dff060838dcd",
+          "file": "workflow.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "样式修改、图层保存、SVG 实际下载",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 9828,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:20:51.984Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-8c052ffb118cfd809852",
+          "file": "workflow.spec.ts",
+          "line": 84,
+          "column": 1
+        },
+        {
+          "title": "模板库、详情、帮助与手机页面无横向溢出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4906,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:01.816Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-6c675c86c0aea777cf75",
+          "file": "workflow.spec.ts",
+          "line": 109,
+          "column": 1
+        },
+        {
+          "title": "从平台首页进入绘图、模板搜索、数据更换、错误定位、撤销和项目往返",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 11639,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:21:54.654Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-0d34306d87dff7c2ce12",
+          "file": "workflow.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "样式修改、图层保存、SVG 实际下载",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4113,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:22:06.299Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-f32098b313f4c969f2e7",
+          "file": "workflow.spec.ts",
+          "line": 84,
+          "column": 1
+        },
+        {
+          "title": "模板库、详情、帮助与手机页面无横向溢出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4521,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-07T12:22:10.415Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c601ceb5ecfc8efa4a14-53bdba88c0619953d411",
+          "file": "workflow.spec.ts",
+          "line": 109,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-07T12:16:43.943Z",
+    "duration": 331029.65499999997,
+    "expected": 83,
+    "skipped": 29,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

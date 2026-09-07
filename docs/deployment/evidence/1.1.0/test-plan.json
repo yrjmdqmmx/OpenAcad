@@ -1,0 +1,11 @@
+{
+  "source": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+  "baseUrl": "https://openacad.xyz",
+  "browserSpecs": ["bio-tools", "platform-home", "carousel-catalog", "workflow", "project-navigation", "live-analysis", "live-export"],
+  "projects": ["chromium", "firefox", "webkit", "mobile"],
+  "liveApi": true,
+  "syntheticDataOnly": true,
+  "productionSmokeTasks": 7,
+  "independentOpen": ["Poppler", "Ghostscript"],
+  "rollback": "1.1.0 -> 1.0.2 -> 1.1.0 with health/image/https checks"
+}

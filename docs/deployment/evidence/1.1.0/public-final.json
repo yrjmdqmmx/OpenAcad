@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-09-07T12:20:49.691256+00:00",
+  "version": {
+    "version": "1.1.0",
+    "revision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+    "builtAt": "2026-09-07T11:59:35.778Z"
+  },
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "服务正常"
+  },
+  "indexSha256": "1b1f3e88d8a8f1746ad2403f979b701fa5024087031e3317dee71f89c15acb1f",
+  "removedReportUrlsReturnAppShell": {
+    "/research/index.html": true,
+    "/acceptance/index.html": true
+  },
+  "oldReportsPublished": false,
+  "tlsVerified": true,
+  "koPathwayCounts": {
+    "K00001": 8,
+    "K00844": 18,
+    "K99999": 0
+  }
+}

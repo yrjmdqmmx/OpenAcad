@@ -1,0 +1,7 @@
+﻿原始行号,KO编号,pathway编号,pathway名称,分类,匹配状态,说明,对应关系来源,对应关系获取时间,分类来源,分类获取时间,原表[1]·gene,原表[2]·other,原表[3]·KO
+2,K00001,map00010,Glycolysis / Gluconeogenesis,Metabolism; Carbohydrate metabolism,已匹配,,https://rest.kegg.jp/get/ko:K00001,2026-09-07T11:00:00Z,,,a,12,K00001
+2,K00001,map00620,Pyruvate metabolism,,已匹配,,https://rest.kegg.jp/get/ko:K00001,2026-09-07T11:00:00Z,,,a,12,K00001
+3,K00001,map00010,Glycolysis / Gluconeogenesis,Metabolism; Carbohydrate metabolism,已匹配,,https://rest.kegg.jp/get/ko:K00001,2026-09-07T11:00:00Z,,,b,30,ko:K00001;K00844;K00001
+3,K00001,map00620,Pyruvate metabolism,,已匹配,,https://rest.kegg.jp/get/ko:K00001,2026-09-07T11:00:00Z,,,b,30,ko:K00001;K00844;K00001
+3,K00844,map00010,Glycolysis / Gluconeogenesis,Metabolism; Carbohydrate metabolism,已匹配,,https://rest.kegg.jp/get/ko:K00844,2026-09-07T11:00:00Z,,,b,30,ko:K00001;K00844;K00001
+3,K00844,map00620,Pyruvate metabolism,,已匹配,,https://rest.kegg.jp/get/ko:K00844,2026-09-07T11:00:00Z,,,b,30,ko:K00001;K00844;K00001

@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-07T12:19:25.735640+00:00",
+  "passed": true,
+  "otherContainersUnchanged": 10,
+  "current": "/opt/openacad/releases/1.1.0-7e68b5b",
+  "nginxSha256": "bd65504a823db428a0d94bc386d190cc485a0735d7f408c5f0c055c90c6220ad",
+  "maintenance": false,
+  "comparedFields": [
+    "name",
+    "id",
+    "imageId",
+    "startedAt",
+    "project"
+  ]
+}

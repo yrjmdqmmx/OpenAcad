@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-07T12:19:30.671637+00:00",
+  "complete": true,
+  "totalPassed": 7,
+  "sourceRevision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+  "standardReport": "report.json",
+  "typographyReport": "bold-oblique/report.json",
+  "cases": [
+    "pca",
+    "lm",
+    "png",
+    "pdf",
+    "eps",
+    "bold-oblique-png",
+    "bold-oblique-pdf"
+  ],
+  "transportRetries": []
+}

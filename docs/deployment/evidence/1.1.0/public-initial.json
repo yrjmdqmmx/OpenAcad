@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-09-07T12:15:45.328419+00:00",
+  "version": {
+    "version": "1.1.0",
+    "revision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+    "builtAt": "2026-09-07T11:59:35.778Z"
+  },
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "服务正常"
+  },
+  "bioHealth": {
+    "status": "ok",
+    "service": "OpenAcad 生物信息学查询",
+    "upstream": "https://rest.kegg.jp",
+    "note": "服务存活不代表 KEGG 当前可访问"
+  },
+  "tlsVerification": true
+}

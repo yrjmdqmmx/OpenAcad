@@ -1,0 +1,8 @@
+{
+  "checkedAt": "2026-09-07T12:01:36.033612+00:00",
+  "source": "https://rest.kegg.jp/get/ko:K00001+ko:K00844",
+  "status": 200,
+  "knownEntriesPresent": true,
+  "map00010Present": true,
+  "scope": "Existing production API container outbound network only, not new endpoint acceptance"
+}

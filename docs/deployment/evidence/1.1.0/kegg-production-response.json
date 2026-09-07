@@ -1,0 +1,215 @@
+{
+  "results": [
+    {
+      "ko": "K00001",
+      "status": "matched",
+      "pathways": [
+        {
+          "id": "map00010",
+          "name": "Glycolysis / Gluconeogenesis",
+          "classification": "Metabolism; Carbohydrate metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00071",
+          "name": "Fatty acid degradation",
+          "classification": "Metabolism; Lipid metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00350",
+          "name": "Tyrosine metabolism",
+          "classification": "Metabolism; Amino acid metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00620",
+          "name": "Pyruvate metabolism",
+          "classification": "Metabolism; Carbohydrate metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00830",
+          "name": "Retinol metabolism",
+          "classification": "Metabolism; Metabolism of cofactors and vitamins",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map01100",
+          "name": "Metabolic pathways",
+          "classification": "",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map01110",
+          "name": "Biosynthesis of secondary metabolites",
+          "classification": "",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map01120",
+          "name": "Microbial metabolism in diverse environments",
+          "classification": "",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        }
+      ],
+      "fetchedAt": "2026-09-07T12:17:40.152011+00:00",
+      "sourceUrl": "https://rest.kegg.jp/get/ko:K00001+ko:K00844+ko:K99999",
+      "message": ""
+    },
+    {
+      "ko": "K00844",
+      "status": "matched",
+      "pathways": [
+        {
+          "id": "map00010",
+          "name": "Glycolysis / Gluconeogenesis",
+          "classification": "Metabolism; Carbohydrate metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00051",
+          "name": "Fructose and mannose metabolism",
+          "classification": "Metabolism; Carbohydrate metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00052",
+          "name": "Galactose metabolism",
+          "classification": "Metabolism; Carbohydrate metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00500",
+          "name": "Starch and sucrose metabolism",
+          "classification": "Metabolism; Carbohydrate metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00520",
+          "name": "Amino sugar and nucleotide sugar metabolism",
+          "classification": "Metabolism; Glycan biosynthesis and metabolism",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00521",
+          "name": "Streptomycin biosynthesis",
+          "classification": "Metabolism; Biosynthesis of other secondary metabolites",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map00524",
+          "name": "Neomycin, kanamycin and gentamicin biosynthesis",
+          "classification": "Metabolism; Biosynthesis of other secondary metabolites",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00010+path:map00051+path:map00052+path:map00071+path:map00350+path:map00500+path:map00520+path:map00521+path:map00524+path:map00620",
+          "classFetchedAt": "2026-09-07T12:17:42.945404+00:00"
+        },
+        {
+          "id": "map01100",
+          "name": "Metabolic pathways",
+          "classification": "",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map01110",
+          "name": "Biosynthesis of secondary metabolites",
+          "classification": "",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map01120",
+          "name": "Microbial metabolism in diverse environments",
+          "classification": "",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map01200",
+          "name": "Carbon metabolism",
+          "classification": "",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map01250",
+          "name": "Biosynthesis of nucleotide sugars",
+          "classification": "",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map04066",
+          "name": "HIF-1 signaling pathway",
+          "classification": "Environmental Information Processing; Signal transduction",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map04910",
+          "name": "Insulin signaling pathway",
+          "classification": "Organismal Systems; Endocrine system",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map04930",
+          "name": "Type II diabetes mellitus",
+          "classification": "Human Diseases; Endocrine and metabolic disease",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map04973",
+          "name": "Carbohydrate digestion and absorption",
+          "classification": "Organismal Systems; Digestive system",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map00830+path:map01100+path:map01110+path:map01120+path:map01200+path:map01250+path:map04066+path:map04910+path:map04930+path:map04973",
+          "classFetchedAt": "2026-09-07T12:17:45.714396+00:00"
+        },
+        {
+          "id": "map05131",
+          "name": "Shigellosis",
+          "classification": "Human Diseases; Infectious disease: bacterial",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map05131+path:map05230",
+          "classFetchedAt": "2026-09-07T12:17:46.380086+00:00"
+        },
+        {
+          "id": "map05230",
+          "name": "Central carbon metabolism in cancer",
+          "classification": "Human Diseases; Cancer: overview",
+          "classSourceUrl": "https://rest.kegg.jp/get/path:map05131+path:map05230",
+          "classFetchedAt": "2026-09-07T12:17:46.380086+00:00"
+        }
+      ],
+      "fetchedAt": "2026-09-07T12:17:40.152011+00:00",
+      "sourceUrl": "https://rest.kegg.jp/get/ko:K00001+ko:K00844+ko:K99999",
+      "message": ""
+    },
+    {
+      "ko": "K99999",
+      "status": "unmatched",
+      "pathways": [],
+      "fetchedAt": "2026-09-07T12:17:40.152011+00:00",
+      "sourceUrl": "https://rest.kegg.jp/get/ko:K00001+ko:K00844+ko:K99999",
+      "message": "此次查询未返回此 KO 条目。"
+    }
+  ],
+  "warnings": [],
+  "source": "KEGG REST API · KO PATHWAY / pathway CLASS",
+  "cacheHours": 6
+}

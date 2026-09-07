@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-09-07T12:22:53.952055+00:00",
+  "passed": true,
+  "sourceRevision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+  "cases": [
+    {
+      "file": "live-export-真实-EPS-下载与中文字体-chromium/chromium-chinese-serif.eps",
+      "sha256": "d42bbfbe47a5b0001e625f117918c5e63ddb2fb0585e5ffc3439ac527fb04a9a",
+      "format": "eps",
+      "decoder": "Ghostscript",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          556
+        ],
+        "touchesPageEdge": false
+      },
+      "passed": true
+    },
+    {
+      "file": "live-export-真实-EPS-下载与中文字体-mobile/mobile-chinese-serif.eps",
+      "sha256": "946b15acedff6d1c58212458b1a3b3d9594644631bc952a9b02819f120a5e979",
+      "format": "eps",
+      "decoder": "Ghostscript",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          911,
+          556
+        ],
+        "touchesPageEdge": false
+      },
+      "passed": true
+    },
+    {
+      "file": "live-export-真实-PDF-下载与中文字体-chromium/chromium-chinese-serif.pdf",
+      "sha256": "0fe4a8905bc602da0e380caee2d599497dc5b05d485f76862971b462fb7faa50",
+      "format": "pdf",
+      "decoder": "Poppler",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          912,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCQDAFL+NotoSerifCJKsc-Bold           CID Type 0C       Identity-H       yes yes yes      7  0\nZAZLPD+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes     11  0\n",
+      "passed": true
+    },
+    {
+      "file": "live-export-真实-PDF-下载与中文字体-mobile/mobile-chinese-serif.pdf",
+      "sha256": "d9269c83ab7b753f9304a6ca34e3943a184a8da957415bc53e4bd1efe2fc1066",
+      "format": "pdf",
+      "decoder": "Poppler",
+      "pixels": {
+        "width": 960,
+        "height": 640,
+        "decoded": true,
+        "inkBounds": [
+          10,
+          13,
+          912,
+          555
+        ],
+        "touchesPageEdge": false
+      },
+      "fonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nCQDAFL+NotoSerifCJKsc-Bold           CID Type 0C       Identity-H       yes yes yes      7  0\nZAZLPD+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes     11  0\n",
+      "passed": true
+    },
+    {
+      "file": "live-export-真实-PNG-下载与中文字体-chromium/chromium-chinese-serif.png",
+      "sha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25",
+      "format": "png",
+      "pixels": {
+        "width": 1500,
+        "height": 1000,
+        "decoded": true,
+        "inkBounds": [
+          16,
+          21,
+          1424,
+          868
+        ],
+        "touchesPageEdge": false
+      },
+      "passed": true
+    },
+    {
+      "file": "live-export-真实-PNG-下载与中文字体-mobile/mobile-chinese-serif.png",
+      "sha256": "b78e79f78eeb07e7de78bae6d4e512ec8d63a91428b74ba893ffddbb362a3a25",
+      "format": "png",
+      "pixels": {
+        "width": 1500,
+        "height": 1000,
+        "decoded": true,
+        "inkBounds": [
+          16,
+          21,
+          1424,
+          868
+        ],
+        "touchesPageEdge": false
+      },
+      "passed": true
+    },
+    {
+      "file": "live-export-真实-SVG-下载与中文字体-chromium/chromium-chinese-serif.svg",
+      "sha256": "a5ff94138e66fa1431e916e32d0a076fad2fc6590312068e20677e6b990223d9",
+      "format": "svg",
+      "scope": "XML structure and outlined paths; exported SVG not separately rasterized",
+      "viewBox": "0 0 960 640",
+      "passed": true
+    },
+    {
+      "file": "live-export-真实-SVG-下载与中文字体-mobile/mobile-chinese-serif.svg",
+      "sha256": "a5ff94138e66fa1431e916e32d0a076fad2fc6590312068e20677e6b990223d9",
+      "format": "svg",
+      "scope": "XML structure and outlined paths; exported SVG not separately rasterized",
+      "viewBox": "0 0 960 640",
+      "passed": true
+    }
+  ]
+}

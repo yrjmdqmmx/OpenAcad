@@ -1,0 +1,26 @@
+{
+  "sourceRevision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+  "frontendUnit": {
+    "passed": 332,
+    "files": 11
+  },
+  "build": "passed",
+  "backendTargeted": {
+    "passed": 13,
+    "warnings": 2
+  },
+  "releaseTools": {
+    "passed": 13
+  },
+  "runtimeTools": {
+    "pdftoppm": true,
+    "pdffonts": true,
+    "ghostscript": true
+  },
+  "baseline": {
+    "release": "1.0.2-4433576",
+    "configSha256": "f3faafc3c1ee4d457c0dacea9b1436b5caa2268c9389ccfb4282a7ffdfc275b6",
+    "updaterSha256": "a46240f166d2bd224f2c028e93382a455efb72cc5beae5c7d9093a5405743095",
+    "matchesLocalFiles": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-09-07T12:18:59.879795+00:00",
+  "dataSource": "Standard deterministic PCA/LM simulated results with 700 italic typography",
+  "cases": [
+    {
+      "case": "bold-oblique-png",
+      "passed": true,
+      "validation": {
+        "bytes": 109513,
+        "sha256": "a201c7d9e1bc7c93818e31747f8438df32990f4599f71da5209d8549b4a1f182",
+        "width": 1500,
+        "height": 875,
+        "decoded": true,
+        "inkBounds": [
+          75,
+          34,
+          1437,
+          824
+        ],
+        "touchesPageEdge": false
+      }
+    },
+    {
+      "case": "bold-oblique-pdf",
+      "passed": true,
+      "validation": {
+        "bytes": 123779,
+        "sha256": "e113872b2fdfae547d5b882a7196ca13bf032edea00994274b503068b0d6295a",
+        "width": 960,
+        "height": 560,
+        "decoded": true,
+        "inkBounds": [
+          48,
+          21,
+          919,
+          527
+        ],
+        "touchesPageEdge": false,
+        "independentDecoder": "Poppler",
+        "fontInspection": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nERPEYN+OpenAcadNotoSansCJKsc-BoldOblique CID Type 0C       Identity-H       yes yes yes      7  0\nOYJBKH+OpenAcadNotoSerifCJKsc-BoldOblique CID Type 0C       Identity-H       yes yes yes      8  0\n"
+      }
+    }
+  ],
+  "complete": true,
+  "transportRetries": []
+}

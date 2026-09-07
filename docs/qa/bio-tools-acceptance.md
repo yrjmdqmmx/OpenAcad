@@ -1,5 +1,7 @@
 # OpenAcad 生物信息学工具本地验收
 
+本文件保留本地开发阶段的原始口径。后续 1.1.0 发布及正式域名验收另见[正式发布记录](../deployment/production-record.md)，不将以下历史记录改写成生产证据。
+
 日期：2026-09-07（Asia/Shanghai）。工作目录 `/Users/a1-6/Documents/ChatGPT/OpenAcad`，分支 `codex/platform-home`，基线提交 `4fc8d1215e87ce9194ee25c0e8dea75ef7169897`；验收对象包含当前未提交改动，不能称为该提交已具备新功能。保留交接中首页、轮播、目录等未提交工作；没有修改 PaperBanana/Tensor Auto，也没有发布。
 
 [参考站研究](../research/bio-tools-reference.md) 与本记录独立；[使用及启动说明](../bio-tools.md)。

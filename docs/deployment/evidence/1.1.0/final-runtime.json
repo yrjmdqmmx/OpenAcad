@@ -1,0 +1,28 @@
+{
+  "release": "/opt/openacad/releases/1.1.0-7e68b5b",
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "服务正常"
+  },
+  "containers": [
+    {
+      "name": "openacad-api-1",
+      "imageId": "sha256:dbcd2de2f108dd8d8cd82bdf404a760c8c2b3b35b411380a082f13df3948c85d",
+      "health": "healthy"
+    },
+    {
+      "name": "openacad-worker-one-1",
+      "imageId": "sha256:dbcd2de2f108dd8d8cd82bdf404a760c8c2b3b35b411380a082f13df3948c85d",
+      "health": "healthy"
+    },
+    {
+      "name": "openacad-worker-two-1",
+      "imageId": "sha256:dbcd2de2f108dd8d8cd82bdf404a760c8c2b3b35b411380a082f13df3948c85d",
+      "health": "healthy"
+    }
+  ],
+  "maintenance": false,
+  "checkedAt": "2026-09-07T12:24:55.763984+00:00"
+}
