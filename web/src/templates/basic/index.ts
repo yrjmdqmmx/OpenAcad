@@ -1789,3 +1789,19 @@ for (const t of basicTemplates.filter(
     0,
     "均值、SD、SE、分位数和误差区间为本地等价即时预览，尚不代表服务计算；在分析面板执行 NumPy/SciPy 描述统计可复核原始数据并保留方法版本。",
   );
+
+// Keep schema-v1 titles on the physical axis for new horizontal examples.
+for (const t of basicTemplates) {
+  if (t.defaultStyle.orientation === "horizontal" || ["raincloud", "ridgeline"].includes(t.id)) {
+    t.defaultStyle.xTitle = t.defaultStyle.yTitle || "数值";
+    t.defaultStyle.yTitle = "";
+  }
+}
+
+const comboTemplate = basicTemplates.find(t => t.id === "bar-line")!;
+comboTemplate.controls.push({key:"barLegend", label:"柱系列名称",type:"text",section:"图例"},{key:"lineLegend",label:"折线系列名称",type:"text",section:"图例"});
+
+// An optional numeric size column is required before this encoding is usable.
+for (const t of basicTemplates.filter(t => ["scatter", "scatter-grouped"].includes(t.id))) {
+  t.controls = t.controls.map(c => c.key === "sizeByValue" ? {...c, visible: p => p.dataset.tables.some(table => table.columns.includes("大小"))} : c);
+}

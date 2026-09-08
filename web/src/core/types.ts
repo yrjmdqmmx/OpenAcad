@@ -141,6 +141,8 @@ export interface Template {
     params?: Record<string, unknown>;
   }[];
   exampleAnalysis?: AnalysisState;
+  exampleLayout?: Record<string, unknown>;
+  exampleLayers?: Layer[];
   prepareAnalysis?: (
     method: string,
     dataset: Dataset,

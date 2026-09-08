@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { Template } from "../core/types";
-import { ResearchPlate } from "./ResearchPlate";
+import { ResearchCarousel } from "./ResearchCarousel";
 import { TuyanCarousel } from "./TuyanCarousel";
 import "../styles/home.css";
 
@@ -20,7 +20,7 @@ export function HomePage({ templates }: { templates: Template[] }) {
               <a className="platform-text-link" href="#projects">继续本机项目 <ArrowRight size={18} aria-hidden="true" /></a>
             </div>
           </div>
-          <ResearchPlate templates={templates} />
+          <ResearchCarousel />
         </section>
         <section className="drawing-workflow" aria-labelledby="drawing-title">
           <div className="drawing-heading">
@@ -55,9 +55,16 @@ export function HomePage({ templates }: { templates: Template[] }) {
               <h2 id="tuyan-title">图研 Tuyan</h2>
             </div>
             <p className="tuyan-editorial-title">让方法与思路，<br />也有清晰的图示。</p>
-            <p className="tuyan-description">将论文方法与图注转化为方法框架图、流程图和机制示意图，支持参考图辅助生成与文字指令精修。</p>
-            <a className="platform-text-link" href="https://www.paperbanana.asia/" target="_blank" rel="noopener noreferrer" aria-describedby="tuyan-destination">访问图研 Tuyan <ArrowUpRight size={18} aria-hidden="true" /></a>
-            <p id="tuyan-destination">www.paperbanana.asia · 在新窗口访问图研官网</p>
+            <p className="tuyan-description">将论文方法与图注，转化为清晰的科研图示。</p>
+            <dl className="tuyan-use-cases">
+              <div><dt>方法框架与流程</dt><dd>串联研究步骤，呈现实验设计与模型架构。</dd></div>
+              <div><dt>机制与关系示意</dt><dd>梳理作用路径，让复杂关系更容易读懂。</dd></div>
+              <div><dt>参考图辅助与精修</dt><dd>结合参考图生成，再用文字指令调整细节。</dd></div>
+            </dl>
+            <div className="tuyan-feature-action">
+              <a className="button tuyan-visit" href="https://www.paperbanana.asia/" target="_blank" rel="noopener noreferrer" aria-describedby="tuyan-destination">访问图研 Tuyan <ArrowUpRight size={18} aria-hidden="true" /></a>
+              <p id="tuyan-destination">www.paperbanana.asia · 在新窗口访问图研官网</p>
+            </div>
           </div>
           <TuyanCarousel />
         </section>

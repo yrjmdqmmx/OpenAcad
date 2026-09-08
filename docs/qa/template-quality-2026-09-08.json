@@ -1,0 +1,1568 @@
+{
+  "scope": "2026-09-07 to 2026-09-08 scientific-template P1/P2 local acceptance",
+  "baselineRevision": "092639666c0c2361ba107bd8b81120fb61ba0244",
+  "templateCount": 55,
+  "unitTests": {
+    "passed": 460,
+    "files": 13
+  },
+  "browserRegression": {
+    "latestPerCase": {
+      "skipped": 477,
+      "passed": 207
+    },
+    "note": "Four stale fixture assertions were updated and passed targeted retests in all four browser projects; original full run was not rerun wholesale."
+  },
+  "focusedControlAndLayoutCases": {
+    "passed": 24
+  },
+  "liveAnalysisMethods": [
+    "pca",
+    "pcoa",
+    "nmds",
+    "cca",
+    "rda"
+  ],
+  "downloads": {
+    "templates": 55,
+    "formats": [
+      "svg",
+      "png",
+      "pdf",
+      "eps"
+    ],
+    "files": 220,
+    "pngDpi": 150
+  },
+  "legacyProjects": [
+    {
+      "file": "audit-bar-20260907.openacad.json",
+      "preserved": true
+    },
+    {
+      "file": "audit-heatmap-20260907.openacad.json",
+      "preserved": true
+    },
+    {
+      "file": "audit-pca-result-20260907.openacad.json",
+      "preserved": true
+    },
+    {
+      "file": "audit-tree-20260907.openacad.json",
+      "preserved": true
+    }
+  ],
+  "manualLayoutRoundtripAndFourFormatExports": [
+    "pca",
+    "network"
+  ],
+  "limitations": [
+    "KEGG external live lookup not passed in this audit; bio tool functional mocks passed.",
+    "DPI/transparency/text-to-path/vector-editor combinations not exhaustively tested.",
+    "EPS transparency may use raster content; text SVG requires matching recipient fonts.",
+    "Local QA worker font alignment is not a production image release."
+  ],
+  "templates": [
+    {
+      "id": "bar-grouped",
+      "name": "分组柱状图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2871,
+          "sha256": "4ef6168065aced80a271312fa96be47ff402ffd57651536d7660b1356db5a04c"
+        },
+        "svg": {
+          "bytes": 10944,
+          "sha256": "9d0b3a27f3bf20e327279dab659190f22f240cf766c7a91d12d056549d6bc4e7"
+        },
+        "png": {
+          "bytes": 68092,
+          "sha256": "362b29a7ff65d1f5414cbba1efad0f1170850dccda07e4a68ae6d9909835ddeb"
+        },
+        "pdf": {
+          "bytes": 127692,
+          "sha256": "0e2fd4a5ae4f9332f3f84028a1b6079831c286c706ff156bb326ccf43b39bf18"
+        },
+        "eps": {
+          "bytes": 173652,
+          "sha256": "6d0ca573e8f718fc6d05719b750b10cc27586d252d7353353652d5abdbb7fd05"
+        }
+      }
+    },
+    {
+      "id": "scatter",
+      "name": "散点图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 6004,
+          "sha256": "07096e335b21111bc9d2c3bd6b2dc5f7c71e87431f9cb9eb1c3225b7dd978878"
+        },
+        "svg": {
+          "bytes": 25346,
+          "sha256": "4293b48d08fa03a8672586fa05566d955699a6b10787bf762877e9c3c1268052"
+        },
+        "png": {
+          "bytes": 139433,
+          "sha256": "63f4299893950def21cef183e5c6227e0fcd6496cfd2097555ae8e7990be1059"
+        },
+        "pdf": {
+          "bytes": 140681,
+          "sha256": "b8e48ca14cfec334c75ae243ddba190e4a6633bc80872fc9aa663270dee92656"
+        },
+        "eps": {
+          "bytes": 310493,
+          "sha256": "13d99090c8e829b6ca3368f79d8efaaa06bfa649f3ec317b7d3a6680e60c247b"
+        }
+      }
+    },
+    {
+      "id": "line",
+      "name": "折线图与分组折线图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3178,
+          "sha256": "5581b1b242b0c83014df4ad2b0549d11212d24e72017a6a35b1428e2fd7a0c71"
+        },
+        "svg": {
+          "bytes": 14066,
+          "sha256": "dc91701384961d1699037764096703b8125b057578c39ea38abec3301fa5c3df"
+        },
+        "png": {
+          "bytes": 103658,
+          "sha256": "015e02ca16e13365a07368d08e3413827e9022d3a002afc7c03f663056b71c0a"
+        },
+        "pdf": {
+          "bytes": 127352,
+          "sha256": "f89c1b56c15ae83aa2fdf14481cfc758f1251f13b3b5b736e345e248fe2d643d"
+        },
+        "eps": {
+          "bytes": 220057,
+          "sha256": "23b16f66df8e612aaa650ea3552fab384c6e017f87eb09523ffcea51ce290cfd"
+        }
+      }
+    },
+    {
+      "id": "heatmap",
+      "name": "数值热图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3306,
+          "sha256": "ee531cad7ac51c365bcc5732019ea69e858d594a51c68286a91503cb111aa8e9"
+        },
+        "svg": {
+          "bytes": 27174,
+          "sha256": "26dcef0e892f59117f05f56b5144d285b7a4f0f1a0f43515f2c00d628529a95d"
+        },
+        "png": {
+          "bytes": 42991,
+          "sha256": "aaa4a2086f4dad7c9942f030b6138d61b268a0d71699aec1bcba48a5fb6bf261"
+        },
+        "pdf": {
+          "bytes": 115616,
+          "sha256": "26c2f15dc4bb8cd80a73f248f204695b47904089c3a008e8ce726140021719b3"
+        },
+        "eps": {
+          "bytes": 39806,
+          "sha256": "2a78889f477888522ae490d52199c7ebe7554e62322dabfb8ee440b0bb285981"
+        }
+      }
+    },
+    {
+      "id": "box",
+      "name": "箱线图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 7067,
+          "sha256": "712c50b5297bca87ba9007c4621021197768bb1dc72f8f234cec81fc29581f24"
+        },
+        "svg": {
+          "bytes": 13257,
+          "sha256": "fcbbbee8d425e3cc53ea055a8f21a7d5d80ecf573e23730c8a8922a206201d55"
+        },
+        "png": {
+          "bytes": 74714,
+          "sha256": "52a258c1dc69124c5d3ef555d0bbcb0f5346953f110dedb4865a19f5dd142786"
+        },
+        "pdf": {
+          "bytes": 153736,
+          "sha256": "36e66724bb7a25e2ddc2939fbfcdc55e24b362cd4c25a32efab3d0d8e1031db0"
+        },
+        "eps": {
+          "bytes": 155607,
+          "sha256": "0e18a06a39203d95ededebb0fc6474267e1702438c5b31360184d2715a722f9c"
+        }
+      }
+    },
+    {
+      "id": "pie",
+      "name": "饼图与环图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2406,
+          "sha256": "7803d260193afb19d1661abf2c2c5b91f72dd810e4b792ccdfa64484541ba735"
+        },
+        "svg": {
+          "bytes": 3497,
+          "sha256": "1aecdba2cfbb03abf288fbe97a68db7196001726c4ec8e66187e4cf472b69458"
+        },
+        "png": {
+          "bytes": 79211,
+          "sha256": "1666046be7e620a251e56cfa51e7123f3d54931bb35ad87b024023bc5b78dad4"
+        },
+        "pdf": {
+          "bytes": 119337,
+          "sha256": "52a1b12e0b543c61369f5e442c837aac484e0fbfd76081b6a343cb8ed7ce6f70"
+        },
+        "eps": {
+          "bytes": 151695,
+          "sha256": "43c5509c2747ebfd3358ad673b507c88f609514951aa8f0cee50b7c5a804a3ee"
+        }
+      }
+    },
+    {
+      "id": "bar",
+      "name": "柱状图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2353,
+          "sha256": "0c2a97366942af1db15221972cb50caa670d7444db394c4bef45c280220cdc1c"
+        },
+        "svg": {
+          "bytes": 8357,
+          "sha256": "d52f3bf93f7ac5145f6589704da2b42eea18eae7410ced960f6b3167bca3f70d"
+        },
+        "png": {
+          "bytes": 55249,
+          "sha256": "4ee8df27d7cd3ed7453839f9e11af0bf4e4ced49cce8c00d881fcaef65056e2e"
+        },
+        "pdf": {
+          "bytes": 123156,
+          "sha256": "7cc3922cbe23a7c716cd94afc23fa4acaae0afde6d18546632e3cb2e17efbf5b"
+        },
+        "eps": {
+          "bytes": 145510,
+          "sha256": "825ec8a57e807e3931c5790d4509b64870f48ccc6397f930fc78123abc56d9a9"
+        }
+      }
+    },
+    {
+      "id": "bar-category",
+      "name": "分类柱状图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2756,
+          "sha256": "f8be70989cd6d45afdb90a8903b99a68d28c464377fc9bbbd05f054e0148f634"
+        },
+        "svg": {
+          "bytes": 11105,
+          "sha256": "17d94dadac7ea75a17a617c701919ba5dae4e3dca03cee3f160a883df5253b86"
+        },
+        "png": {
+          "bytes": 83286,
+          "sha256": "8e4ac47c5cc50b237cddc786d6cc85418cf6f9e3a4c2c590e74464fd28b4af6c"
+        },
+        "pdf": {
+          "bytes": 132885,
+          "sha256": "0677bbc70fbbd8e50f5e0f899b0b94e9cc397de488a9c1d9d882478d90e31e7e"
+        },
+        "eps": {
+          "bytes": 202789,
+          "sha256": "59507cb8cb602977868e6ba5ad2910b7abc42fce2ceb330fbe49ab99fda5444d"
+        }
+      }
+    },
+    {
+      "id": "bar-error",
+      "name": "误差柱状图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 7079,
+          "sha256": "5cb3504d0e32f24db7b863e96c3224db4496c6bc8a9e34deec17ec144302113b"
+        },
+        "svg": {
+          "bytes": 13029,
+          "sha256": "efc80c96700127a09ef3fcaa5a42df2b55a31413b75876d86e1a3f80af781dfb"
+        },
+        "png": {
+          "bytes": 76084,
+          "sha256": "9b1c30b7aa329668bc8fcf5b1a1ee861a3774aa288420e73a8cad0583d7642d0"
+        },
+        "pdf": {
+          "bytes": 159870,
+          "sha256": "d0ccc84609fe5d145c555f107469d5c7ce5c1878782fa7bafe61515437670d30"
+        },
+        "eps": {
+          "bytes": 169512,
+          "sha256": "ea57ea4c8ddf54e59bb2e843b40f2d24894dfd9d2386f6ff45b8db288e4f360c"
+        }
+      }
+    },
+    {
+      "id": "bar-grouped-error",
+      "name": "分组误差柱状图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 14749,
+          "sha256": "2168810d6201309f38fa5f80929a6295cd7c1733b321d19a2f9a2b60c5e113c7"
+        },
+        "svg": {
+          "bytes": 21577,
+          "sha256": "ddcb2e41f7e385d39dc0c2ba27562267093b6923f30941837debbe3ee4baa594"
+        },
+        "png": {
+          "bytes": 94832,
+          "sha256": "5499bf9c263cb01f450106fa03c1360f83d56a75262af398b752c1e0aecad9de"
+        },
+        "pdf": {
+          "bytes": 195987,
+          "sha256": "39e9f06a6b63e67bc1e0c74611211b648a10401a94d5b678575f97ff268f456b"
+        },
+        "eps": {
+          "bytes": 212453,
+          "sha256": "4b4656982ec8363eda0fa3891a7747610d6cb4f6acedc02dab9d67b0a0c82666"
+        }
+      }
+    },
+    {
+      "id": "scatter-error",
+      "name": "散点误差图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 7116,
+          "sha256": "ca7008023b85bcab89bb07349f581f87ec99964270bd7bf600ee662cb0a2b220"
+        },
+        "svg": {
+          "bytes": 13987,
+          "sha256": "1d7e24510b43306682e8c3b77510a852f2fa1e123a00e74c2ae91b62b5ac80da"
+        },
+        "png": {
+          "bytes": 80008,
+          "sha256": "673eab97a87d7f5d67eb4bba90a6624752acf3e55eb3c779ff304eba28d04dd6"
+        },
+        "pdf": {
+          "bytes": 161661,
+          "sha256": "27b5356e1fd71583c2fa402402ee00e8787ce0f297756dc902efb2f772d0e29d"
+        },
+        "eps": {
+          "bytes": 159333,
+          "sha256": "b5cbb6bf0c4638586be46c51f168d3cf9f858c70c3264cdba0905cfdc91d0a1f"
+        }
+      }
+    },
+    {
+      "id": "bar-stacked",
+      "name": "堆叠柱状图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3206,
+          "sha256": "487ae7ff140ed2566967cf8bc0663fd507b5a60a0bcba4235aeb7b3b2d5611cf"
+        },
+        "svg": {
+          "bytes": 13139,
+          "sha256": "d435e7c85eedcff6e7afa25401bc713aa826dbd8d038d6e69f48ede6f010b5ff"
+        },
+        "png": {
+          "bytes": 77691,
+          "sha256": "ef3b9b7db92a094e21e66dccec9a17b7a4e2c1009dde0a76bcdafc52e193441f"
+        },
+        "pdf": {
+          "bytes": 132631,
+          "sha256": "22ac549f79619e2ce216da713916efed6a4a00127e4ae757aa0cfe717e7c81db"
+        },
+        "eps": {
+          "bytes": 191708,
+          "sha256": "c17ab0718602cf088df086c9a09c4d9d69fed6595b239e5b66fea0d5de3b8399"
+        }
+      }
+    },
+    {
+      "id": "bar-grouped-stacked",
+      "name": "分组堆叠柱状图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 5068,
+          "sha256": "c87a564a74e4455f7b1019cabc3fbafb6231f9b6b0044d0880e507199e68a8d8"
+        },
+        "svg": {
+          "bytes": 22520,
+          "sha256": "c93cfdf778056e74b896889daa4e5d948e26b153be549319aea30edacf32f5d9"
+        },
+        "png": {
+          "bytes": 107690,
+          "sha256": "0e4c46b05eb4b9958addfbb82dca3e0a1c8d1583f5138c246aba788167692bc2"
+        },
+        "pdf": {
+          "bytes": 142183,
+          "sha256": "78f89d8038be161454663f13c171653fe2cc1c2a6c75ed3189d394261de3295a"
+        },
+        "eps": {
+          "bytes": 278552,
+          "sha256": "d17a3528e5974308bdc9c3cf0aa2821a36addeae383fabec95afd108e0cd659b"
+        }
+      }
+    },
+    {
+      "id": "bar-line",
+      "name": "柱状图与折线组合",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2706,
+          "sha256": "9569c7d7701ccb84625246e50f1c62dd98bee388e663f24ee3f74c4cb39f87a7"
+        },
+        "svg": {
+          "bytes": 11233,
+          "sha256": "601ef7938fa0e5aace0359832b3848be1411de89661c8e216e82d182177e687d"
+        },
+        "png": {
+          "bytes": 88628,
+          "sha256": "2cb08830d57e0c5046c3c77e39faad0951fb81e18a76f95537d536a047309bed"
+        },
+        "pdf": {
+          "bytes": 126946,
+          "sha256": "8d468fa65f03e8d1bec398db7e5f4ff9d34a2eb522a6f5b0ef09a263ec623517"
+        },
+        "eps": {
+          "bytes": 209314,
+          "sha256": "f20d7fb520b916a50591418a086b132ac0cab7df02f9ac2d481d9196cf700b8f"
+        }
+      }
+    },
+    {
+      "id": "lollipop",
+      "name": "棒棒糖图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2361,
+          "sha256": "6318d8c057b99359abd88461195773e7c680cdd22b3eebcf974a4c0ea50ed331"
+        },
+        "svg": {
+          "bytes": 8799,
+          "sha256": "66b7a67e1b257c7ac2207f25b7fb808f3f6ed2bfa19c8ef39d5c0bd34627ea2c"
+        },
+        "png": {
+          "bytes": 56849,
+          "sha256": "66afef3e47e34cb5f752ccd1bfcf2636ac02ac6ce3b23b8ef5ca988ae42faa72"
+        },
+        "pdf": {
+          "bytes": 123386,
+          "sha256": "69fdd94aafabe8277dc61aecf9fa346f45327ece499b1209534c186cde7bc0c4"
+        },
+        "eps": {
+          "bytes": 134386,
+          "sha256": "33de0657cd655890478b889697373f5141c22a8de420f5668e8b632307d64f9d"
+        }
+      }
+    },
+    {
+      "id": "lollipop-category",
+      "name": "分类棒棒糖图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2764,
+          "sha256": "c0fd7be07c9fce2e5467b723d6fbfa617cd3094ee55b45dd5c286617482be51f"
+        },
+        "svg": {
+          "bytes": 11757,
+          "sha256": "cf5ef1919041c07739eebd36b8450c77564489d7977a550e530b1d099c136958"
+        },
+        "png": {
+          "bytes": 85373,
+          "sha256": "2ecc804897964f54f4b41da5cb0cb712c1da08e3e0a8c2390caec6f7a61f5abb"
+        },
+        "pdf": {
+          "bytes": 133161,
+          "sha256": "c7c6705ef720a183fb0089297a74d7b362cae72c9b65edd0e89f55bf2b45d372"
+        },
+        "eps": {
+          "bytes": 192085,
+          "sha256": "73a16537c96696dff35766899050c41c74c9d8cc8546d851f2b5cbf6f203323a"
+        }
+      }
+    },
+    {
+      "id": "line-error",
+      "name": "分组误差折线图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 10064,
+          "sha256": "e9d75684e03115c6b9a00d11eb5b1285ea3b653bcea12f256957ef26e281066b"
+        },
+        "svg": {
+          "bytes": 16970,
+          "sha256": "d34811be764632a8bc3646b9b5542a6606a02e542b91e07614604b34567e282b"
+        },
+        "png": {
+          "bytes": 112590,
+          "sha256": "175d4e0b4b5b4a4fb19d075e06e878bfa2dbbed5c957147af5deb57041b7cbce"
+        },
+        "pdf": {
+          "bytes": 134448,
+          "sha256": "1f5ea751d0928caa0573c8915759f89b71a693bcc5fb7d5305ad435462672231"
+        },
+        "eps": {
+          "bytes": 230593,
+          "sha256": "92760e23e5a3266fb91494e34db63f5621ae6fec148df6aa23831c3b22360021"
+        }
+      }
+    },
+    {
+      "id": "box-grouped",
+      "name": "分组箱线图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 14737,
+          "sha256": "563b5e2a632b89c5fc888925d1423969b2e82239f20583e5b0c5481c1c73360b"
+        },
+        "svg": {
+          "bytes": 20903,
+          "sha256": "7909c698da8b986539cc88bc93436e9cb47101287156ed3c654a6f4966f0e00a"
+        },
+        "png": {
+          "bytes": 91249,
+          "sha256": "4510e4c08dbc277b559b3d06b655b2f9dca1da1ec71416e402616f5922d9723d"
+        },
+        "pdf": {
+          "bytes": 186893,
+          "sha256": "98326f49f31446ff62a19e6b47565bc77cff4e447fd50f90d21b2506e3105ab6"
+        },
+        "eps": {
+          "bytes": 192807,
+          "sha256": "5307d9a2884b1e64fd0c6395ecd4cde427e0316cebe8b23f9bb386afa6dae359"
+        }
+      }
+    },
+    {
+      "id": "violin",
+      "name": "小提琴图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 13214,
+          "sha256": "dcbda67585fd623f053dee74dbf251996a7fa9b1b0e1022d0651b8a44f4be771"
+        },
+        "svg": {
+          "bytes": 164621,
+          "sha256": "5fd9f70390c0ba33f42cc80ec0ee0a53fdfe1c49a0fcc600a7916831e2483498"
+        },
+        "png": {
+          "bytes": 99140,
+          "sha256": "c4b434abfc90a605fb71485bf2728655acf817cfe859d92ab1a3c4621d19208a"
+        },
+        "pdf": {
+          "bytes": 248197,
+          "sha256": "37c4046c667a072af5478c278719dd7277505d8003001aae44c3ec73e326166d"
+        },
+        "eps": {
+          "bytes": 211278,
+          "sha256": "24780210f91665726d4d7d8d7511cac2eb11c760ed9899fa0b8953c0d9d7e93f"
+        }
+      }
+    },
+    {
+      "id": "raincloud",
+      "name": "云雨图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 13216,
+          "sha256": "9c6ff13ead1e6eafad93546919c4e44b5d2bd0b63be1dd4d377c9c4d7b97a81a"
+        },
+        "svg": {
+          "bytes": 159107,
+          "sha256": "79dc9fc83daabcabde467a06165090f3bed1cbf9a4311ece59f94daab4975021"
+        },
+        "png": {
+          "bytes": 89729,
+          "sha256": "16c78b802c0b4ddb695ca92092947a6f91effc0129efb4c70587e1860c805bf7"
+        },
+        "pdf": {
+          "bytes": 239203,
+          "sha256": "8b4ed3c6c92383572d26f15f3d4f788f0adc0491b340956edb640ee453046b1a"
+        },
+        "eps": {
+          "bytes": 225220,
+          "sha256": "a902d335bbaeae00f438aaae17524b19c294e8842b48da6419db0f05105d1152"
+        }
+      }
+    },
+    {
+      "id": "ridgeline",
+      "name": "峰峦图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 13218,
+          "sha256": "f58e2f04567337f5d2d2b167a9aed4d5e58005f149978b2fcfd2676fbe81e4f8"
+        },
+        "svg": {
+          "bytes": 145465,
+          "sha256": "11cd0053c53bb060562c80530be94dfd3884e6ad779ee58f72eec226a46b5a15"
+        },
+        "png": {
+          "bytes": 74197,
+          "sha256": "07f8206251c8fbb6476619dd8002890a73ed831529aa46e043b17a76080b64ac"
+        },
+        "pdf": {
+          "bytes": 170251,
+          "sha256": "209aac5fbfa2b62b8195a7fc89670abd6f617e4c8be33ffb4a8212f7385e1866"
+        },
+        "eps": {
+          "bytes": 192931,
+          "sha256": "a18c7e029e5d55f4ab59ad763d474e26a1ed3a5f6c206154a6296b782c15dd2f"
+        }
+      }
+    },
+    {
+      "id": "upset",
+      "name": "UpSet 集合交集图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 14849,
+          "sha256": "5119415f82ebedf9ea3c6de08356aa37da927134976e0930af8857e32ca42955"
+        },
+        "svg": {
+          "bytes": 11934,
+          "sha256": "09a3771c2a9d76bc121e4365f44feab035b78c680279b675d7982ee0d509c675"
+        },
+        "png": {
+          "bytes": 80047,
+          "sha256": "bbadb5f8aeec5293cd25f311cd97a5a156930c980bb7e96a056ee28a97fd2e9d"
+        },
+        "pdf": {
+          "bytes": 129189,
+          "sha256": "4659eec3777603e24399c5e79d6aa578b246ceff22b01746f1ac6ab72d8d2011"
+        },
+        "eps": {
+          "bytes": 170389,
+          "sha256": "48db1386b644773d06a9ba107bb3cc52abe958a48106c361dd254b37af632414"
+        }
+      }
+    },
+    {
+      "id": "rose",
+      "name": "玫瑰图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2589,
+          "sha256": "0672c6fdbe1316cc782eac2d8934ad9ed3c82502b453c71801cdf6cbfa88147c"
+        },
+        "svg": {
+          "bytes": 6316,
+          "sha256": "4766c2f5e419fb85b9494d416a5782532abfbb31f2765c1182322789c9a90413"
+        },
+        "png": {
+          "bytes": 91957,
+          "sha256": "c62354ec2828b1682fd9ec4a34709fdd9ab1457b9545f81e533a5dc7daf760bf"
+        },
+        "pdf": {
+          "bytes": 121815,
+          "sha256": "bdf127b90c92fc415f29ad5f9219c13a8c9fe66ccae67f23034ac58313f024f9"
+        },
+        "eps": {
+          "bytes": 186890,
+          "sha256": "71b00152b7f3197c9aecf41679ea54a268e59b93fd8ef17d480ced5b59a86246"
+        }
+      }
+    },
+    {
+      "id": "radar",
+      "name": "雷达图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3151,
+          "sha256": "ecc0e895b9598ab18a17678c1e380df9e71aad82ef788542c782d095569ee37f"
+        },
+        "svg": {
+          "bytes": 7917,
+          "sha256": "64e1dd7b36c1eae47f52d2e774feb80d20ac2e6d9f0586cc1962cff4b26b3708"
+        },
+        "png": {
+          "bytes": 133400,
+          "sha256": "dae25a859b79b10a27df4f0c1f1e63d7b54af49b66b58a6378fa7e0c26e4dccb"
+        },
+        "pdf": {
+          "bytes": 134037,
+          "sha256": "7d8e8b22609e7d4b0576141e54e3bf63655decd7ad31d4282c2d2637a02bde18"
+        },
+        "eps": {
+          "bytes": 280535,
+          "sha256": "7bbfaa6dd52e9b340cf99baf35502faa397380143ef50981eb13dee4d955f170"
+        }
+      }
+    },
+    {
+      "id": "dumbbell",
+      "name": "哑铃图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2618,
+          "sha256": "be608cb64b3cc234490a2c84f7cdbfe9b858398da5b159e197a516b0211e7bb3"
+        },
+        "svg": {
+          "bytes": 13318,
+          "sha256": "4705cdaac219f3aa6a564d9143172ccba052b842c6870c154d77680bbc1144ae"
+        },
+        "png": {
+          "bytes": 81776,
+          "sha256": "bb9c3bb2e0d3d6d99dc389aa2532f6cde760c87905db408d03c3498d59e48067"
+        },
+        "pdf": {
+          "bytes": 128750,
+          "sha256": "bc6732d9bc64831a736bca215ef8195a2f189c835648f37be338b2cbe11d667d"
+        },
+        "eps": {
+          "bytes": 200570,
+          "sha256": "33812f9a2f65303899ec5f8df48cf7fc0568a9a346d94214732599aa9ec13146"
+        }
+      }
+    },
+    {
+      "id": "scatter-grouped",
+      "name": "分组散点图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 6830,
+          "sha256": "721caa754190edf98f30dd8daa8619ab76cb00f398c553d5e9a11e11f813d091"
+        },
+        "svg": {
+          "bytes": 25951,
+          "sha256": "9971b69398c0d87994594f909b323a582bab3144dd31d04db30d291104e7414d"
+        },
+        "png": {
+          "bytes": 139827,
+          "sha256": "266a8e8b85d09f94c8b3f2cfd290ca2cc86dafb31fcbf3868cd6c39a7e4f775d"
+        },
+        "pdf": {
+          "bytes": 142983,
+          "sha256": "5eeb3bc2a053de01bcdf8c7332f4ecde8428c1521e91cc5cf21cc5255287b1ba"
+        },
+        "eps": {
+          "bytes": 312951,
+          "sha256": "56496fa44b304a7b4e2326bd92124007c371dd602ff321be8b8520ca73236813"
+        }
+      }
+    },
+    {
+      "id": "circle-heatmap",
+      "name": "圈形热图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3314,
+          "sha256": "92a149c8073a60412e06cdce130949eb5ab9f57408b235e595bf878bf6f3d049"
+        },
+        "svg": {
+          "bytes": 37186,
+          "sha256": "5847c4c31b9e04434147c1564be349b9f0ff54032c6fa2891bf762424124ad7d"
+        },
+        "png": {
+          "bytes": 230031,
+          "sha256": "638be533b8dac2f6f37f6904bd693507db193c52c5ba7af815729278cc9ab67e"
+        },
+        "pdf": {
+          "bytes": 127282,
+          "sha256": "a306941de19520a779664747193a8e7f1bc106853ab40c50d9ced64395fa6415"
+        },
+        "eps": {
+          "bytes": 66838,
+          "sha256": "5cf054cfeeee70b8cf4379d21244ebf1a4ab91dc718524229496cec8851a51b3"
+        }
+      }
+    },
+    {
+      "id": "binary-dot",
+      "name": "圆点二值图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2944,
+          "sha256": "7ecf9e29d5d1906eb058de5e4c5437df4bccf0e070161400de6ce61b3a6516ee"
+        },
+        "svg": {
+          "bytes": 27831,
+          "sha256": "575eedc31ad58c484ca97e9122c81e72c1dbc4c2128e8ef3d6b086deebca0d78"
+        },
+        "png": {
+          "bytes": 120432,
+          "sha256": "2e94e3f6a407c648e1a672b9a7226044f7528d3c95daf575b3ad3a6fbb873fca"
+        },
+        "pdf": {
+          "bytes": 117599,
+          "sha256": "96618f340520614821aba4a6a04a1dd4a987a3c0b91150d4c0ae2020740927d6"
+        },
+        "eps": {
+          "bytes": 62094,
+          "sha256": "0933296e9ec8f5619445e5e8838f48dc9500cc3d0ddc76a6e38c20511a87d9c8"
+        }
+      }
+    },
+    {
+      "id": "binary-rect",
+      "name": "方格二值图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2945,
+          "sha256": "3aaa7d4d266da1b41a605d714961c84bccfae4868c2f6d826881805df14926d3"
+        },
+        "svg": {
+          "bytes": 29650,
+          "sha256": "5a2346b00ddf955a7567fc5809ce854d4b946430d9a0ad910d9abdd28185b68c"
+        },
+        "png": {
+          "bytes": 59280,
+          "sha256": "3f8c5ae57485d42b88eba2cb603e836c7d23a145f6bc7576e31ea496b910146d"
+        },
+        "pdf": {
+          "bytes": 115035,
+          "sha256": "7835e2d7942f6f178116be5700fe4ba994784c44b0e104100796bf5ff91e0b78"
+        },
+        "eps": {
+          "bytes": 39638,
+          "sha256": "40f52eba6b8eef579b6a797e38231bff868bf3dad2ebc0b8505701b5ac15e30b"
+        }
+      }
+    },
+    {
+      "id": "bubble-matrix",
+      "name": "数值气泡矩阵",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3308,
+          "sha256": "6f26680f0f31f0b15c8dee629fa3bd66913917fc40f2a12779cee32e139eacf2"
+        },
+        "svg": {
+          "bytes": 26026,
+          "sha256": "edf1afac0e35b9b90b9e994b0b40ced2ded1c045750441d71fbb67fd2fb9dcae"
+        },
+        "png": {
+          "bytes": 99770,
+          "sha256": "07fe5f3cd33457806a6dc643a3190df65c976b8f79a497fedf5ce29d60d092e3"
+        },
+        "pdf": {
+          "bytes": 121290,
+          "sha256": "98ff0b332b1c29d5d73e4f90b4f5ccc178e0c32a27d3fb88c70b9c5896aad235"
+        },
+        "eps": {
+          "bytes": 66370,
+          "sha256": "ba90ecf2895fa1e0ffc5354fba1fa564bfd96602b53ae3da1cffeb3342b6c280"
+        }
+      }
+    },
+    {
+      "id": "correlation",
+      "name": "组内相关性热图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3516,
+          "sha256": "e090fae7386e9e353fdc708d12d482c799fd192e1cb151cb0c3470f11929ef44"
+        },
+        "svg": {
+          "bytes": 13824,
+          "sha256": "d48a433789aca12e3da5c5db95a62fc27c3b616a5c6bc2239d695d56811beb77"
+        },
+        "png": {
+          "bytes": 44575,
+          "sha256": "e0dbce967b16a070a35aa382ea72f44d67ff3da0c5e6d7564c635224f6fdfb90"
+        },
+        "pdf": {
+          "bytes": 116031,
+          "sha256": "db6c8e9f5a3ba72793eea5d10e96a5dc7f212824f1aaa4f727792806260eb8da"
+        },
+        "eps": {
+          "bytes": 33835,
+          "sha256": "d6c18215fab1128dca8de806d9d4848055a85fa8c3b0dded4ffceda17533fb65"
+        }
+      }
+    },
+    {
+      "id": "double-correlation",
+      "name": "组间相关性热图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3296,
+          "sha256": "3f3d396dd0097ad0db08ca2905c512e0f86ba53e69b8255f0cce81188d106963"
+        },
+        "svg": {
+          "bytes": 13301,
+          "sha256": "2dafbe5d770ecbbad4aa79c729f755b2ee9681e3945e4ad3b9308395b5e2aa4e"
+        },
+        "png": {
+          "bytes": 49344,
+          "sha256": "29701bbc909e66bdf3419d54a4a1191ff6415fdde91ce58693c4ed67bf2fd67e"
+        },
+        "pdf": {
+          "bytes": 117279,
+          "sha256": "8f2dc0b4fe54b010fcd216b63b0f6af138b5781023078f396ea544d048ed22a9"
+        },
+        "eps": {
+          "bytes": 35148,
+          "sha256": "d745508b704e50a6310efbc4de585647039c8ccdd4587837ead956b62dcec943"
+        }
+      }
+    },
+    {
+      "id": "mantel",
+      "name": "Mantel 关联热图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 4975,
+          "sha256": "7b22d8a0f9808115f1e2b611f6828bfd6877861da0cbdc9c5e2133e86046a93e"
+        },
+        "svg": {
+          "bytes": 17204,
+          "sha256": "cab4ec0d496944c37f765d8fb355d92bce08939af637302886d320af5d9cfc7f"
+        },
+        "png": {
+          "bytes": 100573,
+          "sha256": "2589f16eda94d6d543d9ea5b88f50dc26758cee4c31f031d625383cdabc5e432"
+        },
+        "pdf": {
+          "bytes": 124657,
+          "sha256": "aebaef75e25c0b9a042e1f9fb0d82c1b4710dd7001211f096db227f3c5c4ff96"
+        },
+        "eps": {
+          "bytes": 52805,
+          "sha256": "4705f774013c6a4325adfb9ace52cfddb4f9e0afe6025d5e1aa33758c2055b64"
+        }
+      }
+    },
+    {
+      "id": "venn",
+      "name": "韦恩集合交集图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 1910,
+          "sha256": "0a537dee19e71e8b33b9ada591ec6b0d5cc362404acd2f2520e5f6355015f910"
+        },
+        "svg": {
+          "bytes": 6283,
+          "sha256": "b09708f0f5bc417779cb4ceafa96a6b71305cc4fbb97887463455c9e00cdd152"
+        },
+        "png": {
+          "bytes": 130040,
+          "sha256": "c945ca062af6fd3f133eefa12d1f404e7f649498e297996bdc2f7a3a17b56518"
+        },
+        "pdf": {
+          "bytes": 131898,
+          "sha256": "2c68c84185c888a93e251735f60cf8f7ad9dd6a3ba1682dabaf1311b5b0f13ef"
+        },
+        "eps": {
+          "bytes": 276795,
+          "sha256": "59ea7b3269be06a38501542d48e19716a81cae26b09d66f6dde7badaf10bb46d"
+        }
+      }
+    },
+    {
+      "id": "packing",
+      "name": "分组圆堆砌图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2895,
+          "sha256": "c6e07492b04c31268fc60f0b6e97355826f5eaed430c97feb6f8e5f3f632526d"
+        },
+        "svg": {
+          "bytes": 4619,
+          "sha256": "d7c018055b79ce826f2aee245141a1922e02cbf99d837ec9e518e528825e7c21"
+        },
+        "png": {
+          "bytes": 131579,
+          "sha256": "730be6369e7c166fd6f5563fef9bc29e12cc53cf408e20f211d8a9f7b21710bb"
+        },
+        "pdf": {
+          "bytes": 115791,
+          "sha256": "5acf8f7c4daf600c06abda06c176a8fd10fde957582a6996ca2fa10cf207e800"
+        },
+        "eps": {
+          "bytes": 282905,
+          "sha256": "0b5cbcfa8e58c0690ce0de0a7715fa493e2f5c54eee1afc32863239272e35156"
+        }
+      }
+    },
+    {
+      "id": "sankey",
+      "name": "桑基流向图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2148,
+          "sha256": "8ac5eb51103c9907eabee00bfe1195854b88072052a8ba67791c852288e30460"
+        },
+        "svg": {
+          "bytes": 4437,
+          "sha256": "02ba18e2ddd882f9544e496747f90d108800ef4d2e5f194d87d482e8c334da02"
+        },
+        "png": {
+          "bytes": 85071,
+          "sha256": "24097e7dd156210f823504eba35dedd2d1024c28656a1f6eaf5385ae42fa3a7b"
+        },
+        "pdf": {
+          "bytes": 118971,
+          "sha256": "26342ca55891b07378813236c68a3288dd1870bb0cef7dc561e5e037e9685569"
+        },
+        "eps": {
+          "bytes": 198323,
+          "sha256": "8563b02699e9e544584d55c65d607c837e9387bc3754dc47e5dfe26db629a6bf"
+        }
+      }
+    },
+    {
+      "id": "network",
+      "name": "动态关系网络图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 5289,
+          "sha256": "4fec347ff406079a230119ce2ea6cd6b69fff049dc45d601eb000c5a74830d5b"
+        },
+        "svg": {
+          "bytes": 14461,
+          "sha256": "f59bd738959b1d404a5abeb97931ff9756d69f4b164e9b234c14e8925c2ca39a"
+        },
+        "png": {
+          "bytes": 87739,
+          "sha256": "f6c3c70371d206dcdae1b4af2bf15ac7f7ad7132c427276193bd47f8f417ebbc"
+        },
+        "pdf": {
+          "bytes": 129188,
+          "sha256": "157e9e68956e6a257005a4f966b9ea7fe7fd65de3e718dd8dfd8d6fa830c9ee9"
+        },
+        "eps": {
+          "bytes": 166562,
+          "sha256": "ca589baeda56a8d337394932af05e20bbc6be107c6a4cb8d5485d6cf5651955e"
+        }
+      }
+    },
+    {
+      "id": "map",
+      "name": "地理采样点地图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 2977,
+          "sha256": "fe0063095a0772ec3f606ccecf508bbc5cd07c7099dcba0212dc05590797a659"
+        },
+        "svg": {
+          "bytes": 133698,
+          "sha256": "b12d7f1d8a06d80d13db6a105fc652928c53fc2f994ad417324c2e2d75eb49f5"
+        },
+        "png": {
+          "bytes": 397092,
+          "sha256": "9cb25120efb13395a79261304288787d10c2762626afc3bd08dba72b54a2cee9"
+        },
+        "pdf": {
+          "bytes": 159803,
+          "sha256": "fc7ee4ac271d925b7afd320a286e3456ae8a1ee49416daa0053bcd4024fe2f19"
+        },
+        "eps": {
+          "bytes": 993377,
+          "sha256": "3f00c26ec7d00bfd75306c657211c954798f9aed46df8cb06f163b8614c34ed3"
+        }
+      }
+    },
+    {
+      "id": "volcano",
+      "name": "差异表达火山图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 36238,
+          "sha256": "c307193d7808218e3b691a8debd8fc75f12e46fb3ae251402d5d8d908025c048"
+        },
+        "svg": {
+          "bytes": 72416,
+          "sha256": "8d14af4144131b61337d8c900a30764bc3558e710f3850c89b8142cd12e22424"
+        },
+        "png": {
+          "bytes": 113412,
+          "sha256": "9c9b9364c41a663a2cd78581057141db96bb0be753e18a120bef5ef171d6e425"
+        },
+        "pdf": {
+          "bytes": 143571,
+          "sha256": "471745937642c894b2c1d163592e7189a67adc2ebbba0022283cf68f7ada9128"
+        },
+        "eps": {
+          "bytes": 266865,
+          "sha256": "5a1a1122c2c6297315cfc84d60537a83780042b3d1ab69b889087761b0063e03"
+        }
+      }
+    },
+    {
+      "id": "enrichment-dot",
+      "name": "富集气泡图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3485,
+          "sha256": "90f742cce3fd6c1d2afda29b810de39df6c670e93ba1be5a4e928040ee0e4b15"
+        },
+        "svg": {
+          "bytes": 9750,
+          "sha256": "c45682f62cb99e8f559782a60bdd8c7d12f7348e10666de4fc191ac1a7aff1ae"
+        },
+        "png": {
+          "bytes": 68774,
+          "sha256": "b338db7da85856feaf1a397cdf39d480cb030f51569dd348416728db2ae93bed"
+        },
+        "pdf": {
+          "bytes": 118677,
+          "sha256": "2bddd3ecdbd3ced674bf3f8ca354b95f1a363d134d4034c9be22fc149367e8e6"
+        },
+        "eps": {
+          "bytes": 40503,
+          "sha256": "f78dc7ab298a1afd0c5a76eb15844050d5239f9585db3b49f4bac268b8f6afdf"
+        }
+      }
+    },
+    {
+      "id": "enrichment-bar",
+      "name": "富集条形图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3484,
+          "sha256": "06ec9d2c89447ce2c6873aea4e0256be3ed541b1afab25604fd95e2364952453"
+        },
+        "svg": {
+          "bytes": 8621,
+          "sha256": "6a4ebf3adbc89dab2179219652c5a9a9efed8361b513c786fbfaf741544f632d"
+        },
+        "png": {
+          "bytes": 49075,
+          "sha256": "6ef7097e7951718a3ead0f9fd80b5149992fe8a1b19192a48da2bf3808d2847c"
+        },
+        "pdf": {
+          "bytes": 114188,
+          "sha256": "49638c675506e1409b712d0f2b6da849d22da74bb906c6016fc3ca1c914669e7"
+        },
+        "eps": {
+          "bytes": 35377,
+          "sha256": "d5ff29d8493d43d119f3ff84b041de509b7c847469b2b3c3f535e6db1afe187a"
+        }
+      }
+    },
+    {
+      "id": "enrichment-circle",
+      "name": "富集圈图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3452,
+          "sha256": "3ff4444cae2c71ad48887ef4fb4078b13755da7fad7099d4c452ee5efa747da6"
+        },
+        "svg": {
+          "bytes": 19151,
+          "sha256": "ee66b62bc172841bedd2ac0718e8da55bb0830407ec4532f413f15a9fa1a66bd"
+        },
+        "png": {
+          "bytes": 142109,
+          "sha256": "174c59dcf3ae661b811bf30acee98361f141a27d4d3616313a2fc98946db55b9"
+        },
+        "pdf": {
+          "bytes": 131553,
+          "sha256": "9b5859c8261dad701a6391241a69bc0dac47e2d502d63e823ef8c2dd7477fd6d"
+        },
+        "eps": {
+          "bytes": 290531,
+          "sha256": "bf9ed37f2697032efb54624873dfd9b63a3a48e8860543c7e1027b432a42d359"
+        }
+      }
+    },
+    {
+      "id": "gene-cluster",
+      "name": "基因簇排列图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 4004,
+          "sha256": "23234829a35ce77b3480cdb806ffe568628b272c2b42d8da096213f28d8deb81"
+        },
+        "svg": {
+          "bytes": 15656,
+          "sha256": "5cb98602958956916ef0e6b30a55caa1010a5da23ad51a11417e779ed60a0d10"
+        },
+        "png": {
+          "bytes": 96434,
+          "sha256": "d4a6e67d10f153cb196758bee5b8fa9fc748b63c0cae20cf4e12fa91114fe55b"
+        },
+        "pdf": {
+          "bytes": 117374,
+          "sha256": "ce92977dbffe1d88b3126150ff96e289b52610aaf143a3b347ba576148cf037c"
+        },
+        "eps": {
+          "bytes": 46184,
+          "sha256": "7afec16d83eea71881e8a9602e32f72923737d1b5bbce03438dc44645c93b19c"
+        }
+      }
+    },
+    {
+      "id": "protein-domains",
+      "name": "蛋白保守结构域图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 3763,
+          "sha256": "144124260b04d763fe7ecb43a008bdcabfcea9ba89eb6d57ee7d199e05f1c23f"
+        },
+        "svg": {
+          "bytes": 6139,
+          "sha256": "9de9c1abd9e9ede5d6a128d2ec155ede160267ef63bde3af98efcb317f9ba521"
+        },
+        "png": {
+          "bytes": 63091,
+          "sha256": "7f30aa38d1cb040f5d64aab959b7b5e663902184e4c28098689c40a17355673a"
+        },
+        "pdf": {
+          "bytes": 115863,
+          "sha256": "ea43b5cc196a6e053327b5eb55399ecbf8b88e3bd4e4290a963d3120a5e966bd"
+        },
+        "eps": {
+          "bytes": 37597,
+          "sha256": "cabff1dc7560df7a6362d5e6dc5b307c3c3eb6eda988f95203200e6adbb5d16f"
+        }
+      }
+    },
+    {
+      "id": "protein-motifs",
+      "name": "蛋白保守基序图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 5257,
+          "sha256": "657e695861f1ec52a908845cef6911621cbb508d0c87f2562ed6e70b59d2ebef"
+        },
+        "svg": {
+          "bytes": 8187,
+          "sha256": "5fa3c2d6aec2a4c76955a6fed67f69e570a233f4cc709fb9ad2e2a3fcd29b77e"
+        },
+        "png": {
+          "bytes": 62238,
+          "sha256": "981a2042e95f795336f675fc89118676dc5a17af73361ee1891a01c4e97d4a80"
+        },
+        "pdf": {
+          "bytes": 113618,
+          "sha256": "728e723aafbbe7905992ea37df5aec479732906bd2e6e0ee76d6906fc90d0f67"
+        },
+        "eps": {
+          "bytes": 34649,
+          "sha256": "689ec17998b5cb9e721fb9ccbd594002c348801c8780208219b1daa237392eed"
+        }
+      }
+    },
+    {
+      "id": "genome-circos",
+      "name": "基因组圈图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 11425,
+          "sha256": "15f78a1359e6d33e73f3bfc9116124cb396525513661838a52f09641aafced3b"
+        },
+        "svg": {
+          "bytes": 26634,
+          "sha256": "64590bf4d379e3294ed6bf95c3ede89db4e29e286c1ce6830745162a16e64892"
+        },
+        "png": {
+          "bytes": 146025,
+          "sha256": "893a08cdcad62e41bb2f659672bfec3f81ac1d455471676df46bc1098bce93cb"
+        },
+        "pdf": {
+          "bytes": 127153,
+          "sha256": "867eddaf9765090c9f897c3f18073e42f47706d9ba8f5958fb23ec72b5979b8f"
+        },
+        "eps": {
+          "bytes": 296386,
+          "sha256": "2862cfbf1bc5ef110d9d3fa02cebb6310e25c5217ed6bba5ecf781d8d3e10791"
+        }
+      }
+    },
+    {
+      "id": "synteny",
+      "name": "MCScanX 共线性图",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 6955,
+          "sha256": "85167198388c8d58562b8dc737da5cfc42270a36e99bbb9ecd9b709e21f97369"
+        },
+        "svg": {
+          "bytes": 12297,
+          "sha256": "4a51d4a6d5bb49a1ff75140084018caba704b1b032f741afe7edaca7ec987547"
+        },
+        "png": {
+          "bytes": 90735,
+          "sha256": "7bc65fd2c888e856f3ccd58c634e3875c9af34f7dc9a3c35bf07306b793f6381"
+        },
+        "pdf": {
+          "bytes": 138780,
+          "sha256": "9965039d055461ab3eb690f3cbfacb1fcc13f5c656a81cb3ec395831a946f5bf"
+        },
+        "eps": {
+          "bytes": 206134,
+          "sha256": "2505af39dbadfd790f2c7b98c7aec94229f7e6f443e18c40febe4f38c52d5b35"
+        }
+      }
+    },
+    {
+      "id": "pca",
+      "name": "主成分分析 PCA",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 13847,
+          "sha256": "cda001b4aab31a60bcbb479b6605f05bb82dc7b29ea6c5922e123a0feba5ad79"
+        },
+        "svg": {
+          "bytes": 16830,
+          "sha256": "4ef34b567adf81ca68859ad5d1a650a939bc68afcc465b1529908ea97bea6d01"
+        },
+        "png": {
+          "bytes": 87429,
+          "sha256": "9cfacd0a3fc5c1944ce3dca0d17723a14125ba9982420a5f2a249ad70e02df13"
+        },
+        "pdf": {
+          "bytes": 130314,
+          "sha256": "a55fb041110b9bd46c3d86c945b2c51210691694e74e7e6ee71ee521fc8bc1b1"
+        },
+        "eps": {
+          "bytes": 208500,
+          "sha256": "421461920cd806bb38ba86c4f73a94aae0af01751fcc3b8ef923d8331e929d1e"
+        }
+      }
+    },
+    {
+      "id": "pcoa",
+      "name": "主坐标分析 PCoA",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 12405,
+          "sha256": "94bdc90bf70e9074191cde33ad3b5640544e08a275ab2fae46e20c324129de7a"
+        },
+        "svg": {
+          "bytes": 12561,
+          "sha256": "ec1ee6c2424b248a38cb312936945ddb2ba3d02ba36444362c35d31e7dce9faa"
+        },
+        "png": {
+          "bytes": 73199,
+          "sha256": "a49941f5d3ee33cc12a80979216a1c126bfc37ef0afba0f442181f9d956cb9a6"
+        },
+        "pdf": {
+          "bytes": 124958,
+          "sha256": "7685e76e54ace6ed4b3e6a78188f1975395c92d3cd060dfa0bbdc2d33580b419"
+        },
+        "eps": {
+          "bytes": 173978,
+          "sha256": "eff9f43b58f17d8eb5702cba1e624f1850b3a3b20d9afd6db63ec4d43b597b14"
+        }
+      }
+    },
+    {
+      "id": "nmds",
+      "name": "非度量多维尺度 NMDS",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 9819,
+          "sha256": "114ebaf24238fe94714e8fb26e240057a8608c7832d7c652ded42d5f8e587740"
+        },
+        "svg": {
+          "bytes": 11422,
+          "sha256": "0254651b273b8c79b90e63b73431a5b264839cc5d30f291c2ccb652999c66f28"
+        },
+        "png": {
+          "bytes": 76580,
+          "sha256": "3b07b986265660a74bbc40a835e05c5e8525ba1b0dc558bf42d064cc87633754"
+        },
+        "pdf": {
+          "bytes": 124495,
+          "sha256": "b0d79f1a42f16f3a64c6b6460e559f08aab6240317a7a9240932523161e6eaad"
+        },
+        "eps": {
+          "bytes": 175283,
+          "sha256": "8c014925b047e3a1a627669bb9cbb097b45a2a2c1e5f66c31462becbd831aea0"
+        }
+      }
+    },
+    {
+      "id": "cca",
+      "name": "典范对应分析 CCA",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 14272,
+          "sha256": "8aab3c2a660c114dbb15f0948c22ea69d331f8593ee40c07deaa15b4a8c6e759"
+        },
+        "svg": {
+          "bytes": 14722,
+          "sha256": "19dc3e6f12e1464152aa7d566707708da978ca01d6690dc01322836f53df49bb"
+        },
+        "png": {
+          "bytes": 91663,
+          "sha256": "f719d6fe5465abaf5a68ba9c3014432f24ba96afabe54fe3746eb699602fd0b8"
+        },
+        "pdf": {
+          "bytes": 130734,
+          "sha256": "81bf50432f3b54f65098c9d86865c595a04e00b2ccf1391223101a453dc6fd30"
+        },
+        "eps": {
+          "bytes": 207492,
+          "sha256": "4edf4675add78623f4162909984a0d6bed0bd6f06dddbd5c8c158a94141d782c"
+        }
+      }
+    },
+    {
+      "id": "rda",
+      "name": "冗余分析 RDA",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 14227,
+          "sha256": "e88d17dd15aaf8d7500dfee5e749f9940db986d9e70c0592aedc0f3d292cc1fb"
+        },
+        "svg": {
+          "bytes": 15616,
+          "sha256": "cab8191064a43ac497e6c3254fcd480d31853e4ad52f2218e3725851601b1bfb"
+        },
+        "png": {
+          "bytes": 87526,
+          "sha256": "06d8c0edfc137a6420c2fd9699769a97aeab41d58fbff3283a7429da1adfa48f"
+        },
+        "pdf": {
+          "bytes": 132480,
+          "sha256": "4b694d7fd06a363506dc0ff7b6f708c44b471c56f97e605afb351e0e8b2dbfa8"
+        },
+        "eps": {
+          "bytes": 218407,
+          "sha256": "b55e0112d3e52d7354d5e0cf84ca558b6c5302e9665607aa15c7359f7ada5e87"
+        }
+      }
+    },
+    {
+      "id": "tree-normal",
+      "name": "矩形进化树工作台",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 9642,
+          "sha256": "b11619d3b4a6e27696e6cce28834bb5a9f0c7a1cb5c480b69eee42384b8b2e24"
+        },
+        "svg": {
+          "bytes": 14784,
+          "sha256": "69d3db995644736448354b9a9d8e99047b1e1ccdf30b8bbd8a5edd6705d9c8d4"
+        },
+        "png": {
+          "bytes": 111142,
+          "sha256": "ff89f0fd7c75aaf631b55d8ac67d21c32342f21f31b91b0cd9d3f7625f1ac587"
+        },
+        "pdf": {
+          "bytes": 174386,
+          "sha256": "c861a819427e50f8999b90d5d0712225377efd15b211fd477067f03c1cf423f3"
+        },
+        "eps": {
+          "bytes": 229655,
+          "sha256": "181586ce7aa1fa7584eb0a2d3f3bbe02720b096c7624d522fe7644ae01f3e1d0"
+        }
+      }
+    },
+    {
+      "id": "tree-circle",
+      "name": "环形进化树工作台",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 9641,
+          "sha256": "ee611ecb85bb4c36435e8eeda9d9adcf13163ffee415d339c60b21d44b7d5c0e"
+        },
+        "svg": {
+          "bytes": 19682,
+          "sha256": "0366eca6fee1b6ede83bf56e2104325c7e94a4a01c0b65d1eedef9db9b516fd0"
+        },
+        "png": {
+          "bytes": 367563,
+          "sha256": "32a66c973bf303e26daa67a10ed5697c4aad5c1b22b79acbd332fbae69241d53"
+        },
+        "pdf": {
+          "bytes": 177238,
+          "sha256": "a3d5ccd75045e28399f5deeaee3791a7336a8e37788a80663341202f9bae450f"
+        },
+        "eps": {
+          "bytes": 797491,
+          "sha256": "6227665c856ed606a0aea099767539c3364945b53f053abce09542decefa537f"
+        }
+      }
+    },
+    {
+      "id": "tree-unrooted",
+      "name": "无根进化树工作台",
+      "passed": true,
+      "exportFiles": {
+        "openacad.json": {
+          "bytes": 4424,
+          "sha256": "67764e7f0ac3743bf1433efb87b22ea6cc2b6399d776063ec8f7dc4745b9c01a"
+        },
+        "svg": {
+          "bytes": 8776,
+          "sha256": "20756b4b47ca8fbff8c323ea6aafe2a743580a2d1683aa66508e10a8ab206da2"
+        },
+        "png": {
+          "bytes": 117173,
+          "sha256": "6f29fec61ca55f2eb2101b83938680e12b5b10c729b7d02caabd7d157ca359ab"
+        },
+        "pdf": {
+          "bytes": 145866,
+          "sha256": "de5b572ff5aa328410b3fcb3bc5453477500c6f859005a41571214845f338ae7"
+        },
+        "eps": {
+          "bytes": 223272,
+          "sha256": "c302dd0b8eb49704315caf6e8d0169ac682df5dd87ed80e893107e8adb75f69f"
+        }
+      }
+    }
+  ],
+  "homepageScreenshotRefresh": {
+    "date": "2026-09-08",
+    "templates": [
+      "bar-grouped",
+      "heatmap",
+      "volcano",
+      "sankey",
+      "tree-circle"
+    ],
+    "browserTests": {
+      "passed": 17,
+      "skipped": 3
+    },
+    "build": "passed",
+    "note": "Captured from actual current workbench defaults; carousel remains 3 seconds. Native Chromium touch test runs only in its matching browser project."
+  }
+}

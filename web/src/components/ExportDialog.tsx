@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { X, Download } from "lucide-react";
 import type { Project } from "../core/types";
+import { assertExportReady } from "../core/exportReadiness";
 import { downloadBlob } from "../core/project";
 import { createJob, waitJob, cancelJob } from "../core/api";
 
@@ -161,6 +162,7 @@ export function ExportDialog({
     setError("");
     setMessage("正在准备图表字体…");
     try {
+      await assertExportReady(project);
       const node = getSVG();
       if (!node) throw new Error("当前图表没有有效预览，请先修正数据。");
       await prepareSvgFonts(node, attempt.abort.signal);

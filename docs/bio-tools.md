@@ -1,7 +1,7 @@
 # 生物信息学工具：本地使用与实现约定
 
 正式入口：[生物信息学工具](https://openacad.xyz/#bio)。1.1.0 已发布，生产运行与验收证据见[发布记录](deployment/production-record.md)。
-本次为本地开发与验收，未提交、推送或发布。工具入口为首页「生物信息学工具」和主导航「生物信息学」。
+工具入口为首页生物信息学区域和主导航「生物信息学」。下方启动命令供本地开发使用；首次本地验收的历史边界保留在独立验收记录中。
 
 - 总入口：<http://127.0.0.1:5178/#bio>
 - AB1：<http://127.0.0.1:5178/#bio/ab1>
@@ -21,7 +21,7 @@ server/.venv/bin/python -m uvicorn app.bio:dev_app --app-dir server --host 127.0
 
 Vite 将 `/api/bio` 转发到本地 18083，原有统计 `/api` 仍转发 18082。AB1 不需要后端；KO 需要查询服务和可访问 KEGG 的网络。独立生信服务不需要 Redis/R/统计 worker，也不停止原统计服务。不要在同一端口重复启动。现有依赖安装说明见项目 README 和 server 文档。
 
-`server/app/main.py` 同时注册新路由，供未来统一后端集成使用；本次没有重建或部署生产镜像。`/api/bio/health` 只证明服务存活，不代表 KEGG 可用。
+`server/app/main.py` 同时注册生信路由，1.1.0 生产镜像已包含该集成；本地开发也可以使用上述独立服务。`/api/bio/health` 只证明服务存活，不代表 KEGG 可用。
 
 ## AB1 使用
 
@@ -60,6 +60,6 @@ KEGG API 没有供此网页直接跨域读取的响应许可，故采用固定 K
 
 功能按需加载，不改变模板注册、计算白名单、项目 schema 或 `.openacad.json` 编码。绘图项目继续按原方式保存；AB1/KO 数据仅在当前页面会话中保留，导航切换不丢失，刷新前须自行导出，暂不写入绘图项目。
 
-当前验收在 macOS 的 Chromium、Firefox、WebKit 与 iPhone 尺寸模拟中完成，包含 Chromium 原生触摸输入；不是实体手机或全部仪器格式认证。CSV/TSV 约定 UTF-8；历史编码 XLS、加密文件、超大工作簿及多进程部署未全面验收。未来多进程部署需集中协调 KEGG 限速，不能将单进程限速直接当作生产集群保证。本次没有 Linux 发布验收、CI、部署或生产变更。
+首次本地验收使用 macOS 的 Chromium、Firefox、WebKit 与 iPhone 尺寸模拟，包含 Chromium 原生触摸输入；不是实体手机或全部仪器格式认证。后续 1.1.0 的 Linux CI、生产验收和部署单独见发布记录。CSV/TSV 约定 UTF-8；历史编码 XLS、加密文件、超大工作簿及多进程部署未全面验收。多进程部署需集中协调 KEGG 限速，不能将单进程限速直接当作生产集群保证。
 
 测试及已知限制见 [自身验收](qa/bio-tools-acceptance.md)，参考产品行为见 [独立研究记录](research/bio-tools-reference.md)。

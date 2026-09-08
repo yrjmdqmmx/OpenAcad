@@ -1,4 +1,5 @@
 import * as d3 from "d3";
+import { placeLabels } from "../../core/labelLayout";
 import type {
   Template,
   Project,
@@ -181,6 +182,14 @@ function Ordination({ project, ...props }: RendererProps) {
           .scaleLinear()
           .domain(linearDomain(ys, style, "y"))
           .range([g.h, 0]);
+        const samplePoints = scores.map((v, i) => ({ id: "sample-" + labels[i], x: x(v[a]), y: y(v[b]), text: annotation[labels[i]]?.label ?? labels[i], size: num(style.labelSize, style.fontSize) }));
+        const vectorPoints = vectors.map(({v, label}, i) => ({ id: "vector-" + i, x: x(v[a] * scale), y: y(v[b] * scale), text: label, size: style.fontSize }));
+        const positions = placeLabels([...vectorPoints, ...(style.showLabels ? samplePoints : [])], g.w, g.h, samplePoints);
+        const savedLabels = (project.layout.labels || {}) as Record<string, {x:number; y:number}>;
+        for (const point of [...samplePoints, ...vectorPoints]) {
+          const saved = savedLabels[point.id];
+          if (saved) positions[point.id] = point.id.startsWith("sample-") ? {x:point.x+saved.x,y:point.y+saved.y} : saved;
+        }
         return (
           <>
             <Axes g={g} s={style} x={x} y={y} />
@@ -219,13 +228,15 @@ function Ordination({ project, ...props }: RendererProps) {
                     strokeWidth={1}
                   />
                   <title>{`${labels[i]}：${v[a].toFixed(5)}，${v[b].toFixed(5)}`}</title>
+                  {style.showLabels && Math.hypot(positions["sample-" + labels[i]].x - x(v[a]), positions["sample-" + labels[i]].y - y(v[b])) > 22 &&
+                    <line x1={0} y1={0} x2={positions["sample-" + labels[i]].x - x(v[a])} y2={positions["sample-" + labels[i]].y - y(v[b]) - 4} stroke={style.textColor} opacity={.3} />}
                   {style.showLabels && (
                     <ValueLabel
                       {...props}
                       project={project}
                       id={"sample-" + labels[i]}
-                      x={style.pointSize + 5}
-                      y={4}
+                      x={positions["sample-" + labels[i]].x - x(v[a])}
+                      y={positions["sample-" + labels[i]].y - y(v[b])}
                       style={style}
                       anchor="start"
                     >
@@ -270,14 +281,12 @@ function Ordination({ project, ...props }: RendererProps) {
                       fill="none"
                       strokeWidth={style.lineWidth}
                     />
-                    <text
-                      x={vx + 5}
-                      y={vy - 5}
-                      stroke="none"
-                      fontSize={style.fontSize}
-                    >
+                    <line x1={vx} y1={vy} x2={positions["vector-" + i].x} y2={positions["vector-" + i].y - 4} opacity={.4} />
+                    <ValueLabel {...props} project={project} id={"vector-" + i}
+                      x={positions["vector-" + i].x} y={positions["vector-" + i].y}
+                      style={{ ...style, labelColor: color(style, groups.length + (kind === 2 && vectors.some(v => v.kind === 1) ? 1 : 0)) }} anchor="start">
                       {label}
-                    </text>
+                    </ValueLabel>
                   </g>
                 );
               })}

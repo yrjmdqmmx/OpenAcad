@@ -70,8 +70,8 @@ export function makeProject(t: Template): Project {
     dataset: structuredClone(t.example),
     mapping: {},
     style: { ...structuredClone(defaults), ...structuredClone(t.defaultStyle) },
-    layers: [],
-    layout: {},
+    layers: structuredClone(t.exampleLayers || []),
+    layout: structuredClone(t.exampleLayout || {}),
     ...(t.exampleAnalysis
       ? { analysis: structuredClone(t.exampleAnalysis) }
       : {}),

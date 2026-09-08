@@ -1,4 +1,5 @@
 import React from "react";
+import { SizeLegend } from "./legends";
 import { symbolPath, symbolOptions } from "./symbols";
 import {
   geoConicEqualArea,
@@ -225,9 +226,10 @@ function MapRenderer({ project: p }: RendererProps) {
             </text>
           </g>
         ))}
+      {enabled(p,"showLegend") && enabled(p,"mapSizeByValue",true) && idx("value")>=0 && <SizeLegend x={left+groups.length*140+20} y={top+ih+23} max={maxValue} radius={n=>Math.sqrt(n/maxValue)*value(p,"mapPointSize",11)} title="采样数值（面积）"/>}
       <text
         x={left + iw}
-        y={top + ih + 48}
+        y={top + ih + 62}
         textAnchor="end"
         fill="#718589"
         fontSize={9}

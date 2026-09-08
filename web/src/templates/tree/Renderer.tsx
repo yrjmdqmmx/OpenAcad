@@ -10,6 +10,7 @@ import * as d3 from "d3";
 import type { ChartStyle, Layer, RendererProps } from "../../core/types";
 import { legendRows } from "../basic/shared";
 import { boxSummary } from "../basic/math";
+import { labelWidth } from "../../core/labelLayout";
 import { stateFor, leaves, walk } from "./model";
 import {
   branchPath,
@@ -31,6 +32,11 @@ const unique = (a: string[]) => [...new Set(a)];
 const rowFor = (layer: Layer, id: string) =>
   layerRows(layer).filter((r) => r.nodeID === id);
 const setting = (l: Layer) => ({ ...defaultLayerSettings, ...l.settings });
+function valueLabelSpace(layer: Layer) {
+  const s = setting(layer);
+  if (!s.showValues || !["bar", "category-bar", "lollipop", "category-lollipop"].includes(specFor(layer.type)?.type || "")) return 0;
+  return Math.max(0, ...layerRows(layer).map(r => labelWidth(String(r["数值"] ?? ""), num(s.fontSize,12)))) + 8;
+}
 const font = (s: ChartStyle) => ({
   fontFamily: s.fontFamily,
   fontSize: s.fontSize,
@@ -488,7 +494,7 @@ export function TreeRenderer({ project, onLayoutChange }: RendererProps) {
     const a = setting(l);
     trackWidth += num(a.gap);
     offsets.set(l.id, trackWidth);
-    trackWidth += num(a.width);
+    trackWidth += num(a.width) + valueLabelSpace(l);
   }
   const timing = timeInfo(root, s);
   const g = layoutTree(root, kind, {
@@ -1064,7 +1070,7 @@ export function requiredTreeCanvas(project: RendererProps["project"]): {
         validateLayer(l, root).length === 0,
     );
     const trackWidth = tracks.reduce(
-      (a, l) => a + num(l.settings.width, 84) + num(l.settings.gap, 12),
+      (a, l) => a + num(l.settings.width, 84) + num(l.settings.gap, 12) + valueLabelSpace(l),
       0,
     );
     const g = layoutTree(root, kind, {

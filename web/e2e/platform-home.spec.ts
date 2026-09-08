@@ -133,7 +133,7 @@ test("工作台经首页前进后退及本机草稿继续保留数据与样式",
     await showTab("数据");
     await expect(
       page.getByRole("textbox", {
-        name: "示例数据第 2 行第 2 列",
+        name: /第 2 行第 2 列$/,
         exact: true,
       }),
     ).toHaveValue("42");
@@ -144,7 +144,7 @@ test("工作台经首页前进后退及本机草稿继续保留数据与样式",
     .fill(projectName);
   await showTab("数据");
   await page.getByRole("textbox", {
-    name: "示例数据第 2 行第 2 列",
+    name: /第 2 行第 2 列$/,
     exact: true,
   }).fill("42");
   await showTab("设置");

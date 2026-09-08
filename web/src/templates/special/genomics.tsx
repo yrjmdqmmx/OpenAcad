@@ -700,9 +700,12 @@ function Circos({ project: p }: RendererProps) {
             >{`附加轨道 ${i + 1}：${l.name}`}</text>
           </g>
         ))}
+      {enabled(p,"showLegend") && <g transform={`translate(${left},${top+ih+75})`}>
+        {[...(enabled(p,"showGCContent",true)?[["GC 含量",text(p,"gcColor","#3b9aa0")]]:[]),...(enabled(p,"showGCSkew",true)?[["GC 偏斜 > 0",text(p,"skewPositive","#9772aa")],["GC 偏斜 < 0",text(p,"skewNegative","#69a36f")]]:[])].map(([label,c],i)=><g key={label} transform={`translate(${i*150},0)`}><rect width={10} height={10} y={-8} fill={c}/><text x={16} fontSize={10}>{label}</text></g>)}
+      </g>}
       {enabled(p, "showLegend") && (
         <text x={cx} y={top + ih + 35} textAnchor="middle" fontSize={11}>
-          外圈：序列长度；内轨道：GC 含量、GC 偏斜；中心：用户提供的区间关联
+          外圈：序列长度 (bp)；GC 含量：0–100%；GC 偏斜：−1–1（中线为 0）
         </text>
       )}
     </Frame>

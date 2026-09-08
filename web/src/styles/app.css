@@ -8,3 +8,14 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
 .basic-style-panel{padding:0 22px 30px;font-size:12px}.basic-style-panel details{border-top:1px solid #dce3e8;padding:14px 0}.basic-style-panel label{display:block;margin:10px 0}.basic-style-panel label>input:not([type=checkbox]),.basic-style-panel select{display:block;width:100%;margin-top:5px}.basic-style-panel .two-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.basic-style-panel input[type=color]{height:28px}
+
+/* The preview scales the paper, never its export dimensions. Top alignment
+   keeps oversized figures reachable from the scroll origin at every zoom. */
+.canvas-scroll{display:block;align-items:flex-start;padding:16px;min-height:0;min-width:0}
+.canvas-scroll .figure-paper{margin:0 auto;flex:none;max-width:none;min-height:0}
+.stale-banner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.stale-banner button{flex:none;font-size:12px}
+.canvas-topline>div{display:flex;align-items:center;gap:4px}
+.canvas-topline button[aria-pressed=true]{color:var(--accent,#087f8c);background:#eaf4f3}
+
+.tree-panel{padding:18px 16px 30px}.tree-panel h3{font-size:15px;margin:0 0 12px}.tree-panel details{border-bottom:1px solid var(--border);padding:12px 0}.tree-panel summary{font-size:13px;font-weight:600;cursor:pointer;margin-bottom:10px}.tree-panel label{display:block;font-size:12px;margin:10px 0}.tree-panel label>input:not([type=checkbox]):not([type=color]),.tree-panel label>select,.tree-panel textarea{width:100%;max-width:100%;margin-top:5px}.tree-panel .button-row{display:flex;flex-wrap:wrap;gap:6px}.tree-panel .button-row button{font-size:11px}.tree-panel .two-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.tree-panel .layer-item>summary{line-height:1.6}.tree-panel .hint{line-height:1.6}

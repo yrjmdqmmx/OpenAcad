@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import type { Project, Template } from "../core/types";
 import { useProjectHistory } from "../core/history";
+import { isOrdination, ordinationExportIssue } from "../core/exportReadiness";
 import { inputHash, saveProject } from "../core/project";
 import { putProject } from "../core/storage";
 import { OrdinationPanel, ordinationIssues } from "../templates/ordination";
@@ -20,6 +21,7 @@ import {
   TreePanel,
   requiredTreeCanvas,
   treeProjectIssues,
+  stateFor, walk,
 } from "../templates/tree";
 import { DataPanel } from "./DataPanel";
 import { Inspector } from "./Inspector";
@@ -44,9 +46,19 @@ export function Editor({
     [mobile, setMobile] = useState("preview"),
     [exporting, setExporting] = useState(false),
     [saveState, setSaveState] = useState("准备保存草稿"),
-    [zoom, setZoom] = useState(1),
+    [manualZoom, setZoom] = useState<number | null>(null),
     [stale, setStale] = useState(false);
   const canvas = useRef<HTMLDivElement>(null);
+  const viewport = useRef<HTMLDivElement>(null);
+  const [viewportSize, setViewportSize] = useState({ width: 800, height: 600 });
+  const [verified, setVerified] = useState<{ dataset: Project["dataset"]; analysis: Project["analysis"] } | null>(null);
+  useEffect(() => {
+    const node = viewport.current;
+    if (!node) return;
+    const observer = new ResizeObserver(() => setViewportSize({ width: node.clientWidth, height: node.clientHeight }));
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
   const latest = useRef(project);
   latest.current = project;
   const [leftWidth, setLeftWidth] = useState(300),
@@ -64,6 +76,18 @@ export function Editor({
   const size = template.id.startsWith("tree-")
     ? requiredTreeCanvas(project)
     : project.style;
+  const zoom = manualZoom ?? Math.max(0.05, Math.min(1, (viewportSize.width - 32) / size.width, (viewportSize.height - 32) / size.height));
+  const checking = Boolean(project.analysis?.result && project.style.ordinationInput !== "scores" &&
+    (verified?.dataset !== project.dataset || verified?.analysis !== project.analysis));
+  const analysisUnavailable = isOrdination(project) && project.style.ordinationInput !== "scores" && (stale || checking);
+  const exportIssue = analysisUnavailable ? "数据或参数已变化，请重新计算分析结果后再导出。" : ordinationExportIssue(project);
+  let treeSummary = "";
+  if (template.id.startsWith("tree-")) {
+    try {
+      const nodes = walk(stateFor(project).root);
+      treeSummary = `${nodes.length} 个节点 · ${nodes.filter(n => !n.children.length).length} 个叶 · ${project.layers.length} 个注释层`;
+    } catch { /* tree validation below provides the actionable message */ }
+  }
   const issues = [
     ...template.validate(project.dataset, project.style),
     ...specialProjectIssues(project),
@@ -97,7 +121,7 @@ export function Editor({
       project.analysis.method,
       project.analysis.params,
     ).then((h) => {
-      if (valid) setStale(h !== project.analysis?.inputHash);
+      if (valid) { setStale(h !== project.analysis?.inputHash); setVerified({ dataset: project.dataset, analysis: project.analysis }); }
     });
     return () => {
       valid = false;
@@ -122,7 +146,7 @@ export function Editor({
     return () => window.removeEventListener("keydown", keys);
   }, [project, undo, redo]);
   const shown =
-    stale && project.analysis
+    (stale || checking) && project.analysis
       ? { ...project, analysis: { ...project.analysis, result: undefined } }
       : project;
   return (
@@ -169,7 +193,8 @@ export function Editor({
           </button>
           <button
             className="primary"
-            disabled={errors.length > 0}
+            disabled={errors.length > 0 || Boolean(exportIssue)}
+            title={exportIssue}
             onClick={() => setExporting(true)}
           >
             <Download size={16} />
@@ -265,6 +290,7 @@ export function Editor({
               图表帮助
             </a>
             <div>
+              <button onClick={() => setZoom(null)} aria-pressed={manualZoom === null}>适应窗口</button>
               <button
                 className="icon-button"
                 aria-label="缩小"
@@ -284,19 +310,20 @@ export function Editor({
               </button>
             </div>
           </div>
-          {stale && (
+          {(stale || exportIssue) && (
             <div className="stale-banner">
-              数据或参数已变化，分析结果需要重新计算。
+              {exportIssue || "数据或参数已变化，分析结果需要重新计算。"}
+              <button onClick={() => { setTab("analysis"); setMobile("data"); }}>前往分析</button>
             </div>
           )}
-          <div className="canvas-scroll">
+          <div className="canvas-scroll" ref={viewport}>
             <div
               ref={canvas}
               className="figure-paper"
               style={{
-                width: `${zoom * 100}%`,
-                maxWidth: `${size.width * zoom}px`,
-                aspectRatio: `${size.width}/${size.height}`,
+                width: `${size.width * zoom}px`,
+                height: `${size.height * zoom}px`,
+                minWidth: `${size.width * zoom}px`,
               }}
             >
               {errors.length ? (
@@ -343,14 +370,14 @@ export function Editor({
         <span>
           {errors.length
             ? `${errors.length} 个数据问题`
-            : `${project.dataset.tables.reduce((s, t) => s + t.rows.length, 0)} 行数据`}
+            : treeSummary || `${project.dataset.tables.reduce((s, t) => s + t.rows.length, 0)} 行数据`}
         </span>
         <span>{saveState}</span>
         <span className="status-right">
           {size.width} × {size.height} px · {template.name}
         </span>
       </footer>
-      {exporting && (
+      {exporting && !exportIssue && !errors.length && (
         <ExportDialog
           project={shown}
           getSVG={() =>

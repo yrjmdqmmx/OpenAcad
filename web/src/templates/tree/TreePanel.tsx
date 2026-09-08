@@ -574,7 +574,7 @@ export function TreePanel({
       )}
       {root && selected && (
         <>
-          <details open>
+          <details>
             <summary>节点与拓扑编辑</summary>
             <label>
               节点（nodeID）

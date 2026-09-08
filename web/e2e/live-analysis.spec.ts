@@ -13,6 +13,7 @@ for (const id of ["pca", "pcoa", "nmds", "cca", "rda"])
       .getByRole("button", { name: "试用另一组数据", exact: true })
       .click();
     await expect(page.locator(".stale-banner")).toBeVisible();
+    await expect(page.getByRole("button", { name: "导出图片", exact: true })).toBeDisabled();
     await page
       .locator(".panel-tabs")
       .getByRole("button", { name: "分析", exact: true })
@@ -23,6 +24,7 @@ for (const id of ["pca", "pcoa", "nmds", "cca", "rda"])
       { timeout: 90000 },
     );
     await expect(page.locator(".stale-banner")).toHaveCount(0);
+    await expect(page.getByRole("button", { name: "导出图片", exact: true })).toBeEnabled();
     expect(
       await page.locator(".figure-paper svg").first().innerHTML(),
     ).not.toBe(old);

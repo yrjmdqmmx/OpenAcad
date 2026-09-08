@@ -16,7 +16,7 @@ test("从平台首页进入绘图、模板搜索、数据更换、错误定位�
       .getByRole("button", { name: "数据", exact: true })
       .click();
   const cell = page.getByRole("textbox", {
-    name: "示例数据第 2 行第 2 列",
+    name: /第 2 行第 2 列$/,
     exact: true,
   });
   const before = await page.locator(".figure-paper svg").first().innerHTML();
@@ -46,7 +46,7 @@ test("从平台首页进入绘图、模板搜索、数据更换、错误定位�
       .getByRole("button", { name: "数据", exact: true })
       .click();
   await expect(
-    page.getByRole("textbox", { name: "示例数据第 2 行第 2 列", exact: true }),
+    page.getByRole("textbox", { name: /第 2 行第 2 列$/, exact: true }),
   ).toHaveValue("42");
   const context = await browser.newContext(
     testInfo.project.name === "mobile"
@@ -70,7 +70,7 @@ test("从平台首页进入绘图、模板搜索、数据更换、错误定位�
       .click();
   await expect(
     reopen.getByRole("textbox", {
-      name: "示例数据第 2 行第 2 列",
+      name: /第 2 行第 2 列$/,
       exact: true,
     }),
   ).toHaveValue("42");

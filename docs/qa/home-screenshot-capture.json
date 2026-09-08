@@ -1,0 +1,80 @@
+{
+  "capturedAt": "2026-09-08T01:55:27.175Z",
+  "records": [
+    {
+      "templateId": "bar-grouped",
+      "viewport": {
+        "width": 1710,
+        "height": 838
+      },
+      "title": "不同基因型的处理响应",
+      "source": "产品自带模拟数据，使用当前默认示例和适应窗口",
+      "actualFigureBounds": {
+        "x": 429.5,
+        "y": 204.84375,
+        "width": 871,
+        "height": 580.65625
+      }
+    },
+    {
+      "templateId": "heatmap",
+      "viewport": {
+        "width": 1710,
+        "height": 838
+      },
+      "title": "不同处理下的功能丰度",
+      "source": "产品自带模拟数据，使用当前默认示例和适应窗口",
+      "actualFigureBounds": {
+        "x": 455.171875,
+        "y": 204.84375,
+        "width": 819.640625,
+        "height": 580.578125
+      }
+    },
+    {
+      "templateId": "volcano",
+      "viewport": {
+        "width": 1710,
+        "height": 838
+      },
+      "title": "处理响应的差异分布",
+      "source": "产品自带模拟数据，使用当前默认示例和适应窗口",
+      "actualFigureBounds": {
+        "x": 455.171875,
+        "y": 204.84375,
+        "width": 819.640625,
+        "height": 580.578125
+      }
+    },
+    {
+      "templateId": "sankey",
+      "viewport": {
+        "width": 1710,
+        "height": 838
+      },
+      "title": "研究样本筛选流程",
+      "source": "产品自带模拟数据，使用当前默认示例和适应窗口",
+      "actualFigureBounds": {
+        "x": 455.171875,
+        "y": 204.84375,
+        "width": 819.640625,
+        "height": 580.578125
+      }
+    },
+    {
+      "templateId": "tree-circle",
+      "viewport": {
+        "width": 1710,
+        "height": 838
+      },
+      "title": "植物亲缘关系 · 环形树",
+      "source": "产品自带模拟数据，使用当前默认示例和适应窗口",
+      "actualFigureBounds": {
+        "x": 593.765625,
+        "y": 204.84375,
+        "width": 542.46875,
+        "height": 579.84375
+      }
+    }
+  ]
+}

@@ -75,7 +75,7 @@ const controls: Control[] = [
   c("supportColor", "支持度颜色", "color"),
   c("showBranchLengths", "显示分支长度数值", "boolean"),
   c("showScale", "显示分支长度尺", "boolean"),
-  c("alignLabels", "矩形树叶名对齐", "boolean"),
+  c("alignLabels", "叶名对齐", "boolean"),
   c("labelRotation", "矩形叶名旋转", "number", -90, 90),
   c("treeRotation", "环形与无根树旋转", "number", -360, 360),
   c("angleRange", "环形扇区角度", "number", 90, 360),

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { symbolPath, symbolOptions } from "./symbols";
 import { DraggableLabel } from "./interaction";
+import { placeLabels, labelWidth } from "../../core/labelLayout";
 import {
   forceCenter,
   forceCollide,
@@ -150,8 +151,20 @@ function Venn({ project: p, onLayoutChange }: RendererProps) {
             )}
           </g>
         ))}
+        {n <= 3 && regions.filter(r=>r.count>0||enabled(p,"showZero",false)).map(region => {
+          // Select the deepest point within this exact geometric membership.
+          // A grid avoids hand-coded locations and works for both 2/3 circles.
+          let best = {x:cx,y:cy,clearance:-Infinity};
+          for(let xx=cx-rx*1.7;xx<=cx+rx*1.7;xx+=rx/24) for(let yy=cy-rx*1.7;yy<=cy+rx*1.7;yy+=rx/24) {
+            const distances=shapes.map(s=>Math.hypot(xx-s.x,yy-s.y));
+            const mask=distances.reduce((m,d,i)=>d<rx?m|(1<<i):m,0);
+            const clearance=Math.min(...distances.map(d=>Math.abs(d-rx)));
+            if(mask===region.mask&&clearance>best.clearance)best={x:xx,y:yy,clearance};
+          }
+          return best.clearance>0?<text key={region.mask} data-region-count={region.mask} x={best.x} y={best.y} textAnchor="middle" dominantBaseline="middle" fontWeight="700" fontSize={13}>{region.count}</text>:null;
+        })}
         <text x={cx} y={top + ih - 4} textAnchor="middle" fontSize={11}>
-          轮廓示意；精确互斥交集见右侧计数
+          {n<=3?"轮廓示意；区域数字为精确互斥计数":"轮廓示意；复杂交集建议使用 UpSet"}
         </text>
         <text x={listX} y={top} fontSize={13} fontWeight="bold">
           互斥区域（不重复计数）
@@ -598,7 +611,7 @@ function Sankey({ project: p }: RendererProps) {
               rx={value(p, "nodeRadius", 2)}
               fill={pal[i % pal.length]}
             />
-            {enabled(p, "showLabels") && (
+            {(enabled(p, "showLabels") || enabled(p,"showValues",true)) && (
               <text
                 x={a.x + (depth.get(n) === maxDepth ? -7 : nodeWidth + 7)}
                 y={a.y + a.h / 2}
@@ -606,7 +619,7 @@ function Sankey({ project: p }: RendererProps) {
                 textAnchor={depth.get(n) === maxDepth ? "end" : "start"}
                 fontSize={value(p, "fontSize", 13)}
               >
-                {n}
+                {enabled(p,"showLabels") ? n : ""}
                 {enabled(p, "showValues", true)
                   ? ` ${fmt(amounts.get(n)!)}`
                   : ""}
@@ -851,6 +864,7 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
     );
   });
   const nodeColor = (n: NetNode) => pal[groups.indexOf(n.group) % pal.length];
+  const labelPositions = placeLabels(nodes.map(n => ({ id:n.id, x:n.x!, y:n.y!+nodeSize(n)+12, text:n.label, size:value(p,"fontSize",13) })), iw, ih, nodes.map(n=>({x:n.x!,y:n.y!})));
   const edgeGroups = Array.from(new Set(links.map((l) => l.group)));
   const nodeShape = (n: NetNode) =>
     text(p, "nodeShapeMode", "uniform") === "column"
@@ -1001,8 +1015,8 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
             project={p}
             onLayoutChange={onLayoutChange}
             labelId={`network-${n.id}`}
-            x={left + n.x!}
-            y={top + n.y! + nodeSize(n) + 17}
+            x={left + labelPositions[n.id].x + labelWidth(n.label,value(p,"fontSize",13))/2}
+            y={top + labelPositions[n.id].y}
             textAnchor="middle"
             fontSize={value(p, "fontSize", 13)}
           >

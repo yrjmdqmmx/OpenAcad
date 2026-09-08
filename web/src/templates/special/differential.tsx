@@ -1,4 +1,6 @@
 import React from "react";
+import { SizeLegend } from "./legends";
+import { placeLabels } from "../../core/labelLayout";
 import { scaleLinear, ticks } from "d3";
 import type {
   DataTable,
@@ -123,6 +125,7 @@ function Volcano({ project: p }: RendererProps) {
     .filter((v) => state(v) !== "未达阈值")
     .sort((a, b) => a.p - b.p)
     .slice(0, value(p, "labelCount", 8));
+  const labelPositions = placeLabels(selected.map(v => ({id:v.name, x:x(v.x)-left,y:y(v.y)-top,text:v.name,size:11})), iw, ih, pts.map(v => ({x:x(v.x)-left,y:y(v.y)-top})));
   const clip = `volcano-${p.id.replace(/[^a-z0-9]/gi, "")}`;
   const symbol = text(p, "volcanoShape", "circle");
   return (
@@ -220,11 +223,13 @@ function Volcano({ project: p }: RendererProps) {
         ))}
         {enabled(p, "showLabels") &&
           selected.map((v) => (
-            <text key={v.name} x={x(v.x) + 6} y={y(v.y) - 7} fontSize={11}>
-              {v.name}
-            </text>
+            <g key={v.name}>
+              <line x1={x(v.x)} y1={y(v.y)} x2={left+labelPositions[v.name].x} y2={top+labelPositions[v.name].y-4} stroke={color(v)} opacity={.5}/>
+              <text x={left+labelPositions[v.name].x} y={top+labelPositions[v.name].y} fontSize={11}>{v.name}</text>
+            </g>
           ))}
       </g>
+      {enabled(p,"showThresholds",true) && <text x={left} y={top+ih+55} fontSize={11}>阈值：|log₂FC| ≥ {fold}；P ≤ {threshold}</text>}
       {enabled(p, "showLegend") &&
         ["下调", "未达阈值", "上调"].map((label, i) => (
           <g
@@ -476,6 +481,7 @@ function Enrichment({ project: p }: RendererProps) {
           )}
         </g>
       ))}
+      {enabled(p,"showLegend") && !bar && <SizeLegend x={left} y={top+ih+91} max={maxCount} radius={n => Math.sqrt(n/maxCount)*rmax} title="Count（圆面积）"/>}
       <line
         x1={left}
         x2={left + iw}
@@ -639,9 +645,13 @@ function CircleEnrichment({
       </text>
       {enabled(p, "showLegend") && (
         <g>
-          <text x={left} y={top + ih + 27} fontSize={11}>
-            由外向内：类别 / Q 值 / 上调与下调比例 / 背景数
-          </text>
+          <text x={left} y={top + ih + 27} fontSize={11}>由外向内：类别 / Q 值 / 上下调比例 / 背景数（0–{maxBg}）</text>
+          <g transform={`translate(${left},${top+ih+78})`}>
+            <rect width={12} height={10} y={-8} fill={text(p,"upColor","#c96663")}/><text x={17} fontSize={10}>上调</text>
+            <rect x={62} width={12} height={10} y={-8} fill={text(p,"downColor","#4a8cb2")}/><text x={79} fontSize={10}>下调</text>
+            {Array.from({length:60},(_,i)=><rect key={i} x={150+i*2} y={-8} width={2.2} height={10} fill={qColor(i/59*value(p,"qColorMax",.05),p)}/>)}
+            <text x={150} y={17} fontSize={10}>Q = 0</text><text x={270} y={17} textAnchor="end" fontSize={10}>{value(p,"qColorMax",.05)}</text>
+          </g>
           {groups.map((g, i) => (
             <g
               key={g}

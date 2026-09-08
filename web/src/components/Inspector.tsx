@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Project, Template, Control } from "../core/types";
 import { defaults, palettes } from "../core/project";
+import { applyPalette, changeChartStyle, labelControl, paletteVisible, seriesPaletteVisible } from "../core/chartControls";
 const common: Control[] = [
   {
     key: "width",
@@ -90,20 +91,30 @@ export function Inspector({
 }) {
   const [unit, setUnit] = useState("px");
   const set = (key: string, value: unknown) =>
-    commit({ ...project, style: { ...project.style, [key]: value } });
+    commit(changeChartStyle(project, key, value));
   const controls = Array.from(
-    new Map([...common, ...template.controls].map((c) => [c.key, c])).values(),
-  ).filter((c) => !c.visible || c.visible(project));
+    new Map([...common, labelControl(template), ...template.controls].map((c) => [c.key, c])).values(),
+  ).filter((c) => !c.visible || c.visible(project)).map(c =>
+    project.templateId.startsWith("tree-") && ["width", "height"].includes(c.key)
+      ? { ...c, label: `最小${c.key === "width" ? "宽度" : "高度"}（像素）`, help: "内容超出时画布自动扩展；实际导出尺寸见图区下方。" }
+      : c,
+  );
   const optionValue = (c: Control) => {
     const options = c.optionsFor?.(project) ?? c.options ?? [];
     const current = String(project.style[c.key] ?? options[0]?.value ?? "");
     return c.optionsFor && !options.some(o => o.value === current) ? options[0]?.value ?? "" : current;
   };
-  const sections = Array.from(
-    new Set(controls.map((c) => c.section || "图表设置")),
-  );
+  const order = ["标题与文字", "配色与图形", "图形", "图表设置", "树布局", "坐标与得分"];
+  const sections = Array.from(new Set(controls.map(c => c.section || "图表设置"))).sort((a,b) => {
+    const rank = (s: string) => order.includes(s) ? order.indexOf(s) : s === "画布" ? 100 : 50;
+    return rank(a) - rank(b);
+  });
   return (
     <div className="inspector">
+      {sections.map((section) => (
+        <details open={!["画布", "坐标与文字", "坐标范围", "坐标断轴", "统计标注"].includes(section)} key={section} data-control-section={section}>
+          <summary>{section}</summary>
+          {section === "画布" && (
       <label className="control-row">
         <span>画布尺寸单位</span>
         <select value={unit} onChange={(e) => setUnit(e.target.value)}>
@@ -111,15 +122,14 @@ export function Inspector({
           <option value="mm">毫米</option>
         </select>
       </label>
-      {sections.map((section) => (
-        <details open key={section}>
-          <summary>{section}</summary>
+          )}
           {controls
             .filter((c) => (c.section || "图表设置") === section)
             .map((c) => (
               <label
                 className={`control-row ${c.type === "text" ? "text-control" : ""}`}
                 key={c.key}
+                data-control-key={c.key}
               >
                 <span>
                   {unit === "mm" && ["width", "height"].includes(c.key)
@@ -131,7 +141,7 @@ export function Inspector({
                   <input
                     type="checkbox"
                     role="switch"
-                    checked={!!project.style[c.key]}
+                    checked={c.key === "showBranchLengths" ? Boolean(project.style.showBranchLengths || project.style.showLabels) : !!project.style[c.key]}
                     onChange={(e) => set(c.key, e.target.checked)}
                   />
                 ) : c.type === "select" ? (
@@ -197,7 +207,7 @@ export function Inspector({
                 )}
               </label>
             ))}
-          {section === "配色与图形" && (
+          {section === "配色与图形" && paletteVisible(project) && (
             <>
               <label className="control-row">
                 <span>配色方案</span>
@@ -205,10 +215,7 @@ export function Inspector({
                   aria-label="配色方案"
                   value=""
                   onChange={(e) =>
-                    set(
-                      "palette",
-                      palettes[e.target.value as keyof typeof palettes],
-                    )
+                    commit({ ...project, style: applyPalette(project, palettes[e.target.value as keyof typeof palettes]) })
                   }
                 >
                   <option value="" disabled>
@@ -219,7 +226,7 @@ export function Inspector({
                   ))}
                 </select>
               </label>
-              <div className="swatches">
+              {seriesPaletteVisible(project) && <div className="swatches">
                 {project.style.palette.map((color, i) => (
                   <input
                     key={i}
@@ -236,7 +243,7 @@ export function Inspector({
                     }
                   />
                 ))}
-              </div>
+              </div>}
             </>
           )}
         </details>
@@ -255,7 +262,7 @@ export function Inspector({
       >
         恢复模板默认样式
       </button>
-      <p className="hint">恢复样式会保留当前数据，可用撤销恢复。</p>
+      <p className="hint">恢复样式会保留当前数据，可用撤销恢复。副标题中的模拟来源可在替换为自己的数据后修改。</p>
     </div>
   );
 }

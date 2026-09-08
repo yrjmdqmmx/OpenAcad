@@ -125,7 +125,7 @@ export function BarRenderer({
   }
   const groupColors = isGrouped || groups.length > 1;
   const legend = isCombo
-    ? ["柱数值", "折线数值"]
+    ? [String(s.barLegend || "柱数值"), String(s.lineLegend || "折线数值")]
     : groupColors
       ? groups
       : categories;
@@ -155,7 +155,7 @@ export function BarRenderer({
         });
         const vals = isStacked
           ? [...stackedPositions.values()].flat()
-          : data.flatMap((d) => [d.value - d.error, d.value + d.error]);
+          : data.flatMap((d) => [d.value - d.error, d.value + d.error, ...(isError && style.showPoints ? d.values : [])]);
         const domain = linearDomain(vals, style, horizontal ? "x" : "y", true);
         const vscale = numericScale(
           vals,
@@ -195,7 +195,7 @@ export function BarRenderer({
           <>
             <Axes
               g={g}
-              s={style}
+              s={{ ...style, _shortGroupTicks: kind === "bar-grouped-stacked" && Boolean(style.showGroupHeaders) }}
               x={x as any}
               y={y as any}
               rightY={right as any}
@@ -334,7 +334,7 @@ export function BarRenderer({
                     style,
                     groupColors ? d.group : d.category,
                   ),
-                  ci = groupColors ? groups.indexOf(d.group) : i,
+                  ci = isCombo ? 0 : groupColors ? groups.indexOf(d.group) : i,
                   fill = color(style, ci),
                   paint = patternFill(style, ci),
                   r = num(ss.pointSize, 5);
@@ -474,8 +474,8 @@ export function BarRenderer({
                           key={d.category + ":" + d.group}
                           {...props}
                           id={"bar:" + d.category + ":" + d.group}
-                          x={horizontal ? b + (d.value < 0 ? -7 : 7) : center}
-                          y={horizontal ? center : b + (d.value < 0 ? 18 : -8)}
+                          x={horizontal ? (isStacked ? b : vscale(d.value + (isError ? (d.value < 0 ? -d.error : d.error) : 0))) + (d.value < 0 ? -7 : 7) : center}
+                          y={horizontal ? center : (isStacked ? b : vscale(d.value + (isError ? (d.value < 0 ? -d.error : d.error) : 0))) + (d.value < 0 ? 18 : -8)}
                           anchor={
                             horizontal
                               ? d.value < 0
@@ -903,7 +903,7 @@ export function PieRenderer({
           .padAngle(num(s.slicePadding, 0.015));
         const slices = pie(a),
           max = Math.max(...a.map((r) => num(r["数值"])), 1);
-        const radial = d3.scaleLinear().domain([0, max]).range([inner, radius]);
+        const radial = (v: number) => Math.sqrt(inner * inner + (radius * radius - inner * inner) * v / max);
         return (
           <g
             data-part="marks"
@@ -911,7 +911,7 @@ export function PieRenderer({
           >
             {rose &&
               s.showGrid &&
-              radial.ticks(4).map((v) => (
+              d3.ticks(0, max, 4).map((v) => (
                 <g key={v}>
                   <circle
                     r={radial(v)}
@@ -1594,7 +1594,7 @@ export function UpSetRenderer(props: RendererProps) {
             .range([0, Math.max(30, left - 85)]);
         return (
           <g data-part="marks" transform={`translate(${g.left},${g.top})`}>
-            {y.ticks(4).map((v) => (
+            {y.ticks(4).filter(Number.isInteger).map((v) => (
               <g key={v} transform={`translate(0,${y(v)})`}>
                 <text
                   x={mainX - 8}
@@ -1705,7 +1705,7 @@ export function UpSetRenderer(props: RendererProps) {
             ))}
             <text
               x={mainX + w / 2}
-              y="-18"
+              y="-32"
               textAnchor="middle"
               fill={style.textColor}
             >

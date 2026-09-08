@@ -18,7 +18,7 @@ export { SpecialPanel, specialProjectIssues } from "./advanced";
 for (const template of specialTemplates) {
   template.controls = template.controls.map((c) => {
     const visible =
-      ["lowColor", "midColor", "highColor", "diverging"].includes(c.key) &&
+      ["lowColor", "midColor", "highColor", "diverging", "colorCenter"].includes(c.key) &&
       template.id === "bubble-matrix"
         ? (p: import("../../core/types").Project) =>
             !p.style.bubbleColorMode || p.style.bubbleColorMode === "continuous"
@@ -104,4 +104,16 @@ for (const template of specialTemplates) {
                                 : undefined;
     return visible ? { ...c, visible } : c;
   });
+}
+
+// Distinct labels identify distinct SVG consumers; persisted keys stay intact.
+for (const t of specialTemplates) {
+  for (const c of t.controls) {
+    if (c.key === "showValues") c.label = t.id.startsWith("enrichment-") ? "显示指标数值" : t.id === "packing" ? "显示项目数值" : t.id === "sankey" ? "节点显示流量" : "显示单元格数值";
+    if (["digits", "enrichDigits"].includes(c.key)) c.visible = p => Boolean(p.style.showValues);
+    if (c.key === "midColor" || c.key === "colorCenter") {
+      const previous = c.visible;
+      c.visible = p => (!previous || previous(p)) && p.style.diverging !== false;
+    }
+  }
 }

@@ -375,6 +375,23 @@ export function geometry(
     legendH: lh,
   };
 }
+
+function methodCaption(p: import("../../core/types").Project) {
+  const error = p.templateId.includes("error");
+  if (!error && !["box", "box-grouped", "violin", "raincloud", "ridgeline"].includes(p.templateId)) return "";
+  const rows = records(p.dataset);
+  const counts = new Map<string, number>();
+  for (const r of rows) {
+    const key = JSON.stringify([r["类别"], r["分组"]]);
+    counts.set(key, error && p.style.errorInput === "summary" ? Number(r["样本量"]) : (counts.get(key) || 0) + 1);
+  }
+  const ns = [...counts.values()];
+  if (!ns.length) return "";
+  const n = Math.min(...ns) === Math.max(...ns) ? `各组 n = ${ns[0]}` : `各组 n = ${Math.min(...ns)}–${Math.max(...ns)}（不等样本量）`;
+  const type = String(p.style.errorType || "sd");
+  return error ? `均值 ± ${{sd:"SD",se:"SE",ci:"95% t 置信区间"}[type] || type}；${n}` : n;
+}
+
 export function ChartFrame({
   project,
   legend = [],
@@ -387,8 +404,10 @@ export function ChartFrame({
   children: (g: ReturnType<typeof geometry>, s: ChartStyle) => React.ReactNode;
 }) {
   const id = React.useId().replace(/[^a-zA-Z0-9]/g, "");
+  const caption = methodCaption(project);
   const s = {
       ...effective(project),
+      subtitle: [effective(project).subtitle, caption].filter(Boolean).join(" · "),
       _layers: project.layers,
       _chartId: "basic" + id,
       _clipId: "basic" + id + "-clip",
@@ -708,7 +727,7 @@ export function Axes({
     tc = String(s.axisColor || s.textColor),
     gridOpacity = num(s.gridOpacity, 0.1);
   const valueText = (v: any, key: string) => {
-    if (typeof v !== "number") return String(v);
+    if (typeof v !== "number") return s._shortGroupTicks ? String(v).split(" · ").slice(1).join(" · ") || String(v) : String(v);
     const spec = String(s[key] || "");
     try {
       return spec ? d3.format(spec)(v) : format(v);
@@ -778,7 +797,7 @@ export function Axes({
                     {typeof v === "number"
                       ? valueText(v, "xTickFormat")
                       : wrap(
-                          String(v),
+                          valueText(v, "xTickFormat"),
                           Math.max(38, (x.bandwidth?.() ?? 80) - 5),
                           num(s.xTickFontSize, s.fontSize),
                         ).map((t, j) => (
@@ -816,9 +835,9 @@ export function Axes({
                   >
                     {typeof v === "number"
                       ? valueText(v, "yTickFormat")
-                      : String(v).length > 11
-                        ? String(v).slice(0, 10) + "…"
-                        : String(v)}
+                      : valueText(v,"yTickFormat").length > 11
+                        ? valueText(v,"yTickFormat").slice(0, 10) + "…"
+                        : valueText(v,"yTickFormat")}
                   </text>
                 </g>
               )}
@@ -1231,6 +1250,7 @@ export function ValueLabel({
   return (
     <text
       data-label-id={id}
+      stroke="none"
       x={at.x}
       y={at.y}
       textAnchor={anchor}

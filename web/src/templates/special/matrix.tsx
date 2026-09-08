@@ -1,4 +1,5 @@
 import React from "react";
+import { contrastText, SizeLegend } from "./legends";
 import {
   annotationSize,
   MatrixAnnotations,
@@ -726,6 +727,7 @@ function Matrix({ project }: RendererProps) {
               </text>
             </g>
           ))}
+          <SizeLegend x={0} y={52} max={maxAbs} radius={n => Math.sqrt(n / maxAbs) * Math.max(0, Math.min(cw,ch) - value(p,"cellGap",2)) / 2 * value(p,"bubbleScale",.86)} title="绝对值（圆面积）" />
         </>
       ) : binary ? (
         <>
@@ -766,11 +768,8 @@ function Matrix({ project }: RendererProps) {
               {fmt(min + (max - min) * x, digits)}
             </text>
           ))}
-          {bubble && (
-            <text x={242} y={4} fontSize={10}>
-              圆面积表示数值绝对值
-            </text>
-          )}
+          {bubble && <SizeLegend x={275} y={0} max={maxAbs}
+            radius={n => Math.sqrt(n / maxAbs) * Math.max(0, Math.min(cw,ch) - value(p,"cellGap",2)) / 2 * value(p,"bubbleScale",.86)} title="绝对值（圆面积）" /> }
         </>
       )}
     </g>
@@ -778,7 +777,7 @@ function Matrix({ project }: RendererProps) {
   if (circle) {
     const cx = left + iw / 2,
       cy = top + plotH / 2;
-    const outer = Math.max(30, Math.min(iw, plotH) * 0.4 - rowAnnotation);
+    const outer = Math.max(30, Math.min(iw, plotH) * 0.46 - rowAnnotation);
     const inner = Math.min(
       outer * 0.8,
       Math.max(value(p, "innerRadius", 55), clustering ? outer * 0.47 : 0),
@@ -874,6 +873,7 @@ function Matrix({ project }: RendererProps) {
                     y={pos[1]}
                     textAnchor="middle"
                     dominantBaseline="middle"
+                    fill={contrastText(scale(Number(v)), p.style.textColor)}
                     fontSize={Math.min(12, rw * 0.5)}
                   >
                     {fmt(Number(v), digits)}
@@ -1064,7 +1064,8 @@ function Matrix({ project }: RendererProps) {
                       y={y + (isCorr && enabled(p, "showStars", true) ? -3 : 0)}
                       dominantBaseline="middle"
                       textAnchor="middle"
-                      fontSize={Math.min(value(p, "fontSize", 13), ch * 0.3)}
+                      fill={contrastText(fill, p.style.textColor)}
+                      fontSize={Math.min(value(p, "fontSize", 13), ch * 0.28)}
                     >
                       {fmt(nv, digits)}
                     </text>
@@ -1072,7 +1073,8 @@ function Matrix({ project }: RendererProps) {
                   {isCorr && pv && enabled(p, "showStars", true) && !diag && (
                     <text
                       x={x}
-                      y={y + (enabled(p, "showValues", false) ? 12 : 4)}
+                      y={y + (enabled(p, "showValues", false) ? Math.min(ch * .28, 15) : 4)}
+                      fill={contrastText(fill, p.style.textColor)}
                       textAnchor="middle"
                       fontSize={12}
                     >
@@ -1108,6 +1110,7 @@ function Matrix({ project }: RendererProps) {
           ))}
       </g>
       {enabled(p, "showLegend") && legend}
+      {pv && enabled(p,"showLegend") && enabled(p,"showStars",true) && <text x={plotX} y={top + plotH + 102} fontSize={10}>* P &lt; 0.05；** P &lt; 0.01；*** P &lt; 0.001</text>}
       <AnnotationLegend
         project={p}
         x={plotX + 260}
@@ -1274,9 +1277,12 @@ function MantelLinks({
         </g>
       ))}
       {enabled(p, "showLegend") && (
-        <text x={matrixX - 225} y={matrixY + height + 61} fontSize={10}>
-          线宽：|Mantel r|；虚线：负相关
-        </text>
+        <g data-mantel-legend="true" transform={`translate(${matrixX - 225},${matrixY + height + 42})`}>
+          {[.2,.5,.8].map((r,i)=><g key={r} transform={`translate(${i*66},0)`}><line x2={30} stroke={p.style.textColor} strokeWidth={1+r*value(p,"linkWidthScale",8)}/><text x={34} y={3} fontSize={9}>{r}</text></g>)}
+          <text y={18} fontSize={9}>|Mantel r|；虚线表示负相关</text>
+          <line y1={32} y2={32} x2={25} stroke={text(p,"significantColor","#3d977f")} strokeWidth={3}/><text x={31} y={35} fontSize={9}>P &lt; 0.05</text>
+          <line x1={100} x2={125} y1={32} y2={32} stroke={text(p,"nonsignificantColor","#bec8ca")} strokeWidth={3}/><text x={131} y={35} fontSize={9}>P ≥ 0.05</text>
+        </g>
       )}
     </g>
   );
@@ -1305,7 +1311,7 @@ const analysisMethods = [
 const matrixHelp =
   "角色 matrix：单个宽表，第一列是唯一的行名称，其余各列是数值特征。所有数字单元格必填，不能包含单位文字；CSV/TSV 的第一行是列名。矩阵示例为自行模拟。";
 const correlationHelp =
-  "角色 correlation：第一列为变量名，后续数值为已经计算的相关系数，范围 −1～1。角色 pvalues 为可选 P 值矩阵（0～1），标签及顺序必须一致。普通相关矩阵要求对称方阵；组间矩阵可以是长方形。示例系数和 P 值仅是模拟结果，不是一次真实分析。";
+  "角色 correlation：第一列为变量名，后续数值为已经计算的相关系数，范围 −1～1。角色 pvalues 为可选 P 值矩阵（0～1），标签及顺序必须一致。普通相关矩阵要求对称方阵；组间矩阵可以是长方形。默认示例由固定种子模拟观测经 Pearson 检验计算；不能作为真实实验结论。";
 const source = (path: string) => [`https://www.chiplot.online/${path}.html`];
 export const matrixTemplates: Template[] = [
   createTemplate(
