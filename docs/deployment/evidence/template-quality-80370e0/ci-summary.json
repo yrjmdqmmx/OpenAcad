@@ -1,0 +1,78 @@
+{
+  "sourceRevision": "80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1",
+  "runId": 34178615830,
+  "url": "https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34178615830",
+  "status": "completed",
+  "conclusion": "success",
+  "createdAt": "2026-09-08T02:01:26Z",
+  "completedBy": "2026-09-08T02:18:27Z",
+  "jobs": [
+    {
+      "name": "web",
+      "databaseId": 101912904900,
+      "startedAt": "2026-09-08T02:01:29Z",
+      "completedAt": "2026-09-08T02:18:25Z",
+      "conclusion": "success",
+      "url": "https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34178615830/job/101912904900"
+    },
+    {
+      "name": "worker",
+      "databaseId": 101912905150,
+      "startedAt": "2026-09-08T02:01:30Z",
+      "completedAt": "2026-09-08T02:08:02Z",
+      "conclusion": "success",
+      "url": "https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34178615830/job/101912905150"
+    }
+  ],
+  "acceptance": {
+    "build": "passed",
+    "unit": {
+      "passed": 460,
+      "files": 13
+    },
+    "browser": {
+      "registered": 752,
+      "passed": 224,
+      "skipped": 528,
+      "failed": 0,
+      "flaky": 0,
+      "note": "One complete Linux run, four browser projects. Live API and platform-specific cases skipped by configuration; local 55-template/four-format acceptance is recorded separately."
+    },
+    "pythonRInkscape": {
+      "passed": 196
+    },
+    "releaseRecovery": {
+      "passed": 13
+    }
+  },
+  "artifacts": [
+    {
+      "id": 10038413318,
+      "name": "web-evidence",
+      "size_in_bytes": 212380028,
+      "digest": "sha256:b6c53d751d2f94b153d205e4b6a170d44159b6b96ed2287368b322c641d0ff4f",
+      "expired": false,
+      "created_at": "2026-09-08T02:18:23Z",
+      "expires_at": "2026-12-07T02:01:27Z"
+    },
+    {
+      "id": 10038214646,
+      "name": "worker-image",
+      "size_in_bytes": 792936283,
+      "digest": "sha256:885a0f2677062c38386fd0fdd4c14f531ecd4fc0b0ea6ddaf89fb43ceef91723",
+      "expired": false,
+      "created_at": "2026-09-08T02:07:55Z",
+      "expires_at": "2026-09-15T02:07:25Z"
+    },
+    {
+      "id": 10038178484,
+      "name": "worker-identity",
+      "size_in_bytes": 3539,
+      "digest": "sha256:ef288bcbd7c711121012e6edcb3bbcb49223e3349e071a6cabfe75546fb4f598",
+      "expired": false,
+      "created_at": "2026-09-08T02:05:56Z",
+      "expires_at": "2026-09-15T02:05:55Z"
+    }
+  ],
+  "deployment": "Not deployed"
+}

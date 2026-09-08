@@ -1,0 +1,10 @@
+{
+  "checkedOn": "2026-09-08",
+  "url": "https://openacad.xyz/version.json",
+  "response": {
+    "version": "1.1.0",
+    "revision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+    "builtAt": "2026-09-07T11:59:35.778Z"
+  },
+  "scope": "Read-only public version check; no deployment in this continuation."
+}
