@@ -1,4 +1,5 @@
 import React from "react";
+import { figureLines } from '../../core/FigureHeading';
 import { contrastText, SizeLegend } from "./legends";
 import {
   annotationSize,
@@ -714,7 +715,7 @@ function Matrix({ project }: RendererProps) {
     <g transform={`translate(${plotX},${top + plotH + 61})`}>
       {bubble && bubbleColorMode !== "continuous" ? (
         <>
-          <text y={-14} fontSize={10}>
+          <text y={-14} fontSize={p.style.publicationVersion ? 14 : 10}>
             圆面积表示数值绝对值；颜色按
             {bubbleColorMode === "row" ? "行" : "列"}分类
           </text>
@@ -732,7 +733,7 @@ function Matrix({ project }: RendererProps) {
       ) : binary ? (
         <>
           <circle cx={7} r={5} fill={pal[0]} />
-          <text x={19} y={4} fontSize={11}>
+          <text x={19} y={4} fontSize={p.style.publicationVersion ? 14 : 11}>
             1：存在
           </text>
           <circle
@@ -741,7 +742,7 @@ function Matrix({ project }: RendererProps) {
             fill={text(p, "absentColor", "#eef3f1")}
             stroke={pal[0]}
           />
-          <text x={119} y={4} fontSize={11}>
+          <text x={119} y={4} fontSize={p.style.publicationVersion ? 14 : 11}>
             0：缺失
           </text>
         </>
@@ -763,7 +764,7 @@ function Matrix({ project }: RendererProps) {
               x={x * 224}
               y={21}
               textAnchor={x === 0 ? "start" : x === 1 ? "end" : "middle"}
-              fontSize={10}
+              fontSize={p.style.publicationVersion ? 14 : 10}
             >
               {fmt(min + (max - min) * x, digits)}
             </text>
@@ -779,7 +780,7 @@ function Matrix({ project }: RendererProps) {
       cy = top + plotH / 2;
     const outer = Math.max(30, Math.min(iw, plotH) * 0.46 - rowAnnotation);
     const inner = Math.min(
-      outer * 0.8,
+      outer * (p.style.publicationVersion ? .52 : .8),
       Math.max(value(p, "innerRadius", 55), clustering ? outer * 0.47 : 0),
     );
     const start = (value(p, "startAngle", -90) * Math.PI) / 180,
@@ -857,7 +858,7 @@ function Matrix({ project }: RendererProps) {
                   Math.cos(start + (i + 0.5) * da) > 0 ? "start" : "end"
                 }
                 dominantBaseline="middle"
-                fontSize={11}
+                fontSize={p.style.publicationVersion ? 16 : 11}
               >
                 {String(r[0])}
               </text>
@@ -882,7 +883,7 @@ function Matrix({ project }: RendererProps) {
               })}
           </g>
         ))}
-        {!clustering && (
+        {!clustering && !p.style.publicationVersion && (
           <>
             <text x={cx} y={cy - 8} textAnchor="middle" fontSize={12}>
               由内向外
@@ -900,6 +901,11 @@ function Matrix({ project }: RendererProps) {
             ))}
           </>
         )}
+        {Boolean(p.style.publicationVersion) && <g>
+          <text x={cx} y={cy-8} textAnchor="middle" fontSize={Math.min(16, inner*.42)}>{n} 个样本</text>
+          <text x={cx} y={cy+16} textAnchor="middle" fontSize={Math.min(14, inner*.38)}>{m} 个变量</text>
+          <text x={left} y={top+plotH+28} fontSize={14}>{'由内向外：'+t.columns.slice(1).join(' / ')}</text>
+        </g>}
         {clustering && (
           <text x={cx} y={top + plotH + 30} textAnchor="middle" fontSize={10}>
             <title>{`${t.columns.slice(1).join(" / ")}`}</title>
@@ -1065,7 +1071,7 @@ function Matrix({ project }: RendererProps) {
                       dominantBaseline="middle"
                       textAnchor="middle"
                       fill={contrastText(fill, p.style.textColor)}
-                      fontSize={Math.min(value(p, "fontSize", 13), ch * 0.28)}
+                      fontSize={Math.min(value(p, "fontSize", 13), ch * (p.style.publicationVersion ? .38 : .28), cw * .28)}
                     >
                       {fmt(nv, digits)}
                     </text>
@@ -1092,7 +1098,7 @@ function Matrix({ project }: RendererProps) {
                 dominantBaseline="middle"
                 fontSize={Math.min(value(p, "fontSize", 13), ch * 0.7)}
               >
-                {String(r[0])}
+                {p.style.publicationVersion ? figureLines(String(r[0]),Math.max(40,left-26),Math.min(p.style.fontSize,ch*.7)).map((line,k,lines)=><tspan key={k} x={-rowAnnotation-(clustering?90:10)} dy={k? p.style.fontSize*1.15 : -(lines.length-1)*p.style.fontSize*.575}>{line}</tspan>) : String(r[0])}
               </text>
             )}
           </g>
@@ -1105,7 +1111,7 @@ function Matrix({ project }: RendererProps) {
               textAnchor={angle === 0 ? "middle" : angle < 0 ? "end" : "start"}
               fontSize={Math.min(value(p, "fontSize", 13), cw * 0.35)}
             >
-              {c}
+              {p.style.publicationVersion && angle===0 ? figureLines(c,cw-8,Math.min(p.style.fontSize,cw*.35)).map((line,k)=><tspan x={0} dy={k?p.style.fontSize*1.2:0} key={k}>{line}</tspan>) : c}
             </text>
           ))}
       </g>

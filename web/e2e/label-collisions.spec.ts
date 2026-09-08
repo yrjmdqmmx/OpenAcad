@@ -6,6 +6,7 @@ test('雷达图相近数值与径向刻度无重叠，字体切换不移动数�
   await page.setViewportSize({ width: 1600, height: 1000 });
   await page.goto('/#template/radar');
   await page.getByRole('button', { name: '用示例开始', exact: true }).click();
+  await page.locator('[data-control-key="showLabels"] input').check();
   const svg = page.locator('.figure-paper svg[data-chart]').first();
   const polygons = await svg.locator('polygon').evaluateAll(es => es.map(e => e.getAttribute('points')));
   for (const family of ['Noto Sans SC', 'Noto Serif CJK SC']) {
@@ -27,6 +28,7 @@ test('雷达图手动数值标签位置随旧格式项目往返', async ({ page 
   test.skip(info.project.name !== 'chromium');
   await page.goto('/#template/radar');
   await page.getByRole('button', { name: '用示例开始', exact: true }).click();
+  await page.locator('[data-control-key="showLabels"] input').check();
   const label = page.locator('[data-label-id^="radar:"]').first();
   const before = await label.getAttribute('x'), box = await label.boundingBox();
   await page.mouse.move(box!.x + box!.width / 2, box!.y + box!.height / 2);
@@ -48,6 +50,7 @@ for (const id of ['radar', 'gene-cluster']) test(`${id} 保留全部标签保存
   await mkdir(folder, { recursive: true });
   await page.goto(`/#template/${id}`);
   await page.getByRole('button', { name: '用示例开始', exact: true }).click();
+  if (id === 'radar') await page.locator('[data-control-key="showLabels"] input').check();
   const svg = page.locator('.figure-paper svg[data-chart]').first();
   if (id === 'radar') await expect(svg.locator('[data-label-id^="radar:"]')).toHaveCount(10);
   await page.evaluate(() => document.fonts.ready);

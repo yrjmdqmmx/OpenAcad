@@ -1,4 +1,5 @@
 import React from "react";
+import { figureLines } from '../../core/FigureHeading';
 import { SizeLegend } from "./legends";
 import { placeLabels } from "../../core/labelLayout";
 import { scaleLinear, ticks } from "d3";
@@ -125,7 +126,8 @@ function Volcano({ project: p }: RendererProps) {
     .filter((v) => state(v) !== "未达阈值")
     .sort((a, b) => a.p - b.p)
     .slice(0, value(p, "labelCount", 8));
-  const labelPositions = placeLabels(selected.map(v => ({id:v.name, x:x(v.x)-left,y:y(v.y)-top,text:v.name,size:11})), iw, ih, pts.map(v => ({x:x(v.x)-left,y:y(v.y)-top})));
+  const labelSize = p.style.publicationVersion ? Math.min(15, p.style.fontSize) : 11;
+  const labelPositions = placeLabels(selected.map(v => ({id:v.name, x:x(v.x)-left,y:y(v.y)-top,text:v.name,size:labelSize})), iw, ih, pts.map(v => ({x:x(v.x)-left,y:y(v.y)-top})));
   const clip = `volcano-${p.id.replace(/[^a-z0-9]/gi, "")}`;
   const symbol = text(p, "volcanoShape", "circle");
   return (
@@ -144,7 +146,7 @@ function Volcano({ project: p }: RendererProps) {
             y2={enabled(p, "showGrid") ? top : top + ih + 5}
             stroke="#e5ebed"
           />
-          <text x={x(v)} y={top + ih + 24} textAnchor="middle" fontSize={11}>
+          <text x={x(v)} y={top + ih + 24} textAnchor="middle" fontSize={labelSize}>
             {fmt(v)}
           </text>
         </g>
@@ -158,7 +160,7 @@ function Volcano({ project: p }: RendererProps) {
             y2={y(v)}
             stroke="#e5ebed"
           />
-          <text x={left - 12} y={y(v) + 4} textAnchor="end" fontSize={11}>
+          <text x={left - 12} y={y(v) + 4} textAnchor="end" fontSize={labelSize}>
             {fmt(v)}
           </text>
         </g>
@@ -215,6 +217,8 @@ function Volcano({ project: p }: RendererProps) {
             ) : (
               <circle
                 r={p.style.pointSize}
+                stroke={p.style.publicationVersion ? "#ffffff" : undefined}
+                strokeWidth={p.style.publicationVersion ? .5 : undefined}
                 fill={color(v)}
                 fillOpacity={value(p, "pointOpacity", 0.8)}
               />
@@ -225,16 +229,16 @@ function Volcano({ project: p }: RendererProps) {
           selected.map((v) => (
             <g key={v.name}>
               <line x1={x(v.x)} y1={y(v.y)} x2={left+labelPositions[v.name].x} y2={top+labelPositions[v.name].y-4} stroke={color(v)} opacity={.5}/>
-              <text x={left+labelPositions[v.name].x} y={top+labelPositions[v.name].y} fontSize={11}>{v.name}</text>
+              <text x={left+labelPositions[v.name].x} y={top+labelPositions[v.name].y} fontSize={labelSize}>{v.name}</text>
             </g>
           ))}
       </g>
-      {enabled(p,"showThresholds",true) && <text x={left} y={top+ih+55} fontSize={11}>阈值：|log₂FC| ≥ {fold}；P ≤ {threshold}</text>}
+      {enabled(p,"showThresholds",true) && <text x={left} y={top+ih+(p.style.publicationVersion ? 86 : 55)} fontSize={labelSize}>阈值：|log₂FC| ≥ {fold}；P ≤ {threshold}</text>}
       {enabled(p, "showLegend") &&
         ["下调", "未达阈值", "上调"].map((label, i) => (
           <g
             key={label}
-            transform={`translate(${left + iw - 310 + i * 110},${top - 18})`}
+            transform={`translate(${p.style.publicationVersion ? left + i * Math.min(190, iw/3) : left + iw - 310 + i * 110},${top - 18})`}
           >
             <circle
               r={5}
@@ -246,7 +250,7 @@ function Volcano({ project: p }: RendererProps) {
                     : text(p, "neutralColor", "#c6cdd0")
               }
             />
-            <text x={11} y={4} fontSize={11}>
+            <text x={11} y={4} fontSize={labelSize}>
               {label}（{pts.filter((v) => state(v) === label).length}）
             </text>
           </g>
@@ -415,7 +419,7 @@ function Enrichment({ project: p }: RendererProps) {
             y2={top + ih}
             stroke={enabled(p, "showGrid") ? "#e3e9ec" : "none"}
           />
-          <text x={x(v)} y={top + ih + 22} textAnchor="middle" fontSize={11}>
+          <text x={x(v)} y={top + ih + 22} textAnchor="middle" fontSize={p.style.publicationVersion ? 14 : 11}>
             {fmt(v, 3)}
           </text>
         </g>
@@ -440,9 +444,9 @@ function Enrichment({ project: p }: RendererProps) {
               x={left - 13}
               y={top + (i + 0.5) * dy + 4}
               textAnchor="end"
-              fontSize={Math.min(p.style.fontSize, dy * 0.4)}
+              fontSize={Math.min(p.style.fontSize, dy * (p.style.publicationVersion ? .5 : .4))}
             >
-              {r.name.slice(0, value(p, "labelLength", 20))}
+              {p.style.publicationVersion ? figureLines(r.name.slice(0,value(p,'labelLength',20)),left-35,Math.min(p.style.fontSize,dy*.5)).map((line,k,lines)=><tspan key={k} x={left-13} dy={k?p.style.fontSize*1.15:-(lines.length-1)*p.style.fontSize*.575}>{line}</tspan>) : r.name.slice(0, value(p, "labelLength", 20))}
             </text>
           )}
           {bar ? (
@@ -474,7 +478,7 @@ function Enrichment({ project: p }: RendererProps) {
             <text
               x={x(val(r)) + rmax + 5}
               y={top + (i + 0.5) * dy + 4}
-              fontSize={11}
+              fontSize={p.style.publicationVersion ? 14 : 11}
             >
               {fmt(val(r), 3)}
             </text>
@@ -505,14 +509,14 @@ function Enrichment({ project: p }: RendererProps) {
               fill={qColor((i / 59) * value(p, "qColorMax", 0.05), p)}
             />
           ))}
-          <text x={0} y={-13} fontSize={10}>
+          <text x={0} y={-13} fontSize={p.style.publicationVersion ? 13 : 10}>
             Q = 0
           </text>
-          <text x={120} y={-13} textAnchor="end" fontSize={10}>
+          <text x={120} y={-13} textAnchor="end" fontSize={p.style.publicationVersion ? 13 : 10}>
             {value(p, "qColorMax", 0.05)}
           </text>
           {!bar && (
-            <text x={136} y={0} fontSize={10}>
+            <text x={136} y={0} fontSize={p.style.publicationVersion ? 13 : 10}>
               面积：Count
             </text>
           )}
@@ -526,7 +530,7 @@ function Enrichment({ project: p }: RendererProps) {
               transform={`translate(${left + (i % 3) * 150},${top - 55 - Math.floor(i / 3) * 17})`}
             >
               <rect y={-7} width={8} height={8} fill={pal[i % pal.length]} />
-              <text x={13} fontSize={10}>
+              <text x={13} fontSize={p.style.publicationVersion ? 13 : 10}>
                 {c}
               </text>
             </g>
@@ -560,6 +564,7 @@ function CircleEnrichment({
     cy = top + ih / 2,
     outer = Math.min(iw, ih) * 0.38,
     inner = outer * 0.37,
+    trackScale = p.style.publicationVersion ? Math.min(1, outer / 180) : 1,
     pal = palette(p),
     groups = Array.from(new Set(rows.map((r) => r.group))),
     gap = (value(p, "enrichSectorGap", 3) * Math.PI) / 180,
@@ -578,19 +583,19 @@ function CircleEnrichment({
           <g key={r.id}>
             <title>{`${r.name}；Q=${r.q}；背景=${r.background}；上调=${r.up}；下调=${r.down}；比例=${r.ratio}`}</title>
             <path
-              d={wedge(cx, cy, outer - 12, outer, a, b)}
+              d={wedge(cx, cy, outer - 12*trackScale, outer, a, b)}
               fill={pal[groups.indexOf(r.group) % pal.length]}
             />
             <path
-              d={wedge(cx, cy, outer - 40, outer - 17, a, b)}
+              d={wedge(cx, cy, outer - 40*trackScale, outer - 17*trackScale, a, b)}
               fill={qColor(r.q, p)}
             />
             <path
-              d={wedge(cx, cy, outer - 71, outer - 47, a, upAngle)}
+              d={wedge(cx, cy, outer - 71*trackScale, outer - 47*trackScale, a, upAngle)}
               fill={text(p, "upColor", "#c96663")}
             />
             <path
-              d={wedge(cx, cy, outer - 71, outer - 47, upAngle, b)}
+              d={wedge(cx, cy, outer - 71*trackScale, outer - 47*trackScale, upAngle, b)}
               fill={text(p, "downColor", "#4a8cb2")}
             />
             <path
@@ -598,7 +603,7 @@ function CircleEnrichment({
                 cx,
                 cy,
                 inner,
-                inner + ((outer - 80 - inner) * r.background) / maxBg,
+                inner + ((outer - 80*trackScale - inner) * r.background) / maxBg,
                 a,
                 b,
               )}
@@ -637,20 +642,20 @@ function CircleEnrichment({
           </g>
         );
       })}
-      <text x={cx} y={cy - 8} textAnchor="middle" fontWeight="bold">
+      <text x={cx} y={cy - 8} textAnchor="middle" fontWeight="bold" fontSize={p.style.publicationVersion ? Math.min(p.style.fontSize,inner*.42) : undefined}>
         富集结果
       </text>
-      <text x={cx} y={cy + 14} textAnchor="middle" fontSize={11}>
+      <text x={cx} y={cy + 14} textAnchor="middle" fontSize={p.style.publicationVersion ? Math.min(14,inner*.38) : 11}>
         {rows.length} 个条目
       </text>
       {enabled(p, "showLegend") && (
         <g>
-          <text x={left} y={top + ih + 27} fontSize={11}>由外向内：类别 / Q 值 / 上下调比例 / 背景数（0–{maxBg}）</text>
+          <text x={left} y={top + ih + 27} fontSize={p.style.publicationVersion ? 14 : 11}>由外向内：类别 / Q 值 / 上下调比例 / 背景数（0–{maxBg}）</text>
           <g transform={`translate(${left},${top+ih+78})`}>
-            <rect width={12} height={10} y={-8} fill={text(p,"upColor","#c96663")}/><text x={17} fontSize={10}>上调</text>
-            <rect x={62} width={12} height={10} y={-8} fill={text(p,"downColor","#4a8cb2")}/><text x={79} fontSize={10}>下调</text>
+            <rect width={12} height={10} y={-8} fill={text(p,"upColor","#c96663")}/><text x={17} fontSize={p.style.publicationVersion ? 13 : 10}>上调</text>
+            <rect x={62} width={12} height={10} y={-8} fill={text(p,"downColor","#4a8cb2")}/><text x={79} fontSize={p.style.publicationVersion ? 13 : 10}>下调</text>
             {Array.from({length:60},(_,i)=><rect key={i} x={150+i*2} y={-8} width={2.2} height={10} fill={qColor(i/59*value(p,"qColorMax",.05),p)}/>)}
-            <text x={150} y={17} fontSize={10}>Q = 0</text><text x={270} y={17} textAnchor="end" fontSize={10}>{value(p,"qColorMax",.05)}</text>
+            <text x={150} y={17} fontSize={p.style.publicationVersion ? 13 : 10}>Q = 0</text><text x={270} y={17} textAnchor="end" fontSize={p.style.publicationVersion ? 13 : 10}>{value(p,"qColorMax",.05)}</text>
           </g>
           {groups.map((g, i) => (
             <g
@@ -658,7 +663,7 @@ function CircleEnrichment({
               transform={`translate(${left + i * 140},${top + ih + 49})`}
             >
               <circle r={5} fill={pal[i % pal.length]} />
-              <text x={11} y={4} fontSize={10}>
+              <text x={11} y={4} fontSize={p.style.publicationVersion ? 13 : 10}>
                 {g}
               </text>
             </g>

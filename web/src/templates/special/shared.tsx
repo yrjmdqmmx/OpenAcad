@@ -1,4 +1,5 @@
 import React from "react";
+import { FigureHeading, headingMetrics, figureTextWidth } from '../../core/FigureHeading';
 import { controlDefaults } from "./controlDefaults";
 import type {
   ChartStyle,
@@ -201,7 +202,7 @@ export function dimensions(p: Project) {
     h = Math.max(240, finite(s.height, 680)),
     left = Math.max(0, finite(s.marginLeft, 90)),
     right = Math.max(0, finite(s.marginRight, 44)),
-    top = Math.max(0, finite(s.marginTop, 88)),
+    top = Math.max(0, finite(s.marginTop, 88), s.publicationVersion ? headingMetrics(s, w).height + 8 : 0),
     bottom = Math.max(0, finite(s.marginBottom, 78));
   return {
     w,
@@ -258,7 +259,7 @@ export function Frame({
       {!s.transparent && (
         <rect width={w} height={h} fill={s.background || "#ffffff"} />
       )}
-      <text
+      {s.publicationVersion ? <FigureHeading style={s} width={w} /> : <><text
         x={w / 2}
         y={35}
         textAnchor="middle"
@@ -279,6 +280,7 @@ export function Frame({
           {s.subtitle}
         </text>
       )}
+      </>}
       <g fill={s.textColor || "#243947"} opacity={s.opacity ?? 1}>
         {children}
       </g>
@@ -312,12 +314,19 @@ export function categoryLegend(
   y: number,
 ) {
   const pal = palette(p);
+  let cursor = 0, row = 0;
+  const size = p.style.publicationVersion ? Math.min(15, p.style.fontSize) : 11;
+  const entries = names.map((name, i) => {
+    const width = figureTextWidth(name, size) + 40;
+    if (cursor && cursor + width > p.style.width - x - 30) {cursor = 0; row++;}
+    const entry = {name, i, x:cursor, y:row*(size+14)}; cursor += width; return entry;
+  });
   return enabled(p, "showLegend") ? (
     <g transform={`translate(${x},${y})`}>
-      {names.map((name, i) => (
+      {entries.map(({name, i, x: at, y: down}) => (
         <g
           key={name}
-          transform={`translate(${(i % 4) * 165},${Math.floor(i / 4) * 21})`}
+          transform={`translate(${p.style.publicationVersion ? at : (i % 4)*165},${p.style.publicationVersion ? down : Math.floor(i/4)*21})`}
         >
           <rect
             width={10}
@@ -326,7 +335,7 @@ export function categoryLegend(
             y={-8}
             fill={pal[i % pal.length]}
           />
-          <text x={16} fontSize={11}>
+          <text x={16} fontSize={size}>
             {name}
           </text>
         </g>

@@ -6,14 +6,17 @@ import { exampleWorkbook } from "../core/data";
  * raw correlation observations in the registry are separate, alternate examples. */
 export function makeDetailProject(template: Template): Project {
   const project = makeProject(template);
-  project.dataset.tables = project.dataset.tables.filter((table) => !table.role.startsWith("raw-"));
+  // These new examples carry the actual observations/memberships used in their
+  // tests. Keep that audit trail in projects, while the guide shows plot inputs.
+  if (template.id !== 'volcano' && !template.id.startsWith('enrichment-'))
+    project.dataset.tables = project.dataset.tables.filter((table) => !table.role.startsWith("raw-"));
   if (project.dataset.tables.length) project.dataset = { tables: project.dataset.tables };
   return project;
 }
 
 export function detailExampleDownload(template: Template, project: Project) {
   if (project.dataset.tables.length) {
-    return { name: `${template.name}-示例数据.xlsx`, blob: exampleWorkbook(project.dataset) };
+    return { name: `${template.name}-示例数据.xlsx`, blob: exampleWorkbook({...project.dataset, tables:project.dataset.tables.filter(t=>!t.role.startsWith('raw-'))}) };
   }
   const extension = project.dataset.format === "newick" ? "nwk" : project.dataset.format || "txt";
   return {
@@ -53,7 +56,7 @@ const roles: Record<string, { description: string; fields: Record<string, FieldD
     id: uniqueId("蛋白序列标识与行标签。"), length: field("正整数，单位为氨基酸", "完整蛋白长度，决定序列横线及区间边界。"),
   } },
   segments: { description: "每行一个已计算的结构域或基序区间，sequence 与序列长度表关联。", fields: {
-    sequence: text("必须匹配 sequences 表中的 id，决定所在蛋白行。"), name: text("片段显示名称。"), start: position("片段起点；不得大于 end。"), end: position("片段终点；不得超过对应序列的 length。"), category: text("片段颜色与图例分类。"), significance: field("非负 E 值或 P 值，可用科学计数法", "用于显著性筛选，不重新计算命中。"),
+    sequence: text("必须匹配 sequences 表中的 id，决定所在蛋白行。"), name: text("片段显示名称。"), start: position("片段起点；不得大于 end。"), end: position("片段终点；不得超过对应序列的 length。"), category: text("片段颜色与图例分类。"), significance: field("非负 E 值或 P 值，可留空", "已有检验结果用于筛选；空白表示未提供，仅在默认阈值 1 时显示，不视为显著。"),
   } },
   chromosomes: { description: "每行一条染色体，其他工作表中的染色体名称必须引用这里的 id。", fields: {
     id: uniqueId("染色体标识与图中标签。"), length: field("正整数，单位为碱基", "染色体长度或明确给定的绘图范围，限制所有引用区间。"),
@@ -71,7 +74,7 @@ const roles: Record<string, { description: string; fields: Record<string, FieldD
     chromosome: text("引用 chromosomes 表中的 id。"), id: uniqueId("基因标识，供配对表引用。"), start: position("基因起点。"), end: position("基因终点，满足 start ≤ end 且不超过染色体范围。"),
   } },
   "synteny-links": { description: "每行一对已计算的共线性基因，不从坐标自行预测共线性。", fields: {
-    source: text("来源基因 id，引用基因坐标表。"), target: text("目标基因 id，引用基因坐标表。"), block: text("共线性区块名称，区分配对所属区块。"), evalue: field("非负数字，可用科学计数法", "已有配对显著性结果，参与筛选。"),
+    source: text("来源基因 id，引用基因坐标表。"), target: text("目标基因 id，引用基因坐标表。"), block: text("共线性区块名称，区分配对所属区块。"), evalue: field("非负数字，可留空", "已有配对检验结果参与筛选；空白表示未提供，仅在默认阈值 1 时显示。"),
   } },
   mantel: { description: "每行一项已有 Mantel 结果；target 必须匹配上方矩阵的环境变量名。", fields: {
     source: text("群落名称，决定矩阵外连线起点。"), target: text("环境变量名称，必须出现在系数矩阵中。"), r: field("−1～1 的数字", "Mantel 系数，绝对值映射线宽，符号可用虚线表示。"), p: field("0～1 的数字", "Mantel P 值，决定显著性线色。"),
@@ -79,6 +82,7 @@ const roles: Record<string, { description: string; fields: Record<string, FieldD
 };
 
 export function sheetDescription(template: Template, table: DataTable): string {
+  if (table.role.startsWith('raw-')) return '计算依据：保留生成示例结果的模拟原始输入或检验明细；当前结果输入模式不随本表编辑重新计算。';
   if (table.role === "data") return template.id === "upset"
     ? "长表：一行记录一个成员属于哪个集合；同一成员可在多行引用不同集合。"
     : "第一行是列名，下方每行一条记录。列顺序可按字段映射调整，含义须与列名一致。";
@@ -99,6 +103,11 @@ export function sheetDescription(template: Template, table: DataTable): string {
 }
 
 export function describeField(template: Template, table: DataTable, column: string): FieldDescription {
+  if (table.role === 'raw-expression') return column === 'id' ? uniqueId('关联结果表的模拟基因。') : number('此独立模拟样本的 log₂ 表达量，供复核 Welch 检验。');
+  if (table.role === 'raw-universe') return uniqueId('检验背景中的模拟基因；所有行共同定义背景集合。');
+  if (table.role === 'raw-study') return column === 'gene' ? uniqueId('模拟输入基因，必须属于背景集合。') : text('模拟指定的方向，用于核对圈图上下调计数。');
+  if (table.role === 'raw-membership') return text(column === 'gene' ? '模拟通路成员，引用背景基因。' : '虚构 SIM 通路标识，引用结果表 ID。');
+  if (table.role === 'raw-tests') return column === 'term' ? uniqueId('结果表 ID。') : field('0～1 的数字', column === 'Pvalue' ? '实际超几何检验的单侧 P 值。' : '对全部八个通路进行 BH 校正的 Q 值。');
   const index = table.columns.indexOf(column);
   if (table.role === "data") {
     const optional = ["名称", "样本", "大小"].includes(column) ? "可选" : "必填";

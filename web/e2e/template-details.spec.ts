@@ -115,7 +115,8 @@ for (const id of ["bar-grouped", "network", "correlation", "protein-domains", "p
       const svg = await readFile((await exportFile.path())!, "utf8");
       expect(svg).toContain("<svg");
       expect(svg).toContain(String(expected.tables[0].rows[0][2]));
-      expect(svg).not.toMatch(/NaN|Infinity/);
+      // Binary font data can contain these ASCII sequences by coincidence.
+      expect(svg.replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, '')).not.toMatch(/NaN|Infinity/);
     }
   });
 }

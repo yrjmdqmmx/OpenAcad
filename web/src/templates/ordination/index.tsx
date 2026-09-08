@@ -218,7 +218,7 @@ function Ordination({ project, ...props }: RendererProps) {
                 >
                   <PointGlyph
                     r={style.pointSize}
-                    shape={style.pointShape}
+                    shape={style.pointShape === 'group' ? ['circle','square','triangle','diamond','cross'][groups.indexOf(annotation[labels[i]]?.group || '样本') % 5] : style.pointShape}
                     fill={color(
                       style,
                       groups.indexOf(annotation[labels[i]]?.group || "样本"),
@@ -378,7 +378,7 @@ export const ordinationTemplates: Template[] = Object.entries(names).map(
           key: "pointShape",
           label: "样本点形状",
           type: "select",
-          options: symbolNames.map(([value, label]) => ({ value, label })),
+          options: [{value:'group',label:'按分组区分点形'}, ...symbolNames.map(([value, label]) => ({ value, label }))],
           section: "坐标与得分",
         },
         {

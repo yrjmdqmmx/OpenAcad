@@ -202,7 +202,7 @@ function MapRenderer({ project: p }: RendererProps) {
                 <text
                   x={radius + 4}
                   y={3}
-                  fontSize={11}
+                  fontSize={p.style.publicationVersion ? 14 : 11}
                   paintOrder="stroke"
                   stroke="#ffffff"
                   strokeWidth={2}
@@ -221,7 +221,7 @@ function MapRenderer({ project: p }: RendererProps) {
             transform={`translate(${left + i * 140},${top + ih + 28})`}
           >
             <circle r={5} fill={pal[i % pal.length]} />
-            <text x={12} y={4} fontSize={11}>
+            <text x={12} y={4} fontSize={p.style.publicationVersion ? 14 : 11}>
               {g}
             </text>
           </g>

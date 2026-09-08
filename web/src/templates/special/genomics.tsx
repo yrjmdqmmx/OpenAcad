@@ -453,7 +453,7 @@ function Circos({ project: p }: RendererProps) {
               y={point(cx, cy, R + 24, (c.a + c.b) / 2)[1]}
               textAnchor="middle"
               dominantBaseline="middle"
-              fontSize={12}
+              fontSize={p.style.publicationVersion ? 15 : 12}
             >
               {c.id}
             </text>
@@ -701,10 +701,10 @@ function Circos({ project: p }: RendererProps) {
           </g>
         ))}
       {enabled(p,"showLegend") && <g transform={`translate(${left},${top+ih+75})`}>
-        {[...(enabled(p,"showGCContent",true)?[["GC 含量",text(p,"gcColor","#3b9aa0")]]:[]),...(enabled(p,"showGCSkew",true)?[["GC 偏斜 > 0",text(p,"skewPositive","#9772aa")],["GC 偏斜 < 0",text(p,"skewNegative","#69a36f")]]:[])].map(([label,c],i)=><g key={label} transform={`translate(${i*150},0)`}><rect width={10} height={10} y={-8} fill={c}/><text x={16} fontSize={10}>{label}</text></g>)}
+        {[...(enabled(p,"showGCContent",true)?[["GC 含量",text(p,"gcColor","#3b9aa0")]]:[]),...(enabled(p,"showGCSkew",true)?[["GC 偏斜 > 0",text(p,"skewPositive","#9772aa")],["GC 偏斜 < 0",text(p,"skewNegative","#69a36f")]]:[])].map(([label,c],i)=><g key={label} transform={`translate(${i*150},0)`}><rect width={10} height={10} y={-8} fill={c}/><text x={16} fontSize={p.style.publicationVersion ? 13 : 10}>{label}</text></g>)}
       </g>}
       {enabled(p, "showLegend") && (
-        <text x={cx} y={top + ih + 35} textAnchor="middle" fontSize={11}>
+        <text x={cx} y={top + ih + 35} textAnchor="middle" fontSize={p.style.publicationVersion ? 14 : 11}>
           外圈：序列长度 (bp)；GC 含量：0–100%；GC 偏斜：−1–1（中线为 0）
         </text>
       )}
@@ -861,7 +861,8 @@ function syntenyIssues(d: Dataset, raw = false): Issue[] {
             `找不到基因“${r[links.columns.indexOf(k)]}”`,
           ),
         );
-    numericCell(links, i, links.columns.indexOf("evalue"), issues, { min: 0 });
+    if(String(r[links.columns.indexOf("evalue")] ?? '').trim())
+      numericCell(links, i, links.columns.indexOf("evalue"), issues, { min: 0 });
   });
   return issues;
 }
@@ -920,7 +921,9 @@ function Synteny({ project: p, onLayoutChange }: RendererProps) {
     ]),
   );
   const links = lt.rows.filter(
-      (r) => Number(at(lt, r, "evalue")) <= value(p, "syntenyEvalue", 1),
+      (r) => String(at(lt,r,"evalue") ?? '').trim()
+        ? Number(at(lt, r, "evalue")) <= value(p, "syntenyEvalue", 1)
+        : value(p, "syntenyEvalue", 1) >= 1,
     ),
     blocks = Array.from(new Set(links.map((r) => String(at(lt, r, "block")))));
   const pointerX = (e: React.PointerEvent<SVGGElement>) => {
@@ -966,7 +969,7 @@ function Synteny({ project: p, onLayoutChange }: RendererProps) {
             strokeWidth={value(p, "syntenyLineWidth", 2)}
             opacity={value(p, "syntenyLinkOpacity", 0.3)}
           >
-            <title>{`${a.id} ↔ ${b.id}；${at(lt, r, "block")}；E=${at(lt, r, "evalue")}`}</title>
+            <title>{`${a.id} ↔ ${b.id}；${at(lt, r, "block")}；${String(at(lt,r,"evalue") ?? '').trim() ? 'E='+at(lt,r,"evalue") : 'E 值未提供'}`}</title>
           </path>
         );
       })}
@@ -1053,7 +1056,7 @@ function Synteny({ project: p, onLayoutChange }: RendererProps) {
               x={x(g.chr) - width / 2 - 9}
               y={y(g.chr, (g.start + g.end) / 2) + 4}
               textAnchor="end"
-              fontSize={10}
+              fontSize={p.style.publicationVersion ? 13 : 10}
             >
               {g.id}
             </text>
@@ -1067,7 +1070,7 @@ function Synteny({ project: p, onLayoutChange }: RendererProps) {
             transform={`translate(${left + i * 140},${top + ih + 33})`}
           >
             <rect width={12} height={9} y={-8} fill={pal[i % pal.length]} />
-            <text x={20} fontSize={11}>
+            <text x={20} fontSize={p.style.publicationVersion ? 14 : 11}>
               {b}
             </text>
           </g>

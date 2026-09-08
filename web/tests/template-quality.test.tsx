@@ -73,7 +73,9 @@ describe('review P2 scientific defaults',()=>{
     for(const id of ['tree-normal','tree-circle','tree-unrooted']) {
       const p=makeProject(byId(id)), loaded=decodeProject(encodeProject(p),templates);
       expect(p.layers.length).toBe(id==='tree-unrooted'?1:3);expect(loaded.layers).toEqual(p.layers);
-      expect(svg(id)).toContain('耐旱型');
+      const grouping=p.layers.find(l=>l.type==='tree:label-background')!.data!.tables[0];
+      const column=grouping.columns.indexOf('分类');
+      for(const group of new Set(grouping.rows.map(r=>String(r[column])))) expect(svg(id)).toContain(group);
     }
   });
 });

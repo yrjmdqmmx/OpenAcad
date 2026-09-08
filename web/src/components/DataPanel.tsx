@@ -47,6 +47,16 @@ export function DataPanel({
     commit({ ...project, dataset });
     setError("");
   }
+  function loadBuiltInExample(primary: boolean) {
+    // Unedited built-in annotations describe the built-in samples only. Keeping
+    // them on another dataset mislabels observations (and can block a matrix).
+    // Preserve user-created or edited layers and let their normal validator run.
+    const presets = template.exampleLayers || [];
+    const retained = project.layers.filter(l => !presets.some(p => JSON.stringify(p) === JSON.stringify(l)));
+    const layers = primary ? [...presets.filter(p=>!retained.some(l=>l.id===p.id)), ...retained] : retained;
+    commit({...project, dataset:structuredClone(primary ? template.example : template.alternate), layers:structuredClone(layers)});
+    setActive(0); setError('');
+  }
   function updateTable(next: DataTable) {
     setDataset({
       ...project.dataset,
@@ -611,16 +621,14 @@ export function DataPanel({
       <div className="button-stack">
         <button
           onClick={() => {
-            setDataset(structuredClone(template.example));
-            setActive(0);
+            loadBuiltInExample(true);
           }}
         >
           重新载入示例
         </button>
         <button
           onClick={() => {
-            setDataset(structuredClone(template.alternate));
-            setActive(0);
+            loadBuiltInExample(false);
           }}
         >
           试用另一组数据

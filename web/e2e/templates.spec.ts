@@ -51,10 +51,13 @@ for (const t of templates)
     expect(Number(parsed.width)).toBeGreaterThan(0);
     expect(parsed.count).toBeGreaterThan(3);
     const preview = await page.context().newPage();
-    await preview.goto(
-      "data:image/svg+xml;base64," + Buffer.from(raw).toString("base64"),
-    );
+    // Embedded CJK font subsets can exceed Chromium's data-URL navigation
+    // limit. Open the actual SVG document through a Blob URL, like a file.
+    const url = await page.evaluate(raw => URL.createObjectURL(new Blob([raw], {type:'image/svg+xml'})), raw);
+    await preview.goto(url);
     await expect(preview.locator("svg").first()).toBeVisible();
+    await preview.evaluate(() => document.fonts.ready);
     await expect(preview.locator("parsererror")).toHaveCount(0);
     await preview.close();
+    await page.evaluate(url => URL.revokeObjectURL(url), url);
   });

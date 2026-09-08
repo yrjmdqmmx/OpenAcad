@@ -4,6 +4,8 @@ import { DraggableLabel } from "./interaction";
 import { placeLabels, labelWidth } from "../../core/labelLayout";
 import {
   forceCenter,
+  forceX,
+  forceY,
   forceCollide,
   forceLink,
   forceManyBody,
@@ -163,7 +165,7 @@ function Venn({ project: p, onLayoutChange }: RendererProps) {
           }
           return best.clearance>0?<text key={region.mask} data-region-count={region.mask} x={best.x} y={best.y} textAnchor="middle" dominantBaseline="middle" fontWeight="700" fontSize={13}>{region.count}</text>:null;
         })}
-        <text x={cx} y={top + ih - 4} textAnchor="middle" fontSize={11}>
+        <text x={cx} y={top + ih - 4} textAnchor="middle" fontSize={p.style.publicationVersion ? 14 : 11}>
           {n<=3?"轮廓示意；区域数字为精确互斥计数":"轮廓示意；复杂交集建议使用 UpSet"}
         </text>
         <text x={listX} y={top} fontSize={13} fontWeight="bold">
@@ -209,7 +211,7 @@ function Venn({ project: p, onLayoutChange }: RendererProps) {
           );
         })}
         {enabled(p, "showLegend") && (
-          <text x={listX} y={top + ih + 25} fontSize={11}>
+          <text x={listX} y={top + ih + 25} fontSize={p.style.publicationVersion ? 14 : 11}>
             并集 {members.size} 项；集合内重复元素自动去重
           </text>
         )}
@@ -370,7 +372,7 @@ function Packing({ project: p }: RendererProps) {
             transform={`translate(${left + i * 130},${top + ih + 30})`}
           >
             <circle r={5} fill={pal[i % pal.length]} />
-            <text x={12} y={4} fontSize={11}>
+            <text x={12} y={4} fontSize={p.style.publicationVersion ? 14 : 11}>
               {group}
             </text>
           </g>
@@ -629,7 +631,7 @@ function Sankey({ project: p }: RendererProps) {
         );
       })}
       {enabled(p, "showLegend") && (
-        <text x={left} y={top + ih + 32} fontSize={11}>
+        <text x={left} y={top + ih + 32} fontSize={p.style.publicationVersion ? 14 : 11}>
           流带宽度与流量成正比 · 节点数 {names.length} · 连线数 {links.length}
         </text>
       )}
@@ -820,6 +822,8 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
       )
       .force("charge", forceManyBody().strength(-value(p, "repulsion", 160)))
       .force("center", forceCenter(iw / 2, ih / 2))
+      .force('module-x', p.style.publicationVersion ? forceX<NetNode>(n=>iw*(.22+.56*(groups.indexOf(n.group)%2))).strength(.14) : null)
+      .force('module-y', p.style.publicationVersion ? forceY<NetNode>(n=>ih*(.2+.6*Math.floor(groups.indexOf(n.group)/2)/Math.max(1,Math.ceil(groups.length/2)-1))).strength(.14) : null)
       .force(
         "collision",
         forceCollide<NetNode>().radius((n) => n.size + 14),
@@ -1029,8 +1033,8 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
             key={g}
             transform={`translate(${left + i * 140},${top + ih + 30})`}
           >
-            <circle r={5} fill={pal[i % pal.length]} />
-            <text x={12} y={4} fontSize={11}>
+            <path d={symbolPath(nodeShape(nodes.find(n=>n.group===g)!),5)} fill={pal[i % pal.length]} />
+            <text x={12} y={4} fontSize={p.style.publicationVersion ? 14 : 11}>
               {g}
             </text>
           </g>
@@ -1043,7 +1047,7 @@ function Network({ project: p, onLayoutChange }: RendererProps) {
             transform={`translate(${left + i * 140},${top + ih + 50})`}
           >
             <path d="M0,0L15,0" stroke={pal[i % pal.length]} strokeWidth={2} />
-            <text x={20} y={4} fontSize={10}>
+            <text x={20} y={4} fontSize={p.style.publicationVersion ? 13 : 10}>
               边：{g}
             </text>
           </g>

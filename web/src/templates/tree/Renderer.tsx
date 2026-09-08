@@ -1,4 +1,5 @@
 import React from "react";
+import { FigureHeading, headingMetrics } from '../../core/FigureHeading';
 import { timeInfo } from "./time";
 import { TimeOverlay } from "./TimeOverlay";
 import {
@@ -488,6 +489,14 @@ export function TreeRenderer({ project, onLayoutChange }: RendererProps) {
   const valid = visible.filter((l) => validateLayer(l, root).length === 0);
   const invalid = visible.filter((l) => validateLayer(l, root).length > 0);
   const tracks = valid.filter((l) => specFor(l.type)!.track);
+  const numericKeys = s.showLegend ? tracks.flatMap(l=> {
+    const kind=specFor(l.type)!.type;
+    if(!['bar','heatmap'].includes(kind)) return [];
+    const values=layerRows(l).map(r=>Number(r['数值'])).filter(Number.isFinite);
+    if(!values.length) return [];
+    return [`${l.name}：${Math.min(...values, ...(kind==='bar'?[0]:[])).toFixed(1)}–${Math.max(...values).toFixed(1)}${kind==='bar'?'（柱长）':'（浅→深）'}`];
+  }) : [];
+  const headingStyle = s.publicationVersion ? {...s,subtitle:[s.subtitle,...numericKeys].filter(Boolean).join(' · ')} : s;
   let trackWidth = 0;
   const offsets = new Map<string, number>();
   for (const l of tracks) {
@@ -519,7 +528,7 @@ export function TreeRenderer({ project, onLayoutChange }: RendererProps) {
     rowHeight: num(s.leafSpacing, 26),
     marginLeft: s.marginLeft,
     marginRight: s.marginRight,
-    marginTop: s.marginTop,
+    marginTop: s.publicationVersion ? Math.max(s.marginTop, headingMetrics(headingStyle).height) : s.marginTop,
     marginBottom: s.marginBottom + legendHeight,
   });
   const map = new Map(g.nodes.map((p) => [p.node.id, p]));
@@ -556,7 +565,7 @@ export function TreeRenderer({ project, onLayoutChange }: RendererProps) {
       {!s.transparent && (
         <rect width={g.width} height={g.height} fill={s.background} />
       )}
-      <text
+      {s.publicationVersion ? <FigureHeading style={headingStyle} width={g.width} /> : <><text
         x={g.width / 2}
         y="35"
         textAnchor="middle"
@@ -576,6 +585,7 @@ export function TreeRenderer({ project, onLayoutChange }: RendererProps) {
       >
         {s.subtitle}
       </text>
+      </>}
       <TimeOverlay
         g={g}
         info={timing}

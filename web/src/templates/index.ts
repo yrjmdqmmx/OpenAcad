@@ -7,3 +7,5 @@ export const templates=[...basicTemplates,...specialTemplates,...ordinationTempl
 
 import { improveScientificExamples } from './scientificExamples';
 improveScientificExamples(templates);
+import { applyPublicationDefaults } from './publicationDefaults';
+applyPublicationDefaults(templates);

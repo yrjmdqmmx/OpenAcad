@@ -48,8 +48,9 @@ describe("模板详情与实际输入保持一致", () => {
       if (project.dataset.tables.length) {
         expect(download.name).toMatch(/\.xlsx$/);
         const book = XLSX.read(await download.blob.arrayBuffer(), { type: "array" });
-        expect(book.SheetNames).toHaveLength(project.dataset.tables.length);
-        project.dataset.tables.forEach((table, i) => {
+        const inputs = project.dataset.tables.filter(t=>!t.role.startsWith('raw-'));
+        expect(book.SheetNames).toHaveLength(inputs.length);
+        inputs.forEach((table, i) => {
           const actual = XLSX.utils.sheet_to_json(book.Sheets[book.SheetNames[i]], { header: 1, raw: true, defval: "" });
           expect(actual).toEqual([table.columns, ...table.rows.map(row => row.map(cell => cell ?? ""))]);
         });

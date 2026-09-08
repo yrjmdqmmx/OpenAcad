@@ -1,4 +1,5 @@
 import React from "react";
+import { figureLines } from "../../core/FigureHeading";
 import { geneBreaks, specialProjectIssues } from "./advanced";
 import { ticks } from "d3";
 import type {
@@ -12,6 +13,7 @@ import type {
 import {
   bool,
   col,
+  categoryLegend,
   createTemplate,
   dataset,
   dimensions,
@@ -231,9 +233,9 @@ function GeneCluster({ project: p }: RendererProps) {
             textAnchor="end"
             fontWeight="bold"
           >
-            {g}
+            {(p.style.publicationVersion ? figureLines(g, left - 30, p.style.fontSize) : [g]).map((line, i, lines) => <tspan key={i} x={left - 16} dy={i ? p.style.fontSize * 1.2 : -(lines.length - 1) * p.style.fontSize * .6}>{line}</tspan>)}
           </text>
-          {enabled(p, "geneTicks", true) &&
+          {enabled(p, "geneTicks", true) && (!p.style.publicationVersion || text(p,'geneScale','global')==='local' || breaks(g).length>0 || g===groups.at(-1)) &&
             ticks(...(range(g) as [number, number]), 5)
               .filter((v) => !breaks(g).some((z) => v > z.start && v < z.end))
               .map((t) => (
@@ -249,7 +251,7 @@ function GeneCluster({ project: p }: RendererProps) {
                     x={x(t, g)}
                     y={center(g) + arrowExtent + 23}
                     textAnchor="middle"
-                    fontSize={10}
+                    fontSize={p.style.publicationVersion ? 13 : 10}
                   >
                     {fmt(t, 0)}
                   </text>
@@ -307,7 +309,7 @@ function GeneCluster({ project: p }: RendererProps) {
           )}
         </g>
       ))}
-      {enabled(p, "showLegend") &&
+      {p.style.publicationVersion ? categoryLegend(p, cats, left, top + ih + 34) : enabled(p, "showLegend") &&
         cats.map((g, i) => (
           <g
             key={g}
@@ -320,7 +322,7 @@ function GeneCluster({ project: p }: RendererProps) {
               height={9}
               fill={pal[i % pal.length]}
             />
-            <text x={20} fontSize={11}>
+            <text x={20} fontSize={p.style.publicationVersion ? 14 : 11}>
               {g}
             </text>
           </g>
@@ -687,7 +689,8 @@ function proteinIssues(d: Dataset, mode = "table", motif = false): Issue[] {
       );
     for (const k of ["start", "end"])
       numericCell(segments, i, at(k), issues, { min: 1, integer: true });
-    numericCell(segments, i, at("significance"), issues, { min: 0 });
+    if(String(r[at("significance")] ?? '').trim())
+      numericCell(segments, i, at("significance"), issues, { min: 0 });
     if (Number(r[at("end")]) < Number(r[at("start")]))
       issues.push(rowIssue(segments, i, at("end"), "终点不能小于起点"));
     if (length !== undefined && Number(r[at("end")]) > length)
@@ -721,9 +724,9 @@ function ProteinSegments({ project: p }: RendererProps) {
         start: Number(at(seg, r, "start")),
         end: Number(at(seg, r, "end")),
         category: String(at(seg, r, "category")),
-        q: Number(at(seg, r, "significance")),
+        q: String(at(seg, r, "significance") ?? '').trim() ? Number(at(seg, r, "significance")) : null,
       }))
-      .filter((s) => s.q <= value(p, "segmentThreshold", 1)),
+      .filter((s) => s.q === null ? value(p, "segmentThreshold", 1) >= 1 : s.q <= value(p, "segmentThreshold", 1)),
     { left, top, iw, ih } = dimensions(p),
     maxLength = Math.max(...proteins.map((p) => p.length)),
     rowH = ih / proteins.length,
@@ -744,7 +747,7 @@ function ProteinSegments({ project: p }: RendererProps) {
             textAnchor="end"
             fontWeight="bold"
           >
-            {protein.id}
+            {(p.style.publicationVersion ? figureLines(protein.id, left - 30, p.style.fontSize) : [protein.id]).map((line, j, lines) => <tspan key={j} x={left - 16} dy={j ? p.style.fontSize * 1.2 : -(lines.length - 1) * p.style.fontSize * .6}>{line}</tspan>)}
           </text>
           <line
             x1={left}
@@ -758,7 +761,7 @@ function ProteinSegments({ project: p }: RendererProps) {
             <text
               x={x(protein.length, protein) + 9}
               y={top + (i + 0.5) * rowH + 4}
-              fontSize={10}
+              fontSize={p.style.publicationVersion ? 13 : 10}
             >
               {protein.length} aa
             </text>
@@ -772,7 +775,7 @@ function ProteinSegments({ project: p }: RendererProps) {
                 color = pal[cats.indexOf(s.category) % pal.length];
               return (
                 <g key={`${s.name}-${j}`}>
-                  <title>{`${s.sequence}；${s.name}；${s.start}–${s.end}；${motif ? "P" : "E"}=${s.q}`}</title>
+                  <title>{`${s.sequence}；${s.name}；${s.start}–${s.end}；${motif ? "P" : "E"}${s.q === null ? ' 值未提供' : '='+s.q}`}</title>
                   {text(p, "segmentShape", "rect") === "ellipse" ? (
                     <ellipse
                       cx={(px + end) / 2}
@@ -802,7 +805,7 @@ function ProteinSegments({ project: p }: RendererProps) {
                       x={(px + end) / 2}
                       y={y - barH / 2 - 9}
                       textAnchor="middle"
-                      fontSize={11}
+                      fontSize={p.style.publicationVersion ? 14 : 11}
                     >
                       {s.name}
                     </text>
@@ -825,20 +828,20 @@ function ProteinSegments({ project: p }: RendererProps) {
             x={left + (n / maxLength) * (iw - 20)}
             y={top + ih + 23}
             textAnchor="middle"
-            fontSize={10}
+            fontSize={p.style.publicationVersion ? 13 : 10}
           >
             {n}
           </text>
         </g>
       ))}
-      {enabled(p, "showLegend") &&
+      {p.style.publicationVersion ? categoryLegend(p, cats, left, top + ih + 49) : enabled(p, "showLegend") &&
         cats.map((cat, i) => (
           <g
             key={cat}
             transform={`translate(${left + i * 145},${top + ih + 49})`}
           >
             <rect y={-8} width={12} height={9} fill={pal[i % pal.length]} />
-            <text x={19} fontSize={11}>
+            <text x={19} fontSize={p.style.publicationVersion ? 14 : 11}>
               {cat}
             </text>
           </g>
