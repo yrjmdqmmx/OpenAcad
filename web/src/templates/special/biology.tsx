@@ -190,6 +190,7 @@ function GeneCluster({ project: p }: RendererProps) {
     );
   };
   const center = (g: string) => top + (groups.indexOf(g) + 0.5) * rowH;
+  const arrowExtent = body * Math.max(1, value(p, "arrowHeadHeight", 1.6)) / 2;
   return (
     <Frame project={p}>
       {enabled(p, "connectCategories", false) &&
@@ -240,13 +241,13 @@ function GeneCluster({ project: p }: RendererProps) {
                   <line
                     x1={x(t, g)}
                     x2={x(t, g)}
-                    y1={center(g) + body + 15}
-                    y2={center(g) + body + 20}
+                    y1={center(g) + arrowExtent + 5}
+                    y2={center(g) + arrowExtent + 10}
                     stroke="#9baab4"
                   />
                   <text
                     x={x(t, g)}
-                    y={center(g) + body + 34}
+                    y={center(g) + arrowExtent + 23}
                     textAnchor="middle"
                     fontSize={10}
                   >

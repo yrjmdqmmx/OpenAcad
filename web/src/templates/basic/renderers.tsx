@@ -1,6 +1,7 @@
 import React from "react";
 import * as d3 from "d3";
 import type { RendererProps, ChartStyle } from "../../core/types";
+import { labelWidth, placeLabels } from "../../core/labelLayout";
 import {
   Axes,
   ChartFrame,
@@ -1016,6 +1017,19 @@ export function RadarRenderer(props: RendererProps) {
             Math.cos(angle(i)) * v,
             Math.sin(angle(i)) * v,
           ];
+        const series = groups.map((group) => ({
+          group,
+          style: seriesStyle(s, group),
+          values: cats.map((category) => num(a.find(v => String(v["类别"]) === category && String(v["分组"] || "数据") === group)?.["数值"])),
+        }));
+        const anchors = series.flatMap(({ group, style, values }) => values.map((value, index) => {
+          const [x, y] = point(index, r(value));
+          return { id: `radar:${group}:${cats[index]}`, x: x + g.w / 2, y: y + g.h / 2, text: format(value), size: num(style.labelSize, style.fontSize) * 1.15 };
+        }));
+        // Reserve the radial scale labels as well as the actual data points.
+        const scaleLabels = s.showGrid ? r.ticks(num(s.radarTickCount, 5)).flatMap(value =>
+          [5, 15, 25].flatMap(dx => [-7, -2].map(dy => ({ x: g.w / 2 + 4 + dx, y: g.h / 2 - r(value) - 2 + dy })))) : [];
+        const labelPositions = s.showLabels ? placeLabels(anchors, g.w, g.h, [...anchors, ...scaleLabels]) : {};
         return (
           <g
             data-part="marks"
@@ -1070,17 +1084,7 @@ export function RadarRenderer(props: RendererProps) {
                 </g>
               );
             })}
-            {groups.map((group, i) => {
-              const ss = seriesStyle(s, group),
-                vals = cats.map((c) =>
-                  num(
-                    a.find(
-                      (v) =>
-                        String(v["类别"]) === c &&
-                        String(v["分组"] || "数据") === group,
-                    )?.["数值"],
-                  ),
-                );
+            {series.map(({ group, style: ss, values: vals }, i) => {
               return (
                 <g key={group}>
                   <polygon
@@ -1096,6 +1100,7 @@ export function RadarRenderer(props: RendererProps) {
                   />
                   {vals.map((v, j) => {
                     const [x, y] = point(j, r(v));
+                    const id = `radar:${group}:${cats[j]}`, at = labelPositions[id];
                     return (
                       <g key={j}>
                         {ss.showPoints !== false && (
@@ -1111,9 +1116,9 @@ export function RadarRenderer(props: RendererProps) {
                         {s.showLabels && (
                           <ValueLabel
                             {...props}
-                            id={"radar:" + group + ":" + cats[j]}
-                            x={x + 5}
-                            y={y - 5}
+                            id={id}
+                            x={at.x - g.w / 2 + labelWidth(format(v), num(ss.labelSize, ss.fontSize)) / 2}
+                            y={at.y - g.h / 2}
                             style={ss}
                           >
                             {format(v)}
