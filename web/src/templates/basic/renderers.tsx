@@ -106,10 +106,11 @@ export function BarRenderer({
     isPoint = kind === "scatter-error",
     isLollipop = kind.startsWith("lollipop"),
     isStacked = kind.includes("stacked"),
-    isGrouped = kind.includes("grouped") || kind.endsWith("category"),
     isCombo = kind === "bar-line";
   const data = collectData(props, isError),
-    groups = unique(data.map((d) => d.group));
+    groups = unique(data.map((d) => d.group)),
+    isGrouped = kind.includes("grouped") || (kind.endsWith("category") &&
+      (!s.publicationVersion || data.some((d, i) => data.some((other, j) => j < i && other.category === d.category))));
   let categories = sortCategories(
     unique(data.map((d) => d.category)),
     data.reduce(
@@ -395,7 +396,8 @@ export function BarRenderer({
                         height={horizontal ? bw : Math.abs(a - b)}
                         rx={num(ss.cornerRadius)}
                         fill={paint}
-                        opacity={ss.opacity}
+                        opacity={style.publicationVersion ? 1 : ss.opacity}
+                        fillOpacity={style.publicationVersion ? ss.opacity : undefined}
                         stroke={stroke}
                         strokeWidth={num(ss.strokeWidth)}
                       />
@@ -465,8 +467,10 @@ export function BarRenderer({
                               : vscale(v)
                           }
                           r={Math.max(2, r * 0.55)}
-                          fill={style.textColor}
-                          opacity=".5"
+                          fill={style.publicationVersion ? style.background : style.textColor}
+                          stroke={style.publicationVersion ? fill : undefined}
+                          strokeWidth={style.publicationVersion ? 1.3 : undefined}
+                          opacity={style.publicationVersion ? .8 : .5}
                         />
                       ))}
                     {style.showLabels &&
@@ -572,6 +576,11 @@ export function LineRenderer({
             "y",
             [g.h, 0],
           );
+        const ends = groups.map((group,i) => {
+          const points = data.filter(d=>d.group===group).sort((a,b)=>xx(a.category)-xx(b.category));
+          const end=points.at(-1)!; return {id:group,i,x:g.w+12,y:y(end.value),text:group,size:style.fontSize,end};
+        });
+        const endLabels = placeLabels(ends, g.w + g.right - 12, g.h);
         return (
           <>
             <Axes g={g} s={style} x={(numeric ? xl : xb) as any} y={y} />
@@ -660,7 +669,9 @@ export function LineRenderer({
                           <PointGlyph
                             r={ss.pointSize}
                             shape={ss.pointShape}
-                            fill={color(style, i)}
+                            fill={style.publicationVersion ? style.background : color(style, i)}
+                            stroke={style.publicationVersion ? color(style,i) : undefined}
+                            strokeWidth={style.publicationVersion ? 1.8 : undefined}
                             opacity={ss.opacity}
                           />
                         )}{" "}
@@ -692,6 +703,10 @@ export function LineRenderer({
               data-part="value-labels"
               transform={`translate(${g.left},${g.top})`}
             >
+              {Boolean(style.directSeriesLabels) && ends.map(v=><g key={v.id} data-series-end={v.id}>
+                <line x1={xx(v.end.category)+6} y1={y(v.end.value)} x2={endLabels[v.id].x-4} y2={endLabels[v.id].y-style.fontSize*.3} stroke={color(style,v.i)} strokeWidth={1.2}/>
+                <text x={endLabels[v.id].x} y={endLabels[v.id].y} fontSize={style.fontSize} fill={color(style,v.i)}>{v.text}</text>
+              </g>)}
               {labelNodes}
             </g>
           </>
@@ -815,7 +830,7 @@ export function ScatterRenderer(props: RendererProps) {
               {a.map((r, i) => {
                 const v = String(r["分组"] || "数据"),
                   ss = seriesStyle(s, v),
-                  symbol = symbolType(ss.pointShape),
+                  symbol = symbolType(ss.pointShape === 'group' ? ['circle','square','triangle','diamond','cross'][groups.indexOf(v)%5] : ss.pointShape),
                   size =
                     s.sizeByValue && r["大小"] != null
                       ? Math.sqrt(Math.max(0, num(r["大小"]))) * ss.pointSize
@@ -940,8 +955,8 @@ export function PieRenderer({
                 .cornerRadius(num(ss.cornerRadius));
               const labelArc = d3
                 .arc<d3.PieArcDatum<Record<string, any>>>()
-                .innerRadius(rr + 15)
-                .outerRadius(rr + 15);
+                .innerRadius((rose && s.publicationVersion ? radius : rr) + 18)
+                .outerRadius((rose && s.publicationVersion ? radius : rr) + 18);
               const [x, y] = labelArc.centroid(d);
               const polar = (angle: number, r: number) => [
                 Math.sin(angle) * r,
@@ -980,7 +995,7 @@ export function PieRenderer({
                       style={ss}
                     >
                       {s.percentLabels && !rose
-                        ? format((num(d.data["数值"]) / total) * 100) + "%"
+                        ? (s.publicationVersion ? String(d.data['类别']) + ' · ' : '') + format((num(d.data["数值"]) / total) * 100) + "%"
                         : String(d.data["类别"])}
                     </ValueLabel>
                   )}
@@ -1024,7 +1039,10 @@ export function RadarRenderer(props: RendererProps) {
         }));
         const anchors = series.flatMap(({ group, style, values }) => values.map((value, index) => {
           const [x, y] = point(index, r(value));
-          return { id: `radar:${group}:${cats[index]}`, x: x + g.w / 2, y: y + g.h / 2, text: format(value), size: num(style.labelSize, style.fontSize) * 1.15 };
+          const size = num(style.labelSize, style.fontSize);
+          // Reserve the font's descent as well as its ascent; Firefox includes
+          // the full CJK line metrics even for a numeric label.
+          return { id: `radar:${group}:${cats[index]}`, x: x + g.w / 2, y: y + g.h / 2, text: format(value), size: size * 1.5, descent: size * .6 };
         }));
         // Reserve the radial scale labels as well as the actual data points.
         const scaleLabels = s.showGrid ? r.ticks(num(s.radarTickCount, 5)).flatMap(value =>
@@ -1075,7 +1093,7 @@ export function RadarRenderer(props: RendererProps) {
                     dy=".32em"
                     fill={s.textColor}
                   >
-                    {wrap(c, 75, s.fontSize).map((t, j) => (
+                    {wrap(c, s.publicationVersion ? 125 : 75, s.fontSize).map((t, j) => (
                       <tspan x={x} dy={j ? s.fontSize * 1.2 : 0} key={j}>
                         {t}
                       </tspan>
@@ -1364,7 +1382,7 @@ export function DistributionRenderer({
                 const densityScale = d3
                   .scaleLinear()
                   .domain([0, Math.max(...points.map((p) => p.density), 1e-12)])
-                  .range([0, kind === "ridgeline" ? bw * 1.1 : bw * 0.4]);
+                  .range([0, kind === "ridgeline" ? bw * (style.publicationVersion ? .58 : 1.1) : bw * 0.4]);
                 const area = d3
                   .area<{
                     x: number;
@@ -1390,7 +1408,7 @@ export function DistributionRenderer({
                     .x0((p) => center - densityScale(p.density))
                     .x1((p) => center + densityScale(p.density));
                 const boxW = Math.min(
-                    bw * (isBox ? 0.55 : 0.16),
+                    bw * (isBox ? 0.55 : style.publicationVersion ? 0.22 : 0.16),
                     num(style.boxWidth, isBox ? 42 : 14),
                   ),
                   offset = kind === "raincloud" ? bw * 0.25 : 0;
@@ -1407,7 +1425,8 @@ export function DistributionRenderer({
                             ? groupNames.indexOf(d.group)
                             : cats.indexOf(d.category),
                         )}
-                        opacity={ss.opacity}
+                        opacity={style.publicationVersion ? 1 : ss.opacity}
+                        fillOpacity={style.publicationVersion ? ss.opacity : undefined}
                         stroke={fill}
                         strokeWidth={ss.lineWidth}
                       />
@@ -1451,7 +1470,7 @@ export function DistributionRenderer({
                               x2={coord(v, offset + boxW / 2)[0]}
                               y2={coord(v, offset + boxW / 2)[1]}
                               stroke={style.textColor}
-                              strokeWidth={ss.lineWidth}
+                              strokeWidth={style.publicationVersion && v === summary.median ? ss.lineWidth * 1.7 : ss.lineWidth}
                             />
                           ),
                         )}
@@ -1470,8 +1489,10 @@ export function DistributionRenderer({
                             cx={x}
                             cy={y}
                             r={Math.max(1, num(ss.pointSize, 3))}
-                            fill={style.textColor}
-                            opacity=".48"
+                            fill={style.publicationVersion ? style.background : style.textColor}
+                            stroke={style.publicationVersion ? fill : undefined}
+                            strokeWidth={style.publicationVersion ? 1.2 : undefined}
+                            opacity={style.publicationVersion ? .8 : .48}
                           />
                         );
                       })}
@@ -1567,8 +1588,11 @@ export function UpSetRenderer(props: RendererProps) {
   return (
     <ChartFrame {...props} legend={sets}>
       {(g, style) => {
-        const rowGap = Math.max(
+        const nameWidth = style.publicationVersion
+            ? Math.max(75,Math.min(g.w*.32,Math.max(...sets.map(n=>labelWidth(n,style.fontSize)))+6)) : 75,
+          rowGap = Math.max(
             16,
+            style.publicationVersion ? Math.max(...sets.map(n=>wrap(n,nameWidth,style.fontSize).length))*style.fontSize*1.2+4 : 0,
             Math.min(
               num(style.setRowSpacing, 28),
               (g.h - 105) / (sets.length || 1),
@@ -1577,7 +1601,7 @@ export function UpSetRenderer(props: RendererProps) {
           lowerH = sets.length * rowGap + 38,
           barH = Math.max(70, g.h - lowerH),
           left =
-            style.showSetSizes === false ? 90 : num(style.setSizeWidth, 185),
+            (style.showSetSizes === false ? 90 : num(style.setSizeWidth, 185)) + nameWidth - 75,
           mainX = left + 26,
           w = Math.max(80, g.w - mainX),
           x = d3
@@ -1596,7 +1620,7 @@ export function UpSetRenderer(props: RendererProps) {
               0,
               Math.max(...[...setMembers.values()].map((v) => v.size), 1),
             ])
-            .range([0, Math.max(30, left - 85)]);
+            .range([0, Math.max(30, left - nameWidth - 10)]);
         return (
           <g data-part="marks" transform={`translate(${g.left},${g.top})`}>
             {y.ticks(4).filter(Number.isInteger).map((v) => (
@@ -1683,12 +1707,12 @@ export function UpSetRenderer(props: RendererProps) {
                 transform={`translate(0,${barH + 30 + j * rowGap})`}
               >
                 <text x="0" dy=".3em" fill={style.textColor}>
-                  {wrap(name, 75, style.fontSize)[0]}
+                  {style.publicationVersion ? wrap(name,nameWidth,style.fontSize).map((line,k,lines)=><tspan key={k} x="0" dy={k ? style.fontSize*1.2 : -(lines.length-1)*style.fontSize*.6}>{line}</tspan>) : wrap(name,75,style.fontSize)[0]}
                 </text>
                 {style.showSetSizes !== false && (
                   <>
                     <rect
-                      x="82"
+                      x={nameWidth+7}
                       y={-rowGap * 0.28}
                       width={size(setMembers.get(name)!.size)}
                       height={rowGap * 0.56}
@@ -1697,7 +1721,7 @@ export function UpSetRenderer(props: RendererProps) {
                     />
                     {style.showLabels && (
                       <text
-                        x={82 + size(setMembers.get(name)!.size) + 4}
+                        x={nameWidth+7 + size(setMembers.get(name)!.size) + 4}
                         dy=".3em"
                         fill={style.textColor}
                       >
@@ -1720,7 +1744,7 @@ export function UpSetRenderer(props: RendererProps) {
                 : ""}
             </text>
             {style.showSetSizes !== false && (
-              <text x="82" y={barH + 10} fontSize="11" fill={style.textColor}>
+              <text x={nameWidth+7} y={barH + 10} fontSize="11" fill={style.textColor}>
                 集合大小
               </text>
             )}

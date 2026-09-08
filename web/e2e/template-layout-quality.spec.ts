@@ -50,6 +50,7 @@ test('网络默认标签无重叠，手动标签位置可以往返',async({page}
 });
 test('树数值标签为下一注释层预留空间',async({page},info)=>{
  test.skip(info.project.name!=='chromium');await start(page,'tree-normal');
+ const p=JSON.parse((await save(page)).toString());p.layers.find((l:any)=>l.type==='tree:bar').settings.showValues=true;await reopen(page,Buffer.from(JSON.stringify(p)));
  const bars=page.locator('[data-tree-layer="bar"]');
  for(const bar of await bars.all()){
   const id=await bar.getAttribute('data-node-id'),label=await bar.locator('text').last().boundingBox(),heat=await page.locator(`[data-tree-layer="heatmap"][data-node-id="${id}"]`).boundingBox();

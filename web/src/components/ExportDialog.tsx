@@ -4,6 +4,7 @@ import type { Project } from "../core/types";
 import { assertExportReady } from "../core/exportReadiness";
 import { downloadBlob } from "../core/project";
 import { createJob, waitJob, cancelJob } from "../core/api";
+import { embedSvgFonts, portableScriptDigits } from "../core/svgFonts";
 
 type ExportAttempt = {
   abort: AbortController;
@@ -170,6 +171,7 @@ export function ExportDialog({
       if (getSVG() !== node) throw new Error("图表预览已更新，请重新导出。");
       const svg = node.cloneNode(true) as SVGSVGElement;
       preserveStaticFontWeights(node, svg);
+      portableScriptDigits(svg);
       svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
       svg.setAttribute("width", String(width));
       svg.setAttribute("height", String(height));
@@ -183,6 +185,8 @@ export function ExportDialog({
         throw new Error(
           `图形或文字超出画布。请增加边距或将画布至少调整到 ${Math.ceil(Math.max(width, bounds.x + bounds.width + 20))} × ${Math.ceil(Math.max(height, bounds.y + bounds.height + 20))} 像素后导出。`,
         );
+      if (format === 'svg' && !outline) await awaitPreparation(embedSvgFonts(node, svg, attempt.abort.signal), attempt.abort.signal);
+      if (attempt.abort.signal.aborted || !current()) throw abortError();
       const content = new XMLSerializer().serializeToString(svg);
       if (format === "svg" && !outline) {
         downloadBlob(
@@ -190,7 +194,7 @@ export function ExportDialog({
           `${project.name}.svg`,
         );
         setMessage(
-          "SVG 已下载。请在目标编辑软件中安装对应的思源黑体或思源宋体（Noto），也可选择文字转曲导出。",
+          "SVG 已下载，内含本图使用的字体子集并保留可编辑文字。若目标编辑软件不支持内嵌字体，请安装对应 Noto 字体，或选择文字转曲。",
         );
       } else {
         setMessage("正在准备导出…");

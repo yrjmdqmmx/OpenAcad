@@ -51,7 +51,8 @@ export function TemplateDetail({ template, onStart }: { template: Template; onSt
   const [zoomedTemplate, setZoomedTemplate] = useState<string | null>(null);
   const zoomed = zoomedTemplate === template.id;
   const guide = templateGuide(template);
-  const tables = project.dataset.tables;
+  const tables = project.dataset.tables.filter(t=>!t.role.startsWith('raw-'));
+  const hasCalculationInputs = project.dataset.tables.some(t=>t.role.startsWith('raw-'));
   const tree = template.id.startsWith("tree-");
   const download = () => {
     const file = detailExampleDownload(template, project);
@@ -82,9 +83,11 @@ export function TemplateDetail({ template, onStart }: { template: Template; onSt
         <div className="detail-example-actions">
           <button onClick={download}><Download size={16} aria-hidden="true" />下载示例数据</button>
           {!!project.layers.length && <button onClick={() => saveProject(project)}>下载含注释的示例项目</button>}
+          {hasCalculationInputs && <button onClick={() => saveProject(project)}>下载含计算依据的示例项目</button>}
           <button className="primary" onClick={() => onStart(structuredClone(project))}>用示例开始 <ArrowRight size={16} aria-hidden="true" /></button>
         </div>
         <p className="detail-download-note">{tables.length ? `下载 Excel 文件，包含以下${tables.length > 1 ? ` ${tables.length} 张` : ""}工作表和全部数据行。` : "Newick 下载包含树结构；选择“下载含注释的示例项目”可同时保留图中的全部注释与样式。"}</p>
+        {hasCalculationInputs && <p className="detail-download-note">示例项目额外保留生成结果的模拟原始观测或集合成员。当前模板读取结果表绘图；替换数据时请提供自己的检验结果，并同步修改方法说明。</p>}
         {tables.map((table, index) => <ExampleSheet key={table.id} template={template} table={table} index={index} count={tables.length} />)}
         {project.dataset.text && <article className="example-source-text">
           <h3>{tree ? "Newick 树文本" : "原格式示例"}</h3>

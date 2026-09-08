@@ -1,4 +1,5 @@
 import React from "react";
+import { FigureHeading, headingMetrics } from '../../core/FigureHeading';
 import { Statistics, statisticsHeight } from "./Statistics";
 import * as d3 from "d3";
 import type {
@@ -325,7 +326,9 @@ export function geometry(
       1.3
     : 0;
   const left =
-      Math.max(62, num(style.marginLeft, 95)) +
+      Math.max(62, num(style.marginLeft, 95),
+        style.publicationVersion && style.orientation === 'horizontal'
+          ? Math.min(style.width * .35, 65 + Math.max(0, ...labels.map(v=>textWidth(v,style.fontSize)))) : 0) +
       ((style._layers || []) as import("../../core/types").Layer[])
         .filter(
           (l) =>
@@ -362,7 +365,7 @@ export function geometry(
         12
       : 0) +
     12;
-  const top = Math.max(68, num(style.marginTop, 82), titleHeight),
+  const top = Math.max(68, num(style.marginTop, 82), style.publicationVersion ? headingMetrics(style).height : titleHeight),
     bottom =
       Math.max(num(style.marginBottom, 90), labelH + 48) + lh + bandBottom;
   return {
@@ -412,6 +415,9 @@ export function ChartFrame({
       _chartId: "basic" + id,
       _clipId: "basic" + id + "-clip",
       _seriesNames: legend.length ? legend : labels,
+      marginLeft: project.style.publicationVersion && ["raincloud", "ridgeline"].includes(project.templateId)
+        ? Math.max(num(effective(project).marginLeft, 95), Math.min(project.style.width * .35, 65 + Math.max(0, ...records(project.dataset).map(r => textWidth(String(r["类别"] || ""), project.style.fontSize)))))
+        : effective(project).marginLeft,
       marginTop:
         num(effective(project).marginTop, 82) +
         (["raincloud", "ridgeline"].includes(project.templateId) ||
@@ -559,7 +565,7 @@ export function ChartFrame({
           fill={String(s.titleBackground)}
         />
       )}
-      <text
+      {s.publicationVersion ? <FigureHeading style={s} /> : <><text
         x={s.width / 2}
         y={s.titleSize + 10}
         textAnchor="middle"
@@ -594,6 +600,7 @@ export function ChartFrame({
           )}
         </text>
       )}
+      </>}
       {children(g, s)}
       <Statistics
         project={project}
@@ -664,7 +671,7 @@ export function ChartFrame({
                     x={6}
                     y={-5}
                     r={5}
-                    shape={ss.legendShape || "square"}
+                    shape={ss.legendShape || (s.pointShape === 'group' ? ['circle','square','triangle','diamond','cross'][v.i % 5] : "square")}
                     fill={color(s, v.i)}
                     opacity={ss.opacity}
                   />
@@ -833,7 +840,7 @@ export function Axes({
                     }
                     {...localText("y")}
                   >
-                    {typeof v === "number"
+                    {typeof v !== 'number' && s.publicationVersion ? wrap(valueText(v,'yTickFormat'), Math.max(30,g.left-55), num(s.yTickFontSize,s.fontSize)).map((line,k,lines)=><tspan x={right ? 10 : -10} dy={k ? s.fontSize*1.2 : -(lines.length-1)*s.fontSize*.6} key={k}>{line}</tspan>) : typeof v === "number"
                       ? valueText(v, "yTickFormat")
                       : valueText(v,"yTickFormat").length > 11
                         ? valueText(v,"yTickFormat").slice(0, 10) + "…"

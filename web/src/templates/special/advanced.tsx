@@ -884,16 +884,16 @@ export function AnnotationLegend({
         },
       ];
     });
-  const count = Math.max(1, Math.floor(width / 160));
+  const count = Math.max(1, Math.floor(width / (p.style.publicationVersion ? 190 : 160)));
   return (
     <g data-special-layer="annotation-legend">
       {items.map((item, i) => (
         <g
           key={i}
-          transform={`translate(${x + (i % count) * (width / count)},${y + Math.floor(i / count) * 16})`}
+          transform={`translate(${x + (i % count) * (width / count)},${y + Math.floor(i / count) * (p.style.publicationVersion ? 24 : 16)})`}
         >
           <rect y={-7} width={8} height={8} fill={item.color} />
-          <text x={13} fontSize={9}>
+          <text x={13} fontSize={p.style.publicationVersion ? 13 : 9}>
             {item.name}
           </text>
         </g>

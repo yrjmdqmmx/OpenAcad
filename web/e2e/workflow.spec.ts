@@ -99,7 +99,7 @@ test("样式修改、图层保存、SVG 实际下载", async ({ page }, testInfo
   const content = await readFile((await dl.path())!, "utf8");
   expect(content).toContain('xmlns="http://www.w3.org/2000/svg"');
   expect(content).toContain("中文导出验收");
-  expect(content).not.toMatch(/NaN|Infinity/);
+  expect(content.replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, '')).not.toMatch(/NaN|Infinity/);
   if (testInfo.project.name === "chromium") {
     await dl.saveAs(testInfo.outputPath("bar-cn.svg"));
     await page.getByRole("button", { name: "关闭", exact: true }).click();

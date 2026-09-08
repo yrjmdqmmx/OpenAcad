@@ -162,6 +162,12 @@ test("当前图表字体请求失败时明确提示且不提交导出", async ({
 test("保留文字的SVG下载保存真实字重匹配且不改预览", async ({ page }, info) => {
   test.skip(info.project.name !== "chromium", "静态字重匹配专项使用 Chromium");
   await page.goto("/#editor/heatmap");
+  const saving = page.waitForEvent('download');
+  await page.getByRole('button', {name:'保存项目',exact:true}).click();
+  const legacy = JSON.parse(await readFile((await (await saving).path())!, 'utf8'));
+  delete legacy.style.publicationVersion;
+  await page.goto('/#catalog');
+  await page.locator('input[type=file]').first().setInputFiles({name:'legacy-weight.openacad.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(legacy))});
   const title = page.locator('.figure-paper text[font-weight="650"]').first();
   await expect(title).toBeVisible();
   const text = await title.textContent();
@@ -181,4 +187,31 @@ test("保留文字的SVG下载保存真实字重匹配且不改预览", async ({
   expect(weights.normal).toBeGreaterThan(0);
   await expect(title).toHaveAttribute("font-weight", "650");
   await evidence("static-weight-svg", { originalTitleWeight: 650, exportedTitleWeight: 700, normalTextCount: weights.normal, browserPreviewUnmodified: true });
+});
+
+test('可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致', async ({page,browser,viewport,isMobile,deviceScaleFactor}) => {
+  await page.goto('/#editor/protein-motifs');
+  const svg=page.locator('.figure-paper svg').first();
+  await expect(svg).toBeVisible();
+  // Compare intrinsic SVG coordinates at the same device scale. Fractional
+  // responsive preview zoom changes WebKit's pixel-hinted text bounds.
+  await svg.evaluate(el=>{el.style.maxWidth='none';el.style.width=el.getAttribute('width')+'px';el.style.height=el.getAttribute('height')+'px';});
+  await page.evaluate(()=>document.fonts.ready);
+  await page.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));
+  const before=await page.locator('.figure-paper text').evaluateAll(es=>es.map(e=>({text:e.textContent,width:e.getBBox().width,height:e.getBBox().height})));
+  await page.getByRole('button',{name:'导出图片',exact:true}).click();
+  const pending=page.waitForEvent('download');await page.getByRole('button',{name:'下载图片',exact:true}).click();
+  const source=await readFile((await(await pending).path())!,'utf8');
+  expect(source).toContain('data:font/woff2;base64,');expect(source).toContain('<text');
+  expect(source).toContain('SIL OPEN FONT LICENSE Version 1.1');
+  const context=await browser.newContext({offline:true,viewport,isMobile,deviceScaleFactor});const standalone=await context.newPage();
+  try {
+    await standalone.setContent('<meta name="viewport" content="width=device-width,initial-scale=1">'+source);
+    await standalone.evaluate(()=>document.fonts.ready);
+    await standalone.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));
+    expect(await standalone.evaluate(()=>[...document.fonts].some(f=>f.status==='loaded'))).toBe(true);
+    const after=await standalone.locator('svg text').evaluateAll(es=>es.map(e=>({text:e.textContent,width:e.getBBox().width,height:e.getBBox().height})));
+    expect(after).toHaveLength(before.length);
+    after.forEach((r,i)=>{expect(r.text).toBe(before[i].text);expect(Math.abs(r.width-before[i].width),`${r.text}: width ${r.width} vs ${before[i].width}`).toBeLessThan(.1);expect(Math.abs(r.height-before[i].height),`${r.text}: height ${r.height} vs ${before[i].height}`).toBeLessThan(.1);});
+  } finally {await context.close();}
 });
