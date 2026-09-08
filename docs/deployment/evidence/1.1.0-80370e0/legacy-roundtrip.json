@@ -1,0 +1,50 @@
+[
+  {
+    "file": "audit-bar-20260907.openacad.json",
+    "sourceSha256": "411640a43a94811a5dc50747bf8701eba46e6661f2e5fa63e3801b293a71b382",
+    "fieldsPreserved": [
+      "dataset",
+      "style",
+      "layers",
+      "layout",
+      "analysis"
+    ],
+    "exportEnabled": true
+  },
+  {
+    "file": "audit-heatmap-20260907.openacad.json",
+    "sourceSha256": "a7f55a20e8875e7ad67439267cc75a5ca0c3059b7e69c71f5124b7d0efdec2af",
+    "fieldsPreserved": [
+      "dataset",
+      "style",
+      "layers",
+      "layout",
+      "analysis"
+    ],
+    "exportEnabled": true
+  },
+  {
+    "file": "audit-pca-result-20260907.openacad.json",
+    "sourceSha256": "f8d956511420c01685f407a526b3ded5c228f5e18c110ccd16ce0d6b76e79003",
+    "fieldsPreserved": [
+      "dataset",
+      "style",
+      "layers",
+      "layout",
+      "analysis"
+    ],
+    "exportEnabled": true
+  },
+  {
+    "file": "audit-tree-20260907.openacad.json",
+    "sourceSha256": "720cacc7a27d4435a9178dde5a2bb8588e08c5ae22c4f6511abc9045d8d24d6e",
+    "fieldsPreserved": [
+      "dataset",
+      "style",
+      "layers",
+      "layout",
+      "analysis"
+    ],
+    "exportEnabled": true
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "radar",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3145,
+        "sha256": "8299c48a7b1df550cf87e46cc8cfca3840e370fe801f2473a3598bf2fd897430"
+      },
+      "svg": {
+        "bytes": 10921,
+        "sha256": "1bb3f6c13444c88ebb14ba102e5f4ed7da95a0b383dcd8c7349ff12cb1c06451"
+      },
+      "png": {
+        "bytes": 137743,
+        "sha256": "2d0c4640c381db402f13e429043600ecdad17cdcc54aea640bae4031f56c8e20"
+      },
+      "pdf": {
+        "bytes": 136190,
+        "sha256": "9a2e2e941c482f5925bdb6755a72158141d38357c4d366f15800d3528449e56d"
+      },
+      "eps": {
+        "bytes": 281785,
+        "sha256": "63de7c1ec8329a16406c2738843e1d89b135df96f14075df731080e5b0100062"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.46,
+      "pixelsDifferingBy30": 0.0054,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.166,
+      "pixelsDifferingBy30": 0.0,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "gene-cluster",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 4044,
+        "sha256": "cd7f439761a12b0e2200de4897ace3d50d4e050e1d02ada3b28583ba1f4808c5"
+      },
+      "svg": {
+        "bytes": 18177,
+        "sha256": "025474e074953807185081e06a857c80c465e24a81d7527d0175aed2dafab2ac"
+      },
+      "png": {
+        "bytes": 128597,
+        "sha256": "e9be0d143ef93f087c104538eb29551a0278697197f2d0c93c3bb216d22090e3"
+      },
+      "pdf": {
+        "bytes": 124321,
+        "sha256": "b18b0951bb057476191c1c5a5b1114ae8a9b4a3fc7e120fc8c6aa445d14dba9c"
+      },
+      "eps": {
+        "bytes": 47984,
+        "sha256": "0885abd46200235303879a2fd175ab863207f70af3225e88433c50453fe44799"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.815,
+      "pixelsDifferingBy30": 0.0114,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 1.252,
+      "pixelsDifferingBy30": 0.0172,
+      "reviewNeeded": false
+    }
+  }
+]

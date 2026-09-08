@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/opt/openacad/releases/1.1.0-80370e0",
+    "revision": "80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1",
+    "image": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+    "retained": true
+  },
+  {
+    "path": "/opt/openacad/releases/1.1.0-7e68b5b",
+    "revision": "7e68b5b9f740855e89bf5c8d49d0c5d8c6dfacff",
+    "image": "sha256:dbcd2de2f108dd8d8cd82bdf404a760c8c2b3b35b411380a082f13df3948c85d",
+    "retained": true
+  }
+]

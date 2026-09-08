@@ -1,0 +1,12 @@
+{
+  "frontendRevision": "3993a2a3d9ed1485ef1b50b73adf389b6caf71f8",
+  "backendRevision": "80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1",
+  "serverTree": "13f1f45552b56a73f52c0452ddf527ec19c2f71d",
+  "ciConfigDigest": "sha256:35d7ea3dd26873e430fa2b8ea60d1a7c0eaf5aeb808862e03c2f9bbf0bd72a66",
+  "rootfsEqual": true,
+  "runtimeConfigEqual": true,
+  "imageTag": "openacad-worker:1.1.0-80370e0",
+  "loadedOciRoot": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+  "reusePermittedByContent": true,
+  "deploymentStillRequiresCompletedSuccessfulCI": true
+}

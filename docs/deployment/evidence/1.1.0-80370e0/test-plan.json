@@ -1,0 +1,28 @@
+{
+  "source": "80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1",
+  "baseURL": "https://openacad.xyz",
+  "browserPath": "Browser plugin not available; project Playwright workflow",
+  "flow": "正式站首页与模板详情 -> 55个工作台默认示例 -> 修改控件 -> 项目保存重开 -> SVG/PNG/PDF/EPS；实际重算五种排序分析并验证失效导出保护。",
+  "desktopViewport": [
+    1600,
+    1000
+  ],
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "checks": [
+    "55 default workbenches plus saved state and four formats",
+    "15 conditional/native-control cases",
+    "9 layout and manual-label roundtrips",
+    "5 actual ordination recalculations and stale-result export guard",
+    "desktop/mobile Chinese serif exports",
+    "homepage carousel and responsive navigation in four browser projects",
+    "PCA/R LM independent numeric check and PNG/PDF/EPS independent open",
+    "production container/image identity and other-service isolation"
+  ],
+  "limits": [
+    "No exhaustive DPI/transparency/vector-editor combinations",
+    "No forced rollback/re-upgrade rehearsal for this update; previous release preserved and recovery script unchanged"
+  ]
+}

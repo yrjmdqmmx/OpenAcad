@@ -1,0 +1,46 @@
+{
+  "sourceRevision": "3993a2a3d9ed1485ef1b50b73adf389b6caf71f8",
+  "runId": 34182366813,
+  "url": "https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34182366813",
+  "status": "completed",
+  "conclusion": "success",
+  "counts": {
+    "frontendUnitPassed": 460,
+    "browserPassed": 233,
+    "browserSkipped": 539,
+    "browserFailed": 0,
+    "browserFlaky": 0,
+    "backendPassed": 196,
+    "recoveryPassed": 13
+  },
+  "artifacts": [
+    {
+      "id": 10039691859,
+      "name": "web-evidence",
+      "size_in_bytes": 212570383,
+      "digest": "sha256:68853b9e7f6532c8d6f7fa9bdf5322502798083eb9591b70f27399d5c01e199d",
+      "expired": false
+    },
+    {
+      "id": 10039413291,
+      "name": "yrjmdqmmx~OpenAcad~ULTBWH.dockerbuild",
+      "size_in_bytes": 41109,
+      "digest": "sha256:770048bcf75fe908e4c410f6fcb7a17995908e3171af0bdfdb5ae4f494e996d7",
+      "expired": false
+    },
+    {
+      "id": 10039412825,
+      "name": "worker-image",
+      "size_in_bytes": 792930008,
+      "digest": "sha256:708c17b4bfb27f6f241b54cd7efcf82707fa4650ad35439e2eaf34b5709de847",
+      "expired": false
+    },
+    {
+      "id": 10039376007,
+      "name": "worker-identity",
+      "size_in_bytes": 3533,
+      "digest": "sha256:b5a485b95fdeb8bfb668453bcfa13022b2ecffedf6d54026ffc8cc8477836c72",
+      "expired": false
+    }
+  ]
+}

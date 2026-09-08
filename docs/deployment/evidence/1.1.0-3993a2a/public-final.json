@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-09-08T03:41:57.568905+00:00",
+  "url": "https://openacad.xyz",
+  "version": {
+    "version": "1.1.0",
+    "revision": "3993a2a3d9ed1485ef1b50b73adf389b6caf71f8",
+    "builtAt": "2026-09-08T03:07:51.367Z"
+  },
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "服务正常"
+  }
+}

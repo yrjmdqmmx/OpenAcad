@@ -1,0 +1,26 @@
+{
+  "source": "Downloaded production SVG files rendered in Chromium with the deployed font CSS",
+  "styles": [
+    "https://openacad.xyz/assets/index-x7iCeV2J.css"
+  ],
+  "records": [
+    {
+      "file": "radar/radar.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "gene-cluster/gene-cluster.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    }
+  ]
+}

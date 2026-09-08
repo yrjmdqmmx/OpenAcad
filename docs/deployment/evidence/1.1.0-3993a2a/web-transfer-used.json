@@ -1,0 +1,16 @@
+{
+  "run": 34182366813,
+  "artifact": "web-evidence",
+  "sourceZipBytes": 212570383,
+  "sourceZipSha256": "68853b9e7f6532c8d6f7fa9bdf5322502798083eb9591b70f27399d5c01e199d",
+  "sourceArchiveCheckedLocally": true,
+  "matchesGitHubDigest": true,
+  "transport": "per-file SHA-256 verified web delta",
+  "serverPath": "/opt/openacad/releases/artifact-3993a2a-web-delta.zip",
+  "transportSha256": "f30901ede3d2e33427c52e4aaf5cccf29ba91b68417a99158cb2c8aadef814e0",
+  "transportBytes": 344356,
+  "newFiles": 4,
+  "reusedFiles": 394,
+  "finalWebFilesVerified": 398,
+  "prepareNote": "Report variable shadowing corrected; all 398 staged files reverified before deployment."
+}

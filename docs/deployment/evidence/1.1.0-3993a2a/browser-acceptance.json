@@ -1,0 +1,132 @@
+{
+  "revision": "3993a2a3d9ed1485ef1b50b73adf389b6caf71f8",
+  "baseURL": "https://openacad.xyz",
+  "stats": {
+    "expected": 11,
+    "skipped": 9,
+    "unexpected": 0,
+    "flaky": 0,
+    "method": "latest result per unique case"
+  },
+  "initialRunStats": {
+    "startTime": "2026-09-08T03:41:15.976Z",
+    "duration": 340180.34699999995,
+    "expected": 10,
+    "skipped": 9,
+    "unexpected": 1,
+    "flaky": 0
+  },
+  "retestStats": {
+    "startTime": "2026-09-08T03:47:25.548Z",
+    "duration": 52433.277,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "雷达图相近数值与径向刻度无重叠，字体切换不移动数据点",
+      "project": "chromium",
+      "status": "expected"
+    },
+    {
+      "title": "雷达图手动数值标签位置随旧格式项目往返",
+      "project": "chromium",
+      "status": "expected"
+    },
+    {
+      "title": "radar 保留全部标签保存重开并导出四种格式",
+      "project": "chromium",
+      "status": "expected"
+    },
+    {
+      "title": "gene-cluster 保留全部标签保存重开并导出四种格式",
+      "project": "chromium",
+      "status": "expected"
+    },
+    {
+      "title": "基因簇各行坐标刻度不与下一行基因名重叠",
+      "project": "chromium",
+      "status": "expected"
+    },
+    {
+      "title": "雷达图相近数值与径向刻度无重叠，字体切换不移动数据点",
+      "project": "firefox",
+      "status": "expected"
+    },
+    {
+      "title": "雷达图手动数值标签位置随旧格式项目往返",
+      "project": "firefox",
+      "status": "skipped"
+    },
+    {
+      "title": "radar 保留全部标签保存重开并导出四种格式",
+      "project": "firefox",
+      "status": "skipped"
+    },
+    {
+      "title": "gene-cluster 保留全部标签保存重开并导出四种格式",
+      "project": "firefox",
+      "status": "skipped"
+    },
+    {
+      "title": "基因簇各行坐标刻度不与下一行基因名重叠",
+      "project": "firefox",
+      "status": "expected"
+    },
+    {
+      "title": "雷达图相近数值与径向刻度无重叠，字体切换不移动数据点",
+      "project": "webkit",
+      "status": "expected"
+    },
+    {
+      "title": "雷达图手动数值标签位置随旧格式项目往返",
+      "project": "webkit",
+      "status": "skipped"
+    },
+    {
+      "title": "radar 保留全部标签保存重开并导出四种格式",
+      "project": "webkit",
+      "status": "skipped"
+    },
+    {
+      "title": "gene-cluster 保留全部标签保存重开并导出四种格式",
+      "project": "webkit",
+      "status": "skipped"
+    },
+    {
+      "title": "基因簇各行坐标刻度不与下一行基因名重叠",
+      "project": "webkit",
+      "status": "expected"
+    },
+    {
+      "title": "雷达图相近数值与径向刻度无重叠，字体切换不移动数据点",
+      "project": "mobile",
+      "status": "expected",
+      "resolvedBy": "mobile-radar-retest.json"
+    },
+    {
+      "title": "雷达图手动数值标签位置随旧格式项目往返",
+      "project": "mobile",
+      "status": "skipped"
+    },
+    {
+      "title": "radar 保留全部标签保存重开并导出四种格式",
+      "project": "mobile",
+      "status": "skipped"
+    },
+    {
+      "title": "gene-cluster 保留全部标签保存重开并导出四种格式",
+      "project": "mobile",
+      "status": "skipped"
+    },
+    {
+      "title": "基因簇各行坐标刻度不与下一行基因名重叠",
+      "project": "mobile",
+      "status": "expected"
+    }
+  ],
+  "rawReportSha256": "5684d7342281e26c92ea7455ae7d4aed12b0ec2134cb7c5fcde944305501a262",
+  "evidenceRoot": "/Users/a1-6/.codex/visualizations/2026/09/07/01a07be3-320e-73e0-ba0b-d94530e26693/production-3993a2a"
+}

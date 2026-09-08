@@ -1,0 +1,3027 @@
+[
+  {
+    "id": "bar-category",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2756,
+        "sha256": "da8a33225a6212f6657649307d289bae522f634a90a459096a71f3b7886e946a"
+      },
+      "svg": {
+        "bytes": 11105,
+        "sha256": "17d94dadac7ea75a17a617c701919ba5dae4e3dca03cee3f160a883df5253b86"
+      },
+      "png": {
+        "bytes": 83286,
+        "sha256": "8e4ac47c5cc50b237cddc786d6cc85418cf6f9e3a4c2c590e74464fd28b4af6c"
+      },
+      "pdf": {
+        "bytes": 132885,
+        "sha256": "1ebb782709621c60b42854629bc21311fde2e29b26b4efcbee516b6ca8fabb0c"
+      },
+      "eps": {
+        "bytes": 202789,
+        "sha256": "d0e8583d91ae739a113987f2472053a60aaf7b010f8415ef8d3943c2c1939b59"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.82,
+      "pixelsDifferingBy30": 0.0085,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.266,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "bar-error",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 7079,
+        "sha256": "b5c01dd30836748930552ab8e4eb98e6a3aac83ff1d655c336d5ef10edb182a5"
+      },
+      "svg": {
+        "bytes": 13029,
+        "sha256": "efc80c96700127a09ef3fcaa5a42df2b55a31413b75876d86e1a3f80af781dfb"
+      },
+      "png": {
+        "bytes": 76084,
+        "sha256": "9b1c30b7aa329668bc8fcf5b1a1ee861a3774aa288420e73a8cad0583d7642d0"
+      },
+      "pdf": {
+        "bytes": 159870,
+        "sha256": "de91ca360eed07eebd302535a896f13ac78cef78fa3eed64e4623e05d934ab42"
+      },
+      "eps": {
+        "bytes": 169512,
+        "sha256": "b351a40b64348c0cc4a00290be2a02f47266de9203e2fc6aefa55096e09b37de"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.584,
+      "pixelsDifferingBy30": 0.0062,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.182,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "bar-grouped-error",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 14749,
+        "sha256": "3240494f1942e4ee62d2ffaf7e34e7ee79a7e8642c289e54aa447e3896c00849"
+      },
+      "svg": {
+        "bytes": 21577,
+        "sha256": "ddcb2e41f7e385d39dc0c2ba27562267093b6923f30941837debbe3ee4baa594"
+      },
+      "png": {
+        "bytes": 94832,
+        "sha256": "5499bf9c263cb01f450106fa03c1360f83d56a75262af398b752c1e0aecad9de"
+      },
+      "pdf": {
+        "bytes": 195987,
+        "sha256": "68773ffdec5390d6897faf42432f78d7098f9abad3d7838abe373e0b11ad84d7"
+      },
+      "eps": {
+        "bytes": 212453,
+        "sha256": "99cc76d56746e970a8830e00755181fdf97810e711f1836b1e19a546a8d06ef6"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.783,
+      "pixelsDifferingBy30": 0.0087,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.226,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "bar-grouped-stacked",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 5068,
+        "sha256": "af406af251fee5f6111b2db364007a6ecc8901d32f3c883bf87a0899700eda93"
+      },
+      "svg": {
+        "bytes": 22520,
+        "sha256": "c93cfdf778056e74b896889daa4e5d948e26b153be549319aea30edacf32f5d9"
+      },
+      "png": {
+        "bytes": 107690,
+        "sha256": "0e4c46b05eb4b9958addfbb82dca3e0a1c8d1583f5138c246aba788167692bc2"
+      },
+      "pdf": {
+        "bytes": 142183,
+        "sha256": "8dccdae4d71640ccdfa2dbedafdd6f8df2e78ae9a70386bbfffc43e2808d0490"
+      },
+      "eps": {
+        "bytes": 278552,
+        "sha256": "bb704f6bfde837ecdbc1688e459dba634c958e5b0b7b015eae712204ab23f531"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 1.076,
+      "pixelsDifferingBy30": 0.0107,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.303,
+      "pixelsDifferingBy30": 0.0003,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "bar-grouped",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2871,
+        "sha256": "70f238de5a856356c40619f97350f45e588fa819e5de336528dc9e4215d71780"
+      },
+      "svg": {
+        "bytes": 10944,
+        "sha256": "9d0b3a27f3bf20e327279dab659190f22f240cf766c7a91d12d056549d6bc4e7"
+      },
+      "png": {
+        "bytes": 68092,
+        "sha256": "362b29a7ff65d1f5414cbba1efad0f1170850dccda07e4a68ae6d9909835ddeb"
+      },
+      "pdf": {
+        "bytes": 127692,
+        "sha256": "9ef7f2f30e93402f57dcee381aa409d0e6500a986e439bfb9b30bd3a00e130e7"
+      },
+      "eps": {
+        "bytes": 173652,
+        "sha256": "cff5a3caa66f0502a58b7cf5d2a35adecd428413df21a39735c0382b13631361"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 1.581,
+      "pixelsDifferingBy30": 0.0173,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.294,
+      "pixelsDifferingBy30": 0.0,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "bar-line",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2706,
+        "sha256": "f1cb6831baf536004f2d7d72432f1ec4ee0904c079d3816543d308591f83f405"
+      },
+      "svg": {
+        "bytes": 11233,
+        "sha256": "601ef7938fa0e5aace0359832b3848be1411de89661c8e216e82d182177e687d"
+      },
+      "png": {
+        "bytes": 88628,
+        "sha256": "2cb08830d57e0c5046c3c77e39faad0951fb81e18a76f95537d536a047309bed"
+      },
+      "pdf": {
+        "bytes": 126946,
+        "sha256": "4bbc996431f1669cc08d2cbbd9d37d05b67e0182943af9789b394e84b6b81038"
+      },
+      "eps": {
+        "bytes": 209314,
+        "sha256": "a7e05fd4c6509a2bc633332fce2fc66dbc35b4011b518d7de58af98b56cf0e0d"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.885,
+      "pixelsDifferingBy30": 0.0085,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.238,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "bar-stacked",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3206,
+        "sha256": "539ab548fe8e408547637162dc1b4a8caec225d990b7d1a50fa8433b233a08d9"
+      },
+      "svg": {
+        "bytes": 13139,
+        "sha256": "d435e7c85eedcff6e7afa25401bc713aa826dbd8d038d6e69f48ede6f010b5ff"
+      },
+      "png": {
+        "bytes": 77691,
+        "sha256": "ef3b9b7db92a094e21e66dccec9a17b7a4e2c1009dde0a76bcdafc52e193441f"
+      },
+      "pdf": {
+        "bytes": 132631,
+        "sha256": "c3cb951c7ec9fa590d4c8bea510d98a0ee8d3eeefaa2b4d5fecd91af71ae1b17"
+      },
+      "eps": {
+        "bytes": 191708,
+        "sha256": "512648a6849a87f7e400bde0d57c0a3865c0ff1563494e62dd46cc078f3395df"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.763,
+      "pixelsDifferingBy30": 0.0075,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.229,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "bar",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2353,
+        "sha256": "77b7c788c82027dca7df73ae612a1737b834d5575458f0502235540d2b74b0f8"
+      },
+      "svg": {
+        "bytes": 8357,
+        "sha256": "d52f3bf93f7ac5145f6589704da2b42eea18eae7410ced960f6b3167bca3f70d"
+      },
+      "png": {
+        "bytes": 55249,
+        "sha256": "4ee8df27d7cd3ed7453839f9e11af0bf4e4ced49cce8c00d881fcaef65056e2e"
+      },
+      "pdf": {
+        "bytes": 123156,
+        "sha256": "0e2b36c0bec4b779e7f3f8486be456d2dbd2582dd056436ed53d5d90c36fae6c"
+      },
+      "eps": {
+        "bytes": 145510,
+        "sha256": "92baf7c263b3de701cec92ec32e6061446b1593d97b926e014dbdf9881b4ee94"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.604,
+      "pixelsDifferingBy30": 0.0069,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.168,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "binary-dot",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2944,
+        "sha256": "fd40ab579b51036bc631d277197d1031de585d5fd456e5f920737b2000b3452d"
+      },
+      "svg": {
+        "bytes": 27831,
+        "sha256": "575eedc31ad58c484ca97e9122c81e72c1dbc4c2128e8ef3d6b086deebca0d78"
+      },
+      "png": {
+        "bytes": 120432,
+        "sha256": "2e94e3f6a407c648e1a672b9a7226044f7528d3c95daf575b3ad3a6fbb873fca"
+      },
+      "pdf": {
+        "bytes": 117599,
+        "sha256": "296191ec7cc4299d9ee85429c6438f96d58586a0d4e3310aaebf47a0c99ec1bb"
+      },
+      "eps": {
+        "bytes": 62094,
+        "sha256": "52a3fa72d072550f9648090895b566c4fff6c5ab705a72311ba3bea8f7a8c01e"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.423,
+      "pixelsDifferingBy30": 0.0048,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.63,
+      "pixelsDifferingBy30": 0.0083,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "binary-rect",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2945,
+        "sha256": "e324dcbc2016daebe85634becbcafb27291c42fbeac8929dd8fd0c1d50c9cc52"
+      },
+      "svg": {
+        "bytes": 29650,
+        "sha256": "5a2346b00ddf955a7567fc5809ce854d4b946430d9a0ad910d9abdd28185b68c"
+      },
+      "png": {
+        "bytes": 59280,
+        "sha256": "3f8c5ae57485d42b88eba2cb603e836c7d23a145f6bc7576e31ea496b910146d"
+      },
+      "pdf": {
+        "bytes": 115035,
+        "sha256": "201434cf3680eb1a0c72aad9c59c43259e0d45f773b9cceb2c6fb4735d01f1cf"
+      },
+      "eps": {
+        "bytes": 39638,
+        "sha256": "c9fffa89bfd529b7e012a239467b3c233c3d8b178e30ac712226271c9aa71710"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.547,
+      "pixelsDifferingBy30": 0.004,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.951,
+      "pixelsDifferingBy30": 0.0133,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "box-grouped",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 14737,
+        "sha256": "a8d4173b11049aa534419be48fb5af5674d7c699e6f1e3066a830479d9b60ebe"
+      },
+      "svg": {
+        "bytes": 20903,
+        "sha256": "7909c698da8b986539cc88bc93436e9cb47101287156ed3c654a6f4966f0e00a"
+      },
+      "png": {
+        "bytes": 91249,
+        "sha256": "4510e4c08dbc277b559b3d06b655b2f9dca1da1ec71416e402616f5922d9723d"
+      },
+      "pdf": {
+        "bytes": 186891,
+        "sha256": "6ac01a6f6f42948e65ab42b1b18c266d9e6f81c47a7324403c609db1553c498b"
+      },
+      "eps": {
+        "bytes": 192807,
+        "sha256": "8de43790417e6498ca564f9e8cb50bc62c692a613360b2d49d7d7518e7f54297"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.529,
+      "pixelsDifferingBy30": 0.0061,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.224,
+      "pixelsDifferingBy30": 0.0,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "box",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 7067,
+        "sha256": "2817be107285244bfdc9e941769b8148e185ef6b6577404fff33792c26e4d4d1"
+      },
+      "svg": {
+        "bytes": 13257,
+        "sha256": "fcbbbee8d425e3cc53ea055a8f21a7d5d80ecf573e23730c8a8922a206201d55"
+      },
+      "png": {
+        "bytes": 74714,
+        "sha256": "52a258c1dc69124c5d3ef555d0bbcb0f5346953f110dedb4865a19f5dd142786"
+      },
+      "pdf": {
+        "bytes": 153736,
+        "sha256": "34eebeb2198b72e52545f1d687b911e157b064e5663e855eb13bcdf3c3213523"
+      },
+      "eps": {
+        "bytes": 155607,
+        "sha256": "c4f53e3a36d7f83b9414f74eaae4f10653fb1d759ae9f1d8788bee3e3acd9874"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.462,
+      "pixelsDifferingBy30": 0.0054,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.193,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "bubble-matrix",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3308,
+        "sha256": "a4a336e6509289f73bbde669a279a6ac8332530a21baf44c42f84551afa64a25"
+      },
+      "svg": {
+        "bytes": 26026,
+        "sha256": "edf1afac0e35b9b90b9e994b0b40ced2ded1c045750441d71fbb67fd2fb9dcae"
+      },
+      "png": {
+        "bytes": 99770,
+        "sha256": "07fe5f3cd33457806a6dc643a3190df65c976b8f79a497fedf5ce29d60d092e3"
+      },
+      "pdf": {
+        "bytes": 121290,
+        "sha256": "2647c5930a9e1a7bc8bff17d9864402012f3619f7cdececfbff2ee3441bc4fed"
+      },
+      "eps": {
+        "bytes": 66370,
+        "sha256": "8a07ef6b3607edbd7aba2dcb12269bcd88a012b7129a99d60f92d6870e998ba6"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.307,
+      "pixelsDifferingBy30": 0.0029,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.501,
+      "pixelsDifferingBy30": 0.0052,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "cca",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 14272,
+        "sha256": "b138707b41111d1a31b13cdfdbf5b440b65ddbd5c7ec33bf49212c59b5b363bb"
+      },
+      "svg": {
+        "bytes": 14722,
+        "sha256": "19dc3e6f12e1464152aa7d566707708da978ca01d6690dc01322836f53df49bb"
+      },
+      "png": {
+        "bytes": 91663,
+        "sha256": "f719d6fe5465abaf5a68ba9c3014432f24ba96afabe54fe3746eb699602fd0b8"
+      },
+      "pdf": {
+        "bytes": 130734,
+        "sha256": "f0491266dc4f470ffc2ea6f2518b92286105445b8c85afafa9c636cbd941c8eb"
+      },
+      "eps": {
+        "bytes": 207492,
+        "sha256": "4bc8148db97472f0bce46bec666ffcdf0d48db7a3700aaa0d086e9efb2cf1daa"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.327,
+      "pixelsDifferingBy30": 0.0042,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.673,
+      "pixelsDifferingBy30": 0.0059,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "circle-heatmap",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3314,
+        "sha256": "7eafc77af3bb47a27b7ef38d14a71e304ff9dd3a0c73568ee38b3f83e7bf5306"
+      },
+      "svg": {
+        "bytes": 37186,
+        "sha256": "5847c4c31b9e04434147c1564be349b9f0ff54032c6fa2891bf762424124ad7d"
+      },
+      "png": {
+        "bytes": 230031,
+        "sha256": "638be533b8dac2f6f37f6904bd693507db193c52c5ba7af815729278cc9ab67e"
+      },
+      "pdf": {
+        "bytes": 127284,
+        "sha256": "f2dfbcee260501b4c51d45c107be3573a41c6cb3571e1771df095daa62ca7d63"
+      },
+      "eps": {
+        "bytes": 66838,
+        "sha256": "fc2dd126b70a9738abffdc91027a9463cdb776705eaf3e14b7884dab877fd8f9"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.51,
+      "pixelsDifferingBy30": 0.0055,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.823,
+      "pixelsDifferingBy30": 0.0111,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "correlation",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3516,
+        "sha256": "607933586d7e78d97eefe31cd64f47cdce9bbd39d99c719c4b73afe1ab3d8282"
+      },
+      "svg": {
+        "bytes": 13824,
+        "sha256": "d48a433789aca12e3da5c5db95a62fc27c3b616a5c6bc2239d695d56811beb77"
+      },
+      "png": {
+        "bytes": 44575,
+        "sha256": "e0dbce967b16a070a35aa382ea72f44d67ff3da0c5e6d7564c635224f6fdfb90"
+      },
+      "pdf": {
+        "bytes": 116031,
+        "sha256": "b0588fc2511fdf056e925765912691d0ff79257d95d86cbdc1f81bea6ff10f19"
+      },
+      "eps": {
+        "bytes": 33835,
+        "sha256": "32a0b9707d7ad95d471f187a18e08f608d530bd3f5c60177fa06a71b2f1a50c3"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.334,
+      "pixelsDifferingBy30": 0.0033,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.515,
+      "pixelsDifferingBy30": 0.0055,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "double-correlation",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3296,
+        "sha256": "ce29684e584927fa14eb17d671a57088ad3ca1cfe12aa39b9ccee04ceb529524"
+      },
+      "svg": {
+        "bytes": 13301,
+        "sha256": "2dafbe5d770ecbbad4aa79c729f755b2ee9681e3945e4ad3b9308395b5e2aa4e"
+      },
+      "png": {
+        "bytes": 49344,
+        "sha256": "29701bbc909e66bdf3419d54a4a1191ff6415fdde91ce58693c4ed67bf2fd67e"
+      },
+      "pdf": {
+        "bytes": 117279,
+        "sha256": "a26fe8b919f59e9f6cab1359413df5eda9f102b9deb3e7a47834828a687f4945"
+      },
+      "eps": {
+        "bytes": 35148,
+        "sha256": "8d35c8b6dc1ce7054e8ef212bd2fa46784bb6ff20453789fe57aa392192e3e31"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.374,
+      "pixelsDifferingBy30": 0.0036,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.593,
+      "pixelsDifferingBy30": 0.0088,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "dumbbell",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2618,
+        "sha256": "87fb2e5db3050c78678ddb2a89ce5f6c16b0775a8931dbc6caeb6e7e1e8c225d"
+      },
+      "svg": {
+        "bytes": 13318,
+        "sha256": "4705cdaac219f3aa6a564d9143172ccba052b842c6870c154d77680bbc1144ae"
+      },
+      "png": {
+        "bytes": 81776,
+        "sha256": "bb9c3bb2e0d3d6d99dc389aa2532f6cde760c87905db408d03c3498d59e48067"
+      },
+      "pdf": {
+        "bytes": 128750,
+        "sha256": "f063f48b069c3593b2ca0db6de67e417557a8baad6455dc473a8a043a1f36496"
+      },
+      "eps": {
+        "bytes": 200570,
+        "sha256": "8ae9fdada233ea71c43f3df90b76d433e7b5bc64e799bc5b520c730a02c1e9f4"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.514,
+      "pixelsDifferingBy30": 0.0059,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.21,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "enrichment-bar",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3484,
+        "sha256": "3f456ad1785e1d4c140f1ad492330e08b3d043f234cd7b1d88fbab287a9c908d"
+      },
+      "svg": {
+        "bytes": 8621,
+        "sha256": "6a4ebf3adbc89dab2179219652c5a9a9efed8361b513c786fbfaf741544f632d"
+      },
+      "png": {
+        "bytes": 49075,
+        "sha256": "6ef7097e7951718a3ead0f9fd80b5149992fe8a1b19192a48da2bf3808d2847c"
+      },
+      "pdf": {
+        "bytes": 114187,
+        "sha256": "e5686dae9584f320fc083501246cf89fc4faed354eae2ebeca8ffe34cdff525d"
+      },
+      "eps": {
+        "bytes": 35377,
+        "sha256": "06c0e78cdc54cedb0214d14be0bb7eb413bae542e06a0055c6d50831a0d785c9"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.232,
+      "pixelsDifferingBy30": 0.0033,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.616,
+      "pixelsDifferingBy30": 0.0094,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "enrichment-circle",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3452,
+        "sha256": "5f5c923cddc2535e73066b6fbbb9db31dbd9a8b9cd822b5b13f7f5fa86882d24"
+      },
+      "svg": {
+        "bytes": 19151,
+        "sha256": "ee66b62bc172841bedd2ac0718e8da55bb0830407ec4532f413f15a9fa1a66bd"
+      },
+      "png": {
+        "bytes": 142109,
+        "sha256": "174c59dcf3ae661b811bf30acee98361f141a27d4d3616313a2fc98946db55b9"
+      },
+      "pdf": {
+        "bytes": 131553,
+        "sha256": "57e1d52c6051b2569956cdd2ec2e016981f90132afa387f034d083189e6cc5df"
+      },
+      "eps": {
+        "bytes": 290531,
+        "sha256": "565baa5ecdbc3f1b1d6407e5971a8d57b2a6e3381bdf83525db9697c5e4e4aa6"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.308,
+      "pixelsDifferingBy30": 0.0042,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.619,
+      "pixelsDifferingBy30": 0.0083,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "enrichment-dot",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3485,
+        "sha256": "f11c9a8e3ef44ec7409b6bc98749c34ae717d6c2a09cfca7c6969b7140f561a4"
+      },
+      "svg": {
+        "bytes": 9750,
+        "sha256": "c45682f62cb99e8f559782a60bdd8c7d12f7348e10666de4fc191ac1a7aff1ae"
+      },
+      "png": {
+        "bytes": 68774,
+        "sha256": "b338db7da85856feaf1a397cdf39d480cb030f51569dd348416728db2ae93bed"
+      },
+      "pdf": {
+        "bytes": 118677,
+        "sha256": "c709ea3d6bb90c56eb5f9259242b6392ab80fc0c03755fd565920068800f8a6f"
+      },
+      "eps": {
+        "bytes": 40503,
+        "sha256": "8478667b19274aed6591de26c89d538ef47ac8ef3fc2654feb411d3a6781af86"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.249,
+      "pixelsDifferingBy30": 0.0036,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.392,
+      "pixelsDifferingBy30": 0.0054,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "gene-cluster",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 4004,
+        "sha256": "be065fb494cea6527799838c590d522a14e1632ac9f360dcc09cccaf98c084d1"
+      },
+      "svg": {
+        "bytes": 15656,
+        "sha256": "5cb98602958956916ef0e6b30a55caa1010a5da23ad51a11417e779ed60a0d10"
+      },
+      "png": {
+        "bytes": 96434,
+        "sha256": "d4a6e67d10f153cb196758bee5b8fa9fc748b63c0cae20cf4e12fa91114fe55b"
+      },
+      "pdf": {
+        "bytes": 117374,
+        "sha256": "5a366a8396cc7804f7c7dfa3f0bf06be778e971ab6fff515771e7c968f645906"
+      },
+      "eps": {
+        "bytes": 46184,
+        "sha256": "64bd07403c43bddd6cf614c077beeb689d93fe0cff92f9eab33789807a490dd2"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.408,
+      "pixelsDifferingBy30": 0.0059,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.771,
+      "pixelsDifferingBy30": 0.0105,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "genome-circos",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 11425,
+        "sha256": "58e5714877886c705ad2a9fc8fca25f340405edc79e26f98170d0278ee28b789"
+      },
+      "svg": {
+        "bytes": 26634,
+        "sha256": "64590bf4d379e3294ed6bf95c3ede89db4e29e286c1ce6830745162a16e64892"
+      },
+      "png": {
+        "bytes": 146025,
+        "sha256": "893a08cdcad62e41bb2f659672bfec3f81ac1d455471676df46bc1098bce93cb"
+      },
+      "pdf": {
+        "bytes": 127154,
+        "sha256": "7c813faacb3090c2ab82797b4ce160536784ab7f81062444f34eb591f2eb881b"
+      },
+      "eps": {
+        "bytes": 296386,
+        "sha256": "dbaa0988cd91b8bc24c467473293ebac77f83c977920b2f3a62e892d44edb161"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.313,
+      "pixelsDifferingBy30": 0.0042,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.621,
+      "pixelsDifferingBy30": 0.0079,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "heatmap",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3306,
+        "sha256": "ebc81002476e1c293f9e00e1a257e6ca2ea27d7e9aad368480ce82ddd90a0f66"
+      },
+      "svg": {
+        "bytes": 27174,
+        "sha256": "26dcef0e892f59117f05f56b5144d285b7a4f0f1a0f43515f2c00d628529a95d"
+      },
+      "png": {
+        "bytes": 42991,
+        "sha256": "aaa4a2086f4dad7c9942f030b6138d61b268a0d71699aec1bcba48a5fb6bf261"
+      },
+      "pdf": {
+        "bytes": 115616,
+        "sha256": "0f1565c6d0af72258bf21ee9b6044820efbd3281fde83f7d69127088d185a738"
+      },
+      "eps": {
+        "bytes": 39806,
+        "sha256": "419c1dc84055af898b1f7ebd5604609cc6909c46fc4e108376cf9af8cbe205ad"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.474,
+      "pixelsDifferingBy30": 0.0027,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.865,
+      "pixelsDifferingBy30": 0.0108,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "line-error",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 10064,
+        "sha256": "0341d34a62c229346fec598d8313847e6b75b1672e3d198528eaf05304947143"
+      },
+      "svg": {
+        "bytes": 16970,
+        "sha256": "d34811be764632a8bc3646b9b5542a6606a02e542b91e07614604b34567e282b"
+      },
+      "png": {
+        "bytes": 112590,
+        "sha256": "175d4e0b4b5b4a4fb19d075e06e878bfa2dbbed5c957147af5deb57041b7cbce"
+      },
+      "pdf": {
+        "bytes": 134448,
+        "sha256": "92171cdd9512fcd2290091da9ab1d0c8d9eed5ac5962aa58fcacd6eb9319c1ac"
+      },
+      "eps": {
+        "bytes": 230593,
+        "sha256": "9e55721a503829742784d94a259980181691e05c98c076d6c6f43a1b1b9dc180"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.575,
+      "pixelsDifferingBy30": 0.006,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.248,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "line",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3178,
+        "sha256": "e5566b92ce3eda49a60506227f35693a88ef21624dfec1d51f8a4ef3b0c3f75f"
+      },
+      "svg": {
+        "bytes": 14066,
+        "sha256": "dc91701384961d1699037764096703b8125b057578c39ea38abec3301fa5c3df"
+      },
+      "png": {
+        "bytes": 103658,
+        "sha256": "015e02ca16e13365a07368d08e3413827e9022d3a002afc7c03f663056b71c0a"
+      },
+      "pdf": {
+        "bytes": 127353,
+        "sha256": "cc420ff6de93a2c4c05ffb727039b66c2ce20297926f0c5c64a6bf676c76f243"
+      },
+      "eps": {
+        "bytes": 220057,
+        "sha256": "26c0aad03cebe619ebcc3361b10daa39641fe2db94f4a26d565ce79679813b37"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.535,
+      "pixelsDifferingBy30": 0.0055,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.222,
+      "pixelsDifferingBy30": 0.0,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "lollipop-category",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2764,
+        "sha256": "7252f645c53b52f0dd6a5d742551e441e152c672e6a018f55c0cc2e4d2b08710"
+      },
+      "svg": {
+        "bytes": 11757,
+        "sha256": "cf5ef1919041c07739eebd36b8450c77564489d7977a550e530b1d099c136958"
+      },
+      "png": {
+        "bytes": 85373,
+        "sha256": "2ecc804897964f54f4b41da5cb0cb712c1da08e3e0a8c2390caec6f7a61f5abb"
+      },
+      "pdf": {
+        "bytes": 133161,
+        "sha256": "6493d65b33d0de1a7eb623a1f418f650e2f9c577c956327cd811ece97c377de5"
+      },
+      "eps": {
+        "bytes": 192085,
+        "sha256": "4368171ebbfda3b1721e22772558c94fc40f440bb6b6c47df833038fea9da252"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.534,
+      "pixelsDifferingBy30": 0.0068,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.232,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "lollipop",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2361,
+        "sha256": "9816ecdac8e8eb5fa64d54ce1b3151c0f00ca84a5a9752d2a1ff6f62760e3422"
+      },
+      "svg": {
+        "bytes": 8799,
+        "sha256": "66b7a67e1b257c7ac2207f25b7fb808f3f6ed2bfa19c8ef39d5c0bd34627ea2c"
+      },
+      "png": {
+        "bytes": 56849,
+        "sha256": "66afef3e47e34cb5f752ccd1bfcf2636ac02ac6ce3b23b8ef5ca988ae42faa72"
+      },
+      "pdf": {
+        "bytes": 123386,
+        "sha256": "0f2b11d26ea3b152652c1b4bdee62118d635dcc8a963068d6d18f91b9bb889a5"
+      },
+      "eps": {
+        "bytes": 134386,
+        "sha256": "6fd5a4215577225ba7b92a5a53c9eb036e3151c86a5554db17818fe3cd66d9ff"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.365,
+      "pixelsDifferingBy30": 0.0044,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.186,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "mantel",
+    "svgSize": [
+      1120.0,
+      680.0
+    ],
+    "pngSize": [
+      1750,
+      1063
+    ],
+    "pdfPoints": [
+      840.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 4975,
+        "sha256": "5d1e426110e7c05adc536d0f3232661b3a41f1d7ed718995b00e35b6b5297408"
+      },
+      "svg": {
+        "bytes": 17204,
+        "sha256": "cab4ec0d496944c37f765d8fb355d92bce08939af637302886d320af5d9cfc7f"
+      },
+      "png": {
+        "bytes": 100573,
+        "sha256": "2589f16eda94d6d543d9ea5b88f50dc26758cee4c31f031d625383cdabc5e432"
+      },
+      "pdf": {
+        "bytes": 124655,
+        "sha256": "71a5cd9b9901906fbbb2089325278edde98cd6197ae6e2fb82cb1ddeb22629be"
+      },
+      "eps": {
+        "bytes": 52805,
+        "sha256": "4bf9ef759bb32fc17f86febb90be222d041c1c26bc42c499ec06ab87967c57f9"
+      }
+    },
+    "pdf": {
+      "size": [
+        1751,
+        1063
+      ],
+      "meanChannelDifference": 0.442,
+      "pixelsDifferingBy30": 0.0047,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1750,
+        1063
+      ],
+      "meanChannelDifference": 0.565,
+      "pixelsDifferingBy30": 0.0068,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "map",
+    "svgSize": [
+      1100.0,
+      670.0
+    ],
+    "pngSize": [
+      1719,
+      1047
+    ],
+    "pdfPoints": [
+      825.0,
+      502.5
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2977,
+        "sha256": "c7541d8832518a701eed584d806c6c0548f3edbda5244428bc64c8a6ea802468"
+      },
+      "svg": {
+        "bytes": 133698,
+        "sha256": "15004a9a1cffbb3cb854c0e1e15c88957d022c92e710149f5a7d41a34e208e45"
+      },
+      "png": {
+        "bytes": 397089,
+        "sha256": "f766e0b98ba90ced465ad3ca0d6ca1b8325ac817f45eabebb11ed531ab317aba"
+      },
+      "pdf": {
+        "bytes": 159540,
+        "sha256": "d77adc87e63086d14a8ce0a104b5c98ffe7b59c29488964ed44aa9509de24f2d"
+      },
+      "eps": {
+        "bytes": 993355,
+        "sha256": "9f2cdf1cd2a40cf6256723ffaeade995409ad295bc5c8d6a31cc61c83ece00c3"
+      }
+    },
+    "pdf": {
+      "size": [
+        1719,
+        1047
+      ],
+      "meanChannelDifference": 0.515,
+      "pixelsDifferingBy30": 0.0025,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1719,
+        1048
+      ],
+      "meanChannelDifference": 0.915,
+      "pixelsDifferingBy30": 0.0048,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "network",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 5289,
+        "sha256": "98a68cadc24d02b89fb3530df866d7b9193b4068f73be8ab402e8aae9dde631e"
+      },
+      "svg": {
+        "bytes": 14461,
+        "sha256": "7df84ade739d47f93fabfabe9d40d6a43e9d950e47a48e9b2ad0d44aa773a167"
+      },
+      "png": {
+        "bytes": 87717,
+        "sha256": "19a2fac4eb39d86052a0c1831e082fc29366801e64af73984c23991c56acd39e"
+      },
+      "pdf": {
+        "bytes": 128747,
+        "sha256": "337b23ddde0f70a2c8969f9b6e95f405db4f64e0308efe2c17e8c518b50df4a0"
+      },
+      "eps": {
+        "bytes": 166474,
+        "sha256": "eaf94a81ebc9666df37c4924bc158fcb26fffc4cd8cd5467e8ec9afae3bb0bfa"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.233,
+      "pixelsDifferingBy30": 0.0035,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.277,
+      "pixelsDifferingBy30": 0.0026,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "nmds",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 9819,
+        "sha256": "7a79aceadc72d5e30e9389572f23738de67be10142f0e48527cfd19e44d5fe1d"
+      },
+      "svg": {
+        "bytes": 11422,
+        "sha256": "0254651b273b8c79b90e63b73431a5b264839cc5d30f291c2ccb652999c66f28"
+      },
+      "png": {
+        "bytes": 76580,
+        "sha256": "3b07b986265660a74bbc40a835e05c5e8525ba1b0dc558bf42d064cc87633754"
+      },
+      "pdf": {
+        "bytes": 124494,
+        "sha256": "ef1353f506188ae73ad1abba7a252a2a5772753e9979d726fafefe7dbd98b49d"
+      },
+      "eps": {
+        "bytes": 175283,
+        "sha256": "4335a2cbfa03cc2aaba72bfbf84fdf3705a4b7e65cb648467d8de0df69446df9"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.355,
+      "pixelsDifferingBy30": 0.0048,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.558,
+      "pixelsDifferingBy30": 0.0051,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "packing",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2895,
+        "sha256": "9e709b108eb107c90fb6cba1be5a6f24e01fe5ff4e50054e4016dbfdb1e8827d"
+      },
+      "svg": {
+        "bytes": 4619,
+        "sha256": "d7c018055b79ce826f2aee245141a1922e02cbf99d837ec9e518e528825e7c21"
+      },
+      "png": {
+        "bytes": 131579,
+        "sha256": "730be6369e7c166fd6f5563fef9bc29e12cc53cf408e20f211d8a9f7b21710bb"
+      },
+      "pdf": {
+        "bytes": 115791,
+        "sha256": "5b6251c984fddbba081ccb7da83eae39aa8910ee5304c4c43a66561349e9c9d8"
+      },
+      "eps": {
+        "bytes": 282905,
+        "sha256": "f22dfe3608324bfd0d7c5907bb30aebe0dd8c8f024f4b75acec1481139ba8f1d"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.228,
+      "pixelsDifferingBy30": 0.0025,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.554,
+      "pixelsDifferingBy30": 0.0059,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "pca",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 13847,
+        "sha256": "4ac454a93e55fd78b51a67be42f64fe627fe758efa0ad66d6d893d8012186da6"
+      },
+      "svg": {
+        "bytes": 16830,
+        "sha256": "4ef34b567adf81ca68859ad5d1a650a939bc68afcc465b1529908ea97bea6d01"
+      },
+      "png": {
+        "bytes": 87429,
+        "sha256": "9cfacd0a3fc5c1944ce3dca0d17723a14125ba9982420a5f2a249ad70e02df13"
+      },
+      "pdf": {
+        "bytes": 130312,
+        "sha256": "2204ab5d4420f844398ad6560b5415910408a16a6ce35894760849ea44e0daf7"
+      },
+      "eps": {
+        "bytes": 208500,
+        "sha256": "f877d2bb9b9d548cfc9bbf5c2854b16e3fb703c1caa158322729081c9f9c62df"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.328,
+      "pixelsDifferingBy30": 0.0043,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.645,
+      "pixelsDifferingBy30": 0.0059,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "pcoa",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 12405,
+        "sha256": "286626271c904a4fa722373a78de58240891babaf728358e5cde36ee9f2d3d72"
+      },
+      "svg": {
+        "bytes": 12561,
+        "sha256": "ec1ee6c2424b248a38cb312936945ddb2ba3d02ba36444362c35d31e7dce9faa"
+      },
+      "png": {
+        "bytes": 73199,
+        "sha256": "a49941f5d3ee33cc12a80979216a1c126bfc37ef0afba0f442181f9d956cb9a6"
+      },
+      "pdf": {
+        "bytes": 124958,
+        "sha256": "203de4e9572006de9073f84a544c5af412c430e2fcfbed0e09a24cdbb9912866"
+      },
+      "eps": {
+        "bytes": 173978,
+        "sha256": "1f3964112c19cea2b10ebcc245b4afd18e79785f0fd8ed48f7618635df872942"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.298,
+      "pixelsDifferingBy30": 0.004,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.613,
+      "pixelsDifferingBy30": 0.0055,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "pie",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2406,
+        "sha256": "1d2f8aab5c261b6eab14576e28cae89992fd6c5fdb1236709066fdac052807a9"
+      },
+      "svg": {
+        "bytes": 3497,
+        "sha256": "1aecdba2cfbb03abf288fbe97a68db7196001726c4ec8e66187e4cf472b69458"
+      },
+      "png": {
+        "bytes": 79211,
+        "sha256": "1666046be7e620a251e56cfa51e7123f3d54931bb35ad87b024023bc5b78dad4"
+      },
+      "pdf": {
+        "bytes": 119337,
+        "sha256": "66b35e64d92a9d99454a1498e6a394f3d5fc19f1507f470c3fa6143979543dc7"
+      },
+      "eps": {
+        "bytes": 151695,
+        "sha256": "32bacb2abed70fa4f6721e8baa971ca26e11b8adffb98b91795790216f8a6c20"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.386,
+      "pixelsDifferingBy30": 0.0041,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.126,
+      "pixelsDifferingBy30": 0.0,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "protein-domains",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3763,
+        "sha256": "904201b853b07de147b0cc2c167e2c2d022c3ba8aec55537ce19fd906a0570b1"
+      },
+      "svg": {
+        "bytes": 6139,
+        "sha256": "9de9c1abd9e9ede5d6a128d2ec155ede160267ef63bde3af98efcb317f9ba521"
+      },
+      "png": {
+        "bytes": 63091,
+        "sha256": "7f30aa38d1cb040f5d64aab959b7b5e663902184e4c28098689c40a17355673a"
+      },
+      "pdf": {
+        "bytes": 115864,
+        "sha256": "530d3b8f3e58cdc3685b5cd301b8d5c453765b3e23126bb6100d2e01392715bb"
+      },
+      "eps": {
+        "bytes": 37597,
+        "sha256": "9fba0b7341c5643fa465c808c6bb645a2dad57a58c84f4b85fa2d43b6c1512d6"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.328,
+      "pixelsDifferingBy30": 0.0049,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.629,
+      "pixelsDifferingBy30": 0.0081,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "protein-motifs",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 5257,
+        "sha256": "882e3ea6adc233cdfe37b22d2e592c96d9dbaa065bf9c0aa7fbf4415172b5381"
+      },
+      "svg": {
+        "bytes": 8187,
+        "sha256": "5fa3c2d6aec2a4c76955a6fed67f69e570a233f4cc709fb9ad2e2a3fcd29b77e"
+      },
+      "png": {
+        "bytes": 62238,
+        "sha256": "981a2042e95f795336f675fc89118676dc5a17af73361ee1891a01c4e97d4a80"
+      },
+      "pdf": {
+        "bytes": 113617,
+        "sha256": "8f6ab4b05ea7da5873686edec32e683a33312494cad67311da9e73c9444abd3e"
+      },
+      "eps": {
+        "bytes": 34649,
+        "sha256": "4556b91001365095bc05a792e048e405f1eef25b51f638be25ac3ba961fc5ead"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.331,
+      "pixelsDifferingBy30": 0.0049,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.537,
+      "pixelsDifferingBy30": 0.006,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "radar",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 3151,
+        "sha256": "d25f5568c4263b6e420b6a1c56ed6958b776e068184a0f9b9dfb647f163812ca"
+      },
+      "svg": {
+        "bytes": 7917,
+        "sha256": "64e1dd7b36c1eae47f52d2e774feb80d20ac2e6d9f0586cc1962cff4b26b3708"
+      },
+      "png": {
+        "bytes": 133400,
+        "sha256": "dae25a859b79b10a27df4f0c1f1e63d7b54af49b66b58a6378fa7e0c26e4dccb"
+      },
+      "pdf": {
+        "bytes": 134037,
+        "sha256": "de1de2583d63c1e291c787276ffe0c63172dc2b06f3e7d16a40335508fbc5d6e"
+      },
+      "eps": {
+        "bytes": 280535,
+        "sha256": "4289714cad42f6513691adbad65414997ae4db473c829d6825a65be9e501b58e"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.466,
+      "pixelsDifferingBy30": 0.005,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.174,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "raincloud",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 13216,
+        "sha256": "1893630ee080c73ef1776cb5d1d89ed1acceb842b5d7784785d03a862ab49502"
+      },
+      "svg": {
+        "bytes": 159107,
+        "sha256": "79dc9fc83daabcabde467a06165090f3bed1cbf9a4311ece59f94daab4975021"
+      },
+      "png": {
+        "bytes": 89729,
+        "sha256": "16c78b802c0b4ddb695ca92092947a6f91effc0129efb4c70587e1860c805bf7"
+      },
+      "pdf": {
+        "bytes": 239203,
+        "sha256": "54dd4e73092fd4e23c5fe7b28fdb0dd7b9862eb7f6be8e9be5c3e0e57418d5d3"
+      },
+      "eps": {
+        "bytes": 225220,
+        "sha256": "392e5113db241ad227dfe66f17a754819fc9768506c22082590eaaff4afbd87d"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.533,
+      "pixelsDifferingBy30": 0.0055,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.221,
+      "pixelsDifferingBy30": 0.0,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "rda",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 14227,
+        "sha256": "03ccec4887c09d41a7437f8c08b0e1202b02bcb0f64d2e43f530217d4f087976"
+      },
+      "svg": {
+        "bytes": 15616,
+        "sha256": "cab8191064a43ac497e6c3254fcd480d31853e4ad52f2218e3725851601b1bfb"
+      },
+      "png": {
+        "bytes": 87526,
+        "sha256": "06d8c0edfc137a6420c2fd9699769a97aeab41d58fbff3283a7429da1adfa48f"
+      },
+      "pdf": {
+        "bytes": 132481,
+        "sha256": "5853bc991b5853d7a45932a34445e96f8cd9c0e25f3b2084dbb5aa24bdc83e25"
+      },
+      "eps": {
+        "bytes": 218407,
+        "sha256": "a11b424e5bf076e09765e5457bb9ef8c80c7338a8519090c4df34ff397d51a87"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.325,
+      "pixelsDifferingBy30": 0.0041,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.694,
+      "pixelsDifferingBy30": 0.0062,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "ridgeline",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 13218,
+        "sha256": "a78220f7d6f27940fc835f4c9d213b8f3a1b94521df06b6562567cc7a3fa1a5f"
+      },
+      "svg": {
+        "bytes": 145465,
+        "sha256": "11cd0053c53bb060562c80530be94dfd3884e6ad779ee58f72eec226a46b5a15"
+      },
+      "png": {
+        "bytes": 74197,
+        "sha256": "07f8206251c8fbb6476619dd8002890a73ed831529aa46e043b17a76080b64ac"
+      },
+      "pdf": {
+        "bytes": 170252,
+        "sha256": "e67f014cb3f8a6d317e410d310059a4b311202e5abb37ee8d7f428f1d1aa4148"
+      },
+      "eps": {
+        "bytes": 192931,
+        "sha256": "ef97119ad73fa13e82da91661dd49fe270182505b096ed83ed9d42d7e54f3fe8"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.437,
+      "pixelsDifferingBy30": 0.0049,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.164,
+      "pixelsDifferingBy30": 0.0,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "rose",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2589,
+        "sha256": "832abd68630befe98f40106141a33022fc8e8060b01e2df7e58a1272419d431e"
+      },
+      "svg": {
+        "bytes": 6316,
+        "sha256": "4766c2f5e419fb85b9494d416a5782532abfbb31f2765c1182322789c9a90413"
+      },
+      "png": {
+        "bytes": 91957,
+        "sha256": "c62354ec2828b1682fd9ec4a34709fdd9ab1457b9545f81e533a5dc7daf760bf"
+      },
+      "pdf": {
+        "bytes": 121815,
+        "sha256": "c87d95f784300264a52353d6d93e59048fb2581f0283e2f9974861492b009139"
+      },
+      "eps": {
+        "bytes": 186890,
+        "sha256": "d30dc46774c589ebef2556cef094bb611f0fd9644429f1de107d9cb264748ca3"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.288,
+      "pixelsDifferingBy30": 0.0032,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.115,
+      "pixelsDifferingBy30": 0.0,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "sankey",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 2148,
+        "sha256": "d6263e86ddaf0647744a79a655817bf8bffeb244436fe996c91b59e9debf4e1e"
+      },
+      "svg": {
+        "bytes": 4437,
+        "sha256": "217dbc302222564696a6dbdb9db9663099d4535757a620c3ef359f1cec4d7e0f"
+      },
+      "png": {
+        "bytes": 85071,
+        "sha256": "24097e7dd156210f823504eba35dedd2d1024c28656a1f6eaf5385ae42fa3a7b"
+      },
+      "pdf": {
+        "bytes": 118971,
+        "sha256": "f2ec91404d8d8ff6d92cdf84d076921c6d43e3ed8f52f9c2b76ca2d967e2dd8b"
+      },
+      "eps": {
+        "bytes": 198323,
+        "sha256": "08575b2ec6c838a1412788353d3e72dd5c328d9b2d30a1bdfb4e613c6b904f75"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.508,
+      "pixelsDifferingBy30": 0.0037,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.325,
+      "pixelsDifferingBy30": 0.0022,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "scatter-error",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 7116,
+        "sha256": "ac29d962e845627193a9fabdbba5f724bfd85290456f191b56c407bc79f3ac6a"
+      },
+      "svg": {
+        "bytes": 13987,
+        "sha256": "1d7e24510b43306682e8c3b77510a852f2fa1e123a00e74c2ae91b62b5ac80da"
+      },
+      "png": {
+        "bytes": 80008,
+        "sha256": "673eab97a87d7f5d67eb4bba90a6624752acf3e55eb3c779ff304eba28d04dd6"
+      },
+      "pdf": {
+        "bytes": 161661,
+        "sha256": "1380851204ccb4210d184651a864ea7c2e433afdb80650d5c3dc785eecf49121"
+      },
+      "eps": {
+        "bytes": 159333,
+        "sha256": "f6e99db6e4ad7e237bf1feba66a672018292a269ff84916f4146c45e27ea4b0b"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.467,
+      "pixelsDifferingBy30": 0.0057,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.191,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "scatter-grouped",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 6830,
+        "sha256": "843a289bf3761e0e38dde1aefb49c5333f8c459b324c42e16fb90ec4e312d989"
+      },
+      "svg": {
+        "bytes": 25951,
+        "sha256": "9971b69398c0d87994594f909b323a582bab3144dd31d04db30d291104e7414d"
+      },
+      "png": {
+        "bytes": 139827,
+        "sha256": "266a8e8b85d09f94c8b3f2cfd290ca2cc86dafb31fcbf3868cd6c39a7e4f775d"
+      },
+      "pdf": {
+        "bytes": 142983,
+        "sha256": "0d5ed698aee14c942ab5855f1997fab2bcf22c5a4702f04a022ce0ffcd4c25c7"
+      },
+      "eps": {
+        "bytes": 312951,
+        "sha256": "393a134c9c19f54953d01741e1d9566f4fccf0ba45e25a5728a423def6994090"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.801,
+      "pixelsDifferingBy30": 0.0103,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.323,
+      "pixelsDifferingBy30": 0.0002,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "scatter",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 6004,
+        "sha256": "09671e3b8f5ba141d2d608ddde24459ff9d6d7a4ae2969cb1dd97e7e870be47e"
+      },
+      "svg": {
+        "bytes": 25346,
+        "sha256": "4293b48d08fa03a8672586fa05566d955699a6b10787bf762877e9c3c1268052"
+      },
+      "png": {
+        "bytes": 139433,
+        "sha256": "63f4299893950def21cef183e5c6227e0fcd6496cfd2097555ae8e7990be1059"
+      },
+      "pdf": {
+        "bytes": 140681,
+        "sha256": "af6f9090b3783576b39f46ae64b4c0c2495068ed38c54c5d05e6ddd9f6f17364"
+      },
+      "eps": {
+        "bytes": 310493,
+        "sha256": "18491da9d46387bbf78fc77dba90616306da044f160ad9f00699e50cbefd3189"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.796,
+      "pixelsDifferingBy30": 0.0103,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.321,
+      "pixelsDifferingBy30": 0.0002,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "synteny",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 6955,
+        "sha256": "fb931739fa0b4f3ed8dd20c58ee0e3e273c1df9f7bad3ff900d557e5f743b35a"
+      },
+      "svg": {
+        "bytes": 12297,
+        "sha256": "4a51d4a6d5bb49a1ff75140084018caba704b1b032f741afe7edaca7ec987547"
+      },
+      "png": {
+        "bytes": 90735,
+        "sha256": "7bc65fd2c888e856f3ccd58c634e3875c9af34f7dc9a3c35bf07306b793f6381"
+      },
+      "pdf": {
+        "bytes": 138780,
+        "sha256": "ca86956926474303674d14f3b59a5f9c22704f9a81d561bade4a288ee6803d01"
+      },
+      "eps": {
+        "bytes": 206134,
+        "sha256": "5d7056e863c76e894ca436408aca47d1a9293ff5dde0612f612f7bf3c18001e6"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.384,
+      "pixelsDifferingBy30": 0.0053,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.482,
+      "pixelsDifferingBy30": 0.0026,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "tree-circle",
+    "svgSize": [
+      1146.280029296875,
+      1225.280029296875
+    ],
+    "pngSize": [
+      1791,
+      1915
+    ],
+    "pdfPoints": [
+      859.7100219726562,
+      918.9600219726562
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 9641,
+        "sha256": "28b62f1464ef8d8cc340f883b30140afc59e66a80a26abd73b3b5864c2fdd173"
+      },
+      "svg": {
+        "bytes": 19682,
+        "sha256": "0366eca6fee1b6ede83bf56e2104325c7e94a4a01c0b65d1eedef9db9b516fd0"
+      },
+      "png": {
+        "bytes": 367563,
+        "sha256": "32a66c973bf303e26daa67a10ed5697c4aad5c1b22b79acbd332fbae69241d53"
+      },
+      "pdf": {
+        "bytes": 177243,
+        "sha256": "d95763e93e309a745f30672f23b700e2353cf38fd81b1c0172d1dd2a06681eb9"
+      },
+      "eps": {
+        "bytes": 797491,
+        "sha256": "36aa5ced60463ec0fa273c008b0de80ab10a5fd4a4d827cbc376a2e6913621b5"
+      }
+    },
+    "pdf": {
+      "size": [
+        1792,
+        1915
+      ],
+      "meanChannelDifference": 0.393,
+      "pixelsDifferingBy30": 0.0034,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1792,
+        1915
+      ],
+      "meanChannelDifference": 0.971,
+      "pixelsDifferingBy30": 0.0138,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "tree-normal",
+    "svgSize": [
+      1050.0,
+      650.0
+    ],
+    "pngSize": [
+      1641,
+      1016
+    ],
+    "pdfPoints": [
+      787.5,
+      487.5
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 9642,
+        "sha256": "85f8dd6d27bf6b0bc9c85ff04f8f6ac7d2b7bd5a2b40c2e23eadd027965d74b7"
+      },
+      "svg": {
+        "bytes": 14784,
+        "sha256": "69d3db995644736448354b9a9d8e99047b1e1ccdf30b8bbd8a5edd6705d9c8d4"
+      },
+      "png": {
+        "bytes": 111142,
+        "sha256": "ff89f0fd7c75aaf631b55d8ac67d21c32342f21f31b91b0cd9d3f7625f1ac587"
+      },
+      "pdf": {
+        "bytes": 174389,
+        "sha256": "d5f6bfcc0cc1175cf7dee91bce07fa09f502b4361545c9f4af18f4a5bae00d43"
+      },
+      "eps": {
+        "bytes": 229655,
+        "sha256": "1e68750f7dba760fb497c3b74fa0234c41dabb1e9fbf3f88f36698ecfcab86d2"
+      }
+    },
+    "pdf": {
+      "size": [
+        1641,
+        1016
+      ],
+      "meanChannelDifference": 0.651,
+      "pixelsDifferingBy30": 0.0089,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1642,
+        1017
+      ],
+      "meanChannelDifference": 1.419,
+      "pixelsDifferingBy30": 0.0192,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "tree-unrooted",
+    "svgSize": [
+      900.0,
+      900.0
+    ],
+    "pngSize": [
+      1406,
+      1406
+    ],
+    "pdfPoints": [
+      675.0,
+      675.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 4424,
+        "sha256": "6656d854ed0d6c9626202309044c79f412c6dcaf23eded1b71bad0b3fc3171d3"
+      },
+      "svg": {
+        "bytes": 8776,
+        "sha256": "20756b4b47ca8fbff8c323ea6aafe2a743580a2d1683aa66508e10a8ab206da2"
+      },
+      "png": {
+        "bytes": 117173,
+        "sha256": "6f29fec61ca55f2eb2101b83938680e12b5b10c729b7d02caabd7d157ca359ab"
+      },
+      "pdf": {
+        "bytes": 145867,
+        "sha256": "1cab0e74cc718c8938df2c204a8c5df3db5b5e205fd92b65bb3768ddb9ab41b6"
+      },
+      "eps": {
+        "bytes": 223272,
+        "sha256": "007f60fbda4f094ac8d150f413fe8059839d6d8fbbe3bb9c6be6474ce13b4ba1"
+      }
+    },
+    "pdf": {
+      "size": [
+        1407,
+        1407
+      ],
+      "meanChannelDifference": 0.376,
+      "pixelsDifferingBy30": 0.0045,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1406,
+        1406
+      ],
+      "meanChannelDifference": 0.134,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "upset",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 14849,
+        "sha256": "89d66e4aa1dc913afc39d108f655963b64ba5e6b6010c7e0facae39e38a3eff8"
+      },
+      "svg": {
+        "bytes": 11934,
+        "sha256": "09a3771c2a9d76bc121e4365f44feab035b78c680279b675d7982ee0d509c675"
+      },
+      "png": {
+        "bytes": 80047,
+        "sha256": "bbadb5f8aeec5293cd25f311cd97a5a156930c980bb7e96a056ee28a97fd2e9d"
+      },
+      "pdf": {
+        "bytes": 129189,
+        "sha256": "fdce49eb033699e059e35dbd7e90256ce77426c632c42f7771c98c9e5d1dfea8"
+      },
+      "eps": {
+        "bytes": 170389,
+        "sha256": "d4712683b35f0c97015e0b9b06fbec37a765044814f4865c010536706adcc68b"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.895,
+      "pixelsDifferingBy30": 0.0096,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.222,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "venn",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 1910,
+        "sha256": "a889858c31dd7280ed8e85614d863282879c91c7f2b11e0e54a12a5e0aca8ce8"
+      },
+      "svg": {
+        "bytes": 6283,
+        "sha256": "b09708f0f5bc417779cb4ceafa96a6b71305cc4fbb97887463455c9e00cdd152"
+      },
+      "png": {
+        "bytes": 130040,
+        "sha256": "c945ca062af6fd3f133eefa12d1f404e7f649498e297996bdc2f7a3a17b56518"
+      },
+      "pdf": {
+        "bytes": 131897,
+        "sha256": "6455f79c3f303fa855c9757e2048fd240a798abdaf4603673c76a86fe6d0902f"
+      },
+      "eps": {
+        "bytes": 276795,
+        "sha256": "4fe4a1f1fb6a3afda122f19505332a39edab398b4ab1894c2d6f473c3571463c"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.535,
+      "pixelsDifferingBy30": 0.006,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.533,
+      "pixelsDifferingBy30": 0.0055,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "violin",
+    "svgSize": [
+      960.0,
+      640.0
+    ],
+    "pngSize": [
+      1500,
+      1000
+    ],
+    "pdfPoints": [
+      720.0,
+      480.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 13214,
+        "sha256": "99c7a4150dd7487314b29074f0f128f6e4a6ce53b5656dfefc0797993e50277d"
+      },
+      "svg": {
+        "bytes": 164621,
+        "sha256": "5fd9f70390c0ba33f42cc80ec0ee0a53fdfe1c49a0fcc600a7916831e2483498"
+      },
+      "png": {
+        "bytes": 99145,
+        "sha256": "ad1d1a3608a8b4d5ba2ee8410d083ceb575dbf05849114c733c478f6a1c7bd31"
+      },
+      "pdf": {
+        "bytes": 248195,
+        "sha256": "28ced8c376c8edae8a65ede1d599553c8c18c6329452c7d5c16197d21b88dc46"
+      },
+      "eps": {
+        "bytes": 211278,
+        "sha256": "bc4775d10ce3cf1f0c9fa29f48d5713c11e6e7d3513a945e1ba06f4aa6d322fd"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1001
+      ],
+      "meanChannelDifference": 0.455,
+      "pixelsDifferingBy30": 0.0052,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1000
+      ],
+      "meanChannelDifference": 0.201,
+      "pixelsDifferingBy30": 0.0001,
+      "reviewNeeded": false
+    }
+  },
+  {
+    "id": "volcano",
+    "svgSize": [
+      960.0,
+      680.0
+    ],
+    "pngSize": [
+      1500,
+      1063
+    ],
+    "pdfPoints": [
+      720.0,
+      510.0
+    ],
+    "files": {
+      "openacad.json": {
+        "bytes": 36238,
+        "sha256": "7c3933f9f7ea611c5a84a8e556be4e791dce4ac1ab307c1119b4f5ad4059d668"
+      },
+      "svg": {
+        "bytes": 72416,
+        "sha256": "d9047e81f78f0ba63d91a7fc04c47d51b14579e400227383a1b97f2f94f8f1d2"
+      },
+      "png": {
+        "bytes": 113412,
+        "sha256": "9c9b9364c41a663a2cd78581057141db96bb0be753e18a120bef5ef171d6e425"
+      },
+      "pdf": {
+        "bytes": 143571,
+        "sha256": "b63ad4d14128a7fe9dfce9bc4514ef1012cd945b7c59935aafc6d8201290a4b7"
+      },
+      "eps": {
+        "bytes": 266865,
+        "sha256": "9e426d55bb6b52587f3c9c1f02d8e7d4f68f64122859a2ac662279a75cc0ea8e"
+      }
+    },
+    "pdf": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.302,
+      "pixelsDifferingBy30": 0.0039,
+      "reviewNeeded": false
+    },
+    "eps": {
+      "size": [
+        1500,
+        1063
+      ],
+      "meanChannelDifference": 0.689,
+      "pixelsDifferingBy30": 0.0062,
+      "reviewNeeded": false
+    }
+  }
+]

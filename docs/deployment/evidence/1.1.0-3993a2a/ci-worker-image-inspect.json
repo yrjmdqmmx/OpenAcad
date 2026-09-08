@@ -1,0 +1,115 @@
+[
+    {
+        "Id": "sha256:35d7ea3dd26873e430fa2b8ea60d1a7c0eaf5aeb808862e03c2f9bbf0bd72a66",
+        "RepoTags": [
+            "openacad-worker:verified"
+        ],
+        "RepoDigests": [],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-09-08T02:03:39.190307912Z",
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "10001:10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8000/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/opt/openacad/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "R_VERSION=4.6.1",
+                "R_HOME=/usr/local/lib/R",
+                "TZ=Etc/UTC",
+                "CRAN=https://p3m.dev/cran/__linux__/noble/latest",
+                "LANG=en_US.UTF-8",
+                "DEBIAN_FRONTEND=noninteractive",
+                "PYTHONDONTWRITEBYTECODE=1",
+                "PYTHONUNBUFFERED=1",
+                "OPENBLAS_NUM_THREADS=1",
+                "OMP_NUM_THREADS=1",
+                "MKL_NUM_THREADS=1",
+                "R_DEFAULT_INTERNET_TIMEOUT=300",
+                "HOME=/tmp"
+            ],
+            "Cmd": [
+                "uvicorn",
+                "app.main:app",
+                "--host",
+                "0.0.0.0",
+                "--port",
+                "8000",
+                "--no-access-log"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.authors": "Carl Boettiger <cboettig@ropensci.org>",
+                "org.opencontainers.image.base.name": "docker.io/library/ubuntu:noble",
+                "org.opencontainers.image.description": "Reproducible builds to fixed version of R",
+                "org.opencontainers.image.licenses": "GPL-2.0-or-later",
+                "org.opencontainers.image.revision": "9e8d0dfff8ce94e458521ce2698580056722c713",
+                "org.opencontainers.image.source": "https://github.com/rocker-org/rocker-versioned2",
+                "org.opencontainers.image.title": "rocker/r-ver",
+                "org.opencontainers.image.vendor": "Rocker Project",
+                "org.opencontainers.image.version": "R-4.6.1"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 1845893733,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/bccf7312d2b52f06351ae1109ccb0807e5c8ba0c495302782a2c7d0ff3954652/diff:/var/lib/docker/overlay2/2d9900af48a58e2ff89d603a4ca5f0f09cede330f97d8ca207c3abd126dbdf7e/diff:/var/lib/docker/overlay2/9f2118c677359a36351db2e0203acab180ff87cd0a4ccc4cf36e60ffcb205e23/diff:/var/lib/docker/overlay2/2740f978840ec4dc6029fee40800fbbf14209f216c32721b93e8646da4cd6ac3/diff:/var/lib/docker/overlay2/966de62b9f43e194f245309d0bf9ebc376c6ba50ff74deb3cb354e36f561648b/diff:/var/lib/docker/overlay2/196a9b3f55c79ebdb1db7291c2970fbf6f30de66eef32563860040053eb06f11/diff:/var/lib/docker/overlay2/d2e8782d6ad8fc7e8c22cee982648423e902b85931674e4056cb9c0ca9dafb2d/diff:/var/lib/docker/overlay2/653a7a864dc33a193013214de52645a6115cfdea0137015944a33ffb5d5c821a/diff:/var/lib/docker/overlay2/73c5b5a98f9959d37cd0e4f5be04d219a4c1d843f1bd92cb944b6f0766744d49/diff:/var/lib/docker/overlay2/233ce7efa73c4070c1a8466615f050467c222b0f98c3b96f2c618383b0b4f6aa/diff:/var/lib/docker/overlay2/3e6a2d5592c756157596e4c81bacae274eb8c0a5f653ac5a93239571eab871f1/diff:/var/lib/docker/overlay2/e3853c3f16917798b7c2cfe2168b41678a15de47e81a0ac41db234fd7589e1fa/diff:/var/lib/docker/overlay2/d2db410bcedb2a979f410e76e43f08c20de52e366c6fdcf626bf0088d09665a9/diff:/var/lib/docker/overlay2/7d5bd1146cd5bdffb17a6f705784fd915d81e0c9a38ee37e5de679142f5fb538/diff:/var/lib/docker/overlay2/6644a76e53e939bf77024ecd480f5c3e8a5bd1e561124d5547cdc12cce2cbc9e/diff:/var/lib/docker/overlay2/ba18ae2e3b3c394f6b0200c1c4f1f3f7a6d0c58287ed93cb2ee3eb64918809bb/diff:/var/lib/docker/overlay2/03b4fbe756307fdaddf7bbb6603b396bc74a692281fb50aa1fdd09b3d119bd0e/diff:/var/lib/docker/overlay2/f4ffd563aac893ceb11ade6715388c7342aade3b6ce18d94e0af4bfab563a8fc/diff:/var/lib/docker/overlay2/020e0e2986aeae68f7e501630095b1bb46575bbf96c34655dba448ad0daadf6d/diff:/var/lib/docker/overlay2/225a0cc98417a431e1f8662bbdc3b42ad3aed2feae611e506f46ffc2ae4970be/diff:/var/lib/docker/overlay2/a7c369141193933b90e633658f6874cddb795547606c2ff2692091242d1c8ced/diff:/var/lib/docker/overlay2/143a825c9759eff50d226df6e9e918fe60ce6656d0425723380d4b8f11e11a52/diff:/var/lib/docker/overlay2/59236e937067fc6202fcad0333b8d1fbfc2d44422264abc1d4b95cbba5e601e8/diff:/var/lib/docker/overlay2/5685d7fd979a31d7088091965bf54d2c0dc966856822c1cb8ff0599ddd71d02c/diff",
+                "MergedDir": "/var/lib/docker/overlay2/83848ab07c7e0c6d8e06839f3d78258af01fd9dce729839ae481e9210ec4bebc/merged",
+                "UpperDir": "/var/lib/docker/overlay2/83848ab07c7e0c6d8e06839f3d78258af01fd9dce729839ae481e9210ec4bebc/diff",
+                "WorkDir": "/var/lib/docker/overlay2/83848ab07c7e0c6d8e06839f3d78258af01fd9dce729839ae481e9210ec4bebc/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:b9a65b3c65ab22d490085bd0bf5490e2409da8748b406870f2463bdc41cd6795",
+                "sha256:d6980644e0a6bbcea8a723743e77943a19cd44b668cb3befae44232e642e0238",
+                "sha256:607c3ba345703b6e33e27802a2524ffc0d707469b8554a85faae6fa36089ea33",
+                "sha256:4d8c0f1b16088e67cbb1ed060043a56a802f4ee4c543c04be021b7e28ccfd17f",
+                "sha256:d958437e39ad4a11ddf408a88a97bd77f9b4068c27e7ebbb4f20dd1cf1d19ce7",
+                "sha256:10e6612d2941edb436eaff7738b4e73eedc8dd2e240ab7ee0818c3f11cf5f046",
+                "sha256:a3efdc550ed06369cdea080da23372cb7f0f1237a8da0fb59c5e5f656a7018b4",
+                "sha256:d2d8427f21df3cc5fd8072402ece7a5f8d06d5d0a79b017ca3ae6ee6cd436441",
+                "sha256:e4c4647e135ddce929a63d7f43e17c626bf8fd62ed144c36f07c8496586d9222",
+                "sha256:c7da8f6ad2b088dee02ea78abec12fde629dca928c84d4eeb68acef7faf3cde7",
+                "sha256:897a6019654eda78c0f49e369a83635604460313fed6573badc191cff1c316b7",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:e01c42185dd17e78dbc0df9c8272e81a0b7f3995d5e4b57e90d0bde0e8d391db",
+                "sha256:7dce1f775749e1915ee63151e55b6417a96d7e651df9c1be9c460acc1e60a48e",
+                "sha256:d040b419c6e0ea4bca37bababf6c6501c5da6dbbe29b3693e9001d73b54ca097",
+                "sha256:8f5ad70c375bff9b16a425b4381b494234b7ed1d99518cf1cbbc1eb1553fae7b",
+                "sha256:9bc5d3eb9df6838f4ae692d3cccaeec396ab0f1d4705e1b02d3fd14f01fadb8e",
+                "sha256:2312d8c55948e1b65941b41e45b9b582af764360afb6c2e5bef23283feef298f",
+                "sha256:e9343db6bd4a7ff350b6b3ad74dd9b95c826136efbcb488e6ddf117ced1d67b8",
+                "sha256:a1f22772cebbbc609e8d6a4ec313c7791bc4abbdb029fd145f4fda4bfc09834d",
+                "sha256:bdf0b0135cdcff575673e75f49eadab666b685c6f7a18ca36c4dd9efe6870d20",
+                "sha256:cd313cbb5ea14ea689403c2afe6054b4480669d29966e8d80aaddd12593b6f88",
+                "sha256:f40c241c0b7f38ee50eeca3b3f872ae9edcbc1968c67abb1fee5a480ffa960f0",
+                "sha256:17451bcdeec0ad92de66353ac27292d7a26bf85fcae573727dc762f2330e1bce",
+                "sha256:424675b2ade3ebf9b2b7167d1e22d7b0ea33fba92387fc05af4eb9e416fdf720"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

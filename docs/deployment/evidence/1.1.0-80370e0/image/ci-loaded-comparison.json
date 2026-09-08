@@ -1,0 +1,53 @@
+{
+  "configDigestMatchesCI": true,
+  "allRootFSLayersMatchCI": true,
+  "archiveRuntimeFieldsMatchCI": true,
+  "runtimeConfigKeys": [
+    "ArgsEscaped",
+    "Cmd",
+    "Env",
+    "ExposedPorts",
+    "Labels",
+    "User",
+    "WorkingDir"
+  ],
+  "additionalInspectOnlyFields": {
+    "AttachStderr": {
+      "ci": false,
+      "loaded": null
+    },
+    "Tty": {
+      "ci": false,
+      "loaded": null
+    },
+    "Domainname": {
+      "ci": "",
+      "loaded": null
+    },
+    "AttachStdin": {
+      "ci": false,
+      "loaded": null
+    },
+    "Image": {
+      "ci": "",
+      "loaded": null
+    },
+    "StdinOnce": {
+      "ci": false,
+      "loaded": null
+    },
+    "OpenStdin": {
+      "ci": false,
+      "loaded": null
+    },
+    "Hostname": {
+      "ci": "",
+      "loaded": null
+    },
+    "AttachStdout": {
+      "ci": false,
+      "loaded": null
+    }
+  },
+  "note": "A raw dictionary equality check initially differed on Docker-generated empty/default inspect fields. Archive-defined runtime fields, configuration digest and all filesystem layers match; the deployment verifier checks those authoritative fields."
+}

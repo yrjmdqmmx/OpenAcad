@@ -1,0 +1,13 @@
+{
+  "initialTest": "mobile radar font switching and label collision check",
+  "testBudgetMs": 45000,
+  "navigationMs": 5935.46,
+  "fontReadyWaitMs": [
+    22124.416,
+    16498.011
+  ],
+  "failedAssertionsBeforeTimeout": 0,
+  "diagnosis": "The test exceeded its total deadline while loading two fonts over the production network. No collision assertion failed before the timeout. Retest extends only this external QA command deadline; application code and CI thresholds remain unchanged.",
+  "retestTimeoutMs": 120000,
+  "networkCauseNotFullyIsolated": true
+}

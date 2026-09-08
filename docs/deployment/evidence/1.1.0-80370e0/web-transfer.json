@@ -1,0 +1,8 @@
+{
+  "run": 34178615830,
+  "artifact": "web-evidence",
+  "zipBytes": 212380028,
+  "serverPath": "/opt/openacad/releases/artifact-80370e0-web.zip",
+  "sha256": "b6c53d751d2f94b153d205e4b6a170d44159b6b96ed2287368b322c641d0ff4f",
+  "matchesGitHubDigest": true
+}

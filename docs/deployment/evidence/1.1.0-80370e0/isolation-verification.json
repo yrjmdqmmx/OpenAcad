@@ -1,0 +1,9 @@
+{
+  "otherContainersUnchanged": true,
+  "count": 10,
+  "nginxConfigUnchanged": true,
+  "updateScriptUnchanged": true,
+  "maintenanceCleared": true,
+  "newApiAndTwoWorkersHealthy": true,
+  "expectedRuntimeImage": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d"
+}

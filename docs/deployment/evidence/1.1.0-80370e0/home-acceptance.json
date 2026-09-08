@@ -1,0 +1,26 @@
+{
+  "baseURL": "https://openacad.xyz",
+  "stats": {
+    "startTime": "2026-09-08T02:39:25.441Z",
+    "duration": 339549.611,
+    "expected": 46,
+    "skipped": 6,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": [
+    "chromium",
+    "firefox",
+    "webkit",
+    "mobile"
+  ],
+  "checks": [
+    "two independent 3-second carousels",
+    "pause on hover or reduced motion",
+    "manual/touch/keyboard navigation",
+    "source and full-image links",
+    "responsive layout",
+    "workbench drafts survive home navigation"
+  ],
+  "noNewApplicationErrors": true
+}

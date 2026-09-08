@@ -1,0 +1,503 @@
+{
+  "source": "Downloaded production SVG files rendered in Chromium with the deployed font CSS",
+  "styles": [
+    "https://openacad.xyz/assets/index-x7iCeV2J.css"
+  ],
+  "records": [
+    {
+      "file": "bar-category.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "bar-error.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "bar-grouped-error.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "bar-grouped-stacked.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "bar-grouped.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "bar-line.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "bar-stacked.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "bar.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "binary-dot.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "binary-rect.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "box-grouped.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "box.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "bubble-matrix.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "cca.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "circle-heatmap.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "correlation.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "double-correlation.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "dumbbell.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "enrichment-bar.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "enrichment-circle.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "enrichment-dot.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "gene-cluster.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "genome-circos.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "heatmap.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "line-error.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "line.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "lollipop-category.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "lollipop.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "mantel.svg",
+      "rendered": true,
+      "size": [
+        1120,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "map.svg",
+      "rendered": true,
+      "size": [
+        1100,
+        670
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "network.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "nmds.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "packing.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "pca.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "pcoa.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "pie.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "protein-domains.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "protein-motifs.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "radar.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "raincloud.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "rda.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "ridgeline.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "rose.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "sankey.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "scatter-error.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "scatter-grouped.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "scatter.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "synteny.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "tree-circle.svg",
+      "rendered": true,
+      "size": [
+        1146.265625,
+        1225.265625
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "tree-normal.svg",
+      "rendered": true,
+      "size": [
+        1050,
+        650
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "tree-unrooted.svg",
+      "rendered": true,
+      "size": [
+        900,
+        900
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "upset.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "venn.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "violin.svg",
+      "rendered": true,
+      "size": [
+        960,
+        640
+      ],
+      "fontStatus": "loaded"
+    },
+    {
+      "file": "volcano.svg",
+      "rendered": true,
+      "size": [
+        960,
+        680
+      ],
+      "fontStatus": "loaded"
+    }
+  ]
+}

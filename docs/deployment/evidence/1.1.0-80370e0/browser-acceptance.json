@@ -1,0 +1,789 @@
+{
+  "revision": "80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1",
+  "baseURL": "https://openacad.xyz",
+  "evidenceRoot": "/Users/a1-6/.codex/visualizations/2026/09/07/01a07be3-320e-73e0-ba0b-d94530e26693/production-80370e0",
+  "suites": {
+    "quality-results.json": {
+      "stats": {
+        "startTime": "2026-09-08T02:38:49.004Z",
+        "duration": 1032189.927,
+        "expected": 88,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sha256": "a3618b23e6b90ff5856d2354e6564bc7c6fa140ed9c7df4f712562c791b1a369",
+      "tests": [
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "heatmap 专用色带和适用条件真实生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "circle-heatmap 专用色带和适用条件真实生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "bubble-matrix 专用色带和适用条件真实生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "correlation 专用色带和适用条件真实生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "double-correlation 专用色带和适用条件真实生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "mantel 专用色带和适用条件真实生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "火山图三个类别颜色独立生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "enrichment-dot 显著性渐变两端颜色独立生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "enrichment-bar 显著性渐变两端颜色独立生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "enrichment-circle 显著性渐变两端颜色独立生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "bar-stacked 非等总量数据下归一化和排序生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "bar-grouped-stacked 非等总量数据下归一化和排序生效",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "共线性染色体手动排序后可切换名称排序",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "矩形树右边距在内容占满画布时改变输出尺寸",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "环形树最小高度超过内容高度时扩展画布",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "pca 标签避让、手动调整与保存重开",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "nmds 标签避让、手动调整与保存重开",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "tree-normal 自动适配、100%顶边可达与注释保存",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "tree-circle 自动适配、100%顶边可达与注释保存",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "tree-unrooted 自动适配、100%顶边可达与注释保存",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "误差图切换区间后，显示的原始观测均留在画布内",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "网络节点拖动位置与数据随项目往返",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "网络默认标签无重叠，手动标签位置可以往返",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "树数值标签为下一注释层预留空间",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分组柱状图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "散点图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "折线图与分组折线图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "数值热图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "箱线图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "饼图与环图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "柱状图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分类柱状图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "误差柱状图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分组误差柱状图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "散点误差图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "堆叠柱状图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分组堆叠柱状图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "柱状图与折线组合：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "棒棒糖图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分类棒棒糖图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分组误差折线图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分组箱线图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "小提琴图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "云雨图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "峰峦图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "UpSet 集合交集图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "玫瑰图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "雷达图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "哑铃图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分组散点图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "圈形热图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "圆点二值图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "方格二值图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "数值气泡矩阵：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "组内相关性热图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "组间相关性热图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "Mantel 关联热图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "韦恩集合交集图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "分组圆堆砌图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "桑基流向图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "动态关系网络图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "地理采样点地图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "差异表达火山图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "富集气泡图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "富集条形图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "富集圈图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "基因簇排列图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "蛋白保守结构域图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "蛋白保守基序图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "基因组圈图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "MCScanX 共线性图：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "主成分分析 PCA：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "主坐标分析 PCoA：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "非度量多维尺度 NMDS：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "典范对应分析 CCA：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "冗余分析 RDA：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "矩形进化树工作台：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "环形进化树工作台：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "无根进化树工作台：新建示例、控件实操、保存重开及四格式",
+          "project": "chromium",
+          "status": "expected"
+        }
+      ]
+    },
+    "home-results.json": {
+      "stats": {
+        "startTime": "2026-09-08T02:39:25.441Z",
+        "duration": 339549.611,
+        "expected": 46,
+        "skipped": 6,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sha256": "dc8fa752dcb2b8a7178f9a1362d8fc606e315acdf8e08a2ba32c7a90c791f4ed",
+      "tests": [
+        {
+          "title": "官网轮播支持手动循环、逐张来源及键盘切换",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "减少动态效果时默认暂停，仍可手动选择截图",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "全部模板、分类和搜索共用分类导航顺序，网格按行阅读",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "手机原生触摸：左右滑动切图不打开链接，竖向滑动仍滚动页面",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "官网轮播支持手动循环、逐张来源及键盘切换",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "减少动态效果时默认暂停，仍可手动选择截图",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "全部模板、分类和搜索共用分类导航顺序，网格按行阅读",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "手机原生触摸：左右滑动切图不打开链接，竖向滑动仍滚动页面",
+          "project": "firefox",
+          "status": "skipped"
+        },
+        {
+          "title": "官网轮播支持手动循环、逐张来源及键盘切换",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "减少动态效果时默认暂停，仍可手动选择截图",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "全部模板、分类和搜索共用分类导航顺序，网格按行阅读",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "手机原生触摸：左右滑动切图不打开链接，竖向滑动仍滚动页面",
+          "project": "webkit",
+          "status": "skipped"
+        },
+        {
+          "title": "官网轮播支持手动循环、逐张来源及键盘切换",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "减少动态效果时默认暂停，仍可手动选择截图",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "全部模板、分类和搜索共用分类导航顺序，网格按行阅读",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "手机原生触摸：左右滑动切图不打开链接，竖向滑动仍滚动页面",
+          "project": "mobile",
+          "status": "skipped"
+        },
+        {
+          "title": "平台首页呈现已上线绘图、独立图研入口和后续工具说明",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "绘图直链保留模板库、模板详情与工作台导航状态",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "工作台经首页前进后退及本机草稿继续保留数据与样式",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "平台首页呈现已上线绘图、独立图研入口和后续工具说明",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "绘图直链保留模板库、模板详情与工作台导航状态",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "工作台经首页前进后退及本机草稿继续保留数据与样式",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "平台首页呈现已上线绘图、独立图研入口和后续工具说明",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "绘图直链保留模板库、模板详情与工作台导航状态",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "工作台经首页前进后退及本机草稿继续保留数据与样式",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "平台首页呈现已上线绘图、独立图研入口和后续工具说明",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "绘图直链保留模板库、模板详情与工作台导航状态",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "工作台经首页前进后退及本机草稿继续保留数据与样式",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景逐张加载，标题、大图与模板同步，支持循环和键盘",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景每三秒切换，悬停暂停，离开后继续",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "减少动态效果时停播，两组轮播独立且图研信息完整",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "科研截图加载失败保留说明与模板入口",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景手机触摸横滑切图，竖滑滚页，不误开大图",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景逐张加载，标题、大图与模板同步，支持循环和键盘",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景每三秒切换，悬停暂停，离开后继续",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "减少动态效果时停播，两组轮播独立且图研信息完整",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "科研截图加载失败保留说明与模板入口",
+          "project": "firefox",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景手机触摸横滑切图，竖滑滚页，不误开大图",
+          "project": "firefox",
+          "status": "skipped"
+        },
+        {
+          "title": "科研实景逐张加载，标题、大图与模板同步，支持循环和键盘",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景每三秒切换，悬停暂停，离开后继续",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "减少动态效果时停播，两组轮播独立且图研信息完整",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "科研截图加载失败保留说明与模板入口",
+          "project": "webkit",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景手机触摸横滑切图，竖滑滚页，不误开大图",
+          "project": "webkit",
+          "status": "skipped"
+        },
+        {
+          "title": "科研实景逐张加载，标题、大图与模板同步，支持循环和键盘",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景每三秒切换，悬停暂停，离开后继续",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "减少动态效果时停播，两组轮播独立且图研信息完整",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "科研截图加载失败保留说明与模板入口",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "科研实景手机触摸横滑切图，竖滑滚页，不误开大图",
+          "project": "mobile",
+          "status": "skipped"
+        }
+      ]
+    },
+    "mobile-export-results.json": {
+      "stats": {
+        "startTime": "2026-09-08T02:40:24.809Z",
+        "duration": 34945.842,
+        "expected": 4,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sha256": "a6d8549adca0b009690e6120b9a5e9749ba65c39f93821a8288175a8e576911e",
+      "tests": [
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "project": "mobile",
+          "status": "expected"
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "project": "mobile",
+          "status": "expected"
+        }
+      ]
+    },
+    "bio-results.json": {
+      "stats": {
+        "startTime": "2026-09-08T02:40:24.808Z",
+        "duration": 22054.448,
+        "expected": 2,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "sha256": "60a8aede9a0efb9eddd625ab1c342686380036c70d704432556107d8631b3b69",
+      "tests": [
+        {
+          "title": "AB1 真实文件导入、定位、缩放、拖动、联动及三种实际导出",
+          "project": "chromium",
+          "status": "expected"
+        },
+        {
+          "title": "KO 真实 KEGG 已知对应关系与实时获取时间",
+          "project": "chromium",
+          "status": "expected"
+        }
+      ]
+    }
+  }
+}

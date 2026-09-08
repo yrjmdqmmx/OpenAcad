@@ -1,0 +1,47 @@
+{
+  "otherContainerCount": 10,
+  "otherIdsImagesStartedAtUnchanged": true,
+  "nginxConfigUnchanged": true,
+  "updateScriptUnchanged": true,
+  "maintenance": false,
+  "openacadContainers": [
+    {
+      "id": "6b6273c9b40d522276ce07b3b8f654591a6713b44e6f149c62b4a5b8a96e65de",
+      "name": "/openacad-api-1",
+      "image": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+      "startedAt": "2026-09-08T02:37:29.47413634Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "openacad"
+    },
+    {
+      "id": "1a274b15eaf6f3974349f0ba1db54c4994720e506f8aa25ee24c54db8157479d",
+      "name": "/openacad-worker-one-1",
+      "image": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+      "startedAt": "2026-09-08T02:37:29.47874438Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "openacad"
+    },
+    {
+      "id": "eee07f94034cfee9875fbd413ee3edd131293524042bf18cf2110961c759734e",
+      "name": "/openacad-worker-two-1",
+      "image": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+      "startedAt": "2026-09-08T02:37:29.477068706Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "openacad"
+    },
+    {
+      "id": "0c3182b6d59c3b73429429165586c0c54638dbc6dd7362be02d1c586e37e43e4",
+      "name": "/openacad-redis-1",
+      "image": "sha256:02f2cc4882f8bf87c79a220ac958f58c700bdec0dfb9b9ea61b62fb0e8f1bfcf",
+      "startedAt": "2026-09-06T14:44:47.398742717Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "openacad"
+    }
+  ],
+  "current": "/opt/openacad/releases/1.1.0-3993a2a",
+  "revision": "3993a2a3d9ed1485ef1b50b73adf389b6caf71f8"
+}

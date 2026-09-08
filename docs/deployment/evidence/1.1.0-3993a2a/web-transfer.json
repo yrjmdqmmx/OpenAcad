@@ -1,0 +1,17 @@
+{
+  "usedForRelease": false,
+  "status": "redundant slow transfers cancelled after per-file verified staging",
+  "partialFiles": [
+    {
+      "path": "/opt/openacad/releases/artifact-3993a2a-web.zip",
+      "bytes": 140607488,
+      "unusedPartialRemoved": true
+    },
+    {
+      "path": "/opt/openacad/releases/artifact-3993a2a-web-verified.zip",
+      "bytes": 141265920,
+      "unusedPartialRemoved": true
+    }
+  ],
+  "replacement": "web-transfer-used.json"
+}

@@ -1,0 +1,38 @@
+{
+  "homepageImageSha256": {
+    "bar-grouped.jpg": "37c6633022eb8a7b3a19dc09e41c7acd2ee304d9dd9c2c5ff786bba188289e4d",
+    "volcano.jpg": "05c55d9a1518464878402d4a01a1c9ef2a9084a44b24e31026d2e20250b41c82",
+    "sankey.jpg": "7eeb8918a7ca58aedc08601db1f7b74437abb6730ad1f96c83b6975bed981aca",
+    "tree-circle.jpg": "05e2d45529e239f450a71009ec98540ab0ae74758cf37b8e9ab616c3a92fd690",
+    "heatmap.jpg": "2677edf8f12c107f11449d9db75e7416e743f4e03f0eb9d33e1fb91c51b002dc"
+  },
+  "stagedAt": "2026-09-08T03:38:01.946375+00:00",
+  "version": {
+    "version": "1.1.0",
+    "revision": "3993a2a3d9ed1485ef1b50b73adf389b6caf71f8",
+    "builtAt": "2026-09-08T03:07:51.367Z"
+  },
+  "archiveSha256": "68853b9e7f6532c8d6f7fa9bdf5322502798083eb9591b70f27399d5c01e199d",
+  "webDeltaSha256": "f30901ede3d2e33427c52e4aaf5cccf29ba91b68417a99158cb2c8aadef814e0",
+  "reusedFiles": 394,
+  "allFilesVerified": true,
+  "files": 398,
+  "woff2FilesVerified": 368,
+  "exampleSha256": {
+    "3730.ab1": "e4663e4db40232576ccdda5b878dddb01ef80a3d1b032941ba053146ce53f77b",
+    "310.ab1": "0a395d39520d24a89af4c77dd55fd7fb632e732a6da807ceb6ead0c2465cb887",
+    "3100.ab1": "78588d824dd967a1e58a9667a8f7ca1687ba38266420bbc5a6562c1893888efd",
+    "empty.ab1": "c56a89d25ff8dde424ca3f6e177655dd16fe34322563ace3956b66f897172e85",
+    "ko-example.tsv": "c87ecf4a27f41fe7b9af049fb0cef73ef5663baa40cfa061fb923b492c6dae5b"
+  },
+  "publicResearchReportsRemoved": true,
+  "browserStats": {
+    "startTime": "2026-09-08T03:08:38.953Z",
+    "duration": 1005302.2339999999,
+    "expected": 233,
+    "skipped": 539,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "serviceChanged": false
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "file": "mobile-export-browser/live-export-真实-EPS-下载与中文字体-mobile/mobile-chinese-serif.eps",
+    "bytes": 144675,
+    "sha256": "e9f87eaf48f5d4c0b80012bf820151fb47f545517d37556e7f0f10914533dd7c",
+    "size": [
+      1440,
+      960
+    ],
+    "independentOpenPassed": true
+  },
+  {
+    "file": "mobile-export-browser/live-export-真实-PDF-下载与中文字体-mobile/mobile-chinese-serif.pdf",
+    "bytes": 127072,
+    "sha256": "e89514d73fec32c17963e48680f125d9e8e690579d3a253b69113042a7150654",
+    "points": [
+      720.0,
+      480.0
+    ],
+    "fonts": [
+      "name                                 type              encoding         emb sub uni object ID",
+      "------------------------------------ ----------------- ---------------- --- --- --- ---------",
+      "CQDAFL+NotoSerifCJKsc-Bold           CID Type 0C       Identity-H       yes yes yes      7  0",
+      "RRXWYF+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes     11  0"
+    ],
+    "independentOpenPassed": true
+  },
+  {
+    "file": "mobile-export-browser/live-export-真实-PNG-下载与中文字体-mobile/mobile-chinese-serif.png",
+    "bytes": 53979,
+    "sha256": "4174b2f25f4f7c5955efd62c0d4d70a763478c1a64abc82fdc243c129481b7a0",
+    "size": [
+      1500,
+      1000
+    ],
+    "independentOpenPassed": true
+  },
+  {
+    "file": "mobile-export-browser/live-export-真实-SVG-下载与中文字体-mobile/mobile-chinese-serif.svg",
+    "bytes": 65800,
+    "sha256": "5f847254f741e5e33f750f8af88e49543624e33874812e1e2a48c8a48bba3c17",
+    "size": [
+      "960.0",
+      "640.0"
+    ],
+    "textElements": 0,
+    "paths": 87,
+    "independentOpenPassed": true
+  },
+  {
+    "file": "quality-browser/live-export-真实-EPS-下载与中文字体-chromium/chromium-chinese-serif.eps",
+    "bytes": 144675,
+    "sha256": "a23faa7b4842d645b5dbbdbcec9ec23e69c11acd68cd540c959fcec6544f8a1a",
+    "size": [
+      1440,
+      960
+    ],
+    "independentOpenPassed": true
+  },
+  {
+    "file": "quality-browser/live-export-真实-PDF-下载与中文字体-chromium/chromium-chinese-serif.pdf",
+    "bytes": 127072,
+    "sha256": "4862063e6c31574e10ff0395e567b8cb5dcc92b420126fd8b86e4f24c603d1f5",
+    "points": [
+      720.0,
+      480.0
+    ],
+    "fonts": [
+      "name                                 type              encoding         emb sub uni object ID",
+      "------------------------------------ ----------------- ---------------- --- --- --- ---------",
+      "CQDAFL+NotoSerifCJKsc-Bold           CID Type 0C       Identity-H       yes yes yes      7  0",
+      "RRXWYF+NotoSerifCJKsc-Regular        CID Type 0C       Identity-H       yes yes yes     11  0"
+    ],
+    "independentOpenPassed": true
+  },
+  {
+    "file": "quality-browser/live-export-真实-PNG-下载与中文字体-chromium/chromium-chinese-serif.png",
+    "bytes": 53979,
+    "sha256": "4174b2f25f4f7c5955efd62c0d4d70a763478c1a64abc82fdc243c129481b7a0",
+    "size": [
+      1500,
+      1000
+    ],
+    "independentOpenPassed": true
+  },
+  {
+    "file": "quality-browser/live-export-真实-SVG-下载与中文字体-chromium/chromium-chinese-serif.svg",
+    "bytes": 65800,
+    "sha256": "5f847254f741e5e33f750f8af88e49543624e33874812e1e2a48c8a48bba3c17",
+    "size": [
+      "960.0",
+      "640.0"
+    ],
+    "textElements": 0,
+    "paths": 87,
+    "independentOpenPassed": true
+  }
+]

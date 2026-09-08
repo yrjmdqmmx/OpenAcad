@@ -1,0 +1,16 @@
+{
+  "dockerLoadVerified": true,
+  "loadedId": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+  "configDigest": "sha256:35d7ea3dd26873e430fa2b8ea60d1a7c0eaf5aeb808862e03c2f9bbf0bd72a66",
+  "topLevelDigest": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+  "acceptedExpectedIdentity": {
+    "digest": "sha256:35d7ea3dd26873e430fa2b8ea60d1a7c0eaf5aeb808862e03c2f9bbf0bd72a66",
+    "kind": "config"
+  },
+  "rootfsVerified": true,
+  "runtimeConfigVerified": true,
+  "architecture": "amd64",
+  "os": "linux",
+  "inspectJsonSha256": "817b294f17221bdd07183b365451969ed78b3ac0e5282160546ea784f51c07e6",
+  "reconstructedArchiveSha256": "ccc1087a1e30ebb914ade157db25d2c32944efd5a9feb9a6de23573b79089f7b"
+}

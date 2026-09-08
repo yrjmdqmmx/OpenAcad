@@ -1,0 +1,18 @@
+{
+  "bio-results.json": {
+    "startTime": "2026-09-08T02:40:24.808Z",
+    "duration": 22054.448,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "mobile-export-results.json": {
+    "startTime": "2026-09-08T02:40:24.809Z",
+    "duration": 34945.842,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,8 +1,41 @@
 # OpenAcad 正式发布记录
 
-状态：**2026-09-07（北京时间），1.1.0 已正式上线。完整 Linux CI、正式域名功能验收、独立文件复验及实际回退／再升级演练通过。** 下方保留历史版本记录，不将旧运行改写为本次证据。
+状态：**2026-09-08（北京时间），1.1.0 已更新至最终前端 `3993a2a`，经内容核验复用后端 `80370e0`；完整 Linux CI、55 模板及标签补丁正式站验收完成。** 下方保留历史版本记录，不将旧运行改写为本次证据。
 
-## 1.1.0 发行与验收
+## 1.1.0 标签补丁最终发行（3993a2a）
+
+承接本轮更新正式站授权，修复生产视觉复查发现的雷达数值及基因簇行间刻度碰撞；数据点、多边形、基因长度及链方向均未改变。前端源码 `3993a2a3d9ed1485ef1b50b73adf389b6caf71f8`，发行目录 `/opt/openacad/releases/1.1.0-3993a2a`，版本仍为 1.1.0。
+
+| 检查 | 最终结果 |
+| --- | --- |
+| 固定提交 CI | [34182366813](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34182366813) 成功；460 单元、233 浏览器、196 后端、13 恢复回归通过；539 浏览器用例按配置跳过、0 失败/不稳定。浏览器运行 16.8 分钟。[摘要](evidence/1.1.0-3993a2a/ci-summary.json)。 |
+| 网页附件 | GitHub ZIP 摘要、网页 revision、368 字体分片和 5 张首页实景图片逐一核验；[传输记录](evidence/1.1.0-3993a2a/web-transfer-used.json)、[准备结果](evidence/1.1.0-3993a2a/staged-web.json)。 |
+| 后端复用 | `server/` 树、最新 CI 配置摘要、全部 RootFS、运行配置相同，符合部署规则。`BACKEND_REVISION` 记录 `80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1`；镜像 `openacad-worker:1.1.0-80370e0`、config `sha256:35d7ea3dd26873e430fa2b8ea60d1a7c0eaf5aeb808862e03c2f9bbf0bd72a66`、实际 OCI 根 `sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d`。[复用核验](evidence/1.1.0-3993a2a/backend-reuse.json)。 |
+| 最终正式站 | 专项首跑 10 通过、1 项手机字体加载超时、9 跳过；超时项延长 QA 命令总时限后补测通过，按每项最新结果为 11 通过、9 跳过。真实保存重开及两个模板保留全部标签的 8 文件四格式下载通过；四格式独立打开与尺寸/画面对照通过。桌面及 390px 工作台 4 张页面无错误/横向溢出，5 项真实统计/导出 smoke 再次通过。[交付报告与前后截图](../qa/template-quality-production-2026-09-08.md)。 |
+| 切换与隔离 | 维护排空、健康检查、目录切换和 Nginx 校验完成；公网 revision 为最终源码，2 个 worker 健康。10 个其他应用容器的 ID/镜像/启动时间与 Nginx 配置保持一致。[发布日志](evidence/1.1.0-3993a2a/publish.txt)、[公网最终](evidence/1.1.0-3993a2a/public-final.json)、[隔离记录](evidence/1.1.0-3993a2a/isolation-verification.json)。 |
+
+55 个模板全量生产操作来自下方 `80370e0`；最终补丁仅改两个模板，另行完成专项复验；其余 53 个模板沿用前一源码的全量生产证据。上一 `/opt/openacad/releases/1.1.0-80370e0`、更早 `1.1.0-7e68b5b` 和镜像保留。本次未强制进行生产回退再升级演练。
+
+恢复至紧邻上一发行：
+
+```sh
+bash /opt/openacad/bin/update.sh /opt/openacad/releases/1.1.0-80370e0
+```
+
+## 1.1.0 科研绘图质量更新（80370e0）
+
+用户于本轮明确确认更新正式站后执行。前后端源码 `80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1`；发行目录 `/opt/openacad/releases/1.1.0-80370e0`，应用版本仍为 1.1.0。内容包括 P1/P2 模板优化、首页 3 秒科研实景轮播、图研版式及 55 个详情页。
+
+- [完整 CI 34178615830](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34178615830)：460 前端单测、224 浏览器、196 后端、13 恢复回归通过，528 浏览器按配置跳过；候选准备见[历史候选记录](template-quality-candidate-2026-09-08.md)。
+- 实际镜像 `openacad-worker:1.1.0-80370e0`，Linux amd64。CI config digest `sha256:35d7ea3dd26873e430fa2b8ea60d1a7c0eaf5aeb808862e03c2f9bbf0bd72a66`；实际 OCI 根 `sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d`。由[增量运行 34180339418](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34180339418)运送已通过测试的原始镜像内容，未重新构建应用；[重建与加载核验](evidence/1.1.0-80370e0/image/loaded-image-verification.json)。
+- 网页 ZIP SHA `b6c53d751d2f94b153d205e4b6a170d44159b6b96ed2287368b322c641d0ff4f`；增量 ZIP SHA `62a713756f67565240c09c8b9a78f4720859559c8266fb6c789c0ea25a594fc4` 均与 GitHub 附件匹配，字体分片、示例及 5 张首页图片逐一核验。
+- [正式浏览器](evidence/1.1.0-80370e0/browser-acceptance.json)：140 通过、6 跳过、0 失败/不稳定；包含 55 个模板逐一编辑、保存重开、220 个四格式下载，五种真实排序分析、桌面/手机导出、首页轮播、AB1 和实时 KEGG。220 文件另以浏览器/PDFium/Ghostscript 独立打开，PDF/EPS 对 PNG 的最大平均通道差 1.581/255。[导出复核](evidence/1.1.0-80370e0/export-verification.json)。
+- [生产数值验证](evidence/1.1.0-80370e0/production-smoke.json)5 项通过；PCA 重构误差 5.329e-15，R LM 与独立 OLS 在 1e-10 容差内一致。4 个旧项目五字段往返一致；额外 8 份宋体浏览器下载独立打开且 PDF 字体嵌入通过。
+- [切换记录](evidence/1.1.0-80370e0/publish.txt)、[公网版本与健康](evidence/1.1.0-80370e0/public-after-switch.json)、[同机隔离](evidence/1.1.0-80370e0/isolation-verification.json)。10 个其他应用容器 ID/镜像/启动时间及 Nginx 配置未变，维护标记解除，2 个 worker 健康。上一 `1.1.0-7e68b5b` 和镜像保留。
+
+自动化通过后的逐张大图复查另发现雷达图和基因簇标签碰撞，记录在[交付清单](../qa/template-quality-production-2026-09-08.md)，由后续补丁单独修复和验收。未将第一轮自动化通过描述为所有视觉问题都不存在。本次未强制进行生产回退再升级演练；13 项恢复回归通过，下面的真实回退记录属于以前的发行。
+
+## 历史：1.1.0 首次发行与验收
 
 本次发布平台首页与导航、AB1 本地查看器、KO 转 pathway 信息表，以及公开参考站文案与报告入口清理。内部研究和验收记录保留；绘图项目 schema、计算白名单及既有统计服务兼容。
 

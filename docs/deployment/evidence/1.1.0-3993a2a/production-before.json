@@ -1,0 +1,142 @@
+{
+  "checkedAt": "2026-09-08T03:14:48.483130+00:00",
+  "current": "/opt/openacad/releases/1.1.0-80370e0",
+  "revision": "80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1",
+  "version": {
+    "version": "1.1.0",
+    "revision": "80370e0f495d9517f7bf99ccd4cb1de0b84fbfe1",
+    "builtAt": "2026-09-08T02:02:37.792Z"
+  },
+  "nginxSha256": "bd65504a823db428a0d94bc386d190cc485a0735d7f408c5f0c055c90c6220ad",
+  "updateSha256": "a46240f166d2bd224f2c028e93382a455efb72cc5beae5c7d9093a5405743095",
+  "maintenance": false,
+  "diskFreeBytes": 43275714560,
+  "containers": [
+    {
+      "id": "6b6273c9b40d522276ce07b3b8f654591a6713b44e6f149c62b4a5b8a96e65de",
+      "name": "/openacad-api-1",
+      "image": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+      "startedAt": "2026-09-08T02:37:29.47413634Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "openacad"
+    },
+    {
+      "id": "1a274b15eaf6f3974349f0ba1db54c4994720e506f8aa25ee24c54db8157479d",
+      "name": "/openacad-worker-one-1",
+      "image": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+      "startedAt": "2026-09-08T02:37:29.47874438Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "openacad"
+    },
+    {
+      "id": "eee07f94034cfee9875fbd413ee3edd131293524042bf18cf2110961c759734e",
+      "name": "/openacad-worker-two-1",
+      "image": "sha256:0e523f651921f8bcccd7f270befd9d19d04d1c7f32e82f727c80a820bc18a20d",
+      "startedAt": "2026-09-08T02:37:29.477068706Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "openacad"
+    },
+    {
+      "id": "04bf288ad0e81674c8a80e993c00a72814a09f4b275a743222aa51e377a3cf52",
+      "name": "/paperbanana-hk-benchmark-worker-1",
+      "image": "sha256:5a55e529d88491d5c77b274aa740dfd232899aaefa18585649f0f2c9a94145a9",
+      "startedAt": "2026-09-07T15:53:13.808715567Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "paperbanana-hk"
+    },
+    {
+      "id": "d7096f6fa14406af57e0bedf615c30c095bcd890363cec472809f373012084be",
+      "name": "/paperbanana-hk-paperbanana-api-1",
+      "image": "sha256:f631bcc118a64510f8b26faac3d1bce4422600cde2612cb962e25ce7d4e86bd5",
+      "startedAt": "2026-09-07T15:53:08.060413549Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "paperbanana-hk"
+    },
+    {
+      "id": "14adc28bbcb66b661a978a9c04e5bf805e6d7b426937766869dc3389b14695ac",
+      "name": "/paperbanana-hk-auth-gateway-1",
+      "image": "sha256:9feee7f1744bfcdf2eec970bfb84349255e1ad62ea22ff99b4e94daeb2f3d058",
+      "startedAt": "2026-09-07T15:53:13.810236431Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "paperbanana-hk"
+    },
+    {
+      "id": "0c3182b6d59c3b73429429165586c0c54638dbc6dd7362be02d1c586e37e43e4",
+      "name": "/openacad-redis-1",
+      "image": "sha256:02f2cc4882f8bf87c79a220ac958f58c700bdec0dfb9b9ea61b62fb0e8f1bfcf",
+      "startedAt": "2026-09-06T14:44:47.398742717Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "openacad"
+    },
+    {
+      "id": "d48cdb32f4613a83910a721464113b8cd915e38eb16bab7c51550bd69f840a62",
+      "name": "/paperbanana-hk-plot-worker-1",
+      "image": "sha256:23894f4844c4145046f882a8eff7665c907d1e433d1afaa8edc8fcdab337d2e3",
+      "startedAt": "2026-08-19T03:03:07.109583832Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "paperbanana-hk"
+    },
+    {
+      "id": "442bb7cf14593d988b1de3a15cce9c7377d59797a2219f50c49b21f71a7952ca",
+      "name": "/tensor-auto-web-1",
+      "image": "sha256:eaeecdba76a64c8150c533db8945d0d7eb82cb36a3668ebbd30f0c8e5cc4f0d4",
+      "startedAt": "2026-08-18T05:16:10.02228225Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "tensor-auto"
+    },
+    {
+      "id": "d7807827910cf1fd7453cdba308740dbc82b3434d5c92803861d79408f7d165a",
+      "name": "/tensor-auto-api-1",
+      "image": "sha256:e4539d9d051948e731efe68aa50ecbc89416aeba1017766120735f9cc36f79a5",
+      "startedAt": "2026-08-18T05:15:54.320461073Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "tensor-auto"
+    },
+    {
+      "id": "939d22f43b1fd05130b7489c0d9a904a2155fe1221df046531c7497b43a93dc0",
+      "name": "/tensor-auto-harness-worker-1",
+      "image": "sha256:bee2131f77c8bee446bf387d4664e4929fe09303c8e7bfdf72c980320d596c06",
+      "startedAt": "2026-08-18T05:15:38.671302172Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "tensor-auto"
+    },
+    {
+      "id": "f46ca7bbdfb63c2d83ca9aff305d69e04c78af6fe40767ea8da1131f70eec626",
+      "name": "/tensor-auto-backup-1",
+      "image": "sha256:6567bca8d7bc8c82c5922425a0baee57be8402df92bae5eacad5f01ae9544daa",
+      "startedAt": "2026-08-15T03:41:03.061643707Z",
+      "status": "running",
+      "health": null,
+      "project": "tensor-auto"
+    },
+    {
+      "id": "4f29944e9f6d54ee09a061122dc473353a7e1fbdc5f330deea3529d0afe06bcb",
+      "name": "/tensor-auto-postgres-1",
+      "image": "sha256:6567bca8d7bc8c82c5922425a0baee57be8402df92bae5eacad5f01ae9544daa",
+      "startedAt": "2026-08-15T03:40:52.355514429Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "tensor-auto"
+    },
+    {
+      "id": "46b3df0ce6f36da01f4d69fef77d514231e22fc2e0810ca07ec39cef2a6cf31e",
+      "name": "/paperbanana-hk-mongodb-1",
+      "image": "sha256:5dda65a823a0d73d9caae4f449ab01973cf9884cea4ef56f9cb84dbe5e00acbd",
+      "startedAt": "2026-08-14T17:43:59.2723552Z",
+      "status": "running",
+      "health": "healthy",
+      "project": "paperbanana-hk"
+    }
+  ]
+}
