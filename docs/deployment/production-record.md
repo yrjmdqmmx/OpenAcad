@@ -1,6 +1,31 @@
 # OpenAcad 正式发布记录
 
-状态：**2026-09-08（北京时间），1.1.0 已更新至最终前端 `3993a2a`，经内容核验复用后端 `80370e0`；完整 Linux CI、55 模板及标签补丁正式站验收完成。** 下方保留历史版本记录，不将旧运行改写为本次证据。
+状态：**2026-09-08（北京时间），1.1.0 已更新至前后端 `b04a48c`。PR #1 已合并，完整 Linux CI 与 55 模板正式站操作、220 文件独立打开验收完成；小范围渲染差异明确保留。** 下方历史记录不改写为本次证据。
+
+
+## 1.1.0 期刊绘图质量更新（b04a48c）
+
+依据用户“走上线流程”执行。固定前后端源码 `b04a48cb71e8e14417e6027651d2c8c286c74cfc`，版本仍为 1.1.0；[PR #1](https://github.com/yrjmdqmmx/OpenAcad/pull/1) 合并到发布分支 `codex/platform-home`，合并提交 `94c31f976625855e907905fb849a151d6becc121` 与该源码树完全相同。运行的是固定源码 CI 的原始构建内容；后续文档提交不改变运行源码。
+
+| 关卡 | 本次结果 |
+| --- | --- |
+| 完整 CI | [源码 34205493679](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34205493679)、[PR 34205497850](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34205497850)、[合并 34207732069](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34207732069) 均成功。固定源码为 467 单测、238 浏览器、196 后端、13 恢复回归；542 浏览器按配置跳过、0 失败/不稳定。[摘要](evidence/1.1.0-b04a48c/ci-summary.json)。 |
+| 评审修复 | 主/替代火山和富集示例均真实计算其声明的统计量，原始模拟依据随项目保存。初轮 CI 有两项 WebKit/手机字体坐标比较失败，统一固有尺寸和设备尺度后保留原 `<0.1` 容差，四浏览器通过；未据失败运行发布。[评审修复](evidence/1.1.0-b04a48c/review-fix-verification.json)。 |
+| 网页附件 | GitHub ZIP 282268627 字节、SHA `019a3ebff229bfbf12d98dde7b3203c94dcb87ef9f81cd33c65c3b1e4fd62503`。按字节 SHA 复用 393 个不变文件，仅传 473921 字节派生载荷；最终 398 文件全部与 CI 内容一致，包括 389 个源码公开文件、368 个字体分片。派生载荷 SHA 与 GitHub ZIP 分开记录，没有重建应用。[网页准备](evidence/1.1.0-b04a48c/staged-web.json)。 |
+| Linux 镜像 | [增量 34207512133](https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34207512133) 绑定上述完整成功源码 CI；ZIP SHA `fc7d167220088df3cc19d5cbc0bfd9d4bad0847b48f935dff9a10e9f6306b817`，148384893 字节。56 成员、全部 RootFS、平台与 Config 核验通过。[镜像来源](evidence/1.1.0-b04a48c/image-staging-source.json)、[加载核验](evidence/1.1.0-b04a48c/image-loaded-verification.json)。早先候选全量包与上传残片未用于本次加载。 |
+| 正式功能 | 55 模板、110 默认/替代场景、55 项目往返、220 实际下载及独立打开；三处图形 55/55 一致。额外浏览器 23 通过/41 跳过/0 失败，5 项真实 API 校验、8 份宋体下载、4 个旧项目两轮往返通过。[生产交付报告及前后大图](../qa/journal-figure-quality-production-2026-09-08.md)。 |
+| 切换与隔离 | 09:14:17 UTC 切换完成，维护解除，API 与两 worker 健康；即时发布前后的 10 个其他容器 ID/镜像/启动时间和 Nginx 文件哈希未变。首次会话基线后、OpenAcad 发布前已观测到其他容器变化，另存该观察，不归入本次切换。[发布日志](evidence/1.1.0-b04a48c/publish.txt)、[公网](evidence/1.1.0-b04a48c/public-after-switch.json)、[隔离](evidence/1.1.0-b04a48c/isolation-verification.json)。 |
+
+发行目录 `/opt/openacad/releases/1.1.0-b04a48c`；镜像 `openacad-worker:1.1.0-b04a48c`。CI config digest 为 `sha256:6a625c9507af50c9f0fe9c89b7f95497731d8f0cb7b2d53e2ff02644c5b05434`；实际 containerd/OCI 根为 `sha256:648353345ff3126042f5bf40e9712817639917485d798bdec887239b91421a7c`，二者分开记录。前后端 REVISION 均为完整 b04a48c 源码。
+
+55 SVG 均离线加载内嵌字体。50 默认 PNG 与本地验收像素相同；UpSet 两份 SVG 完全相同，但四行名称的 PNG 基线略不同，具体渲染原因未单独定位，数值与各行对应完整；其余四项为极小像素差。未宣称四格式逐像素一致或所有 EPS 全矢量。研究候选、EPS 透明栅格、压力测试所在环境与 KEGG 上游未复验的边界见交付报告。
+
+紧邻上一 `/opt/openacad/releases/1.1.0-3993a2a`、固定镜像 `openacad-worker:1.1.0-80370e0` 及更早发行保留。本次没有强制回退再升级演练，恢复命令仍经过维护排空与三服务健康检查：
+
+```sh
+bash /opt/openacad/bin/update.sh /opt/openacad/releases/1.1.0-3993a2a
+```
+
 
 ## 1.1.0 标签补丁最终发行（3993a2a）
 

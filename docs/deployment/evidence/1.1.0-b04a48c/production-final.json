@@ -1,0 +1,109 @@
+{
+  "time": "2026-09-08T09:41:48.314687+00:00",
+  "current": "/opt/openacad/releases/1.1.0-b04a48c",
+  "revision": "b04a48cb71e8e14417e6027651d2c8c286c74cfc",
+  "backendRevision": "b04a48cb71e8e14417e6027651d2c8c286c74cfc",
+  "maintenance": false,
+  "updateScriptSha256": "a46240f166d2bd224f2c028e93382a455efb72cc5beae5c7d9093a5405743095",
+  "openacad": [
+    {
+      "id": "cf8e3f5280042bf437b6ec109fdab6a8d2abcd89e90ba5737f10264d096f5e32",
+      "image": "sha256:648353345ff3126042f5bf40e9712817639917485d798bdec887239b91421a7c",
+      "startedAt": "2026-09-08T09:14:05.781937557Z",
+      "service": "api",
+      "imageTag": "openacad-worker:1.1.0-b04a48c",
+      "health": "healthy",
+      "running": true
+    },
+    {
+      "id": "8f91fac25b74faafa1cc328dfa11d0855205f110094118825abeb1e0055c5f0f",
+      "image": "sha256:648353345ff3126042f5bf40e9712817639917485d798bdec887239b91421a7c",
+      "startedAt": "2026-09-08T09:14:05.778915518Z",
+      "service": "worker-two",
+      "imageTag": "openacad-worker:1.1.0-b04a48c",
+      "health": "healthy",
+      "running": true
+    },
+    {
+      "id": "08330a895ef09dd3f5fe966e2cfc1489c7df78f5b767d46b51e23a19a8fa9153",
+      "image": "sha256:648353345ff3126042f5bf40e9712817639917485d798bdec887239b91421a7c",
+      "startedAt": "2026-09-08T09:14:05.783288742Z",
+      "service": "worker-one",
+      "imageTag": "openacad-worker:1.1.0-b04a48c",
+      "health": "healthy",
+      "running": true
+    },
+    {
+      "id": "0c3182b6d59c3b73429429165586c0c54638dbc6dd7362be02d1c586e37e43e4",
+      "image": "sha256:02f2cc4882f8bf87c79a220ac958f58c700bdec0dfb9b9ea61b62fb0e8f1bfcf",
+      "startedAt": "2026-09-06T14:44:47.398742717Z",
+      "service": "redis",
+      "imageTag": "redis:7.4.7-alpine",
+      "health": "healthy",
+      "running": true
+    }
+  ],
+  "others": [
+    {
+      "id": "4d2707650bf1fd8c686da6a9617882c4d1ec4af24a0be979b900afb560bd0d33",
+      "image": "sha256:de4fff99c4da266fc10a85073bf575135d12780f97fc78a9f277af6e68a02534",
+      "startedAt": "2026-09-08T08:01:05.28187591Z"
+    },
+    {
+      "id": "5254b712ba3b1c3582883106fecbfeb8130fc12a59fd01b5ece2df272336d380",
+      "image": "sha256:1da00411f12b85293d2f9a55fdc16acd24bf4e0b89144b3d7b0c6256e0795126",
+      "startedAt": "2026-09-08T08:01:05.283304905Z"
+    },
+    {
+      "id": "955b1ce01e2c3888fb519a266161fa63e8a238a223c67dcee9a91ad1bff8195d",
+      "image": "sha256:24d52734f31404bb2f54d9443ddb180dc0f62463bf606099267930394768521f",
+      "startedAt": "2026-09-08T08:00:59.546348648Z"
+    },
+    {
+      "id": "d48cdb32f4613a83910a721464113b8cd915e38eb16bab7c51550bd69f840a62",
+      "image": "sha256:23894f4844c4145046f882a8eff7665c907d1e433d1afaa8edc8fcdab337d2e3",
+      "startedAt": "2026-08-19T03:03:07.109583832Z"
+    },
+    {
+      "id": "442bb7cf14593d988b1de3a15cce9c7377d59797a2219f50c49b21f71a7952ca",
+      "image": "sha256:eaeecdba76a64c8150c533db8945d0d7eb82cb36a3668ebbd30f0c8e5cc4f0d4",
+      "startedAt": "2026-08-18T05:16:10.02228225Z"
+    },
+    {
+      "id": "d7807827910cf1fd7453cdba308740dbc82b3434d5c92803861d79408f7d165a",
+      "image": "sha256:e4539d9d051948e731efe68aa50ecbc89416aeba1017766120735f9cc36f79a5",
+      "startedAt": "2026-08-18T05:15:54.320461073Z"
+    },
+    {
+      "id": "939d22f43b1fd05130b7489c0d9a904a2155fe1221df046531c7497b43a93dc0",
+      "image": "sha256:bee2131f77c8bee446bf387d4664e4929fe09303c8e7bfdf72c980320d596c06",
+      "startedAt": "2026-08-18T05:15:38.671302172Z"
+    },
+    {
+      "id": "f46ca7bbdfb63c2d83ca9aff305d69e04c78af6fe40767ea8da1131f70eec626",
+      "image": "sha256:6567bca8d7bc8c82c5922425a0baee57be8402df92bae5eacad5f01ae9544daa",
+      "startedAt": "2026-08-15T03:41:03.061643707Z"
+    },
+    {
+      "id": "4f29944e9f6d54ee09a061122dc473353a7e1fbdc5f330deea3529d0afe06bcb",
+      "image": "sha256:6567bca8d7bc8c82c5922425a0baee57be8402df92bae5eacad5f01ae9544daa",
+      "startedAt": "2026-08-15T03:40:52.355514429Z"
+    },
+    {
+      "id": "46b3df0ce6f36da01f4d69fef77d514231e22fc2e0810ca07ec39cef2a6cf31e",
+      "image": "sha256:5dda65a823a0d73d9caae4f449ab01973cf9884cea4ef56f9cb84dbe5e00acbd",
+      "startedAt": "2026-08-14T17:43:59.2723552Z"
+    }
+  ],
+  "nginxHashes": {
+    "/etc/nginx/sites-enabled/openacad": "bd65504a823db428a0d94bc386d190cc485a0735d7f408c5f0c055c90c6220ad",
+    "/etc/nginx/sites-enabled/tensor-auto": "ec96c7c6b44f820c7ed2df6bcb25545a854c495d863df29f1cef2388e1962575",
+    "/etc/nginx/sites-enabled/api.paperbanana.asia": "bbb6d59ba0070cb6df9f3123849e860f3bc1f6e9554b7fb2189cc9e0475c79d6"
+  },
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "服务正常"
+  }
+}

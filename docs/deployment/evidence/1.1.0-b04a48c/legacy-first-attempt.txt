@@ -1,0 +1,18 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Error: strict mode violation: locator('.figure-paper svg[data-chart]') resolved to 2 elements:
+    1) <svg role="img" width="960" height="640" data-chart="true" class="chart-svg" viewBox="0 0 960 640" aria-label="叶片氮含量与光合速率" xmlns="http://www.w3.org/2000/svg">…</svg> aka getByRole('img', { name: '叶片氮含量与光合速率' }).first()
+    2) <svg role="img" width="960" height="640" data-chart="true" viewBox="0 0 960 640" aria-label="叶片氮含量与光合速率" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">…</svg> aka getByText('叶片氮含量与光合速率叶片氮含量与光合速率模拟数据 · 用于演示152025303515202530叶片氮含量 (mg/g)净光合速率 (µmol/m²/s')
+
+Call log:
+[2m  - waiting for locator('.figure-paper svg[data-chart]') to be visible[22m
+
+    at /Users/a1-6/.codex/visualizations/2026/09/08/01a07f8d-08e2-7c40-aff1-8dbfa4d2b0c0/figure-quality/release/production/legacy-roundtrip.mjs:15:55 {
+  log: [
+    "  - waiting for locator('.figure-paper svg[data-chart]') to be visible"
+  ]
+}
+
+Node.js v26.5.0

@@ -1,0 +1,36 @@
+{
+  "verifiedAt": "2026-09-08T09:11:20.484262+00:00",
+  "source": {
+    "id": 34205493679,
+    "head_sha": "b04a48cb71e8e14417e6027651d2c8c286c74cfc",
+    "path": ".github/workflows/verify.yml",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/yrjmdqmmx/OpenAcad/actions/runs/34205493679"
+  },
+  "artifact": {
+    "id": 10048401822,
+    "node_id": "MDg6QXJ0aWZhY3QxMDA0ODQwMTgyMg==",
+    "name": "worker-image-delta",
+    "size_in_bytes": 148384893,
+    "url": "https://api.github.com/repos/yrjmdqmmx/OpenAcad/actions/artifacts/10048401822",
+    "archive_download_url": "https://api.github.com/repos/yrjmdqmmx/OpenAcad/actions/artifacts/10048401822/zip",
+    "expired": false,
+    "digest": "sha256:fc7d167220088df3cc19d5cbc0bfd9d4bad0847b48f935dff9a10e9f6306b817",
+    "created_at": "2026-09-08T09:00:33Z",
+    "updated_at": "2026-09-08T09:00:33Z",
+    "expires_at": "2026-09-15T09:00:29Z",
+    "workflow_run": {
+      "id": 34207512133,
+      "repository_id": 1359112234,
+      "head_repository_id": 1359112234,
+      "head_branch": "codex/journal-figure-quality",
+      "head_sha": "b04a48cb71e8e14417e6027651d2c8c286c74cfc"
+    }
+  },
+  "zipSha256Verified": true,
+  "deltaSha256Verified": true,
+  "toolMatchesReleaseSource": true,
+  "allPartsVerified": true,
+  "configDigest": "sha256:6a625c9507af50c9f0fe9c89b7f95497731d8f0cb7b2d53e2ff02644c5b05434"
+}

@@ -1,0 +1,2092 @@
+[
+  {
+    "id": "scatter",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00125,
+        "inkMae": 0.053,
+        "blurMae": 0.00075
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00157,
+        "inkMae": 0.07144,
+        "blurMae": 0.00122
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00113,
+        "inkMae": 0.04904,
+        "blurMae": 0.00084
+      }
+    ]
+  },
+  {
+    "id": "bar-grouped",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00225,
+        "inkMae": 0.00951,
+        "blurMae": 0.00109
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00223,
+        "inkMae": 0.0102,
+        "blurMae": 0.00175
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00207,
+        "inkMae": 0.00883,
+        "blurMae": 0.00134
+      }
+    ]
+  },
+  {
+    "id": "line",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0015,
+        "inkMae": 0.0492,
+        "blurMae": 0.00094
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00195,
+        "inkMae": 0.06733,
+        "blurMae": 0.00161
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00142,
+        "inkMae": 0.04673,
+        "blurMae": 0.00102
+      }
+    ]
+  },
+  {
+    "id": "heatmap",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00478,
+        "inkMae": 0.00903,
+        "blurMae": 0.00259
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0049,
+        "inkMae": 0.0095,
+        "blurMae": 0.00338
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00433,
+        "inkMae": 0.00835,
+        "blurMae": 0.00285
+      }
+    ]
+  },
+  {
+    "id": "box",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00193,
+        "inkMae": 0.03571,
+        "blurMae": 0.00114
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00241,
+        "inkMae": 0.04601,
+        "blurMae": 0.00188
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00162,
+        "inkMae": 0.03033,
+        "blurMae": 0.00112
+      }
+    ]
+  },
+  {
+    "id": "pie",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00144,
+        "inkMae": 0.00681,
+        "blurMae": 0.00085
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0019,
+        "inkMae": 0.00929,
+        "blurMae": 0.00144
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00139,
+        "inkMae": 0.00661,
+        "blurMae": 0.001
+      }
+    ]
+  },
+  {
+    "id": "bar",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0015,
+        "inkMae": 0.00656,
+        "blurMae": 0.00086
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00187,
+        "inkMae": 0.00858,
+        "blurMae": 0.00143
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0013,
+        "inkMae": 0.00582,
+        "blurMae": 0.00094
+      }
+    ]
+  },
+  {
+    "id": "bar-category",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00225,
+        "inkMae": 0.01194,
+        "blurMae": 0.00131
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00272,
+        "inkMae": 0.01522,
+        "blurMae": 0.00211
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00203,
+        "inkMae": 0.01109,
+        "blurMae": 0.00141
+      }
+    ]
+  },
+  {
+    "id": "bar-error",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1063
+        ],
+        "aspectError": 0.0006640473687122839,
+        "mae": 0.0021,
+        "inkMae": 0.01218,
+        "blurMae": 0.0013
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          680
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0026,
+        "inkMae": 0.01565,
+        "blurMae": 0.00211
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          680
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00194,
+        "inkMae": 0.01149,
+        "blurMae": 0.00141
+      }
+    ]
+  },
+  {
+    "id": "bar-grouped-error",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1063
+        ],
+        "aspectError": 0.0006640473687122839,
+        "mae": 0.00226,
+        "inkMae": 0.01245,
+        "blurMae": 0.00135
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          680
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00293,
+        "inkMae": 0.01695,
+        "blurMae": 0.00237
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          680
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00214,
+        "inkMae": 0.01211,
+        "blurMae": 0.00153
+      }
+    ]
+  },
+  {
+    "id": "scatter-error",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1063
+        ],
+        "aspectError": 0.0006640473687122839,
+        "mae": 0.00155,
+        "inkMae": 0.05007,
+        "blurMae": 0.00098
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          680
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00209,
+        "inkMae": 0.06981,
+        "blurMae": 0.00166
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          680
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00143,
+        "inkMae": 0.04649,
+        "blurMae": 0.00103
+      }
+    ]
+  },
+  {
+    "id": "bar-stacked",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00202,
+        "inkMae": 0.007,
+        "blurMae": 0.00113
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00244,
+        "inkMae": 0.00883,
+        "blurMae": 0.00187
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00186,
+        "inkMae": 0.00668,
+        "blurMae": 0.00135
+      }
+    ]
+  },
+  {
+    "id": "bar-grouped-stacked",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00268,
+        "inkMae": 0.00639,
+        "blurMae": 0.00142
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00366,
+        "inkMae": 0.00927,
+        "blurMae": 0.00264
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0022,
+        "inkMae": 0.00536,
+        "blurMae": 0.00162
+      }
+    ]
+  },
+  {
+    "id": "bar-line",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00209,
+        "inkMae": 0.01392,
+        "blurMae": 0.00116
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00203,
+        "inkMae": 0.01461,
+        "blurMae": 0.00157
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00198,
+        "inkMae": 0.0136,
+        "blurMae": 0.00134
+      }
+    ]
+  },
+  {
+    "id": "lollipop",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00145,
+        "inkMae": 0.0495,
+        "blurMae": 0.00087
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00212,
+        "inkMae": 0.07656,
+        "blurMae": 0.00149
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0012,
+        "inkMae": 0.04164,
+        "blurMae": 0.0009
+      }
+    ]
+  },
+  {
+    "id": "lollipop-category",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0026,
+        "inkMae": 0.06155,
+        "blurMae": 0.00146
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00275,
+        "inkMae": 0.06905,
+        "blurMae": 0.00214
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00251,
+        "inkMae": 0.05955,
+        "blurMae": 0.00163
+      }
+    ]
+  },
+  {
+    "id": "line-error",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00162,
+        "inkMae": 0.05097,
+        "blurMae": 0.00099
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00209,
+        "inkMae": 0.06929,
+        "blurMae": 0.00171
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00156,
+        "inkMae": 0.04907,
+        "blurMae": 0.0011
+      }
+    ]
+  },
+  {
+    "id": "box-grouped",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00203,
+        "inkMae": 0.03717,
+        "blurMae": 0.00118
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00248,
+        "inkMae": 0.04794,
+        "blurMae": 0.00193
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00186,
+        "inkMae": 0.03466,
+        "blurMae": 0.00128
+      }
+    ]
+  },
+  {
+    "id": "violin",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00183,
+        "inkMae": 0.02383,
+        "blurMae": 0.00101
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00235,
+        "inkMae": 0.03232,
+        "blurMae": 0.00184
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00163,
+        "inkMae": 0.02183,
+        "blurMae": 0.00112
+      }
+    ]
+  },
+  {
+    "id": "raincloud",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00188,
+        "inkMae": 0.03065,
+        "blurMae": 0.00105
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00208,
+        "inkMae": 0.03621,
+        "blurMae": 0.00177
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00177,
+        "inkMae": 0.0293,
+        "blurMae": 0.00115
+      }
+    ]
+  },
+  {
+    "id": "ridgeline",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1328
+        ],
+        "aspectError": 0.00010630758327434542,
+        "mae": 0.00139,
+        "inkMae": 0.01754,
+        "blurMae": 0.00075
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          850
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00153,
+        "inkMae": 0.02008,
+        "blurMae": 0.00131
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          851
+        ],
+        "aspectError": 0.0013271583604064219,
+        "mae": 0.00343,
+        "inkMae": 0.04429,
+        "blurMae": 0.00194
+      }
+    ]
+  },
+  {
+    "id": "upset",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1156
+        ],
+        "aspectError": 0.0002805573739828038,
+        "mae": 0.00207,
+        "inkMae": 0.01417,
+        "blurMae": 0.0012
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          740
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00235,
+        "inkMae": 0.01709,
+        "blurMae": 0.00194
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          740
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00194,
+        "inkMae": 0.0134,
+        "blurMae": 0.00138
+      }
+    ]
+  },
+  {
+    "id": "rose",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1406,
+          1250
+        ],
+        "aspectError": 0.00019999999999997797,
+        "mae": 0.00187,
+        "inkMae": 0.01033,
+        "blurMae": 0.0012
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          900,
+          800
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00213,
+        "inkMae": 0.01204,
+        "blurMae": 0.00186
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          900,
+          800
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00183,
+        "inkMae": 0.01028,
+        "blurMae": 0.00134
+      }
+    ]
+  },
+  {
+    "id": "radar",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1406,
+          1328
+        ],
+        "aspectError": 8.858965272851016e-05,
+        "mae": 0.00238,
+        "inkMae": 0.01635,
+        "blurMae": 0.00149
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          900,
+          850
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00266,
+        "inkMae": 0.01908,
+        "blurMae": 0.00193
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          900,
+          851
+        ],
+        "aspectError": 0.001244210962880965,
+        "mae": 0.00374,
+        "inkMae": 0.02619,
+        "blurMae": 0.00245
+      }
+    ]
+  },
+  {
+    "id": "scatter-grouped",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00131,
+        "inkMae": 0.05212,
+        "blurMae": 0.00079
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00158,
+        "inkMae": 0.06686,
+        "blurMae": 0.00119
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00119,
+        "inkMae": 0.04844,
+        "blurMae": 0.00088
+      }
+    ]
+  },
+  {
+    "id": "dumbbell",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00203,
+        "inkMae": 0.05152,
+        "blurMae": 0.00124
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00266,
+        "inkMae": 0.07086,
+        "blurMae": 0.00193
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          640
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00197,
+        "inkMae": 0.05036,
+        "blurMae": 0.00141
+      }
+    ]
+  },
+  {
+    "id": "circle-heatmap",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1563,
+          1328
+        ],
+        "aspectError": 0.00048724309000713895,
+        "mae": 0.00199,
+        "inkMae": 0.00945,
+        "blurMae": 0.00105
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1000,
+          850
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00264,
+        "inkMae": 0.01315,
+        "blurMae": 0.00181
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1000,
+          851
+        ],
+        "aspectError": 0.0013824566254234671,
+        "mae": 0.00407,
+        "inkMae": 0.02017,
+        "blurMae": 0.00241
+      }
+    ]
+  },
+  {
+    "id": "binary-dot",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1094
+        ],
+        "aspectError": 0.0003133977539828692,
+        "mae": 0.0023,
+        "inkMae": 0.0378,
+        "blurMae": 0.00133
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          700
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00311,
+        "inkMae": 0.0532,
+        "blurMae": 0.00207
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          700
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00231,
+        "inkMae": 0.03808,
+        "blurMae": 0.00156
+      }
+    ]
+  },
+  {
+    "id": "binary-rect",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1094
+        ],
+        "aspectError": 0.0003133977539828692,
+        "mae": 0.0035,
+        "inkMae": 0.00924,
+        "blurMae": 0.0021
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          700
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00386,
+        "inkMae": 0.0108,
+        "blurMae": 0.00264
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          700
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00284,
+        "inkMae": 0.00777,
+        "blurMae": 0.00209
+      }
+    ]
+  },
+  {
+    "id": "bubble-matrix",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1172
+        ],
+        "aspectError": 0.00013651877133114,
+        "mae": 0.00247,
+        "inkMae": 0.0338,
+        "blurMae": 0.0014
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          750
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00316,
+        "inkMae": 0.04412,
+        "blurMae": 0.00228
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          751
+        ],
+        "aspectError": 0.0017043941411452046,
+        "mae": 0.00462,
+        "inkMae": 0.06371,
+        "blurMae": 0.00276
+      }
+    ]
+  },
+  {
+    "id": "correlation",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1406,
+          1188
+        ],
+        "aspectError": 0.0007088428141057701,
+        "mae": 0.0022,
+        "inkMae": 0.00639,
+        "blurMae": 0.00105
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          900,
+          760
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00216,
+        "inkMae": 0.00658,
+        "blurMae": 0.00141
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          900,
+          760
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00198,
+        "inkMae": 0.00596,
+        "blurMae": 0.00123
+      }
+    ]
+  },
+  {
+    "id": "double-correlation",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00248,
+        "inkMae": 0.00528,
+        "blurMae": 0.00122
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00249,
+        "inkMae": 0.00548,
+        "blurMae": 0.00167
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00223,
+        "inkMae": 0.00486,
+        "blurMae": 0.00139
+      }
+    ]
+  },
+  {
+    "id": "mantel",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1188
+        ],
+        "aspectError": 0.0003987240829346206,
+        "mae": 0.00267,
+        "inkMae": 0.00613,
+        "blurMae": 0.00149
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          760
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00304,
+        "inkMae": 0.00705,
+        "blurMae": 0.00202
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          760
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00251,
+        "inkMae": 0.00581,
+        "blurMae": 0.00165
+      }
+    ]
+  },
+  {
+    "id": "venn",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1188
+        ],
+        "aspectError": 0.0003987240829346206,
+        "mae": 0.00283,
+        "inkMae": 0.01135,
+        "blurMae": 0.00183
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          760
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00329,
+        "inkMae": 0.0134,
+        "blurMae": 0.00207
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          760
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0026,
+        "inkMae": 0.01041,
+        "blurMae": 0.00194
+      }
+    ]
+  },
+  {
+    "id": "packing",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1563,
+          1281
+        ],
+        "aspectError": 0.0006283201005312655,
+        "mae": 0.00185,
+        "inkMae": 0.0133,
+        "blurMae": 0.00119
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1000,
+          820
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00223,
+        "inkMae": 0.01812,
+        "blurMae": 0.00202
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1000,
+          820
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00178,
+        "inkMae": 0.01322,
+        "blurMae": 0.00125
+      }
+    ]
+  },
+  {
+    "id": "sankey",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1094
+        ],
+        "aspectError": 0.00013058239749286216,
+        "mae": 0.00321,
+        "inkMae": 0.00736,
+        "blurMae": 0.00217
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          700
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00168,
+        "inkMae": 0.00384,
+        "blurMae": 0.00128
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          700
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00309,
+        "inkMae": 0.00708,
+        "blurMae": 0.00233
+      }
+    ]
+  },
+  {
+    "id": "network",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1641,
+          1281
+        ],
+        "aspectError": 0.0005426400868224768,
+        "mae": 0.00274,
+        "inkMae": 0.04776,
+        "blurMae": 0.00146
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1050,
+          820
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00303,
+        "inkMae": 0.05457,
+        "blurMae": 0.00208
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1051,
+          820
+        ],
+        "aspectError": 0.0012195121951219523,
+        "mae": 0.0053,
+        "inkMae": 0.08926,
+        "blurMae": 0.00282
+      }
+    ]
+  },
+  {
+    "id": "map",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1188
+        ],
+        "aspectError": 0.0003987240829346206,
+        "mae": 0.00244,
+        "inkMae": 0.0103,
+        "blurMae": 0.00122
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          760
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00375,
+        "inkMae": 0.01759,
+        "blurMae": 0.00333
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          760
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00184,
+        "inkMae": 0.00894,
+        "blurMae": 0.00126
+      }
+    ]
+  },
+  {
+    "id": "volcano",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00298,
+        "inkMae": 0.06068,
+        "blurMae": 0.00169
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00362,
+        "inkMae": 0.07862,
+        "blurMae": 0.00253
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00275,
+        "inkMae": 0.05685,
+        "blurMae": 0.00176
+      }
+    ]
+  },
+  {
+    "id": "enrichment-dot",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1656,
+          1219
+        ],
+        "aspectError": 0.00048379293662326184,
+        "mae": 0.00221,
+        "inkMae": 0.05955,
+        "blurMae": 0.00126
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1060,
+          780
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00216,
+        "inkMae": 0.06058,
+        "blurMae": 0.00168
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1060,
+          780
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00219,
+        "inkMae": 0.0606,
+        "blurMae": 0.00138
+      }
+    ]
+  },
+  {
+    "id": "enrichment-bar",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1656,
+          1156
+        ],
+        "aspectError": 9.35191246609346e-05,
+        "mae": 0.00284,
+        "inkMae": 0.0143,
+        "blurMae": 0.00152
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1060,
+          740
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00231,
+        "inkMae": 0.01224,
+        "blurMae": 0.00172
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1060,
+          740
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00271,
+        "inkMae": 0.01408,
+        "blurMae": 0.00162
+      }
+    ]
+  },
+  {
+    "id": "enrichment-circle",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1656,
+          1422
+        ],
+        "aspectError": 0.00027820280984847123,
+        "mae": 0.0019,
+        "inkMae": 0.01403,
+        "blurMae": 0.00107
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1060,
+          910
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00247,
+        "inkMae": 0.01904,
+        "blurMae": 0.00174
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1060,
+          911
+        ],
+        "aspectError": 0.0012786335508618851,
+        "mae": 0.00426,
+        "inkMae": 0.03207,
+        "blurMae": 0.00283
+      }
+    ]
+  },
+  {
+    "id": "gene-cluster",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1781,
+          1297
+        ],
+        "aspectError": 0.0003251247085489517,
+        "mae": 0.00308,
+        "inkMae": 0.025,
+        "blurMae": 0.00149
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1140,
+          830
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00289,
+        "inkMae": 0.02363,
+        "blurMae": 0.00186
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1140,
+          831
+        ],
+        "aspectError": 0.0016528206689574443,
+        "mae": 0.00697,
+        "inkMae": 0.05692,
+        "blurMae": 0.0047
+      }
+    ]
+  },
+  {
+    "id": "protein-domains",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1219
+        ],
+        "aspectError": 8.413790202155269e-05,
+        "mae": 0.00402,
+        "inkMae": 0.03529,
+        "blurMae": 0.00203
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          780
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00329,
+        "inkMae": 0.02997,
+        "blurMae": 0.00218
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          780
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00374,
+        "inkMae": 0.03298,
+        "blurMae": 0.00229
+      }
+    ]
+  },
+  {
+    "id": "protein-motifs",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1219
+        ],
+        "aspectError": 8.413790202155269e-05,
+        "mae": 0.00478,
+        "inkMae": 0.05729,
+        "blurMae": 0.0023
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          780
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0042,
+        "inkMae": 0.05259,
+        "blurMae": 0.00287
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          780
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00464,
+        "inkMae": 0.05575,
+        "blurMae": 0.00273
+      }
+    ]
+  },
+  {
+    "id": "genome-circos",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1641
+        ],
+        "aspectError": 8.705493166183409e-05,
+        "mae": 0.00156,
+        "inkMae": 0.01869,
+        "blurMae": 0.0009
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          1050
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00208,
+        "inkMae": 0.02591,
+        "blurMae": 0.00168
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          1051
+        ],
+        "aspectError": 0.0009967831090571533,
+        "mae": 0.00352,
+        "inkMae": 0.04262,
+        "blurMae": 0.0025
+      }
+    ]
+  },
+  {
+    "id": "synteny",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1328
+        ],
+        "aspectError": 0.0003100637845498966,
+        "mae": 0.00224,
+        "inkMae": 0.01141,
+        "blurMae": 0.00107
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          850
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00255,
+        "inkMae": 0.01343,
+        "blurMae": 0.00186
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          851
+        ],
+        "aspectError": 0.0015207022879657472,
+        "mae": 0.00301,
+        "inkMae": 0.01536,
+        "blurMae": 0.00177
+      }
+    ]
+  },
+  {
+    "id": "pca",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00271,
+        "inkMae": 0.06892,
+        "blurMae": 0.00148
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00297,
+        "inkMae": 0.07996,
+        "blurMae": 0.00203
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00269,
+        "inkMae": 0.0694,
+        "blurMae": 0.0017
+      }
+    ]
+  },
+  {
+    "id": "pcoa",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00219,
+        "inkMae": 0.064,
+        "blurMae": 0.00122
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00268,
+        "inkMae": 0.08324,
+        "blurMae": 0.0018
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00219,
+        "inkMae": 0.06524,
+        "blurMae": 0.00144
+      }
+    ]
+  },
+  {
+    "id": "nmds",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00255,
+        "inkMae": 0.07047,
+        "blurMae": 0.00141
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00303,
+        "inkMae": 0.08836,
+        "blurMae": 0.00199
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00251,
+        "inkMae": 0.07043,
+        "blurMae": 0.00164
+      }
+    ]
+  },
+  {
+    "id": "cca",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1641,
+          1125
+        ],
+        "aspectError": 0.0003333333333332966,
+        "mae": 0.00235,
+        "inkMae": 0.0654,
+        "blurMae": 0.00131
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1050,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.0029,
+        "inkMae": 0.08483,
+        "blurMae": 0.00193
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1051,
+          720
+        ],
+        "aspectError": 0.001388888888888884,
+        "mae": 0.00382,
+        "inkMae": 0.10312,
+        "blurMae": 0.00202
+      }
+    ]
+  },
+  {
+    "id": "rda",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1641,
+          1125
+        ],
+        "aspectError": 0.0003333333333332966,
+        "mae": 0.00229,
+        "inkMae": 0.0663,
+        "blurMae": 0.00126
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1050,
+          720
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00261,
+        "inkMae": 0.08002,
+        "blurMae": 0.00177
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1051,
+          720
+        ],
+        "aspectError": 0.001388888888888884,
+        "mae": 0.00379,
+        "inkMae": 0.10591,
+        "blurMae": 0.00196
+      }
+    ]
+  },
+  {
+    "id": "tree-normal",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1938,
+          1563
+        ],
+        "aspectError": 7.677543186179747e-05,
+        "mae": 0.00314,
+        "inkMae": 0.03176,
+        "blurMae": 0.00175
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1240,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00322,
+        "inkMae": 0.03481,
+        "blurMae": 0.00263
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1240,
+          1000
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00307,
+        "inkMae": 0.03109,
+        "blurMae": 0.00193
+      }
+    ]
+  },
+  {
+    "id": "tree-circle",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1836,
+          1956
+        ],
+        "aspectError": 0.00015190419255572962,
+        "mae": 0.00252,
+        "inkMae": 0.01476,
+        "blurMae": 0.00149
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1175,
+          1252
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00396,
+        "inkMae": 0.02386,
+        "blurMae": 0.00303
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1176,
+          1252
+        ],
+        "aspectError": 0.0007987220447284171,
+        "mae": 0.00589,
+        "inkMae": 0.03502,
+        "blurMae": 0.00365
+      }
+    ]
+  },
+  {
+    "id": "tree-unrooted",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1719,
+          1758
+        ],
+        "aspectError": 3.7921880925329e-05,
+        "mae": 0.00179,
+        "inkMae": 0.03121,
+        "blurMae": 0.0011
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          1100,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00287,
+        "inkMae": 0.05147,
+        "blurMae": 0.0019
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          1100,
+          1125
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00183,
+        "inkMae": 0.03203,
+        "blurMae": 0.0013
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "version": {
+    "version": "1.1.0",
+    "revision": "b04a48cb71e8e14417e6027651d2c8c286c74cfc",
+    "builtAt": "2026-09-08T08:38:46.097Z"
+  },
+  "rows": [
+    {
+      "id": "scatter",
+      "saveAndReopenRounds": 2,
+      "fiveFieldsIdentical": true,
+      "originalStylesPreserved": true
+    },
+    {
+      "id": "bar-grouped",
+      "saveAndReopenRounds": 2,
+      "fiveFieldsIdentical": true,
+      "originalStylesPreserved": true
+    },
+    {
+      "id": "volcano",
+      "saveAndReopenRounds": 2,
+      "fiveFieldsIdentical": true,
+      "originalStylesPreserved": true
+    },
+    {
+      "id": "tree-circle",
+      "saveAndReopenRounds": 2,
+      "fiveFieldsIdentical": true,
+      "originalStylesPreserved": true
+    }
+  ]
+}

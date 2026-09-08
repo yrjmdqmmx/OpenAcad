@@ -1,0 +1,40 @@
+{
+  "revision": "b04a48cb71e8e14417e6027651d2c8c286c74cfc",
+  "mergeRevision": "94c31f976625855e907905fb849a151d6becc121",
+  "publishedAt": "2026-09-08T09:14:17Z",
+  "baseUrl": "https://openacad.xyz",
+  "templates": 55,
+  "defaultAndAlternateScenarios": 110,
+  "savedReopenedProjects": 55,
+  "fourFormatDownloads": 220,
+  "surfacesIdentical": 55,
+  "offlineSvgFontChecks": 55,
+  "browser": {
+    "startTime": "2026-09-08T09:16:45.981Z",
+    "duration": 304421.506,
+    "expected": 23,
+    "skipped": 41,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "realApiSmoke": {
+    "cases": 5,
+    "passed": 5,
+    "complete": true
+  },
+  "extraSerifDownloadsOpened": 8,
+  "legacyProjects": 4,
+  "legacySaveReopenRounds": 2,
+  "maximumBlurMae": 0.0047,
+  "maximumMae": 0.00697,
+  "localDefaultPngPixelsIdentical": 50,
+  "localDefaultPngCompared": 55,
+  "notes": [
+    "五个字体取消/静态字重用例含受控条件；异常注入不计为真实服务统计。",
+    "55 模板的小画布、宽画布、长标签和分组变化来自发布前 275 场景；生产本次复验默认及替代数据 110 场景。",
+    "UpSet 本地与线上 SVG 字节相同，PNG 四行名称的基线存在细小差异，原因未单独定位；各行关联、数值与内容完整。",
+    "EPS 透明效果可包含栅格；没有宣称所有 EPS 完全矢量。",
+    "本次未强制回退再升级；保留 3993a2a 发行与固定镜像，CI 13 项恢复回归通过。",
+    "KEGG 仅复核服务健康，未把健康接口当作本次上游查询验收。"
+  ]
+}

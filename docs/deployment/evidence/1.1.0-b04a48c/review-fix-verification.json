@@ -1,0 +1,15 @@
+{
+  "reviewComment": "https://github.com/yrjmdqmmx/OpenAcad/pull/1#discussion_r3955731196",
+  "fix": "Generate independent primary and alternate statistical examples with retained raw data; both match the method captions.",
+  "seeds": [
+    6731,
+    19073
+  ],
+  "primaryDataUnchanged": true,
+  "unit": "467 passed; 7 independent inference and project tests included",
+  "build": "passed",
+  "browser": "Four font-portability contexts passed at matched intrinsic scale and DPR; four alternate examples switched, saved/reopened and exported to SVG in a passing dedicated browser test.",
+  "stressCases": 20,
+  "stressErrors": [],
+  "priorLinuxFailure": "235 passed, 539 skipped, 2 font-metric assertions failed in WebKit/mobile. Test comparison now uses intrinsic SVG size and matching context options; original 0.1 threshold retained. Final Linux CI still required."
+}

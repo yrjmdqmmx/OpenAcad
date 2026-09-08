@@ -1,0 +1,121 @@
+{
+  "revision": "b04a48cb71e8e14417e6027651d2c8c286c74cfc",
+  "pushRun": 34205493679,
+  "pullRun": 34205497850,
+  "bothConclusions": "success",
+  "frontendUnit": {
+    "passed": 467,
+    "files": 14
+  },
+  "browser": {
+    "startTime": "2026-09-08T08:39:27.855Z",
+    "duration": 1103248.772,
+    "expected": 238,
+    "skipped": 542,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "backend": {
+    "passed": 196,
+    "warnings": 3,
+    "durationSeconds": 70.46
+  },
+  "releaseRecovery": {
+    "passed": 13
+  },
+  "releaseFixBrowserChecks": [
+    {
+      "title": "可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致",
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 5530
+        }
+      ]
+    },
+    {
+      "title": "可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致",
+      "project": "firefox",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 7187
+        }
+      ]
+    },
+    {
+      "title": "可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致",
+      "project": "webkit",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 17548
+        }
+      ]
+    },
+    {
+      "title": "可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 9839
+        }
+      ]
+    },
+    {
+      "title": "替代推断示例的方法注记、原始依据、项目重开与 SVG 一致",
+      "project": "chromium",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "duration": 24436
+        }
+      ]
+    },
+    {
+      "title": "替代推断示例的方法注记、原始依据、项目重开与 SVG 一致",
+      "project": "firefox",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 613
+        }
+      ]
+    },
+    {
+      "title": "替代推断示例的方法注记、原始依据、项目重开与 SVG 一致",
+      "project": "webkit",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 1390
+        }
+      ]
+    },
+    {
+      "title": "替代推断示例的方法注记、原始依据、项目重开与 SVG 一致",
+      "project": "mobile",
+      "status": "skipped",
+      "results": [
+        {
+          "status": "skipped",
+          "duration": 1197
+        }
+      ]
+    }
+  ],
+  "initialRun": {
+    "id": 34201987814,
+    "conclusion": "failure",
+    "cause": "Two WebKit/mobile intrinsic SVG text metric comparisons used different preview/device scaling. The final test keeps the original < 0.1 SVG unit tolerance and matches intrinsic size, viewport and device scale."
+  }
+}

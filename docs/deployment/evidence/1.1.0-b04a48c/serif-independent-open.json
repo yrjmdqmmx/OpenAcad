@@ -1,0 +1,124 @@
+{
+  "files": 8,
+  "allOpened": true,
+  "rows": [
+    {
+      "platform": "chromium",
+      "svgDimensions": [
+        960,
+        640
+      ],
+      "comparisons": [
+        {
+          "format": "png",
+          "dimensions": [
+            1500,
+            1000
+          ],
+          "independentOpen": true,
+          "inkBounds": [
+            16,
+            33,
+            1413,
+            978
+          ],
+          "blurMae": 0.0005740549257897603
+        },
+        {
+          "format": "pdf",
+          "dimensions": [
+            960,
+            640
+          ],
+          "independentOpen": true,
+          "inkBounds": [
+            10,
+            21,
+            904,
+            625
+          ],
+          "blurMae": 0.001109868600217865,
+          "serifFontsEmbedded": true,
+          "fontNames": [
+            "CQDAFL+NotoSerifCJKsc-Bold",
+            "AAKYJY+NotoSerifCJKsc-Regular"
+          ]
+        },
+        {
+          "format": "eps",
+          "dimensions": [
+            960,
+            640
+          ],
+          "independentOpen": true,
+          "inkBounds": [
+            10,
+            21,
+            904,
+            625
+          ],
+          "blurMae": 0.00039679287513616555
+        }
+      ]
+    },
+    {
+      "platform": "mobile",
+      "svgDimensions": [
+        960,
+        640
+      ],
+      "comparisons": [
+        {
+          "format": "png",
+          "dimensions": [
+            1500,
+            1000
+          ],
+          "independentOpen": true,
+          "inkBounds": [
+            16,
+            33,
+            1413,
+            978
+          ],
+          "blurMae": 0.0005740549257897603
+        },
+        {
+          "format": "pdf",
+          "dimensions": [
+            960,
+            640
+          ],
+          "independentOpen": true,
+          "inkBounds": [
+            10,
+            21,
+            904,
+            625
+          ],
+          "blurMae": 0.001109868600217865,
+          "serifFontsEmbedded": true,
+          "fontNames": [
+            "CQDAFL+NotoSerifCJKsc-Bold",
+            "AAKYJY+NotoSerifCJKsc-Regular"
+          ]
+        },
+        {
+          "format": "eps",
+          "dimensions": [
+            960,
+            640
+          ],
+          "independentOpen": true,
+          "inkBounds": [
+            10,
+            21,
+            904,
+            625
+          ],
+          "blurMae": 0.00039679287513616555
+        }
+      ]
+    }
+  ]
+}

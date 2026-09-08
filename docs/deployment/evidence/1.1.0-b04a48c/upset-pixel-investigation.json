@@ -1,0 +1,47 @@
+{
+  "svgFilesIdentical": true,
+  "localSvgSha256": "5ae45420ab43c6a32876b32b7de29f3dabaabd6527270cbd73b6c0b1d87df019",
+  "productionSvgSha256": "5ae45420ab43c6a32876b32b7de29f3dabaabd6527270cbd73b6c0b1d87df019",
+  "localElements": 153,
+  "productionElements": 153,
+  "differences": [],
+  "productionFormatComparison": {
+    "id": "upset",
+    "comparisons": [
+      {
+        "format": "png",
+        "dimensions": [
+          1500,
+          1156
+        ],
+        "aspectError": 0.0002805573739828038,
+        "mae": 0.00207,
+        "inkMae": 0.01417,
+        "blurMae": 0.0012
+      },
+      {
+        "format": "pdf",
+        "dimensions": [
+          960,
+          740
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00235,
+        "inkMae": 0.01709,
+        "blurMae": 0.00194
+      },
+      {
+        "format": "eps",
+        "dimensions": [
+          960,
+          740
+        ],
+        "aspectError": 0.0,
+        "mae": 0.00194,
+        "inkMae": 0.0134,
+        "blurMae": 0.00138
+      }
+    ]
+  },
+  "visualObservation": "All data bars, memberships, counts, styles and SVG element attributes match. The two PNG renders differ primarily in the four set-name text baselines; labels remain legible and associated with their rows. Other four template differences are below 0.00018 of a 0-255 channel on average. Exact renderer cause was not isolated."
+}

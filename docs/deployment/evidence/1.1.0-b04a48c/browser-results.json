@@ -1,0 +1,3157 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/node_modules/.bin/playwright",
+      "test",
+      "e2e/live-analysis.spec.ts",
+      "e2e/live-export.spec.ts",
+      "e2e/export-fonts.spec.ts",
+      "e2e/inference-examples.spec.ts",
+      "--workers=1",
+      "--timeout=120000",
+      "--reporter=list,json",
+      "--output=/Users/a1-6/.codex/visualizations/2026/09/08/01a07f8d-08e2-7c40-aff1-8dbfa4d2b0c0/figure-quality/release/production/browser-artifacts"
+    ],
+    "configFile": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/playwright.config.ts",
+    "rootDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/a1-6/.codex/visualizations/2026/09/08/01a07f8d-08e2-7c40-aff1-8dbfa4d2b0c0/figure-quality/release/production/browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/a1-6/.codex/visualizations/2026/09/08/01a07f8d-08e2-7c40-aff1-8dbfa4d2b0c0/figure-quality/release/production/browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/a1-6/.codex/visualizations/2026/09/08/01a07f8d-08e2-7c40-aff1-8dbfa4d2b0c0/figure-quality/release/production/browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      },
+      {
+        "outputDir": "/Users/a1-6/.codex/visualizations/2026/09/08/01a07f8d-08e2-7c40-aff1-8dbfa4d2b0c0/figure-quality/release/production/browser-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "export-fonts.spec.ts",
+      "file": "export-fonts.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "字体准备期间取消不会提交或延迟下载，随后可以正常导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11127,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:16:46.182Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-f7c43e003990851850e3",
+          "file": "export-fonts.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "当前SVG下载不等待无关页面字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6336,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:16:57.410Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-a7358e681cddc9a24438",
+          "file": "export-fonts.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "POST返回前取消后会删除迟到任务且不轮询或下载",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6032,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:03.751Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-b2292d8c6eb33196b547",
+          "file": "export-fonts.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "当前图表字体请求失败时明确提示且不提交导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4351,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:09.786Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-4115c2bb514ae04a0e0d",
+          "file": "export-fonts.spec.ts",
+          "line": 143,
+          "column": 1
+        },
+        {
+          "title": "保留文字的SVG下载保存真实字重匹配且不改预览",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6817,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:14.140Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-c757b50a5a83245c01b1",
+          "file": "export-fonts.spec.ts",
+          "line": 162,
+          "column": 1
+        },
+        {
+          "title": "可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5840,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:20.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-dd046f7b2d0a3481e1b2",
+          "file": "export-fonts.spec.ts",
+          "line": 192,
+          "column": 1
+        },
+        {
+          "title": "字体准备期间取消不会提交或延迟下载，随后可以正常导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 21,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 551,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:42.617Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 21,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-7e155a10eee2b97be5f8",
+          "file": "export-fonts.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "当前SVG下载不等待无关页面字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 68,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 183,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:43.830Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 68,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-3ef2946d2be49991ca55",
+          "file": "export-fonts.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "POST返回前取消后会删除迟到任务且不轮询或下载",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 99,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 126,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:44.021Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 99,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-9f3640cc80ff3172c070",
+          "file": "export-fonts.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "当前图表字体请求失败时明确提示且不提交导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 144,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 204,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:44.151Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 144,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-1f5df1eb0b4177603039",
+          "file": "export-fonts.spec.ts",
+          "line": 143,
+          "column": 1
+        },
+        {
+          "title": "保留文字的SVG下载保存真实字重匹配且不改预览",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "静态字重匹配专项使用 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 163,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 108,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:44.358Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "静态字重匹配专项使用 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 163,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-e5af184b42302f99d6de",
+          "file": "export-fonts.spec.ts",
+          "line": 162,
+          "column": 1
+        },
+        {
+          "title": "可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11701,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:44.470Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-1bbc7c5a2cb390df4003",
+          "file": "export-fonts.spec.ts",
+          "line": 192,
+          "column": 1
+        },
+        {
+          "title": "字体准备期间取消不会提交或延迟下载，随后可以正常导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 21,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 605,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:57.996Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 21,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-0777a20fe6465923cbd1",
+          "file": "export-fonts.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "当前SVG下载不等待无关页面字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 68,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 148,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:58.967Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 68,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-fa8bc6abfeb206f94487",
+          "file": "export-fonts.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "POST返回前取消后会删除迟到任务且不轮询或下载",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 99,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 136,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:59.124Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 99,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-f98f437ed8c42118d6d0",
+          "file": "export-fonts.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "当前图表字体请求失败时明确提示且不提交导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 144,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 130,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:59.264Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 144,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-8654ada32a050ad66565",
+          "file": "export-fonts.spec.ts",
+          "line": 143,
+          "column": 1
+        },
+        {
+          "title": "保留文字的SVG下载保存真实字重匹配且不改预览",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "静态字重匹配专项使用 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 163,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 127,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:59.397Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "静态字重匹配专项使用 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 163,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-e7c88c6f82a35a2c3313",
+          "file": "export-fonts.spec.ts",
+          "line": 162,
+          "column": 1
+        },
+        {
+          "title": "可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19996,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:59.528Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-98e974b572de2c03b5f3",
+          "file": "export-fonts.spec.ts",
+          "line": 192,
+          "column": 1
+        },
+        {
+          "title": "字体准备期间取消不会提交或延迟下载，随后可以正常导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 21,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:21.013Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 21,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-e4018687fece5067bb05",
+          "file": "export-fonts.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "当前SVG下载不等待无关页面字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 68,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 131,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:21.424Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 68,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-4f5026d5f3950e4bcc4c",
+          "file": "export-fonts.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "POST返回前取消后会删除迟到任务且不轮询或下载",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 99,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 132,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:21.563Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 99,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-f7f3d49291b072870314",
+          "file": "export-fonts.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "当前图表字体请求失败时明确提示且不提交导出",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "本次专项只运行 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 144,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 131,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:21.699Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "本次专项只运行 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 144,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-28772f92c8c9ff578f47",
+          "file": "export-fonts.spec.ts",
+          "line": 143,
+          "column": 1
+        },
+        {
+          "title": "保留文字的SVG下载保存真实字重匹配且不改预览",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "静态字重匹配专项使用 Chromium",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                    "line": 163,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 134,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:21.834Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "静态字重匹配专项使用 Chromium",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/export-fonts.spec.ts",
+                        "line": 163,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-775df8a82c0bc9efeff8",
+          "file": "export-fonts.spec.ts",
+          "line": 162,
+          "column": 1
+        },
+        {
+          "title": "可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15788,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:21.976Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec0dcf8697b47b57b030-d86076f6cb9328e9b5bf",
+          "file": "export-fonts.spec.ts",
+          "line": 192,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "inference-examples.spec.ts",
+      "file": "inference-examples.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "替代推断示例的方法注记、原始依据、项目重开与 SVG 一致",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8514,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:26.811Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f09a33068a01cb386ed2-c7d3ed633d4d60e0263a",
+          "file": "inference-examples.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "替代推断示例的方法注记、原始依据、项目重开与 SVG 一致",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "数据与方法的一致性专项",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/inference-examples.spec.ts",
+                    "line": 5,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 118,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:56.180Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "数据与方法的一致性专项",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/inference-examples.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "f09a33068a01cb386ed2-f48887e29c54cf2fc491",
+          "file": "inference-examples.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "替代推断示例的方法注记、原始依据、项目重开与 SVG 一致",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "数据与方法的一致性专项",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/inference-examples.spec.ts",
+                    "line": 5,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 128,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:19.532Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "数据与方法的一致性专项",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/inference-examples.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "f09a33068a01cb386ed2-adf567e8e3e505631370",
+          "file": "inference-examples.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "替代推断示例的方法注记、原始依据、项目重开与 SVG 一致",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "数据与方法的一致性专项",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/inference-examples.spec.ts",
+                    "line": 5,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 126,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:37.774Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "数据与方法的一致性专项",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/inference-examples.spec.ts",
+                        "line": 5,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "f09a33068a01cb386ed2-c60e66dc792eb35b2d20",
+          "file": "inference-examples.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "live-analysis.spec.ts",
+      "file": "live-analysis.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5430,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:35.333Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-25f0b9208d3499c7aee3",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6755,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:40.766Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-f931feb3f9d493cdc428",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11697,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:47.524Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-b54c0b43fc97ffecdef2",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12301,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:17:59.225Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-bfbb3ed0e26d50fa18d5",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 11956,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:18:11.529Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-54877021ef3919616926",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 119,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:56.310Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-eb54ea9877dd96ea57b0",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 415,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:56.435Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-2b52d317ece20cf4e49f",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:56.853Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-b495763ebfbac89047c5",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 104,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:56.981Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-e6fa053da5aaf979708f",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 111,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:57.088Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-d495a550be42050d7ff3",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 127,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:19.668Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-b6240c37c6a27e7bcfca",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 124,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:19.798Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-594e2138fc0a574f1046",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:19.925Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-acaff8403c4dd60d276d",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:20.054Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-ca1a9b391e6134ac8b7d",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 124,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:20.184Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-1fe12ec15b782436dea7",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 129,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:37.906Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-e610bb66ad89c2bb5930",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "pcoa 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 126,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:38.038Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-610fe5149e02dd2110e0",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "nmds 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 128,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:38.168Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-cf8d5a88461852d63876",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "cca 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 136,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:38.299Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-36f45145d2830b3db16e",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "rda 真实服务计算、失效结果和项目保留",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实统计服务的专用联测",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                    "line": 5,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 142,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:38.439Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实统计服务的专用联测",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-analysis.spec.ts",
+                        "line": 5,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "62b5ac230a4557b63c21-263df5491400f88d46c1",
+          "file": "live-analysis.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "live-export.spec.ts",
+      "file": "live-export.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17877,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:18:23.494Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-f887c30dd9fb97321c2c",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17548,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:18:41.375Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-363e758629269aa313b2",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21938,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:18:58.926Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-13b4c0d10c5639e7687e",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 21495,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:20.868Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-1296b30181c42b1008ab",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 108,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:57.206Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-712ef5005195fd971e25",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 103,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:57.317Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-414f88a46a83eef0a6da",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 114,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:57.423Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-32a8a27af3a2d4deca61",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 129,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:19:57.539Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-a5dd17e580c8fbf84d31",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:20.314Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-f31da5023c05e9b56c2e",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 128,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:20.443Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-96f379c751f182a3db8b",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:20.574Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-e49c2444ca035c29837f",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "需要真实 Inkscape 服务",
+                  "location": {
+                    "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                    "line": 7,
+                    "column": 10
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 126,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:20.702Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "需要真实 Inkscape 服务",
+                      "location": {
+                        "file": "/Users/a1-6/Documents/ChatGPT/OpenAcad/web/e2e/live-export.spec.ts",
+                        "line": 7,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-74fcaf12d6a27640f405",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 SVG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17141,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:38.587Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-698948c7f64b80e79e7f",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PNG 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16893,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:20:55.731Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-9fd25b2c54729d2501d2",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 PDF 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17171,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:21:12.630Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-87cb6c91b5f592139dc9",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "真实 EPS 下载与中文字体",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20548,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-08T09:21:29.806Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "32c4042949e9dba2cbac-4606fb3d9ff06127e7f9",
+          "file": "live-export.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-08T09:16:45.981Z",
+    "duration": 304421.506,
+    "expected": 23,
+    "skipped": 41,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

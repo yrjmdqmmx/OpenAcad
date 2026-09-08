@@ -1,0 +1,56 @@
+{
+  "observedAt": "2026-09-08T09:09:14.305543+00:00",
+  "openacadDeploymentStarted": false,
+  "openacadCurrent": "/opt/openacad/releases/1.1.0-3993a2a",
+  "maintenance": false,
+  "initialCount": 11,
+  "preswitchCount": 10,
+  "removedBeforeOpenacadPublish": [
+    {
+      "id": "818b30326285db9c47e32aa7fc2fb24b1caf4046892f672c296d00721486c0c1",
+      "image": "sha256:486bec77202f1a0c2f499b7d8655b0279c7916e2f10c002c0037a3884610f65d",
+      "startedAt": "2026-09-08T07:32:53.994783026Z"
+    },
+    {
+      "id": "169de3b2778523c4c8df13f186d62c3cc5a1223b031c608e6498d5f4dd06a456",
+      "image": "sha256:23c8bba1312f064ad5412b0c2b1cbe27e5401adef9ce77bde854f796c642da56",
+      "startedAt": "2026-09-08T07:32:53.993347145Z"
+    },
+    {
+      "id": "83555aae5a27b1c6773fff9faf80a664bd9a14504724c32b2fbfc71c3869ddb0",
+      "image": "sha256:2158ab118d8eb41c028cfcc609606d9e4f2323d2c55062af916a3f40314534c7",
+      "startedAt": "2026-09-08T07:32:48.216182621Z"
+    },
+    {
+      "id": "cd2386eda76bf0f038350bdcf4f8cee7afbd59c5bab132259e50b08f3d6d2027",
+      "image": "sha256:5dda65a823a0d73d9caae4f449ab01973cf9884cea4ef56f9cb84dbe5e00acbd",
+      "startedAt": "2026-09-08T07:32:45.553040116Z"
+    }
+  ],
+  "addedBeforeOpenacadPublish": [
+    {
+      "id": "4d2707650bf1fd8c686da6a9617882c4d1ec4af24a0be979b900afb560bd0d33",
+      "image": "sha256:de4fff99c4da266fc10a85073bf575135d12780f97fc78a9f277af6e68a02534",
+      "startedAt": "2026-09-08T08:01:05.28187591Z"
+    },
+    {
+      "id": "5254b712ba3b1c3582883106fecbfeb8130fc12a59fd01b5ece2df272336d380",
+      "image": "sha256:1da00411f12b85293d2f9a55fdc16acd24bf4e0b89144b3d7b0c6256e0795126",
+      "startedAt": "2026-09-08T08:01:05.283304905Z"
+    },
+    {
+      "id": "955b1ce01e2c3888fb519a266161fa63e8a238a223c67dcee9a91ad1bff8195d",
+      "image": "sha256:24d52734f31404bb2f54d9443ddb180dc0f62463bf606099267930394768521f",
+      "startedAt": "2026-09-08T08:00:59.546348648Z"
+    }
+  ],
+  "changedBeforeOpenacadPublish": [],
+  "nginxUnchanged": true,
+  "updateScriptMatchesSource": true,
+  "health": {
+    "status": "ok",
+    "queue": true,
+    "workers": 2,
+    "message": "\u670d\u52a1\u6b63\u5e38"
+  }
+}

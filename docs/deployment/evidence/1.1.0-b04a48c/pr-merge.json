@@ -1,0 +1,13 @@
+{
+  "baseRefName": "codex/platform-home",
+  "headRefOid": "b04a48cb71e8e14417e6027651d2c8c286c74cfc",
+  "mergeCommit": {
+    "oid": "94c31f976625855e907905fb849a151d6becc121"
+  },
+  "mergedAt": "2026-09-08T09:01:51Z",
+  "state": "MERGED",
+  "url": "https://github.com/yrjmdqmmx/OpenAcad/pull/1",
+  "codeTree": "dc5ded97318e2425a0ff220165f417f1bd54faa1",
+  "mergeTree": "dc5ded97318e2425a0ff220165f417f1bd54faa1",
+  "treesIdentical": true
+}

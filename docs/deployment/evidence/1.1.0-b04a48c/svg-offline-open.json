@@ -1,0 +1,277 @@
+[
+  {
+    "id": "scatter",
+    "offline": true,
+    "embeddedFontsLoaded": 8
+  },
+  {
+    "id": "bar-grouped",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "line",
+    "offline": true,
+    "embeddedFontsLoaded": 9
+  },
+  {
+    "id": "heatmap",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "box",
+    "offline": true,
+    "embeddedFontsLoaded": 4
+  },
+  {
+    "id": "pie",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "bar",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "bar-category",
+    "offline": true,
+    "embeddedFontsLoaded": 8
+  },
+  {
+    "id": "bar-error",
+    "offline": true,
+    "embeddedFontsLoaded": 4
+  },
+  {
+    "id": "bar-grouped-error",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "scatter-error",
+    "offline": true,
+    "embeddedFontsLoaded": 4
+  },
+  {
+    "id": "bar-stacked",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "bar-grouped-stacked",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "bar-line",
+    "offline": true,
+    "embeddedFontsLoaded": 10
+  },
+  {
+    "id": "lollipop",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "lollipop-category",
+    "offline": true,
+    "embeddedFontsLoaded": 8
+  },
+  {
+    "id": "line-error",
+    "offline": true,
+    "embeddedFontsLoaded": 9
+  },
+  {
+    "id": "box-grouped",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "violin",
+    "offline": true,
+    "embeddedFontsLoaded": 4
+  },
+  {
+    "id": "raincloud",
+    "offline": true,
+    "embeddedFontsLoaded": 4
+  },
+  {
+    "id": "ridgeline",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "upset",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "rose",
+    "offline": true,
+    "embeddedFontsLoaded": 9
+  },
+  {
+    "id": "radar",
+    "offline": true,
+    "embeddedFontsLoaded": 10
+  },
+  {
+    "id": "scatter-grouped",
+    "offline": true,
+    "embeddedFontsLoaded": 8
+  },
+  {
+    "id": "dumbbell",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "circle-heatmap",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "binary-dot",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "binary-rect",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "bubble-matrix",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "correlation",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "double-correlation",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "mantel",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "venn",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "packing",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "sankey",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "network",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "map",
+    "offline": true,
+    "embeddedFontsLoaded": 8
+  },
+  {
+    "id": "volcano",
+    "offline": true,
+    "embeddedFontsLoaded": 4
+  },
+  {
+    "id": "enrichment-dot",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "enrichment-bar",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "enrichment-circle",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "gene-cluster",
+    "offline": true,
+    "embeddedFontsLoaded": 4
+  },
+  {
+    "id": "protein-domains",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "protein-motifs",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "genome-circos",
+    "offline": true,
+    "embeddedFontsLoaded": 4
+  },
+  {
+    "id": "synteny",
+    "offline": true,
+    "embeddedFontsLoaded": 6
+  },
+  {
+    "id": "pca",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "pcoa",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "nmds",
+    "offline": true,
+    "embeddedFontsLoaded": 5
+  },
+  {
+    "id": "cca",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "rda",
+    "offline": true,
+    "embeddedFontsLoaded": 7
+  },
+  {
+    "id": "tree-normal",
+    "offline": true,
+    "embeddedFontsLoaded": 10
+  },
+  {
+    "id": "tree-circle",
+    "offline": true,
+    "embeddedFontsLoaded": 10
+  },
+  {
+    "id": "tree-unrooted",
+    "offline": true,
+    "embeddedFontsLoaded": 9
+  }
+]

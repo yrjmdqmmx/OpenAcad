@@ -1,0 +1,49 @@
+{
+  "before": "2026-09-08T09:14:01.770418+00:00",
+  "after": "2026-09-08T09:14:17.380331+00:00",
+  "otherContainers": 10,
+  "containerIdsImagesAndStartTimesUnchanged": true,
+  "nginxFilesUnchanged": true,
+  "beforeCurrent": "/opt/openacad/releases/1.1.0-3993a2a",
+  "afterCurrent": "/opt/openacad/releases/1.1.0-b04a48c",
+  "maintenanceCleared": true,
+  "openacadAfter": [
+    {
+      "id": "cf8e3f5280042bf437b6ec109fdab6a8d2abcd89e90ba5737f10264d096f5e32",
+      "image": "sha256:648353345ff3126042f5bf40e9712817639917485d798bdec887239b91421a7c",
+      "startedAt": "2026-09-08T09:14:05.781937557Z",
+      "service": "api",
+      "imageTag": "openacad-worker:1.1.0-b04a48c",
+      "health": "healthy",
+      "running": true
+    },
+    {
+      "id": "8f91fac25b74faafa1cc328dfa11d0855205f110094118825abeb1e0055c5f0f",
+      "image": "sha256:648353345ff3126042f5bf40e9712817639917485d798bdec887239b91421a7c",
+      "startedAt": "2026-09-08T09:14:05.778915518Z",
+      "service": "worker-two",
+      "imageTag": "openacad-worker:1.1.0-b04a48c",
+      "health": "healthy",
+      "running": true
+    },
+    {
+      "id": "08330a895ef09dd3f5fe966e2cfc1489c7df78f5b767d46b51e23a19a8fa9153",
+      "image": "sha256:648353345ff3126042f5bf40e9712817639917485d798bdec887239b91421a7c",
+      "startedAt": "2026-09-08T09:14:05.783288742Z",
+      "service": "worker-one",
+      "imageTag": "openacad-worker:1.1.0-b04a48c",
+      "health": "healthy",
+      "running": true
+    },
+    {
+      "id": "0c3182b6d59c3b73429429165586c0c54638dbc6dd7362be02d1c586e37e43e4",
+      "image": "sha256:02f2cc4882f8bf87c79a220ac958f58c700bdec0dfb9b9ea61b62fb0e8f1bfcf",
+      "startedAt": "2026-09-06T14:44:47.398742717Z",
+      "service": "redis",
+      "imageTag": "redis:7.4.7-alpine",
+      "health": "healthy",
+      "running": true
+    }
+  ],
+  "earlierConcurrentChanges": "See isolation-preswitch-observation.json; other containers changed before this deployment started. This comparison uses the immediate pre-publish baseline."
+}
