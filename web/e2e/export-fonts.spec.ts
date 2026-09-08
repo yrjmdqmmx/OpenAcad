@@ -189,28 +189,29 @@ test("保留文字的SVG下载保存真实字重匹配且不改预览", async ({
   await evidence("static-weight-svg", { originalTitleWeight: 650, exportedTitleWeight: 700, normalTextCount: weights.normal, browserPreviewUnmodified: true });
 });
 
-test('可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致', async ({page,browser}) => {
+test('可编辑 SVG 离线打开使用内嵌字体，中文文字尺寸与工作台一致', async ({page,browser,viewport,isMobile,deviceScaleFactor}) => {
   await page.goto('/#editor/protein-motifs');
   const svg=page.locator('.figure-paper svg').first();
   await expect(svg).toBeVisible();
+  // Compare intrinsic SVG coordinates at the same device scale. Fractional
+  // responsive preview zoom changes WebKit's pixel-hinted text bounds.
+  await svg.evaluate(el=>{el.style.maxWidth='none';el.style.width=el.getAttribute('width')+'px';el.style.height=el.getAttribute('height')+'px';});
   await page.evaluate(()=>document.fonts.ready);
-  const size=await svg.boundingBox();
+  await page.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));
   const before=await page.locator('.figure-paper text').evaluateAll(es=>es.map(e=>({text:e.textContent,width:e.getBBox().width,height:e.getBBox().height})));
   await page.getByRole('button',{name:'导出图片',exact:true}).click();
   const pending=page.waitForEvent('download');await page.getByRole('button',{name:'下载图片',exact:true}).click();
   const source=await readFile((await(await pending).path())!,'utf8');
   expect(source).toContain('data:font/woff2;base64,');expect(source).toContain('<text');
   expect(source).toContain('SIL OPEN FONT LICENSE Version 1.1');
-  const context=await browser.newContext({offline:true});const standalone=await context.newPage();
+  const context=await browser.newContext({offline:true,viewport,isMobile,deviceScaleFactor});const standalone=await context.newPage();
   try {
-    await standalone.setContent(source);
-    // Match the workbench's CSS zoom: SVG getBBox includes pixel-hinted font
-    // metrics, which change slightly when the same glyph is drawn at 100%.
-    await standalone.locator('svg').first().evaluate((el,size)=>{el.style.width=`${size!.width}px`;el.style.height=`${size!.height}px`;},size);
+    await standalone.setContent('<meta name="viewport" content="width=device-width,initial-scale=1">'+source);
     await standalone.evaluate(()=>document.fonts.ready);
+    await standalone.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));
     expect(await standalone.evaluate(()=>[...document.fonts].some(f=>f.status==='loaded'))).toBe(true);
     const after=await standalone.locator('svg text').evaluateAll(es=>es.map(e=>({text:e.textContent,width:e.getBBox().width,height:e.getBBox().height})));
     expect(after).toHaveLength(before.length);
-    after.forEach((r,i)=>{expect(r.text).toBe(before[i].text);expect(Math.abs(r.width-before[i].width)).toBeLessThan(.1);expect(Math.abs(r.height-before[i].height)).toBeLessThan(.1);});
+    after.forEach((r,i)=>{expect(r.text).toBe(before[i].text);expect(Math.abs(r.width-before[i].width),`${r.text}: width ${r.width} vs ${before[i].width}`).toBeLessThan(.1);expect(Math.abs(r.height-before[i].height),`${r.text}: height ${r.height} vs ${before[i].height}`).toBeLessThan(.1);});
   } finally {await context.close();}
 });

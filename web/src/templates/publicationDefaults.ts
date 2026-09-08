@@ -82,10 +82,12 @@ export function applyPublicationDefaults(templates: Template[]) {
     Object.assign(t.defaultStyle, common, profile);
     if (t.id === 'volcano') {
       t.example = structuredClone(inference.volcano);
+      t.alternate = structuredClone(inference.alternate.volcano);
       t.defaultStyle.subtitle = '模拟 log₂ 表达量 · 每组 n = 8 · 双侧 Welch t 检验，P 未校正';
     }
     if (t.id.startsWith('enrichment-')) {
       t.example = structuredClone(inference.enrichment);
+      t.alternate = structuredClone(inference.alternate.enrichment);
       t.defaultStyle.subtitle = '模拟集合 · 超几何检验 + BH 校正 · 背景 N = 6000，输入 n = 180';
     }
     if(t.id==='packing') t.example.tables[0].rows=['根际','叶际','水体','表土'].flatMap((g,i)=>[48,26,14,8,4,2].map((v,j)=>[`${String.fromCharCode(65+i)}${j+1}`,v+i*(j%2),g]));
