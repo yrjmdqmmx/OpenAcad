@@ -3,6 +3,9 @@ import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-reac
 import { useScreenshotCarousel } from "./useScreenshotCarousel";
 import "../styles/research-carousel.css";
 
+// Update the version with each screenshot refresh so browsers request fresh image bytes.
+const screenshotUrl = (id: string) => `/images/research/${id}.jpg?v=journal-20260908`;
+
 const slides = [
   { id: "bar-grouped", name: "分组柱状图", label: "组间比较", shortLabel: "柱状图", description: "从数据表到图形，调整每一处表达。" },
   { id: "heatmap", name: "数值热图", label: "数值热图", shortLabel: "热图", description: "用色彩展示矩阵，保留每一个数值。" },
@@ -21,8 +24,8 @@ export function ResearchCarousel() {
       <div className="research-carousel-viewport" {...viewportHandlers}>
         {slides.map((slide, index) => (
           <div key={slide.id} className={`research-slide${index === active ? " is-current" : ""}`} role="group" aria-roledescription="幻灯片" aria-label={`${index + 1} / ${slides.length}：${slide.name}`} aria-hidden={index !== active} inert={index !== active}>
-            <a href={`/images/research/${slide.id}.jpg`} target="_blank" rel="noopener noreferrer" aria-label={`查看${slide.name}工作台截图大图（新窗口）`} draggable={false}>
-              {failed.includes(slide.id) ? <span className="research-image-fallback">截图暂时无法加载，请从下方进入模板。</span> : <img src={`/images/research/${slide.id}.jpg`} alt={`OpenAcad ${slide.name}真实工作台截图，使用自带模拟数据`} width="1710" height="838" decoding="async" fetchPriority={index === 0 ? "high" : "low"} draggable={false} onError={() => setFailed((ids) => ids.includes(slide.id) ? ids : [...ids, slide.id])} />}
+            <a href={screenshotUrl(slide.id)} target="_blank" rel="noopener noreferrer" aria-label={`查看${slide.name}工作台截图大图（新窗口）`} draggable={false}>
+              {failed.includes(slide.id) ? <span className="research-image-fallback">截图暂时无法加载，请从下方进入模板。</span> : <img src={screenshotUrl(slide.id)} alt={`OpenAcad ${slide.name}真实工作台截图，使用自带模拟数据`} width="1710" height="838" decoding="async" fetchPriority={index === 0 ? "high" : "low"} draggable={false} onError={() => setFailed((ids) => ids.includes(slide.id) ? ids : [...ids, slide.id])} />}
             </a>
           </div>
         ))}
@@ -38,7 +41,7 @@ export function ResearchCarousel() {
         </div>
         <button type="button" aria-label="下一张科研绘图截图" onClick={() => move(1)}><ChevronRight size={18} aria-hidden="true" /></button>
       </div>
-      <div className="research-carousel-footer"><span className="research-carousel-count">{active + 1} / {slides.length}</span><a href={`/images/research/${current.id}.jpg`} target="_blank" rel="noopener noreferrer">查看大图 <ArrowUpRight size={13} aria-hidden="true" /></a></div>
+      <div className="research-carousel-footer"><span className="research-carousel-count">{active + 1} / {slides.length}</span><a href={screenshotUrl(current.id)} target="_blank" rel="noopener noreferrer">查看大图 <ArrowUpRight size={13} aria-hidden="true" /></a></div>
     </section>
   );
 }

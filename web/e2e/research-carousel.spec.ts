@@ -18,7 +18,10 @@ test("科研实景逐张加载，标题、大图与模板同步，支持循环�
     const image = carousel(page).locator(".research-slide.is-current img");
     await expect.poll(() => image.evaluate((img: HTMLImageElement) => [img.naturalWidth, img.naturalHeight])).toEqual([1710, 838]);
     await expect(image).toHaveAttribute("alt", /真实工作台截图，使用自带模拟数据/);
-    await expect(carousel(page).getByRole("link", { name: "查看大图", exact: true })).toHaveAttribute("href", `/images/research/${ids[index]}.jpg`);
+    const imageUrl = `/images/research/${ids[index]}.jpg?v=journal-20260908`;
+    await expect(image).toHaveAttribute("src", imageUrl);
+    await expect(image.locator("..")).toHaveAttribute("href", imageUrl);
+    await expect(carousel(page).getByRole("link", { name: "查看大图", exact: true })).toHaveAttribute("href", imageUrl);
     await expect(carousel(page).getByRole("link", { name: "试用此模板", exact: true })).toHaveAttribute("href", `#template/${ids[index]}`);
     expect((await carousel(page).boundingBox())!.height).toBeCloseTo(initial!.height, 0);
     await carousel(page).getByRole("button", { name: "下一张科研绘图截图" }).click();
@@ -81,7 +84,7 @@ test("减少动态效果时停播，两组轮播独立且图研信息完整", as
 
 test("科研截图加载失败保留说明与模板入口", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.route("**/images/research/bar-grouped.jpg", route => route.abort());
+  await page.route("**/images/research/bar-grouped.jpg*", route => route.abort());
   await page.goto("/#home");
   await expect(carousel(page).getByText("截图暂时无法加载，请从下方进入模板。", { exact: true })).toBeVisible();
   await carousel(page).getByRole("link", { name: "试用此模板", exact: true }).click();
