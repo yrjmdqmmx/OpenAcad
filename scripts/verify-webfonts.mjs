@@ -8,6 +8,7 @@ const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const output=process.env.OPENACAD_FONT_REPORT_DIR||path.join(root,'tests/artifacts/font-delivery-oblique');
 await mkdir(output,{recursive:true});
 const manifest=JSON.parse(await readFile(path.join(root,'web/public/fonts/webfont-manifest.json'),'utf8'));
+const critical=JSON.parse(await readFile(path.join(root,'web/public/fonts/critical-manifest.json'),'utf8'));
 const browser=await chromium.launch({headless:true,...(process.platform==='darwin'?{executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'}:{})});
 const context=await browser.newContext({viewport:{width:1600,height:1000}});
 const page=await context.newPage(),cdp=await context.newCDPSession(page);
@@ -71,7 +72,7 @@ for(const family of ['Noto Sans SC','Noto Serif CJK SC'])for(const text of ['中
   if(variants.length!==2||variants[0].screenshotSha256===variants[1].screenshotSha256)throw new Error('切换真实派生斜体后截图未变化');
 }
 const requestedUrls=[...new Set(requests.map(r=>r.url))];
-const shards=requestedUrls.map(url=>manifest.fonts.flatMap(f=>f.shards).find(s=>url.endsWith('/fonts/'+s.file))).filter(Boolean);
+const shards=requestedUrls.map(url=>[...manifest.fonts.flatMap(f=>f.shards),...critical.faces].find(s=>url.endsWith('/fonts/'+s.file))).filter(Boolean);
 if(requestedUrls.some(url=>url.endsWith('.otf')))throw new Error('网页仍请求完整 OTF');
 if(shards.length!==requestedUrls.length)throw new Error('字体请求不在固定子集清单');
 const commonBytes=shards.filter(s=>!s.name.startsWith('rest-')).reduce((n,s)=>n+s.bytes,0);
