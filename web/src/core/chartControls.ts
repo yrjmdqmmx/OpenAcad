@@ -15,7 +15,7 @@ export function labelControl(template: Template): Control {
   return { key: "showLabels", label, type: "boolean", section: "配色与图形",
     // Tree renderers support the legacy showLabels field, but expose just one
     // control for its modern equivalent below.
-    visible: () => !id.startsWith("tree-") };
+    visible: () => !id.startsWith("tree-") && id !== "magnetic-correlation" };
 }
 
 export function hasContinuousPalette(p: Project) {
@@ -25,7 +25,7 @@ export function hasContinuousPalette(p: Project) {
 export function paletteVisible(p: Project) {
   // Tree annotations have their own palette controls; the canvas palette is
   // not a reliable consumer when annotation rows carry explicit colours.
-  return !p.templateId.startsWith("tree-");
+  return !p.templateId.startsWith("tree-") && p.templateId !== "magnetic-correlation";
 }
 export function seriesPaletteVisible(p: Project) {
   return paletteVisible(p) && !hasContinuousPalette(p)

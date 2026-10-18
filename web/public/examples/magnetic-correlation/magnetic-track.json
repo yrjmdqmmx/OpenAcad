@@ -1,0 +1,19 @@
+{
+  "OBS93": {
+    "poly": [
+      [
+        114.0,
+        21.8
+      ],
+      [
+        115.35,
+        20.6
+      ],
+      [
+        116.7,
+        19.35
+      ]
+    ],
+    "source": "Synthetic demonstration geometry; not a surveyed OBS93 track."
+  }
+}

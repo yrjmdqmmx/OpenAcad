@@ -10,7 +10,7 @@ export function makeDetailProject(template: Template): Project {
   // tests. Keep that audit trail in projects, while the guide shows plot inputs.
   if (template.id !== 'volcano' && !template.id.startsWith('enrichment-'))
     project.dataset.tables = project.dataset.tables.filter((table) => !table.role.startsWith("raw-"));
-  if (project.dataset.tables.length) project.dataset = { tables: project.dataset.tables };
+  if (project.dataset.tables.length && template.id !== "magnetic-correlation") project.dataset = { tables: project.dataset.tables };
   return project;
 }
 
@@ -82,6 +82,8 @@ const roles: Record<string, { description: string; fields: Record<string, FieldD
 };
 
 export function sheetDescription(template: Template, table: DataTable): string {
+  if (table.role === "magnetic-curve") return "磁异常曲线 CSV：每行一个观测点。示例为参照用户例图形状制作的模拟数据，非原始观测。";
+  if (table.role === "magnetic-profile") return "海底和基底 CSV：沿同一测线的海底海拔与基底深度；距离按输入保留，不自动拉伸。";
   if (table.role.startsWith('raw-')) return '计算依据：保留生成示例结果的模拟原始输入或检验明细；当前结果输入模式不随本表编辑重新计算。';
   if (table.role === "data") return template.id === "upset"
     ? "长表：一行记录一个成员属于哪个集合；同一成员可在多行引用不同集合。"
@@ -103,6 +105,16 @@ export function sheetDescription(template: Template, table: DataTable): string {
 }
 
 export function describeField(template: Template, table: DataTable, column: string): FieldDescription {
+  if (template.id === "magnetic-correlation") {
+    const meanings: Record<string, string> = {
+      dist_km: "磁异常观测点到测线起点的距离（km），严格递增。",
+      mag_nT: "观测磁异常（nT），允许正负值。",
+      s_km: "剖面点到同一测线起点的距离（km），严格递增。",
+      bathy_m: "海底海拔（m），海平面以下为负值；绘图转为向下正深度。",
+      basement_km: "磁性基底深度（km），向下为正，应位于海底之下。",
+    };
+    if (meanings[column]) return number(meanings[column]);
+  }
   if (table.role === 'raw-expression') return column === 'id' ? uniqueId('关联结果表的模拟基因。') : number('此独立模拟样本的 log₂ 表达量，供复核 Welch 检验。');
   if (table.role === 'raw-universe') return uniqueId('检验背景中的模拟基因；所有行共同定义背景集合。');
   if (table.role === 'raw-study') return column === 'gene' ? uniqueId('模拟输入基因，必须属于背景集合。') : text('模拟指定的方向，用于核对圈图上下调计数。');

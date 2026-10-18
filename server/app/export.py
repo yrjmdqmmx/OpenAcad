@@ -7,9 +7,11 @@ import re
 import shutil
 import struct
 import tempfile
+from io import BytesIO
 from pathlib import Path
 import xml.etree.ElementTree as ET
 from defusedxml.ElementTree import fromstring
+from pypdf import PdfReader
 from .errors import AnalysisError, require
 from .process import run_process
 
@@ -105,6 +107,30 @@ def dimension(value):
     result = float(str(value).removesuffix("px"))
     require(0 < result <= 16000, "画布宽高必须大于 0 且不超过 16000 px")
     return result
+
+
+def pdf_page_count(content):
+    """Reject truncated engine output even when Inkscape exits successfully."""
+    require(content.startswith(b"%PDF-") and content.rstrip().endswith(b"%%EOF"),
+            "导出 PDF 不完整，请重试或启用文字转曲线", "EXPORT_FAILED")
+    try:
+        document = PdfReader(BytesIO(content), strict=True)
+        pages = len(document.pages)
+        valid = pages > 0 and not document.is_encrypted
+        for page in document.pages:
+            valid = valid and float(page.mediabox.width) > 0 and float(page.mediabox.height) > 0
+        if not valid:
+            raise ValueError("PDF has no readable pages")
+    except Exception:
+        raise AnalysisError("导出 PDF 无法完整读取，请重试或启用文字转曲线", "EXPORT_FAILED") from None
+    return pages
+
+
+def export_content(target):
+    require(target.exists(), "导出引擎未生成文件", "EXPORT_FAILED")
+    content = target.read_bytes()
+    require(0 < len(content) <= 50_000_000, "导出文件为空或超过 50 MB，请减少数据量", "EXPORT_FAILED")
+    return content
 
 
 def sanitize(source, params):
@@ -215,6 +241,8 @@ def render(payload):
     binary = shutil.which(os.getenv("INKSCAPE", "inkscape"))
     require(binary is not None, "图片导出引擎尚未就绪，请稍后重试", "EXPORT_UNAVAILABLE")
     diagnostics = []
+    effective_outline = params.get("outline", False)
+    pdf_pages = None
     with tempfile.TemporaryDirectory(prefix="openacad-export-") as folder:
         source = Path(folder) / "input.svg"
         source.write_bytes(ET.tostring(root, encoding="utf-8", xml_declaration=True))
@@ -237,14 +265,29 @@ def render(payload):
                 source.write_bytes(ET.tostring(root, encoding="utf-8", xml_declaration=True))
             diagnostics.append({"code": "EPS_BACKGROUND", "message": f"EPS 使用不透明背景 {background}"})
         args = [binary, str(source), f"--export-type={fmt}", f"--export-filename={target}", "--export-area-page", f"--export-dpi={dpi}"]
-        if params.get("outline"):
+        if effective_outline:
             args.append("--export-text-to-path")
         if fmt == "svg":
             args.append("--export-plain-svg")
         run_process(args, cwd=folder)
-        require(target.exists(), "导出引擎未生成文件", "EXPORT_FAILED")
-        content = target.read_bytes()
-        require(0 < len(content) <= 50_000_000, "导出文件为空或超过 50 MB，请减少数据量", "EXPORT_FAILED")
+        if fmt == "pdf":
+            try:
+                content = export_content(target)
+                pdf_pages = pdf_page_count(content)
+            except AnalysisError:
+                if effective_outline:
+                    raise
+                # Some Inkscape/Cairo builds return exit code 0 after producing
+                # an unfinished PDF when embedding CJK text. Retry once using
+                # paths, and report the actual output instead of hiding it.
+                target.unlink(missing_ok=True)
+                run_process([*args, "--export-text-to-path"], cwd=folder)
+                content = export_content(target)
+                pdf_pages = pdf_page_count(content)
+                effective_outline = True
+                diagnostics.append({"code": "PDF_TEXT_OUTLINED_FALLBACK", "message": "导出引擎未生成完整的 PDF，已通过文字转曲线重试。此 PDF 的文字作为矢量路径保存；如需编辑文字，请下载 SVG。"})
+        else:
+            content = export_content(target)
         if fmt == "svg":
             try:
                 parsed = fromstring(content)
@@ -257,11 +300,14 @@ def render(payload):
             require(content.startswith(b"\x89PNG\r\n\x1a\n"), "导出 PNG 无法打开", "EXPORT_FAILED")
             pixels = struct.unpack(">II", content[16:24])
             require(all(abs(actual - expected * dpi / 96) <= 1 for actual, expected in zip(pixels, (width, height))), "PNG 尺寸与设定不一致", "EXPORT_FAILED")
-        if fmt in ("pdf", "eps"):
-            require(content.startswith(b"%PDF-" if fmt == "pdf" else b"%!PS-Adobe"), "导出文件格式不正确", "EXPORT_FAILED")
+        if fmt == "eps":
+            require(content.startswith(b"%!PS-Adobe"), "导出文件格式不正确", "EXPORT_FAILED")
         version, _ = run_process([binary, "--version"], timeout=10)
     name = re.sub(r"[^\w\u4e00-\u9fff .-]", "_", str(params.get("filename", "OpenAcad图表")))[:100].strip(" .") or "OpenAcad图表"
     name = name.encode("utf-8")[:180].decode("utf-8", errors="ignore").strip(" .") or "OpenAcad图表"
     font_manifest = Path("/usr/local/share/fonts/openacad/manifest.json")
     available_fonts = json.loads(font_manifest.read_text()) if font_manifest.exists() else {}
-    return {"schemaVersion": 1, "method": "render", "data": {}, "artifact": {"filename": f"{name}.{fmt}", "mimeType": MIMES[fmt], "contentBase64": base64.b64encode(content).decode()}, "provenance": {"engine": version.strip(), "format": fmt, "dpi": dpi, "width": width, "height": height, "outline": params.get("outline", False), "availableFontsSha256": available_fonts, "sha256": hashlib.sha256(content).hexdigest()}, "diagnostics": diagnostics}
+    provenance = {"engine": version.strip(), "format": fmt, "dpi": dpi, "width": width, "height": height, "outline": effective_outline, "availableFontsSha256": available_fonts, "sha256": hashlib.sha256(content).hexdigest()}
+    if fmt == "pdf":
+        provenance.update(pdfPageCount=pdf_pages, requestedOutline=params.get("outline", False))
+    return {"schemaVersion": 1, "method": "render", "data": {}, "artifact": {"filename": f"{name}.{fmt}", "mimeType": MIMES[fmt], "contentBase64": base64.b64encode(content).decode()}, "provenance": provenance, "diagnostics": diagnostics}

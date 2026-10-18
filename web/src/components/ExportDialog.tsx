@@ -295,7 +295,7 @@ export function ExportDialog({
             <option value="svg">SVG · 矢量图片</option>
             <option value="png">PNG · 位图</option>
             <option value="pdf">PDF · 矢量文档</option>
-            <option value="eps">EPS · 投稿格式</option>
+            {project.templateId !== "magnetic-correlation" && <option value="eps">EPS · 投稿格式</option>}
           </select>
         </label>
         {(format === "png" || format === "eps") && (

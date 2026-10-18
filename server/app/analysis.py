@@ -16,7 +16,7 @@ from .data import align, matrix, numeric, standardize, table
 from .errors import AnalysisError, require
 
 R_METHODS = {"pcoa", "nmds", "cca", "rda", "lm", "loess", "gam", "mantel", "mantel.randtest", "mantel.rtest", "mantel.partial"}
-METHODS = R_METHODS | {"descriptive", "density", "correlation", "tests", "standardize", "distance", "cluster", "pca", "gc"}
+METHODS = R_METHODS | {"descriptive", "density", "correlation", "tests", "standardize", "distance", "cluster", "pca", "gc", "magnetic-correlation"}
 DISTANCES = {"euclidean", "sqeuclidean", "braycurtis", "canberra", "chebyshev", "cityblock", "correlation", "cosine", "dice", "hamming", "jaccard", "jensenshannon", "kulczynski1", "kulsinski", "mahalanobis", "matching", "minkowski", "rogerstanimoto", "russellrao", "seuclidean", "sokalmichener", "sokalsneath", "yule"}
 BINARY = {"dice", "jaccard", "kulczynski1", "kulsinski", "rogerstanimoto", "russellrao", "sokalmichener", "sokalsneath", "yule"}
 DEFAULTS = {
@@ -334,12 +334,18 @@ def run_analysis(payload):
                 result["environmentCorrelation"] = correlation({"data": {"tables": env}, "params": {"correlation": "pearson", "pAdjust": payload["params"].get("pAdjust", "none")}})
         elif method in ("standardize", "distance", "cluster", "pca"):
             result = matrix_operation(payload)
+        elif method == "magnetic-correlation":
+            from .magnetic import magnetic_correlation
+            result = magnetic_correlation(payload)
         else:
             result = {"descriptive": descriptive, "density": density, "correlation": correlation, "tests": tests, "gc": gc}[method](payload)
         caught = [{"code": type(w.message).__name__, "message": "计算产生数值或方法学提示，请检查样本量、并列值和数据分布"} for w in seen]
     versions = {name: importlib.metadata.version(name) for name in ("numpy", "scipy", "scikit-learn")}
+    if method == "magnetic-correlation":
+        versions.update({name: importlib.metadata.version(name) for name in ("harmonica", "pyproj", "numba", "choclo")})
     provenance = {"engine": "R" if method in R_METHODS else "Python", "method": method, "methodVersion": "openacad-1", "python": platform.python_version(), "packages": versions, "seed": seed,
                   "inputSha256": hashlib.sha256(json.dumps(payload["data"], sort_keys=True, ensure_ascii=False).encode()).hexdigest(), "parameters": payload["params"]}
     if isinstance(result, dict) and "provenance" in result:
         provenance.update(result.pop("provenance"))
-    return clean({"schemaVersion": 1, "method": method, "data": result, "provenance": provenance, "diagnostics": caught + result.pop("diagnostics", [])})
+    diagnostics = [{"code": "MAGNETIC_METHOD_NOTE", "message": message} for message in result.get("diagnostics", [])] if method == "magnetic-correlation" else result.pop("diagnostics", [])
+    return clean({"schemaVersion": 1, "method": method, "data": result, "provenance": provenance, "diagnostics": caught + diagnostics})

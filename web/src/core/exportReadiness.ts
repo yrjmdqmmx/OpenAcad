@@ -1,7 +1,14 @@
 import type { Project } from "./types";
 import { inputHash } from "./project";
+import { magneticResult } from "../templates/magnetic/model";
 
 export const isOrdination = (p: Project) => ["pca", "pcoa", "nmds", "cca", "rda"].includes(p.templateId);
+export function magneticExportIssue(p: Project): string | undefined {
+  if (p.templateId !== "magnetic-correlation") return;
+  const data = p.analysis?.method === "magnetic-correlation" ? magneticResult(p.analysis.result) : undefined;
+  if (!data?.correlation.some(row => row.some(v => typeof v === "number" && Number.isFinite(v))))
+    return "尚无有效成像结果，请上传三份文件并开始计算。";
+}
 export function ordinationExportIssue(p: Project): string | undefined {
   if (!isOrdination(p)) return;
   const scores = p.style.ordinationInput === "scores"
@@ -13,9 +20,9 @@ export function ordinationExportIssue(p: Project): string | undefined {
     return "请选择两个不同的有效坐标轴后再导出。";
 }
 export async function assertExportReady(p: Project) {
-  const issue = ordinationExportIssue(p);
+  const issue = magneticExportIssue(p) || ordinationExportIssue(p);
   if (issue) throw new Error(issue);
-  if (isOrdination(p) && p.style.ordinationInput !== "scores") {
+  if (p.templateId === "magnetic-correlation" || (isOrdination(p) && p.style.ordinationInput !== "scores")) {
     const a = p.analysis!;
     if (await inputHash(p.dataset, a.method, a.params) !== a.inputHash)
       throw new Error("数据或参数已变化，请重新计算分析结果后再导出。");
