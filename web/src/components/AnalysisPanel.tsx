@@ -623,7 +623,7 @@ export function AnalysisPanel({
       )}
       <p className="hint">
         点击计算后，所选数据会发送至 OpenAcad
-        香港服务器；完成后最多保留一小时。保存项目可留存结果。
+        杭州服务器；完成后最多保留一小时。保存项目可留存结果。
       </p>
       <div className="button-row">
         <button className="primary" disabled={busy} onClick={run}>

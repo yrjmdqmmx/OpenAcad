@@ -339,7 +339,7 @@ export function ExportDialog({
         )}
         {(format !== "svg" || outline) && (
           <p className="hint">
-            此格式使用香港服务器转换图片；临时文件最多保留一小时。
+            此格式使用杭州服务器转换图片；临时文件最多保留一小时。
           </p>
         )}
         {message && <p role="status">{message}</p>}
