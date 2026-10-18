@@ -97,6 +97,7 @@ jobs:
       - name: Deploy and verify Hangzhou
         env:
           GH_TOKEN: ${{ github.token }}
+        shell: bash
         run: python3 deploy/hangzhou/ci_send.py | tee deployment-receipt.json
       - name: Record deployment receipt in the run summary
         if: always()
