@@ -47,7 +47,7 @@ describe('review P1 regressions', () => {
 });
 
 describe('review P2 scientific defaults',()=>{
-  it('keeps simulated provenance inside all 55 standalone figures',()=>{
+  it('keeps simulated provenance inside all standalone figures',()=>{
     for(const t of templates) expect(svg(t.id)).toMatch(/模拟/);
   });
   it('error definitions follow the chosen estimator and actual sample counts',()=>{

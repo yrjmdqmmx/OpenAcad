@@ -29,7 +29,7 @@ async function change(page:Page,key:string,value:string|boolean) {
   await expect.poll(()=>chartMarkup(page)).not.toBe(before);
   return true;
 }
-for(const t of cases) test(`${t.name}：新建示例、控件实操、保存重开及四格式`,async({page},info)=>{
+for(const t of cases) test(`${t.name}：新建示例、控件实操、保存重开及可用格式`,async({page},info)=>{
   test.skip(info.project.name!=='chromium'||!output||!process.env.OPENACAD_LIVE_API,'显式开启完整质量验收及真实导出服务');
   test.setTimeout(180000);
   await mkdir(path.join(output!, 'defaults'),{recursive:true});
@@ -76,7 +76,7 @@ for(const t of cases) test(`${t.name}：新建示例、控件实操、保存重�
   const reopened=JSON.parse(await readFile((await (await reopenSave).path())!,'utf8'));
   for(const field of ['dataset','style','layers','layout','analysis']) expect(reopened[field]).toEqual(saved[field]);
   await page.screenshot({path:path.join(output!,'defaults',`${t.id}-edited.png`)});
-  for(const format of ['svg','png','pdf','eps']) {
+  for(const format of (t.id === 'magnetic-correlation' ? ['svg','png','pdf'] : ['svg','png','pdf','eps'])) {
     await page.getByRole('button',{name:'导出图片',exact:true}).click();
     await page.getByRole('combobox',{name:'图片格式',exact:true}).selectOption(format);
     if(format==='png') await page.getByRole('combobox',{name:'分辨率',exact:true}).selectOption('150');

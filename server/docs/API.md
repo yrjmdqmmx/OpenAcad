@@ -72,9 +72,29 @@ Mantel 结果额外有 `environmentCorrelation:{r,p,adjustedP,rowLabels,columnLa
 
 `data.sequences`为FASTA文本。params `contentWindow,skewWindow`默认2000，各1..1000000，步长等于窗口大小且保留末窗。返回 `{sequences:[{name,length,gcContent:[{start,end,value,validBases}],gcSkew:[...]}],coordinateSystem:"1-based-inclusive"}`；GC%以ACGT总数为分母，GC-skew=(G−C)/(G+C)，歧义碱基排除，零分母返回null。
 
+### magnetic-correlation
+
+磁异常曲线与磁异常相关成像剖面。固定执行已安装的 `app.magnetic` 实现，不执行上传的 Python。前端解析两份 CSV 和一份 JSON 后提交：
+
+```json
+{"kind":"analysis","method":"magnetic-correlation","data":{"curve":[{"dist_km":0,"mag_nT":-42},{"dist_km":1,"mag_nT":-45},{"dist_km":2,"mag_nT":-40}],"profile":[{"s_km":0,"bathy_m":-50,"basement_km":6},{"s_km":390,"bathy_m":-4000,"basement_km":7}],"track":{"name":"OBS93","poly":[[115,22],[118,20]]}},"params":{"axis_len":390,"inc":33.8,"dec":-2.5,"scan_dx":5,"scan_z0":2.5,"scan_z1":25,"scan_dz":1,"th_km":4,"win_km":90,"min_pts":25,"strike_ext_km":500,"smooth":1.2}}
+```
+
+上述仅示意结构，3 个曲线点不足以满足默认 `min_pts=25`。实际曲线至少3行、地形至少2行，各最多20000行。所有数值须有限且不是布尔值，距离列严格递增且不超过 `axis_len`；`bathy_m` 是海底高程（海平面以下为负，单位m），`basement_km` 是向下为正的基底深度（km），基底不得位于海底之上。后端不重新排序、缩放、裁剪或修改上传的地质线。测线 `poly` 含2～1000个 `[经度,纬度]`，按WGS84首尾点计算正向方位角，首尾须相距至少1m；`name` 为1～100个字符。原脚本形如 `{ "OBS93": { "poly": [...] } }` 的JSON由前端选择测线并归一化为该结构。
+
+参数默认值如示例；边界：`axis_len` 1..2000 km；`inc` −90..90°；`dec` −180..180°；`scan_dx` .25..100 km 且不超过轴长；`scan_z0/scan_z1` .1..100 km 且后者不小于前者；`scan_dz` .25..20 km；`th_km` .1..50 km；`win_km` 1..2000 km；整数 `min_pts` 3..5000；`strike_ext_km` 1..2000 km；`smooth` 0..5 格。扫描棱柱顶面必须低于海平面至少0.1km。网格最多12000节点、网格点与窗口内观测点的组合最多500万。未知参数拒绝，通用 `seed` 可传但本算法不使用随机数。
+
+网格 `xs = arange(scan_dx/2, axis_len, scan_dx)`；`zs = arange(scan_z0, scan_z1 + 1e-6, scan_dz)`，因此默认23个深度节点是2.5～24.5km，`scan_z1=25` 是上限。使用原脚本的均匀感应磁化、海平面观测、长走向棱柱模型，通过 Harmonica `prism_magnetic` 计算模型异常，与每个局部窗口观测做 Pearson 相关。地形与基底数据仅为绘图叠加，不参与正演。相关系数是形态相似度，不是磁性体存在概率或唯一的地下构造反演。
+
+返回 `result.data={method:"magnetic-correlation",xs:number[],zs:number[],correlation:(number|null)[][],bearing,params,diagnostics:string[],windowPointCounts:number[],validNodeCount,undefinedNodeCount,trackName,units}`；矩阵行为深度、列为距离，值在[−1,1]。窗口不足 `min_pts`、观测近似常量或模型无效的节点保持 `null`。全无效时任务失败，错误码 `NO_VALID_CORRELATION`，不会伪造热图。`smooth>0` 时按连续有效列分段高斯平滑，按有效权重归一，原无效节点仍为null，不跨越无效列；`smooth=0` 返回原始相关系数。外层 `result.diagnostics` 仍为 `{code,message}` 数组。
+
+`provenance` 记录实际完整数值参数、输入SHA256、算法版本以及 Harmonica、PyProj、Numba、Choclo、NumPy、SciPy版本。下载沿用下述导出接口；此模板使用SVG/PNG/PDF三种格式，SVG保留独立图层和文字。
+
 ## 导出
 
 `{kind:"export",method:"render",data:{svg:"<svg ...>...</svg>"},params:{format:"svg|png|pdf|eps",dpi:300,outline:false,filename:"图表",width?:800,height?:600,background?:"#ffffff"}}`。
+
+PDF 返回前会校验文件尾、交叉引用及有效页面。若保留文字的引擎输出不完整，最多自动以文字转曲线重试一次；成功时诊断码 `PDF_TEXT_OUTLINED_FALLBACK` 明确说明文字已变为矢量路径，`provenance.outline` 记录实际值，`requestedOutline` 保留请求值，`pdfPageCount` 记录页数。重试失败不提供损坏文件；需要继续编辑文字时可下载 SVG。
 
 dpi仅150/300/600；SVG单位px，宽高可显式覆盖正数(最多16000)。PNG依据96 CSS px/in换算DPI。默认保留SVG背景/透明度；`background:"transparent"`或十六进制色明确覆盖。EPS不支持半透明，需背景色(默认白)且主动栅格化透明效果，结果诊断明确标注；outline=true先将文字转曲线。拒绝script、foreignObject、事件、外链href、外部CSS及外部URL；内部#引用允许。镜像提供Noto CJK中文字体。
 

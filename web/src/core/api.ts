@@ -61,6 +61,7 @@ export async function waitJob(
 ): Promise<Record<string, unknown>> {
   while (!signal.aborted) {
     const job = await getJob(id, token);
+    if (signal.aborted) throw new Error("已停止等待。");
     onStatus?.(job.status);
     if (["finished", "completed", "succeeded", "success"].includes(job.status))
       return job.result || {};

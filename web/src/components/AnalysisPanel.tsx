@@ -231,10 +231,13 @@ export function AnalysisPanel({
       abort: AbortController;
     } | null>(null),
     current = useRef(project);
+  const generation = useRef(0);
   current.current = project;
   useEffect(
     () => () => {
+      generation.current++;
       task.current?.abort.abort();
+      if (task.current) void cancelJob(task.current.id, task.current.token).catch(() => {});
     },
     [],
   );
@@ -300,12 +303,16 @@ export function AnalysisPanel({
     );
   }
   async function run() {
+    const runId = ++generation.current;
+    const abort = new AbortController();
+    const active = () => generation.current === runId && !abort.signal.aborted;
     setError("");
     setBusy(true);
     setStatus("准备计算");
     const snapshot = current.current;
     try {
       const hash = await inputHash(snapshot.dataset, method, params);
+      if (!active()) return;
       const payload = template.prepareAnalysis?.(
         method,
         snapshot.dataset,
@@ -318,43 +325,47 @@ export function AnalysisPanel({
         params,
       };
       const job = await createJob({ kind: "analysis", method, ...payload });
+      if (!active()) { void cancelJob(job.id, job.token).catch(() => {}); return; }
       setStatus("任务已提交，正在读取进度…");
-      const abort = new AbortController();
       task.current = { ...job, abort };
       const result = await waitJob(job.id, job.token, abort.signal, (s) =>
         setStatus(names[s] || s),
       );
+      if (!active()) return;
       const now = current.current;
       const currentParams = {
         ...(selected?.params || {}),
         ...(now.analysis?.params || {}),
       };
       const currentMethod = now.analysis?.method || selected?.method;
-      if (
-        (await inputHash(
+      const currentHash = await inputHash(
           now.dataset,
           currentMethod || method,
           currentParams,
-        )) !== hash
-      ) {
+        );
+      if (!active()) return;
+      const finalProject = current.current;
+      if (currentHash !== hash || finalProject.dataset !== now.dataset || finalProject.analysis !== now.analysis) {
         setError(
           "计算期间数据或参数已变化，本次结果未应用。请用当前数据重新计算。",
         );
       } else {
         commit({
-          ...now,
+          ...finalProject,
           analysis: { method, params, inputHash: hash, result },
         });
         setStatus("计算完成");
       }
     } catch (e) {
-      setError((e as Error).message);
+      if (active()) setError((e as Error).message);
     } finally {
-      setBusy(false);
-      task.current = null;
+      if (generation.current === runId) {
+        setBusy(false);
+        task.current = null;
+      }
     }
   }
-  if (project.style.ordinationInput === "scores")
+  if (project.style.ordinationInput === "scores" && method !== "magnetic-correlation")
     return (
       <div className="analysis-panel">
         <h3>已有坐标绘图</h3>
@@ -377,7 +388,7 @@ export function AnalysisPanel({
     );
   return (
     <div className="analysis-panel">
-      <h3>真实统计计算</h3>
+      <h3>{method === "magnetic-correlation" ? "磁异常相关成像计算" : "真实统计计算"}</h3>
       <label className="analysis-control">
         分析方法
         <select
@@ -404,6 +415,25 @@ export function AnalysisPanel({
         </select>
       </label>
       <p className="help-copy">{selected?.description}</p>
+      {method === "magnetic-correlation" && <>
+        <label className="analysis-control">JSON 中的测线名称<input value={String(params.line_name || "")} placeholder="单条测线自动识别" onChange={e => setParam("line_name", e.target.value)} /></label>
+        {num("测线长度（km）", "axis_len", 390, 1, 2000)}
+        {num("地磁倾角（°）", "inc", 33.8, -90, 90, 0.1)}
+        {num("地磁偏角（°）", "dec", -2.5, -180, 180, 0.1)}
+        <p className="hint">倾角和偏角需与你的测区及观测时期匹配，程序不自动查询地磁模型。初始数值来自 OBS93 示例配置。</p>
+        <details><summary>扫描与平滑参数</summary>
+          {num("扫描横向间距（km）", "scan_dx", 5, 0.5, 100, 0.5)}
+          {num("扫描起始深度（km）", "scan_z0", 2.5, 0.1, 100, 0.5)}
+          {num("扫描终止深度（km）", "scan_z1", 25, 0.1, 100, 0.5)}
+          {num("扫描深度间距（km）", "scan_dz", 1, 0.25, 20, 0.25)}
+          {num("棱柱厚度（km）", "th_km", 4, 0.1, 50, 0.5)}
+          {num("相关窗口宽度（km）", "win_km", 90, 1, 1000)}
+          {num("窗口最少观测点", "min_pts", 25, 3, 5000)}
+          {num("沿走向半长（km）", "strike_ext_km", 500, 1, 2000)}
+          {num("高斯平滑 σ（格）", "smooth", 1.2, 0, 5, 0.1)}
+        </details>
+        <p className="hint">颜色表示局部 Pearson 相关系数，不是磁性体存在概率。莫霍面、断裂和站位是可编辑叠加标记，不参与成像计算。</p>
+      </>}
       {[
         "pca",
         "pcoa",
@@ -671,7 +701,10 @@ export function AnalysisPanel({
                 </p>
               ),
             )}
-          <ResultView result={project.analysis.result} />
+          {method === "magnetic-correlation" ? <>
+            <p>成像计算完成，结果已应用到画布。可在右侧调整样式并导出 PNG、PDF、SVG。</p>
+            <button onClick={() => downloadBlob(new Blob([JSON.stringify(project.analysis!.result, null, 2)], { type: "application/json" }), "magnetic-correlation-result.json")}>下载数值计算结果</button>
+          </> : <ResultView result={project.analysis.result} />}
         </>
       )}
     </div>

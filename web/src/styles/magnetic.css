@@ -1,0 +1,6 @@
+.magnetic-input-panel { padding: 18px; }
+.magnetic-input-panel .analysis-panel { padding: 18px 0 0; border-top: 1px solid var(--border); }
+.magnetic-file-input { margin: 20px 0; }
+.magnetic-file-input input[type="file"] { display: block; width: 100%; margin-top: 6px; }
+.magnetic-file-input p { overflow-wrap: anywhere; font-size: 12px; margin: 8px 0; }
+.magnetic-file-input details button { margin-top: 6px; }

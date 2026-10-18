@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import type { Project, Template } from "../core/types";
 import { useProjectHistory } from "../core/history";
-import { isOrdination, ordinationExportIssue } from "../core/exportReadiness";
+import { isOrdination, ordinationExportIssue, magneticExportIssue } from "../core/exportReadiness";
 import { inputHash, saveProject } from "../core/project";
 import { putProject } from "../core/storage";
 import { OrdinationPanel, ordinationIssues } from "../templates/ordination";
@@ -29,6 +29,7 @@ import { AnalysisPanel } from "./AnalysisPanel";
 import { LayersPanel } from "./LayersPanel";
 import { RenderedChart } from "./RenderedChart";
 import { ExportDialog } from "./ExportDialog";
+import { MagneticDataPanel } from "./MagneticDataPanel";
 export function Editor({
   initial,
   template,
@@ -77,10 +78,11 @@ export function Editor({
     ? requiredTreeCanvas(project)
     : project.style;
   const zoom = manualZoom ?? Math.max(0.05, Math.min(1, (viewportSize.width - 32) / size.width, (viewportSize.height - 32) / size.height));
-  const checking = Boolean(project.analysis?.result && project.style.ordinationInput !== "scores" &&
+  const magnetic = template.id === "magnetic-correlation";
+  const checking = Boolean(project.analysis?.result && (magnetic || project.style.ordinationInput !== "scores") &&
     (verified?.dataset !== project.dataset || verified?.analysis !== project.analysis));
-  const analysisUnavailable = isOrdination(project) && project.style.ordinationInput !== "scores" && (stale || checking);
-  const exportIssue = analysisUnavailable ? "数据或参数已变化，请重新计算分析结果后再导出。" : ordinationExportIssue(project);
+  const analysisUnavailable = (magnetic || (isOrdination(project) && project.style.ordinationInput !== "scores")) && (stale || checking);
+  const exportIssue = analysisUnavailable ? "数据或参数已变化，请重新计算分析结果后再导出。" : magneticExportIssue(project) || ordinationExportIssue(project);
   let treeSummary = "";
   if (template.id.startsWith("tree-")) {
     try {
@@ -110,7 +112,7 @@ export function Editor({
     let valid = true;
     if (
       !project.analysis?.result ||
-      project.style.ordinationInput === "scores"
+      (!magnetic && project.style.ordinationInput === "scores")
     ) {
       setStale(false);
       return;
@@ -245,6 +247,8 @@ export function Editor({
           <div className="panel-content">
             {template.id.startsWith("tree-") && tab !== "analysis" ? (
               <TreePanel project={project} commit={commit} />
+            ) : tab === "data" && magnetic ? (
+              <MagneticDataPanel project={project} template={template} commit={commit} stale={stale || checking} />
             ) : tab === "data" ? (
               <DataPanel
                 project={project}

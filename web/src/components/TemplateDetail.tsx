@@ -5,6 +5,7 @@ import { downloadBlob, saveProject } from "../core/project";
 import { RenderedChart } from "./RenderedChart";
 import { templateGuide } from "../templates/detailGuides";
 import { describeField, detailExampleDownload, makeDetailProject, sheetDescription, spreadsheetColumn } from "../templates/detailExamples";
+import { csv } from "../core/data";
 import "../styles/template-detail.css";
 
 function ExampleSheet({ template, table, index, count }: { template: Template; table: DataTable; index: number; count: number }) {
@@ -54,6 +55,7 @@ export function TemplateDetail({ template, onStart }: { template: Template; onSt
   const tables = project.dataset.tables.filter(t=>!t.role.startsWith('raw-'));
   const hasCalculationInputs = project.dataset.tables.some(t=>t.role.startsWith('raw-'));
   const tree = template.id.startsWith("tree-");
+  const magnetic = template.id === "magnetic-correlation";
   const download = () => {
     const file = detailExampleDownload(template, project);
     downloadBlob(file.blob, file.name);
@@ -81,12 +83,17 @@ export function TemplateDetail({ template, onStart }: { template: Template; onSt
         <h3>按示例准备数据</h3>
         <p className="detail-preparation">{guide.prepare}</p>
         <div className="detail-example-actions">
-          <button onClick={download}><Download size={16} aria-hidden="true" />下载示例数据</button>
+          {magnetic ? <>
+            {project.dataset.tables.map(table => <button key={table.id} onClick={() => downloadBlob(new Blob([csv(table)], { type: "text/csv;charset=utf-8" }), `${table.role}.csv`)}><Download size={16} aria-hidden="true" />下载{table.role === "magnetic-curve" ? "磁异常曲线" : "海底和基底"} CSV</button>)}
+            <button onClick={() => downloadBlob(new Blob([project.dataset.files?.find(f => f.role === "magnetic-track")?.text || ""], { type: "application/json" }), "magnetic-track.json")}><Download size={16} aria-hidden="true" />下载测线位置 JSON</button>
+            <button onClick={() => saveProject(project)}>下载可编辑示例项目</button>
+          </> : <button onClick={download}><Download size={16} aria-hidden="true" />下载示例数据</button>}
           {!!project.layers.length && <button onClick={() => saveProject(project)}>下载含注释的示例项目</button>}
           {hasCalculationInputs && <button onClick={() => saveProject(project)}>下载含计算依据的示例项目</button>}
           <button className="primary" onClick={() => onStart(structuredClone(project))}>用示例开始 <ArrowRight size={16} aria-hidden="true" /></button>
         </div>
-        <p className="detail-download-note">{tables.length ? `下载 Excel 文件，包含以下${tables.length > 1 ? ` ${tables.length} 张` : ""}工作表和全部数据行。` : "Newick 下载包含树结构；选择“下载含注释的示例项目”可同时保留图中的全部注释与样式。"}</p>
+        <p className="detail-download-note">{magnetic ? "分别下载两份 CSV 和一份 JSON，进入编辑器后上传这三份文件即可运行。示例项目同时保留输入、参数和已经计算的成像结果。" : tables.length ? `下载 Excel 文件，包含以下${tables.length > 1 ? ` ${tables.length} 张` : ""}工作表和全部数据行。` : "Newick 下载包含树结构；选择“下载含注释的示例项目”可同时保留图中的全部注释与样式。"}</p>
+        {magnetic && <article className="example-source-text"><h3>测线位置 JSON</h3><pre tabIndex={0}><code>{project.dataset.files?.find(f => f.role === "magnetic-track")?.text}</code></pre></article>}
         {hasCalculationInputs && <p className="detail-download-note">示例项目额外保留生成结果的模拟原始观测或集合成员。当前模板读取结果表绘图；替换数据时请提供自己的检验结果，并同步修改方法说明。</p>}
         {tables.map((table, index) => <ExampleSheet key={table.id} template={template} table={table} index={index} count={tables.length} />)}
         {project.dataset.text && <article className="example-source-text">
@@ -102,13 +109,13 @@ export function TemplateDetail({ template, onStart }: { template: Template; onSt
         <div className="detail-workflow">
           <h3>从示例到自己的图</h3>
           <ol>
-            <li><strong>导入自己的数据</strong><p>{tree
+            <li><strong>导入自己的数据</strong><p>{magnetic ? "点击“用示例开始”，在三个独立上传入口依次选择磁异常曲线 CSV、海底和基底 CSV、测线位置 JSON。首次上传会清空示例输入；补齐三份文件后确认计算参数。也可展开每份文件直接编辑内容并应用。" : tree
               ? "点击“用示例开始”，在树工作台粘贴树文本或上传树文件，确认叶名、拓扑和枝长。需要注释时，在所选图层中导入以 nodeID 对应节点的表格。"
               : `点击“用示例开始”，在“数据”面板上传 CSV、TSV 或 Excel；第一行为列名，数值格不混入单位。${tables.length > 1 ? "多表建议使用一个 Excel 文件分别保存，勾选所需工作表后点击“导入所选内容”，逐表设置上述数据角色。" : "也可粘贴带列名的表格，点击“应用数据”；列名不同时用字段映射对应。"}按行列提示修正无效数据后查看画布。`}</p></li>
             {guide.analysis && <li><strong>计算并检查结果</strong><p>{guide.analysis}</p></li>}
             <li><strong>调整图形与样式</strong><p>{guide.style} 然后设置画布尺寸、标题、字体和配色，使用撤销、重做比较效果。</p></li>
             <li><strong>保存可继续编辑的项目</strong><p>点击“保存项目”，下载 .openacad.json 文件，保留数据、样式、图层、布局和已有分析结果。下次用“打开项目”恢复；图片文件不能代替项目文件。</p></li>
-            <li><strong>导出图片</strong><p>点击“导出图片”，选择 SVG、PNG、PDF 或 EPS，确认尺寸、文字和背景。SVG 可保留文字或转曲；PNG、PDF、EPS 使用导出服务。导出后打开文件检查标签与边界。</p></li>
+            <li><strong>导出图片</strong><p>{magnetic ? "计算完成后点击“导出图片”，选择 PNG、PDF 或 SVG。SVG 保留可编辑文字、曲线和热图色块；PNG/PDF 由导出服务生成。" : "点击“导出图片”，选择 SVG、PNG、PDF 或 EPS，确认尺寸、文字和背景。SVG 可保留文字或转曲；PNG、PDF、EPS 使用导出服务。"}导出后打开文件检查标签与边界。</p></li>
           </ol>
         </div>
         {!!template.limitations.length && <div className="detail-limitations"><h3>绘图时留意</h3><ul>{template.limitations.map((item, i) => <li key={i}>{item}</li>)}</ul></div>}

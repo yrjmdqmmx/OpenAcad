@@ -55,7 +55,7 @@ test('切换备用示例仍具有标题所述检验的原始依据，并可保�
 });
 
 test('新项目使用期刊图默认样式，旧项目重开不迁移样式，计算依据跟随项目',()=>{
-  expect(templates).toHaveLength(55);
+  expect(templates).toHaveLength(56);
   for(const t of templates){
     const p=makeProject(t);expect(p.style.publicationVersion).toBe(1);
     delete p.style.publicationVersion;p.style.fontSize=13;p.style.palette=['#112233'];

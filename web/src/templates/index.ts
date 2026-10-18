@@ -9,3 +9,7 @@ import { improveScientificExamples } from './scientificExamples';
 improveScientificExamples(templates);
 import { applyPublicationDefaults } from './publicationDefaults';
 applyPublicationDefaults(templates);
+
+// The magnetic example retains its explicit reconstruction provenance and scientific defaults.
+import { magneticTemplates } from './magnetic';
+templates.push(...magneticTemplates);

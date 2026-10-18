@@ -13,6 +13,13 @@ const guide = (axes: string, color: string, prepare: string, style: string, anal
 
 // Reading and preparation describe the actual default example, not every possible style.
 export const templateGuides: Record<string, TemplateGuide> = {
+  "magnetic-correlation": guide(
+    "上图为沿测线距离的磁异常 ΔT（nT），下图为距离—深度剖面（km，深度向下为正）。蓝线为海底、黑实线为磁性基底，黑虚线为参数化莫霍面；三角站位和 F 断裂线为示例标记。",
+    "热图显示扫描棱柱正演响应与观测曲线的局部 Pearson 相关系数，示例色标 −0.4～0.6。它不是磁性体存在概率或磁化强度，色标之外的值饱和显示，缺少有效观测的窗口留白。",
+    "准备磁异常曲线 CSV（dist_km,mag_nT）、海底和基底 CSV（s_km,bathy_m,basement_km）及测线位置 JSON。三份文件描述同一条测线，距离同起点、同方向。下载下方三份模拟示例可试运行；它们参照例图形状制作，不代表原始测量。",
+    "可编辑曲线、海底与基底线宽和颜色、显示方向、色标范围、深度范围、断裂、站位及参数化莫霍面。站位与构造标记可关闭；图元和文字均保留为 SVG 矢量对象。",
+    "上传三份文件后确认测线名、长度、地磁倾角和偏角，点击“开始计算”。扫描节点、窗口和平滑参数可调；数据或计算参数变化后必须重新计算，完成后可下载 PNG、PDF、SVG。",
+    '测线 JSON 示例：{"OBS93":{"poly":[[114,22],[117,20]]}}，坐标顺序为经度、纬度。多条测线时在参数中填写对应名称。程序只用首末点计算等效直线方位；地磁方向、断裂、莫霍面和站位不会由三份文件自动推导。'),
   "bar": guide(
     "横轴是类别，纵轴是数值；柱子从零线伸出的长度用于比较大小，负值位于零线另一侧。",
     "颜色与图例对应类别；同一色块不表示数值的高低。",

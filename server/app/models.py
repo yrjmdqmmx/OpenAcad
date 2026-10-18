@@ -28,6 +28,11 @@ class JobData(BaseModel):
     tables: list[Table] = Field(default_factory=list, max_length=64)
     svg: str | None = Field(default=None, max_length=10000000)
     sequences: str | None = Field(default=None, max_length=20000000)
+    # Dedicated, bounded input for the magnetic imaging whitelist method. Its
+    # numerical and physical checks live beside the computation in magnetic.py.
+    curve: list[dict[str, Any]] | None = Field(default=None, max_length=20000)
+    profile: list[dict[str, Any]] | None = Field(default=None, max_length=20000)
+    track: dict[str, Any] | None = None
 
 
 class JobRequest(BaseModel):
