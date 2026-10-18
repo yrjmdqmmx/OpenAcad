@@ -2,7 +2,9 @@
 
 磁异常模板首次打开原先加载 15 份字体，共 4,066,492 字节。少量中文散落在多个 1024 字符分片中，界面和科学图表又使用不同的字体资源；慢链路会拖延 `document.fonts.ready` 和截图。
 
-现在由 `scripts/build-critical-webfonts.py` 从已有前端文字和固定的 Noto Sans Regular/Bold OTF 生成两份常用字 WOFF2，共 726,116 字节。UI 别名和科学图表共用同一 URL；完整字体的 CSS `unicode-range` 排除这些字符，其余字符继续按需加载原来的分片。没有修改原字体、字形、字宽、粗细、项目格式或服务器导出字体。SVG 继续按实际字符嵌入字体和 OFL 授权。
+现在由 `scripts/build-critical-webfonts.py` 从已有前端文字和固定的 Noto Sans Regular/Bold OTF 生成两份常用字 WOFF2，共 725,628 字节。常用子集包含浏览器自动生成的列表圆点（U+2022），避免 WebKit 额外请求拉丁分片。UI 和科学图表共用 `Noto Sans SC` 家族和同一 URL（避免 Firefox 按家族分别请求）；完整字体的 CSS `unicode-range` 排除这些字符，其余字符继续按需加载原来的分片。没有修改原字体、字形、字宽、粗细、项目格式或服务器导出字体。SVG 继续按实际字符嵌入字体和 OFL 授权。
+
+遗留 UI 别名的字体定义仍保留，但界面样式直接使用图表的相同家族，从而让 Firefox 也只请求两份字体。
 
 未使用字体 preload：WebKit 验证发现 preload 与后续使用会重复请求，所以通过实际请求预算防止再次引入重复传输。
 
