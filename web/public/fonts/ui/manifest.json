@@ -1,0 +1,32 @@
+[
+  {
+    "source": "NotoSansCJKsc-Regular.otf",
+    "sourceSha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "family": "OpenAcad UI Sans",
+    "weight": 400,
+    "file": "NotoSansCJKsc-Regular.4ae381508368.woff2",
+    "sha256": "4ae381508368f16ebb62f472f5f21b01d9b9d91ac1b2f34d83284d5308f5b4fb",
+    "bytes": 301920,
+    "verifiedOutlinesAndAdvances": 935
+  },
+  {
+    "source": "NotoSansCJKsc-Bold.otf",
+    "sourceSha256": "b5f0d1a190a7f9b43c310a8850630af12553df32c4c050543f9059732d9b4c0a",
+    "family": "OpenAcad UI Sans",
+    "weight": 700,
+    "file": "NotoSansCJKsc-Bold.70448bc549f9.woff2",
+    "sha256": "70448bc549f9345a0628f2e7d0883daef994253c7a0690d06c5f21adee8f3e93",
+    "bytes": 309012,
+    "verifiedOutlinesAndAdvances": 935
+  },
+  {
+    "source": "NotoSerifCJKsc-Bold.otf",
+    "sourceSha256": "8af07d4b6c2e82bcc72a30e066eaf295f11b9424f4aad2eaa9fe0e9c3b38fc73",
+    "family": "OpenAcad UI Serif",
+    "weight": 700,
+    "file": "NotoSerifCJKsc-Bold.27eb64dc84a8.woff2",
+    "sha256": "27eb64dc84a807a66e509c82849328c0f6947522e509ce5ac5ae80534604136b",
+    "bytes": 434508,
+    "verifiedOutlinesAndAdvances": 935
+  }
+]

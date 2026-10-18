@@ -21,3 +21,7 @@ Worker 的不可变镜像摘要经 GitHub job output 传递；网页测试、打
 发布日志管道明确启用 Bash `pipefail`，SSH/接收器失败必须让 CI 失败；绿色状态还必须有服务器健康回执与对应公开 `version.json`，不能仅凭日志保存成功判定上线。
 
 实际自动发布、测试数量、生产数值和导出验收见 [2026-10-18 验收记录](../../docs/deployment/hangzhou-auto-deploy-20261018.md)。
+
+## 国内静态资源传输
+
+`nginx/` 保存当前杭州域名配置，静态 JS / CSS / SVG 启用 gzip 与 Accept-Encoding Vary；账号和任务 JSON 不加入此压缩范围。宿主配置由运维单独备份、`nginx -t` 验证后 reload；CI 只切换静态 release 目录，不覆盖 Nginx。不要用 `deploy/icp-domains-20261015` 的历史跨境 upstream 配置覆盖现网。

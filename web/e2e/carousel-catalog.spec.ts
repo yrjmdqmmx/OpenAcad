@@ -26,8 +26,8 @@ test('官网轮播支持手动循环、逐张来源及键盘切换', async ({ pa
     await carousel(page).getByRole('button', { name: '下一张图研截图' }).click();
   }
   expect(new Set(names).size).toBe(5);
-  expect(sources.slice(0, 3).every(s => s.startsWith('https://www.paperbanana.asia/leaderboard/cases/'))).toBe(true);
-  expect(sources[3]).toBe('https://www.paperbanana.asia/leaderboard');
+  expect(sources.slice(0, 3).every(s => s.startsWith('https://tuyansci.cn/leaderboard/cases/'))).toBe(true);
+  expect(sources[3]).toBe('https://tuyansci.cn/leaderboard');
   expect(names[4]).toContain('参考图不是生成结果');
   await expect(carousel(page).locator('.tuyan-carousel-count')).toHaveText('1 / 5');
   const previous = carousel(page).getByRole('button', { name: '上一张图研截图' });

@@ -15,6 +15,9 @@ export async function putProject(p: Project) {
     await db()
   ).put("projects", { ...p, updatedAt: new Date().toISOString() });
 }
+export async function getProject(id: string): Promise<Project | undefined> {
+  return (await db()).get("projects", id);
+}
 export async function removeProject(id: string) {
   await (await db()).delete("projects", id);
 }
