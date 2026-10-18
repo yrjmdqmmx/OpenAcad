@@ -8,7 +8,7 @@
   margin: 0 auto;
   padding: 0 48px;
   color: var(--platform-ink);
-  font-family: "OpenAcad UI Sans", "PingFang SC", sans-serif;
+  font-family: "Noto Sans SC", "PingFang SC", sans-serif;
 }
 .platform-intro { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr); align-items: center; gap: 40px; padding: 46px 0 42px; }
 .platform-intro-copy { min-width: 0; }

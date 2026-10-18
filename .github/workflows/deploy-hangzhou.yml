@@ -76,6 +76,9 @@ jobs:
         working-directory: web
       - run: npx playwright install --with-deps chromium firefox webkit
         working-directory: web
+      - name: Check first-load font budgets in every browser
+        run: npx playwright test e2e/font-first-load.spec.ts
+        working-directory: web
       - run: npm run test:browser
         working-directory: web
       - name: Record source version

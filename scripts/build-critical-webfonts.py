@@ -28,7 +28,8 @@ def authored_points():
     files = sorted(p for p in (ROOT / "web/src").rglob("*")
                    if p.suffix in {".ts", ".tsx", ".json"}
                    and ".test." not in p.name and "evidence" not in p.parts)
-    return set(range(32, 127)) | {ord(c) for p in files for c in p.read_text()}
+    # Include the browser-generated list marker, absent from authored text.
+    return set(range(32, 127)) | {0x2022} | {ord(c) for p in files for c in p.read_text()}
 
 
 def verify_face(record):
