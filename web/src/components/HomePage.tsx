@@ -62,8 +62,8 @@ export function HomePage({ templates }: { templates: Template[] }) {
               <div><dt>参考图辅助与精修</dt><dd>结合参考图生成，再用文字指令调整细节。</dd></div>
             </dl>
             <div className="tuyan-feature-action">
-              <a className="button tuyan-visit" href="https://www.paperbanana.asia/" target="_blank" rel="noopener noreferrer" aria-describedby="tuyan-destination">访问图研 Tuyan <ArrowUpRight size={18} aria-hidden="true" /></a>
-              <p id="tuyan-destination">www.paperbanana.asia · 在新窗口访问图研官网</p>
+              <a className="button tuyan-visit" href="https://tuyansci.cn/" target="_blank" rel="noopener noreferrer" aria-describedby="tuyan-destination">访问图研 Tuyan <ArrowUpRight size={18} aria-hidden="true" /></a>
+              <p id="tuyan-destination">tuyansci.cn · 在新窗口访问图研官网</p>
             </div>
           </div>
           <TuyanCarousel />

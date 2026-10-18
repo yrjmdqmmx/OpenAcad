@@ -25,7 +25,7 @@ export function ResearchCarousel() {
         {slides.map((slide, index) => (
           <div key={slide.id} className={`research-slide${index === active ? " is-current" : ""}`} role="group" aria-roledescription="幻灯片" aria-label={`${index + 1} / ${slides.length}：${slide.name}`} aria-hidden={index !== active} inert={index !== active}>
             <a href={screenshotUrl(slide.id)} target="_blank" rel="noopener noreferrer" aria-label={`查看${slide.name}工作台截图大图（新窗口）`} draggable={false}>
-              {failed.includes(slide.id) ? <span className="research-image-fallback">截图暂时无法加载，请从下方进入模板。</span> : <img src={screenshotUrl(slide.id)} alt={`OpenAcad ${slide.name}真实工作台截图，使用自带模拟数据`} width="1710" height="838" decoding="async" fetchPriority={index === 0 ? "high" : "low"} draggable={false} onError={() => setFailed((ids) => ids.includes(slide.id) ? ids : [...ids, slide.id])} />}
+              {failed.includes(slide.id) ? <span className="research-image-fallback">截图暂时无法加载，请从下方进入模板。</span> : <img src={`/images/research/${slide.id}.webp?v=20261018`} alt={`OpenAcad ${slide.name}真实工作台截图，使用自带模拟数据`} width="1710" height="838" decoding="async" fetchPriority={index === 0 ? "high" : "low"} draggable={false} onError={() => setFailed((ids) => ids.includes(slide.id) ? ids : [...ids, slide.id])} />}
             </a>
           </div>
         ))}

@@ -3,6 +3,7 @@ import { ArrowUpRight, FolderOpen } from "lucide-react";
 import { templates } from "./templates";
 import type { Project } from "./core/types";
 import { decodeProject, makeProject } from "./core/project";
+import { getProject } from "./core/storage";
 import { Catalog } from "./components/Catalog";
 import { Editor } from "./components/Editor";
 import { HomePage } from "./components/HomePage";
@@ -15,6 +16,14 @@ import {
   MethodsPage,
 } from "./components/LibraryPages";
 export default function App() {
+  // Keep the project identity on this history entry. A refresh must reopen the
+  // saved draft rather than create another example with the same template.
+  const [restoreId] = useState<string | null>(() =>
+    location.hash.startsWith("#editor/") && typeof history.state?.openacadProjectId === "string"
+      ? history.state.openacadProjectId : null,
+  );
+  const [restoring, setRestoring] = useState(Boolean(restoreId));
+  const [restoreFailed, setRestoreFailed] = useState(false);
   const [bioVisited, setBioVisited] = useState(false);
   const [route, setRoute] = useState(location.hash.slice(1) || "home"),
     [project, setProject] = useState<Project | null>(null),
@@ -25,7 +34,28 @@ export default function App() {
   const latestProject = useRef<Project | null>(null);
   const retainProject = useCallback((next: Project) => {
     latestProject.current = next;
+    if (location.hash === `#editor/${next.templateId}`) {
+      history.replaceState({ ...history.state, openacadProjectId: next.id }, "");
+    }
   }, []);
+  useEffect(() => {
+    if (!restoreId) return;
+    let cancelled = false;
+    const initialRoute = location.hash;
+    getProject(restoreId).then((saved) => {
+      if (cancelled || location.hash !== initialRoute) return;
+      if (!saved || initialRoute !== `#editor/${saved.templateId}`) throw new Error("本机草稿暂不可用，请从本机项目或项目文件恢复。");
+      const restored = decodeProject(JSON.stringify(saved), templates);
+      latestProject.current = restored;
+      setProject(restored);
+    }).catch((err) => {
+      if (!cancelled && location.hash === initialRoute) {
+        setRestoreFailed(true);
+        setError((err as Error).message);
+      }
+    }).finally(() => { if (!cancelled) setRestoring(false); });
+    return () => { cancelled = true; };
+  }, [restoreId]);
   const file = useRef<HTMLInputElement>(null);
   useEffect(() => {
     const change = () => {
@@ -36,6 +66,7 @@ export default function App() {
     return () => window.removeEventListener("hashchange", change);
   }, []);
   function start(p: Project) {
+    setRestoreFailed(false);
     setOpenRevision((v) => v + 1);
     latestProject.current = p;
     setProject(p);
@@ -68,7 +99,7 @@ export default function App() {
               key={key}
               className={activePage === key ? "active" : ""}
               aria-current={activePage === key ? "page" : undefined}
-              href={key === "tuyan" ? "https://www.paperbanana.asia/" : `#${key}`}
+              href={key === "tuyan" ? "https://tuyansci.cn/" : `#${key}`}
               target={key === "tuyan" ? "_blank" : undefined}
               rel={key === "tuyan" ? "noopener noreferrer" : undefined}
               title={key === "tuyan" ? "在新窗口访问图研官网" : undefined}
@@ -106,7 +137,11 @@ export default function App() {
           <button onClick={() => setError("")}>关闭</button>
         </div>
       )}
-      {page === "bio" ? null : editing ? (
+      {page === "bio" ? null : editing && (restoring || restoreFailed) ? (
+        <main className="content-page">
+          {restoring ? <p role="status">正在恢复本机草稿…</p> : <a className="button primary" href="#projects">查看本机项目</a>}
+        </main>
+      ) : editing ? (
         <Editor
           key={`${id}-${openRevision}`}
           initial={project?.templateId === id ? project : makeProject(template)}

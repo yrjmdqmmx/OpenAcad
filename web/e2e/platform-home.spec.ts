@@ -27,7 +27,7 @@ test("平台首页呈现已上线绘图、独立图研入口和后续工具说�
     );
     const navigation = page.getByRole("navigation", { name: "主导航" });
     const tuyanNavigation = navigation.getByRole("link", { name: "图研 Tuyan", exact: true });
-    await expect(tuyanNavigation).toHaveAttribute("href", "https://www.paperbanana.asia/");
+    await expect(tuyanNavigation).toHaveAttribute("href", "https://tuyansci.cn/");
     await expect(tuyanNavigation).toHaveAttribute("target", "_blank");
     await expect(tuyanNavigation).toHaveAttribute("rel", "noopener noreferrer");
     await expect(navigation.locator('a[href="#home"]')).toHaveClass(/active/);
@@ -53,7 +53,7 @@ test("平台首页呈现已上线绘图、独立图研入口和后续工具说�
     await expect(tuyan).toBeVisible();
     await expect(tuyan).toHaveAttribute(
       "href",
-      "https://www.paperbanana.asia/",
+      "https://tuyansci.cn/",
     );
     await expect(tuyan).toHaveAttribute("target", "_blank");
     const rel = (await tuyan.getAttribute("rel"))?.split(/\s+/);

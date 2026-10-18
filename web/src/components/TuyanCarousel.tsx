@@ -3,7 +3,7 @@ import { useScreenshotCarousel } from "./useScreenshotCarousel";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import "../styles/tuyan-carousel.css";
 
-const site = "https://www.paperbanana.asia/";
+const site = "https://tuyansci.cn/";
 const caseSource = (id: string) => `${site}leaderboard/cases/${id}`;
 const slides = [
   { id: "biological", title: "生物机制与信号通路", image: "/images/tuyan-slide-biological.png", source: caseSource("scientific-gen-02-biological-pathway"), note: "官网生成结果截图 · Qwen Image 3.0 Pro", alt: "图研官网真实生成结果截图：细胞膜至细胞核信号传导机制图" },
@@ -37,7 +37,7 @@ export function TuyanCarousel() {
         {slides.map((slide, index) => (
           <div key={slide.id} className={`tuyan-slide${active === index ? " is-current" : ""}`} role="group" aria-roledescription="幻灯片" aria-label={`${index + 1} / ${slides.length}：${slide.title}`} aria-hidden={index !== active} inert={index !== active}>
             <a href={slide.image} target="_blank" rel="noopener noreferrer" aria-label={`查看${slide.title}截图大图（新窗口）`} draggable={false}>
-              {failed.includes(slide.id) ? <span className="tuyan-image-fallback">截图暂时无法加载<br />请使用下方图片来源链接 <ArrowUpRight size={16} aria-hidden="true" /></span> : <img src={slide.image} alt={slide.alt} loading={visible ? "eager" : "lazy"} decoding="async" draggable={false} onError={() => setFailed((ids) => ids.includes(slide.id) ? ids : [...ids, slide.id])} />}
+              {failed.includes(slide.id) ? <span className="tuyan-image-fallback">截图暂时无法加载<br />请使用下方图片来源链接 <ArrowUpRight size={16} aria-hidden="true" /></span> : <img src={slide.image.replace(/\.png$/, ".webp") + "?v=20261018"} alt={slide.alt} loading={visible ? "eager" : "lazy"} decoding="async" draggable={false} onError={() => setFailed((ids) => ids.includes(slide.id) ? ids : [...ids, slide.id])} />}
             </a>
           </div>
         ))}

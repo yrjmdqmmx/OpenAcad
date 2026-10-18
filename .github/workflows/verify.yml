@@ -1,6 +1,7 @@
 name: 构建与验收
 on:
   push:
+    branches-ignore: [codex/hangzhou-production]
     paths-ignore: ['docs/**', 'tests/artifacts/**', '**/*.md']
   pull_request:
     paths-ignore: ['docs/**', 'tests/artifacts/**', '**/*.md']

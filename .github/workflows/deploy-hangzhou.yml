@@ -1,0 +1,113 @@
+name: Deploy Hangzhou Production
+on:
+  push:
+    branches: [codex/hangzhou-production]
+    paths-ignore: ['docs/**', '**/*.md']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: openacad-hangzhou-production
+  cancel-in-progress: false
+jobs:
+  worker:
+    if: github.repository == 'yrjmdqmmx/OpenAcad' && github.ref == 'refs/heads/codex/hangzhou-production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image: ${{ steps.image.outputs.image }}
+    env:
+      DOCKER_BUILD_RECORD_UPLOAD: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s deploy/hangzhou/tests -v
+      - run: python3 -m unittest discover -s deploy/tests -v
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - id: build
+        uses: docker/build-push-action@v6
+        with:
+          context: server
+          file: server/Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: ghcr.io/yrjmdqmmx/openacad-hz-worker:sha-${{ github.sha }}
+          cache-from: type=gha,scope=hangzhou-worker
+          cache-to: type=gha,mode=max,scope=hangzhou-worker
+      - name: Record image that passed in-image Python/R/Inkscape tests
+        id: image
+        env:
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: echo "image=ghcr.io/yrjmdqmmx/openacad-hz-worker@$DIGEST" >> "$GITHUB_OUTPUT"
+  deploy:
+    needs: worker
+    environment: hangzhou-production
+    permissions:
+      contents: read
+      packages: read
+      actions: read
+    if: github.repository == 'yrjmdqmmx/OpenAcad' && github.ref == 'refs/heads/codex/hangzhou-production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - run: npm run build && npm test
+        working-directory: web
+      - run: npx playwright install --with-deps chromium firefox webkit
+        working-directory: web
+      - run: npm run test:browser
+        working-directory: web
+      - name: Record source version
+        run: node -e 'require("fs").writeFileSync("web/dist/version.json", JSON.stringify({revision:process.env.GITHUB_SHA,target:"Hangzhou"}))'
+      - name: Configure restricted Hangzhou SSH identity
+        env:
+          KEY: ${{ secrets.HANGZHOU_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.HANGZHOU_KNOWN_HOSTS }}
+        run: |
+          install -d -m 0700 "$HOME/.ssh"
+          printf '%s\n' "$KEY" > "$HOME/.ssh/id_ed25519"
+          printf '%s\n' "$KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 0600 "$HOME/.ssh/id_ed25519" "$HOME/.ssh/known_hosts"
+      - name: Package verified files and record current production
+        env:
+          WORKER_IMAGE: ${{ needs.worker.outputs.image }}
+        run: |
+          mkdir -p payload
+          cp -a web/dist payload/web
+          python3 - <<'PYTHON'
+          import json,pathlib,os
+          pathlib.Path('payload/manifest.json').write_text(json.dumps({'sha':os.environ['GITHUB_SHA'],'images':{'worker':os.environ['WORKER_IMAGE']}}))
+          PYTHON
+          tar -czf release.tar.gz -C payload manifest.json web
+          ssh -o BatchMode=yes -o StrictHostKeyChecking=yes root@116.62.146.226 status > state.json
+      - name: Deploy and verify Hangzhou
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: python3 deploy/hangzhou/ci_send.py | tee deployment-receipt.json
+      - name: Record deployment receipt in the run summary
+        if: always()
+        run: |
+          if [ -s deployment-receipt.json ]; then
+            echo '### Hangzhou deployment receipt' >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat deployment-receipt.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Remove ephemeral SSH identity
+        if: always()
+        run: rm -f "$HOME/.ssh/id_ed25519" "$HOME/.ssh/known_hosts"
