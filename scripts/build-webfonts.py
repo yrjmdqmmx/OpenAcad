@@ -13,6 +13,8 @@ import hashlib
 import json
 import math
 import shutil
+import subprocess
+import sys
 from pathlib import Path
 import tempfile
 
@@ -311,6 +313,7 @@ def main() -> None:
                 old.unlink()
         (ROOT / "web/src/styles/font-faces.css").write_text("\n".join(css) + "\n")
         manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+    subprocess.run([sys.executable, str(ROOT / "scripts/build-critical-webfonts.py")], check=True)
     print(json.dumps([{key: item[key] for key in ["family", "fontWeight", "fontStyle", "sourceBytes", "totalWoff2Bytes", "commonWoff2Bytes", "verification"]} for item in manifest["fonts"]], ensure_ascii=False, indent=2))
 
 

@@ -7,6 +7,8 @@ copy from fetching many 1024-character scientific-font fallback shards.
 from pathlib import Path
 import hashlib
 import json
+import subprocess
+import sys
 from fontTools import subset
 from fontTools.ttLib import TTFont
 from fontTools.pens.recordingPen import RecordingPen
@@ -57,3 +59,4 @@ for source, family, weight in faces:
 (ROOT / "web/src/styles/ui-font-faces.css").write_text("/* Generated UI aliases only; OFL sources in server/fonts. */\n" + "\n".join(css) + "\n")
 (output / "manifest.json").write_text(json.dumps(records, indent=2) + "\n")
 print(json.dumps(records, indent=2))
+subprocess.run([sys.executable, str(ROOT / "scripts/build-critical-webfonts.py")], check=True)

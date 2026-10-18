@@ -58,6 +58,13 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify shared font glyphs, metrics and complete fallback coverage
+        run: |
+          python -m pip install -r scripts/font-delivery-requirements.txt
+          python scripts/build-critical-webfonts.py --check
       - uses: actions/setup-node@v4
         with:
           node-version: 22
