@@ -10,32 +10,6 @@ concurrency:
   group: openacad-hangzhou-production
   cancel-in-progress: false
 jobs:
-  web:
-    if: github.repository == 'yrjmdqmmx/OpenAcad' && github.ref == 'refs/heads/codex/hangzhou-production'
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-          cache-dependency-path: web/package-lock.json
-      - run: npm ci
-        working-directory: web
-      - run: npm run build && npm test
-        working-directory: web
-      - run: npx playwright install --with-deps chromium firefox webkit
-        working-directory: web
-      - run: npm run test:browser
-        working-directory: web
-      - name: Record source version
-        run: node -e 'require("fs").writeFileSync("web/dist/version.json", JSON.stringify({revision:process.env.GITHUB_SHA,target:"Hangzhou"}))'
-      - uses: actions/upload-artifact@v4
-        with:
-          name: hangzhou-web
-          path: web/dist
-          retention-days: 3
   worker:
     if: github.repository == 'yrjmdqmmx/OpenAcad' && github.ref == 'refs/heads/codex/hangzhou-production'
     runs-on: ubuntu-latest
@@ -43,6 +17,10 @@ jobs:
     permissions:
       contents: read
       packages: write
+    outputs:
+      image: ${{ steps.image.outputs.image }}
+    env:
+      DOCKER_BUILD_RECORD_UPLOAD: 'false'
     steps:
       - uses: actions/checkout@v4
       - run: python3 -m unittest discover -s deploy/hangzhou/tests -v
@@ -64,33 +42,37 @@ jobs:
           cache-from: type=gha,scope=hangzhou-worker
           cache-to: type=gha,mode=max,scope=hangzhou-worker
       - name: Record image that passed in-image Python/R/Inkscape tests
+        id: image
         env:
           DIGEST: ${{ steps.build.outputs.digest }}
-        run: python3 -c 'import os,json; json.dump({"worker":"ghcr.io/yrjmdqmmx/openacad-hz-worker@"+os.environ["DIGEST"]},open("image-worker.json","w"))'
-      - uses: actions/upload-artifact@v4
-        with:
-          name: image-worker
-          path: image-worker.json
-          retention-days: 3
+        run: echo "image=ghcr.io/yrjmdqmmx/openacad-hz-worker@$DIGEST" >> "$GITHUB_OUTPUT"
   deploy:
-    needs: [web, worker]
-    runs-on: ubuntu-latest
-    timeout-minutes: 40
+    needs: worker
     environment: hangzhou-production
     permissions:
       contents: read
       packages: read
       actions: read
+    if: github.repository == 'yrjmdqmmx/OpenAcad' && github.ref == 'refs/heads/codex/hangzhou-production'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - uses: actions/setup-node@v4
         with:
-          name: hangzhou-web
-          path: payload/web
-      - uses: actions/download-artifact@v4
-        with:
-          name: image-worker
-          path: images
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - run: npm run build && npm test
+        working-directory: web
+      - run: npx playwright install --with-deps chromium firefox webkit
+        working-directory: web
+      - run: npm run test:browser
+        working-directory: web
+      - name: Record source version
+        run: node -e 'require("fs").writeFileSync("web/dist/version.json", JSON.stringify({revision:process.env.GITHUB_SHA,target:"Hangzhou"}))'
       - name: Configure restricted Hangzhou SSH identity
         env:
           KEY: ${{ secrets.HANGZHOU_DEPLOY_KEY }}
@@ -101,25 +83,30 @@ jobs:
           printf '%s\n' "$KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
           chmod 0600 "$HOME/.ssh/id_ed25519" "$HOME/.ssh/known_hosts"
       - name: Package verified files and record current production
+        env:
+          WORKER_IMAGE: ${{ needs.worker.outputs.image }}
         run: |
-          python3 - <<'PY'
+          mkdir -p payload
+          cp -a web/dist payload/web
+          python3 - <<'PYTHON'
           import json,pathlib,os
-          images=json.loads(pathlib.Path('images/image-worker.json').read_text())
-          assert set(images)=={'worker'}
-          pathlib.Path('payload/manifest.json').write_text(json.dumps({'sha':os.environ['GITHUB_SHA'],'images':images}))
-          PY
+          pathlib.Path('payload/manifest.json').write_text(json.dumps({'sha':os.environ['GITHUB_SHA'],'images':{'worker':os.environ['WORKER_IMAGE']}}))
+          PYTHON
           tar -czf release.tar.gz -C payload manifest.json web
           ssh -o BatchMode=yes -o StrictHostKeyChecking=yes root@116.62.146.226 status > state.json
       - name: Deploy and verify Hangzhou
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 deploy/hangzhou/ci_send.py | tee deployment-receipt.json
-      - uses: actions/upload-artifact@v4
+      - name: Record deployment receipt in the run summary
         if: always()
-        with:
-          name: hangzhou-deployment-receipt
-          path: deployment-receipt.json
-          retention-days: 30
+        run: |
+          if [ -s deployment-receipt.json ]; then
+            echo '### Hangzhou deployment receipt' >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat deployment-receipt.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Remove ephemeral SSH identity
         if: always()
         run: rm -f "$HOME/.ssh/id_ed25519" "$HOME/.ssh/known_hosts"
