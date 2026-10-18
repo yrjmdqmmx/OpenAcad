@@ -47,21 +47,28 @@ test('官网轮播支持手动循环、逐张来源及键盘切换', async ({ pa
 test('自动轮播每三秒循环，悬停停止，移开后继续且不显示暂停按钮', async ({ page }) => {
   await page.clock.install();
   await openCarousel(page);
+  const caption = carousel(page).locator('.tuyan-carousel-caption');
   // Freeze after loading, then reset the interval through hover/leave. Page
   // loading time must not consume part of the first 2900 ms assertion.
   await page.clock.pauseAt(await page.evaluate(() => Date.now()) + 1000);
   await carousel(page).hover();
+  await expect(caption).toHaveAttribute('aria-live', 'polite');
   await carousel(page).getByRole('button', { name: /^查看第 1 张/ }).click();
   await expect(carousel(page).getByRole('button', { name: /暂停|播放|开启自动轮播/ })).toHaveCount(0);
   await page.mouse.move(0, 0);
+  // Pointer dispatch can return before React commits the pause/resume state.
+  // Observe that state before jumping the clock that drives its timeout effect.
+  await expect(caption).toHaveAttribute('aria-live', 'off');
   await page.clock.fastForward(2900);
   await expect(carousel(page).locator('.tuyan-carousel-count')).toHaveText('1 / 5');
   await page.clock.fastForward(200);
   await expect(carousel(page).locator('.tuyan-carousel-count')).toHaveText('2 / 5');
   await carousel(page).hover();
+  await expect(caption).toHaveAttribute('aria-live', 'polite');
   await page.clock.fastForward(18000);
   await expect(carousel(page).locator('.tuyan-carousel-count')).toHaveText('2 / 5');
   await page.mouse.move(0, 0);
+  await expect(caption).toHaveAttribute('aria-live', 'off');
   for (const count of ['3 / 5', '4 / 5', '5 / 5', '1 / 5']) {
     await page.clock.fastForward(3100);
     await expect(carousel(page).locator('.tuyan-carousel-count')).toHaveText(count);
