@@ -12,3 +12,5 @@
 验证：`npm --prefix web test`、`npm --prefix web run build`；浏览器从 `web/` 运行 `npm run test:browser`。`OPENACAD_LIVE_API=1` 开启真实服务浏览器用例。没有统计 worker 时应明确记录跳过，不能声称统计通过。
 
 生产发行采用固定提交与 Linux amd64 镜像，部署和恢复命令见 `docs/deployment/README.md`。操作新服务允许范围为 `/opt/openacad`、Compose 项目 `openacad` 与 `openacad.xyz` 虚拟主机。
+
+2026-10-18：业务现位于杭州 `116.62.146.226`。日常更新合入 `codex/hangzhou-production`，由 GitHub 自动测试/构建并发布到 `/opt/openacad`；旧默认分支不自动发布。接收器保留 Redis、现网参数和其他项目，仅更新 API/两个 Worker 与静态网页；正式执行结果见 `docs/deployment/hangzhou-auto-deploy-20261018.md`。香港/新加坡仅保留获准模型出口，不得恢复旧香港业务写入。

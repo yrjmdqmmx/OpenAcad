@@ -1,3 +1,5 @@
+> 2026-10-18 更新：生产业务已迁杭州。日常代码更新合入 `codex/hangzhou-production`，由[杭州自动流程](../../deploy/hangzhou/README.md)测试后发布。下文旧香港主机命令仅保留历史追溯，禁止直接使用；实际部署与验证见[杭州验收](hangzhou-auto-deploy-20261018.md)。
+
 # OpenAcad 部署、更新与恢复
 
 OpenAcad 使用独立的 `/opt/openacad` 目录、`openacad` Compose 项目、`127.0.0.1:13310` API 端口与 `openacad.xyz` Nginx 虚拟主机。现有 PaperBanana 和 Tensor Auto 不在这些命令的操作范围内。
@@ -122,3 +124,5 @@ server/.venv/bin/python server/scripts/production_smoke.py https://openacad.xyz 
 每次使用版本专属的新输出目录，保留以前的报告及文件。默认要求至少两个近期活跃 worker。脚本检查首页和 API，实际执行 PCA、R LM，并用独立重构与最小二乘公式验证数值；随后把真实结果生成的中文图导出 PNG/PDF/EPS，核对像素尺寸、校验和、非空白和页面边界，并用 Poppler/Ghostscript 独立打开。输出目录包含模拟输入、完整计算结果、图片、字体及方法版本和 `report.json`。`complete: true` 才表示这些检查全部通过。缺少独立打开工具时，可显式加 `--skip-independent-open`，报告将标记 `partial`，不能作为完整导出验收。单 worker 本地调试可加 `--min-workers 1`。
 
 该脚本不替代浏览器逐模板验收：仍需检查 SVG、项目文件重开、交互和手机下载；仅 `/api/health` 成功也不等于功能验收完成。生产版本、发布日期和恢复演练结果另记在[正式发布记录](production-record.md)。
+
+2026-10-18 已完成杭州自动发布及线上验收，见 [验收记录](hangzhou-auto-deploy-20261018.md)。
