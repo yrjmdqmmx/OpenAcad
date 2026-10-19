@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { FileJson, FileSpreadsheet, Upload } from "lucide-react";
 import type { Project, Template } from "../core/types";
 import { csv, parseText } from "../core/data";
 import { downloadBlob } from "../core/project";
@@ -76,18 +77,40 @@ export function MagneticDataPanel({ project, template, commit, stale }: {
     <h3>上传三份文件生成剖面图</h3>
     <p className="help-copy">两份 CSV 和一份 JSON，共同描述一条测线。距离需同起点、同方向，不自动拉伸或改写基底深度。</p>
     {project.layout.magneticInputMode !== "uploaded" && <p className="notice">当前为参照例图形状制作的模拟数据。首次上传会清空三份示例输入，并关闭示例站位、断裂和莫霍面；可在右侧按自己的资料重新设置。</p>}
-    {inputs.map(input => <section key={input.role} className="magnetic-file-input">
-      <label className="analysis-control">{input.label} {input.ext}<input aria-label={`上传${input.label}`} type="file" accept={input.ext} onChange={e => { void upload(input.role, e.target.files?.[0]); e.target.value = ""; }} /></label>
-      <p className="hint">{input.help}</p>
-      <p role="status">{input.role === "magnetic-track"
-        ? project.dataset.files?.find(f => f.role === input.role)?.name || "尚未上传"
-        : (() => { const t = project.dataset.tables.find(t => t.role === input.role); return t ? `${t.name} · ${t.rows.length} 行` : "尚未上传"; })()}</p>
+    <p className="hint">每份文件不超过 2 MB</p>
+    {inputs.map(input => {
+      const table = project.dataset.tables.find(t => t.role === input.role);
+      const file = project.dataset.files?.find(f => f.role === input.role);
+      const filename = input.role === "magnetic-track" ? file?.name : table?.name;
+      const isExample = !!filename && project.layout.magneticInputMode !== "uploaded";
+      const state = !filename ? "empty" : isExample ? "example" : "loaded";
+      const FileIcon = input.role === "magnetic-track" ? FileJson : FileSpreadsheet;
+      const format = input.ext.slice(1).toUpperCase();
+      return <section key={input.role} className={`magnetic-file-input magnetic-file-input--${state}`} aria-labelledby={`${input.role}-heading`}>
+      <div className="magnetic-file-heading">
+        <h4 id={`${input.role}-heading`}>{input.label}</h4>
+        <span className="magnetic-file-format">{format}</span>
+      </div>
+      <div className="magnetic-file-current" role="status">
+        <FileIcon size={22} aria-hidden="true" />
+        <div>
+          <span className="magnetic-file-state">{!filename ? "待上传" : isExample ? "示例数据" : "已上传"}{table && ` · ${table.rows.length} 行`}</span>
+          <span className="magnetic-file-name" title={filename}>{filename || `请选择 ${format} 文件`}</span>
+        </div>
+      </div>
+      <label className="magnetic-file-picker">
+        <Upload size={16} aria-hidden="true" />
+        <span>{filename && !isExample ? "更换文件" : `选择 ${format} 文件`}</span>
+        <input aria-label={`上传${input.label}`} aria-describedby={`${input.role}-help`} type="file" accept={input.ext} onChange={e => { void upload(input.role, e.target.files?.[0]); e.target.value = ""; }} />
+      </label>
+      <p className="hint" id={`${input.role}-help`}>{input.help}</p>
       <details><summary>查看或编辑{input.label}</summary>
         <textarea aria-label={`${input.label}内容`} value={drafts[input.role] || ""} rows={6} style={{ width: "100%", boxSizing: "border-box" }} onChange={e => setDrafts({ ...drafts, [input.role]: e.target.value })} />
         <button onClick={() => apply(input.role, drafts[input.role] || "", `${input.role}${input.ext}`)}>应用{input.label}</button>
         <button disabled={!source(project, input.role)} onClick={() => downloadBlob(new Blob([source(project, input.role)], { type: "text/plain;charset=utf-8" }), `${input.role}${input.ext}`)}>下载当前文件</button>
       </details>
-    </section>)}
+    </section>;
+    })}
     {error && <p className="error" role="alert">{error} 当前数据未替换。</p>}
     {!ready ? <p className="notice">请补齐两份 CSV 和一份测线 JSON 后开始计算。</p> : <AnalysisPanel project={project} template={template} commit={commit} stale={stale} />}
   </div>;
