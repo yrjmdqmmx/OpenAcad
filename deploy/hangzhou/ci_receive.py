@@ -22,7 +22,11 @@ def state(project):
   configs=list((root/'secrets').glob('*.env'))+[root/'repo/deploy/hk-single-host/.env',root/'ops-releases/icp-domains-20261015/compose.yaml']
  else:
   current=pathlib.Path(inspect(c['services']['api'])['Config']['Labels']['com.docker.compose.project.working_dir']);configs=[current/'compose.yml',current/'release.env']
- return {'images':{k:inspect(v)['Image'] for k,v in c['services'].items()},'configHashes':{str(p):sha(p) for p in configs},'web':str((pathlib.Path(c['web'])/'current').resolve()),'runtime':str(current) if project=='openacad' else None}
+ result={'images':{k:inspect(v)['Image'] for k,v in c['services'].items()},'configHashes':{str(p):sha(p) for p in configs},'web':str((pathlib.Path(c['web'])/'current').resolve()),'runtime':str(current) if project=='openacad' else None}
+ if project=='openacad':
+  web=pathlib.Path(result['web']);receipt=json.loads((current/'receipt.json').read_text())
+  result.update(webRevision=(web/'REVISION').read_text().strip(),backendRevision=(current/'BACKEND_REVISION').read_text().strip(),registrySources=receipt['registrySources'],containerIds={k:inspect(v)['Id'] for k,v in c['services'].items()},receiverProtocol=2,receiverSha256=sha(__file__))
+ return result
 def github(c,token,path):
  req=urllib.request.Request('https://api.github.com/repos/'+c['repo']+'/'+path,headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json','User-Agent':'hangzhou-deploy'})
  with urllib.request.urlopen(req,timeout=30) as r:return json.load(r)
@@ -47,16 +51,71 @@ def extract(archive,dest):
     target.chmod(0o644)
  for folder in [dest,*dest.rglob('*')]:
   if folder.is_dir():folder.chmod(0o755)
- if not (dest/'web/index.html').is_file() or not (dest/'manifest.json').is_file():raise ValueError('incomplete release')
+ if not (dest/'manifest.json').is_file():raise ValueError('incomplete release')
 def atomic_link(target,link):
  tmp=link.with_name(link.name+'.ci-new');tmp.unlink(missing_ok=True);tmp.symlink_to(target);os.replace(tmp,link)
 def ready(url):
  with urllib.request.urlopen(url,timeout=30) as r:
   if r.status!=200:raise RuntimeError('public readiness failed')
   return json.load(r)
-def verify_web(c,h):
+def verify_web(c,h,revision=None):
  b=ready(c['url']+'/version.json?release='+h['sha'])
- if b.get('revision')!=h['sha']:raise RuntimeError('web revision mismatch')
+ if b.get('revision')!=(revision or h['sha']):raise RuntimeError('web revision mismatch')
+
+def validate_manifest(project,h,m,unpack):
+ c=CONFIG[project]
+ if project=='tuyan':
+  if set(m)!={'sha','images'}:raise ValueError('manifest mismatch')
+  mode='full'
+ else:
+  if set(m)!={'sha','mode','images'} or m['mode'] not in {'frontend','backend','full'}:raise ValueError('manifest mismatch')
+  mode=m['mode']
+ if m['sha']!=h['sha'] or set(m['images'])!=(set() if mode=='frontend' else set(c['images'])):raise ValueError('manifest mismatch')
+ if mode!='backend' and not (unpack/'web/index.html').is_file():raise ValueError('incomplete web release')
+ if mode=='backend' and (unpack/'web').exists():raise ValueError('backend release must preserve the current web')
+ for name,image in m['images'].items():
+  if not re.fullmatch('ghcr.io/yrjmdqmmx/'+c['images'][name]+r'@sha256:[a-f0-9]{64}',image):raise ValueError('unapproved image')
+ return mode
+
+def verify_scope(c,h,mode):
+ """Independently reject omitted runtime changes, without compare's 300-file limit."""
+ cache={}
+ def tree(revision,name):
+  if not re.fullmatch('[a-f0-9]{40}',revision):raise ValueError('unknown deployed revision')
+  if revision not in cache:
+   commit=github(c,h['token'],'git/commits/'+revision)
+   result=github(c,h['token'],'git/trees/'+commit['tree']['sha'])
+   if result.get('truncated'):raise ValueError('incomplete source tree')
+   cache[revision]={e['path']:e['sha'] for e in result['tree'] if e['type']=='tree'}
+  if name not in cache[revision]:raise ValueError('missing runtime source tree')
+  return cache[revision][name]
+ if mode=='frontend' and tree(h['sha'],'server')!=tree(h['expected']['backendRevision'],'server'):
+  raise ValueError('frontend release omits backend changes')
+ if mode=='backend' and tree(h['sha'],'web')!=tree(h['expected']['webRevision'],'web'):
+  raise ValueError('backend release omits frontend changes')
+
+def verify_openacad_health(c):
+ health=ready(c['url']+'/api/health')
+ if health.get('status')!='ok' or health.get('queue') is not True or health.get('workers',0)<2:
+  raise RuntimeError('OpenAcad API or workers unhealthy')
+
+def openacad_frontend_deploy(c,h,dest):
+ root=pathlib.Path(c['root']);runtime=pathlib.Path(h['expected']['runtime'])
+ if (root/'shared/maintenance').exists():raise RuntimeError('existing OpenAcad maintenance')
+ # Preserve compatibility with operator recovery tools. These copies are never
+ # passed to Compose: the running services keep their original runtime folder.
+ shutil.copy2(runtime/'compose.yml',dest/'compose.yml')
+ shutil.copy2(runtime/'release.env',dest/'release.env');(dest/'release.env').chmod(0o600)
+ (dest/'REVISION').write_text(h['sha'])
+ (dest/'BACKEND_REVISION').write_text(h['expected']['backendRevision'])
+ try:
+  atomic_link(dest,root/'current');verify_web(c,h);verify_openacad_health(c)
+  after=state('openacad')
+  for key in ('images','containerIds','configHashes','runtime','backendRevision'):
+   if after[key]!=h['expected'][key]:raise RuntimeError('runtime changed during frontend release')
+ except BaseException:
+  atomic_link(pathlib.Path(h['expected']['web']),root/'current')
+  raise
 def load_release():
  p=pathlib.Path(__file__).with_name('release.py');spec=importlib.util.spec_from_file_location('hz_release',p);r=importlib.util.module_from_spec(spec);spec.loader.exec_module(r);return r
 @contextlib.contextmanager
@@ -108,7 +167,8 @@ def openacad_deploy(c,h,m,dest):
  text=(old/'release.env').read_text();new,n=re.subn(r'(?m)^OPENACAD_IMAGE=.*$', 'OPENACAD_IMAGE='+m['images']['worker'],text)
  if n!=1:raise ValueError('unexpected OpenAcad environment')
  (dest/'release.env').write_text(new);(dest/'release.env').chmod(0o600)
- (dest/'REVISION').write_text(h['sha']);(dest/'BACKEND_REVISION').write_text(h['sha'])
+ web_revision=h['expected']['webRevision'] if m['mode']=='backend' else h['sha']
+ (dest/'REVISION').write_text(web_revision);(dest/'BACKEND_REVISION').write_text(h['sha'])
  marker=root/'shared/maintenance';ident='ci-'+h['run']+'-'+h['attempt'];changed=False
  if marker.exists():raise RuntimeError('existing OpenAcad maintenance')
  def co(directory,args):return command(['docker','compose','--project-name','openacad','--project-directory',str(directory),'--env-file',str(directory/'release.env'),'-f',str(directory/'compose.yml'),*args])
@@ -126,7 +186,7 @@ def openacad_deploy(c,h,m,dest):
   else:raise RuntimeError('OpenAcad queue not drained')
   co(dest,['config','--quiet']);changed=True
   co(dest,['up','-d','--no-deps','api','worker-one','worker-two']);healthy()
-  atomic_link(dest,root/'current');verify_web(c,h);ready(c['url']+'/api/health')
+  atomic_link(dest,root/'current');verify_web(c,h,web_revision);verify_openacad_health(c)
   expected=json.loads(command(['docker','image','inspect',m['images']['worker']]))[0]['Id']
   if any(inspect(c['services'][k])['Image']!=expected for k in ['api','worker-one','worker-two']):raise RuntimeError('OpenAcad image mismatch')
   if inspect(c['services']['redis'])['Image']!=h['expected']['images']['redis']:raise RuntimeError('Redis image changed')
@@ -158,24 +218,27 @@ def deploy(project,stream):
   if sha(archive)!=h['sha256']:raise ValueError('payload hash mismatch')
   unpack=tmp/'unpack';unpack.mkdir();extract(archive,unpack)
   m=json.loads((unpack/'manifest.json').read_text())
-  if set(m)!={'sha','images'} or m['sha']!=h['sha'] or set(m['images'])!=set(c['images']):raise ValueError('manifest mismatch')
-  for name,image in m['images'].items():
-   if not re.fullmatch('ghcr.io/yrjmdqmmx/'+c['images'][name]+r'@sha256:[a-f0-9]{64}',image):raise ValueError('unapproved image')
+  mode=validate_manifest(project,h,m,unpack)
+  if project=='openacad':verify_scope(c,h,mode)
   # Only registry bytes use this separate SSH tunnel. Existing model proxies are untouched.
-  from registry_import import import_images
-  registry_sources=dict(m['images'])
-  m['images']=import_images(registry_sources,h['token'],h['username'])
+  registry_sources=dict(m['images']) if mode!='frontend' else dict(h['expected']['registrySources'])
+  if mode!='frontend':
+   from registry_import import import_images
+   m['images']=import_images(registry_sources,h['token'],h['username'])
   with open('/run/lock/hangzhou-ci-production.lock','a') as lock:
    fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
    if state(project)!=h['expected']:raise ValueError('production changed after CI preflight')
    latest=github(c,h['token'],'git/ref/heads/'+BRANCH)
    if latest['object']['sha']!=h['sha']:raise ValueError('superseded source commit')
    dest=pathlib.Path(c['web'])/'releases'/('ci-'+h['run']+'-'+h['attempt']+'-'+h['sha'][:12]);dest.mkdir(mode=0o755);dest.chmod(0o755)
-   shutil.copytree(unpack/'web',dest/'web');shutil.copy2(unpack/'manifest.json',dest/'manifest.json')
+   web_source=pathlib.Path(h['expected']['web'])/'web' if mode=='backend' else unpack/'web'
+   shutil.copytree(web_source,dest/'web');shutil.copy2(unpack/'manifest.json',dest/'manifest.json')
    if project=='tuyan':
     (dest/'protected-before.json').write_text(json.dumps(protected_tuyan()));(dest/'protected-before.json').chmod(0o600);tuy_deploy(c,h,m,dest)
+   elif mode=='frontend':openacad_frontend_deploy(c,h,dest)
    else:openacad_deploy(c,h,m,dest)
    receipt={'project':project,'source':h['sha'],'run':h['run'],'status':'healthy','target':'Hangzhou','modelCalls':0,'registrySources':registry_sources,'images':{k:inspect(v)['Image'] for k,v in c['services'].items()},'web':str(dest/'web'),'completedAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())}
+   if project=='openacad':receipt.update(mode=mode,webRevision=(dest/'REVISION').read_text().strip(),backendRevision=(dest/'BACKEND_REVISION').read_text().strip(),containerIds={k:inspect(v)['Id'] for k,v in c['services'].items()})
    (dest/'receipt.json').write_text(json.dumps(receipt,indent=2));print(json.dumps(receipt),flush=True)
 
 def main():
