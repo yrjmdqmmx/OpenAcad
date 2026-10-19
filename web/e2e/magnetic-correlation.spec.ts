@@ -70,9 +70,26 @@ test('磁异常模板详情与编辑器在窄屏可操作', async ({ page }, inf
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
   }
   if (info.project.name === 'mobile') await page.locator('.mobile-tabs').getByRole('button', { name: '数据', exact: true }).click();
-  await expect(page.getByLabel('上传磁异常曲线数据')).toBeVisible();
-  await page.getByLabel('上传磁异常曲线数据').setInputFiles({ name: 'bad.csv', mimeType: 'text/csv', buffer: Buffer.from('dist_km,mag_nT\n0,NaN\n1,2') });
+  const curve = page.getByRole('region', { name: '磁异常曲线数据', exact: true });
+  await expect(curve.getByRole('status')).toContainText('示例数据');
+  const picker = page.waitForEvent('filechooser');
+  await curve.getByLabel('上传磁异常曲线数据').click();
+  await (await picker).setFiles({ name: 'bad.csv', mimeType: 'text/csv', buffer: Buffer.from('dist_km,mag_nT\n0,NaN\n1,2') });
   await expect(page.getByRole('alert')).toContainText('必须是有限数字');
+  await expect(curve.getByRole('status')).toContainText('示例数据');
+  for (const [label, filename] of [['磁异常曲线数据', 'magnetic-curve.csv'], ['海底和基底数据', 'magnetic-profile.csv'], ['测线位置', 'magnetic-track.json']]) {
+    const card = page.getByRole('region', { name: label, exact: true });
+    const chooser = page.waitForEvent('filechooser');
+    await card.getByLabel(`上传${label}`).click();
+    await (await chooser).setFiles(path.join(examples, filename));
+    await expect(card.getByRole('status')).toContainText(filename);
+    await expect(card.getByRole('status')).toContainText('已上传');
+    if (label === '磁异常曲线数据') {
+      await expect(page.getByRole('region', { name: '海底和基底数据', exact: true }).getByRole('status')).toContainText('待上传');
+      await expect(page.getByRole('button', { name: '导出图片', exact: true })).toBeDisabled();
+    }
+  }
+  await expect(page.getByRole('button', { name: '开始计算', exact: true })).toBeEnabled();
 });
 
 test('计算任务创建期间上传新文件，晚到任务不能覆盖新数据', async ({ page }, info) => {
