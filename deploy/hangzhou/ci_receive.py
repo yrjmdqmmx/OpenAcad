@@ -185,7 +185,9 @@ def openacad_deploy(c,h,m,dest):
    time.sleep(5)
   else:raise RuntimeError('OpenAcad queue not drained')
   co(dest,['config','--quiet']);changed=True
-  co(dest,['up','-d','--no-deps','api','worker-one','worker-two']);healthy()
+  # A cached identical image must still move the Compose runtime directory to
+  # this verified backend revision, or later UI releases would rebuild it again.
+  co(dest,['up','-d','--no-deps','--force-recreate','api','worker-one','worker-two']);healthy()
   atomic_link(dest,root/'current');verify_web(c,h,web_revision);verify_openacad_health(c)
   expected=json.loads(command(['docker','image','inspect',m['images']['worker']]))[0]['Id']
   if any(inspect(c['services'][k])['Image']!=expected for k in ['api','worker-one','worker-two']):raise RuntimeError('OpenAcad image mismatch')
@@ -194,7 +196,7 @@ def openacad_deploy(c,h,m,dest):
   marker.unlink()
  except BaseException:
   atomic_link(old_web,root/'current')
-  if changed:co(old,['up','-d','--no-deps','api','worker-one','worker-two']);healthy()
+  if changed:co(old,['up','-d','--no-deps','--force-recreate','api','worker-one','worker-two']);healthy()
   if state('openacad')['images']!=h['expected']['images']:raise RuntimeError('OpenAcad rollback incomplete; maintenance retained')
   if marker.exists() and marker.read_text()==ident:marker.unlink()
   raise

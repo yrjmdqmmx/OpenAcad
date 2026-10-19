@@ -58,9 +58,11 @@ class ScopeTests(unittest.TestCase):
 
     def test_tooling_does_not_rebuild_a_unchanged_worker(self):
         p = scope.classify(['.github/workflows/deploy-hangzhou.yml', 'deploy/hangzhou/ci_receive.py'])
-        self.assertEqual(p['mode'], 'frontend'); self.assertTrue(p['tooling'])
+        self.assertEqual(p['mode'], 'none'); self.assertTrue(p['tooling'])
+        self.assertTrue(p['web_checks']); self.assertFalse(p['web'])
         self.assertFalse(p['backend']); self.assertFalse(p['full_web'])
         self.assertEqual(p['browser_files'], sorted(scope.SMOKE))
+        self.assertEqual(scope.classify(['deploy/hangzhou/ci_receive.py'], force_web=True)['mode'], 'frontend')
 
     def test_worker_is_compared_to_its_own_deployed_revision(self):
         p = scope.classify(['web/src/styles/magnetic.css'], ['server/app/main.py', 'web/src/styles/magnetic.css'])

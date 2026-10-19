@@ -69,9 +69,9 @@ def classify(web_paths, backend_paths=None, *, force_web=False, force_worker=Fal
         if ignored(p) or p.startswith('server/'):
             continue
         if p.startswith(('deploy/', '.github/workflows/')):
-            # A release-tool change exercises the web-only deployment path;
-            # it is not a change to the worker Docker context.
-            tooling = web = True
+            # Verify the tooling and basic web flow without publishing unchanged
+            # web bytes. An explicit force_web can exercise the release path.
+            tooling = True
             browsers.update(SMOKE)
             units.add('tests/project.test.ts')
             continue

@@ -177,6 +177,7 @@ class ScopedReleaseTests(unittest.TestCase):
                 self.assertIn('KEEP=fixture',(dest/'release.env').read_text())
                 updates=[call.args[0] for call in calls.call_args_list if '--no-deps' in call.args[0]]
                 self.assertEqual(len(updates),2 if fail else 1)
+                self.assertTrue(all('--force-recreate' in update for update in updates))
                 self.assertEqual(updates[-1][updates[-1].index('--project-directory')+1],str(old if fail else dest))
 
 
