@@ -2,16 +2,66 @@ name: Deploy Hangzhou Production
 on:
   push:
     branches: [codex/hangzhou-production]
-    paths-ignore: ['docs/**', '**/*.md']
   workflow_dispatch:
+    inputs:
+      force_web:
+        description: Publish the frontend even when its source is unchanged
+        type: boolean
+        default: false
+      rebuild_worker:
+        description: Explicitly rebuild the unchanged worker (normally automatic from server changes)
+        type: boolean
+        default: false
+      full_web:
+        description: Run full web regression instead of scoped checks
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
   group: openacad-hangzhou-production
   cancel-in-progress: false
 jobs:
-  worker:
+  plan:
     if: github.repository == 'yrjmdqmmx/OpenAcad' && github.ref == 'refs/heads/codex/hangzhou-production'
+    runs-on: ubuntu-latest
+    environment: hangzhou-production
+    timeout-minutes: 10
+    outputs:
+      mode: ${{ steps.scope.outputs.mode }}
+      web: ${{ steps.scope.outputs.web }}
+      backend: ${{ steps.scope.outputs.backend }}
+      web_checks: ${{ steps.scope.outputs.web_checks }}
+      browser_checks: ${{ steps.scope.outputs.browser_checks }}
+      plan: ${{ steps.scope.outputs.plan }}
+      state: ${{ steps.scope.outputs.state }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Test scope decisions and deployment recovery
+        run: |
+          python3 -m unittest discover -s deploy/tests -v
+          python3 -m unittest discover -s deploy/hangzhou/tests -v
+      - name: Read actual deployed frontend and worker revisions
+        env:
+          KEY: ${{ secrets.HANGZHOU_DEPLOY_KEY }}
+          KNOWN_HOSTS: ${{ secrets.HANGZHOU_KNOWN_HOSTS }}
+        run: |
+          install -d -m 0700 "$HOME/.ssh"
+          printf '%s\n' "$KEY" > "$HOME/.ssh/id_ed25519"
+          printf '%s\n' "$KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 0600 "$HOME/.ssh/id_ed25519" "$HOME/.ssh/known_hosts"
+          ssh -o BatchMode=yes -o StrictHostKeyChecking=yes root@116.62.146.226 status > state.json
+      - id: scope
+        name: Plan changes since the deployed revisions
+        run: python3 deploy/plan_release.py --production state.json
+      - name: Remove ephemeral SSH identity
+        if: always()
+        run: rm -f "$HOME/.ssh/id_ed25519" "$HOME/.ssh/known_hosts"
+  worker:
+    needs: plan
+    if: needs.plan.outputs.backend == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
@@ -23,8 +73,6 @@ jobs:
       DOCKER_BUILD_RECORD_UPLOAD: 'false'
     steps:
       - uses: actions/checkout@v4
-      - run: python3 -m unittest discover -s deploy/hangzhou/tests -v
-      - run: python3 -m unittest discover -s deploy/tests -v
       - uses: docker/setup-buildx-action@v3
       - uses: docker/login-action@v3
         with:
@@ -47,43 +95,56 @@ jobs:
           DIGEST: ${{ steps.build.outputs.digest }}
         run: echo "image=ghcr.io/yrjmdqmmx/openacad-hz-worker@$DIGEST" >> "$GITHUB_OUTPUT"
   deploy:
-    needs: worker
+    needs: [plan, worker]
+    if: ${{ always() && needs.plan.result == 'success' && (needs.worker.result == 'success' || needs.worker.result == 'skipped') && (needs.plan.outputs.mode != 'none' || needs.plan.outputs.web_checks == 'true') }}
     environment: hangzhou-production
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
     permissions:
       contents: read
       packages: read
       actions: read
-    if: github.repository == 'yrjmdqmmx/OpenAcad' && github.ref == 'refs/heads/codex/hangzhou-production'
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+      - name: Restore the exact plan and preflight state
+        env:
+          PLAN: ${{ needs.plan.outputs.plan }}
+          PRODUCTION_STATE: ${{ needs.plan.outputs.state }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib
+          for name,key in [('release-plan.json','PLAN'),('state.json','PRODUCTION_STATE')]:
+              pathlib.Path(name).write_text(json.dumps(json.loads(os.environ[key])))
+          PY
       - uses: actions/setup-python@v5
+        if: needs.plan.outputs.web_checks == 'true'
         with:
           python-version: '3.12'
-      - name: Verify shared font glyphs, metrics and complete fallback coverage
+      - name: Verify authored glyphs and complete font fallback
+        if: needs.plan.outputs.web_checks == 'true'
         run: |
           python -m pip install -r scripts/font-delivery-requirements.txt
           python scripts/build-critical-webfonts.py --check
       - uses: actions/setup-node@v4
+        if: needs.plan.outputs.web_checks == 'true'
         with:
           node-version: 22
           cache: npm
           cache-dependency-path: web/package-lock.json
       - run: npm ci
-        working-directory: web
-      - run: npm run build && npm test
+        if: needs.plan.outputs.web_checks == 'true'
         working-directory: web
       - run: npx playwright install --with-deps chromium firefox webkit
+        if: needs.plan.outputs.browser_checks == 'true'
         working-directory: web
-      - name: Check first-load font budgets in every browser
-        run: npx playwright test e2e/font-first-load.spec.ts
-        working-directory: web
-      - run: npm run test:browser
-        working-directory: web
-      - name: Record source version
+      - name: Build and run only the planned web suites
+        if: needs.plan.outputs.web_checks == 'true'
+        run: python3 deploy/run_web_checks.py
+      - name: Record frontend source version
+        if: needs.plan.outputs.web == 'true'
         run: node -e 'require("fs").writeFileSync("web/dist/version.json", JSON.stringify({revision:process.env.GITHUB_SHA,target:"Hangzhou"}))'
       - name: Configure restricted Hangzhou SSH identity
+        if: needs.plan.outputs.mode != 'none'
         env:
           KEY: ${{ secrets.HANGZHOU_DEPLOY_KEY }}
           KNOWN_HOSTS: ${{ secrets.HANGZHOU_KNOWN_HOSTS }}
@@ -92,19 +153,25 @@ jobs:
           printf '%s\n' "$KEY" > "$HOME/.ssh/id_ed25519"
           printf '%s\n' "$KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
           chmod 0600 "$HOME/.ssh/id_ed25519" "$HOME/.ssh/known_hosts"
-      - name: Package verified files and record current production
+      - name: Package only the planned release content
+        if: needs.plan.outputs.mode != 'none'
         env:
           WORKER_IMAGE: ${{ needs.worker.outputs.image }}
         run: |
-          mkdir -p payload
-          cp -a web/dist payload/web
-          python3 - <<'PYTHON'
-          import json,pathlib,os
-          pathlib.Path('payload/manifest.json').write_text(json.dumps({'sha':os.environ['GITHUB_SHA'],'images':{'worker':os.environ['WORKER_IMAGE']}}))
-          PYTHON
-          tar -czf release.tar.gz -C payload manifest.json web
-          ssh -o BatchMode=yes -o StrictHostKeyChecking=yes root@116.62.146.226 status > state.json
+          python3 - <<'PY'
+          import json,pathlib,os,shutil,tarfile
+          plan=json.loads(pathlib.Path('release-plan.json').read_text())
+          payload=pathlib.Path('payload');payload.mkdir()
+          if plan['web']: shutil.copytree('web/dist',payload/'web')
+          images={'worker':os.environ['WORKER_IMAGE']} if plan['backend'] else {}
+          assert not plan['backend'] or images['worker'], 'Missing verified worker image'
+          (payload/'manifest.json').write_text(json.dumps({'sha':os.environ['GITHUB_SHA'],'mode':plan['mode'],'images':images}))
+          with tarfile.open('release.tar.gz','w:gz') as archive:
+              archive.add(payload/'manifest.json',arcname='manifest.json')
+              if plan['web']: archive.add(payload/'web',arcname='web')
+          PY
       - name: Deploy and verify Hangzhou
+        if: needs.plan.outputs.mode != 'none'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash

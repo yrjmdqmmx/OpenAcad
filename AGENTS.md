@@ -9,8 +9,8 @@
 - 所有新控件必须实际消费；不适用条件使用 `Control.visible`。新增示例用模拟数据并标注来源。
 - 源站研究与自身验收分开记录，HTTP 200、代码有分支、实际操作通过不能互相替代。
 
-验证：`npm --prefix web test`、`npm --prefix web run build`；浏览器从 `web/` 运行 `npm run test:browser`。`OPENACAD_LIVE_API=1` 开启真实服务浏览器用例。没有统计 worker 时应明确记录跳过，不能声称统计通过。
+验证按改动范围执行：用 `deploy/change_scope.py` 生成计划，再用 `python3 deploy/run_web_checks.py --plan <计划文件>` 完成前端构建及相关单元/浏览器用例。共享数据契约、依赖和未映射输入扩大为完整前端回归；只改前端不能触发 worker 构建。`OPENACAD_LIVE_API=1` 开启真实服务浏览器用例。没有统计 worker 时应明确记录跳过，不能声称统计通过。
 
 生产发行采用固定提交与 Linux amd64 镜像，部署和恢复命令见 `docs/deployment/README.md`。操作新服务允许范围为 `/opt/openacad`、Compose 项目 `openacad` 与 `openacad.xyz` 虚拟主机。
 
-2026-10-18：业务现位于杭州 `116.62.146.226`。日常更新合入 `codex/hangzhou-production`，由 GitHub 自动测试/构建并发布到 `/opt/openacad`；旧默认分支不自动发布。接收器保留 Redis、现网参数和其他项目，仅更新 API/两个 Worker 与静态网页；正式执行结果见 `docs/deployment/hangzhou-auto-deploy-20261018.md`。香港/新加坡仅保留获准模型出口，不得恢复旧香港业务写入。
+业务位于杭州 `116.62.146.226`。日常更新合入 `codex/hangzhou-production`，由 GitHub 按线上前端与后端各自的实际版本比较差异并发布到 `/opt/openacad`；旧默认分支不自动发布。纯前端只切换网页目录，不拉镜像、不重启容器、不暂停队列；`server/` Docker 上下文变化才构建 worker，并走后端排空/恢复流程。发布工具变更先验证工具及基础网页流程；接收器由运维在 `/opt/openacad/operations/hangzhou/` 单独安装，流水线校验文件摘要。详见 `deploy/hangzhou/README.md`。香港/新加坡仅保留获准模型出口，不得恢复旧香港业务写入。
