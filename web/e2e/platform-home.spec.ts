@@ -25,6 +25,9 @@ test("平台首页呈现已上线绘图、独立图研入口和后续工具说�
       "href",
       "#home",
     );
+    const filing = page.getByRole("contentinfo").getByRole("link", { name: "浙ICP备2026071869号-4", exact: true });
+    await expect(filing).toBeVisible();
+    await expect(filing).toHaveAttribute("href", "https://beian.miit.gov.cn/");
     const navigation = page.getByRole("navigation", { name: "主导航" });
     const tuyanNavigation = navigation.getByRole("link", { name: "图研 Tuyan", exact: true });
     await expect(tuyanNavigation).toHaveAttribute("href", "https://tuyansci.cn/");
@@ -78,6 +81,7 @@ test("平台首页呈现已上线绘图、独立图研入口和后续工具说�
   });
   await page.getByRole("link", { name: "进入科研绘图", exact: true }).click();
   await expect(page).toHaveURL(/#catalog$/);
+  await expect(page.locator(".platform-footer")).toBeHidden();
   await expect(page.getByRole("textbox", { name: "搜索图表" })).toBeVisible();
   await expect(
     page.getByRole("navigation", { name: "主导航" })

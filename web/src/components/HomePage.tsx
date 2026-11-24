@@ -77,7 +77,6 @@ export function HomePage({ templates }: { templates: Template[] }) {
           <p>我们从科研绘图开始，持续拓展学术工作的更多可能。</p>
         </section>
       </main>
-      <footer className="platform-footer"><span>OpenAcad 开放学术</span><p>面向科研，让工具回归实用。</p></footer>
     </>
   );
 }
