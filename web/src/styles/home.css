@@ -51,7 +51,7 @@
 .platform-footer { display: flex; justify-content: space-between; gap: 20px; align-items: center; padding: 22px max(48px, calc((100vw - 1304px) / 2)); border-top: 1px solid #cbd7da; font-size: 13px; }
 /* Keep the filing link in the initial HTML and show this footer only on the home route. */
 #root:not(:empty):not(:has(.platform-home)) + .platform-footer { display: none; }
-.platform-footer a { text-decoration: underline; text-underline-offset: 0.18em; }
+.platform-footer a { font-family: system-ui, sans-serif; text-decoration: underline; text-underline-offset: 0.18em; }
 .platform-footer > span { font-size: 14px; font-weight: 600; }
 .platform-footer p { color: #526475; margin: 0; }
 @media (max-width: 1100px) {
